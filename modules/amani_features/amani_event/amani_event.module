@@ -1,0 +1,20 @@
+<?php
+/**
+ * @file
+ * Drupal needs this blank file.
+ */
+
+/**
+ * Implements hook_default_fields_alter().
+ */
+function amani_event_field_default_fields_alter(&$fields) {
+  foreach ($fields as $key => &$field) {
+    //if (strpos($key, 'node-location') === 0) {
+    //  dpm($key);
+    //  dpm($field);
+    //}
+    //if ($key == 'node-event-body') {
+    //  $field['field_instance']['label'] = 'Summary';
+    //}
+  }
+}
