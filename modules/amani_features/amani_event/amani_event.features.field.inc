@@ -241,7 +241,7 @@ function amani_event_field_default_fields() {
           ),
         ),
         'type' => 'addressfield_standard',
-        'weight' => '6',
+        'weight' => '3',
       ),
     ),
   );
@@ -363,7 +363,7 @@ function amani_event_field_default_fields() {
           'use_geocoder' => 1,
         ),
         'type' => 'geofield_openlayers',
-        'weight' => '7',
+        'weight' => '5',
       ),
     ),
   );
@@ -439,7 +439,7 @@ function amani_event_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '8',
+        'weight' => '7',
       ),
     ),
   );
