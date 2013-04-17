@@ -261,7 +261,45 @@ a {
 
 #footer {
   background: #414042;
-  color: white; }
+  color: white;
+  font-family: ""; }
+  #footer .content {
+    font-size: 14px; }
+  #footer a:link, #footer a:visited {
+    color: white; }
+  #footer a:hover, #footer a:active {
+    color: #f2a64b;
+    text-decoration: none; }
+  #footer #block-boxes-amani_powered_by {
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 23.40426%; }
+    #footer #block-boxes-amani_powered_by:last-child {
+      margin-right: 0; }
+  #footer #block-system-main-menu {
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 23.40426%; }
+    #footer #block-system-main-menu:last-child {
+      margin-right: 0; }
+  #footer #block-search-form {
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 23.40426%; }
+    #footer #block-search-form:last-child {
+      margin-right: 0; }
+
+#block-boxes-amani_powered_by {
+  border-right: 1px solid white; }
+
+#block-system-main-menu {
+  border-right: 1px solid white; }
+  #block-system-main-menu .content ul li {
+    list-style-type: none;
+    list-style-image: none; }
 
 * {
   -webkit-box-sizing: border-box;

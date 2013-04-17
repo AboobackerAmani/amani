@@ -77,3 +77,18 @@ a
 #footer
   background: $grey_dark
   color: #fff
+  font-family: ""
+  .content
+    font-size: 14px
+  a
+    &:link, &:visited
+      color: #fff
+    &:hover, &:active
+      color: lighten($orange, 10%)
+      text-decoration: none
+  #block-boxes-amani_powered_by
+    @include span-columns(3 of 12)
+  #block-system-main-menu
+    @include span-columns(3 of 12)
+  #block-search-form
+    @include span-columns(3 of 12)
