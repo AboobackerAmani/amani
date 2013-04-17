@@ -6,3 +6,74 @@
 
 // Import variables and mixins to be used.
 @import _config.sass
+
+body
+  background: $grey_dark
+
+#main
+  background: $blue_light
+
+a
+  outline: 0
+  border: 0
+  @include transition(color 0.4s ease, background-color 0.4s ease)
+  &:link, &:visited
+    color: $orange
+  &:hover, &:active
+    color: lighten($orange, 10%)
+    text-decoration: none
+// header
+#header
+  background: #fff
+
+// Navigation
+#navigation,
+#block-superfish-superfish_1
+  .content
+    font-size: 16px
+    li
+      margin-right: $margin/4
+      background: url('../images/icons/bullet.png') 100% 50% no-repeat
+      padding-right: $padding/4
+      &:last-child
+        background: none
+        padding-right: 0
+        margin-right: 0
+      a
+        &:link, &:visited,
+        &.active
+          color: $orange
+        &:hover, &:active
+          color: lighten($orange, 10%)
+// Sidebar
+#sidebar-second
+  .block
+    background: #fff
+    padding: $padding/2 $padding/3 $padding
+    box-shadow: 2px 3px 4px #c8c8c8
+    margin: $margin 0
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+    h2.block-title
+      font-family: ""
+      font-size: 20px
+      border-bottom: 2px solid $orange
+      text-align: center
+      color: $grey_text
+      padding-bottom: $padding/2
+      margin-bottom: $margin/2
+    ul.menu
+      li
+        list-style-type: none
+        list-style-image: none
+    a
+      &:after
+        content: " »"
+
+
+// Footer
+#footer
+  background: $grey_dark
+  color: #fff
