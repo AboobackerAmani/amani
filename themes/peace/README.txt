@@ -30,7 +30,7 @@ follow these steps (to do BEFORE enabling the theme) :
     - rename the theme folder to 'mytheme'
     - rename basic.info to mytheme.info
     - Edit basic.info and change the name, description, projet (can be deleted)
-    - In basic.info replace [basic_block_editing] and [basic_rebuild_registry]
+    - In basic.info replace [peace_block_editing] and [peace_rebuild_registry]
       by [mytheme_block_editing] and [mytheme_rebuild_registry]
     - In template.php change each iteration of 'basic' to 'mytheme'
     - In theme-settings.php change each iteration of 'basic' to 'mytheme'
