@@ -80,7 +80,7 @@ function amani_testimonial_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '4',
+        'weight' => '3',
       ),
     ),
   );
@@ -158,7 +158,7 @@ function amani_testimonial_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '5',
+        'weight' => '4',
       ),
     ),
   );
@@ -251,7 +251,7 @@ function amani_testimonial_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '3',
+        'weight' => '2',
       ),
     ),
   );
@@ -264,27 +264,98 @@ function amani_testimonial_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_name',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
+      'foreign keys' => array(),
       'indexes' => array(
-        'format' => array(
-          0 => 'format',
+        'family' => array(
+          0 => 'family',
+        ),
+        'given' => array(
+          0 => 'given',
         ),
       ),
       'locked' => '0',
-      'module' => 'text',
+      'module' => 'name',
       'settings' => array(
-        'max_length' => '255',
+        'autocomplete_separator' => array(
+          'credentials' => ', ',
+          'family' => ' -',
+          'generational' => ' ',
+          'given' => ' -',
+          'middle' => ' -',
+          'title' => ' ',
+        ),
+        'autocomplete_source' => array(
+          'credentials' => array(),
+          'family' => array(),
+          'generational' => array(
+            'generational' => 0,
+          ),
+          'given' => array(),
+          'middle' => array(),
+          'title' => array(
+            'title' => 'title',
+          ),
+        ),
+        'components' => array(
+          'credentials' => 0,
+          'family' => 'family',
+          'generational' => 0,
+          'given' => 'given',
+          'middle' => 'middle',
+          'title' => 'title',
+        ),
+        'generational_options' => '-- --
+Jr.
+Sr.
+I
+II
+III
+IV
+V
+VI
+VII
+VIII
+IX
+X',
+        'labels' => array(
+          'credentials' => 'Credentials',
+          'family' => 'Family',
+          'generational' => 'Generational',
+          'given' => 'Given',
+          'middle' => 'Middle name(s)',
+          'title' => 'Title',
+        ),
+        'max_length' => array(
+          'credentials' => '255',
+          'family' => '63',
+          'generational' => '15',
+          'given' => '63',
+          'middle' => '127',
+          'title' => '31',
+        ),
+        'minimum_components' => array(
+          'credentials' => 0,
+          'family' => 'family',
+          'generational' => 0,
+          'given' => 'given',
+          'middle' => 0,
+          'title' => 0,
+        ),
         'profile2_private' => FALSE,
+        'sort_options' => array(
+          'generational' => 0,
+          'title' => 'title',
+        ),
+        'title_options' => '-- --
+Mr.
+Mrs.
+Miss
+Ms.
+Dr.
+Prof.',
       ),
       'translatable' => '0',
-      'type' => 'text',
+      'type' => 'name',
     ),
     'field_instance' => array(
       'bundle' => 'testimonial',
@@ -294,10 +365,20 @@ function amani_testimonial_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 1,
+          'module' => 'name',
+          'settings' => array(
+            'format' => 'default',
+            'markup' => 0,
+            'multiple' => 'default',
+            'multiple_and' => 'text',
+            'multiple_delimiter' => ', ',
+            'multiple_delimiter_precedes_last' => 'never',
+            'multiple_el_al_first' => 1,
+            'multiple_el_al_min' => 3,
+            'output' => 'default',
+          ),
+          'type' => 'name_formatter',
+          'weight' => 6,
         ),
         'ical' => array(
           'label' => 'above',
@@ -317,17 +398,52 @@ function amani_testimonial_field_default_fields() {
       'label' => 'Name',
       'required' => 0,
       'settings' => array(
-        'text_processing' => '0',
+        'component_css' => '',
+        'component_layout' => 'default',
+        'credentials_inline' => 0,
+        'field_type' => array(
+          'credentials' => 'text',
+          'family' => 'text',
+          'generational' => 'select',
+          'given' => 'text',
+          'middle' => 'text',
+          'title' => 'select',
+        ),
+        'generational_field' => 'select',
+        'inline_css' => array(
+          'credentials' => '',
+          'family' => '',
+          'generational' => '',
+          'given' => '',
+          'middle' => '',
+          'title' => '',
+        ),
+        'override_format' => 'default',
+        'size' => array(
+          'credentials' => '35',
+          'family' => '20',
+          'generational' => '5',
+          'given' => '20',
+          'middle' => '20',
+          'title' => '6',
+        ),
+        'title_display' => array(
+          'credentials' => 'description',
+          'family' => 'description',
+          'generational' => 'description',
+          'given' => 'description',
+          'middle' => 'description',
+          'title' => 'description',
+        ),
+        'title_field' => 'select',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'size' => '60',
-        ),
-        'type' => 'text_textfield',
-        'weight' => '2',
+        'active' => 0,
+        'module' => 'name',
+        'settings' => array(),
+        'type' => 'name_widget',
+        'weight' => '1',
       ),
     ),
   );
