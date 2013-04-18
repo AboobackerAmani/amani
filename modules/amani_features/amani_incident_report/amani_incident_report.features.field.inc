@@ -50,7 +50,7 @@ function amani_incident_report_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 2,
+          'weight' => '2',
         ),
         'ical' => array(
           'label' => 'above',
@@ -80,6 +80,69 @@ function amani_incident_report_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
+        'weight' => '4',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-incident_report-field_email'.
+  $fields['node-incident_report-field_email'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_email',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'email',
+      'settings' => array(
+        'profile2_private' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'email',
+    ),
+    'field_instance' => array(
+      'bundle' => 'incident_report',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'email',
+          'settings' => array(),
+          'type' => 'email_default',
+          'weight' => '9',
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_email',
+      'label' => 'Email',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'email',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'email_textfield',
         'weight' => '2',
       ),
     ),
@@ -120,7 +183,7 @@ function amani_incident_report_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'addressfield',
           'settings' => array(
             'format_handlers' => array(
@@ -129,7 +192,7 @@ function amani_incident_report_field_default_fields() {
             'use_widget_handlers' => 1,
           ),
           'type' => 'addressfield_default',
-          'weight' => 3,
+          'weight' => '3',
         ),
         'ical' => array(
           'label' => 'above',
@@ -165,7 +228,7 @@ function amani_incident_report_field_default_fields() {
           ),
         ),
         'type' => 'addressfield_standard',
-        'weight' => '3',
+        'weight' => '5',
       ),
     ),
   );
@@ -219,7 +282,7 @@ function amani_incident_report_field_default_fields() {
             'show_repeat_rule' => 'show',
           ),
           'type' => 'date_default',
-          'weight' => 5,
+          'weight' => '5',
         ),
         'ical' => array(
           'label' => 'above',
@@ -236,7 +299,7 @@ function amani_incident_report_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_incident_date',
-      'label' => 'Date',
+      'label' => 'Date of incident',
       'required' => 0,
       'settings' => array(
         'default_value' => 'now',
@@ -258,7 +321,7 @@ function amani_incident_report_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '5',
+        'weight' => '7',
       ),
     ),
   );
@@ -322,13 +385,14 @@ function amani_incident_report_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'geofield',
           'settings' => array(
             'data' => 'full',
+            'map_preset' => 'geofield_formatter_map',
           ),
-          'type' => 'geofield_wkt',
-          'weight' => 4,
+          'type' => 'geofield_openlayers',
+          'weight' => '4',
         ),
         'ical' => array(
           'label' => 'above',
@@ -380,7 +444,7 @@ function amani_incident_report_field_default_fields() {
           'use_geocoder' => 1,
         ),
         'type' => 'geofield_openlayers',
-        'weight' => '4',
+        'weight' => '6',
       ),
     ),
   );
@@ -431,7 +495,7 @@ function amani_incident_report_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 7,
+          'weight' => '7',
         ),
         'ical' => array(
           'label' => 'above',
@@ -458,7 +522,7 @@ function amani_incident_report_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '7',
+        'weight' => '9',
       ),
     ),
   );
@@ -509,7 +573,7 @@ function amani_incident_report_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 6,
+          'weight' => '6',
         ),
         'ical' => array(
           'label' => 'above',
@@ -536,7 +600,7 @@ function amani_incident_report_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '6',
+        'weight' => '8',
       ),
     ),
   );
@@ -583,7 +647,7 @@ function amani_incident_report_field_default_fields() {
           'module' => 'file',
           'settings' => array(),
           'type' => 'file_default',
-          'weight' => 1,
+          'weight' => '1',
         ),
         'ical' => array(
           'label' => 'above',
@@ -634,6 +698,198 @@ function amani_incident_report_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
+        'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-incident_report-field_name'.
+  $fields['node-incident_report-field_name'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_name',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'family' => array(
+          0 => 'family',
+        ),
+        'given' => array(
+          0 => 'given',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'name',
+      'settings' => array(
+        'autocomplete_separator' => array(
+          'credentials' => ', ',
+          'family' => ' -',
+          'generational' => ' ',
+          'given' => ' -',
+          'middle' => ' -',
+          'title' => ' ',
+        ),
+        'autocomplete_source' => array(
+          'credentials' => array(),
+          'family' => array(),
+          'generational' => array(
+            'generational' => 0,
+          ),
+          'given' => array(),
+          'middle' => array(),
+          'title' => array(
+            'title' => 'title',
+          ),
+        ),
+        'components' => array(
+          'credentials' => 0,
+          'family' => 'family',
+          'generational' => 0,
+          'given' => 'given',
+          'middle' => 'middle',
+          'title' => 'title',
+        ),
+        'generational_options' => '-- --
+Jr.
+Sr.
+I
+II
+III
+IV
+V
+VI
+VII
+VIII
+IX
+X',
+        'labels' => array(
+          'credentials' => 'Credentials',
+          'family' => 'Family',
+          'generational' => 'Generational',
+          'given' => 'Given',
+          'middle' => 'Middle name(s)',
+          'title' => 'Title',
+        ),
+        'max_length' => array(
+          'credentials' => '255',
+          'family' => '63',
+          'generational' => '15',
+          'given' => '63',
+          'middle' => '127',
+          'title' => '31',
+        ),
+        'minimum_components' => array(
+          'credentials' => 0,
+          'family' => 'family',
+          'generational' => 0,
+          'given' => 'given',
+          'middle' => 0,
+          'title' => 0,
+        ),
+        'profile2_private' => FALSE,
+        'sort_options' => array(
+          'generational' => 0,
+          'title' => 'title',
+        ),
+        'title_options' => '-- --
+Mr.
+Mrs.
+Miss
+Ms.
+Dr.
+Prof.',
+      ),
+      'translatable' => '0',
+      'type' => 'name',
+    ),
+    'field_instance' => array(
+      'bundle' => 'incident_report',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'name',
+          'settings' => array(
+            'format' => 'default',
+            'markup' => 0,
+            'multiple' => 'default',
+            'multiple_and' => 'text',
+            'multiple_delimiter' => ', ',
+            'multiple_delimiter_precedes_last' => 'never',
+            'multiple_el_al_first' => 1,
+            'multiple_el_al_min' => 3,
+            'output' => 'default',
+          ),
+          'type' => 'name_formatter',
+          'weight' => '8',
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_name',
+      'label' => 'Name',
+      'required' => 0,
+      'settings' => array(
+        'component_css' => '',
+        'component_layout' => 'default',
+        'credentials_inline' => 0,
+        'field_type' => array(
+          'credentials' => 'text',
+          'family' => 'text',
+          'generational' => 'select',
+          'given' => 'text',
+          'middle' => 'text',
+          'title' => 'select',
+        ),
+        'generational_field' => 'select',
+        'inline_css' => array(
+          'credentials' => '',
+          'family' => '',
+          'generational' => '',
+          'given' => '',
+          'middle' => '',
+          'title' => '',
+        ),
+        'override_format' => 'default',
+        'size' => array(
+          'credentials' => '35',
+          'family' => '20',
+          'generational' => '5',
+          'given' => '20',
+          'middle' => '20',
+          'title' => '6',
+        ),
+        'title_display' => array(
+          'credentials' => 'description',
+          'family' => 'description',
+          'generational' => 'description',
+          'given' => 'description',
+          'middle' => 'description',
+          'title' => 'description',
+        ),
+        'title_field' => 'select',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'name',
+        'settings' => array(),
+        'type' => 'name_widget',
         'weight' => '1',
       ),
     ),
@@ -642,12 +898,14 @@ function amani_incident_report_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Address');
-  t('Date');
+  t('Date of incident');
   t('Description');
+  t('Email');
   t('Geolocation');
   t('Incident report type');
   t('Incident severity');
   t('Media');
+  t('Name');
 
   return $fields;
 }
