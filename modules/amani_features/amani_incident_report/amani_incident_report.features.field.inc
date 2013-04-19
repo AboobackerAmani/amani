@@ -757,7 +757,7 @@ function amani_incident_report_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_incident_severity',
-      'label' => 'Incident severity',
+      'label' => 'Incident severity (1-5)',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -1129,7 +1129,7 @@ Prof.',
   t('Geolocation');
   t('Images');
   t('Incident report type');
-  t('Incident severity');
+  t('Incident severity (1-5)');
   t('Links');
   t('Name');
   t('Videos');
