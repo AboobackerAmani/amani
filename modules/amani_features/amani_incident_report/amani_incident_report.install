@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * clean up fields: delete field instance incident_report-field_media
+ */
+function amani_incident_report_update_7000() {
+  $instance = field_info_instance('node', 'field_media', 'incident_report');
+  field_delete_instance($instance, FALSE);
+}
