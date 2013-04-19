@@ -36,7 +36,7 @@ function amani_incident_report_taxonomy_default_vocabularies() {
       'name' => 'Incident report type',
       'machine_name' => 'report_type',
       'description' => '',
-      'hierarchy' => '0',
+      'hierarchy' => '1',
       'module' => 'taxonomy',
       'weight' => '0',
       'rdf_mapping' => array(

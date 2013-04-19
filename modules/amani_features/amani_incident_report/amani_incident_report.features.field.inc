@@ -377,7 +377,7 @@ function amani_incident_report_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_incident_address',
       'label' => 'Address',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
@@ -1001,7 +1001,7 @@ Prof.',
       ),
       'entity_type' => 'node',
       'field_name' => 'field_name',
-      'label' => 'Name',
+      'label' => 'Submitter Name (Optional)',
       'required' => 0,
       'settings' => array(
         'component_css' => '',
@@ -1131,7 +1131,7 @@ Prof.',
   t('Incident report type');
   t('Incident severity');
   t('Links');
-  t('Name');
+  t('Submitter Name (Optional)');
   t('Videos');
 
   return $fields;
