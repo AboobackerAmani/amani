@@ -553,33 +553,12 @@ function amani_incident_report_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'leaflet',
+          'module' => 'geofield',
           'settings' => array(
-            'height' => '400',
-            'icon' => array(
-              'iconAnchor' => array(
-                'x' => '',
-                'y' => '',
-              ),
-              'iconSize' => array(
-                'x' => '',
-                'y' => '',
-              ),
-              'iconUrl' => '',
-              'popupAnchor' => array(
-                'x' => '',
-                'y' => '',
-              ),
-              'shadowAnchor' => array(
-                'x' => '',
-                'y' => '',
-              ),
-              'shadowUrl' => '',
-            ),
-            'leaflet_map' => 'OSM Mapnik',
-            'popup' => 0,
+            'data' => 'full',
+            'map_preset' => 'geofield_formatter_map',
           ),
-          'type' => 'geofield_leaflet',
+          'type' => 'geofield_openlayers',
           'weight' => '4',
         ),
         'ical' => array(
