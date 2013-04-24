@@ -6,90 +6,24 @@
 function incident_map_menu() {
   $items = array();
 
-  foreach (incident_map_geojson() as $map) {
-     $item = array(
-      'title' => $map['name'],
-      'description' => '',
-      'page callback' => 'incident_map_json_menu_callback',
-      'page arguments' => array($map['callback']),
-      'access arguments' => array(),
-      'type' => MENU_NORMAL_ITEM,
-    );
-
-    if (isset($map['arguments'])) {
-      $item['page arguments'] += $map['arguments'];
-    }
-
-    if (isset($map['access'])) {
-      $item['access arguments'] += $map['access'];
-    }
-
-    $items["geojson/{$map['uri']}"] = $item;
-  }
+  $items['incident-reports'] = array(
+    'title' => t('Incident reports'),
+    'description' => '',
+    'page callback' => 'incident_map_reports',
+    'access arguments' => array('access content'),
+    'type' => MENU_NORMAL_ITEM,
+  );
 
   return $items;
 }
 
 /**
- * Implements hook_libraries_info().
+ * Page callback.
  */
-function incident_map_libraries_info() {
+function incident_map_reports() {
   return array(
-    'geojson' => array(
-      'name' => 'GeoJSON',
-      'vendor url' => 'https://github.com/affinitybridge/php-geojson',
-      'download url' => 'git@github.com:affinitybridge/php-geojson.git',
-      'version' => '0.0.1',
-      'files' => array(
-        'php' => array(
-          'geojson.php'
-        ),
-      ),
-    ),
+    'map' => leaflet_framework_map()
   );
-}
-
-/**
- * GeoJSON menu callback.
- *
- * Get's GeoJSON object from arguments and sends it to client with appropriate
- * headers.
- */
-function incident_map_json_menu_callback() {
-  $args = func_get_args();
-  $callback = array_shift($args);
-
-  $data = call_user_func_array($callback, $args);
-
-  if (!$data) {
-    return MENU_NOT_FOUND;
-  }
-  else if (is_numeric($data)) {
-    return $data;
-  }
-
-  incident_map_response_json($data);
-}
-
-/**
- * Sends a JSON encoded data to client as a properly defined JSON response.
- */
-function incident_map_response_json($data) {
-  // Send results to client as json and terminate request.
-  drupal_add_http_header('Content-Type', 'application/json; charset=utf-8');
-  print drupal_json_encode($data);
-  ajax_footer();
-}
-
-/**
- * Get all incident map geojson.
- *
- * Invokes hook_geojson_info().
- */
-function incident_map_geojson() {
-  // TODO: Cache here.
-  $resources = module_invoke_all('geojson_info');
-  return $resources;
 }
 
 /**
@@ -101,8 +35,13 @@ function incident_map_geojson_info() {
       'uri' => 'incident-reports',
       'name' => 'Incident Map',
       'callback' => 'incident_map_report_geojson',
-      'arguments' => array(),
       'access' => array('access content'),
+      'query' => array(
+        'severity' => array('fieldCondition', 'field_incident_severity:tid', '=', NULL),
+        'type' => array('fieldCondition', 'field_incident_report_type:tid', '=', NULL),
+        'from' => array('fieldCondition', 'field_incident_date:value', '>=', NULL),
+        'to' => array('fieldCondition', 'field_incident_date:value', '<=', NULL),
+      ),
     ),
   );
 }
@@ -110,13 +49,17 @@ function incident_map_geojson_info() {
 /**
  * Callback for generating incident map geojson.
  */
-function incident_map_report_geojson() {
+function incident_map_report_geojson($info) {
   $library = libraries_load('geojson');
-  if (!$library || empty($library['installed'])) {
+  if (!$library || !isset($library['installed'])) {
     return MENU_NOT_FOUND;
   }
 
   $query = new EntityFieldQuery();
+  if (isset($info['query'])) {
+    incident_map_query_handler($query, $info['query']);
+  }
+
   $query
     ->entityCondition('entity_type', 'node')
     ->entityCondition('bundle', 'incident_report')
@@ -130,6 +73,16 @@ function incident_map_report_geojson() {
   return Affinity\GeoJSON\feature_collection($wrappers, $factory);
 }
 
+/**
+ * GeoJSON feature factory.
+ * Creates GeoJSON features from incident_report nodes.
+ *
+ * @see Affinity\GeoJSON\feature_collection()
+ *
+ * return array
+ *    A GeoJSON feature object.
+ *    (see: Affinity\GeoJSON\feature()).
+ */
 function incident_report_geojson_feature_factory($wrapper) {
   $geofield = $wrapper->field_incident_geolocation;
   $geom = Affinity\GeoJSON\create_geophp_geometry($geofield, 'incident_report_get_geom');
@@ -137,17 +90,146 @@ function incident_report_geojson_feature_factory($wrapper) {
 
   $uri = entity_uri($wrapper->type(), $wrapper->value());
   $properties = array(
-    'title' => l($wrapper->label(), $uri['path']),
-    'date' => $wrapper->field_incident_date->value(),
-    'type' => $wrapper->field_incident_report_type->label(),
+    'title' => $wrapper->label(),
+    'uri' => $uri['path'],
     'severity' => $wrapper->field_incident_severity->label(),
+    'type' => $wrapper->field_incident_report_type->label(),
+    'date' => date_format(new DateObject($wrapper->field_incident_date->value()), DATE_FORMAT_ISO),
   );
 
   return Affinity\GeoJSON\feature($geom, $properties);
 }
 
+/**
+ * Converts a single Geofield value into a GeoPHP Geometry object.
+ *
+ * @see Affinity\GeoJSON\create_geophp_geometry().
+ */
 function incident_report_get_geom($wrapper) {
   geophp_load();
-  $info = $wrapper->info();
   return geoPHP::load($wrapper->geom->value(), 'wkt');
+}
+
+
+/**
+ * Parses URL query string parameters for arguments defined in $conditions and
+ * converts them to EFQ conditions.
+ *
+ * @param array $conditions
+ *    A key->value list of allowed query condtions in the format:
+ *      array(condition_type, field[:column], operator, default).
+ *
+ * @return EntityFieldQuery
+ *    A query object with conditions applied.
+ */
+function incident_map_query_handler($query, $conditions) {
+  $params = drupal_get_query_parameters();
+
+  foreach ($conditions as $key => $condition) {
+    $method = array_shift($condition);
+    $value = isset($params[$key]) ? $params[$key] : NULL;
+
+    $args = incident_map_process_condition($method, $condition, $value);
+
+    if (!empty($args)) {
+      call_user_func_array(array($query, $method), $args);
+    }
+  }
+}
+
+/**
+ * Process an individual condition definition.
+ *
+ * @return array
+ *    An array of arguments to be passed to the EFQ condition method.
+ */
+function incident_map_process_condition($method, $operands, $value = NULL) {
+  list($name, $operator, $default) = $operands;
+
+  if (is_null($value)) {
+    // Don't apply a condition if no value and no default.
+    if (is_null($default)) return;
+
+    $value = $default;
+  }
+
+  switch ($method) {
+    case 'entityCondition':
+    case 'propertyCondition':
+      return array($name, $value, $operator);
+    case 'fieldCondition':
+      list($name, $column) = explode(':', $name);
+      return array($name, $column, $value, $operator);
+    default:
+      throw new InvalidArgumentException();
+  }
+}
+
+
+/**
+ * TODO: Add these in a patch for Date module (see: http://drupal.org/node/1663346).
+ */
+
+/**
+ * Implements hook_entity_query_alter().
+ *
+ * Adds support for date functions in EFQ field condtions on date fields.
+ * When we detect a field condition against a date field, we move the condition
+ * into MetaData and add a tag 'date_operation' tag to the query to flag it for
+ * a hook_query_TAG_alter().
+ */
+function incident_map_entity_query_alter($query) {
+  $date_conditions = array();
+
+  foreach ($query->fieldConditions as $index => $condition) {
+    $type = $condition['field']['type'];
+    if (in_array($type, array('date', 'datetime'))) {
+      // TODO: Use of $index (an integer) as a arbitrary key could be problematic.
+      $date_conditions[$index] = $condition;
+      unset($query->fieldConditions[$index]);
+    }
+  }
+
+  if (!empty($date_conditions)) {
+    $query->addTag('date_condition');
+    $query->addMetaData('date_conditions', $date_conditions);
+  }
+}
+
+/**
+ * Implements hook_query_TAG_alter().
+ *
+ * Using parameters from the stashed EFQ field condition, generate a WHERE
+ * clause snippet using MySQL date methods and append it to the query.
+ */
+function incident_map_query_date_condition_alter($query) {
+  $conditions = $query->conditions();
+
+  foreach ($query->alterMetaData['date_conditions'] as $index => $condition) {
+    $storage = $condition['field']['storage'];
+    if ($storage['type'] !== 'field_sql_storage') {
+      // TODO: Do something other than siliently fail.
+      // Currently this only supports SQL backends.
+      return;
+    }
+
+    // TODO: Manually constructing these table and column aliases feels wrong.
+    $field_name = $condition['field']['field_name'];
+    $column = $condition['column'];
+    $value = new DateObject($condition['value']);
+    $operator = $condition['operator'];
+
+    $table_name = "field_data_$field_name";
+    $column_name = $storage['details']['sql'][FIELD_LOAD_CURRENT][$table_name][$column];
+    $field = "{$table_name}{$index}.$column_name";
+
+    $date_handler = new date_sql_handler();
+    // TODO: This might have security implications as date_sql_handler::sql_where_date()
+    //       doesn't use DB placeholders.
+    // TODO: It probably could be made to be a little more flexible; support
+    //       other 'type' parameters to sql_where_date().
+    $clause = $date_handler->sql_where_format(DATE_FORMAT_DATETIME, $field, $operator, $value->format(DATE_FORMAT_DATETIME));
+
+    $query->where($clause);
+  }
 }
