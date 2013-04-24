@@ -1,6 +1,32 @@
 <?php
 
 /**
+ * Implements hook_menu().
+ */
+function incident_map_menu() {
+  $items = array();
+
+  $items['incident-reports'] = array(
+    'title' => t('Incident reports'),
+    'description' => '',
+    'page callback' => 'incident_map_reports',
+    'access arguments' => array('access content'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Page callback.
+ */
+function incident_map_reports() {
+  return array(
+    'map' => leaflet_framework_map()
+  );
+}
+
+/**
  * Implements hook_incident_map_resources().
  */
 function incident_map_geojson_info() {
@@ -64,7 +90,8 @@ function incident_report_geojson_feature_factory($wrapper) {
 
   $uri = entity_uri($wrapper->type(), $wrapper->value());
   $properties = array(
-    'title' => l($wrapper->label(), $uri['path']),
+    'title' => $wrapper->label(),
+    'uri' => $uri['path'],
     'severity' => $wrapper->field_incident_severity->label(),
     'type' => $wrapper->field_incident_report_type->label(),
     'date' => date_format(new DateObject($wrapper->field_incident_date->value()), DATE_FORMAT_ISO),
