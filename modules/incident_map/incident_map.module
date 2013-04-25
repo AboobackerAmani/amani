@@ -22,12 +22,186 @@ function incident_map_menu() {
  */
 function incident_map_reports() {
   return array(
-    'map' => leaflet_framework_map()
+    'map' => leaflet_framework_map('incident-map-default')
   );
 }
 
 /**
- * Implements hook_incident_map_resources().
+ * Implements hook_libraries_info().
+ */
+function incident_map_libraries_info() {
+  return array(
+    'crossfilter' => array(
+      'name' => 'Crossfilter',
+      'vendor url' => 'http://square.github.io/crossfilter/',
+      'download url' => 'https://github.com/square/crossfilter/archive/v1.2.0.tar.gz',
+      'version' => '1.2.0',
+      'files' => array(
+        'js' => array(
+          'crossfilter.js',
+        ),
+      ),
+    ),
+    'lodash' => array(
+      'name' => 'Lo-Dash',
+      'vendor url' => 'http://lodash.com/',
+      'download url' => 'https://raw.github.com/bestiejs/lodash/v1.2.0/dist/lodash.min.js',
+      'version' => 'v1.2.0',
+      'files' => array(
+        'js' => array(
+          'lodash.js',
+        ),
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_library().
+ */
+function incident_map_library() {
+  global $language;
+  global $is_https;
+
+  $libraries = array();
+
+  $crossfilter = libraries_detect('crossfilter');
+  if ($crossfilter) {
+    $libraries['crossfilter'] = leaflet_framework_convert_libraries($crossfilter);
+  }
+
+  $lodash = libraries_detect('lodash');
+  if ($lodash) {
+    $libraries['lodash'] = leaflet_framework_convert_libraries($lodash);
+  }
+
+  $path = drupal_get_path('module', 'incident_map');
+
+  $libraries['reqwest'] = array(
+    'title' => 'reqwest',
+    'description' => "It's AJAX!",
+    'version' => '',
+    'js' => array(
+      "$path/js/reqwest.js" => array(),
+    ),
+  );
+
+  $libraries['Header'] = array(
+    'title' => 'Incident map header file',
+    'description' => 'Declares amani incident map namespace.',
+    'version' => '7.x-1.x',
+    'js' => array(
+      $path . '/js/Header.js' => array(),
+    ),
+  );
+
+  $protocol = $is_https ? 'https' : 'http';
+  $google_api = url("$protocol://maps.google.com/maps/api/js", array(
+    'query' => array(
+      'v' => '3.2',
+      'language' => $language->language,
+      'sensor' => 'false',
+    ),
+    'external' => TRUE,
+  ));
+  $libraries['Layers'] = array(
+    'title' => 'Incident map layer manager plugin',
+    'version' => '7.x-1.x',
+    'js' => array(
+      $google_api => array('type' => 'external'),
+      "$path/js/LayerFactory.js" => array(),
+      "$path/js/Layer/Google.js" => array(),
+      "$path/js/Layer/GeoJSON.js" => array(),
+      "$path/js/Layers.js" => array(),
+    ),
+    'dependencies' => array(
+      array('incident_map', 'reqwest'),
+      array('leaflet_framework', 'LeafletFramework'),
+      array('incident_map', 'Header'),
+    ),
+  );
+
+  $libraries['IncidentReports'] = array(
+    'title' => 'Incident reports visualization',
+    'version' => '7.x-1.x',
+    'js' => array(
+      "$path/js/reqwest.js" => array(),
+      "$path/js/IncidentReports.js" => array(),
+    ),
+    'dependencies' => array(
+      array('incident_map', 'reqwest'),
+      array('incident_map', 'lodash'),
+      array('incident_map', 'crossfilter'),
+      array('leaflet_framework', 'LeafletFramework'),
+      array('incident_map', 'Header'),
+    ),
+  );
+
+  return $libraries;
+}
+
+/**
+ * Implements hook_leaflet_framework_maps().
+ */
+function incident_map_leaflet_framework_maps() {
+  $maps = array();
+
+  $maps['incident-map-default'] = array(
+    'title' => 'Default incident map',
+    'plugins' => array(
+      'lf_view' => array(
+        'center' => array(1.5379, 32.42065),
+        'zoom' => 7,
+      ),
+      'amani_layers' => array(),
+      'incident_reports' => array(),
+    ),
+  );
+
+  return $maps;
+}
+
+/**
+ * Implements hook_leaflet_framework_plugins().
+ */
+function incident_map_leaflet_framework_plugins() {
+  $plugins = array();
+
+  /* Amani incident map layers plugin.
+   * - Adds layers to a map as either base layers or overlays.
+   * - Adds an optional layer switcher control to the map.
+   */
+  $plugins['amani_layers'] = array(
+    'library' => array('incident_map', 'Layers'),
+    'logical' => 'Amani.Layers',
+    'switcher' => array('position' => 'topright'),
+    // 'preprocess callback' => 'incident_map_plugin_preprocess_cis_layers',
+    'layers' => array(
+      array('title' => 'Terrain', 'provider' => 'google', 'set' => 'TERRAIN', 'type' => 'base'),
+      array('title' => 'Hybrid', 'provider' => 'google', 'set' => 'HYBRID', 'type' => 'base', 'disabled' => TRUE),
+      array('title' => 'Satellite', 'provider' => 'google', 'set' => 'SATELLITE', 'type' => 'base', 'disabled' => TRUE),
+      array('title' => 'OSM', 'provider' => 'tilelayer', 'urlTemplate' => 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 'type' => 'base', 'disabled' => TRUE),
+      // array(
+      //   'title' => 'Incident reports',
+      //   'provider' => 'lazygeojson',
+      //   'url' => '/geojson/incident-reports',
+      //   'type' => 'overlay',
+      // ),
+    ),
+  );
+
+  $plugins['incident_reports'] = array(
+    'library' => array('incident_map', 'IncidentReports'),
+    'logical' => 'Amani.IncidentReports',
+    'source-url' => '/geojson/incident-reports',
+  );
+
+  return $plugins;
+}
+
+
+/**
+ * Implements hook_incident_map_geojson_info().
  */
 function incident_map_geojson_info() {
   return array(
