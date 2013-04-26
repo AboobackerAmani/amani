@@ -22,39 +22,55 @@ function incident_map_menu() {
  */
 function incident_map_reports() {
   $map_id = 'incident-map-default';
-  $controls_id = "$map_id-controls";
 
-  $map = leaflet_framework_map($map_id);
+  // Map.
+  $map = leaflet_framework_map($map_id, array(), '300px');
   leaflet_framework_extend_map('incident_reports', $map_id, array(
     'source-url' => '/geojson/incident-reports',
   ));
 
+
+  // Categories.
   drupal_add_library('incident_map', 'CategoryFilter');
+
+  $type_filter = "$map_id-categories-type";
   leaflet_framework_extend_map('incident_reports', $map_id, array(
     'filters' => array(
-      array('provider' => 'category', 'key' => 'type', 'empty' => t('No type specified'), 'type' => 'checkbox', 'container' => $controls_id),
-      array('provider' => 'category', 'key' => 'severity', 'empty' => t('No severity specified'), 'type' => 'radio', 'container' => $controls_id),
+      array('provider' => 'category', 'key' => 'type', 'empty' => t('No type specified'), 'type' => 'checkbox', 'container' => $type_filter),
     ),
   ));
 
+  $severity_filter = "$map_id-categories-severity";
+  leaflet_framework_extend_map('incident_reports', $map_id, array(
+    'filters' => array(
+      array('provider' => 'category', 'key' => 'severity', 'empty' => t('No severity specified'), 'type' => 'radio', 'container' => $severity_filter),
+    ),
+  ));
+
+
+  // Timeline.
+  $timeline_filter = "$map_id-timeline";
   drupal_add_library('incident_map', 'TimelineFilter');
   leaflet_framework_extend_map('incident_reports', $map_id, array(
     'filters' => array(
-      array('provider' => 'timeline', 'container' => $controls_id),
+      array('provider' => 'timeline', 'container' => $timeline_filter),
     ),
   ));
 
+
+  // Markup.
   return array(
-    'controls' => array(
-      '#markup' => "
-        <div id=\"$controls_id\">
+    'type_filter' => array('#markup' => "<div id=\"$type_filter\"></div>"),
+    'severity_filter' => array('#markup' => "<div id=\"$severity_filter\"></div>"),
+    'map' => $map,
+    'timeline' => array('#markup' => "
+        <div id=\"$timeline_filter\">
           <div class=\"timeline-filter-chart\">
             <div class=\"title\">Date</div>
           </div>
         </div>
       "
     ),
-    'map' => $map,
   );
 }
 
@@ -74,6 +90,7 @@ function incident_map_libraries_info() {
         ),
       ),
     ),
+
     'lodash' => array(
       'name' => 'Lo-Dash',
       'vendor url' => 'http://lodash.com/',
@@ -85,6 +102,7 @@ function incident_map_libraries_info() {
         ),
       ),
     ),
+
     'd3' => array(
       'name' => 'D3js - Data Driven Documents',
       'vendor url' => 'd3js.org',
