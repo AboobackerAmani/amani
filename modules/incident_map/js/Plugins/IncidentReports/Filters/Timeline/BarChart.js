@@ -25,7 +25,9 @@
 
             div.each(function() {
                 var div = d3.select(this),
-                    g = div.select("g");
+                    g = div.select("g"),
+                    x_axis = d3.select(".axis"),
+                    clip = d3.select(".clip");
 
                 // Create the skeletal chart.
                 if (g.empty()) {
@@ -36,16 +38,13 @@
                         .style("display", "none");
 
                     g = div.append("svg")
-                        .attr("width", width + margin.left + margin.right)
-                        .attr("height", height + margin.top + margin.bottom)
                       .append("g")
                         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
                     g.append("clipPath")
                         .attr("id", "clip-" + id)
                       .append("rect")
-                        .attr("width", width)
-                        .attr("height", height);
+                        .attr("class", "clip");
 
                     g.selectAll(".bar")
                         .data(["background", "foreground"])
@@ -66,6 +65,14 @@
                     gBrush.selectAll("rect").attr("height", height);
                     gBrush.selectAll(".resize").append("path").attr("d", resizePath);
                 }
+
+                // Handle resizing with on repaint.
+                // TODO: Brush selection still not playing nice.
+                g       .attr("width", width + margin.left + margin.right)
+                        .attr("height", height + margin.top + margin.bottom)
+                clip    .attr("width", width)
+                        .attr("height", height);
+                x_axis  .call(axis);
 
                 // Only redraw the brush if set externally.
                 if (brushDirty) {

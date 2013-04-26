@@ -13,9 +13,12 @@ Amani.TimelineFilter = Amani.Filter.extend({
     initialize: function (dimension, extent, container) {
         var render = this.render.bind(this),
             dates = dimension.group(),
+            margin = { top: 10, right: 15, bottom: 20, left: 15 },
+            height = 60,
+            width = container.clientWidth - margin.left - margin.right,
             scale = d3.time.scale()
                 .domain(extent)
-                .rangeRound([0, container.clientWidth])
+                .rangeRound([0, width])
                 .nice(d3.time.week),
             charts = [
                 Amani.barChart()
@@ -23,12 +26,23 @@ Amani.TimelineFilter = Amani.Filter.extend({
                     .group(dates)
                     .interval(d3.time.day)
                     .x(scale)
+                    .y(d3.scale.linear().range([height, 0]))
+                    .margin(margin)
                     .filter()
-            ];
+            ],
+            containers = charts.map(function () {
+                return L.DomUtil.create('div', 'timeline-filter-chart', container);
+            });
 
-        this.chart = d3.selectAll('.timeline-filter-chart').data(charts).each(function (chart) {
+        this.chart = d3.selectAll(containers).data(charts).each(function (chart) {
             chart.on('brush', render).on('brushend', render);
         });
+
+        L.DomEvent.on(window, 'resize', function () {
+            var width = container.clientWidth - margin.left - margin.right;
+            scale.rangeRound([0, width]);
+            this.update();
+        }, this);
 
         this.update();
     },
