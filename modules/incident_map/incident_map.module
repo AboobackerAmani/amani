@@ -18,6 +18,16 @@ function incident_map_menu() {
 }
 
 /**
+ * Implements hook_theme().
+ */
+function incident_map_theme($existing, $type, $theme, $path) {
+  return array(
+    'category_filter' => array('variables' => array('id' => NULL, 'title' => NULL)),
+    'timeline_filter' => array('variables' => array('id' => NULL, 'title' => NULL)),
+  );
+}
+
+/**
  * Page callback.
  */
 function incident_map_reports() {
@@ -29,42 +39,87 @@ function incident_map_reports() {
     'source-url' => '/geojson/incident-reports',
   ));
 
-
   // Categories.
-  drupal_add_library('incident_map', 'CategoryFilter');
+  $title = t('Filter by report type');
+  $empty = t('No type specified');
+  $type = incident_map_category_filter($map_id, 'type', $title, 'checkbox', $empty);
 
-  $type_filter = "$map_id-categories-type";
-  leaflet_framework_extend_map('incident_reports', $map_id, array(
-    'filters' => array(
-      array('provider' => 'category', 'key' => 'type', 'empty' => t('No type specified'), 'type' => 'checkbox', 'container' => $type_filter),
-    ),
-  ));
-
-  $severity_filter = "$map_id-categories-severity";
-  leaflet_framework_extend_map('incident_reports', $map_id, array(
-    'filters' => array(
-      array('provider' => 'category', 'key' => 'severity', 'empty' => t('No severity specified'), 'type' => 'radio', 'container' => $severity_filter),
-    ),
-  ));
-
+  $title = t('Filter by report severity');
+  $empty = t('No severity specified');
+  $severity = incident_map_category_filter($map_id, 'severity', $title, 'radio', $empty);
 
   // Timeline.
-  $timeline_filter = "$map_id-timeline";
-  drupal_add_library('incident_map', 'TimelineFilter');
-  leaflet_framework_extend_map('incident_reports', $map_id, array(
-    'filters' => array(
-      array('provider' => 'timeline', 'container' => $timeline_filter),
-    ),
-  ));
-
+  $timeline = incident_map_timeline_filter($map_id);
 
   // Markup.
   return array(
-    'type_filter' => array('#markup' => "<div id=\"$type_filter\"><h3>Filter by report type</h3></div>"),
-    'severity_filter' => array('#markup' => "<div id=\"$severity_filter\"><h3>Filter by report severity</h3></div>"),
+    'type_filter' => $type,
+    'severity_filter' => $severity,
     'map' => $map,
-    'timeline' => array('#markup' => "<div id=\"$timeline_filter\"><div class=\"timeline-filter-chart\"></div></div>"),
+    'timeline' => $timeline,
   );
+}
+
+/**
+ * Create a timeline filter for the incident map.
+ */
+function incident_map_timeline_filter($map) {
+  drupal_add_library('incident_map', 'TimelineFilter');
+
+  $container = "$map-timeline-filter";
+
+  leaflet_framework_extend_map('incident_reports', $map, array(
+    'filters' => array(array('provider' => 'timeline', 'container' => $container)),
+  ));
+
+  return theme('timeline_filter', array('id' => $container));
+}
+
+/**
+ * Create a category filter for the incident map.
+ */
+function incident_map_category_filter($map, $key, $title = NULL, $type = 'checkbox', $empty = 'None') {
+  drupal_add_library('incident_map', 'CategoryFilter');
+
+  $container = "$map-category-filter-$key";
+
+  leaflet_framework_extend_map('incident_reports', $map, array(
+    'filters' => array(array(
+      'provider' => 'category',
+      'key' => $key,
+      'empty' => $empty,
+      'type' => $type,
+      'container' => $container,
+    )),
+  ));
+
+  return theme('category_filter', array('id' => $container, 'title' => $title));
+}
+
+/**
+ * Timeline filter theme function.
+ */
+function theme_timeline_filter($vars) {
+  $markup = "";
+
+  $markup .= "<div id=\"{$vars['id']}\" class=\"incident-map-filter\">";
+  if (!empty($vars['title'])) $markup .= "<h3>{$vars['title']}</h3>";
+  $markup .= "</div>";
+
+  return array("#markup" => $markup);
+}
+
+/**
+ * Category filter theme function.
+ */
+function theme_category_filter($vars) {
+  $markup = "";
+
+  $markup .= "<div id=\"{$vars['id']}\" class=\"incident-map-filter\">";
+  if (!empty($vars['title'])) $markup .= "<h3>{$vars['title']}</h3>";
+  $markup .= "</div>";
+
+  return array('#markup' => $markup);
 }
 
 /**
