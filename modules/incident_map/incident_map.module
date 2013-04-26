@@ -21,8 +21,30 @@ function incident_map_menu() {
  * Page callback.
  */
 function incident_map_reports() {
+  $map_id = 'incident-map-default';
+  $controls_id = "$map_id-controls";
+
+  $map = leaflet_framework_map($map_id);
+  leaflet_framework_extend_map('incident_reports', $map_id, array(
+    'source-url' => '/geojson/incident-reports',
+    'controls-container' => $controls_id,
+    'filters' => array(
+      array('key' => 'type', 'empty' => t('No type specified'), 'type' => 'checkbox'),
+      array('key' => 'severity', 'empty' => t('No severity specified'), 'type' => 'radio'),
+    ),
+  ));
+
   return array(
-    'map' => leaflet_framework_map('incident-map-default')
+    'controls' => array(
+      '#markup' => "
+        <div id=\"$controls_id\">
+          <div class=\"chart\">
+            <div class=\"title\">Date</div>
+          </div>
+        </div>
+      "
+    ),
+    'map' => $map,
   );
 }
 
@@ -53,6 +75,17 @@ function incident_map_libraries_info() {
         ),
       ),
     ),
+    'd3' => array(
+      'name' => 'D3js - Data Driven Documents',
+      'vendor url' => 'd3js.org',
+      'download url' => 'http://d3js.org/d3.v3.zip',
+      'version' => 'v3',
+      'files' => array(
+        'js' => array(
+          'd3.v3.js',
+        ),
+      ),
+    ),
   );
 }
 
@@ -73,6 +106,11 @@ function incident_map_library() {
   $lodash = libraries_detect('lodash');
   if ($lodash) {
     $libraries['lodash'] = leaflet_framework_convert_libraries($lodash);
+  }
+
+  $d3 = libraries_detect('d3');
+  if ($d3) {
+    $libraries['d3'] = leaflet_framework_convert_libraries($d3);
   }
 
   $path = drupal_get_path('module', 'incident_map');
@@ -125,12 +163,17 @@ function incident_map_library() {
     'title' => 'Incident reports visualization',
     'version' => '7.x-1.x',
     'js' => array(
-      "$path/js/reqwest.js" => array(),
+      "$path/js/Control/Filter.js" => array(),
+      "$path/js/BarChart.js" => array(),
       "$path/js/IncidentReports.js" => array(),
+    ),
+    'css' => array(
+      "$path/css/incident_reports.css" => array(),
     ),
     'dependencies' => array(
       array('incident_map', 'reqwest'),
       array('incident_map', 'lodash'),
+      array('incident_map', 'd3'),
       array('incident_map', 'crossfilter'),
       array('leaflet_framework', 'LeafletFramework'),
       array('incident_map', 'Header'),
@@ -154,7 +197,6 @@ function incident_map_leaflet_framework_maps() {
         'zoom' => 7,
       ),
       'amani_layers' => array(),
-      'incident_reports' => array(),
     ),
   );
 
@@ -181,12 +223,6 @@ function incident_map_leaflet_framework_plugins() {
       array('title' => 'Hybrid', 'provider' => 'google', 'set' => 'HYBRID', 'type' => 'base', 'disabled' => TRUE),
       array('title' => 'Satellite', 'provider' => 'google', 'set' => 'SATELLITE', 'type' => 'base', 'disabled' => TRUE),
       array('title' => 'OSM', 'provider' => 'tilelayer', 'urlTemplate' => 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 'type' => 'base', 'disabled' => TRUE),
-      // array(
-      //   'title' => 'Incident reports',
-      //   'provider' => 'lazygeojson',
-      //   'url' => '/geojson/incident-reports',
-      //   'type' => 'overlay',
-      // ),
     ),
   );
 
@@ -194,6 +230,7 @@ function incident_map_leaflet_framework_plugins() {
     'library' => array('incident_map', 'IncidentReports'),
     'logical' => 'Amani.IncidentReports',
     'source-url' => '/geojson/incident-reports',
+    'filters' => array(),
   );
 
   return $plugins;

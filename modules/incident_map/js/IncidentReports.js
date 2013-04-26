@@ -1,4 +1,12 @@
 Amani.IncidentReports = LF.Plugin.extend({
+
+    initialize: function (options) {
+        LF.Plugin.prototype.initialize.call(this, options);
+
+        this._dimensions = {};
+        this._filters = {};
+    },
+
     enable: function (map) {
         var url = this.options['source-url'];
 
@@ -7,140 +15,91 @@ Amani.IncidentReports = LF.Plugin.extend({
     },
 
     _onLoad: function (resp) {
-        var layer = L.geoJson(resp),
-            cf = crossfilter(resp.features),
-            by_type = cf.dimension(function (f) { return f.properties.type || "No type specified"; }),
-            type_values = by_type.group().all().map(function (f) { return f.key; }),
-            type_filter = Amani.filterControl({ filters: type_values }),
-            by_severity = cf.dimension(function (f) { return f.properties.severity || "No severity specified"; }),
-            severity_values = by_severity.group().all().map(function (f) { return f.key; }),
-            severity_filter = Amani.filterControl({ filters: severity_values });
+        var container = null,
+            date_format = d3.time.format("%Y-%m-%dT%H:%M:%S");
 
-        type_filter.on('filter', function (e) {
-            by_type.filterAll();
-            by_type.filter(function (f) {
-                return e.active.length === 0 ? true : _.contains(e.active, f);
-            });
-            resp.features = by_type.top(Infinity);
-            layer.clearLayers();
-            layer.addData(resp);
+        resp.features.forEach(function (f, i) {
+            f.properties.date = date_format.parse(f.properties.date);
         });
 
-        severity_filter.on('filter', function (e) {
-            by_severity.filterAll();
-            by_severity.filter(function (f) {
-                return e.active.length === 0 ? true : _.contains(e.active, f);
-            });
-            resp.features = by_severity.top(Infinity);
-            layer.clearLayers();
-            layer.addData(resp);
-        });
+        this._cf = crossfilter(resp.features);
 
-        type_filter.addTo(this._map);
-        severity_filter.addTo(this._map);
-        layer.addTo(this._map);
-    }
-});
+        this._layer_dimension = this._cf.dimension(function (f) { return f.properties.uri; });
+        this._layer = L.geoJson(this._layer_dimension.top(Infinity));
 
-Amani.FilterControl = L.Control.extend({
-    includes: L.Mixin.Events,
+        if ('controls-container' in this.options) {
+            container = document.getElementById(this.options['controls-container'])
+        }
 
-    options: {
-        position: 'topright',
-        filters: [],
-    },
-
-    initialize: function (options) {
-        L.setOptions(this, options);
-    },
-
-    onAdd: function (map) {
-        this._initLayout();
-
-        this.options.filters.forEach(function (filter) {
-            this._addItem(filter);
+        _.each(this.options.filters, function (options) {
+            options.container = container;
+            this._addFilter(options);
         }, this);
 
-        return this._container;
-    },
+        this._layer.addTo(this._map);
 
-    onRemove: function (map) {
+        var date = this._cf.dimension(get_day),
+            dates = date.group(),
+            extent = d3.extent(resp.features, get_day),
+            scale = d3.time.scale()
+                .domain(extent)
+                .rangeRound([0, container.clientWidth])
+                .nice(d3.time.week),
+            charts = [
+                Amani.barChart()
+                    .dimension(date)
+                    .group(dates)
+                    .interval(d3.time.day)
+                    .x(scale)
+                    .filter()
+            ];
 
-    },
+        var render_all = this._renderAll.bind(this);
+        this.chart = d3.selectAll('.chart').data(charts).each(function (chart) {
+            chart.on('brush.hello', render_all).on('brushend', render_all);
+        });
 
-    _initLayout: function () {
-        var class_name = 'leaflet-control-filter',
-            container = this._container = L.DomUtil.create('div', class_name);
+        this._renderAll();
 
-        if (!L.Browser.touch) {
-            L.DomEvent.disableClickPropagation(container);
-            L.DomEvent.on(container, 'mousewheel', L.DomEvent.stopPropagation);
-        } else {
-            L.DomEvent.on(container, 'click', L.DomEvent.stopPropagation);
+        function get_day(f) {
+            return d3.time.day(f.properties.date);
         }
 
-        var form = this._form = L.DomUtil.create('form', class_name + '-list');
-
-        container.appendChild(form);
     },
 
-    _addItem: function (filter) {
-        var label = L.DomUtil.create('label'),
-            input = L.DomUtil.create('input');
-
-        input.type = 'checkbox';
-        input.className = 'leaflet-control-filter-selector';
-
-        input.value = filter;
-
-        L.DomEvent.on(input, 'click', this._onInputClick, this);
-
-        var name = L.DomUtil.create('span');
-        name.innerHTML = ' ' + filter;
-
-        label.appendChild(input);
-        label.appendChild(name);
-
-        this._form.appendChild(label);
-
-        return label;
+    _renderAll: function () {
+        this._layer.clearLayers();
+        this.chart.each(this._renderChart);
+        _.each(this._filters, function (value) { value.update() });
+        this._layer.addData({ type: 'FeatureCollection', features: this._layer_dimension.top(Infinity) });
     },
 
-    _onInputClick: function () {
-        var i, len, input,
-            active_filters = [],
-            inputs = this._form.getElementsByTagName('input');
+    _renderChart: function (method) {
+        d3.select(this).call(method);
+    },
 
-        for (i = 0, len = inputs.length; i < len; i++) {
-            input = inputs[i];
-            if (input.checked) active_filters.push(input.value);
+    _addFilter: function (options) {
+        var dimension = this._cf.dimension(function (f) { return f.properties[options.key] || options.empty; }),
+            filter = Amani.filterControl({ dimension: dimension, type: options.type });
+
+        filter.on('filter', function (e) {
+            dimension.filterAll();
+            dimension.filter(function (f) {
+                return e.active.length === 0 ? true : _.contains(e.active, f);
+            });
+            this._renderAll();
+        }, this);
+
+        if (options.container) {
+            options.container.appendChild(filter.onAdd(this._map));
+        }
+        else {
+            filter.addTo(this._map);
         }
 
-        this.fire('filter', { active: active_filters });
-    },
+        this._dimensions[options.key] = dimension;
+        this._filters[options.key] = filter;
 
-    _createFilter: function (title, filter, container, fn, context) {
-        var class_name = 'filter-' + filter.replace(/[\s\W_]/, '-').toLowerCase(),
-            item = L.DomUtil.create('li', null, container),
-            link = L.DomUtil.create('a', class_name,item);
-
-        link.innerHTML = title;
-        link.href = '#';
-        link.title = title;
-
-        var stop = L.DomEvent.stopPropagation;
-
-        L.DomEvent
-            .on(link, 'click', stop)
-            .on(link, 'mousedown', stop)
-            .on(link, 'dblclick', stop)
-            .on(link, 'click', L.DomEvent.preventDefault)
-            .on(link, 'click', fn, context);
-
-        return item;
-    },
+        return filter;
+    }
 });
-
-Amani.filterControl = function (options) {
-    return new Amani.FilterControl(options);
-};
