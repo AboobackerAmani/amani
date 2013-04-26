@@ -14,7 +14,7 @@ Amani.CategoryFilter = Amani.Filter.extend({
         this._filter.on('filter', function (e) {
             dimension.filterAll();
             dimension.filter(function (f) {
-                return e.active.length === 0 ? true : _.contains(e.active, f);
+                return e.active.length === 0 ? true : jQuery.inArray(f, e.active) >= 0;
             });
             this.render();
         }, this);

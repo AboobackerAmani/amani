@@ -15,11 +15,10 @@ Amani.IncidentReports = LF.Plugin.extend({
 
     _onLoad: function (resp) {
         var i, filter, cf, definition,
-            container = null,
             date_format = d3.time.format("%Y-%m-%dT%H:%M:%S"),
             filter_factory = new Amani.FilterFactory();
 
-        resp.features.forEach(function (f, i) {
+        resp.features.forEach(function (f) {
             f.properties.date = date_format.parse(f.properties.date);
         });
 
@@ -38,7 +37,7 @@ Amani.IncidentReports = LF.Plugin.extend({
     },
 
     _render: function () {
-        _.each(this._filters, function (filter) { filter.update(); });
+        this._filters.forEach(function (filter) { filter.update(); });
         this._layer.clearLayers();
         this._layer.addData({
             type: 'FeatureCollection',

@@ -79,19 +79,7 @@ function incident_map_libraries_info() {
       'version' => '1.2.0',
       'files' => array(
         'js' => array(
-          'crossfilter.js',
-        ),
-      ),
-    ),
-
-    'lodash' => array(
-      'name' => 'Lo-Dash',
-      'vendor url' => 'http://lodash.com/',
-      'download url' => 'https://raw.github.com/bestiejs/lodash/v1.2.0/dist/lodash.min.js',
-      'version' => 'v1.2.0',
-      'files' => array(
-        'js' => array(
-          'lodash.js',
+          'crossfilter.min.js',
         ),
       ),
     ),
@@ -122,11 +110,6 @@ function incident_map_library() {
   $crossfilter = libraries_detect('crossfilter');
   if ($crossfilter) {
     $libraries['crossfilter'] = leaflet_framework_convert_libraries($crossfilter);
-  }
-
-  $lodash = libraries_detect('lodash');
-  if ($lodash) {
-    $libraries['lodash'] = leaflet_framework_convert_libraries($lodash);
   }
 
   $d3 = libraries_detect('d3');
@@ -178,7 +161,6 @@ function incident_map_library() {
       "$path/js/Plugins/IncidentReports.js" => array(),
     ),
     'dependencies' => array(
-      array('incident_map', 'lodash'),
       array('incident_map', 'crossfilter'),
       array('leaflet_framework', 'LeafletFramework'),
       array('incident_map', 'Header'),

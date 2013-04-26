@@ -69,7 +69,7 @@ Amani.FilterControl = L.Control.extend({
 
         checked = (checked || false);
 
-        if (_.contains(['checkbox', 'radio'], type)) {
+        if (jQuery.inArray(type, ['checkbox', 'radio']) >= 0) {
             input.type = type;
             if (type === 'radio') {
                 input.name = 'filter-' + L.Util.stamp(this);
