@@ -9,8 +9,7 @@ Amani.IncidentReports = LF.Plugin.extend({
 
     enable: function (map) {
         var url = this.options['source-url'];
-
-        reqwest({ url: url, type: 'json', success: L.Util.bind(this._onLoad, this) })
+        jQuery.get(url, L.Util.bind(this._onLoad, this));
         this._map = map;
     },
 

@@ -143,15 +143,6 @@ function incident_map_library() {
 
   $path = drupal_get_path('module', 'incident_map');
 
-  $libraries['reqwest'] = array(
-    'title' => 'reqwest',
-    'description' => "It's AJAX!",
-    'version' => '',
-    'js' => array(
-      "$path/js/reqwest.js" => array(),
-    ),
-  );
-
   $libraries['Header'] = array(
     'title' => 'Incident map header file',
     'description' => 'Declares amani incident map namespace.',
@@ -181,7 +172,6 @@ function incident_map_library() {
       "$path/js/Plugins/Layers.js" => array(),
     ),
     'dependencies' => array(
-      array('incident_map', 'reqwest'),
       array('leaflet_framework', 'LeafletFramework'),
       array('incident_map', 'Header'),
     ),
@@ -195,7 +185,6 @@ function incident_map_library() {
       "$path/js/Plugins/IncidentReports.js" => array(),
     ),
     'dependencies' => array(
-      array('incident_map', 'reqwest'),
       array('incident_map', 'lodash'),
       array('incident_map', 'crossfilter'),
       array('leaflet_framework', 'LeafletFramework'),

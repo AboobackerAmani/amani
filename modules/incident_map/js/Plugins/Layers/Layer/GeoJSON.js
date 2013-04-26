@@ -31,11 +31,7 @@ Amani.LazyGeoJSON = L.GeoJSON.extend({
 
             // TODO: Trigger map loading.
 
-            reqwest({
-                url: this._url,
-                type: 'json',
-                success: L.Util.bind(this._onLoad, this)
-            })
+            jQuery.get(url, L.Util.bind(this._onLoad, this));
             this._waiting = true;
         }
         L.GeoJSON.prototype.onAdd.call(this, map);
