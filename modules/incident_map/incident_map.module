@@ -60,17 +60,10 @@ function incident_map_reports() {
 
   // Markup.
   return array(
-    'type_filter' => array('#markup' => "<div id=\"$type_filter\"></div>"),
-    'severity_filter' => array('#markup' => "<div id=\"$severity_filter\"></div>"),
+    'type_filter' => array('#markup' => "<div id=\"$type_filter\"><h3>Filter by report type</h3></div>"),
+    'severity_filter' => array('#markup' => "<div id=\"$severity_filter\"><h3>Filter by report severity</h3></div>"),
     'map' => $map,
-    'timeline' => array('#markup' => "
-        <div id=\"$timeline_filter\">
-          <div class=\"timeline-filter-chart\">
-            <div class=\"title\">Date</div>
-          </div>
-        </div>
-      "
-    ),
+    'timeline' => array('#markup' => "<div id=\"$timeline_filter\"><div class=\"timeline-filter-chart\"></div></div>"),
   );
 }
 
