@@ -27,10 +27,20 @@ function incident_map_reports() {
   $map = leaflet_framework_map($map_id);
   leaflet_framework_extend_map('incident_reports', $map_id, array(
     'source-url' => '/geojson/incident-reports',
-    'controls-container' => $controls_id,
+  ));
+
+  drupal_add_library('incident_map', 'CategoryFilter');
+  leaflet_framework_extend_map('incident_reports', $map_id, array(
     'filters' => array(
-      array('key' => 'type', 'empty' => t('No type specified'), 'type' => 'checkbox'),
-      array('key' => 'severity', 'empty' => t('No severity specified'), 'type' => 'radio'),
+      array('provider' => 'category', 'key' => 'type', 'empty' => t('No type specified'), 'type' => 'checkbox', 'container' => $controls_id),
+      array('provider' => 'category', 'key' => 'severity', 'empty' => t('No severity specified'), 'type' => 'radio', 'container' => $controls_id),
+    ),
+  ));
+
+  drupal_add_library('incident_map', 'TimelineFilter');
+  leaflet_framework_extend_map('incident_reports', $map_id, array(
+    'filters' => array(
+      array('provider' => 'timeline', 'container' => $controls_id),
     ),
   ));
 
@@ -38,7 +48,7 @@ function incident_map_reports() {
     'controls' => array(
       '#markup' => "
         <div id=\"$controls_id\">
-          <div class=\"chart\">
+          <div class=\"timeline-filter-chart\">
             <div class=\"title\">Date</div>
           </div>
         </div>
@@ -147,10 +157,10 @@ function incident_map_library() {
     'version' => '7.x-1.x',
     'js' => array(
       $google_api => array('type' => 'external'),
-      "$path/js/LayerFactory.js" => array(),
-      "$path/js/Layer/Google.js" => array(),
-      "$path/js/Layer/GeoJSON.js" => array(),
-      "$path/js/Layers.js" => array(),
+      "$path/js/Plugins/Layers/LayerFactory.js" => array(),
+      "$path/js/Plugins/Layers/Layer/Google.js" => array(),
+      "$path/js/Plugins/Layers/Layer/GeoJSON.js" => array(),
+      "$path/js/Plugins/Layers.js" => array(),
     ),
     'dependencies' => array(
       array('incident_map', 'reqwest'),
@@ -163,20 +173,43 @@ function incident_map_library() {
     'title' => 'Incident reports visualization',
     'version' => '7.x-1.x',
     'js' => array(
-      "$path/js/Control/Filter.js" => array(),
-      "$path/js/BarChart.js" => array(),
-      "$path/js/IncidentReports.js" => array(),
-    ),
-    'css' => array(
-      "$path/css/incident_reports.css" => array(),
+      "$path/js/Plugins/IncidentReports/FilterFactory.js" => array(),
+      "$path/js/Plugins/IncidentReports.js" => array(),
     ),
     'dependencies' => array(
       array('incident_map', 'reqwest'),
       array('incident_map', 'lodash'),
-      array('incident_map', 'd3'),
       array('incident_map', 'crossfilter'),
       array('leaflet_framework', 'LeafletFramework'),
       array('incident_map', 'Header'),
+    ),
+  );
+
+  $libraries['CategoryFilter'] = array(
+    'title' => 'CategoryFilter',
+    'version' => '7.x-1.x',
+    'js' => array(
+      "$path/js/Plugins/IncidentReports/Filters/Category/Category.js" => array(),
+      "$path/js/Plugins/IncidentReports/Filters/CategoryFilter.js" => array(),
+    ),
+    'dependencies' => array(
+      array('incident_map', 'IncidentReports'),
+    ),
+  );
+
+  $libraries['TimelineFilter'] = array(
+    'title' => 'TimelineFilter',
+    'version' => '7.x-1.x',
+    'js' => array(
+      "$path/js/Plugins/IncidentReports/Filters/Timeline/BarChart.js" => array(),
+      "$path/js/Plugins/IncidentReports/Filters/TimelineFilter.js" => array(),
+    ),
+    'css' => array(
+      "$path/css/timeline_filter.css" => array(),
+    ),
+    'dependencies' => array(
+      array('incident_map', 'd3'),
+      array('incident_map', 'IncidentReports'),
     ),
   );
 

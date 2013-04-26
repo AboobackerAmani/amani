@@ -2,7 +2,6 @@ Amani.FilterControl = L.Control.extend({
     includes: L.Mixin.Events,
 
     options: {
-        position: 'topright',
         type: 'checkbox'
     },
 
@@ -10,18 +9,13 @@ Amani.FilterControl = L.Control.extend({
         L.setOptions(this, options);
         this.dimension = this.options.dimension;
         this.filters = {};
-    },
 
-    onAdd: function (map) {
         this._initLayout();
         this._initItems();
         this.update();
-        return this._container;
     },
 
-    onRemove: function (map) {
-
-    },
+    container: function () { return this._container; },
 
     update: function () {
         var group = this.dimension.group();
