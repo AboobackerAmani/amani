@@ -127,6 +127,28 @@ function theme_category_filter($vars) {
  */
 function incident_map_libraries_info() {
   return array(
+    'Leaflet.markercluster' => array(
+      'name' => 'Leaflet.markercluster',
+      'vendor url' => 'https://github.com/Leaflet/Leaflet.markercluster',
+      'download url' => 'https://github.com/Leaflet/Leaflet.markercluster/archive/master.zip',
+      'version' => '0.2',
+      'path' => 'dist',
+      'files' => array(
+        'js' => array(
+          'leaflet.markercluster-src.js' => array(),
+        ),
+        'css' => array(
+          'MarkerCluster.css' => array(),
+          'MarkerCluster.Default.css' => array(),
+          'MarkerCluster.Default.ie.css' => array(
+            'type' => 'file',
+            'media' => 'screen',
+            'browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE),
+          ),
+        ),
+      ),
+    ),
+
     'crossfilter' => array(
       'name' => 'Crossfilter',
       'vendor url' => 'http://square.github.io/crossfilter/',
@@ -161,6 +183,12 @@ function incident_map_library() {
   global $is_https;
 
   $libraries = array();
+
+  $markercluster = libraries_detect('Leaflet.markercluster');
+  if ($markercluster) {
+    $libraries['Leaflet.markercluster'] = leaflet_framework_convert_libraries($markercluster);
+    $libraries['Leaflet.markercluster']['dependencies'][] = array('leaflet_framework', 'Leaflet');
+  }
 
   $crossfilter = libraries_detect('crossfilter');
   if ($crossfilter) {
@@ -213,12 +241,17 @@ function incident_map_library() {
     'version' => '7.x-1.x',
     'js' => array(
       "$path/js/Plugins/IncidentReports/FilterFactory.js" => array(),
+      "$path/js/Plugins/IncidentReports/ToggleControl.js" => array(),
       "$path/js/Plugins/IncidentReports.js" => array(),
+    ),
+    'css' => array(
+      "$path/css/incident_reports.css" => array(),
     ),
     'dependencies' => array(
       array('incident_map', 'crossfilter'),
       array('leaflet_framework', 'LeafletFramework'),
       array('incident_map', 'Header'),
+      array('incident_map', 'Leaflet.markercluster'),
     ),
   );
 
