@@ -51,6 +51,12 @@ Amani.TimelineFilter = Amani.Filter.extend({
         this.chart.each(function (method) {
             d3.select(this).call(method);
         });
+    },
+
+    reset: function () {
+        this.chart.each(function (method) {
+            method.filter();
+        });
     }
 });
 

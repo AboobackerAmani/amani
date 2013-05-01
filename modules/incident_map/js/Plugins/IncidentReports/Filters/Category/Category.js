@@ -32,6 +32,15 @@ Amani.FilterControl = L.Control.extend({
         }, this);
     },
 
+    reset: function () {
+        var inputs = this._form.getElementsByTagName('input');
+        for (var i = 0, len = inputs.length; i < len; i++) {
+            inputs[i].checked = null;
+        }
+        this.dimension.filterAll();
+        this.fire('filter', { active: [] });
+    },
+
     _initLayout: function () {
         var class_name = 'leaflet-control-filter',
             container = this._container = L.DomUtil.create('div', class_name);

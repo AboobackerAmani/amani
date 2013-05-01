@@ -32,12 +32,21 @@ Amani.IncidentReports = LF.Plugin.extend({
         for (i in this.options.filters) {
             definition = this.options.filters[i];
             filter = filter_factory.filter(cf, resp.features, definition);
-            filter.on('render', this._render, this);
+            filter.on('update', this._update, this);
             this._filters.push(filter);
         }
 
-        this._render();
+        this._update();
         this._markers.addTo(this._map);
+
+        var reset = L.DomUtil.create('a', 'incident-report-filter-reset');
+        reset.href = '#';
+        reset.textContent = "Reset filters";
+        L.DomEvent.on(reset, 'click', L.DomEvent.preventDefault);
+        L.DomEvent.on(reset, 'click', function () {
+            this._reset();
+        }, this);
+        jQuery(this._map._container.parentElement).prepend(reset);
     },
 
     _setData: function (features) {
@@ -63,11 +72,21 @@ Amani.IncidentReports = LF.Plugin.extend({
     },
 
     _render: function () {
-        this._filters.forEach(function (filter) { filter.update(); });
         this._markers.clearLayers();
         this._markers.addLayer(this._toggle.enabled() ? new L.MarkerClusterGroup() : L.featureGroup());
         this._setData(this._dimension.top(Infinity));
+    },
+
+    _update: function () {
+        this._filters.forEach(function (filter) { filter.update(); });
+        this._render();
+    },
+
+    _reset: function () {
+        this._filters.forEach(function (filter) { filter.reset() });
+        this._render();
     }
+
 });
 
 L.LayerGroup.include({

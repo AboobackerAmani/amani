@@ -24,6 +24,10 @@ Amani.CategoryFilter = Amani.Filter.extend({
 
     update: function () {
         this._filter.update();
+    },
+
+    reset: function () {
+        this._filter.reset();
     }
 });
 

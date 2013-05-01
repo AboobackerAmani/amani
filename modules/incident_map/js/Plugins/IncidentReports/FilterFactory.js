@@ -18,8 +18,10 @@ Amani.Filter = L.Class.extend({
     includes: L.Mixin.Events,
 
     render: function () {
-        this.fire('render');
+        this.fire('update');
     },
 
-    update: function () {}
+    update: function () {},
+
+    reset: function () {}
 });
