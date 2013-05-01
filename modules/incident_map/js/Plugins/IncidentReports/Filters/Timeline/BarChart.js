@@ -25,6 +25,7 @@
 
             div.each(function() {
                 var div = d3.select(this),
+                    svg = div.select("svg"),
                     g = div.select("g"),
                     x_axis = d3.select(".axis"),
                     clip = d3.select(".clip");
@@ -68,8 +69,10 @@
 
                 // Handle resizing with on repaint.
                 // TODO: Brush selection still not playing nice.
+                svg     .attr("height", height + margin.top + margin.bottom)
+                        .attr("width", width + margin.left + margin.right);
                 g       .attr("width", width + margin.left + margin.right)
-                        .attr("height", height + margin.top + margin.bottom)
+                        .attr("height", height + margin.top + margin.bottom);
                 clip    .attr("width", width)
                         .attr("height", height);
                 x_axis  .call(axis);

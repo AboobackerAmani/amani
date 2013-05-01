@@ -59,7 +59,7 @@ Amani.IncidentReports = LF.Plugin.extend({
     },
 
     _icon: function (properties) {
-        return L.icon({ iconUrl: properties.iconUrl || L.Icon.Default.imagePath + '/marker-icon.png' });
+        return properties.iconUrl ? L.icon({ iconUrl: properties.iconUrl }) : new L.Icon.Default();
     },
 
     _render: function () {

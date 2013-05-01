@@ -13,7 +13,7 @@ function geojson_menu() {
       'page callback' => 'geojson_json_menu_callback',
       'page arguments' => array($info['callback'], $info),
       'access arguments' => array(),
-      'type' => MENU_NORMAL_ITEM,
+      'type' => MENU_CALLBACK,
     );
 
     if (isset($info['arguments'])) {

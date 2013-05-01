@@ -27,6 +27,48 @@ function incident_map_theme($existing, $type, $theme, $path) {
   );
 }
 
+function incident_map_block_info() {
+  $blocks = array();
+
+  $blocks['type-filter'] = array('info' => 'Incident map filter: Report type');
+  $blocks['severity-filter'] = array('info' => 'Incident map filter: Report severity');
+  $blocks['timeline-filter'] = array('info' => 'Incident map filter: Timeline');
+
+  return $blocks;
+}
+
+function incident_map_block_view($delta = '') {
+  $map_id = 'incident-map-default';
+  $block = array();
+
+  switch ($delta) {
+    case 'type-filter':
+      $title = t('Filter by report type');
+      $empty = t('No type specified');
+      $type = incident_map_category_filter($map_id, 'type', NULL, 'checkbox', $empty);
+      $block['subject'] = $title;
+      $block['content'] = $type;
+      break;
+
+    case 'severity-filter':
+      $title = t('Filter by report severity');
+      $empty = t('No severity specified');
+      $severity = incident_map_category_filter($map_id, 'severity', NULL, 'radio', $empty);
+      $block['subject'] = $title;
+      $block['content'] = $severity;
+      break;
+
+    case 'timeline-filter':
+      $block['content'] = incident_map_timeline_filter($map_id);
+      break;
+
+    default:
+      break;
+  }
+
+  return $block;
+}
+
 /**
  * Page callback.
  */
@@ -39,25 +81,8 @@ function incident_map_reports() {
     'source-url' => '/geojson/incident-reports',
   ));
 
-  // Categories.
-  $title = t('Filter by report type');
-  $empty = t('No type specified');
-  $type = incident_map_category_filter($map_id, 'type', $title, 'checkbox', $empty);
-
-  $title = t('Filter by report severity');
-  $empty = t('No severity specified');
-  $severity = incident_map_category_filter($map_id, 'severity', $title, 'radio', $empty);
-
-  // Timeline.
-  $timeline = incident_map_timeline_filter($map_id);
-
   // Markup.
-  return array(
-    'type_filter' => $type,
-    'severity_filter' => $severity,
-    'map' => $map,
-    'timeline' => $timeline,
-  );
+  return array('map' => $map);
 }
 
 /**
@@ -249,6 +274,7 @@ function incident_map_library() {
     ),
     'dependencies' => array(
       array('incident_map', 'crossfilter'),
+      array('incident_map', 'd3'),
       array('leaflet_framework', 'LeafletFramework'),
       array('incident_map', 'Header'),
       array('incident_map', 'Leaflet.markercluster'),
@@ -409,6 +435,7 @@ function incident_report_geojson_feature_factory($wrapper) {
     'severity' => $wrapper->field_incident_severity->label(),
     'type' => $wrapper->field_incident_report_type->label(),
     'date' => date_format(new DateObject($wrapper->field_incident_date->value()), DATE_FORMAT_ISO),
+    'teaser' => drupal_render(node_view($wrapper->value(), 'teaser')),
   );
 
   return Affinity\GeoJSON\feature($geom, $properties);
