@@ -14,3 +14,11 @@
 .amani-control-markerclusterer-toggle input {
   margin-left: -999px;
 }
+
+.amani-control-markerclusterer-toggle.enabled div {
+  background: url(../images/spaced.png) no-repeat;
+}
+
+.amani-control-markerclusterer-toggle.disabled div {
+  background: url(../images/grouped.png) no-repeat;
+}

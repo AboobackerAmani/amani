@@ -23,6 +23,8 @@ Amani.Toggle = L.Control.extend({
             form = L.DomUtil.create('form', class_name + '-form', inner),
             toggle = L.DomUtil.create('input', class_name + '-toggle', form);
 
+        L.DomUtil.addClass(container, this._toggle ? 'enabled' : 'disabled');
+
         toggle.type = 'checkbox';
         toggle.checked = this._toggle ? 'checked' : '';
 
