@@ -193,6 +193,10 @@
             return chart;
         };
 
+        chart.extent = function () {
+            return brush.extent();
+        };
+
         chart.group = function(_) {
             if (!arguments.length) return group;
             group = _;

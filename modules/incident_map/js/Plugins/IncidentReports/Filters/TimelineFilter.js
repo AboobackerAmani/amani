@@ -12,6 +12,7 @@ Amani.FilterFactory.include({
 Amani.TimelineFilter = Amani.Filter.extend({
     initialize: function (dimension, extent, container) {
         var render = this.render.bind(this),
+            update = this.update.bind(this),
             dates = dimension.group(),
             margin = { top: 10, right: 15, bottom: 20, left: 15 },
             height = 60,
@@ -34,17 +35,52 @@ Amani.TimelineFilter = Amani.Filter.extend({
                 return L.DomUtil.create('div', 'timeline-filter-chart', container);
             });
 
-        this.chart = d3.selectAll(containers).data(charts).each(function (chart) {
+        var chart = this.chart = d3.selectAll(containers).data(charts).each(function (chart) {
+            chart.on('brush.datepicker', function (e) { set_date(e.extent()); });
+            chart.on('brushend.datepicker', function (e) { set_date(e.extent()); });
             chart.on('brush', render).on('brushend', render);
         });
+
+        update();
 
         L.DomEvent.on(window, 'resize', function () {
             var width = container.clientWidth - margin.left - margin.right;
             scale.rangeRound([0, width]);
-            this.update();
-        }, this);
+            update();
+        });
 
-        this.update();
+        var defaults = {
+                minDate: d3.time.day.offset(extent[0], -1),
+                maxDate: d3.time.day.offset(extent[1], 1)
+            },
+            from_label = L.DomUtil.create('label', 'timeline-filter-from', container),
+            from_text = L.DomUtil.create('span', null, from_label),
+            from_input = L.DomUtil.create('input', null, from_label),
+            from = jQuery(from_input).datepicker(defaults),
+            to_label = L.DomUtil.create('label', 'timeline-filter-to', container),
+            to_text = L.DomUtil.create('span', null, to_label),
+            to_input = L.DomUtil.create('input', 'timeline-filter-to', to_label),
+            to = jQuery(to_input).datepicker(defaults);
+
+        from_text.textContent = 'From: ';
+        to_text.textContent = 'To: ';
+
+        from.change(set_filter);
+        to.change(set_filter);
+
+        function set_filter(e) {
+            var f = from.datepicker('getDate') || extent[0],
+                t = to.datepicker('getDate') || extent[1];
+
+            chart.each(function (method) { method.filter(f < t ? [f, t] : [t, f]); });
+            update();
+            render();
+        }
+
+        function set_date(range) {
+            from.datepicker("setDate", range[0]);
+            to.datepicker("setDate", range[1]);
+        }
     },
 
     update: function () {

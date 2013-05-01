@@ -305,6 +305,7 @@ function incident_map_library() {
     ),
     'dependencies' => array(
       array('incident_map', 'd3'),
+      array('system', 'ui.datepicker'),
       array('incident_map', 'IncidentReports'),
     ),
   );
