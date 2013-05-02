@@ -10,6 +10,9 @@ regions[header] = Header
 regions[navigation_region] = Navigation region
 regions[highlighted] = Highlighted
 regions[help] = Help
+regions[home_content_top_rotator] = Home: Content top rotator
+regions[home_content_top_callout_right] = Home: Content top callout right
+regions[home_content_top_static_region] = Home: Content top 3x static region
 regions[content] = Content
 regions[sidebar_first] = First sidebar
 regions[sidebar_second] = Second sidebar
@@ -27,6 +30,7 @@ features[] = main_menu
 features[] = secondary_menu
 
 ; Stylesheets
+stylesheets[all][] = fonts/stylesheet.css
 stylesheets[all][] = css/default.css
 stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/style.css
