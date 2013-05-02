@@ -10,87 +10,6 @@
 function amani_slideshow_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-slideshow-body'.
-  $fields['node-slideshow-body'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(
-        0 => 'node',
-      ),
-      'field_name' => 'body',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(
-        'profile2_private' => FALSE,
-      ),
-      'translatable' => '1',
-      'type' => 'text_with_summary',
-    ),
-    'field_instance' => array(
-      'bundle' => 'slideshow',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 0,
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'hidden',
-          'module' => 'text',
-          'settings' => array(
-            'trim_length' => 600,
-          ),
-          'type' => 'text_summary_or_trimmed',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'body',
-      'label' => 'Body',
-      'required' => FALSE,
-      'settings' => array(
-        'display_summary' => TRUE,
-        'text_processing' => 1,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'module' => 'text',
-        'settings' => array(
-          'rows' => 20,
-          'summary_rows' => 5,
-        ),
-        'type' => 'text_textarea_with_summary',
-        'weight' => '5',
-      ),
-    ),
-  );
-
   // Exported field: 'node-slideshow-field_caption'.
   $fields['node-slideshow-field_caption'] = array(
     'field_config' => array(
@@ -275,6 +194,7 @@ function amani_slideshow_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'slideshow',
+      'default_value' => array(),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -318,13 +238,18 @@ function amani_slideshow_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'image',
+        'module' => 'imagefield_crop',
         'settings' => array(
+          'collapsible' => '2',
+          'croparea' => '750x375',
+          'enforce_minimum' => 1,
+          'enforce_ratio' => 1,
           'preview_image_style' => 'thumbnail',
-          'progress_indicator' => 'throbber',
+          'progress_indicator' => 'bar',
+          'resolution' => '500x250',
         ),
-        'type' => 'image_image',
-        'weight' => '0',
+        'type' => 'imagefield_crop_widget',
+        'weight' => 0,
       ),
     ),
   );
@@ -402,7 +327,7 @@ function amani_slideshow_field_default_fields() {
           'url_cutoff' => '80',
         ),
         'enable_tokens' => 0,
-        'title' => 'optional',
+        'title' => 'none',
         'title_maxlength' => '128',
         'title_value' => '',
         'url' => 0,
@@ -421,7 +346,6 @@ function amani_slideshow_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Body');
   t('Caption');
   t('Description');
   t('Image');

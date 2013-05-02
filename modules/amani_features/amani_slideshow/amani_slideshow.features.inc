@@ -29,7 +29,7 @@ function amani_slideshow_node_info() {
     'slideshow' => array(
       'name' => t('Slideshow slide'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('An image and link for the front page rotating slideshow'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
