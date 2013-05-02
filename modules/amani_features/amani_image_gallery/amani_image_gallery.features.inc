@@ -30,7 +30,7 @@ function amani_image_gallery_node_info() {
     'gallery_image' => array(
       'name' => t('Gallery image'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('An image (picture) that can then be placed in a gallery'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

@@ -157,6 +157,13 @@ function amani_image_gallery_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_gallery_image';
+  $strongarm->value = '0';
+  $export['language_content_type_gallery_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_gallery_album';
   $strongarm->value = array();
   $export['menu_options_gallery_album'] = $strongarm;
@@ -227,6 +234,20 @@ function amani_image_gallery_strongarm() {
   $strongarm->name = 'node_submitted_gallery_image';
   $strongarm->value = 0;
   $export['node_submitted_gallery_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_gallery_album_pattern';
+  $strongarm->value = 'album/[node:title]';
+  $export['pathauto_node_gallery_album_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_gallery_image_pattern';
+  $strongarm->value = 'image/[node:title]';
+  $export['pathauto_node_gallery_image_pattern'] = $strongarm;
 
   return $export;
 }
