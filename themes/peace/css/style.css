@@ -450,7 +450,14 @@ a {
       color: #ee8f1c; }
 
 #block-views-front_page_slideshow-block .views-slideshow-cycle-main-frame-row {
-  width: 100% !important; }
+  width: 100% !important;
+  margin-bottom: 30px; }
+  #block-views-front_page_slideshow-block .views-slideshow-cycle-main-frame-row .views-field-title {
+    background: white;
+    padding: 30px; }
+  #block-views-front_page_slideshow-block .views-slideshow-cycle-main-frame-row .views-field-body {
+    background: white;
+    padding: 30px; }
 #block-views-front_page_slideshow-block img {
   width: 100%;
   height: auto; }
