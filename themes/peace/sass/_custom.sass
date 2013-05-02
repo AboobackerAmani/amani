@@ -41,7 +41,8 @@ a
 #header
   background: #fff
   box-shadow: 0 8px 8px #c8c8c8
-  position: relative
+  .container-inner
+    position: relative
 
 // Header region
 #header-region
@@ -55,6 +56,12 @@ a
 .region-home-content-top-callout-right
   @include span-columns(3)
   @include omega
+  .block
+    @include fill-parent
+    @include omega
+    padding: $padding
+    background: #fff
+    margin-bottom: $margin
 
 .region-home-content-top-static-region
   @include fill-parent
@@ -67,25 +74,33 @@ a
 
 // Navigation
 #navigation,
-#block-superfish-superfish_1
-  position: absolute
-  bottom: $gutter
-  .content
-    font-size: 16px
-    li
-      margin-right: $margin/4
-      background: url('../images/icons/bullet.png') 100% 50% no-repeat
-      padding-right: $padding/4
-      &:last-child
-        background: none
-        padding-right: 0
-        margin-right: 0
-      a
-        &:link, &:visited,
-        &.active
-          color: $orange
-        &:hover, &:active
-          color: lighten($orange, 10%)
+#block-superfish-superfish_1,
+#block-superfish-1,
+#block-menu-menu-amani-main-menu
+  #header-region &
+    position: absolute
+    bottom: $gutter
+    .content
+      font-size: 16px
+      li
+        margin-right: $margin/4
+        background: url('../images/icons/bullet.png') 100% 50% no-repeat
+        padding-right: $padding/2
+        padding-left: 0
+        margin-left: 0
+        display: inline-block
+        padding-top: 0
+        &:last-child
+          background: none
+          padding-right: 0
+          margin-right: 0
+        a
+          &:link, &:visited,
+          &.active
+            color: $orange
+          &:hover, &:active
+            color: lighten($orange, 10%)
+
 // Sidebar
 #sidebar-second
   .block
@@ -129,7 +144,14 @@ a
       text-decoration: none
   #block-boxes-amani_powered_by
     @include span-columns(3 of 12)
-  #block-system-main-menu
+  #block-system-main-menu,
+  #block-menu-menu-amani-main-menu,
+  #block-menu-menu-meta
     @include span-columns(3 of 12)
+    ul.menu
+      li
+        list-style-type: none
+        list-style-image: none
   #block-search-form
     @include span-columns(3 of 12)
+    margin-top: $margin
