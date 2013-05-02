@@ -75,7 +75,8 @@ a
 // Navigation
 #navigation,
 #block-superfish-superfish_1,
-#block-superfish-1
+#block-superfish-1,
+#block-menu-menu-amani-main-menu
   position: absolute
   bottom: $gutter
   .content
@@ -137,7 +138,14 @@ a
       text-decoration: none
   #block-boxes-amani_powered_by
     @include span-columns(3 of 12)
-  #block-system-main-menu
+  #block-system-main-menu,
+  #block-menu-menu-amani-main-menu,
+  #block-menu-menu-meta
     @include span-columns(3 of 12)
+    ul.menu
+      li
+        list-style-type: none
+        list-style-image: none
   #block-search-form
     @include span-columns(3 of 12)
+    margin-top: $margin
