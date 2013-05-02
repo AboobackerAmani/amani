@@ -71,6 +71,7 @@ function amani_event_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['add_delta'] = 'yes';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
@@ -168,7 +169,7 @@ function amani_event_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['granularity'] = 'week';
   $handler->display->display_options['arguments']['date_argument']['add_delta'] = 'yes';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
-    'field_data_field_date_time_event.field_date_time_event_value' => 'field_data_field_date_time_event.field_date_time_event_value',
+    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
   );
   $handler->display->display_options['path'] = 'calendar-of-events/week';
   $handler->display->display_options['menu']['type'] = 'tab';
@@ -205,7 +206,7 @@ function amani_event_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['granularity'] = 'day';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
-    'field_data_field_date_time_event.field_date_time_event_value' => 'field_data_field_date_time_event.field_date_time_event_value',
+    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
   );
   $handler->display->display_options['path'] = 'calendar-of-events/day';
   $handler->display->display_options['menu']['type'] = 'tab';
@@ -243,25 +244,21 @@ function amani_event_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_date_time_event']['id'] = 'field_date_time_event';
-  $handler->display->display_options['fields']['field_date_time_event']['table'] = 'field_data_field_date_time_event';
-  $handler->display->display_options['fields']['field_date_time_event']['field'] = 'field_date_time_event';
-  $handler->display->display_options['fields']['field_date_time_event']['label'] = '';
-  $handler->display->display_options['fields']['field_date_time_event']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_date_time_event']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Date: Date (node) */
-  $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
-  $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
-  $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
-  $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['date_argument']['granularity'] = 'year';
-  $handler->display->display_options['arguments']['date_argument']['add_delta'] = 'yes';
-  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
-    'field_data_field_date_time_event.field_date_time_event_value' => 'field_data_field_date_time_event.field_date_time_event_value',
+  /* Field: Content: Date */
+  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['label'] = '';
+  $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
+    'format_type' => 'short',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
   );
+  $handler->display->display_options['fields']['field_event_date']['delta_offset'] = '0';
   $handler->display->display_options['path'] = 'calendar-of-events/year';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Year';
@@ -379,8 +376,8 @@ function amani_event_views_default_views() {
   $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
   $handler->display->display_options['filters']['date_filter']['default_date'] = 'now';
   $handler->display->display_options['filters']['date_filter']['add_delta'] = 'yes';
-  $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
-    'field_data_field_date_time_event.field_date_time_event_value' => 'field_data_field_date_time_event.field_date_time_event_value',
+  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
   );
   $handler->display->display_options['block_description'] = 'upcoming events - list';
 
@@ -411,30 +408,10 @@ function amani_event_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['add_delta'] = 'yes';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
-  );
-  $translatables['calendar_2'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('All'),
-    t('Month'),
-    t('Week'),
-    t('Day'),
-    t('Year'),
-    t('block - calendar'),
-    t('upcoming events - calendar month'),
-    t('block - list'),
-    t('Upcoming events block'),
-    t('<p></br></p>'),
-    t('upcoming events - list'),
-    t('Block'),
   );
   $export['calendar_2'] = $view;
 
