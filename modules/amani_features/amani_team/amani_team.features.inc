@@ -22,7 +22,7 @@ function amani_team_node_info() {
     'team' => array(
       'name' => t('Team'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('A team member picture and bio for the team page'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

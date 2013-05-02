@@ -22,7 +22,7 @@ function amani_testimonial_node_info() {
     'testimonial' => array(
       'name' => t('Testimonial'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('A testimonial about the organization'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
