@@ -194,7 +194,8 @@ body {
   background: #414042;
   font-family: "bariol_regularregular"; }
 
-#main {
+#main,
+#content-top {
   background: #eef0f4; }
 
 a {
@@ -241,6 +242,43 @@ a {
   margin-right: 0; }
   #header-region:last-child {
     margin-right: 0; }
+
+.region-home-content-top-rotator {
+  display: block;
+  float: left;
+  margin-right: 2.12766%;
+  width: 74.46809%; }
+  .region-home-content-top-rotator:last-child {
+    margin-right: 0; }
+
+.region-home-content-top-callout-right {
+  display: block;
+  float: left;
+  margin-right: 2.12766%;
+  width: 23.40426%;
+  margin-right: 0; }
+  .region-home-content-top-callout-right:last-child {
+    margin-right: 0; }
+
+.region-home-content-top-static-region {
+  display: block;
+  float: left;
+  margin-right: 2.12766%;
+  width: 100%;
+  margin-right: 0; }
+  .region-home-content-top-static-region:last-child {
+    margin-right: 0; }
+  .region-home-content-top-static-region .block {
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 31.91489%;
+    padding: 30px;
+    background: white; }
+    .region-home-content-top-static-region .block:last-child {
+      margin-right: 0; }
+    .region-home-content-top-static-region .block:nth-child(3n) {
+      margin-right: 0; }
 
 #navigation,
 #block-superfish-superfish_1 {

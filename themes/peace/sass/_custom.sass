@@ -11,7 +11,8 @@ body
   background: $grey_dark
   font-family: "bariol_regularregular"
 
-#main
+#main,
+#content-top
   background: $blue_light
 
 a
@@ -46,6 +47,23 @@ a
 #header-region
   @include span-columns(9)
   @include omega
+
+// Region top
+.region-home-content-top-rotator
+  @include span-columns(9)
+
+.region-home-content-top-callout-right
+  @include span-columns(3)
+  @include omega
+
+.region-home-content-top-static-region
+  @include span-columns(12)
+  @include omega
+  .block
+    @include span-columns(4)
+    @include omega(3n)
+    padding: $padding
+    background: #fff
 
 // Navigation
 #navigation,
