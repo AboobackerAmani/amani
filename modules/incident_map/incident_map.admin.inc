@@ -63,7 +63,7 @@ function incident_map_marker_settings() {
   $items = array();
 
   $id = 'incident-map-color-default';
-  $description = "Select the default colour to use if an item doesn't have a value set.";
+  $description = t("Select the default colour to use if an item doesn't have a value set.");
   $items[$id] = incident_map_setting_input_select(t('Default color'), $colors, variable_get($id, 'red'), $description);
 
   $term_fields = incident_map_field_info('node', 'incident_report', array('taxonomy_term_reference'));
@@ -72,7 +72,7 @@ function incident_map_marker_settings() {
   $items[$marker_field] = array(
     '#type' => 'select',
     '#title' => 'Marker type field',
-    '#description' => 'Select the field you want to use to determine which marker will be used on the map.',
+    '#description' => t('Select the field you want to use to determine which marker will be used on the map.'),
     '#options' => array_map(function ($info) { return $info['label']; }, $term_fields),
   );
 
@@ -81,10 +81,13 @@ function incident_map_marker_settings() {
     $vocabulary = $field_info['settings']['allowed_values'][0]['vocabulary'];
 
     $fieldset = "taxonomy_term_reference-$field_name";
+    $description = t("Set the marker colour and icon you want to use for each value below. Visit !link for a list of available icons (don't include the 'icon-' prefix).", array(
+        '!link' => l('Font-Awesome', 'http://fortawesome.github.io/Font-Awesome/#icons-new'),
+    ));
     $items[$fieldset] = array(
       '#type' => 'fieldset',
       '#title' => $field_info['label'],
-      '#description' => 'Set the marker colour and icon you want to use for each value below:',
+      '#description' => $description,
       '#states' => array(
         'visible' => array(":input[name='$marker_field']" => array('value' => $field_name)),
       ),
