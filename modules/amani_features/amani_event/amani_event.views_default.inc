@@ -169,7 +169,7 @@ function amani_event_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['granularity'] = 'week';
   $handler->display->display_options['arguments']['date_argument']['add_delta'] = 'yes';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
-    'field_data_field_date_time_event.field_date_time_event_value' => 'field_data_field_date_time_event.field_date_time_event_value',
+    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
   );
   $handler->display->display_options['path'] = 'calendar-of-events/week';
   $handler->display->display_options['menu']['type'] = 'tab';
@@ -206,7 +206,7 @@ function amani_event_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['date_argument']['granularity'] = 'day';
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
-    'field_data_field_date_time_event.field_date_time_event_value' => 'field_data_field_date_time_event.field_date_time_event_value',
+    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
   );
   $handler->display->display_options['path'] = 'calendar-of-events/day';
   $handler->display->display_options['menu']['type'] = 'tab';
@@ -376,8 +376,8 @@ function amani_event_views_default_views() {
   $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
   $handler->display->display_options['filters']['date_filter']['default_date'] = 'now';
   $handler->display->display_options['filters']['date_filter']['add_delta'] = 'yes';
-  $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
-    'field_data_field_date_time_event.field_date_time_event_value' => 'field_data_field_date_time_event.field_date_time_event_value',
+  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
   );
   $handler->display->display_options['block_description'] = 'upcoming events - list';
 
