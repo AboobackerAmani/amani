@@ -10,7 +10,7 @@
 function amani_incident_report_taxonomy_default_vocabularies() {
   return array(
     'incident_severity' => array(
-      'name' => 'Incident severity',
+      'name' => 'Incident severity (1-5)',
       'machine_name' => 'incident_severity',
       'description' => '',
       'hierarchy' => '0',
@@ -36,7 +36,7 @@ function amani_incident_report_taxonomy_default_vocabularies() {
       'name' => 'Incident report type',
       'machine_name' => 'report_type',
       'description' => '',
-      'hierarchy' => '0',
+      'hierarchy' => '1',
       'module' => 'taxonomy',
       'weight' => '0',
       'rdf_mapping' => array(

@@ -1,0 +1,17 @@
+name = Amani: Front page
+description = Static content boxes for the Amani front page
+core = 7.x
+package = Amani
+php = 5.2.4
+version = 7.x-1.0
+project = amani_front_page
+dependencies[] = boxes
+dependencies[] = ctools
+features[box][] = front_page_banner_first
+features[box][] = front_page_banner_second
+features[box][] = front_page_center
+features[box][] = front_page_left
+features[box][] = front_page_right
+features[box][] = front_second_sidebar_bottom
+features[ctools][] = boxes:box:1
+features[features_api][] = api:1

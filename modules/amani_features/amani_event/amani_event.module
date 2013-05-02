@@ -8,13 +8,38 @@
  * Implements hook_default_fields_alter().
  */
 function amani_event_field_default_fields_alter(&$fields) {
-  foreach ($fields as $key => &$field) {
-    //if (strpos($key, 'node-location') === 0) {
-    //  dpm($key);
-    //  dpm($field);
-    //}
-    //if ($key == 'node-event-body') {
-    //  $field['field_instance']['label'] = 'Summary';
-    //}
+  // Override field_content_image
+  if (isset($fields['node-event-field_content_image'])) {
+    // Use image widget
+    $fields['node-event-field_content_image']['field_instance']['widget']['module'] = 'image';
+    $fields['node-event-field_content_image']['field_instance']['widget']['type'] = 'image_image';
+    $fields['node-event-field_content_image']['field_instance']['widget']['settings'] = array(
+      'preview_image_style' => 'thumbnail',
+      'progress_indicator' => 'throbber',
+    );
+    $fields['node-event-field_content_image']['field_instance']['widget']['weight'] = '13';
+    // Set file directory and alt field
+    $fields['node-event-field_content_image']['field_instance']['settings'] = array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'file_directory' => 'event-field_content_image',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    );
+  }
+  // Adjust weights to fix order on node form
+  if (isset($fields['node-event-field_event_type'])) {
+    $fields['node-event-field_event_type']['field_instance']['widget']['weight'] = '15';
+  }
+  if (isset($fields['node-event-field_tags'])) {
+    $fields['node-event-field_tags']['field_instance']['widget']['weight'] = '17';
+  }
+  if (isset($fields['node-event-body'])) {
+    $fields['node-event-body']['field_instance']['widget']['weight'] = '10';
+    $fields['node-event-body']['field_instance']['label'] = 'Description';
   }
 }
