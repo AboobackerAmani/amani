@@ -228,93 +228,6 @@ function amani_incident_report_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-incident_report-field_images'.
-  $fields['node-incident_report-field_images'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_images',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'image',
-      'settings' => array(
-        'default_image' => 0,
-        'profile2_private' => FALSE,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '0',
-      'type' => 'image',
-    ),
-    'field_instance' => array(
-      'bundle' => 'incident_report',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => '',
-          ),
-          'type' => 'image',
-          'weight' => '13',
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_images',
-      'label' => 'Images',
-      'required' => 0,
-      'settings' => array(
-        'alt_field' => 1,
-        'default_image' => 0,
-        'file_directory' => 'incident_report-field_images',
-        'file_extensions' => 'png gif jpg jpeg',
-        'max_filesize' => '',
-        'max_resolution' => '',
-        'min_resolution' => '',
-        'title_field' => 0,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'image',
-        'settings' => array(
-          'preview_image_style' => 'thumbnail',
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'image_image',
-        'weight' => '9',
-      ),
-    ),
-  );
-
   // Exported field: 'node-incident_report-field_incident_address'.
   $fields['node-incident_report-field_incident_address'] = array(
     'field_config' => array(
@@ -862,6 +775,104 @@ function amani_incident_report_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-incident_report-field_media'.
+  $fields['node-incident_report-field_media'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_media',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 0,
+        'display_field' => 0,
+        'profile2_private' => FALSE,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'file',
+    ),
+    'field_instance' => array(
+      'bundle' => 'incident_report',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'file',
+          'settings' => array(),
+          'type' => 'file_default',
+          'weight' => 17,
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_media',
+      'label' => 'Pictures',
+      'required' => 0,
+      'settings' => array(
+        'description_field' => 0,
+        'file_directory' => 'incident-media',
+        'file_extensions' => 'jpg jpeg gif png',
+        'max_filesize' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'media',
+        'settings' => array(
+          'allowed_schemes' => array(
+            'public' => 'public',
+            'vimeo' => 0,
+            'youtube' => 0,
+          ),
+          'allowed_types' => array(
+            'audio' => 0,
+            'document' => 0,
+            'image' => 'image',
+            'video' => 0,
+          ),
+          'browser_plugins' => array(
+            'media_default--media_browser_1' => 0,
+            'media_default--media_browser_my_files' => 0,
+            'media_internet' => 'media_internet',
+            'upload' => 'upload',
+            'youtube' => 0,
+          ),
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'media_generic',
+        'weight' => '9',
+      ),
+    ),
+  );
+
   // Exported field: 'node-incident_report-field_name'.
   $fields['node-incident_report-field_name'] = array(
     'field_config' => array(
@@ -1062,31 +1073,41 @@ Prof.',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_videos',
-      'foreign keys' => array(),
-      'indexes' => array(),
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
       'locked' => '0',
-      'module' => 'video_embed_field',
+      'module' => 'file',
       'settings' => array(
+        'display_default' => 0,
+        'display_field' => 0,
         'profile2_private' => FALSE,
+        'uri_scheme' => 'public',
       ),
       'translatable' => '0',
-      'type' => 'video_embed_field',
+      'type' => 'file',
     ),
     'field_instance' => array(
       'bundle' => 'incident_report',
-      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'video_embed_field',
-          'settings' => array(
-            'description' => 1,
-            'video_style' => 'normal',
-          ),
-          'type' => 'video_embed_field',
-          'weight' => '15',
+          'module' => 'file',
+          'settings' => array(),
+          'type' => 'file_default',
+          'weight' => 18,
         ),
         'ical' => array(
           'label' => 'above',
@@ -1106,14 +1127,37 @@ Prof.',
       'label' => 'Videos',
       'required' => 0,
       'settings' => array(
-        'description_field' => 1,
+        'description_field' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'avi mov',
+        'max_filesize' => '',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 0,
-        'module' => 'video_embed_field',
-        'settings' => array(),
-        'type' => 'video_embed_field_video',
+        'active' => 1,
+        'module' => 'media',
+        'settings' => array(
+          'allowed_schemes' => array(
+            'public' => 0,
+            'vimeo' => 'vimeo',
+            'youtube' => 'youtube',
+          ),
+          'allowed_types' => array(
+            'audio' => 0,
+            'document' => 0,
+            'image' => 0,
+            'video' => 'video',
+          ),
+          'browser_plugins' => array(
+            'media_default--media_browser_1' => 0,
+            'media_default--media_browser_my_files' => 0,
+            'media_internet' => 'media_internet',
+            'upload' => 0,
+            'youtube' => 0,
+          ),
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'media_generic',
         'weight' => '10',
       ),
     ),
@@ -1127,10 +1171,10 @@ Prof.',
   t('Documents');
   t('Email');
   t('Geolocation');
-  t('Images');
   t('Incident report type');
   t('Incident severity');
   t('Links');
+  t('Pictures');
   t('Submitter Name (Optional)');
   t('Videos');
 

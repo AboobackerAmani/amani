@@ -26,7 +26,7 @@ function amani_incident_report_node_info() {
     'incident_report' => array(
       'name' => t('Incident report'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('An incident including the time and date, pictures, videos, notes and the location for placing on a map.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
