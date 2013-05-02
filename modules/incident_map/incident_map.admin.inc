@@ -4,12 +4,73 @@
  *
  */
 function incident_map_settings() {
+  $form = module_invoke_all('incident_map_settings');
+  foreach ($form as &$fieldset) {
+    $fieldset += array(
+      '#type' => 'fieldset',
+      '#collapsed' => TRUE,
+      '#collapsible' => TRUE,
+    );
+  }
+  return system_settings_form($form);
+}
+
+/**
+ * Implements hook_incident_map_settings().
+ */
+function incident_map_incident_map_settings() {
+  return array(
+    array('#title' => t('Filter settings'), 'filter_settings' => incident_map_filter_settings()),
+    array('#title' => t('Marker settings'), 'marker_settings' => incident_map_marker_settings()),
+  );
+}
+
+/**
+ * Provides the filter settings form.
+ */
+function incident_map_filter_settings() {
+  $items = array();
+
+  $fields = field_info_instances('node', 'incident_report');
+  $labels = array_map(function ($field) {
+    $info = field_info_field($field['field_name']);
+    $info['label'] = $field['label'];
+    return $info['type'] === 'taxonomy_term_reference' ? $info : FALSE;
+  }, $fields);
+  $term_fields = array_filter(array_combine(array_keys($fields), $labels));
+
+  return $items;
+}
+
+/**
+ * Returns a list of field instances attached to a particular bundle. Can be
+ * limited to only fields of a particular type.
+ */
+function incident_map_field_info($entity_type, $bundle, $field_types = array()) {
+  $fields = field_info_instances('node', 'incident_report');
+
+  $labels = array_map(function ($field) use ($field_types) {
+    $info = field_info_field($field['field_name']);
+    $info['label'] = $field['label'];
+    if (!empty($field_types)) {
+      return in_array($info['type'], $field_types) ? $info : FALSE;
+    }
+    return $info;
+  }, $fields);
+
+  return array_filter(array_combine(array_keys($fields), $labels));
+}
+
+/**
+ * Provides the marker settings form.
+ */
+function incident_map_marker_settings() {
   $colors = incident_map_get_marker_options();
-  $form = array();
+  $items = array();
 
   $id = 'incident-map-color-default';
   $description = "Select the default colour to use if an item doesn't have a value set.";
-  $form[$id] = incident_map_setting_input_select(t('Default color'), $colors, variable_get($id, 'red'), $description);
+  $items[$id] = incident_map_setting_input_select(t('Default color'), $colors, variable_get($id, 'red'), $description);
 
   $fields = field_info_instances('node', 'incident_report');
   $labels = array_map(function ($field) {
@@ -20,7 +81,7 @@ function incident_map_settings() {
   $term_fields = array_filter(array_combine(array_keys($fields), $labels));
 
   $marker_field = 'incident-map-marker-field';
-  $form[$marker_field] = array(
+  $items[$marker_field] = array(
     '#type' => 'select',
     '#title' => 'Marker type field',
     '#description' => 'Select the field you want to use to determine which marker will be used on the map.',
@@ -32,12 +93,10 @@ function incident_map_settings() {
     $vocabulary = $field_info['settings']['allowed_values'][0]['vocabulary'];
 
     $fieldset = "taxonomy_term_reference-$field_name";
-    $form[$fieldset] = array(
+    $items[$fieldset] = array(
       '#type' => 'fieldset',
       '#title' => $field_info['label'],
       '#description' => 'Set the marker colour and icon you want to use for each value below:',
-      '#collapsed' => TRUE,
-      '#collapsible' => TRUE,
       '#states' => array(
         'visible' => array(":input[name='$marker_field']" => array('value' => $field_name)),
       ),
@@ -48,15 +107,23 @@ function incident_map_settings() {
       $tid = $term->getIdentifier();
       $label = $term->label();
 
+      $set = array(
+        '#type' => 'fieldset',
+        '#title' => "Value: $label",
+        '#collapsed' => TRUE,
+        '#collapsible' => TRUE,
+      );
       $id = "incident-map-color-tid-$tid";
-      $form[$fieldset][$id] = incident_map_setting_input_select("$label: color", $colors, variable_get($id, ''));
+      $set[$id] = incident_map_setting_input_select("Colour", $colors, variable_get($id, ''));
 
       $id = "incident-map-icon-tid-$tid";
-      $form[$fieldset][$id] = incident_map_setting_input_textfield("$label: icon", variable_get($id, ''));
+      $set[$id] = incident_map_setting_input_textfield("Icon", variable_get($id, ''));
+
+      $items[$fieldset]["incident-map-tid-$tid"] = $set;
     }
   }
 
-  return system_settings_form($form);
+  return $items;
 }
 
 /**
