@@ -14,6 +14,15 @@ function incident_map_menu() {
     'type' => MENU_NORMAL_ITEM,
   );
 
+  $items['admin/config/incident-reports'] = array(
+    'title' => t('Administer the Incident reports map'),
+    'description' => '',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('incident_map_settings'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'incident_map.admin.inc',
+  );
+
   return $items;
 }
 
@@ -174,6 +183,40 @@ function incident_map_libraries_info() {
       ),
     ),
 
+    'Font-Awesome' => array(
+      'name' => 'Font-Awesome',
+      'vendor url' => 'http://fortawesome.github.io/Font-Awesome',
+      'download url' => 'https://github.com/FortAwesome/Font-Awesome/zipball/master',
+      'version' => '3.0.2',
+      'path' => 'css',
+      'files' => array(
+        'css' => array(
+          'font-awesome.css' => array(),
+          'font-awesome-ie7.min.css' => array(
+            'type' => 'file',
+            'media' => 'screen',
+            'browsers' => array('IE' => 'lte IE 7', '!IE' => FALSE),
+          ),
+        ),
+      ),
+    ),
+
+    'Leaflet.awesome-markers' => array(
+      'name' => 'Leaflet.awesome-markers',
+      'vendor url' => 'https://github.com/lvoogdt/Leaflet.awesome-markers',
+      'download url' => 'https://github.com/lvoogdt/Leaflet.awesome-markers/archive/master.zip',
+      'version' => '0.0.1',
+      'path' => 'dist',
+      'files' => array(
+        'js' => array(
+          'leaflet.awesome-markers.js' => array(),
+        ),
+        'css' => array(
+          'leaflet.awesome-markers.css' => array(),
+        ),
+      ),
+    ),
+
     'crossfilter' => array(
       'name' => 'Crossfilter',
       'vendor url' => 'http://square.github.io/crossfilter/',
@@ -225,6 +268,19 @@ function incident_map_library() {
     $libraries['d3'] = leaflet_framework_convert_libraries($d3);
   }
 
+  $fontawesome = libraries_detect('Font-Awesome');
+  if ($fontawesome) {
+    $libraries['Font-Awesome'] = leaflet_framework_convert_libraries($fontawesome);
+  }
+
+  $awesomemarkers = libraries_detect('Leaflet.awesome-markers');
+  if ($awesomemarkers) {
+    $libraries['Leaflet.awesome-markers'] = leaflet_framework_convert_libraries($awesomemarkers);
+    $libraries['Leaflet.awesome-markers']['dependencies'] = array(
+      array('incident_map', 'Font-Awesome'),
+    );
+  }
+
   $path = drupal_get_path('module', 'incident_map');
 
   $libraries['Header'] = array(
@@ -233,6 +289,18 @@ function incident_map_library() {
     'version' => '7.x-1.x',
     'js' => array(
       $path . '/js/Header.js' => array(),
+    ),
+  );
+
+  $libraries['Factory'] = array(
+    'title' => 'Factory',
+    'version' => '7.x-1.x',
+    'js' => array(
+      "$path/js/Factory.js" => array(),
+    ),
+    'dependencies' => array(
+      array('incident_map', 'Header'),
+      array('leaflet_framework', 'Leaflet'),
     ),
   );
 
@@ -250,14 +318,15 @@ function incident_map_library() {
     'version' => '7.x-1.x',
     'js' => array(
       $google_api => array('type' => 'external'),
-      "$path/js/Plugins/Layers/LayerFactory.js" => array(),
+      "$path/js/Plugins/Layers.js" => array(),
+      "$path/js/Plugins/Layers/Layers.js" => array(),
       "$path/js/Plugins/Layers/Layer/Google.js" => array(),
       "$path/js/Plugins/Layers/Layer/GeoJSON.js" => array(),
-      "$path/js/Plugins/Layers.js" => array(),
     ),
     'dependencies' => array(
       array('leaflet_framework', 'LeafletFramework'),
       array('incident_map', 'Header'),
+      array('incident_map', 'Factory'),
     ),
   );
 
@@ -265,9 +334,10 @@ function incident_map_library() {
     'title' => 'Incident reports visualization',
     'version' => '7.x-1.x',
     'js' => array(
-      "$path/js/Plugins/IncidentReports/FilterFactory.js" => array(),
+      "$path/js/Plugins/IncidentReports/Filter.js" => array(),
       "$path/js/Plugins/IncidentReports/ToggleControl.js" => array(),
       "$path/js/Plugins/IncidentReports.js" => array(),
+      "$path/js/Plugins/IncidentReports/Marker.js" => array(),
     ),
     'css' => array(
       "$path/css/incident_reports.css" => array(),
@@ -275,8 +345,10 @@ function incident_map_library() {
     'dependencies' => array(
       array('incident_map', 'crossfilter'),
       array('incident_map', 'd3'),
+      array('incident_map', 'Leaflet.awesome-markers'),
       array('leaflet_framework', 'LeafletFramework'),
       array('incident_map', 'Header'),
+      array('incident_map', 'Factory'),
       array('incident_map', 'Leaflet.markercluster'),
     ),
   );
@@ -437,6 +509,12 @@ function incident_report_geojson_feature_factory($wrapper) {
     'type' => $wrapper->field_incident_report_type->label(),
     'date' => date_format(new DateObject($wrapper->field_incident_date->value()), DATE_FORMAT_ISO),
     'teaser' => drupal_render(node_view($wrapper->value(), 'teaser')),
+    'marker' => array(
+      'provider' => 'AwesomeMarker',
+      'icon' => 'heart',
+      'color' => 'blue',
+      'spin' => TRUE,
+    ),
   );
 
   return Affinity\GeoJSON\feature($geom, $properties);
