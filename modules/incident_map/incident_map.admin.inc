@@ -31,13 +31,7 @@ function incident_map_incident_map_settings() {
 function incident_map_filter_settings() {
   $items = array();
 
-  $fields = field_info_instances('node', 'incident_report');
-  $labels = array_map(function ($field) {
-    $info = field_info_field($field['field_name']);
-    $info['label'] = $field['label'];
-    return $info['type'] === 'taxonomy_term_reference' ? $info : FALSE;
-  }, $fields);
-  $term_fields = array_filter(array_combine(array_keys($fields), $labels));
+  $term_fields = incident_map_field_info('node', 'incident_report', array('taxonomy_term_reference', 'date'));
 
   return $items;
 }
@@ -47,7 +41,7 @@ function incident_map_filter_settings() {
  * limited to only fields of a particular type.
  */
 function incident_map_field_info($entity_type, $bundle, $field_types = array()) {
-  $fields = field_info_instances('node', 'incident_report');
+  $fields = field_info_instances($entity_type, $bundle);
 
   $labels = array_map(function ($field) use ($field_types) {
     $info = field_info_field($field['field_name']);
@@ -72,13 +66,7 @@ function incident_map_marker_settings() {
   $description = "Select the default colour to use if an item doesn't have a value set.";
   $items[$id] = incident_map_setting_input_select(t('Default color'), $colors, variable_get($id, 'red'), $description);
 
-  $fields = field_info_instances('node', 'incident_report');
-  $labels = array_map(function ($field) {
-    $info = field_info_field($field['field_name']);
-    $info['label'] = $field['label'];
-    return $info['type'] === 'taxonomy_term_reference' ? $info : FALSE;
-  }, $fields);
-  $term_fields = array_filter(array_combine(array_keys($fields), $labels));
+  $term_fields = incident_map_field_info('node', 'incident_report', array('taxonomy_term_reference'));
 
   $marker_field = 'incident-map-marker-field';
   $items[$marker_field] = array(
