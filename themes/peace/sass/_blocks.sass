@@ -13,8 +13,22 @@
         list-style-image: none
 
 #block-search-form
+  position: relative
+  .form-submit
+    position: absolute
+    top: $gutter/4
+    left: 10px
+    background: url('../images/icons/search_icon.png') no-repeat
+    border: 0
+    font-size: 0
+    text-indent: -999px
+    z-index: 9
+    display: block
+    height: 25px
+    width: 25px
   .form-text
     border: 0
     @include border-radius(5px)
     font-size: 18px
     padding: $padding/3
+    padding-left: $padding + 5px

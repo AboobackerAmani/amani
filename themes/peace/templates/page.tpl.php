@@ -35,6 +35,26 @@
     </div>
   </header> <!-- /header -->
 
+  <!-- Content top -->
+
+  <?php if($page['home_content_top_rotator'] || $page['home_content_top_callout_right'] || $page['home_content_top_static_region']): ?>
+    <section id="content-top" class="clearfix" class="container">
+      <div class="container-inner">
+        <?php if ($page['home_content_top_rotator']): ?>
+          <?php print render($page['home_content_top_rotator']); ?>
+        <?php endif; ?>
+
+        <?php if ($page['home_content_top_callout_right']): ?>
+          <?php print render($page['home_content_top_callout_right']); ?>
+        <?php endif; ?>
+
+        <?php if ($page['home_content_top_static_region']): ?>
+          <?php print render($page['home_content_top_static_region']); ?>
+        <?php endif; ?>
+      </div>
+    </section>
+  <?php endif; ?>
+
   <!-- ______________________ MAIN _______________________ -->
 
   <div id="main" class="clearfix" class="container">
