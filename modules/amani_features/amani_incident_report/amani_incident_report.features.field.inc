@@ -775,14 +775,14 @@ function amani_incident_report_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-incident_report-field_media'.
-  $fields['node-incident_report-field_media'] = array(
+  // Exported field: 'node-incident_report-field_incident_media'.
+  $fields['node-incident_report-field_incident_media'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_media',
+      'field_name' => 'field_incident_media',
       'foreign keys' => array(
         'fid' => array(
           'columns' => array(
@@ -833,7 +833,7 @@ function amani_incident_report_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_media',
+      'field_name' => 'field_incident_media',
       'label' => 'Pictures',
       'required' => 0,
       'settings' => array(
@@ -1065,14 +1065,14 @@ Prof.',
     ),
   );
 
-  // Exported field: 'node-incident_report-field_videos'.
-  $fields['node-incident_report-field_videos'] = array(
+  // Exported field: 'node-incident_report-field_incident_videos'.
+  $fields['node-incident_report-field_incident_videos'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_videos',
+      'field_name' => 'field_incident_videos',
       'foreign keys' => array(
         'fid' => array(
           'columns' => array(
@@ -1123,7 +1123,7 @@ Prof.',
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_videos',
+      'field_name' => 'field_incident_videos',
       'label' => 'Videos',
       'required' => 0,
       'settings' => array(
