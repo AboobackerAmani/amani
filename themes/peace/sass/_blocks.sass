@@ -49,3 +49,73 @@
   img
     width: 100%
     height: auto
+
+
+// meta menu
+#block-menu-menu-meta
+  #header-region &
+    @include span-columns(4)
+    @include shift(8)
+    margin-top: $margin/4
+    .content
+      font-size: 16px
+      li
+        margin-right: $margin/4
+        padding-right: 0
+        list-style-type: none
+        display: inline-block
+        &:last-child
+          background: none
+          padding-right: 0
+          margin-right: 0
+        a
+          &:link, &:visited,
+          &.active
+            color: $orange
+          &:hover, &:active
+            color: lighten($orange, 10%)
+
+// social menu
+#block-menu-menu-social-media
+  #header-region &
+    @include span-columns(4)
+    @include shift(8)
+    @include omega
+    position: absolute
+    bottom: $gutter
+    right: 0
+    .content
+      font-size: 16px
+      li
+        margin-right: $margin/4
+        padding-right: 0
+        list-style-type: none
+        display: inline-block
+        float: right
+        &:last-child
+          background: none
+          padding-right: 0
+          margin-right: 0
+        &.facebook
+          a
+            background: url('../images/icons/social_icons.png') no-repeat
+            background-position: -50px 0
+            &:hover
+              background-position: -50px -47px
+        &.twitter
+          a
+            background: url('../images/icons/social_icons.png') no-repeat
+            background-position: 0 0
+            &:hover
+              background-position: 0 -47px
+        a
+          display: block
+          height: 38px
+          width: 38px
+          text-indent: -999px
+          overflow: hidden
+          &:link, &:visited,
+          &.active
+            color: $orange
+          &:hover, &:active
+            color: lighten($orange, 10%)

@@ -4,9 +4,11 @@
  * Implements hook_block_view_alter().
  */
 function amani_custom_block_view_alter(&$data, $block) {
-  //krumo($block->bid);
   switch($block->bid) {
     case "system-main-menu":
+    case "menu-menu-meta":
+    case "menu-menu-social-media":
+    case "superfish-1":
     case " 284":
       // Remove the title from the menu block.
       $data['subject'] = '';

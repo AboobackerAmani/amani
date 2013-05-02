@@ -41,7 +41,8 @@ a
 #header
   background: #fff
   box-shadow: 0 8px 8px #c8c8c8
-  position: relative
+  .container-inner
+    position: relative
 
 // Header region
 #header-region
@@ -55,6 +56,12 @@ a
 .region-home-content-top-callout-right
   @include span-columns(3)
   @include omega
+  .block
+    @include fill-parent
+    @include omega
+    padding: $padding
+    background: #fff
+    margin-bottom: $margin
 
 .region-home-content-top-static-region
   @include fill-parent
@@ -67,7 +74,8 @@ a
 
 // Navigation
 #navigation,
-#block-superfish-superfish_1
+#block-superfish-superfish_1,
+#block-superfish-1
   position: absolute
   bottom: $gutter
   .content
