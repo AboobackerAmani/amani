@@ -9,8 +9,10 @@
 
 body
   background: $grey_dark
+  font-family: "bariol_regularregular"
 
-#main
+#main,
+#content-top
   background: $blue_light
 
 a
@@ -22,13 +24,52 @@ a
   &:hover, &:active
     color: lighten($orange, 10%)
     text-decoration: none
+
+// Logo
+#name-and-slogan
+  @include span-columns(3)
+#site-name
+  border-right: 1px solid #000
+  a
+    display: block
+    height: 135px
+    width: 190px
+    background-repeat: none
+    text-indent: -999px
+
 // header
 #header
   background: #fff
+  box-shadow: 0 8px 8px #c8c8c8
+  position: relative
+
+// Header region
+#header-region
+  @include span-columns(9)
+  @include omega
+
+// Region top
+.region-home-content-top-rotator
+  @include span-columns(9)
+
+.region-home-content-top-callout-right
+  @include span-columns(3)
+  @include omega
+
+.region-home-content-top-static-region
+  @include span-columns(12)
+  @include omega
+  .block
+    @include span-columns(4)
+    @include omega(3n)
+    padding: $padding
+    background: #fff
 
 // Navigation
 #navigation,
 #block-superfish-superfish_1
+  position: absolute
+  bottom: $gutter
   .content
     font-size: 16px
     li
@@ -57,12 +98,12 @@ a
     &:last-child
       margin-bottom: 0
     h2.block-title
-      font-family: ""
+      font-family: "bariol_regularregular"
       font-size: 20px
       border-bottom: 2px solid $orange
-      text-align: center
-      color: $grey_text
-      padding-bottom: $padding/2
+      text-align: left
+      color: $grey_dark
+      padding-bottom: $padding/4
       margin-bottom: $margin/2
     ul.menu
       li
@@ -77,3 +118,18 @@ a
 #footer
   background: $grey_dark
   color: #fff
+  font-family: "georgia"
+  .content
+    font-size: 14px
+  a
+    &:link, &:visited
+      color: #fff
+    &:hover, &:active
+      color: lighten($orange, 10%)
+      text-decoration: none
+  #block-boxes-amani_powered_by
+    @include span-columns(3 of 12)
+  #block-system-main-menu
+    @include span-columns(3 of 12)
+  #block-search-form
+    @include span-columns(3 of 12)
