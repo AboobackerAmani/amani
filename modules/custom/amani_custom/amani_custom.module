@@ -6,6 +6,7 @@
 function amani_custom_block_view_alter(&$data, $block) {
   switch($block->bid) {
     case "system-main-menu":
+    case "menu-menu-amani-main-menu":
     case "menu-menu-meta":
     case "menu-menu-social-media":
     case "superfish-1":

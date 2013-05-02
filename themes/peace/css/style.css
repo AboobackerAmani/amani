@@ -282,48 +282,52 @@ a {
     .region-home-content-top-static-region .block:nth-child(3n) {
       margin-right: 0; }
 
-#navigation,
-#block-superfish-superfish_1,
-#block-superfish-1,
+#header-region #navigation, #header-region
+#block-superfish-superfish_1, #header-region
+#block-superfish-1, #header-region
 #block-menu-menu-amani-main-menu {
   position: absolute;
   bottom: 30px; }
-  #navigation .content,
-  #block-superfish-superfish_1 .content,
-  #block-superfish-1 .content,
+  #header-region #navigation .content, #header-region
+  #block-superfish-superfish_1 .content, #header-region
+  #block-superfish-1 .content, #header-region
   #block-menu-menu-amani-main-menu .content {
     font-size: 16px; }
-    #navigation .content li,
-    #block-superfish-superfish_1 .content li,
-    #block-superfish-1 .content li,
+    #header-region #navigation .content li, #header-region
+    #block-superfish-superfish_1 .content li, #header-region
+    #block-superfish-1 .content li, #header-region
     #block-menu-menu-amani-main-menu .content li {
       margin-right: 7.5px;
       background: url("../images/icons/bullet.png") 100% 50% no-repeat;
-      padding-right: 7.5px; }
-      #navigation .content li:last-child,
-      #block-superfish-superfish_1 .content li:last-child,
-      #block-superfish-1 .content li:last-child,
+      padding-right: 15px;
+      padding-left: 0;
+      margin-left: 0;
+      display: inline-block;
+      padding-top: 0; }
+      #header-region #navigation .content li:last-child, #header-region
+      #block-superfish-superfish_1 .content li:last-child, #header-region
+      #block-superfish-1 .content li:last-child, #header-region
       #block-menu-menu-amani-main-menu .content li:last-child {
         background: none;
         padding-right: 0;
         margin-right: 0; }
-      #navigation .content li a:link, #navigation .content li a:visited, #navigation .content li a.active,
-      #block-superfish-superfish_1 .content li a:link,
-      #block-superfish-superfish_1 .content li a:visited,
-      #block-superfish-superfish_1 .content li a.active,
-      #block-superfish-1 .content li a:link,
-      #block-superfish-1 .content li a:visited,
-      #block-superfish-1 .content li a.active,
-      #block-menu-menu-amani-main-menu .content li a:link,
-      #block-menu-menu-amani-main-menu .content li a:visited,
+      #header-region #navigation .content li a:link, #header-region #navigation .content li a:visited, #header-region #navigation .content li a.active, #header-region
+      #block-superfish-superfish_1 .content li a:link, #header-region
+      #block-superfish-superfish_1 .content li a:visited, #header-region
+      #block-superfish-superfish_1 .content li a.active, #header-region
+      #block-superfish-1 .content li a:link, #header-region
+      #block-superfish-1 .content li a:visited, #header-region
+      #block-superfish-1 .content li a.active, #header-region
+      #block-menu-menu-amani-main-menu .content li a:link, #header-region
+      #block-menu-menu-amani-main-menu .content li a:visited, #header-region
       #block-menu-menu-amani-main-menu .content li a.active {
         color: #ee8f1c; }
-      #navigation .content li a:hover, #navigation .content li a:active,
-      #block-superfish-superfish_1 .content li a:hover,
-      #block-superfish-superfish_1 .content li a:active,
-      #block-superfish-1 .content li a:hover,
-      #block-superfish-1 .content li a:active,
-      #block-menu-menu-amani-main-menu .content li a:hover,
+      #header-region #navigation .content li a:hover, #header-region #navigation .content li a:active, #header-region
+      #block-superfish-superfish_1 .content li a:hover, #header-region
+      #block-superfish-superfish_1 .content li a:active, #header-region
+      #block-superfish-1 .content li a:hover, #header-region
+      #block-superfish-1 .content li a:active, #header-region
+      #block-menu-menu-amani-main-menu .content li a:hover, #header-region
       #block-menu-menu-amani-main-menu .content li a:active {
         color: #f2a64b; }
 
@@ -396,9 +400,11 @@ a {
 #block-boxes-amani_powered_by {
   border-right: 1px solid white; }
 
-#block-system-main-menu {
+#block-system-main-menu,
+#block-menu-menu-amani-main-menu {
   border-right: 1px solid white; }
-  #block-system-main-menu .content ul li {
+  #block-system-main-menu .content ul li,
+  #block-menu-menu-amani-main-menu .content ul li {
     list-style-type: none;
     list-style-image: none; }
 

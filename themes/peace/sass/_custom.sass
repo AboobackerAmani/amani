@@ -77,24 +77,30 @@ a
 #block-superfish-superfish_1,
 #block-superfish-1,
 #block-menu-menu-amani-main-menu
-  position: absolute
-  bottom: $gutter
-  .content
-    font-size: 16px
-    li
-      margin-right: $margin/4
-      background: url('../images/icons/bullet.png') 100% 50% no-repeat
-      padding-right: $padding/4
-      &:last-child
-        background: none
-        padding-right: 0
-        margin-right: 0
-      a
-        &:link, &:visited,
-        &.active
-          color: $orange
-        &:hover, &:active
-          color: lighten($orange, 10%)
+  #header-region &
+    position: absolute
+    bottom: $gutter
+    .content
+      font-size: 16px
+      li
+        margin-right: $margin/4
+        background: url('../images/icons/bullet.png') 100% 50% no-repeat
+        padding-right: $padding/2
+        padding-left: 0
+        margin-left: 0
+        display: inline-block
+        padding-top: 0
+        &:last-child
+          background: none
+          padding-right: 0
+          margin-right: 0
+        a
+          &:link, &:visited,
+          &.active
+            color: $orange
+          &:hover, &:active
+            color: lighten($orange, 10%)
+
 // Sidebar
 #sidebar-second
   .block
