@@ -1,3 +1,5 @@
+Amani.LayerFactory = Amani.Factory.extend({});
+
 Amani.Layers = LF.Plugin.extend({
 
     enable: function (map) {
@@ -13,7 +15,7 @@ Amani.Layers = LF.Plugin.extend({
 
         for (i in this.options.layers) {
             definition = this.options.layers[i];
-            layer = this._layerFactory.layer(definition);
+            layer = this._layerFactory.get(definition.provider, definition);
             this.addLayer(layer, definition);
         }
     },

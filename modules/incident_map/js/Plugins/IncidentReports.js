@@ -1,3 +1,6 @@
+Amani.FilterFactory = Amani.Factory.extend({});
+Amani.MarkerFactory = Amani.Factory.extend({});
+
 Amani.IncidentReports = LF.Plugin.extend({
 
     initialize: function (options) {
@@ -20,7 +23,8 @@ Amani.IncidentReports = LF.Plugin.extend({
     _onLoad: function (resp) {
         var i, filter, cf, definition,
             date_format = d3.time.format("%Y-%m-%dT%H:%M:%S"),
-            filter_factory = new Amani.FilterFactory();
+            filter_factory = new Amani.FilterFactory(),
+            marker_factory = this._marker_factory = new Amani.MarkerFactory();
 
         resp.features.forEach(function (f) {
             f.properties.date = date_format.parse(f.properties.date);
@@ -31,7 +35,7 @@ Amani.IncidentReports = LF.Plugin.extend({
 
         for (i in this.options.filters) {
             definition = this.options.filters[i];
-            filter = filter_factory.filter(cf, resp.features, definition);
+            filter = filter_factory.get(definition.provider, definition, cf, resp.features);
             filter.on('update', this._update, this);
             this._filters.push(filter);
         }
@@ -56,19 +60,19 @@ Amani.IncidentReports = LF.Plugin.extend({
 
     _marker: function (feature) {
         return L.GeoJSON.geometryToLayer(feature, function (geojson, latlng) {
-            var markup = geojson.properties.teaser || null;
+            var definition = feature.properties.marker || { provider: 'DefaultMarker' },
+                marker = this._marker_factory.get(definition.provider, latlng, definition),
+                markup = geojson.properties.teaser || null;
+
             if (!markup) {
                 markup = L.DomUtil.create('h3', 'incident-report-popup-title');
                 var link = L.DomUtil.create('a', null, markup);
                 link.href = geojson.properties.uri;
                 link.textContent = geojson.properties.title;
             }
-            return L.marker(latlng).bindPopup(markup).setIcon(this._icon(geojson.properties));
-        }.bind(this));
-    },
 
-    _icon: function (properties) {
-        return properties.iconUrl ? L.icon({ iconUrl: properties.iconUrl }) : new L.Icon.Default();
+            return marker.bindPopup(markup);
+        }.bind(this));
     },
 
     _render: function () {
