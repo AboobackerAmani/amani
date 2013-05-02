@@ -11,7 +11,7 @@ function amani_event_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'calendar_2_test';
+  $view->name = 'calendar_2';
   $view->description = '';
   $view->tag = 'Calendar';
   $view->base_table = 'node';
@@ -415,7 +415,7 @@ function amani_event_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
   );
-  $translatables['calendar_2_test'] = array(
+  $translatables['calendar_2'] = array(
     t('Master'),
     t('more'),
     t('Apply'),
@@ -436,7 +436,7 @@ function amani_event_views_default_views() {
     t('upcoming events - list'),
     t('Block'),
   );
-  $export['calendar_2_test'] = $view;
+  $export['calendar_2'] = $view;
 
   return $export;
 }
