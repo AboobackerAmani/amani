@@ -20,7 +20,7 @@ function incident_map_settings() {
  */
 function incident_map_incident_map_settings() {
   return array(
-    array('#title' => t('Filter settings'), 'filter_settings' => incident_map_filter_settings()),
+    // array('#title' => t('Filter settings'), 'filter_settings' => incident_map_filter_settings()),
     array('#title' => t('Marker settings'), 'marker_settings' => incident_map_marker_settings()),
   );
 }
