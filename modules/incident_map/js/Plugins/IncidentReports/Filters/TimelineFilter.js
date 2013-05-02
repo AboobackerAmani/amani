@@ -1,5 +1,5 @@
 Amani.FilterFactory.include({
-    timeline: function (cf, data, options) {
+    timeline: function (options, cf, data) {
         var get_day = function (f) { return d3.time.day(f.properties.date); },
             dimension = cf.dimension(get_day),
             extent = d3.extent(data, get_day),

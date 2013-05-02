@@ -1,5 +1,5 @@
 Amani.FilterFactory.include({
-    category: function (cf, data, options) {
+    category: function (options, cf, data) {
         var container = document.getElementById(options.container),
             dimension = cf.dimension(function (f) { return f.properties[options.key] || options.empty; });
 
