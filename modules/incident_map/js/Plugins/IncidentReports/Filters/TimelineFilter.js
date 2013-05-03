@@ -1,6 +1,7 @@
 Amani.FilterFactory.include({
     timeline: function (options, cf, data) {
-        var get_day = function (f) { return d3.time.day(f.properties.date); },
+        var date = d3.time.format("%Y-%m-%dT%H:%M:%S"),
+            get_day = function (f) { return d3.time.day(date.parse(f.properties[options.key])); },
             dimension = cf.dimension(get_day),
             extent = d3.extent(data, get_day),
             container = document.getElementById(options.container);

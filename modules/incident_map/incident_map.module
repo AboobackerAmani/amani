@@ -1,5 +1,7 @@
 <?php
 
+require_once('incident_map.admin.inc');
+
 /**
  * Implements hook_menu().
  */
@@ -44,12 +46,12 @@ function incident_map_filters() {
 function incident_map_filters_by_field_type() {
   $filters = array();
 
-  foreach (incident_map_filters() as $definition) {
+  foreach (incident_map_filters() as $type => $definition) {
     $field_type = $definition['field_type'];
     if (!isset($filters[$field_type])) {
       $filters[$field_type] = array();
     }
-    $filters[$field_type][] = $definition;
+    $filters[$field_type][$type] = $definition;
   }
 
   return $filters;
@@ -64,10 +66,9 @@ function incident_map_incident_map_filters() {
     'callback' => 'incident_map_category_filter',
     'value_callback' => function ($wrapper) { return $wrapper->label(); },
     'options' => array(
-      'key' => NULL,
-      'title' => NULL,
-      'type' => 'checkbox',
-      'empty' => 'None',
+      'title' => incident_map_setting_input_textfield(t('Filter title'), NULL, t('Include a title to be displayed above this filter.')),
+      'type' => incident_map_setting_input_select(t('Filter type'), array('checkbox' => t('Checkbox'), 'radio' => t('Radio buttons')), 'checkbox', t('Select the type of input element you want to use for filtering.')),
+      'empty' => incident_map_setting_input_textfield(t('Uncategorized value.'), t('None'), t("Provide a value to use for items that haven't been categorized.")),
     ),
   );
 
@@ -86,14 +87,12 @@ function incident_map_block_info() {
   $blocks = array();
 
   $filters = incident_map_filters_by_field_type();
-  $fields = incident_map_field_info('node', 'incident_report', array_keys($filters));
+  $fields = incident_map_get_field_info('node', 'incident_report', array_keys($filters));
 
   $prefix = 'incident-map-filter';
   foreach ($fields as $field_name => $field_info) {
     if (variable_get("$prefix-enabled-$field_name", FALSE)) {
-      $delta = "$prefix::$field_name";
-      // TODO: $delta is too long!
-      $blocks[$delta] = array('info' => "Incident map filter: {$field_info['label']}");
+      $blocks[$field_name] = array('info' => "Incident map filter: {$field_info['label']}");
     }
   }
 
@@ -102,18 +101,21 @@ function incident_map_block_info() {
 
 function incident_map_block_view($delta = '') {
   $map_id = 'incident-map-default';
+  $prefix = 'incident-map-filter';
 
   $block = array();
 
-  list($prefix, $field_name) = explode('::', $delta);
+  $filter_type = variable_get("$prefix-$delta", NULL);
   $filters = incident_map_filters();
-  $filter_type = variable_get("$prefix-$field_name", NULL);
+
   if (!is_null($filter_type) && isset($filters[$filter_type])) {
-    // TODO: Implement options better.
-    // $options = variable_get(...);
-    // $block['subject'] = $options['title'];
     $filter = $filters[$filter_type];
-    $block['content'] = call_user_func_array($filter['callback'], array($map_id, $field_name));
+    $args = array($map_id, $delta);
+    foreach ($filter['options'] as $option => $element) {
+      $id = "$prefix-$delta-$filter_type-$option";
+      $args[] = variable_get($id, $element['#default_value']);
+    }
+    $block['content'] = call_user_func_array($filter['callback'], $args);
   }
 
   return $block;
@@ -123,7 +125,7 @@ function incident_map_block_view($delta = '') {
  * Returns a list of field instances attached to a particular bundle. Can be
  * limited to only fields of a particular type.
  */
-function incident_map_field_info($entity_type, $bundle, $field_types = array()) {
+function incident_map_get_field_info($entity_type, $bundle, $field_types = array()) {
   $fields = field_info_instances($entity_type, $bundle);
 
   $labels = array_map(function ($field) use ($field_types) {
@@ -511,11 +513,11 @@ function incident_map_add_filters($setting, $wrapper) {
 
   $filters = incident_map_filters_by_field_type();
 
-  $fields = incident_map_field_info('node', 'incident_report', array_keys($filters));
+  $fields = incident_map_get_field_info('node', 'incident_report', array_keys($filters));
   foreach ($fields as $field_name => $field_info) {
     if (variable_get("$prefix-enabled-$field_name", FALSE)) {
       $filter = variable_get("$prefix-$field_name", NULL);
-      $filter_info = $filters[$field_name][$filter];
+      $filter_info = $filters[$field_info['type']][$filter];
       $properties[$field_name] = call_user_func($filter_info['value_callback'], $wrapper->{$field_name});
     }
   }
@@ -614,10 +616,11 @@ function incident_report_geojson_feature_factory($wrapper) {
 
   $uri = entity_uri($wrapper->type(), $wrapper->value());
 
+  $teaser = node_view($wrapper->value(), 'teaser');
   $properties = array(
     'title' => $wrapper->label(),
     'uri' => $uri['path'],
-    'teaser' => drupal_render(node_view($wrapper->value(), 'teaser')),
+    'teaser' => drupal_render($teaser),
   );
 
   foreach (module_invoke_all('incident_map_settings') as $setting) {

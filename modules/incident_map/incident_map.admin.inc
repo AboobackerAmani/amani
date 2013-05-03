@@ -22,6 +22,7 @@ function incident_map_settings() {
 function incident_map_incident_map_settings() {
   $filter_prefix = 'incident-map-filter';
   $marker_prefix = 'incident-map-marker';
+
   return array(
     // array('#title' => t('Map settings'), 'map_settings' => incident_map_map_settings()),
     array(
@@ -61,7 +62,7 @@ function incident_map_filter_settings($prefix) {
 
   $filters = incident_map_filters_by_field_type();
 
-  $fields = incident_map_field_info('node', 'incident_report', array_keys($filters));
+  $fields = incident_map_get_field_info('node', 'incident_report', array_keys($filters));
   foreach ($fields as $field_name => $field_info) {
     $set = array('#type' => 'fieldset', '#title' => $field_info['label'], '#collapsible' => TRUE, '#collapsed' => TRUE);
 
@@ -72,9 +73,27 @@ function incident_map_filter_settings($prefix) {
     $names = array_map(function ($filter) { return $filter['name']; }, $available);
     $options = array_combine(array_keys($available), $names);
 
-    $id = "$prefix-{$field_name}";
+    $filter_type_id = "$prefix-$field_name";
     $description = t('Select the type of filter you want to use for this field.');
-    $set[$id] = incident_map_setting_input_select(t('Filter'), $options, variable_get($id, null), $description);
+    $set[$filter_type_id] = incident_map_setting_input_select(t('Filter'), $options, variable_get($filter_type_id, null), $description);
+
+    foreach ($available as $type => $filter) {
+      if (!empty($filter['options'])) {
+        $options = array(
+          '#type' => 'fieldset',
+          '#title' => t('%name options', array('%name' => $filter['name'])),
+          '#states' => array(
+            'visible' => array(":input[name='$filter_type_id']" => array('value' => $type)),
+          ),
+        );
+        foreach ($filter['options'] as $option => $element) {
+          $id = "$prefix-$field_name-$type-$option";
+          $element['#default_value'] = variable_get($id, $element['#default_value']);
+          $options[$id] = $element;
+        }
+        $set["$prefix-$field_name-$type"] = $options;
+      }
+    }
 
     $items["filter-$field_name"] = $set;
   }
@@ -93,7 +112,7 @@ function incident_map_marker_settings($prefix) {
   $description = t("Select the default colour to use if an item doesn't have a value set.");
   $items[$id] = incident_map_setting_input_select(t('Default color'), $colors, variable_get($id, 'red'), $description);
 
-  $term_fields = incident_map_field_info('node', 'incident_report', array('taxonomy_term_reference'));
+  $term_fields = incident_map_get_field_info('node', 'incident_report', array('taxonomy_term_reference'));
 
   $marker_field = "$prefix-field";
   $items[$marker_field] = array(

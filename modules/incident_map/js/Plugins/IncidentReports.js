@@ -22,13 +22,8 @@ Amani.IncidentReports = LF.Plugin.extend({
 
     _onLoad: function (resp) {
         var i, filter, cf, definition,
-            date_format = d3.time.format("%Y-%m-%dT%H:%M:%S"),
             filter_factory = new Amani.FilterFactory(),
             marker_factory = this._marker_factory = new Amani.MarkerFactory();
-
-        resp.features.forEach(function (f) {
-            f.properties.date = date_format.parse(f.properties.date);
-        });
 
         cf = crossfilter(resp.features);
         this._dimension = cf.dimension(function (f) { return f.properties.uri; });
