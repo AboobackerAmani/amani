@@ -1,3 +1,5 @@
+Amani.SVG = !!(document.createElementNS && document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect);
+
 Amani.FilterFactory.include({
     timeline: function (options, cf, data) {
         var date = d3.time.format("%Y-%m-%dT%H:%M:%S"),
@@ -12,9 +14,14 @@ Amani.FilterFactory.include({
 
 Amani.TimelineFilter = Amani.Filter.extend({
     initialize: function (dimension, extent, container) {
-        var render = this.render.bind(this),
+        var init = Amani.SVG ? this._initTimelineGraph : this._initDatePicker;
+        init.call(this, dimension, extent, container);
+    },
+
+    _initTimelineGraph: function (dimension, extent, container) {
+        var dates = dimension.group(),
+            render = this.render.bind(this),
             update = this.update.bind(this),
-            dates = dimension.group(),
             margin = { top: 10, right: 15, bottom: 20, left: 15 },
             height = 60,
             width = container.clientWidth - margin.left - margin.right,
@@ -37,8 +44,8 @@ Amani.TimelineFilter = Amani.Filter.extend({
             });
 
         var chart = this.chart = d3.selectAll(containers).data(charts).each(function (chart) {
-            chart.on('brush.datepicker', function (e) { set_date(e.extent()); });
-            chart.on('brushend.datepicker', function (e) { set_date(e.extent()); });
+            // chart.on('brush.datepicker', function (e) { set_date(e.extent()); });
+            // chart.on('brushend.datepicker', function (e) { set_date(e.extent()); });
             chart.on('brush', render).on('brushend', render);
         });
 
@@ -50,7 +57,12 @@ Amani.TimelineFilter = Amani.Filter.extend({
             update();
         });
 
-        var defaults = {
+    },
+
+    _initDatePicker: function (dimension, extent, container) {
+        var render = this.render.bind(this),
+            update = this.update.bind(this),
+            defaults = {
                 minDate: d3.time.day.offset(extent[0], -1),
                 maxDate: d3.time.day.offset(extent[1], 1)
             },
@@ -69,6 +81,11 @@ Amani.TimelineFilter = Amani.Filter.extend({
         from.change(set_filter);
         to.change(set_filter);
 
+        function set_date(range) {
+            from.datepicker("setDate", range[0]);
+            to.datepicker("setDate", range[1]);
+        }
+
         function set_filter(e) {
             var f = from.datepicker('getDate') || extent[0],
                 t = to.datepicker('getDate') || extent[1];
@@ -76,11 +93,6 @@ Amani.TimelineFilter = Amani.Filter.extend({
             chart.each(function (method) { method.filter(f < t ? [f, t] : [t, f]); });
             update();
             render();
-        }
-
-        function set_date(range) {
-            from.datepicker("setDate", range[0]);
-            to.datepicker("setDate", range[1]);
         }
     },
 
