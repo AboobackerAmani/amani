@@ -36,46 +36,106 @@ function incident_map_theme($existing, $type, $theme, $path) {
   );
 }
 
+function incident_map_filters() {
+  $filters = module_invoke_all('incident_map_filters');
+  return $filters;
+}
+
+function incident_map_filters_by_field_type() {
+  $filters = array();
+
+  foreach (incident_map_filters() as $definition) {
+    $field_type = $definition['field_type'];
+    if (!isset($filters[$field_type])) {
+      $filters[$field_type] = array();
+    }
+    $filters[$field_type][] = $definition;
+  }
+
+  return $filters;
+}
+
+function incident_map_incident_map_filters() {
+  $filters = array();
+
+  $filters['category'] = array(
+    'name' => 'Category filter',
+    'field_type' => 'taxonomy_term_reference',
+    'callback' => 'incident_map_category_filter',
+    'value_callback' => function ($wrapper) { return $wrapper->label(); },
+    'options' => array(
+      'key' => NULL,
+      'title' => NULL,
+      'type' => 'checkbox',
+      'empty' => 'None',
+    ),
+  );
+
+  $filters['timeline'] = array(
+    'name' => 'Timeline filter',
+    'field_type' => 'datetime',
+    'callback' => 'incident_map_timeline_filter',
+    'value_callback' => function ($wrapper) { return date_format(new DateObject($wrapper->value()), DATE_FORMAT_ISO); },
+    'options' => array(),
+  );
+
+  return $filters;
+}
+
 function incident_map_block_info() {
   $blocks = array();
 
-  $blocks['type-filter'] = array('info' => 'Incident map filter: Report type');
-  $blocks['severity-filter'] = array('info' => 'Incident map filter: Report severity');
-  $blocks['timeline-filter'] = array('info' => 'Incident map filter: Timeline');
+  $filters = incident_map_filters_by_field_type();
+  $fields = incident_map_field_info('node', 'incident_report', array_keys($filters));
+
+  $prefix = 'incident-map-filter';
+  foreach ($fields as $field_name => $field_info) {
+    if (variable_get("$prefix-enabled-$field_name", FALSE)) {
+      $delta = "$prefix::$field_name";
+      // TODO: $delta is too long!
+      $blocks[$delta] = array('info' => "Incident map filter: {$field_info['label']}");
+    }
+  }
 
   return $blocks;
 }
 
 function incident_map_block_view($delta = '') {
   $map_id = 'incident-map-default';
+
   $block = array();
 
-  switch ($delta) {
-    case 'type-filter':
-      $title = t('Filter by report type');
-      $empty = t('No type specified');
-      $type = incident_map_category_filter($map_id, 'type', NULL, 'checkbox', $empty);
-      $block['subject'] = $title;
-      $block['content'] = $type;
-      break;
-
-    case 'severity-filter':
-      $title = t('Filter by report severity');
-      $empty = t('No severity specified');
-      $severity = incident_map_category_filter($map_id, 'severity', NULL, 'radio', $empty);
-      $block['subject'] = $title;
-      $block['content'] = $severity;
-      break;
-
-    case 'timeline-filter':
-      $block['content'] = incident_map_timeline_filter($map_id);
-      break;
-
-    default:
-      break;
+  list($prefix, $field_name) = explode('::', $delta);
+  $filters = incident_map_filters();
+  $filter_type = variable_get("$prefix-$field_name", NULL);
+  if (!is_null($filter_type) && isset($filters[$filter_type])) {
+    // TODO: Implement options better.
+    // $options = variable_get(...);
+    // $block['subject'] = $options['title'];
+    $filter = $filters[$filter_type];
+    $block['content'] = call_user_func_array($filter['callback'], array($map_id, $field_name));
   }
 
   return $block;
+}
+
+/**
+ * Returns a list of field instances attached to a particular bundle. Can be
+ * limited to only fields of a particular type.
+ */
+function incident_map_field_info($entity_type, $bundle, $field_types = array()) {
+  $fields = field_info_instances($entity_type, $bundle);
+
+  $labels = array_map(function ($field) use ($field_types) {
+    $info = field_info_field($field['field_name']);
+    $info['label'] = $field['label'];
+    if (!empty($field_types)) {
+      return in_array($info['type'], $field_types) ? $info : FALSE;
+    }
+    return $info;
+  }, $fields);
+
+  return array_filter(array_combine(array_keys($fields), $labels));
 }
 
 /**
@@ -97,13 +157,17 @@ function incident_map_reports() {
 /**
  * Create a timeline filter for the incident map.
  */
-function incident_map_timeline_filter($map) {
+function incident_map_timeline_filter($map, $key) {
   drupal_add_library('incident_map', 'TimelineFilter');
 
   $container = "$map-timeline-filter";
 
   leaflet_framework_extend_map('incident_reports', $map, array(
-    'filters' => array(array('provider' => 'timeline', 'container' => $container)),
+    'filters' => array(array(
+      'provider' => 'timeline',
+      'key' => $key,
+      'container' => $container
+    )),
   ));
 
   return theme('timeline_filter', array('id' => $container));
@@ -438,6 +502,53 @@ function incident_map_leaflet_framework_plugins() {
   return $plugins;
 }
 
+/**
+ *
+ */
+function incident_map_add_filters($setting, $wrapper) {
+  $prefix = $setting['prefix'];
+  $properties = array();
+
+  $filters = incident_map_filters_by_field_type();
+
+  $fields = incident_map_field_info('node', 'incident_report', array_keys($filters));
+  foreach ($fields as $field_name => $field_info) {
+    if (variable_get("$prefix-enabled-$field_name", FALSE)) {
+      $filter = variable_get("$prefix-$field_name", NULL);
+      $filter_info = $filters[$field_name][$filter];
+      $properties[$field_name] = call_user_func($filter_info['value_callback'], $wrapper->{$field_name});
+    }
+  }
+
+  return $properties;
+}
+
+/**
+ * 
+ */
+function incident_map_add_markers($setting, $wrapper) {
+  $prefix = $setting['prefix'];
+  $marker = array('provider' => 'DefaultMarker');
+
+  $marker_field = variable_get("$prefix-field", NULL);
+  if ($marker_field) {
+    $tid = $wrapper->{$marker_field}->getIdentifier();
+    $color = variable_get("$prefix-color-tid-$tid", NULL);
+
+    if (!$color || $color === 'none') {
+      $color = variable_get("$prefix-color-default", NULL);
+    }
+
+    if ($color) {
+      $marker['provider'] = 'AwesomeMarker';
+      $marker['color'] = $color;
+      $marker['icon'] = variable_get("$prefix-icon-tid-$tid", NULL);
+      $marker['spin'] = variable_get("$prefix-spin-tid-$tid", FALSE);
+    }
+  }
+
+  return array('marker' => $marker);
+}
 
 /**
  * Implements hook_incident_map_geojson_info().
@@ -503,34 +614,18 @@ function incident_report_geojson_feature_factory($wrapper) {
 
   $uri = entity_uri($wrapper->type(), $wrapper->value());
 
-  $marker = array('provider' => 'DefaultMarker');
-
-  $marker_field = variable_get('incident-map-marker-field', NULL);
-  if ($marker_field) {
-    $tid = $wrapper->{$marker_field}->getIdentifier();
-    $color = variable_get("incident-map-color-tid-$tid", NULL);
-
-    if (!$color || $color === 'none') {
-      $color = variable_get('incident-map-color-default', NULL);
-    }
-
-    if ($color) {
-      $marker['provider'] = 'AwesomeMarker';
-      $marker['color'] = $color;
-      $marker['icon'] = variable_get("incident-map-icon-tid-$tid", NULL);
-      $marker['spin'] = variable_get("incident-map-spin-tid-$tid", FALSE);
-    }
-  }
-
   $properties = array(
     'title' => $wrapper->label(),
     'uri' => $uri['path'],
-    'severity' => $wrapper->field_incident_severity->label(),
-    'type' => $wrapper->field_incident_report_type->label(),
-    'date' => date_format(new DateObject($wrapper->field_incident_date->value()), DATE_FORMAT_ISO),
     'teaser' => drupal_render(node_view($wrapper->value(), 'teaser')),
-    'marker' => $marker,
   );
+
+  foreach (module_invoke_all('incident_map_settings') as $setting) {
+    if (isset($setting['callback'])) {
+      $callback = $setting['callback'];
+      $properties += call_user_func($callback, $setting, $wrapper);
+    }
+  }
 
   return Affinity\GeoJSON\feature($geom, $properties);
 }

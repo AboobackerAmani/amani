@@ -4,9 +4,10 @@
  *
  */
 function incident_map_settings() {
-  $form = module_invoke_all('incident_map_settings');
-  foreach ($form as &$fieldset) {
-    $fieldset += array(
+  $settings = module_invoke_all('incident_map_settings');
+  $form = array();
+  foreach ($settings as $setting) {
+    $form[] = $setting['form'] + array(
       '#type' => 'fieldset',
       '#collapsed' => TRUE,
       '#collapsible' => TRUE,
@@ -19,56 +20,82 @@ function incident_map_settings() {
  * Implements hook_incident_map_settings().
  */
 function incident_map_incident_map_settings() {
+  $filter_prefix = 'incident-map-filter';
+  $marker_prefix = 'incident-map-marker';
   return array(
-    // array('#title' => t('Filter settings'), 'filter_settings' => incident_map_filter_settings()),
-    array('#title' => t('Marker settings'), 'marker_settings' => incident_map_marker_settings()),
+    // array('#title' => t('Map settings'), 'map_settings' => incident_map_map_settings()),
+    array(
+      'prefix' => $filter_prefix,
+      'form' => array(
+        '#title' => t('Filter settings'),
+        '#description' => t('Select which fields you want to enable filters on.'),
+        'filter_settings' => incident_map_filter_settings($filter_prefix),
+      ),
+      'callback' => 'incident_map_add_filters',
+    ),
+    array(
+      'prefix' => $marker_prefix,
+      'form' => array(
+        '#title' => t('Marker settings'),
+        'marker_settings' => incident_map_marker_settings($marker_prefix),
+      ),
+      'callback' => 'incident_map_add_markers',
+    ),
   );
 }
 
 /**
- * Provides the filter settings form.
+ *
  */
-function incident_map_filter_settings() {
+function incident_map_map_settings() {
   $items = array();
-
-  $term_fields = incident_map_field_info('node', 'incident_report', array('taxonomy_term_reference', 'date'));
 
   return $items;
 }
 
 /**
- * Returns a list of field instances attached to a particular bundle. Can be
- * limited to only fields of a particular type.
+ * Provides the filter settings form.
  */
-function incident_map_field_info($entity_type, $bundle, $field_types = array()) {
-  $fields = field_info_instances($entity_type, $bundle);
+function incident_map_filter_settings($prefix) {
+  $items = array();
 
-  $labels = array_map(function ($field) use ($field_types) {
-    $info = field_info_field($field['field_name']);
-    $info['label'] = $field['label'];
-    if (!empty($field_types)) {
-      return in_array($info['type'], $field_types) ? $info : FALSE;
-    }
-    return $info;
-  }, $fields);
+  $filters = incident_map_filters_by_field_type();
 
-  return array_filter(array_combine(array_keys($fields), $labels));
+  $fields = incident_map_field_info('node', 'incident_report', array_keys($filters));
+  foreach ($fields as $field_name => $field_info) {
+    $set = array('#type' => 'fieldset', '#title' => $field_info['label'], '#collapsible' => TRUE, '#collapsed' => TRUE);
+
+    $id = "$prefix-enabled-{$field_name}";
+    $set[$id] = array('#type' => 'checkbox', '#title' => t('Enabled'), '#default_value' => variable_get($id, FALSE));
+
+    $available = $filters[$field_info['type']];
+    $names = array_map(function ($filter) { return $filter['name']; }, $available);
+    $options = array_combine(array_keys($available), $names);
+
+    $id = "$prefix-{$field_name}";
+    $description = t('Select the type of filter you want to use for this field.');
+    $set[$id] = incident_map_setting_input_select(t('Filter'), $options, variable_get($id, null), $description);
+
+    $items["filter-$field_name"] = $set;
+  }
+
+  return $items;
 }
 
 /**
  * Provides the marker settings form.
  */
-function incident_map_marker_settings() {
+function incident_map_marker_settings($prefix) {
   $colors = incident_map_get_marker_options();
   $items = array();
 
-  $id = 'incident-map-color-default';
+  $id = "$prefix-color-default";
   $description = t("Select the default colour to use if an item doesn't have a value set.");
   $items[$id] = incident_map_setting_input_select(t('Default color'), $colors, variable_get($id, 'red'), $description);
 
   $term_fields = incident_map_field_info('node', 'incident_report', array('taxonomy_term_reference'));
 
-  $marker_field = 'incident-map-marker-field';
+  $marker_field = "$prefix-field";
   $items[$marker_field] = array(
     '#type' => 'select',
     '#title' => 'Marker type field',
@@ -104,10 +131,10 @@ function incident_map_marker_settings() {
         '#collapsed' => TRUE,
         '#collapsible' => TRUE,
       );
-      $id = "incident-map-color-tid-$tid";
+      $id = "$prefix-color-tid-$tid";
       $set[$id] = incident_map_setting_input_select("Colour", $colors, variable_get($id, ''));
 
-      $id = "incident-map-icon-tid-$tid";
+      $id = "$prefix-icon-tid-$tid";
       $set[$id] = incident_map_setting_input_textfield("Icon", variable_get($id, ''));
 
       $items[$fieldset]["incident-map-tid-$tid"] = $set;
