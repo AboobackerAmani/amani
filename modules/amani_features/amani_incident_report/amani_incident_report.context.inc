@@ -26,23 +26,23 @@ function amani_incident_report_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'incident_map-timeline-filter' => array(
+        'incident_map-field_incident_date' => array(
           'module' => 'incident_map',
-          'delta' => 'timeline-filter',
+          'delta' => 'field_incident_date',
           'region' => 'content',
-          'weight' => '27',
+          'weight' => '10',
         ),
-        'incident_map-type-filter' => array(
+        'incident_map-field_incident_report_type' => array(
           'module' => 'incident_map',
-          'delta' => 'type-filter',
+          'delta' => 'field_incident_report_type',
+          'region' => 'sidebar_second',
+          'weight' => '-25',
+        ),
+        'incident_map-field_incident_severity' => array(
+          'module' => 'incident_map',
+          'delta' => 'field_incident_severity',
           'region' => 'sidebar_second',
           'weight' => '-24',
-        ),
-        'incident_map-severity-filter' => array(
-          'module' => 'incident_map',
-          'delta' => 'severity-filter',
-          'region' => 'sidebar_second',
-          'weight' => '-23',
         ),
       ),
     ),
