@@ -38,11 +38,17 @@ function incident_map_theme($existing, $type, $theme, $path) {
   );
 }
 
+/**
+ * Get all declared filters.
+ */
 function incident_map_filters() {
   $filters = module_invoke_all('incident_map_filters');
   return $filters;
 }
 
+/**
+ * Get all declared filters grouped by type.
+ */
 function incident_map_filters_by_field_type() {
   $filters = array();
 
@@ -57,6 +63,9 @@ function incident_map_filters_by_field_type() {
   return $filters;
 }
 
+/**
+ * Implementation of hook_incident_map_filters().
+ */
 function incident_map_incident_map_filters() {
   $filters = array();
 
@@ -83,6 +92,9 @@ function incident_map_incident_map_filters() {
   return $filters;
 }
 
+/**
+ * Imlementation of hook_block_info().
+ */
 function incident_map_block_info() {
   $blocks = array();
 
@@ -99,6 +111,9 @@ function incident_map_block_info() {
   return $blocks;
 }
 
+/**
+ * Implementation of hook_block_view().
+ */
 function incident_map_block_view($delta = '') {
   $map_id = 'incident-map-default';
   $prefix = 'incident-map-filter';
@@ -505,7 +520,8 @@ function incident_map_leaflet_framework_plugins() {
 }
 
 /**
- *
+ * Incident map setting callback;
+ * Adds properties of enabled filters to geojson features.
  */
 function incident_map_add_filters($setting, $wrapper) {
   $prefix = $setting['prefix'];
@@ -526,7 +542,8 @@ function incident_map_add_filters($setting, $wrapper) {
 }
 
 /**
- * 
+ * Incident map setting callback;
+ * Adds marker configuration to geojson features.
  */
 function incident_map_add_markers($setting, $wrapper) {
   $prefix = $setting['prefix'];

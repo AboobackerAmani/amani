@@ -1,7 +1,15 @@
 <?php
+/**
+ * TODO: This file is currently being included at the top of incident_map.module
+ *       as some of the functions are required to be always available. Those
+ *       functions should be identified and moved into the *.module file.
+ */
 
 /**
+ * Invokes hook_incident_map_settings() to allow modules to provide settings for
+ * the incident map.
  *
+ * Returns a FAPI form array to be rendered on the admin page.
  */
 function incident_map_settings() {
   $settings = module_invoke_all('incident_map_settings');
@@ -46,7 +54,7 @@ function incident_map_incident_map_settings() {
 }
 
 /**
- *
+ * Provides the map settings form.
  */
 function incident_map_map_settings() {
   $items = array();
@@ -202,7 +210,7 @@ function incident_map_setting_input_textfield($label, $default, $description = N
 }
 
 /**
- *
+ * Returns array of available Leaflet.awesome-markers colours.
  */
 function incident_map_get_marker_options() {
   $colours = array(
