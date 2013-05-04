@@ -11,7 +11,7 @@ function amani_event_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'calendar_2';
+  $view->name = 'calendar_of_events';
   $view->description = '';
   $view->tag = 'Calendar';
   $view->base_table = 'node';
@@ -376,7 +376,7 @@ function amani_event_views_default_views() {
   $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
   $handler->display->display_options['filters']['date_filter']['default_date'] = 'now';
   $handler->display->display_options['filters']['date_filter']['add_delta'] = 'yes';
-  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
+  $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
     'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
   );
   $handler->display->display_options['block_description'] = 'upcoming events - list';
@@ -413,7 +413,28 @@ function amani_event_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
   );
-  $export['calendar_2'] = $view;
+  $translatables['calendar_of_events'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('All'),
+    t('Month'),
+    t('Week'),
+    t('Day'),
+    t('Year'),
+    t('block - calendar'),
+    t('upcoming events - calendar month'),
+    t('block - list'),
+    t('Upcoming events block'),
+    t('<p></br></p>'),
+    t('upcoming events - list'),
+    t('Block'),
+  );
+  $export['calendar_of_events'] = $view;
 
   return $export;
 }
