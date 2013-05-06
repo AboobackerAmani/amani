@@ -30,25 +30,32 @@ function incident_map_settings() {
 function incident_map_incident_map_settings() {
   $filter_prefix = 'incident-map-filter';
   $marker_prefix = 'incident-map-marker';
+  $map_prefix = 'incident-map-map-settings';
 
   return array(
-    // array('#title' => t('Map settings'), 'map_settings' => incident_map_map_settings()),
-    array(
+    'map' => array(
+      'prefix' => $map_prefix,
+      'form' => array(
+        '#title' => t('Map settings'),
+        'map_settings' => incident_map_map_settings($map_prefix),
+      ),
+    ),
+    'filter' => array(
       'prefix' => $filter_prefix,
       'form' => array(
         '#title' => t('Filter settings'),
         '#description' => t('Select which fields you want to enable filters on.'),
         'filter_settings' => incident_map_filter_settings($filter_prefix),
       ),
-      'callback' => 'incident_map_add_filters',
+      'properties_callback' => 'incident_map_add_filters',
     ),
-    array(
+    'marker' => array(
       'prefix' => $marker_prefix,
       'form' => array(
         '#title' => t('Marker settings'),
         'marker_settings' => incident_map_marker_settings($marker_prefix),
       ),
-      'callback' => 'incident_map_add_markers',
+      'properties_callback' => 'incident_map_add_markers',
     ),
   );
 }
@@ -56,8 +63,34 @@ function incident_map_incident_map_settings() {
 /**
  * Provides the map settings form.
  */
-function incident_map_map_settings() {
+function incident_map_map_settings($prefix) {
   $items = array();
+
+  $auto = "$prefix-auto";
+  $items[$auto] = array('#type' => 'checkbox', '#title' => t("Fit map to features"), '#description' => t("Automatically set the viewport to include all features."), '#default_value' => variable_get($auto, TRUE));
+
+  $id = "$prefix-lat";
+  $title = t('Latitude');
+  $items[$id] = incident_map_setting_input_textfield($title, 0.0);
+  $items[$id]['#states'] = array(
+    'visible' => array(":input[name='$auto']" => array('checked' => FALSE)),
+  );
+
+  $id = "$prefix-lng";
+  $title = t('Longtitude');
+  $items[$id] = incident_map_setting_input_textfield($title, 0.0);
+  $items[$id]['#states'] = array(
+    'visible' => array(":input[name='$auto']" => array('checked' => FALSE)),
+  );
+
+  $id = "$prefix-zoom";
+  $title = t('Zoom');
+  $range = range(1, 16);
+  $options = array_combine($range, $range);
+  $items[$id] = incident_map_setting_input_select($title, $options, 7);
+  $items[$id]['#states'] = array(
+    'visible' => array(":input[name='$auto']" => array('checked' => FALSE)),
+  );
 
   return $items;
 }
@@ -74,8 +107,8 @@ function incident_map_filter_settings($prefix) {
   foreach ($fields as $field_name => $field_info) {
     $set = array('#type' => 'fieldset', '#title' => $field_info['label'], '#collapsible' => TRUE, '#collapsed' => TRUE);
 
-    $id = "$prefix-enabled-{$field_name}";
-    $set[$id] = array('#type' => 'checkbox', '#title' => t('Enabled'), '#default_value' => variable_get($id, FALSE));
+    $enabled = "$prefix-enabled-{$field_name}";
+    $set[$enabled] = array('#type' => 'checkbox', '#title' => t('Enabled'), '#default_value' => variable_get($enabled, FALSE));
 
     $available = $filters[$field_info['type']];
     $names = array_map(function ($filter) { return $filter['name']; }, $available);
@@ -84,6 +117,9 @@ function incident_map_filter_settings($prefix) {
     $filter_type_id = "$prefix-$field_name";
     $description = t('Select the type of filter you want to use for this field.');
     $set[$filter_type_id] = incident_map_setting_input_select(t('Filter'), $options, variable_get($filter_type_id, null), $description);
+    $set[$filter_type_id]['#states'] = array(
+      'visible' => array(":input[name='$enabled']" => array('checked' => TRUE)),
+    );
 
     foreach ($available as $type => $filter) {
       if (!empty($filter['options'])) {
@@ -91,7 +127,10 @@ function incident_map_filter_settings($prefix) {
           '#type' => 'fieldset',
           '#title' => t('%name options', array('%name' => $filter['name'])),
           '#states' => array(
-            'visible' => array(":input[name='$filter_type_id']" => array('value' => $type)),
+            'visible' => array(
+              ":input[name='$enabled']" => array('checked' => TRUE),
+              ":input[name='$filter_type_id']" => array('value' => $type),
+            ),
           ),
         );
         foreach ($filter['options'] as $option => $element) {
