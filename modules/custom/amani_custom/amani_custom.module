@@ -10,7 +10,8 @@ function amani_custom_block_view_alter(&$data, $block) {
     case "menu-menu-meta":
     case "menu-menu-social-media":
     case "superfish-1":
-    case " 284":
+    case "284":
+    case 'locale-language':
       // Remove the title from the menu block.
       $data['subject'] = '';
       break;
