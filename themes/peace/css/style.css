@@ -263,6 +263,35 @@ a {
     .region-home-content-top-static-region .block:nth-child(3n) {
       margin-right: 0; }
 
+.sf-menu.sf-horizontal.sf-shadow ul,
+.sf-menu.sf-vertical.sf-shadow ul,
+.sf-menu.sf-navbar.sf-shadow ul ul {
+  background: white;
+  padding: 15px !important;
+  box-shadow: 0 0 20px #cccccc;
+  border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px; }
+
+.page-programs .views-row {
+  display: block;
+  float: left;
+  margin-right: 3.22581%;
+  width: 35.48387%;
+  background: white;
+  padding: 30px; }
+  .page-programs .views-row:last-child {
+    margin-right: 0; }
+  .page-programs .views-row:nth-child(3n) {
+    margin-right: 0; }
+  .page-programs .views-row .views-field-title {
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 5px; }
+
 #header-region #navigation, #header-region
 #block-superfish-superfish_1, #header-region
 #block-superfish-1, #header-region
@@ -398,6 +427,20 @@ a {
     display: inline-block;
     margin-left: 10px; }
 
+.sidebar #block-views-tweets-block_1 {
+  background: none;
+  box-shadow: 0 0 0;
+  padding: 0; }
+  .sidebar #block-views-tweets-block_1 li.views-row {
+    margin: 0;
+    list-style-type: none;
+    padding: 15px 0;
+    border-bottom: 1px solid #cccccc; }
+.sidebar #block-boxes-front_second_sidebar_bottom {
+  background: none;
+  box-shadow: 0 0 0;
+  padding: 0; }
+
 #block-search-form {
   position: relative;
   display: block;
@@ -521,6 +564,74 @@ a {
           color: #ee8f1c; }
         #header-region #block-menu-menu-social-media .content li a:hover, #header-region #block-menu-menu-social-media .content li a:active {
           color: #f2a64b; }
+
+.page-node .node > .content {
+  background: white;
+  padding: 30px;
+  box-shadow: 2px 3px 4px #c8c8c8;
+  font-family: "Georgia";
+  line-height: 1.4; }
+  .page-node .node > .content .field-label {
+    color: #ee8f1c;
+    font-family: "bariol_regularregular";
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 30px; }
+  .page-node .node > .content .field-name-field-incident-geolocation .openlayers-map,
+  .page-node .node > .content .field-name-field-incident-geolocation .openlayers-container {
+    width: 100% !important; }
+
+.page-news-and-events .view-news-and-events {
+  background: white;
+  background: white;
+  padding: 30px;
+  box-shadow: 2px 3px 4px #c8c8c8;
+  font-family: "Georgia";
+  line-height: 1.4; }
+  .page-news-and-events .view-news-and-events .views-row {
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 30px;
+    margin-bottom: 30px; }
+    .page-news-and-events .view-news-and-events .views-row.views-row-last {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0; }
+    .page-news-and-events .view-news-and-events .views-row .views-field-title {
+      font-family: "bariol_regularregular";
+      text-transform: uppercase;
+      font-size: 16px; }
+
+.page-resources .view-resources {
+  background: white;
+  padding: 30px;
+  box-shadow: 2px 3px 4px #c8c8c8; }
+  .page-resources .view-resources tr.even,
+  .page-resources .view-resources tr.odd {
+    background: none;
+    border-bottom: 1px solid #cccccc; }
+
+.page-contact .form-item label {
+  font-weight: normal;
+  color: #ee8f1c;
+  margin-bottom: 5px; }
+.page-contact .form-text,
+.page-contact .form-textarea {
+  background: white;
+  box-shadow: 2px 3px 4px #c8c8c8;
+  border: 0;
+  padding: 10px; }
+.page-contact .form-type-textarea .grippie {
+  display: none !important; }
+.page-contact #edit-actions {
+  text-align: right; }
+  .page-contact #edit-actions .form-submit {
+    color: #ee8f1c;
+    background: white;
+    box-shadow: 2px 3px 4px #c8c8c8;
+    padding: 10px 30px;
+    border: 0; }
 
 * {
   -webkit-box-sizing: border-box;

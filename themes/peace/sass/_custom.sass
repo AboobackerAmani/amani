@@ -83,6 +83,27 @@ a
     padding: $padding
     background: #fff
 
+// Menu
+.sf-menu.sf-horizontal.sf-shadow ul,
+.sf-menu.sf-vertical.sf-shadow ul,
+.sf-menu.sf-navbar.sf-shadow ul ul
+  background: #fff
+  padding: $padding/2 !important
+  box-shadow: 0 0 20px #ccc
+  @include border-radius(0, 0, 5px, 5px)
+
+// Programs page.
+.page-programs
+  .views-row
+    @include span-columns(3 of 8)
+    @include omega(3n)
+    background: #fff
+    padding: $padding
+    .views-field-title
+      text-transform: uppercase
+      font-size: 15px
+      margin-bottom: 5px
+
 // Navigation
 #navigation,
 #block-superfish-superfish_1,
@@ -138,7 +159,6 @@ a
     a
       &:after
         content: " »"
-
 
 // Footer
 #footer
