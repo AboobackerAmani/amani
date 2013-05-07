@@ -441,6 +441,24 @@ a {
   box-shadow: 0 0 0;
   padding: 0; }
 
+.sidebar #block-views-calendar_of_events-list,
+.sidebar #block-views-calendar_of_events-calendar {
+  background: none;
+  padding: 0;
+  box-shadow: 0 0 0; }
+  .sidebar #block-views-calendar_of_events-list h2.block-title,
+  .sidebar #block-views-calendar_of_events-calendar h2.block-title {
+    border-color: #cccccc; }
+  .sidebar #block-views-calendar_of_events-list table tr,
+  .sidebar #block-views-calendar_of_events-calendar table tr {
+    background: none; }
+    .sidebar #block-views-calendar_of_events-list table tr td.empty,
+    .sidebar #block-views-calendar_of_events-calendar table tr td.empty {
+      background: none; }
+  .sidebar #block-views-calendar_of_events-list .date-prev,
+  .sidebar #block-views-calendar_of_events-calendar .date-prev {
+    margin-left: 0; }
+
 #block-views-get_involved-block_1 .views-row {
   display: block;
   float: left;
