@@ -33,6 +33,13 @@ function amani_programs_campaigns_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'There are no programs or campaigns created yet. As soon as you <a href = "/node/add/project">create some</a> they will appear here instead of this message. ';
+  $handler->display->display_options['empty']['area']['format'] = 'wysiwyg_editor';
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_content_image']['id'] = 'field_content_image';
   $handler->display->display_options['fields']['field_content_image']['table'] = 'field_data_field_content_image';
@@ -60,6 +67,11 @@ function amani_programs_campaigns_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  /* Sort criterion: Content: Featured? (field_featured_) */
+  $handler->display->display_options['sorts']['field_featured__value']['id'] = 'field_featured__value';
+  $handler->display->display_options['sorts']['field_featured__value']['table'] = 'field_data_field_featured_';
+  $handler->display->display_options['sorts']['field_featured__value']['field'] = 'field_featured__value';
+  $handler->display->display_options['sorts']['field_featured__value']['order'] = 'DESC';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -138,6 +150,7 @@ function amani_programs_campaigns_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('There are no programs or campaigns created yet. As soon as you <a href = "/node/add/project">create some</a> they will appear here instead of this message. '),
     t('Page'),
     t('Block'),
     t('Other news'),
