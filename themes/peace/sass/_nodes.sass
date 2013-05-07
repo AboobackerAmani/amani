@@ -42,8 +42,37 @@
         text-transform: uppercase
         font-size: 16px
 
-// Node page.
+// Incident reports
+.page-incident-reports
+  .block-incident-map
+    label span
+      font-weight: normal
 
+// Get involved page.
+.page-get-involved
+  .view-get-involved.view-display-id-page
+    margin-top: $margin
+    border-top: 1px solid $grey
+    padding-top: $padding
+    .views-row
+      border-bottom: 1px solid $grey
+      margin-bottom: $margin
+      padding-bottom: $padding
+      overflow: hidden
+    .views-field-field-image
+      @include span-columns(2)
+    .views-field-title
+      @include span-columns(10)
+      @include omega
+      font-family: "bariol_regularregular"
+      color: $orange
+      font-size: 16px
+      text-transform: uppercase
+      margin-bottom: 5px
+    .views-field-body
+      @include span-columns(10)
+      @include omega
+      font-family: "Georgia"
 
 // Resources page
 .page-resources
