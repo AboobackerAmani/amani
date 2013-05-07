@@ -74,8 +74,12 @@
       padding: $padding 0
       margin: $margin 0
       border-bottom: 1px solid $grey
+      overflow: hidden
       .views-field-field-image
         @include span-columns(3)
+        img
+          width: 100%
+          height: auto
       .views-field-title
         @include span-columns(9)
         @include omega()
