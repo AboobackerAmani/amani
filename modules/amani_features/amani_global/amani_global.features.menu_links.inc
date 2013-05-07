@@ -66,10 +66,10 @@ function amani_global_menu_default_menu_links() {
     'weight' => '1',
   );
   // Exported menu link: menu-amani-main-menu:node/3
-  $menu_links['menu-amani-main-menu:node/3'] = array(
+  $menu_links['menu-amani-main-menu:about'] = array(
     'menu_name' => 'menu-amani-main-menu',
-    'link_path' => 'node/3',
-    'router_path' => 'node/%',
+    'link_path' => 'about',
+    'router_path' => 'about',
     'link_title' => 'About',
     'options' => array(
       'attributes' => array(
@@ -84,7 +84,7 @@ function amani_global_menu_default_menu_links() {
     'weight' => '-3',
   );
   // Exported menu link: menu-amani-main-menu:node/4
-  $menu_links['menu-amani-main-menu:node/4'] = array(
+  $menu_links['menu-amani-main-menu:programs'] = array(
     'menu_name' => 'menu-amani-main-menu',
     'link_path' => 'programs',
     'router_path' => 'programs',
@@ -102,7 +102,7 @@ function amani_global_menu_default_menu_links() {
     'weight' => '-2',
   );
   // Exported menu link: menu-amani-main-menu:node/5
-  $menu_links['menu-amani-main-menu:node/5'] = array(
+  $menu_links['menu-amani-main-menu:get-involved'] = array(
     'menu_name' => 'menu-amani-main-menu',
     'link_path' => 'get-involved',
     'router_path' => 'get-involved',
