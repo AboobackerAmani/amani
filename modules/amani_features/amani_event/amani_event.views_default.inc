@@ -266,8 +266,9 @@ function amani_event_views_default_views() {
   $handler->display->display_options['menu']['context'] = 0;
 
   /* Display: block - calendar */
-  $handler = $view->new_display('block', 'block - calendar', 'block_1');
+  $handler = $view->new_display('block', 'block - calendar', 'calendar');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Upcoming Events';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
@@ -291,8 +292,9 @@ function amani_event_views_default_views() {
   $handler->display->display_options['block_description'] = 'upcoming events - calendar month';
 
   /* Display: block - list */
-  $handler = $view->new_display('block', 'block - list', 'block_2');
+  $handler = $view->new_display('block', 'block - list', 'list');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Upcoming Events';
   $handler->display->display_options['display_description'] = 'Upcoming events block';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
@@ -381,8 +383,8 @@ function amani_event_views_default_views() {
   );
   $handler->display->display_options['block_description'] = 'upcoming events - list';
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block_3');
+  /* Display: block list */
+  $handler = $view->new_display('block', 'block list', 'block_3');
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
@@ -427,12 +429,13 @@ function amani_event_views_default_views() {
     t('Day'),
     t('Year'),
     t('block - calendar'),
+    t('Upcoming Events'),
     t('upcoming events - calendar month'),
     t('block - list'),
     t('Upcoming events block'),
     t('<p></br></p>'),
     t('upcoming events - list'),
-    t('Block'),
+    t('block list'),
   );
   $export['calendar_of_events'] = $view;
 
