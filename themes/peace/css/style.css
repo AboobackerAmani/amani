@@ -279,8 +279,8 @@ a {
 .page-programs .views-row {
   display: block;
   float: left;
-  margin-right: 2.85714%;
-  width: 31.42857%;
+  margin-right: 3.22581%;
+  width: 35.48387%;
   background: white;
   padding: 30px; }
   .page-programs .views-row:last-child {
@@ -576,7 +576,12 @@ a {
     font-family: "bariol_regularregular";
     font-weight: normal;
     text-transform: uppercase;
-    font-size: 16px; }
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 30px; }
+  .page-node .node > .content .field-name-field-incident-geolocation .openlayers-map,
+  .page-node .node > .content .field-name-field-incident-geolocation .openlayers-container {
+    width: 100% !important; }
 
 .page-news-and-events .view-news-and-events {
   background: white;
