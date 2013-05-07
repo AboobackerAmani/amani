@@ -10,6 +10,87 @@
 function amani_team_field_default_fields() {
   $fields = array();
 
+  // Exported field: 'node-team-field_display_ranking'.
+  $fields['node-team-field_display_ranking'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_display_ranking',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          1 => '1',
+          2 => '2',
+          3 => '3',
+          4 => '4',
+          5 => '5',
+          6 => '6',
+          7 => '7',
+          8 => '8',
+          9 => '9',
+        ),
+        'allowed_values_function' => '',
+        'profile2_private' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'list_integer',
+    ),
+    'field_instance' => array(
+      'bundle' => 'team',
+      'default_value' => array(
+        0 => array(
+          'value' => '9',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => 'Please choose an order that you would like this team member displayed. 1 is first.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => 15,
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_display_ranking',
+      'label' => 'Display Ranking',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '8',
+      ),
+    ),
+  );
+
   // Exported field: 'node-team-field_email'.
   $fields['node-team-field_email'] = array(
     'field_config' => array(
@@ -658,10 +739,12 @@ Prof.',
   // Included for use with string extractors like potx.
   t('Bio');
   t('Contact type');
+  t('Display Ranking');
   t('Email');
   t('Name');
   t('Phone');
   t('Photo');
+  t('Please choose an order that you would like this team member displayed. 1 is first.');
   t('Title');
 
   return $fields;
