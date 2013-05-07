@@ -15,6 +15,13 @@ function amani_image_gallery_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function amani_image_gallery_views_api() {
+  return array("version" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function amani_image_gallery_node_info() {

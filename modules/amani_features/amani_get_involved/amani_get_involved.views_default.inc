@@ -36,7 +36,7 @@ function amani_get_involved_views_default_views() {
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = 'There are no <em>Get involved</em> items created yet. As soon as you <a href="/node/add/get-involved?destination=get-involved">create some</a> they will appear here instead of this message.';
+  $handler->display->display_options['empty']['area']['content'] = 'There are no <em>Get involved</em> items created yet. As soon as you <a href="/node/add/get-  involved?destination=get-involved">create some</a> they will appear here instead of this message.';
   $handler->display->display_options['empty']['area']['format'] = 'wysiwyg_editor';
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
@@ -109,6 +109,29 @@ function amani_get_involved_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+
+  /* Display: Get Involved */
+  $handler = $view->new_display('block', 'Get Involved', 'block_2');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Graphic */
+  $handler->display->display_options['fields']['field_graphic']['id'] = 'field_graphic';
+  $handler->display->display_options['fields']['field_graphic']['table'] = 'field_data_field_graphic';
+  $handler->display->display_options['fields']['field_graphic']['field'] = 'field_graphic';
+  $handler->display->display_options['fields']['field_graphic']['label'] = '';
+  $handler->display->display_options['fields']['field_graphic']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_graphic']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_graphic']['settings'] = array(
+    'image_style' => 'medium',
+    'image_link' => 'content',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $translatables['get_involved'] = array(
     t('Master'),
     t('Get Involved'),
@@ -118,7 +141,7 @@ function amani_get_involved_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('There are no <em>Get involved</em> items created yet. As soon as you <a href="/node/add/get-involved">create some</a> they will appear here instead of this message.'),
+    t('There are no <em>Get involved</em> items created yet. As soon as you <a href="/node/add/get-  involved?destination=get-involved">create some</a> they will appear here instead of this message.'),
     t('Page'),
     t('Block'),
   );
