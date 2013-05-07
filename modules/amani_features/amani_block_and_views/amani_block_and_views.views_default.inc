@@ -64,6 +64,11 @@ function amani_block_and_views_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: Content: Featured? (field_featured_) */
+  $handler->display->display_options['sorts']['field_featured__value']['id'] = 'field_featured__value';
+  $handler->display->display_options['sorts']['field_featured__value']['table'] = 'field_data_field_featured_';
+  $handler->display->display_options['sorts']['field_featured__value']['field'] = 'field_featured__value';
+  $handler->display->display_options['sorts']['field_featured__value']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -128,6 +133,13 @@ function amani_block_and_views_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['block_description'] = 'Other News';
+
+  /* Display: Front Page */
+  $handler = $view->new_display('block', 'Front Page', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Latest News';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['block_description'] = 'Latest News';
   $translatables['news_and_events'] = array(
     t('Master'),
     t('News and Events'),
@@ -141,6 +153,8 @@ function amani_block_and_views_views_default_views() {
     t('Block'),
     t('Other news'),
     t('Other News'),
+    t('Front Page'),
+    t('Latest News'),
   );
   $export['news_and_events'] = $view;
 

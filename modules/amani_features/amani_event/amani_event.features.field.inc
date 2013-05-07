@@ -80,7 +80,7 @@ function amani_event_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '11',
+        'weight' => '9',
       ),
     ),
   );
@@ -156,7 +156,7 @@ function amani_event_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '8',
+        'weight' => '6',
       ),
     ),
   );
