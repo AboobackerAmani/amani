@@ -41,6 +41,31 @@
     box-shadow: 0 0 0
     padding: 0
 
+// Get involved block.
+#block-views-get_involved-block_1
+  .views-row
+    @include span-columns(6)
+    @include omega(2n)
+    border-bottom: 1px solid $grey
+    margin-bottom: $margin
+    padding-bottom: $padding
+    img
+      width: 100%
+      height: auto
+    .views-field-field-image
+      @include span-columns(2)
+    .views-field-title
+      @include span-columns(10)
+      @include omega
+      font-family: "bariol_regularregular"
+      color: $orange
+      font-size: 16px
+      text-transform: uppercase
+      margin-bottom: 5px
+    .views-field-body
+      @include span-columns(10)
+      @include omega
+
 // Search block
 #block-search-form
   position: relative
