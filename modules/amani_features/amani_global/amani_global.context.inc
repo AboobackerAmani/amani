@@ -83,18 +83,6 @@ function amani_global_context_default_contexts() {
           'region' => 'home_content_top_rotator',
           'weight' => '-10',
         ),
-        'boxes-front_page_banner_first' => array(
-          'module' => 'boxes',
-          'delta' => 'front_page_banner_first',
-          'region' => 'home_content_top_callout_right',
-          'weight' => '-10',
-        ),
-        'boxes-front_page_banner_second' => array(
-          'module' => 'boxes',
-          'delta' => 'front_page_banner_second',
-          'region' => 'home_content_top_callout_right',
-          'weight' => '-9',
-        ),
         'boxes-front_page_left' => array(
           'module' => 'boxes',
           'delta' => 'front_page_left',
