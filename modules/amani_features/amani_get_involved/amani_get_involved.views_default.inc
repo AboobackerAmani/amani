@@ -36,7 +36,7 @@ function amani_get_involved_views_default_views() {
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = 'There are no <em>Get involved</em> items created yet. As soon as you <a href="/node/add/get-involved">create some</a> they will appear here instead of this message.';
+  $handler->display->display_options['empty']['area']['content'] = 'There are no <em>Get involved</em> items created yet. As soon as you <a href="/node/add/get-involved?destination=get-involved">create some</a> they will appear here instead of this message.';
   $handler->display->display_options['empty']['area']['format'] = 'wysiwyg_editor';
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
