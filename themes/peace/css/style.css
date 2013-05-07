@@ -247,7 +247,26 @@ a {
 .region-home-content-top-rotator {
   width: 100%;
   margin-right: 0;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  background: white; }
+  .region-home-content-top-rotator .left-col {
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 65.95745%; }
+    .region-home-content-top-rotator .left-col:last-child {
+      margin-right: 0; }
+  .region-home-content-top-rotator .right-col {
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 31.91489%;
+    margin-right: 0;
+    padding: 30px;
+    font-size: 24px;
+    line-height: 1.24; }
+    .region-home-content-top-rotator .right-col:last-child {
+      margin-right: 0; }
 
 .region-home-content-top-callout-right {
   display: block;
