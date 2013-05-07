@@ -10,6 +10,24 @@
 function amani_global_menu_default_menu_links() {
   $menu_links = array();
 
+  // Exported menu link: menu-amani-main-menu:about
+  $menu_links['menu-amani-main-menu:about'] = array(
+    'menu_name' => 'menu-amani-main-menu',
+    'link_path' => 'about',
+    'router_path' => 'about',
+    'link_title' => 'About',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '1',
+    'expanded' => '0',
+    'weight' => '-3',
+  );
   // Exported menu link: menu-amani-main-menu:contact
   $menu_links['menu-amani-main-menu:contact'] = array(
     'menu_name' => 'menu-amani-main-menu',
@@ -27,6 +45,24 @@ function amani_global_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '2',
+  );
+  // Exported menu link: menu-amani-main-menu:get-involved
+  $menu_links['menu-amani-main-menu:get-involved'] = array(
+    'menu_name' => 'menu-amani-main-menu',
+    'link_path' => 'get-involved',
+    'router_path' => 'get-involved',
+    'link_title' => 'Get Involved',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-1',
   );
   // Exported menu link: menu-amani-main-menu:incident-reports
   $menu_links['menu-amani-main-menu:incident-reports'] = array(
@@ -65,25 +101,7 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '1',
   );
-  // Exported menu link: menu-amani-main-menu:node/3
-  $menu_links['menu-amani-main-menu:about'] = array(
-    'menu_name' => 'menu-amani-main-menu',
-    'link_path' => 'about',
-    'router_path' => 'about',
-    'link_title' => 'About',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-3',
-  );
-  // Exported menu link: menu-amani-main-menu:node/4
+  // Exported menu link: menu-amani-main-menu:programs
   $menu_links['menu-amani-main-menu:programs'] = array(
     'menu_name' => 'menu-amani-main-menu',
     'link_path' => 'programs',
@@ -100,24 +118,6 @@ function amani_global_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-2',
-  );
-  // Exported menu link: menu-amani-main-menu:node/5
-  $menu_links['menu-amani-main-menu:get-involved'] = array(
-    'menu_name' => 'menu-amani-main-menu',
-    'link_path' => 'get-involved',
-    'router_path' => 'get-involved',
-    'link_title' => 'Get Involved',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-1',
   );
   // Exported menu link: menu-amani-main-menu:resources
   $menu_links['menu-amani-main-menu:resources'] = array(
@@ -136,6 +136,25 @@ function amani_global_menu_default_menu_links() {
     'has_children' => '1',
     'expanded' => '0',
     'weight' => '0',
+  );
+  // Exported menu link: menu-amani-main-menu:team
+  $menu_links['menu-amani-main-menu:team'] = array(
+    'menu_name' => 'menu-amani-main-menu',
+    'link_path' => 'team',
+    'router_path' => 'team',
+    'link_title' => 'Team',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '0',
+    'parent_path' => 'about',
   );
   // Exported menu link: menu-meta:<front>
   $menu_links['menu-meta:<front>'] = array(
@@ -237,6 +256,7 @@ function amani_global_menu_default_menu_links() {
   t('News & Events');
   t('Projects');
   t('Resources');
+  t('Team');
   t('Twitter');
   t('home');
   t('other');
