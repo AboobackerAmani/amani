@@ -168,7 +168,7 @@ function amani_resource_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '6',
+        'weight' => '7',
       ),
     ),
   );
@@ -519,7 +519,7 @@ function amani_resource_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '8',
+        'weight' => '9',
       ),
     ),
   );
@@ -673,7 +673,85 @@ function amani_resource_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '7',
+        'weight' => '8',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-resource-field_theme_s_'.
+  $fields['node-resource-field_theme_s_'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_theme_s_',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'theme',
+            'parent' => '0',
+          ),
+        ),
+        'profile2_private' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'resource',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 9,
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_theme_s_',
+      'label' => 'Theme(s)',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '6',
       ),
     ),
   );
@@ -688,6 +766,7 @@ function amani_resource_field_default_fields() {
   t('Resource type');
   t('Summary');
   t('Tags');
+  t('Theme(s)');
 
   return $fields;
 }

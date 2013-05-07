@@ -156,7 +156,7 @@ function amani_event_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '9',
+        'weight' => '8',
       ),
     ),
   );
@@ -363,7 +363,7 @@ function amani_event_field_default_fields() {
           'use_geocoder' => 1,
         ),
         'type' => 'geofield_openlayers',
-        'weight' => '5',
+        'weight' => '4',
       ),
     ),
   );
@@ -439,7 +439,7 @@ function amani_event_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '7',
+        'weight' => '5',
       ),
     ),
   );
