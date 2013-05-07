@@ -619,7 +619,15 @@ a {
 .page-get-involved .view-get-involved.view-display-id-page .views-row {
   border-bottom: 1px solid #cccccc;
   margin-bottom: 30px;
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  overflow: hidden; }
+.page-get-involved .view-get-involved.view-display-id-page .views-field-field-image {
+  display: block;
+  float: left;
+  margin-right: 2.12766%;
+  width: 14.89362%; }
+  .page-get-involved .view-get-involved.view-display-id-page .views-field-field-image:last-child {
+    margin-right: 0; }
 .page-get-involved .view-get-involved.view-display-id-page .views-field-title {
   display: block;
   float: left;
