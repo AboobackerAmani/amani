@@ -95,6 +95,12 @@ function amani_global_context_default_contexts() {
           'region' => 'home_content_top_static_region',
           'weight' => '-9',
         ),
+        'views-news_and_events-block_1' => array(
+          'module' => 'views',
+          'delta' => 'news_and_events-block_1',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
         'boxes-front_page_right' => array(
           'module' => 'boxes',
           'delta' => 'front_page_right',
