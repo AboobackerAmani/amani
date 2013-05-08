@@ -658,7 +658,8 @@ a {
   width: 23.40426%;
   background: white;
   padding: 30px;
-  box-shadow: 2px 3px 4px #c8c8c8; }
+  box-shadow: 2px 3px 4px #c8c8c8;
+  margin-bottom: 30px; }
   .page-team .view-id-team.view-display-id-page .views-row:last-child {
     margin-right: 0; }
   .page-team .view-id-team.view-display-id-page .views-row:nth-child(4n) {
@@ -667,6 +668,45 @@ a {
     font-family: "bariol_regularregular";
     text-transform: uppercase;
     margin-bottom: 5px; }
+  .page-team .view-id-team.view-display-id-page .views-row .views-field-field-team-bio {
+    font-family: "Georgia"; }
+
+.page-about .view-about-page .views-row {
+  width: 100%;
+  margin-right: 0;
+  padding: 30px 0;
+  margin: 30px 0;
+  border-bottom: 1px solid #cccccc;
+  overflow: hidden; }
+  .page-about .view-about-page .views-row .views-field-field-image {
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 23.40426%; }
+    .page-about .view-about-page .views-row .views-field-field-image:last-child {
+      margin-right: 0; }
+    .page-about .view-about-page .views-row .views-field-field-image img {
+      width: 100%;
+      height: auto; }
+  .page-about .view-about-page .views-row .views-field-title {
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 74.46809%;
+    margin-right: 0;
+    text-transform: uppercase;
+    font-size: 16px; }
+    .page-about .view-about-page .views-row .views-field-title:last-child {
+      margin-right: 0; }
+  .page-about .view-about-page .views-row .views-field-body {
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 74.46809%;
+    margin-right: 0;
+    font-family: "Georgia"; }
+    .page-about .view-about-page .views-row .views-field-body:last-child {
+      margin-right: 0; }
 
 .page-get-involved .view-get-involved.view-display-id-page {
   margin-top: 30px;

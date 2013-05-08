@@ -57,11 +57,38 @@
       background: #fff
       padding: $padding
       box-shadow: 2px 3px 4px #C8C8C8
+      margin-bottom: $margin
       .views-field-title
         font-family: "bariol_regularregular"
         text-transform: uppercase
         margin-bottom: 5px
+      .views-field-field-team-bio
+        font-family: "Georgia"
 
+// About page
+.page-about
+  .view-about-page
+    .views-row
+      @include fill-parent
+      @include omega
+      padding: $padding 0
+      margin: $margin 0
+      border-bottom: 1px solid $grey
+      overflow: hidden
+      .views-field-field-image
+        @include span-columns(3)
+        img
+          width: 100%
+          height: auto
+      .views-field-title
+        @include span-columns(9)
+        @include omega()
+        text-transform: uppercase
+        font-size: 16px
+      .views-field-body
+        @include span-columns(9)
+        @include omega()
+        font-family: "Georgia"
 
 // Get involved page.
 .page-get-involved
