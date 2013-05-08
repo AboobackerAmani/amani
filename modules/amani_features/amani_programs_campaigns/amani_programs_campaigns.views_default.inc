@@ -40,17 +40,18 @@ function amani_programs_campaigns_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'There are no programs or campaigns created yet. As soon as you <a href = "/node/add/project">create some</a> they will appear here instead of this message. ';
   $handler->display->display_options['empty']['area']['format'] = 'wysiwyg_editor';
-  /* Field: Content: Image */
-  $handler->display->display_options['fields']['field_content_image']['id'] = 'field_content_image';
-  $handler->display->display_options['fields']['field_content_image']['table'] = 'field_data_field_content_image';
-  $handler->display->display_options['fields']['field_content_image']['field'] = 'field_content_image';
-  $handler->display->display_options['fields']['field_content_image']['label'] = '';
-  $handler->display->display_options['fields']['field_content_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_content_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_content_image']['settings'] = array(
-    'image_style' => 'medium',
-    'image_link' => '',
+  /* Field: Content: Media */
+  $handler->display->display_options['fields']['field_media']['id'] = 'field_media';
+  $handler->display->display_options['fields']['field_media']['table'] = 'field_data_field_media';
+  $handler->display->display_options['fields']['field_media']['field'] = 'field_media';
+  $handler->display->display_options['fields']['field_media']['label'] = '';
+  $handler->display->display_options['fields']['field_media']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_media']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_media']['type'] = 'file_rendered';
+  $handler->display->display_options['fields']['field_media']['settings'] = array(
+    'file_view_mode' => 'preview',
   );
+  $handler->display->display_options['fields']['field_media']['delta_offset'] = '0';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -67,6 +68,10 @@ function amani_programs_campaigns_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '200',
+  );
   /* Sort criterion: Content: Featured? (field_featured_) */
   $handler->display->display_options['sorts']['field_featured__value']['id'] = 'field_featured__value';
   $handler->display->display_options['sorts']['field_featured__value']['table'] = 'field_data_field_featured_';
