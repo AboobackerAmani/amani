@@ -83,29 +83,29 @@ function amani_global_context_default_contexts() {
           'region' => 'home_content_top_rotator',
           'weight' => '-10',
         ),
-        'boxes-front_page_left' => array(
-          'module' => 'boxes',
-          'delta' => 'front_page_left',
+        'views-front_page_blocks-block' => array(
+          'module' => 'views',
+          'delta' => 'front_page_blocks-block',
           'region' => 'home_content_top_static_region',
           'weight' => '-10',
         ),
-        'boxes-front_page_center' => array(
-          'module' => 'boxes',
-          'delta' => 'front_page_center',
+        'views-front_page_blocks-block_1' => array(
+          'module' => 'views',
+          'delta' => 'front_page_blocks-block_1',
           'region' => 'home_content_top_static_region',
           'weight' => '-9',
+        ),
+        'views-front_page_blocks-block_2' => array(
+          'module' => 'views',
+          'delta' => 'front_page_blocks-block_2',
+          'region' => 'home_content_top_static_region',
+          'weight' => '-8',
         ),
         'views-news_and_events-block_1' => array(
           'module' => 'views',
           'delta' => 'news_and_events-block_1',
           'region' => 'content',
           'weight' => '-10',
-        ),
-        'boxes-front_page_right' => array(
-          'module' => 'boxes',
-          'delta' => 'front_page_right',
-          'region' => 'home_content_top_static_region',
-          'weight' => '-8',
         ),
         'views-tweets-block_1' => array(
           'module' => 'views',
