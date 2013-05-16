@@ -77,7 +77,6 @@ function amani_about_views_default_views() {
   $handler->display->display_options['filters']['field_main_item_value']['id'] = 'field_main_item_value';
   $handler->display->display_options['filters']['field_main_item_value']['table'] = 'field_data_field_main_item';
   $handler->display->display_options['filters']['field_main_item_value']['field'] = 'field_main_item_value';
-  $handler->display->display_options['filters']['field_main_item_value']['operator'] = 'not';
   $handler->display->display_options['filters']['field_main_item_value']['value'] = array(
     1 => '1',
   );
@@ -93,10 +92,36 @@ function amani_about_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'There are no <em>About</em> items created yet. As soon as you <a href="/node/add/about?destination=about">create some</a> they will appear here instead of this message.';
   $handler->display->display_options['empty']['area']['format'] = 'wysiwyg_editor';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'about' => 'about',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Main item (field_main_item) */
+  $handler->display->display_options['filters']['field_main_item_value']['id'] = 'field_main_item_value';
+  $handler->display->display_options['filters']['field_main_item_value']['table'] = 'field_data_field_main_item';
+  $handler->display->display_options['filters']['field_main_item_value']['field'] = 'field_main_item_value';
+  $handler->display->display_options['filters']['field_main_item_value']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_main_item_value']['value'] = array(
+    1 => '1',
+  );
   $handler->display->display_options['path'] = 'about';
 
   /* Display: Attachment */
   $handler = $view->new_display('attachment', 'Attachment', 'attachment_1');
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
@@ -154,6 +179,10 @@ function amani_about_views_default_views() {
     'page' => 'page',
     'default' => 0,
   );
+
+  /* Display: Featured */
+  $handler = $view->new_display('block', 'Featured', 'block_1');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $translatables['about_page'] = array(
     t('Master'),
     t('more'),
@@ -165,6 +194,7 @@ function amani_about_views_default_views() {
     t('Page'),
     t('There are no <em>About</em> items created yet. As soon as you <a href="/node/add/about?destination=about">create some</a> they will appear here instead of this message.'),
     t('Attachment'),
+    t('Featured'),
   );
   $export['about_page'] = $view;
 

@@ -67,7 +67,28 @@
 
 // About page
 .page-about
+  .region-home-content-top-rotator
+    background: none
+    @include span-columns(9)
+    #block-views-about_page-block_1
+      .views-row
+        border: 0
+        margin: 0
+        padding: 0
+        .views-field-title
+          font-size: 50px
+          text-transform: none
+          padding: 10px 0
+          line-height: 1.24
+        .views-field-title,
+        .views-field-body
+          @include fill-parent
   .view-about-page
+    &.view-display-id-page
+      > .view-content
+        background: #fff
+        padding: $padding
+        box-shadow: 2px 3px 4px #C8C8C8
     .views-row
       @include fill-parent
       @include omega
@@ -75,6 +96,8 @@
       margin: $margin 0
       border-bottom: 1px solid $grey
       overflow: hidden
+      &:first-child
+        padding-top: 0
       .views-field-field-image
         @include span-columns(5)
         img
