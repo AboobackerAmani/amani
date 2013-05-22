@@ -174,42 +174,6 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-1',
   );
-  // Exported menu link: menu-meta:node/1
-  $menu_links['menu-meta:node/1'] = array(
-    'menu_name' => 'menu-meta',
-    'link_path' => 'node/1',
-    'router_path' => 'node/%',
-    'link_title' => 'sitemap',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '0',
-  );
-  // Exported menu link: menu-meta:node/2
-  $menu_links['menu-meta:node/2'] = array(
-    'menu_name' => 'menu-meta',
-    'link_path' => 'node/2',
-    'router_path' => 'node/%',
-    'link_title' => 'other',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '1',
-  );
   // Exported menu link: menu-social-media:http://facebook.com
   $menu_links['menu-social-media:http://facebook.com'] = array(
     'menu_name' => 'menu-social-media',
@@ -259,8 +223,6 @@ function amani_global_menu_default_menu_links() {
   t('Team');
   t('Twitter');
   t('home');
-  t('other');
-  t('sitemap');
 
 
   return $menu_links;

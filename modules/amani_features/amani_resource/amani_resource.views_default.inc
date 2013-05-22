@@ -28,28 +28,8 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
-  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
-  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
-  $handler->display->display_options['exposed_form']['options']['bef'] = array(
-    'general' => array(
-      'allow_secondary' => 0,
-      'secondary_label' => 'Advanced options',
-    ),
-    'term_node_tid_depth' => array(
-      'bef_format' => 'default',
-      'more_options' => array(
-        'bef_select_all_none' => 0,
-        'bef_collapsible' => 0,
-        'is_secondary' => 0,
-        'bef_filter_description' => '',
-        'tokens' => array(
-          'available' => array(
-            0 => 'global_types',
-          ),
-        ),
-      ),
-    ),
-  );
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
   $handler->display->display_options['pager']['type'] = 'infinite_scroll';
   $handler->display->display_options['pager']['options']['items_per_page'] = '20';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -294,7 +274,7 @@ function amani_resource_views_default_views() {
     t('next ›'),
     t('last »'),
     t('No results'),
-    t('I\'m sorry but there are no resources for this topic yet. Please choose another.'),
+    t('I\'m sorry but there are no resources for the selected criteria.'),
     t('Resource Type'),
     t('Theme'),
     t('Location'),
