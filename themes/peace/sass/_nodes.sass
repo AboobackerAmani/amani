@@ -143,13 +143,33 @@
 // Resources page
 .page-resources
   .view-resources
-    background: #fff
-    padding: $padding
-    box-shadow: 2px 3px 4px #C8C8C8
-    tr.even,
-    tr.odd
-      background: none
-      border-bottom: 1px solid $grey
+    .views-exposed-form
+      .form-submit
+        background: $orange
+        border: 0
+        color: #fff
+        padding: $padding/2 $padding
+      label
+        color: $orange
+        font-weight: normal
+        display: inline-block
+      select,
+      input,
+      .views-widget
+        display: inline-block
+      .form-text
+        border: 0
+        background: #fff
+        padding: 5px
+        box-shadow: 2px 3px 4px #C8C8C8
+    .view-content
+      background: #fff
+      padding: $padding
+      box-shadow: 2px 3px 4px #C8C8C8
+      tr.even,
+      tr.odd
+        background: none
+        border-bottom: 1px solid $grey
 
 // Contact page
 .page-contact
