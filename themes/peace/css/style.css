@@ -847,12 +847,30 @@ a {
     .page-get-involved .view-get-involved.view-display-id-page .views-field-body:last-child {
       margin-right: 0; }
 
-.page-resources .view-resources {
+.page-resources .view-resources .views-exposed-form .form-submit {
+  background: #ee8f1c;
+  border: 0;
+  color: white;
+  padding: 15px 30px; }
+.page-resources .view-resources .views-exposed-form label {
+  color: #ee8f1c;
+  font-weight: normal;
+  display: inline-block; }
+.page-resources .view-resources .views-exposed-form select,
+.page-resources .view-resources .views-exposed-form input,
+.page-resources .view-resources .views-exposed-form .views-widget {
+  display: inline-block; }
+.page-resources .view-resources .views-exposed-form .form-text {
+  border: 0;
+  background: white;
+  padding: 5px;
+  box-shadow: 2px 3px 4px #c8c8c8; }
+.page-resources .view-resources .view-content {
   background: white;
   padding: 30px;
   box-shadow: 2px 3px 4px #c8c8c8; }
-  .page-resources .view-resources tr.even,
-  .page-resources .view-resources tr.odd {
+  .page-resources .view-resources .view-content tr.even,
+  .page-resources .view-resources .view-content tr.odd {
     background: none;
     border-bottom: 1px solid #cccccc; }
 
