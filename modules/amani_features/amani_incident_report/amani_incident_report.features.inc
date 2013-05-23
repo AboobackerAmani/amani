@@ -24,7 +24,7 @@ function amani_incident_report_ctools_plugin_api() {
 function amani_incident_report_node_info() {
   $items = array(
     'incident_report' => array(
-      'name' => t('Incident report'),
+      'name' => t('Map Record'),
       'base' => 'node_content',
       'description' => t('An incident including the time and date, pictures, videos, notes and the location for placing on a map.'),
       'has_title' => '1',
