@@ -8,7 +8,7 @@
     <?php echo $item['field_image']; ?>
   </div>
   <div class="right-col">
-    <?php echo $item['title']; ?>
-    <?php echo $item['body']; ?>
+    <h2><?php echo $item['title']; ?></h2>
+    <?php echo $item['field_description']; ?>
   </div>
 </div>
