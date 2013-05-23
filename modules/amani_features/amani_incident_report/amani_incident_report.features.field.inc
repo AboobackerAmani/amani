@@ -50,7 +50,7 @@ function amani_incident_report_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '2',
+          'weight' => '0',
         ),
         'ical' => array(
           'label' => 'above',
@@ -80,7 +80,7 @@ function amani_incident_report_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
@@ -127,7 +127,7 @@ function amani_incident_report_field_default_fields() {
           'module' => 'file',
           'settings' => array(),
           'type' => 'file_default',
-          'weight' => '14',
+          'weight' => '7',
         ),
         'ical' => array(
           'label' => 'above',
@@ -160,7 +160,7 @@ function amani_incident_report_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'file_generic',
-        'weight' => '11',
+        'weight' => '12',
       ),
     ),
   );
@@ -191,10 +191,9 @@ function amani_incident_report_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'email',
           'settings' => array(),
-          'type' => 'email_default',
-          'weight' => '9',
+          'type' => 'hidden',
+          'weight' => '6',
         ),
         'ical' => array(
           'label' => 'above',
@@ -264,15 +263,9 @@ function amani_incident_report_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'addressfield',
-          'settings' => array(
-            'format_handlers' => array(
-              0 => 'address',
-            ),
-            'use_widget_handlers' => 1,
-          ),
-          'type' => 'addressfield_default',
-          'weight' => '3',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '12',
         ),
         'ical' => array(
           'label' => 'above',
@@ -308,7 +301,7 @@ function amani_incident_report_field_default_fields() {
           ),
         ),
         'type' => 'addressfield_standard',
-        'weight' => '4',
+        'weight' => '5',
       ),
     ),
   );
@@ -362,7 +355,7 @@ function amani_incident_report_field_default_fields() {
             'show_repeat_rule' => 'show',
           ),
           'type' => 'date_default',
-          'weight' => '5',
+          'weight' => '1',
         ),
         'ical' => array(
           'label' => 'above',
@@ -401,7 +394,7 @@ function amani_incident_report_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '6',
+        'weight' => '7',
       ),
     ),
   );
@@ -472,7 +465,7 @@ function amani_incident_report_field_default_fields() {
             'map_preset' => 'geofield_formatter_map',
           ),
           'type' => 'geofield_openlayers',
-          'weight' => '4',
+          'weight' => '5',
         ),
         'ical' => array(
           'label' => 'above',
@@ -524,253 +517,7 @@ function amani_incident_report_field_default_fields() {
           'use_geocoder' => 1,
         ),
         'type' => 'geofield_openlayers',
-        'weight' => '5',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-incident_report-field_incident_report_type'.
-  $fields['node-incident_report-field_incident_report_type'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_incident_report_type',
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'taxonomy',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'report_type',
-            'parent' => '0',
-          ),
-        ),
-        'profile2_private' => FALSE,
-      ),
-      'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'incident_report',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'taxonomy',
-          'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '7',
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_incident_report_type',
-      'label' => 'Incident report type',
-      'required' => 1,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '7',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-incident_report-field_incident_severity'.
-  $fields['node-incident_report-field_incident_severity'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_incident_severity',
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'taxonomy',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'incident_severity',
-            'parent' => '0',
-          ),
-        ),
-        'profile2_private' => FALSE,
-      ),
-      'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'incident_report',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'taxonomy',
-          'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '6',
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_incident_severity',
-      'label' => 'Incident severity',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '8',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-incident_report-field_links'.
-  $fields['node-incident_report-field_links'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_links',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'link',
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'rel' => '',
-          'target' => 'default',
-        ),
-        'display' => array(
-          'url_cutoff' => 80,
-        ),
-        'enable_tokens' => 1,
-        'profile2_private' => FALSE,
-        'title' => 'optional',
-        'title_maxlength' => 128,
-        'title_value' => '',
-        'url' => 0,
-      ),
-      'translatable' => '0',
-      'type' => 'link_field',
-    ),
-    'field_instance' => array(
-      'bundle' => 'incident_report',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'link',
-          'settings' => array(),
-          'type' => 'link_default',
-          'weight' => '16',
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_links',
-      'label' => 'Links',
-      'required' => 0,
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'configurable_title' => 0,
-          'rel' => '',
-          'target' => '_blank',
-          'title' => '',
-        ),
-        'display' => array(
-          'url_cutoff' => '80',
-        ),
-        'enable_tokens' => 0,
-        'title' => 'optional',
-        'title_maxlength' => '128',
-        'title_value' => '',
-        'url' => 0,
-        'user_register_form' => FALSE,
-        'validate_url' => 1,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_field',
-        'weight' => '12',
+        'weight' => '6',
       ),
     ),
   );
@@ -813,11 +560,13 @@ function amani_incident_report_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'file',
-          'settings' => array(),
-          'type' => 'file_default',
-          'weight' => 17,
+          'label' => 'hidden',
+          'module' => 'file_entity',
+          'settings' => array(
+            'file_view_mode' => 'default',
+          ),
+          'type' => 'file_rendered',
+          'weight' => '9',
         ),
         'ical' => array(
           'label' => 'above',
@@ -868,7 +617,353 @@ function amani_incident_report_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
+        'weight' => '10',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-incident_report-field_incident_report_type'.
+  $fields['node-incident_report-field_incident_report_type'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_incident_report_type',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'report_type',
+            'parent' => '0',
+          ),
+        ),
+        'profile2_private' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'incident_report',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '3',
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_incident_report_type',
+      'label' => 'Incident report type',
+      'required' => 1,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '8',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-incident_report-field_incident_severity'.
+  $fields['node-incident_report-field_incident_severity'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_incident_severity',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'incident_severity',
+            'parent' => '0',
+          ),
+        ),
+        'profile2_private' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'incident_report',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '2',
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_incident_severity',
+      'label' => 'Incident severity',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
         'weight' => '9',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-incident_report-field_incident_videos'.
+  $fields['node-incident_report-field_incident_videos'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_incident_videos',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 0,
+        'display_field' => 0,
+        'profile2_private' => FALSE,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'file',
+    ),
+    'field_instance' => array(
+      'bundle' => 'incident_report',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'file_entity',
+          'settings' => array(
+            'file_view_mode' => 'default',
+          ),
+          'type' => 'file_rendered',
+          'weight' => '10',
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_incident_videos',
+      'label' => 'Videos',
+      'required' => 0,
+      'settings' => array(
+        'description_field' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'avi mov',
+        'max_filesize' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'media',
+        'settings' => array(
+          'allowed_schemes' => array(
+            'public' => 0,
+            'vimeo' => 'vimeo',
+            'youtube' => 'youtube',
+          ),
+          'allowed_types' => array(
+            'audio' => 0,
+            'document' => 0,
+            'image' => 0,
+            'video' => 'video',
+          ),
+          'browser_plugins' => array(
+            'media_default--media_browser_1' => 0,
+            'media_default--media_browser_my_files' => 0,
+            'media_internet' => 'media_internet',
+            'upload' => 0,
+            'youtube' => 0,
+          ),
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'media_generic',
+        'weight' => '11',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-incident_report-field_links'.
+  $fields['node-incident_report-field_links'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_links',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'link',
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'rel' => '',
+          'target' => 'default',
+        ),
+        'display' => array(
+          'url_cutoff' => 80,
+        ),
+        'enable_tokens' => 1,
+        'profile2_private' => FALSE,
+        'title' => 'optional',
+        'title_maxlength' => 128,
+        'title_value' => '',
+        'url' => 0,
+      ),
+      'translatable' => '0',
+      'type' => 'link_field',
+    ),
+    'field_instance' => array(
+      'bundle' => 'incident_report',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'link_default',
+          'weight' => '8',
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_links',
+      'label' => 'Links',
+      'required' => 0,
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'configurable_title' => 0,
+          'rel' => '',
+          'target' => '_blank',
+          'title' => '',
+        ),
+        'display' => array(
+          'url_cutoff' => '80',
+        ),
+        'enable_tokens' => 0,
+        'title' => 'optional',
+        'title_maxlength' => '128',
+        'title_value' => '',
+        'url' => 0,
+        'user_register_form' => FALSE,
+        'validate_url' => 1,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_field',
+        'weight' => '13',
       ),
     ),
   );
@@ -982,20 +1077,9 @@ Prof.',
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'name',
-          'settings' => array(
-            'format' => 'default',
-            'markup' => 0,
-            'multiple' => 'default',
-            'multiple_and' => 'text',
-            'multiple_delimiter' => ', ',
-            'multiple_delimiter_precedes_last' => 'never',
-            'multiple_el_al_first' => 1,
-            'multiple_el_al_min' => 3,
-            'output' => 'default',
-          ),
-          'type' => 'name_formatter',
-          'weight' => '8',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '4',
         ),
         'ical' => array(
           'label' => 'above',
@@ -1065,49 +1149,47 @@ Prof.',
     ),
   );
 
-  // Exported field: 'node-incident_report-field_incident_videos'.
-  $fields['node-incident_report-field_incident_videos'] = array(
+  // Exported field: 'node-incident_report-field_phone'.
+  $fields['node-incident_report-field_phone'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '-1',
+      'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_incident_videos',
+      'field_name' => 'field_phone',
       'foreign keys' => array(
-        'fid' => array(
+        'format' => array(
           'columns' => array(
-            'fid' => 'fid',
+            'format' => 'format',
           ),
-          'table' => 'file_managed',
+          'table' => 'filter_format',
         ),
       ),
       'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
+        'format' => array(
+          0 => 'format',
         ),
       ),
       'locked' => '0',
-      'module' => 'file',
+      'module' => 'text',
       'settings' => array(
-        'display_default' => 0,
-        'display_field' => 0,
+        'max_length' => '40',
         'profile2_private' => FALSE,
-        'uri_scheme' => 'public',
       ),
       'translatable' => '0',
-      'type' => 'file',
+      'type' => 'text',
     ),
     'field_instance' => array(
       'bundle' => 'incident_report',
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'file',
           'settings' => array(),
-          'type' => 'file_default',
-          'weight' => 18,
+          'type' => 'hidden',
+          'weight' => '11',
         ),
         'ical' => array(
           'label' => 'above',
@@ -1123,42 +1205,21 @@ Prof.',
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_incident_videos',
-      'label' => 'Videos',
+      'field_name' => 'field_phone',
+      'label' => 'Phone number',
       'required' => 0,
       'settings' => array(
-        'description_field' => 0,
-        'file_directory' => '',
-        'file_extensions' => 'avi mov',
-        'max_filesize' => '',
+        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'media',
+        'module' => 'text',
         'settings' => array(
-          'allowed_schemes' => array(
-            'public' => 0,
-            'vimeo' => 'vimeo',
-            'youtube' => 'youtube',
-          ),
-          'allowed_types' => array(
-            'audio' => 0,
-            'document' => 0,
-            'image' => 0,
-            'video' => 'video',
-          ),
-          'browser_plugins' => array(
-            'media_default--media_browser_1' => 0,
-            'media_default--media_browser_my_files' => 0,
-            'media_internet' => 'media_internet',
-            'upload' => 0,
-            'youtube' => 0,
-          ),
-          'progress_indicator' => 'throbber',
+          'size' => '60',
         ),
-        'type' => 'media_generic',
-        'weight' => '10',
+        'type' => 'text_textfield',
+        'weight' => '3',
       ),
     ),
   );
@@ -1174,6 +1235,7 @@ Prof.',
   t('Incident report type');
   t('Incident severity');
   t('Links');
+  t('Phone number');
   t('Pictures');
   t('Submitter Name (Optional)');
   t('Videos');
