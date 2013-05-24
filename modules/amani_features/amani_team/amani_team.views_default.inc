@@ -55,6 +55,14 @@ function amani_team_views_default_views() {
   $handler->display->display_options['fields']['field_team_bio']['field'] = 'field_team_bio';
   $handler->display->display_options['fields']['field_team_bio']['label'] = '';
   $handler->display->display_options['fields']['field_team_bio']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
+  $handler->display->display_options['fields']['title_1']['table'] = 'node';
+  $handler->display->display_options['fields']['title_1']['field'] = 'title';
+  $handler->display->display_options['fields']['title_1']['label'] = '';
+  $handler->display->display_options['fields']['title_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title_1']['alter']['text'] = '(more)';
+  $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Display Ranking (field_display_ranking) */
   $handler->display->display_options['sorts']['field_display_ranking_value']['id'] = 'field_display_ranking_value';
   $handler->display->display_options['sorts']['field_display_ranking_value']['table'] = 'field_data_field_display_ranking';
@@ -91,6 +99,7 @@ function amani_team_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('(more)'),
     t('Page'),
   );
   $export['team'] = $view;
