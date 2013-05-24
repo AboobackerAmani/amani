@@ -60,6 +60,12 @@ function amani_programs_campaigns_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'node_gallery_node_thumbnail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'text',
@@ -142,6 +148,12 @@ function amani_programs_campaigns_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'node_gallery_node_thumbnail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -211,6 +223,12 @@ function amani_programs_campaigns_field_default_fields() {
           'weight' => 1,
         ),
         'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_gallery_node_thumbnail' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
@@ -314,6 +332,12 @@ function amani_programs_campaigns_field_default_fields() {
           'weight' => 2,
         ),
         'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_gallery_node_thumbnail' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',

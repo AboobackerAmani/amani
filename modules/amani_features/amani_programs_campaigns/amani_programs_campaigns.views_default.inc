@@ -72,6 +72,14 @@ function amani_programs_campaigns_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '200',
   );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
+  $handler->display->display_options['fields']['title_1']['table'] = 'node';
+  $handler->display->display_options['fields']['title_1']['field'] = 'title';
+  $handler->display->display_options['fields']['title_1']['label'] = '';
+  $handler->display->display_options['fields']['title_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title_1']['alter']['text'] = '(more)';
+  $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Featured? (field_featured_) */
   $handler->display->display_options['sorts']['field_featured__value']['id'] = 'field_featured__value';
   $handler->display->display_options['sorts']['field_featured__value']['table'] = 'field_data_field_featured_';
@@ -156,6 +164,7 @@ function amani_programs_campaigns_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('There are no programs or campaigns created yet. As soon as you <a href = "/node/add/project">create some</a> they will appear here instead of this message. '),
+    t('(more)'),
     t('Page'),
     t('Block'),
     t('Other news'),
