@@ -13,6 +13,39 @@ function amani_global_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'content_admin';
+  $context->description = '';
+  $context->tag = 'admin';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'amani/content-admin' => 'amani/content-admin',
+        'user/*/my-content' => 'user/*/my-content',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'amani_global-add_content_links' => array(
+          'module' => 'amani_global',
+          'delta' => 'add_content_links',
+          'region' => 'sidebar_second',
+          'weight' => '0',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('admin');
+  $export['content_admin'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'footer';
   $context->description = 'sitewide footer blocks';
   $context->tag = 'global';
