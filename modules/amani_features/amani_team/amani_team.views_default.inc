@@ -31,13 +31,6 @@ function amani_team_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   /* Field: Content: Photo */
   $handler->display->display_options['fields']['field_team_image']['id'] = 'field_team_image';
   $handler->display->display_options['fields']['field_team_image']['table'] = 'field_data_field_team_image';
@@ -49,12 +42,23 @@ function amani_team_views_default_views() {
     'image_style' => 'medium',
     'image_link' => '',
   );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   /* Field: Content: Bio */
   $handler->display->display_options['fields']['field_team_bio']['id'] = 'field_team_bio';
   $handler->display->display_options['fields']['field_team_bio']['table'] = 'field_data_field_team_bio';
   $handler->display->display_options['fields']['field_team_bio']['field'] = 'field_team_bio';
   $handler->display->display_options['fields']['field_team_bio']['label'] = '';
   $handler->display->display_options['fields']['field_team_bio']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_team_bio']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_team_bio']['settings'] = array(
+    'trim_length' => '300',
+  );
   /* Sort criterion: Content: Display Ranking (field_display_ranking) */
   $handler->display->display_options['sorts']['field_display_ranking_value']['id'] = 'field_display_ranking_value';
   $handler->display->display_options['sorts']['field_display_ranking_value']['table'] = 'field_data_field_display_ranking';

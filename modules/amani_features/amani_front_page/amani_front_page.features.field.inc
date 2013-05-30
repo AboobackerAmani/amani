@@ -57,6 +57,12 @@ function amani_front_page_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'node_gallery_node_thumbnail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -128,6 +134,12 @@ function amani_front_page_field_default_fields() {
           'weight' => 1,
         ),
         'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_gallery_node_thumbnail' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
@@ -223,6 +235,12 @@ function amani_front_page_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'node_gallery_node_thumbnail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -307,6 +325,12 @@ function amani_front_page_field_default_fields() {
           'weight' => 0,
         ),
         'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_gallery_node_thumbnail' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
