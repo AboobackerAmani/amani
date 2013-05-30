@@ -724,18 +724,63 @@ a {
 .page-incident-reports .block-incident-map label span {
   font-weight: normal; }
 
-.page-team .view-id-team.view-display-id-page .views-row {
+.page-team h1.title {
   display: block;
   float: left;
   margin-right: 2.12766%;
-  width: 23.40426%;
+  width: 23.40426%; }
+  .page-team h1.title:last-child {
+    margin-right: 0; }
+.page-team .view-id-team.view-display-id-page .views-exposed-form {
+  margin-right: 0;
+  position: absolute;
+  top: -70px;
+  right: -30px; }
+  .page-team .view-id-team.view-display-id-page .views-exposed-form .views-exposed-widget {
+    margin: 0;
+    padding: 0;
+    padding-left: 30px; }
+  .page-team .view-id-team.view-display-id-page .views-exposed-form input {
+    border: 0;
+    background: white;
+    padding: 10px;
+    box-shadow: 2px 3px 4px #c8c8c8;
+    font-size: 16px;
+    width: 200px; }
+  .page-team .view-id-team.view-display-id-page .views-exposed-form #edit-keys {
+    background: white url("../images/icons/search_icon.png") no-repeat 5% -22px;
+    padding-left: 35px; }
+  .page-team .view-id-team.view-display-id-page .views-exposed-form select {
+    border: 0;
+    background: white url("../images/icons/orange_arrow.png") no-repeat 85% 50%;
+    margin-right: -80px;
+    width: 210px; }
+  .page-team .view-id-team.view-display-id-page .views-exposed-form .form-type-select {
+    background: white url("../images/icons/orange_arrow.png") no-repeat 95% 50%;
+    border: 0;
+    background: white;
+    padding: 10px;
+    box-shadow: 2px 3px 4px #c8c8c8;
+    font-size: 16px;
+    width: 200px;
+    overflow: hidden; }
+  .page-team .view-id-team.view-display-id-page .views-exposed-form label {
+    display: none; }
+.page-team .view-id-team.view-display-id-page .view-content {
+  clear: both; }
+  .page-team .view-id-team.view-display-id-page .view-content h3 {
+    font-style: oblique;
+    font-weight: normal;
+    font-size: 20px;
+    margin-top: 10px; }
+.page-team .view-id-team.view-display-id-page .views-row {
+  width: 100%;
   background: white;
   padding: 30px;
   box-shadow: 2px 3px 4px #c8c8c8;
-  margin-bottom: 30px; }
-  .page-team .view-id-team.view-display-id-page .views-row:last-child {
-    margin-right: 0; }
-  .page-team .view-id-team.view-display-id-page .views-row:nth-child(4n) {
+  margin-bottom: 30px;
+  overflow: hidden; }
+  .page-team .view-id-team.view-display-id-page .views-row:nth-child(1n) {
     margin-right: 0; }
   .page-team .view-id-team.view-display-id-page .views-row .views-field-title {
     font-family: "bariol_regularregular";
@@ -743,6 +788,20 @@ a {
     margin-bottom: 5px; }
   .page-team .view-id-team.view-display-id-page .views-row .views-field-field-team-bio {
     font-family: "Georgia"; }
+  .page-team .view-id-team.view-display-id-page .views-row .views-field-view-node {
+    text-align: right;
+    margin-top: 10px; }
+  .page-team .view-id-team.view-display-id-page .views-row .views-field-field-team-image {
+    margin: 0;
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 23.40426%; }
+    .page-team .view-id-team.view-display-id-page .views-row .views-field-field-team-image:last-child {
+      margin-right: 0; }
+    .page-team .view-id-team.view-display-id-page .views-row .views-field-field-team-image img {
+      width: 100%;
+      height: auto; }
 
 .page-about .region-home-content-top-rotator {
   background: none;
