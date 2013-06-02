@@ -1,0 +1,168 @@
+<?php
+/**
+ * @file
+ * Tweet block bean plugin.
+ */
+class IncidentSummariesBean extends BeanPlugin {
+
+	/*
+	 * Default values for our block
+	 */
+	public function values(){
+
+		$values = array (
+			'settings' => array (
+				'month' => '',
+				'options' => '', 
+				'incident_report_type' => '',
+				'incident_severity' => '', 
+ 	
+			), 
+		);
+		return array_merge(parent::values(), $values); 
+	}
+
+	 /* Builds extra settings for the block edit form.
+	  *
+	  */
+	public function form($bean, $form, &$form_state) {
+		$form = array(); 
+		$vocabulary_options = array(); 
+		$vocabulary_names = array(); 
+		$vocabulary_objects = array(); 
+		$taxonomy_terms = array(); 
+		$taxonomy_terms_names = array(); 	
+		$field = incident_map_get_field_info('node', 'incident_report', array('taxonomy_term_reference'));
+
+		foreach($field as $key => $value){
+			$vocabulary_options[$field[$key]['label']] = $field[$key]['label']; 
+			$vocabulary_names[$key] = $field[$key]['settings']['allowed_values']['0']['vocabulary']; 
+		}
+		foreach($vocabulary_names as $value) {
+			$vocabulary_objects[$value] = taxonomy_get_tree(taxonomy_vocabulary_machine_name_load($value)->vid, 
+									$parent = 0, $max_depth = NULL, $load_entities = FALSE); 
+
+
+		}	
+
+		foreach($vocabulary_objects as $key => $value) { 
+			foreach($value as $object){
+				$taxonomy_terms_names[$object->name] = $object->name; 
+			}
+			$taxonomy_terms[$key] = $taxonomy_terms_names; 
+			unset($taxonomy_terms_names); 			
+		}
+
+		$form['settings'] = array(
+			'#type' => 'fieldset',
+			'#title' => t('Output'),
+			'#tree' => 1,
+		);
+
+		$form['settings']['month'] = array (
+			'#type' => 'select', 
+			'#title' => t('Incidents from the last:'), 
+			'#options' => array(
+				3 => t('3 months'), 
+				6 => t('6 months'),
+				12 => t('12 months'), 
+			), 
+			'#required' => TRUE, 
+
+		);
+		$form['settings']['options'] = array (
+			'#type' => 'select', 
+			'#title' => t('Vocabulary: '), 
+			'#options' => $vocabulary_options,  
+			'#required' => TRUE, 
+		); 
+		$form['settings']['incident_report_type'] = array (
+			'#type' => 'select', 
+			'#title' => t('Incident Report Type:'),  
+			'#options' => $taxonomy_terms['report_type'],  
+			'#states' => array(
+				'visible' => array(
+					':input[name="settings[options]"]' => array('value' => 'Incident report type'), 
+				), 
+			), 
+			'#default_value' => $bean->settings['incident_report_type'], 
+		);
+		$form['settings']['incident_severity'] = array (
+			'#type' => 'select', 
+			'#title' => t('Incident Severity'),  
+			'#options' => $taxonomy_terms['incident_severity'],   
+			'#states' => array(
+				'visible' => array(
+					':input[name="settings[options]"]' => array('value' => 'Incident severity'), 
+				), 
+			), 
+		);
+
+		return $form; 
+	}
+
+	/**
+	 * Displays the bean.
+	 */
+	public function view($bean, $content, $view_mode = 'default', $langcode = NULL) {
+		$content = array(); 
+		$tid_array = array();
+		$term_name = ''; 
+		$taxonomy_term_field = ''; 
+		$tid = '';
+		$month = strtotime("-{$bean->settings['month']} months", strtotime("now")); 
+		$month_number = $bean->settings['month']; 
+		$vocabulary = $bean->settings['options']; 
+		$heading_one = 'Incidents in the last '.$month_number.' months'; 
+		$heading_two = 'Vocabulary'; 
+		$heading_three = ''; 
+
+		if(strcmp($vocabulary,'Incident report type') == 0){
+			unset($tid_array);
+			$heading_three = 'Incident Report Type'; 
+		        $taxonomy_term_field = 'field_incident_report_type';	
+			$term_name = $bean->settings['incident_report_type']; 
+			$tid_array = taxonomy_get_term_by_name($bean->settings['incident_report_type']); 
+			foreach($tid_array as $object) {
+				$tid = $object->tid; 
+			}
+
+		}
+		else{
+			unset($tid_array);
+			$heading_three = 'Incident Severity'; 
+			$taxonomy_term_field = 'field_incident_severity'; 
+			$term_name = $bean->settings['incident_severity']; 
+			$tid_array = taxonomy_get_term_by_name($bean->settings['incident_severity']); 
+			foreach($tid_array as $object) {
+				$tid = $object->tid; 
+			}
+
+		}
+		$query = new EntityFieldQuery();
+		$result = $query
+			->entityCondition('entity_type', 'node')
+			->entityCondition('bundle', 'incident_report')
+			->propertyCondition('created', $month, '>')
+			->fieldCondition($taxonomy_term_field, 'tid', $tid, '=')
+			->execute();
+		$count = count($result['node']); 
+		$variables = array (
+			'header' => array(
+				t(':heading',array(':heading'=>$heading_one)), 
+				t(':heading',array(':heading'=>$heading_two)), 
+				t(':heading',array(':heading'=>$heading_three))
+			),
+			'rows' => array(array(
+					"{$count}", 
+					"{$vocabulary}", 
+					"{$term_name}"
+					)
+				),
+			); 
+		$content[] = array('#markup' => theme('table', $variables));
+		return $content; 
+
+
+	}
+}
