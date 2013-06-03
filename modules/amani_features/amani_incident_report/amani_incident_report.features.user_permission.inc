@@ -13,35 +13,49 @@ function amani_incident_report_user_default_permissions() {
   // Exported permission: create incident_report content.
   $permissions['create incident_report content'] = array(
     'name' => 'create incident_report content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'anonymous user',
+      1 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete any incident_report content.
   $permissions['delete any incident_report content'] = array(
     'name' => 'delete any incident_report content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete own incident_report content.
   $permissions['delete own incident_report content'] = array(
     'name' => 'delete own incident_report content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit any incident_report content.
   $permissions['edit any incident_report content'] = array(
     'name' => 'edit any incident_report content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit own incident_report content.
   $permissions['edit own incident_report content'] = array(
     'name' => 'edit own incident_report content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
     'module' => 'node',
   );
 

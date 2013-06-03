@@ -58,6 +58,12 @@ function amani_testimonial_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'node_gallery_node_thumbnail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -134,6 +140,12 @@ function amani_testimonial_field_default_fields() {
           'weight' => 5,
         ),
         'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_gallery_node_thumbnail' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
@@ -220,6 +232,12 @@ function amani_testimonial_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'node_gallery_node_thumbnail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -297,6 +315,12 @@ function amani_testimonial_field_default_fields() {
           'weight' => 7,
         ),
         'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_gallery_node_thumbnail' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
@@ -451,6 +475,12 @@ Prof.',
           'weight' => 6,
         ),
         'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_gallery_node_thumbnail' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',

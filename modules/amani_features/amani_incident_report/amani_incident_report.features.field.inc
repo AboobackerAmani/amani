@@ -58,6 +58,12 @@ function amani_incident_report_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'node_gallery_node_thumbnail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -135,6 +141,12 @@ function amani_incident_report_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'node_gallery_node_thumbnail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -196,6 +208,12 @@ function amani_incident_report_field_default_fields() {
           'weight' => '6',
         ),
         'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_gallery_node_thumbnail' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
@@ -268,6 +286,12 @@ function amani_incident_report_field_default_fields() {
           'weight' => '12',
         ),
         'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_gallery_node_thumbnail' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
@@ -358,6 +382,12 @@ function amani_incident_report_field_default_fields() {
           'weight' => '1',
         ),
         'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_gallery_node_thumbnail' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
@@ -473,6 +503,12 @@ function amani_incident_report_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'node_gallery_node_thumbnail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -569,6 +605,12 @@ function amani_incident_report_field_default_fields() {
           'weight' => '9',
         ),
         'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_gallery_node_thumbnail' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
@@ -676,6 +718,12 @@ function amani_incident_report_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'node_gallery_node_thumbnail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -754,6 +802,12 @@ function amani_incident_report_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'node_gallery_node_thumbnail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -825,6 +879,12 @@ function amani_incident_report_field_default_fields() {
           'weight' => '10',
         ),
         'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_gallery_node_thumbnail' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
@@ -923,6 +983,12 @@ function amani_incident_report_field_default_fields() {
           'weight' => '8',
         ),
         'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_gallery_node_thumbnail' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
@@ -1087,6 +1153,12 @@ Prof.',
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'node_gallery_node_thumbnail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -1192,6 +1264,12 @@ Prof.',
           'weight' => '11',
         ),
         'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_gallery_node_thumbnail' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',

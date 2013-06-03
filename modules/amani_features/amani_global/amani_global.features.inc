@@ -17,3 +17,10 @@ function amani_global_ctools_plugin_api() {
     return array("version" => "3");
   }
 }
+
+/**
+ * Implements hook_views_api().
+ */
+function amani_global_views_api() {
+  return array("version" => "3.0");
+}
