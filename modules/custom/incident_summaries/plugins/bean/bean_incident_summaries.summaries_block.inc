@@ -16,6 +16,8 @@ class IncidentSummariesBean extends BeanPlugin {
 				'options' => '', 
 				'incident_report_type' => '',
 				'incident_severity' => '', 
+				'all' => array('checked' => FALSE), 
+			
  	
 			), 
 		);
@@ -70,12 +72,24 @@ class IncidentSummariesBean extends BeanPlugin {
 			'#required' => TRUE, 
 
 		);
+
+		$form['settings']['all'] = array (
+			'#type' => 'checkbox', 
+			'#title' => t('All incidents'), 
+			'#default_value' => $bean->settings['all'], 
+		); 	
+
 		$form['settings']['options'] = array (
 			'#type' => 'select', 
 			'#title' => t('Vocabulary: '), 
 			'#options' => $vocabulary_options,  
-			'#required' => TRUE, 
+			'#states' => array(
+				'visible' => array(
+					':input[name="settings[all]"]' => array('checked' => FALSE), 
+				), 
+			), 
 		); 
+
 		$form['settings']['incident_report_type'] = array (
 			'#type' => 'select', 
 			'#title' => t('Incident Report Type:'),  
@@ -83,6 +97,7 @@ class IncidentSummariesBean extends BeanPlugin {
 			'#states' => array(
 				'visible' => array(
 					':input[name="settings[options]"]' => array('value' => 'Incident report type'), 
+					':input[name="settings[all]"]' => array('checked' => FALSE), 
 				), 
 			), 
 			'#default_value' => $bean->settings['incident_report_type'], 
@@ -94,6 +109,7 @@ class IncidentSummariesBean extends BeanPlugin {
 			'#states' => array(
 				'visible' => array(
 					':input[name="settings[options]"]' => array('value' => 'Incident severity'), 
+					':input[name="settings[all]"]' => array('checked' => FALSE), 
 				), 
 			), 
 		);
@@ -137,16 +153,31 @@ class IncidentSummariesBean extends BeanPlugin {
 			foreach($tid_array as $object) {
 				$tid = $object->tid; 
 			}
-
 		}
 		$query = new EntityFieldQuery();
-		$result = $query
-			->entityCondition('entity_type', 'node')
-			->entityCondition('bundle', 'incident_report')
-			->propertyCondition('created', $month, '>')
-			->fieldCondition($taxonomy_term_field, 'tid', $tid, '=')
-			->execute();
-		$count = count($result['node']); 
+		if($bean->settings['all']) {
+			$result = $query
+				->entityCondition('entity_type', 'node')
+				->entityCondition('bundle', 'incident_report')
+				->propertyCondition('created', $month, '>')
+				->execute(); 
+			$heading_two = 'All Vocabularies'; 
+			$heading_three = 'All Terms'; 
+			$vocabulary = ''; 
+			$term_name = ''; 
+		}		
+		else {
+			$result = $query
+				->entityCondition('entity_type', 'node')
+				->entityCondition('bundle', 'incident_report')
+				->propertyCondition('created', $month, '>')
+				->fieldCondition($taxonomy_term_field, 'tid', $tid, '=')
+				->execute();
+		}
+		$count = 0; 
+		if (count($result) != 0){
+			$count = count($result['node']); 
+		}
 		$variables = array (
 			'header' => array(
 				t(':heading',array(':heading'=>$heading_one)), 
@@ -162,7 +193,5 @@ class IncidentSummariesBean extends BeanPlugin {
 			); 
 		$content[] = array('#markup' => theme('table', $variables));
 		return $content; 
-
-
 	}
 }

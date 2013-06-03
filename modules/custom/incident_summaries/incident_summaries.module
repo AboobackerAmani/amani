@@ -18,7 +18,7 @@ function incident_summaries_bean_types() {
 	$plugins = array(); 
 	$plugins['summaries_block'] = array(
 		'label' => t('Incident Summary'), 
-		'description' => t('Aggregated values representing incidents in a timeframe.'), 
+		'description' => t('Aggregated values representing number of incidents in a timeframe.'), 
 		'handler' => array(
 			'class' => 'IncidentSummariesBean', 
 			'parent' => 'bean', 
