@@ -52,7 +52,7 @@ function amani_get_involved_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 0,
+          'weight' => '1',
         ),
         'ical' => array(
           'label' => 'above',
@@ -131,17 +131,17 @@ function amani_get_involved_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'get_involved',
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Large image displayed at the top of the get-involved page and also on the page of the individual get-involved item.',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => '',
+            'image_style' => 'medium_large',
           ),
           'type' => 'image',
-          'weight' => 2,
+          'weight' => '0',
         ),
         'ical' => array(
           'label' => 'above',
@@ -164,7 +164,7 @@ function amani_get_involved_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_graphic',
-      'label' => 'Graphic',
+      'label' => 'Large image',
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
@@ -242,17 +242,13 @@ function amani_get_involved_field_default_fields() {
       'bundle' => 'get_involved',
       'default_value' => array(),
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Smaller image displayed in the list of items at the bottom of the get-involved page.',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => '',
-          ),
-          'type' => 'image',
-          'weight' => 1,
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '2',
         ),
         'ical' => array(
           'label' => 'above',
@@ -275,7 +271,7 @@ function amani_get_involved_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_image',
-      'label' => 'Image',
+      'label' => 'Small image',
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
@@ -347,16 +343,10 @@ function amani_get_involved_field_default_fields() {
       'description' => 'Use this field to determine the order of items shown in a view or list. Items will be sorted from smallest weight to largest.',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'number',
-          'settings' => array(
-            'decimal_separator' => '.',
-            'prefix_suffix' => TRUE,
-            'scale' => 0,
-            'thousand_separator' => ' ',
-          ),
-          'type' => 'number_integer',
-          'weight' => 3,
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '3',
         ),
         'ical' => array(
           'label' => 'above',
@@ -401,8 +391,10 @@ function amani_get_involved_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Graphic');
-  t('Image');
+  t('Large image');
+  t('Large image displayed at the top of the get-involved page and also on the page of the individual get-involved item.');
+  t('Small image');
+  t('Smaller image displayed in the list of items at the bottom of the get-involved page.');
   t('Use this field to determine the order of items shown in a view or list. Items will be sorted from smallest weight to largest.');
   t('Weight');
 
