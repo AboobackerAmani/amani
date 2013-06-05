@@ -8,16 +8,15 @@ class IncidentSummariesBean extends BeanPlugin {
 	/*
 	 * Default values for our block
 	 */
-	public function values(){
-
+	public function values() {
 		$values = array (
 			'settings' => array (
 				'month' => '',
-				'options' => '',
-				'incident_report_type' => '',
-				'incident_severity' => '',
-				'all' => array('checked' => FALSE),
         'incident_label' => '',
+				'options' => '',
+				'all' => array('checked' => TRUE),
+        'incident_report_type' => '',
+				'incident_severity' => '',
 			),
 		);
 		return array_merge(parent::values(), $values);
@@ -60,24 +59,26 @@ class IncidentSummariesBean extends BeanPlugin {
 			'#tree' => 1,
 		);
 
-
-		$form['settings']['month'] = array (
+    $form['settings']['month'] = array (
 			'#type' => 'select',
 			'#title' => t('Incidents from the last:'),
 			'#options' => array(
+        'all_dates' => t('All dates'),
+        1 => t('Month'),
 				3 => t('3 months'),
 				6 => t('6 months'),
 				12 => t('12 months'),
 			),
 			'#required' => TRUE,
+      '#default_value' => $bean->settings['month'],
 
 		);
-
 
     $form['settings']['incident_label'] = array (
       '#type' => 'textfield',
       '#title' => t('Of type:'),
       '#required' => TRUE,
+      '#default_value' => $bean->settings['incident_label'],
     );
 
     $form['settings']['all'] = array (
@@ -95,6 +96,7 @@ class IncidentSummariesBean extends BeanPlugin {
 					':input[name="settings[all]"]' => array('checked' => FALSE),
 				),
 			),
+			'#default_value' => $bean->settings['options'],
 		);
 
 		$form['settings']['incident_report_type'] = array (
@@ -109,7 +111,8 @@ class IncidentSummariesBean extends BeanPlugin {
 			),
 			'#default_value' => $bean->settings['incident_report_type'],
 		);
-		$form['settings']['incident_severity'] = array (
+
+    $form['settings']['incident_severity'] = array (
 			'#type' => 'select',
 			'#title' => t('Incident Severity'),
 			'#options' => $taxonomy_terms['incident_severity'],
@@ -119,6 +122,7 @@ class IncidentSummariesBean extends BeanPlugin {
 					':input[name="settings[all]"]' => array('checked' => FALSE),
 				),
 			),
+			'#default_value' => $bean->settings['incident_severity'],
 		);
 
 		return $form;
@@ -128,6 +132,7 @@ class IncidentSummariesBean extends BeanPlugin {
 	 * Displays the bean.
 	 */
 	public function view($bean, $content, $view_mode = 'default', $langcode = NULL) {
+    dpm($bean);
 		$content = array();
 		$tid_array = array();
 		$term_name = '';
@@ -136,9 +141,9 @@ class IncidentSummariesBean extends BeanPlugin {
 		$month = strtotime("-{$bean->settings['month']} months", strtotime("now"));
 		$month_number = $bean->settings['month'];
 		$vocabulary = $bean->settings['options'];
-		$heading_one = 'Incidents in the last '.$month_number.' months';
+		$heading_one = 'All dates';
 
-		if(strcmp($vocabulary,'Incident report type') == 0){
+    if(strcmp($vocabulary,'Incident report type') == 0){
 			unset($tid_array);
       $taxonomy_term_field = 'field_incident_report_type';
 			$term_name = $bean->settings['incident_report_type'];
@@ -148,7 +153,8 @@ class IncidentSummariesBean extends BeanPlugin {
 			}
 
 		}
-		else{
+
+    else{
 			unset($tid_array);
 			$taxonomy_term_field = 'field_incident_severity';
 			$term_name = $bean->settings['incident_severity'];
@@ -157,29 +163,34 @@ class IncidentSummariesBean extends BeanPlugin {
 				$tid = $object->tid;
 			}
 		}
-		$query = new EntityFieldQuery();
-		if ($bean->settings['all']) {
-			$result = $query
+
+    $query = new EntityFieldQuery();
+    $query
 				->entityCondition('entity_type', 'node')
-				->entityCondition('bundle', 'incident_report')
-				->propertyCondition('created', $month, '>')
-				->execute();
-			$vocabulary = '';
-			$term_name = '';
+				->entityCondition('bundle', 'incident_report');
+
+    if (strcmp($bean->settings['month'], 'all_dates') !== 0) {
+      $query
+        ->propertyCondition('created', $month, '>');
+      $heading_one = 'Incidents in the last '.$month_number.' months';
+
+    }
+
+    if (!$bean->settings['all']) {
+      $query
+        ->fieldCondition($taxonomy_term_field, 'tid', $tid, '=');
+		  $vocabulary = '';
+		  $term_name = '';
 		}
-		else {
-			$result = $query
-				->entityCondition('entity_type', 'node')
-				->entityCondition('bundle', 'incident_report')
-				->propertyCondition('created', $month, '>')
-				->fieldCondition($taxonomy_term_field, 'tid', $tid, '=')
-				->execute();
-		}
+    $result = $query
+      ->execute();
 		$count = 0;
-		if (count($result) != 0){
+
+    if (count($result) != 0) {
 			$count = count($result['node']);
 		}
-		$variables = array (
+
+    $variables = array (
 			'header' => array(
 				t(':heading',array(':heading'=>$heading_one)),
 			),
@@ -189,6 +200,7 @@ class IncidentSummariesBean extends BeanPlugin {
 				),
 			);
 		$content[] = array('#markup' => theme('table', $variables));
-		return $content;
+
+    return $content;
 	}
 }
