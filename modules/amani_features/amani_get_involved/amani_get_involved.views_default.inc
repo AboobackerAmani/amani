@@ -91,7 +91,7 @@ function amani_get_involved_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Graphic */
+  /* Field: Content: Large image */
   $handler->display->display_options['fields']['field_graphic']['id'] = 'field_graphic';
   $handler->display->display_options['fields']['field_graphic']['table'] = 'field_data_field_graphic';
   $handler->display->display_options['fields']['field_graphic']['field'] = 'field_graphic';
@@ -107,7 +107,7 @@ function amani_get_involved_views_default_views() {
   $handler = $view->new_display('block', 'Get Involved', 'block_2');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Graphic */
+  /* Field: Content: Large image */
   $handler->display->display_options['fields']['field_graphic']['id'] = 'field_graphic';
   $handler->display->display_options['fields']['field_graphic']['table'] = 'field_data_field_graphic';
   $handler->display->display_options['fields']['field_graphic']['field'] = 'field_graphic';

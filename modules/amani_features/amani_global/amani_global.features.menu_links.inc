@@ -174,6 +174,42 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-1',
   );
+  // Exported menu link: menu-meta:about
+  $menu_links['menu-meta:about'] = array(
+    'menu_name' => 'menu-meta',
+    'link_path' => 'about',
+    'router_path' => 'about',
+    'link_title' => 'about',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '0',
+  );
+  // Exported menu link: menu-meta:amani/content-admin
+  $menu_links['menu-meta:amani/content-admin'] = array(
+    'menu_name' => 'menu-meta',
+    'link_path' => 'amani/content-admin',
+    'router_path' => 'amani/content-admin',
+    'link_title' => 'admin',
+    'options' => array(
+      'attributes' => array(
+        'title' => 'Manage content',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '1',
+  );
   // Exported menu link: menu-social-media:http://facebook.com
   $menu_links['menu-social-media:http://facebook.com'] = array(
     'menu_name' => 'menu-social-media',
@@ -222,6 +258,8 @@ function amani_global_menu_default_menu_links() {
   t('Resources');
   t('Team');
   t('Twitter');
+  t('about');
+  t('admin');
   t('home');
 
 
