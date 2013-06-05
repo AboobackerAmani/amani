@@ -38,22 +38,22 @@ Drupal.behaviors.heritageTheme = {
     //   }
     // });
 
-    $('.views-widget #edit-keys').val('Search...');
-    $('.views-widget #edit-keys').focus(function() {
-      if($(this).val() == 'Search...') {
-        $(this).val('').addClass('focus');
-      } else if($(this).val() == '') {
-        $(this).val('Search...').removeClass('focus');
-      }
-    });
-
-    $('.views-widget #edit-keys').focusout(function() {
-      if($(this).val() == '') {
-        $(this).val('Search...').removeClass('focus');
-      } else {
-        $(this).addClass('focus');
-      }
-    });
+    //$('.views-widget #edit-keys').val('Search...');
+    //$('.views-widget #edit-keys').focus(function() {
+    //  if($(this).val() == 'Search...') {
+    //    $(this).val('').addClass('focus');
+    //  } else if($(this).val() == '') {
+    //    $(this).val('Search...').removeClass('focus');
+    //  }
+    //});
+//
+    //$('.views-widget #edit-keys').focusout(function() {
+    //  if($(this).val() == '') {
+    //    $(this).val('Search...').removeClass('focus');
+    //  } else {
+    //    $(this).addClass('focus');
+    //  }
+    //});
 
   } // close "attach".
 } // close "behaviors".
