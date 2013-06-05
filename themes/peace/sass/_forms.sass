@@ -1,0 +1,103 @@
+// _forms.sass
+
+// Incident report form
+.node-incident_report-form
+  .form-item
+    clear: both
+    //margin: $margin 0
+    overflow: hidden
+    padding: $padding/3 0
+    label
+      @include span-columns(3)
+      text-align: right
+      padding-top: 5px
+    input
+      border: 0
+      background: #fff
+      box-shadow: 2px 2px 2px #ccc
+      font-size: 15px
+      padding: 5px
+      @include span-columns(7)
+    .form-textarea-wrapper
+      @include span-columns(9)
+      textarea
+        background: #fff
+        font-size: 15px
+        padding: 5px
+        border: 0
+  .field-widget-name-widget
+    .form-item
+      margin: 0
+      padding: 5px 0
+      input
+        @include span-columns(11)
+      .description
+        clear: both
+        padding: 5px 0
+  .field-name-field-description
+    margin-bottom: $margin
+    padding-bottom: $padding
+    border-bottom: 1px solid #999
+
+  .field-name-field-incident-address
+    //border-top: 1px solid #999
+    //padding-top: $padding/3
+    //margin-top: $margin/3
+    @include span-columns(6)
+    fieldset
+      border: 0
+      padding: 0
+      margin: 0
+      legend
+        font-weight: bold
+      .addressfield-container-inline
+        .form-item
+          float: none
+          margin: 0
+          padding: 4px 0
+  .field-name-field-incident-geolocation
+    @include span-columns(6)
+    @include omega
+    overflow: hidden
+    margin-bottom: $margin
+  .field-name-field-incident-date
+    border-top: 1px solid #999
+    padding-top: $padding/3
+    margin-top: $margin
+    clear: both
+    fieldset
+      border: 0
+      .fieldset-wrapper
+        @include span-columns(9)
+        @include shift(3)
+        .form-item
+          width: 100%
+          label
+            text-align: left
+            @include fill-parent
+        .date-padding
+          width: 100%
+          float: none
+          overflow: hidden
+          padding: 0
+          .form-item
+            @include span-columns(4)
+            clear: none
+            input
+              @include span-columns(11)
+      legend
+        font-weight: bold
+  .field-type-file
+    table
+      background: none
+      th
+        border: 0
+      tr
+        background: none
+  .form-actions
+    input
+      font-size: 16px
+      padding: 10px 20px
+      background: #ccc
+      color: #fff
+      margin-right: $margin/3

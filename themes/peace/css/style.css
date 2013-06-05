@@ -110,10 +110,6 @@ abbr {
   white-space: nowrap; }
 
 /* UI improvments. */
-#edit-title {
-  font-size: 24px;
-  width: 99%; }
-
 #system-themes-form img {
   width: 100px; }
 
@@ -953,6 +949,142 @@ a {
     box-shadow: 2px 3px 4px #c8c8c8;
     padding: 10px 30px;
     border: 0; }
+
+.node-incident_report-form .form-item {
+  clear: both;
+  overflow: hidden;
+  padding: 10px 0; }
+  .node-incident_report-form .form-item label {
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 23.40426%;
+    text-align: right;
+    padding-top: 5px; }
+    .node-incident_report-form .form-item label:last-child {
+      margin-right: 0; }
+  .node-incident_report-form .form-item input {
+    border: 0;
+    background: white;
+    box-shadow: 2px 2px 2px #cccccc;
+    font-size: 15px;
+    padding: 5px;
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 57.44681%; }
+    .node-incident_report-form .form-item input:last-child {
+      margin-right: 0; }
+  .node-incident_report-form .form-item .form-textarea-wrapper {
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 74.46809%; }
+    .node-incident_report-form .form-item .form-textarea-wrapper:last-child {
+      margin-right: 0; }
+    .node-incident_report-form .form-item .form-textarea-wrapper textarea {
+      background: white;
+      font-size: 15px;
+      padding: 5px;
+      border: 0; }
+.node-incident_report-form .field-widget-name-widget .form-item {
+  margin: 0;
+  padding: 5px 0; }
+  .node-incident_report-form .field-widget-name-widget .form-item input {
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 91.48936%; }
+    .node-incident_report-form .field-widget-name-widget .form-item input:last-child {
+      margin-right: 0; }
+  .node-incident_report-form .field-widget-name-widget .form-item .description {
+    clear: both;
+    padding: 5px 0; }
+.node-incident_report-form .field-name-field-description {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #999999; }
+.node-incident_report-form .field-name-field-incident-address {
+  display: block;
+  float: left;
+  margin-right: 2.12766%;
+  width: 48.93617%; }
+  .node-incident_report-form .field-name-field-incident-address:last-child {
+    margin-right: 0; }
+  .node-incident_report-form .field-name-field-incident-address fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0; }
+    .node-incident_report-form .field-name-field-incident-address fieldset legend {
+      font-weight: bold; }
+    .node-incident_report-form .field-name-field-incident-address fieldset .addressfield-container-inline .form-item {
+      float: none;
+      margin: 0;
+      padding: 4px 0; }
+.node-incident_report-form .field-name-field-incident-geolocation {
+  display: block;
+  float: left;
+  margin-right: 2.12766%;
+  width: 48.93617%;
+  margin-right: 0;
+  overflow: hidden;
+  margin-bottom: 30px; }
+  .node-incident_report-form .field-name-field-incident-geolocation:last-child {
+    margin-right: 0; }
+.node-incident_report-form .field-name-field-incident-date {
+  border-top: 1px solid #999999;
+  padding-top: 10px;
+  margin-top: 30px;
+  clear: both; }
+  .node-incident_report-form .field-name-field-incident-date fieldset {
+    border: 0; }
+    .node-incident_report-form .field-name-field-incident-date fieldset .fieldset-wrapper {
+      display: block;
+      float: left;
+      margin-right: 2.12766%;
+      width: 74.46809%;
+      margin-left: 25.53191%; }
+      .node-incident_report-form .field-name-field-incident-date fieldset .fieldset-wrapper:last-child {
+        margin-right: 0; }
+      .node-incident_report-form .field-name-field-incident-date fieldset .fieldset-wrapper .form-item {
+        width: 100%; }
+        .node-incident_report-form .field-name-field-incident-date fieldset .fieldset-wrapper .form-item label {
+          text-align: left;
+          width: 100%; }
+      .node-incident_report-form .field-name-field-incident-date fieldset .fieldset-wrapper .date-padding {
+        width: 100%;
+        float: none;
+        overflow: hidden;
+        padding: 0; }
+        .node-incident_report-form .field-name-field-incident-date fieldset .fieldset-wrapper .date-padding .form-item {
+          display: block;
+          float: left;
+          margin-right: 2.12766%;
+          width: 31.91489%;
+          clear: none; }
+          .node-incident_report-form .field-name-field-incident-date fieldset .fieldset-wrapper .date-padding .form-item:last-child {
+            margin-right: 0; }
+          .node-incident_report-form .field-name-field-incident-date fieldset .fieldset-wrapper .date-padding .form-item input {
+            display: block;
+            float: left;
+            margin-right: 2.12766%;
+            width: 91.48936%; }
+            .node-incident_report-form .field-name-field-incident-date fieldset .fieldset-wrapper .date-padding .form-item input:last-child {
+              margin-right: 0; }
+    .node-incident_report-form .field-name-field-incident-date fieldset legend {
+      font-weight: bold; }
+.node-incident_report-form .field-type-file table {
+  background: none; }
+  .node-incident_report-form .field-type-file table th {
+    border: 0; }
+  .node-incident_report-form .field-type-file table tr {
+    background: none; }
+.node-incident_report-form .form-actions input {
+  font-size: 16px;
+  padding: 10px 20px;
+  background: #cccccc;
+  color: white;
+  margin-right: 10px; }
 
 * {
   -webkit-box-sizing: border-box;
