@@ -19,12 +19,15 @@
       padding: 5px
       @include span-columns(7)
     .form-textarea-wrapper
-      @include span-columns(9)
+      @include span-columns(7)
       textarea
         background: #fff
         font-size: 15px
         padding: 5px
         border: 0
+        box-shadow: 2px 2px 2px #ccc
+      .grippie
+        display: none
   .field-widget-name-widget
     .form-item
       margin: 0
@@ -94,10 +97,65 @@
         border: 0
       tr
         background: none
+    .tabledrag-toggle-weight-wrapper
+      display: none
+    .form-submit
+      background: $orange
+      color: #fff
+      padding: 5px 10px
+      width: auto
+      border: 0
+    fieldset
+      border: 0
+      margin: 0
+      padding: 0
+  #edit-field-incident-media,
+  #edit-field-incident-videos
+    @include span-columns(6)
+    .field-multiple-drag
+      display: none
+    label
+      text-align: left
+      font-weight: bold
+      font-size: 16px
+      margin: 10px 0
+  #edit-field-incident-videos
+    @include omega
+  #edit-field-documents
+    clear: both
+    padding: $margin 0
+    legend
+      font-weight: bold
+      font-size: 16px
+    .description
+      @include shift(3)
+  #edit-field-links
+    label
+      text-align: left
+      font-weight: bold
+      font-size: 16px
+    .tabledrag-toggle-weight-wrapper
+      display: none
+    table
+      tr
+        background: none
+        td.field-multiple-drag
+          display: none
+    .description
+      clear: both
+      @include shift(3)
+      padding-top: 10px
+    .form-submit
+      background: $orange
+      color: #fff
+      padding: 5px 10px
+      width: auto
+      border: 0
   .form-actions
     input
       font-size: 16px
       padding: 10px 20px
-      background: #ccc
+      background: $orange
+      border: 0
       color: #fff
       margin-right: $margin/3
