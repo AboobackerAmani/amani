@@ -132,7 +132,6 @@ class IncidentSummariesBean extends BeanPlugin {
 	 * Displays the bean.
 	 */
 	public function view($bean, $content, $view_mode = 'default', $langcode = NULL) {
-    dpm($bean);
 		$content = array();
 		$tid_array = array();
 		$term_name = '';
