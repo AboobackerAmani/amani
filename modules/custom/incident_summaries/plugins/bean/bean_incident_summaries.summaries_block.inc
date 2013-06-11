@@ -191,7 +191,7 @@ class IncidentSummariesBean extends BeanPlugin {
 
     $variables = array (
 			'header' => array(
-				t(':heading',array(':heading'=>$heading_one)),
+			//	t(':heading',array(':heading'=>$heading_one)),
 			),
 			'rows' => array(array(
 					"<span style=\"font-size:40px\">$count </span>{$bean->settings['incident_label']}" ,
