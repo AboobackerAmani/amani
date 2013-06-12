@@ -52,7 +52,7 @@ function amani_programs_campaigns_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 0,
+          'weight' => '1',
         ),
         'ical' => array(
           'label' => 'above',
@@ -137,10 +137,9 @@ function amani_programs_campaigns_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'list',
           'settings' => array(),
-          'type' => 'list_default',
-          'weight' => 3,
+          'type' => 'hidden',
+          'weight' => '3',
         ),
         'ical' => array(
           'label' => 'above',
@@ -216,11 +215,13 @@ function amani_programs_campaigns_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'file',
-          'settings' => array(),
-          'type' => 'file_default',
-          'weight' => 1,
+          'label' => 'hidden',
+          'module' => 'file_entity',
+          'settings' => array(
+            'file_view_mode' => 'default',
+          ),
+          'type' => 'file_rendered',
+          'weight' => '0',
         ),
         'ical' => array(
           'label' => 'above',
@@ -328,8 +329,8 @@ function amani_programs_campaigns_field_default_fields() {
           'label' => 'above',
           'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => 2,
+          'type' => 'taxonomy_term_reference_plain',
+          'weight' => '2',
         ),
         'ical' => array(
           'label' => 'above',
