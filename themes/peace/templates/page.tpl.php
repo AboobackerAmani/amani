@@ -99,6 +99,14 @@
             <?php print render($page['content']) ?>
           </div>
 
+          <?php if($page['map_region_2x']): ?>
+            <?php print render($page['map_region_2x']) ?>
+          <?php endif; ?>
+
+          <?php if($page['map_region_3x']): ?>
+            <?php print render($page['map_region_3x']) ?>
+          <?php endif; ?>
+
           <?php print $feed_icons; ?>
 
       </section> <!-- /content-inner /content -->
