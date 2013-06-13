@@ -177,7 +177,7 @@ a {
   display: block;
   float: left;
   margin-right: 2.12766%;
-  width: 14.89362%; }
+  width: 23.40426%; }
   #name-and-slogan:last-child {
     margin-right: 0; }
   #name-and-slogan .site-slogan {
@@ -203,7 +203,7 @@ a {
   display: block;
   float: left;
   margin-right: 2.12766%;
-  width: 82.97872%;
+  width: 74.46809%;
   margin-right: 0; }
   #header-region:last-child {
     margin-right: 0; }
@@ -446,13 +446,21 @@ a {
     list-style-image: none; }
 
 #block-locale-language {
-  position: absolute;
-  right: 0;
-  top: 0px; }
-  #block-locale-language ul.language-switcher-locale-url li {
-    list-style-type: none;
-    display: inline-block;
-    margin-left: 10px; }
+  display: block;
+  float: left;
+  margin-right: 2.85714%;
+  width: 31.42857%;
+  margin-left: 34.28571%;
+  margin-bottom: 7.5px; }
+  #block-locale-language:last-child {
+    margin-right: 0; }
+  #block-locale-language ul.language-switcher-locale-url {
+    text-align: right; }
+    #block-locale-language ul.language-switcher-locale-url li {
+      list-style-type: none;
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 16px; }
 
 .sidebar #block-menu-menu-learn-more {
   background: none;
@@ -628,10 +636,10 @@ a {
 #header-region #block-menu-menu-meta {
   display: block;
   float: left;
-  margin-right: 2.12766%;
-  width: 31.91489%;
-  margin-left: 68.08511%;
-  margin-top: 7.5px; }
+  margin-right: 2.85714%;
+  width: 31.42857%;
+  margin-right: 0;
+  margin-bottom: 7.5px; }
   #header-region #block-menu-menu-meta:last-child {
     margin-right: 0; }
   #header-region #block-menu-menu-meta .content {
@@ -639,6 +647,7 @@ a {
     #header-region #block-menu-menu-meta .content li {
       margin-right: 7.5px;
       padding-right: 0;
+      padding-top: 0;
       list-style-type: none;
       display: inline-block; }
       #header-region #block-menu-menu-meta .content li:last-child {
