@@ -27,14 +27,17 @@ a
 
 // Logo
 #name-and-slogan
-  @include span-columns(3)
+  @include span-columns(2)
+  #side-slogan
+    font-style: oblique
+    font-size: 14px
 #site-name
   border-right: 1px solid #000
   a
     display: block
-    height: 135px
-    width: 190px
-    background-repeat: none
+    height: 100px
+    width: 130px
+    background-repeat: no-repeat
     text-indent: -999px
 
 // header
@@ -48,17 +51,6 @@ a
 #header-region
   @include span-columns(9)
   @include omega
-
-// Map 2x region
-.region-map-region-2x
-  .block
-    @include span-columns(4 of 8)
-    @include omega(2n)
-// Map 3x region
-.region-map-region-3x
-  .block
-    @include span-columns(2.666 of 8)
-    @include omega(3n)
 
 // Region top
 .region-home-content-top-rotator

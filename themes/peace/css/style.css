@@ -177,17 +177,20 @@ a {
   display: block;
   float: left;
   margin-right: 2.12766%;
-  width: 23.40426%; }
+  width: 14.89362%; }
   #name-and-slogan:last-child {
     margin-right: 0; }
+  #name-and-slogan #side-slogan {
+    font-style: oblique;
+    font-size: 14px; }
 
 #site-name {
   border-right: 1px solid black; }
   #site-name a {
     display: block;
-    height: 135px;
-    width: 190px;
-    background-repeat: none;
+    height: 100px;
+    width: 130px;
+    background-repeat: no-repeat;
     text-indent: -999px; }
 
 #header {
@@ -203,26 +206,6 @@ a {
   width: 74.46809%;
   margin-right: 0; }
   #header-region:last-child {
-    margin-right: 0; }
-
-.region-map-region-2x .block {
-  display: block;
-  float: left;
-  margin-right: 3.22581%;
-  width: 48.3871%; }
-  .region-map-region-2x .block:last-child {
-    margin-right: 0; }
-  .region-map-region-2x .block:nth-child(2n) {
-    margin-right: 0; }
-
-.region-map-region-3x .block {
-  display: block;
-  float: left;
-  margin-right: 3.22581%;
-  width: 31.17419%; }
-  .region-map-region-3x .block:last-child {
-    margin-right: 0; }
-  .region-map-region-3x .block:nth-child(3n) {
     margin-right: 0; }
 
 .region-home-content-top-rotator {
@@ -666,6 +649,31 @@ a {
         color: #ee8f1c; }
       #header-region #block-menu-menu-meta .content li a:hover, #header-region #block-menu-menu-meta .content li a:active {
         color: #f2a64b; }
+
+.region-map-region-2x .block {
+  display: block;
+  float: left;
+  margin-right: 3.22581%;
+  width: 48.3871%; }
+  .region-map-region-2x .block:last-child {
+    margin-right: 0; }
+  .region-map-region-2x .block:nth-child(2n) {
+    margin-right: 0; }
+
+.region-map-region-3x {
+  margin-top: 30px; }
+  .region-map-region-3x .block {
+    display: block;
+    float: left;
+    margin-right: 3.22581%;
+    width: 31.17419%;
+    margin: 30px 0; }
+    .region-map-region-3x .block:last-child {
+      margin-right: 0; }
+    .region-map-region-3x .block:nth-child(3n) {
+      margin-right: 0; }
+    .region-map-region-3x .block h2.block-title {
+      font-size: 1.2em; }
 
 #header-region #block-menu-menu-social-media {
   display: block;

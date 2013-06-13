@@ -222,6 +222,22 @@
           &:hover, &:active
             color: lighten($orange, 10%)
 
+
+// Map 2x region
+.region-map-region-2x
+  .block
+    @include span-columns(4 of 8)
+    @include omega(2n)
+// Map 3x region
+.region-map-region-3x
+  margin-top: $margin
+  .block
+    @include span-columns(2.666 of 8)
+    @include omega(3n)
+    margin: $margin 0
+    h2.block-title
+      font-size: 1.2em
+
 // social menu
 #block-menu-menu-social-media
   #header-region &
