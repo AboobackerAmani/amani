@@ -180,18 +180,18 @@ a {
   width: 14.89362%; }
   #name-and-slogan:last-child {
     margin-right: 0; }
-  #name-and-slogan #side-slogan {
+  #name-and-slogan .site-slogan {
     font-style: oblique;
-    font-size: 14px; }
+    font-size: 14px;
+    color: #999999;
+    font-family: Georgia; }
 
-#site-name {
-  border-right: 1px solid black; }
-  #site-name a {
-    display: block;
-    height: 100px;
-    width: 130px;
-    background-repeat: no-repeat;
-    text-indent: -999px; }
+#site-name a {
+  display: block;
+  height: 100px;
+  width: 130px;
+  background-repeat: no-repeat;
+  text-indent: -999px; }
 
 #header {
   background: white;
