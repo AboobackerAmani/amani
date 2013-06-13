@@ -29,12 +29,6 @@ function amani_programs_campaigns_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-news_and_events-block' => array(
-          'module' => 'views',
-          'delta' => 'news_and_events-block',
-          'region' => 'sidebar_second',
-          'weight' => '2',
-        ),
         'views-programs_campaigns-block_1' => array(
           'module' => 'views',
           'delta' => 'programs_campaigns-block_1',
