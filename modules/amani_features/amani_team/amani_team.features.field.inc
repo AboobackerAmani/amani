@@ -56,10 +56,9 @@ function amani_team_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'list',
           'settings' => array(),
-          'type' => 'list_default',
-          'weight' => 15,
+          'type' => 'hidden',
+          'weight' => '7',
         ),
         'ical' => array(
           'label' => 'above',
@@ -122,11 +121,11 @@ function amani_team_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'email',
           'settings' => array(),
           'type' => 'email_default',
-          'weight' => 7,
+          'weight' => '3',
         ),
         'ical' => array(
           'label' => 'above',
@@ -274,7 +273,7 @@ Prof.',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'name',
           'settings' => array(
             'format' => 'default',
@@ -288,7 +287,7 @@ Prof.',
             'output' => 'default',
           ),
           'type' => 'name_formatter',
-          'weight' => 12,
+          'weight' => '1',
         ),
         'ical' => array(
           'label' => 'above',
@@ -405,11 +404,11 @@ Prof.',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 14,
+          'weight' => '4',
         ),
         'ical' => array(
           'label' => 'above',
@@ -486,11 +485,11 @@ Prof.',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 13,
+          'weight' => '5',
         ),
         'ical' => array(
           'label' => 'above',
@@ -567,10 +566,9 @@ Prof.',
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'list',
           'settings' => array(),
-          'type' => 'list_default',
-          'weight' => 10,
+          'type' => 'hidden',
+          'weight' => '6',
         ),
         'ical' => array(
           'label' => 'above',
@@ -646,14 +644,14 @@ Prof.',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => '',
+            'image_style' => 'medium',
           ),
           'type' => 'image',
-          'weight' => 4,
+          'weight' => '0',
         ),
         'ical' => array(
           'label' => 'above',
@@ -744,11 +742,11 @@ Prof.',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 2,
+          'weight' => '2',
         ),
         'ical' => array(
           'label' => 'above',
