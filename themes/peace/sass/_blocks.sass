@@ -15,14 +15,16 @@
 
 // Locale block
 #block-locale-language
-  position: absolute
-  right: 0
-  top: 0px
+  @include span-columns(3 of 9)
+  @include shift(3.5)
+  margin-bottom: $margin/4
   ul.language-switcher-locale-url
+    text-align: right
     li
       list-style-type: none
       display: inline-block
       margin-left: 10px
+      font-size: 16px
 
 // Learn more block
 .sidebar
@@ -201,14 +203,18 @@
 // meta menu
 #block-menu-menu-meta
   #header-region &
-    @include span-columns(4)
-    @include shift(8)
-    margin-top: $margin/4
+    @include span-columns(2.5 of 9)
+    //@include shift(8)
+    @include omega
+    margin-bottom: $margin/4
     .content
       font-size: 16px
+      ul
+        text-align: right
       li
         margin-right: $margin/4
         padding-right: 0
+        padding-top: 0
         list-style-type: none
         display: inline-block
         &:last-child
@@ -222,6 +228,23 @@
           &:hover, &:active
             color: lighten($orange, 10%)
 
+
+// Map 2x region
+.region-map-region-2x
+  .block
+    @include span-columns(4 of 8)
+    @include omega(2n)
+// Map 3x region
+.region-map-region-3x
+  margin-top: $margin
+  .block
+    @include span-columns(2.666 of 8)
+    @include omega(3n)
+    margin-top: $margin
+    margin-bottom: $margin
+    h2.block-title
+      font-size: 1.2em
+
 // social menu
 #block-menu-menu-social-media
   #header-region &
@@ -231,6 +254,7 @@
     position: absolute
     bottom: $gutter
     right: 0
+    margin-bottom: -13px
     .content
       font-size: 16px
       li

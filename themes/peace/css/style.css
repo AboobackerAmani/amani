@@ -180,15 +180,18 @@ a {
   width: 23.40426%; }
   #name-and-slogan:last-child {
     margin-right: 0; }
+  #name-and-slogan .site-slogan {
+    font-style: oblique;
+    font-size: 14px;
+    color: #999999;
+    font-family: Georgia; }
 
-#site-name {
-  border-right: 1px solid black; }
-  #site-name a {
-    display: block;
-    height: 135px;
-    width: 190px;
-    background-repeat: none;
-    text-indent: -999px; }
+#site-name a {
+  display: block;
+  height: 100px;
+  width: 130px;
+  background-repeat: no-repeat;
+  text-indent: -999px; }
 
 #header {
   background: white;
@@ -203,26 +206,6 @@ a {
   width: 74.46809%;
   margin-right: 0; }
   #header-region:last-child {
-    margin-right: 0; }
-
-.region-map-region-2x .block {
-  display: block;
-  float: left;
-  margin-right: 3.22581%;
-  width: 48.3871%; }
-  .region-map-region-2x .block:last-child {
-    margin-right: 0; }
-  .region-map-region-2x .block:nth-child(2n) {
-    margin-right: 0; }
-
-.region-map-region-3x .block {
-  display: block;
-  float: left;
-  margin-right: 3.22581%;
-  width: 31.17419%; }
-  .region-map-region-3x .block:last-child {
-    margin-right: 0; }
-  .region-map-region-3x .block:nth-child(3n) {
     margin-right: 0; }
 
 .region-home-content-top-rotator {
@@ -463,13 +446,21 @@ a {
     list-style-image: none; }
 
 #block-locale-language {
-  position: absolute;
-  right: 0;
-  top: 0px; }
-  #block-locale-language ul.language-switcher-locale-url li {
-    list-style-type: none;
-    display: inline-block;
-    margin-left: 10px; }
+  display: block;
+  float: left;
+  margin-right: 2.85714%;
+  width: 31.42857%;
+  margin-left: 40%;
+  margin-bottom: 7.5px; }
+  #block-locale-language:last-child {
+    margin-right: 0; }
+  #block-locale-language ul.language-switcher-locale-url {
+    text-align: right; }
+    #block-locale-language ul.language-switcher-locale-url li {
+      list-style-type: none;
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 16px; }
 
 .sidebar #block-menu-menu-learn-more {
   background: none;
@@ -645,17 +636,20 @@ a {
 #header-region #block-menu-menu-meta {
   display: block;
   float: left;
-  margin-right: 2.12766%;
-  width: 31.91489%;
-  margin-left: 68.08511%;
-  margin-top: 7.5px; }
+  margin-right: 2.85714%;
+  width: 25.71429%;
+  margin-right: 0;
+  margin-bottom: 7.5px; }
   #header-region #block-menu-menu-meta:last-child {
     margin-right: 0; }
   #header-region #block-menu-menu-meta .content {
     font-size: 16px; }
+    #header-region #block-menu-menu-meta .content ul {
+      text-align: right; }
     #header-region #block-menu-menu-meta .content li {
       margin-right: 7.5px;
       padding-right: 0;
+      padding-top: 0;
       list-style-type: none;
       display: inline-block; }
       #header-region #block-menu-menu-meta .content li:last-child {
@@ -667,6 +661,32 @@ a {
       #header-region #block-menu-menu-meta .content li a:hover, #header-region #block-menu-menu-meta .content li a:active {
         color: #f2a64b; }
 
+.region-map-region-2x .block {
+  display: block;
+  float: left;
+  margin-right: 3.22581%;
+  width: 48.3871%; }
+  .region-map-region-2x .block:last-child {
+    margin-right: 0; }
+  .region-map-region-2x .block:nth-child(2n) {
+    margin-right: 0; }
+
+.region-map-region-3x {
+  margin-top: 30px; }
+  .region-map-region-3x .block {
+    display: block;
+    float: left;
+    margin-right: 3.22581%;
+    width: 31.17419%;
+    margin-top: 30px;
+    margin-bottom: 30px; }
+    .region-map-region-3x .block:last-child {
+      margin-right: 0; }
+    .region-map-region-3x .block:nth-child(3n) {
+      margin-right: 0; }
+    .region-map-region-3x .block h2.block-title {
+      font-size: 1.2em; }
+
 #header-region #block-menu-menu-social-media {
   display: block;
   float: left;
@@ -676,7 +696,8 @@ a {
   margin-right: 0;
   position: absolute;
   bottom: 30px;
-  right: 0; }
+  right: 0;
+  margin-bottom: -13px; }
   #header-region #block-menu-menu-social-media:last-child {
     margin-right: 0; }
   #header-region #block-menu-menu-social-media .content {
@@ -795,6 +816,15 @@ a {
     overflow: hidden; }
   .page-team .view-id-team.view-display-id-page .views-exposed-form label {
     display: none; }
+  .page-team .view-id-team.view-display-id-page .views-exposed-form #edit-keys-wrapper {
+    position: relative; }
+    .page-team .view-id-team.view-display-id-page .views-exposed-form #edit-keys-wrapper label {
+      display: block;
+      font-weight: normal;
+      font-size: 16px;
+      position: absolute;
+      top: 10px;
+      left: 65px; }
 .page-team .view-id-team.view-display-id-page .view-content {
   clear: both; }
   .page-team .view-id-team.view-display-id-page .view-content h3 {

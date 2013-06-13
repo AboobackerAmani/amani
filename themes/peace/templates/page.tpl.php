@@ -99,11 +99,11 @@
             <?php print render($page['content']) ?>
           </div>
 
-          <?php if($page['map_region_2x']): ?>
+          <?php if(!empty($page['map_region_2x'])): ?>
             <?php print render($page['map_region_2x']) ?>
           <?php endif; ?>
 
-          <?php if($page['map_region_3x']): ?>
+          <?php if(!empty($page['map_region_3x'])): ?>
             <?php print render($page['map_region_3x']) ?>
           <?php endif; ?>
 
