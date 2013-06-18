@@ -208,25 +208,57 @@
 .page-resources
   .view-resources
     .views-exposed-form
-      .form-submit
-        background: $orange
-        border: 0
-        color: #fff
-        padding: $padding/2 $padding
+      .views-exposed-widget
+        float: none
+        padding: 0.5em 1em .5em 0
+      .col
+        float: left
+        margin-right: 20px
       label
         color: $orange
         font-weight: normal
         display: inline-block
-      select,
-      input,
+        font-style: italic
+        width: 90px
+        vertical-align: top
       .views-widget
         display: inline-block
-      .views-widget-filter-term_node_tid_depth
-      .form-text
+      .form-text,
+      .form-select
         border: 0
         background: #fff
         padding: 5px
         box-shadow: 2px 3px 4px #C8C8C8
+        display: inline-block
+        height: 40px
+        width: 230px
+      .views-widget-filter-field_date_value
+        #edit-field-date-value-min-wrapper,
+        #edit-field-date-value-max-wrapper
+          float: left
+          .form-item
+            position: relative
+            margin-right: 5px
+            .date-padding
+              float: none
+            input
+              width: 110px
+              margin: 0
+            label
+              position: absolute
+              top: 40px
+            .description
+              position: relative
+              top: 10px
+      .views-submit-button, 
+      .views-reset-button
+        .form-submit
+          background: $orange
+          border: 0
+          color: #fff
+          width: 100px
+          height: 40px
+          margin-top: 0
     .view-content
       background: #fff
       padding: $padding

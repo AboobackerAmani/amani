@@ -972,24 +972,60 @@ a {
     .page-get-involved .view-get-involved.view-display-id-page .views-field-body:last-child {
       margin-right: 0; }
 
-.page-resources .view-resources .views-exposed-form .form-submit {
-  background: #ee8f1c;
-  border: 0;
-  color: white;
-  padding: 15px 30px; }
+.page-resources .view-resources .views-exposed-form .views-exposed-widget {
+  float: none;
+  padding: 0.5em 1em 0.5em 0; }
+.page-resources .view-resources .views-exposed-form .col {
+  float: left;
+  margin-right: 20px; }
 .page-resources .view-resources .views-exposed-form label {
   color: #ee8f1c;
   font-weight: normal;
-  display: inline-block; }
-.page-resources .view-resources .views-exposed-form select,
-.page-resources .view-resources .views-exposed-form input,
+  display: inline-block;
+  font-style: italic;
+  width: 90px;
+  vertical-align: top; }
 .page-resources .view-resources .views-exposed-form .views-widget {
   display: inline-block; }
-.page-resources .view-resources .views-exposed-form .form-text {
+.page-resources .view-resources .views-exposed-form .form-text,
+.page-resources .view-resources .views-exposed-form .form-select {
   border: 0;
   background: white;
   padding: 5px;
-  box-shadow: 2px 3px 4px #c8c8c8; }
+  box-shadow: 2px 3px 4px #c8c8c8;
+  display: inline-block;
+  height: 40px;
+  width: 230px; }
+.page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-min-wrapper,
+.page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper {
+  float: left; }
+  .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-min-wrapper .form-item,
+  .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper .form-item {
+    position: relative;
+    margin-right: 5px; }
+    .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-min-wrapper .form-item .date-padding,
+    .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper .form-item .date-padding {
+      float: none; }
+    .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-min-wrapper .form-item input,
+    .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper .form-item input {
+      width: 110px;
+      margin: 0; }
+    .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-min-wrapper .form-item label,
+    .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper .form-item label {
+      position: absolute;
+      top: 40px; }
+    .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-min-wrapper .form-item .description,
+    .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper .form-item .description {
+      position: relative;
+      top: 10px; }
+.page-resources .view-resources .views-exposed-form .views-submit-button .form-submit,
+.page-resources .view-resources .views-exposed-form .views-reset-button .form-submit {
+  background: #ee8f1c;
+  border: 0;
+  color: white;
+  width: 100px;
+  height: 40px;
+  margin-top: 0; }
 .page-resources .view-resources .view-content {
   background: white;
   padding: 30px;
