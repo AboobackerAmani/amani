@@ -1,3 +1,4 @@
+@charset "IBM437";
 /* Font styles. */
 body {
   margin: 0;
@@ -377,6 +378,9 @@ a {
     list-style-image: none; }
   #sidebar-second .block a:after {
     content: " »"; }
+  #sidebar-second .block .block {
+    padding: 0;
+    box-shadow: none; }
 
 .view-news-and-events .views-row {
   overflow: hidden; }
@@ -509,6 +513,9 @@ a {
   background: none;
   box-shadow: 0 0 0;
   padding: 0; }
+
+.block-fb-likebox iframe {
+  width: 100% !important; }
 
 .sidebar #block-views-calendar_of_events-list,
 .sidebar #block-views-calendar_of_events-calendar {

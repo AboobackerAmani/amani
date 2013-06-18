@@ -282,3 +282,10 @@ function peace_menu_local_tasks(&$variables) {
   }
   return $output;
 }
+
+/**
+ * Override fb_likebox theme tpl
+ */
+function peace_theme_registry_alter(&$theme_registry) {
+  $theme_registry['fb_likebox_facebook']['original']['path'] = 'sites/all/themes/peace/templates';
+}
