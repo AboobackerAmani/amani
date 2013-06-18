@@ -140,9 +140,9 @@ function amani_global_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
-        'views-tweets-block_1' => array(
-          'module' => 'views',
-          'delta' => 'tweets-block_1',
+        'quicktabs-social_media_feeds' => array(
+          'module' => 'quicktabs',
+          'delta' => 'social_media_feeds',
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
@@ -150,7 +150,7 @@ function amani_global_context_default_contexts() {
           'module' => 'boxes',
           'delta' => 'front_second_sidebar_bottom',
           'region' => 'sidebar_second',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
       ),
     ),
