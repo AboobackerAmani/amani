@@ -974,7 +974,8 @@ a {
 
 .page-resources .view-resources .views-exposed-form .views-exposed-widget {
   float: none;
-  padding: 0.5em 1em 0.5em 0; }
+  padding: 10px 20px 10px 0;
+  line-height: 1em; }
 .page-resources .view-resources .views-exposed-form .col {
   float: left;
   margin-right: 20px; }
@@ -987,15 +988,30 @@ a {
   vertical-align: top; }
 .page-resources .view-resources .views-exposed-form .views-widget {
   display: inline-block; }
-.page-resources .view-resources .views-exposed-form .form-text,
-.page-resources .view-resources .views-exposed-form .form-select {
+.page-resources .view-resources .views-exposed-form .form-text {
   border: 0;
   background: white;
-  padding: 5px;
+  padding: 10px;
   box-shadow: 2px 3px 4px #c8c8c8;
   display: inline-block;
-  height: 40px;
-  width: 230px; }
+  height: 45px;
+  width: 230px;
+  font-size: 16px; }
+.page-resources .view-resources .views-exposed-form select {
+  border: 0;
+  background: white url("../images/icons/orange_arrow.png") no-repeat 85% 50%;
+  margin-right: -80px;
+  width: 240px; }
+.page-resources .view-resources .views-exposed-form .form-type-select {
+  background: white url("../images/icons/orange_arrow.png") no-repeat 95% 50%;
+  border: 0;
+  background: white;
+  padding: 10px;
+  box-shadow: 2px 3px 4px #c8c8c8;
+  font-size: 16px;
+  width: 230px;
+  height: 45px;
+  overflow: hidden; }
 .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-min-wrapper,
 .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper {
   float: left; }
@@ -1013,7 +1029,7 @@ a {
     .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-min-wrapper .form-item label,
     .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper .form-item label {
       position: absolute;
-      top: 40px; }
+      top: 45px; }
     .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-min-wrapper .form-item .description,
     .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper .form-item .description {
       position: relative;
@@ -1024,7 +1040,7 @@ a {
   border: 0;
   color: white;
   width: 100px;
-  height: 40px;
+  height: 45px;
   margin-top: 0; }
 .page-resources .view-resources .view-content {
   background: white;

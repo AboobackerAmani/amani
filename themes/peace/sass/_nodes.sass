@@ -210,7 +210,8 @@
     .views-exposed-form
       .views-exposed-widget
         float: none
-        padding: 0.5em 1em .5em 0
+        padding: 10px 20px 10px 0
+        line-height: 1em
       .col
         float: left
         margin-right: 20px
@@ -223,15 +224,30 @@
         vertical-align: top
       .views-widget
         display: inline-block
-      .form-text,
-      .form-select
+      .form-text
         border: 0
         background: #fff
-        padding: 5px
+        padding: 10px
         box-shadow: 2px 3px 4px #C8C8C8
         display: inline-block
-        height: 40px
+        height: 45px
         width: 230px
+        font-size: 16px
+      select
+        border: 0
+        background: #fff url('../images/icons/orange_arrow.png') no-repeat 85% 50%
+        margin-right: -80px
+        width: 240px
+      .form-type-select
+        background: #fff url('../images/icons/orange_arrow.png') no-repeat 95% 50%
+        border: 0
+        background: #fff
+        padding: 10px
+        box-shadow: 2px 3px 4px #C8C8C8
+        font-size: 16px
+        width: 230px
+        height: 45px
+        overflow: hidden
       .views-widget-filter-field_date_value
         #edit-field-date-value-min-wrapper,
         #edit-field-date-value-max-wrapper
@@ -246,7 +262,7 @@
               margin: 0
             label
               position: absolute
-              top: 40px
+              top: 45px
             .description
               position: relative
               top: 10px
@@ -257,7 +273,7 @@
           border: 0
           color: #fff
           width: 100px
-          height: 40px
+          height: 45px
           margin-top: 0
     .view-content
       background: #fff
