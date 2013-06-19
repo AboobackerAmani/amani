@@ -83,6 +83,12 @@ function amani_global_context_default_contexts() {
           'region' => 'footer',
           'weight' => '-7',
         ),
+        'boxes-amani_special_thanks' => array(
+          'module' => 'boxes',
+          'delta' => 'amani_special_thanks',
+          'region' => 'footer',
+          'weight' => '-6',
+        ),
       ),
     ),
   );
