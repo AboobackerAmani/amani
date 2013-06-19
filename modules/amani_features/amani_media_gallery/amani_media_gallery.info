@@ -1,0 +1,8 @@
+name = Amani: Media Gallery
+description = Setup for photo gallery based using Media Gallery module
+core = 7.x
+package = Amani
+dependencies[] = media_gallery
+dependencies[] = multiform
+dependencies[] = plupload
+features[features_api][] = api:1
