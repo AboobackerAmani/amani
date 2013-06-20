@@ -194,6 +194,37 @@
       color: $orange
 
 #block-views-front_page_slideshow-block
+  position: relative
+  #views_slideshow_controls_text_front_page_slideshow-block
+    height: 0
+    .views-slideshow-controls-text-pause
+      display: none
+    .views-slideshow-controls-text-previous
+      padding: 10px
+      a
+        display: inline-block
+        background: url('../images/icons/rotator_arrows.png') no-repeat 0 0
+        height: 22px
+        width: 11px
+        text-indent: -999px
+        overflow: hidden
+        position: absolute
+        right: 50px
+        bottom: 20px
+        z-index: 99
+    .views-slideshow-controls-text-next
+      padding: 10px
+      a
+        display: inline-block
+        background: url('../images/icons/rotator_arrows.png') no-repeat -19px 0
+        height: 22px
+        width: 11px
+        text-indent: -999px
+        overflow: hidden
+        position: absolute
+        right: 20px
+        bottom: 20px
+        z-index: 99
   .views-slideshow-cycle-main-frame-row
     width: 100% !important
     margin-bottom: $margin

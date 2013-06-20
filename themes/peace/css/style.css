@@ -1,4 +1,3 @@
-@charset "IBM437";
 /* Font styles. */
 body {
   margin: 0;
@@ -630,18 +629,50 @@ a {
       box-shadow: 5px 5px 5px #e9e9e9;
       color: #ee8f1c; }
 
-#block-views-front_page_slideshow-block .views-slideshow-cycle-main-frame-row {
-  width: 100% !important;
-  margin-bottom: 30px; }
-  #block-views-front_page_slideshow-block .views-slideshow-cycle-main-frame-row .views-field-title {
-    background: white;
-    padding: 30px; }
-  #block-views-front_page_slideshow-block .views-slideshow-cycle-main-frame-row .views-field-body {
-    background: white;
-    padding: 30px; }
-#block-views-front_page_slideshow-block img {
-  width: 100%;
-  height: auto; }
+#block-views-front_page_slideshow-block {
+  position: relative; }
+  #block-views-front_page_slideshow-block #views_slideshow_controls_text_front_page_slideshow-block {
+    height: 0; }
+    #block-views-front_page_slideshow-block #views_slideshow_controls_text_front_page_slideshow-block .views-slideshow-controls-text-pause {
+      display: none; }
+    #block-views-front_page_slideshow-block #views_slideshow_controls_text_front_page_slideshow-block .views-slideshow-controls-text-previous {
+      padding: 10px; }
+      #block-views-front_page_slideshow-block #views_slideshow_controls_text_front_page_slideshow-block .views-slideshow-controls-text-previous a {
+        display: inline-block;
+        background: url("../images/icons/rotator_arrows.png") no-repeat 0 0;
+        height: 22px;
+        width: 11px;
+        text-indent: -999px;
+        overflow: hidden;
+        position: absolute;
+        right: 50px;
+        bottom: 20px;
+        z-index: 99; }
+    #block-views-front_page_slideshow-block #views_slideshow_controls_text_front_page_slideshow-block .views-slideshow-controls-text-next {
+      padding: 10px; }
+      #block-views-front_page_slideshow-block #views_slideshow_controls_text_front_page_slideshow-block .views-slideshow-controls-text-next a {
+        display: inline-block;
+        background: url("../images/icons/rotator_arrows.png") no-repeat -19px 0;
+        height: 22px;
+        width: 11px;
+        text-indent: -999px;
+        overflow: hidden;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        z-index: 99; }
+  #block-views-front_page_slideshow-block .views-slideshow-cycle-main-frame-row {
+    width: 100% !important;
+    margin-bottom: 30px; }
+    #block-views-front_page_slideshow-block .views-slideshow-cycle-main-frame-row .views-field-title {
+      background: white;
+      padding: 30px; }
+    #block-views-front_page_slideshow-block .views-slideshow-cycle-main-frame-row .views-field-body {
+      background: white;
+      padding: 30px; }
+  #block-views-front_page_slideshow-block img {
+    width: 100%;
+    height: auto; }
 
 #header-region #block-menu-menu-meta {
   display: block;
