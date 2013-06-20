@@ -137,6 +137,25 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '0',
   );
+  // Exported menu link: menu-amani-main-menu:taxonomy/term/46
+  $menu_links['menu-amani-main-menu:taxonomy/term/46'] = array(
+    'menu_name' => 'menu-amani-main-menu',
+    'link_path' => 'taxonomy/term/46',
+    'router_path' => 'taxonomy/term/%',
+    'link_title' => 'Image Gallery',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-49',
+    'parent_path' => 'about',
+  );
   // Exported menu link: menu-amani-main-menu:team
   $menu_links['menu-amani-main-menu:team'] = array(
     'menu_name' => 'menu-amani-main-menu',
@@ -153,7 +172,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '0',
+    'weight' => '-50',
     'parent_path' => 'about',
   );
   // Exported menu link: menu-meta:<front>
@@ -252,6 +271,7 @@ function amani_global_menu_default_menu_links() {
   t('Contact');
   t('Facebook');
   t('Get Involved');
+  t('Image Gallery');
   t('Map');
   t('News & Events');
   t('Projects');
