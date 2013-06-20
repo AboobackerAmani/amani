@@ -28,6 +28,9 @@ a
 // Logo
 #name-and-slogan
   @include span-columns(3)
+  @include media($motab)
+    @include fill-parent
+    text-align: center
   .site-slogan
     font-style: oblique
     font-size: 14px
@@ -36,7 +39,7 @@ a
 #site-name
   //border-right: 1px solid #000
   a
-    display: block
+    display: inline-block
     height: 100px
     width: 130px
     background-repeat: no-repeat
@@ -53,6 +56,8 @@ a
 #header-region
   @include span-columns(9)
   @include omega
+  @include media($motab)
+    display: none
 
 // Region top
 .region-home-content-top-rotator
@@ -62,10 +67,14 @@ a
   background: #fff
   .left-col
     @include span-columns(8)
+    @include media($tablet)
+      @include fill-parent
   .right-col
     @include span-columns(4)
     @include omega
     padding: $padding
+    @include media($tablet)
+      @include fill-parent
     h2
       font-size: 24px
       line-height: 1.24
@@ -88,6 +97,9 @@ a
     @include omega(3n)
     padding: $padding
     background: #fff
+    @include media($motab)
+      @include fill-parent()
+      @include omega()
     .views-field-field-image img
       width: 100%
       height: auto
@@ -154,6 +166,12 @@ a
           &:hover, &:active
             color: lighten($orange, 10%)
 
+#block-superfish-1
+  @include media($motab)
+    position: absolute
+    top: 0
+    display: none !important
+    left: 0
 // Sidebar
 #sidebar-second
   .block
@@ -209,14 +227,38 @@ a
       text-decoration: none
   #block-boxes-amani_powered_by
     @include span-columns(3 of 12)
+    @include media($motab)
+      @include fill-parent
+      @include omega
+      margin-bottom: $margin
+      border: 0
+      text-align: center
   #block-system-main-menu,
   #block-menu-menu-amani-main-menu,
   #block-menu-menu-meta
     @include span-columns(3 of 12)
+    @include media($motab)
+      @include fill-parent
+      @include omega
+      margin-bottom: $margin
+      border: 0
+      ul.menu
+        li
+          text-align: center
     ul.menu
       li
         list-style-type: none
         list-style-image: none
+  #block-boxes-amani_special_thanks
+    @include span-columns(3 of 12)
+    margin-bottom: $margin
+    @include media($motab)
+      @include fill-parent
+      @include omega
+      text-align: center
   #block-search-form
     @include span-columns(3 of 12)
-    margin-top: $margin
+    @include media($motab)
+      @include fill-parent
+      @include omega
+      margin-bottom: $margin
