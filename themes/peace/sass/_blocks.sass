@@ -159,7 +159,11 @@
 
 // Rotator
 #views_slideshow_cycle_teaser_section_front_page_slideshow-block
-  height: 292px !important
+  //height: 292px !important
+  //@include row()
+  overflow: hidden
+  width: 100% !important
+  //height: 100% !important
 
 // Search block
 #block-search-form
@@ -227,6 +231,8 @@
         z-index: 99
   .views-slideshow-cycle-main-frame-row
     width: 100% !important
+    height: auto !important
+    overflow: hidden
     margin-bottom: $margin
     .views-field-title
       background: #fff
