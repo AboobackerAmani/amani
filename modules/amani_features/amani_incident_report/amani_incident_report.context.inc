@@ -44,6 +44,12 @@ function amani_incident_report_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-9',
         ),
+        'views-incident_reports-latest' => array(
+          'module' => 'views',
+          'delta' => 'incident_reports-latest',
+          'region' => 'sidebar_second',
+          'weight' => '-8',
+        ),
         'bean-total-incidents' => array(
           'module' => 'bean',
           'delta' => 'total-incidents',
