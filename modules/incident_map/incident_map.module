@@ -166,7 +166,19 @@ function incident_map_reports() {
   leaflet_framework_extend_map('incident_reports', $map_id, array(
     'source-url' => '/geojson/incident-reports',
   ));
+  $title = variable_get('incident-map-map-record-title',null);
+  if($title !== "") {
+    drupal_set_title($title);
 
+    $new_path = array (
+      'source' => 'incident-reports',
+      'alias' => $title,
+    );
+    path_save($new_path);
+  }
+  else {
+    drupal_set_title('Incident report');
+  }
   // Markup.
   return array('map' => $map);
 }
