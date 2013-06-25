@@ -14,6 +14,7 @@
 function incident_map_settings() {
   $settings = module_invoke_all('incident_map_settings');
   $form = array();
+  $form['#submit'][] = 'incident_map_settings_submit';  
   foreach ($settings as $setting) {
     $form[] = $setting['form'] + array(
       '#type' => 'fieldset',
@@ -24,6 +25,16 @@ function incident_map_settings() {
   return system_settings_form($form);
 }
 
+function incident_map_settings_submit($form, &$form_state) {
+  $values = $form_state['values']; 
+  $title = variable_get('incident-map-map-record-title', $default = 'Incident reports'); 
+  $path = array (
+    'source' => 'incident-reports', 
+    'alias' => $title,
+  ); 
+  path_save($path); 
+  drupal_clear_path_cache('incident-reports'); 
+}
 /**
  * Implements hook_incident_map_settings().
  */
