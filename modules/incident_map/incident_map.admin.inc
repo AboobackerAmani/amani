@@ -86,7 +86,7 @@ function incident_map_incident_map_settings() {
 function incident_map_map_record_settings($prefix) {
   $items = array();
   $title = "$prefix-title";
-  $items[$title] = array('#type' => 'textfield', '#title' => t("Map Title"),'#default_value' => variable_get($title, null));
+  $items[$title] = array('#type' => 'textfield', '#title' => t("Map Title"),'#default_value' => variable_get($title, NULL));
   return $items;
 }
 
