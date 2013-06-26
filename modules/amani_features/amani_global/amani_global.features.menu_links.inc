@@ -46,6 +46,25 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '2',
   );
+  // Exported menu link: menu-amani-main-menu:gallery
+  $menu_links['menu-amani-main-menu:gallery'] = array(
+    'menu_name' => 'menu-amani-main-menu',
+    'link_path' => 'gallery',
+    'router_path' => 'gallery',
+    'link_title' => 'Image Gallery',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-49',
+    'parent_path' => 'about',
+  );
   // Exported menu link: menu-amani-main-menu:get-involved
   $menu_links['menu-amani-main-menu:get-involved'] = array(
     'menu_name' => 'menu-amani-main-menu',
@@ -136,25 +155,6 @@ function amani_global_menu_default_menu_links() {
     'has_children' => '1',
     'expanded' => '0',
     'weight' => '0',
-  );
-  // Exported menu link: menu-amani-main-menu:taxonomy/term/46
-  $menu_links['menu-amani-main-menu:taxonomy/term/46'] = array(
-    'menu_name' => 'menu-amani-main-menu',
-    'link_path' => 'taxonomy/term/46',
-    'router_path' => 'taxonomy/term/%',
-    'link_title' => 'Image Gallery',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-49',
-    'parent_path' => 'about',
   );
   // Exported menu link: menu-amani-main-menu:team
   $menu_links['menu-amani-main-menu:team'] = array(

@@ -22,7 +22,7 @@ function amani_global_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Content admin';
+  $handler->display->display_options['title'] = 'Manage Website Content';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['access']['perm'] = 'access content overview';
@@ -255,7 +255,7 @@ function amani_global_views_default_views() {
   $handler->display->display_options['menu']['context'] = 0;
   $translatables['content_admin'] = array(
     t('Master'),
-    t('Content admin'),
+    t('Manage Website Content'),
     t('more'),
     t('Apply'),
     t('Reset'),
