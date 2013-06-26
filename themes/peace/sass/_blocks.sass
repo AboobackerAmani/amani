@@ -64,29 +64,59 @@
   .views-field-view-node
     text-align: right
 
-// Twitter block
-.sidebar
-  #block-views-tweets-block_1
+.sidebar 
+  // Social Media Feeds
+  #block-quicktabs-social_media_feeds
     background: none
-    box-shadow: 0 0 0
     padding: 0
-    h2.block-title
-      border-bottom-color: $grey_dark
-    li.views-row
-      margin: 0
-      list-style-type: none
-      padding: $padding/2 0
-      border-bottom: 1px solid $grey
+    box-shadow: none
+    margin-top: 10px !important
+    > .block-inner > h2.block-title
+      display: none
+    ul.quicktabs-tabs
+      height: 28px
+      border: none
+      li
+        background: #fff
+        padding: 10px 0
+        border: none
+        &.active
+          background: $grey_text
+          border: none
+          a
+            color: #fff
+        a
+          padding: 10px 20px
+          color: $orange
+          &:after
+            content: ''
+    #quicktabs-container-social_media_feeds
+      border: none
+      border-top: 2px solid $grey_text
+      background: none
+      padding: 0
+    // Twitter block
+    #block-views-tweets-block_1
+      background: none
+      box-shadow: 0 0 0
+      padding: 0
+      h2.block-title
+        border-bottom-color: $grey_dark
+      li.views-row
+        margin: 0
+        list-style-type: none
+        padding: $padding/2 0
+        border-bottom: 1px dotted $grey
+    // Facebook block
+    #block-fb_likebox-0
+      background: transparent
+      iframe
+        width: 100% !important
   // Front bottom block
   #block-boxes-front_second_sidebar_bottom
     background: none
     box-shadow: 0 0 0
     padding: 0
-
-// Facebook block
-.block-fb-likebox
-  iframe
-    width: 100% !important
 
 // Calendar block.
 .sidebar

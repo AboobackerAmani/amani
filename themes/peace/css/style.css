@@ -568,24 +568,54 @@ a {
   #block-views-news_and_events-block_1 .views-field-view-node {
     text-align: right; }
 
-.sidebar #block-views-tweets-block_1 {
+.sidebar #block-quicktabs-social_media_feeds {
   background: none;
-  box-shadow: 0 0 0;
-  padding: 0; }
-  .sidebar #block-views-tweets-block_1 h2.block-title {
-    border-bottom-color: #414042; }
-  .sidebar #block-views-tweets-block_1 li.views-row {
-    margin: 0;
-    list-style-type: none;
-    padding: 15px 0;
-    border-bottom: 1px solid #cccccc; }
+  padding: 0;
+  box-shadow: none;
+  margin-top: 10px !important; }
+  .sidebar #block-quicktabs-social_media_feeds > .block-inner > h2.block-title {
+    display: none; }
+  .sidebar #block-quicktabs-social_media_feeds ul.quicktabs-tabs {
+    height: 28px;
+    border: none; }
+    .sidebar #block-quicktabs-social_media_feeds ul.quicktabs-tabs li {
+      background: white;
+      padding: 10px 0;
+      border: none; }
+      .sidebar #block-quicktabs-social_media_feeds ul.quicktabs-tabs li.active {
+        background: #4c4d4f;
+        border: none; }
+        .sidebar #block-quicktabs-social_media_feeds ul.quicktabs-tabs li.active a {
+          color: white; }
+      .sidebar #block-quicktabs-social_media_feeds ul.quicktabs-tabs li a {
+        padding: 10px 20px;
+        color: #ee8f1c; }
+        .sidebar #block-quicktabs-social_media_feeds ul.quicktabs-tabs li a:after {
+          content: ""; }
+  .sidebar #block-quicktabs-social_media_feeds #quicktabs-container-social_media_feeds {
+    border: none;
+    border-top: 2px solid #4c4d4f;
+    background: none;
+    padding: 0; }
+  .sidebar #block-quicktabs-social_media_feeds #block-views-tweets-block_1 {
+    background: none;
+    box-shadow: 0 0 0;
+    padding: 0; }
+    .sidebar #block-quicktabs-social_media_feeds #block-views-tweets-block_1 h2.block-title {
+      border-bottom-color: #414042; }
+    .sidebar #block-quicktabs-social_media_feeds #block-views-tweets-block_1 li.views-row {
+      margin: 0;
+      list-style-type: none;
+      padding: 15px 0;
+      border-bottom: 1px dotted #cccccc; }
+  .sidebar #block-quicktabs-social_media_feeds #block-fb_likebox-0 {
+    background: transparent; }
+    .sidebar #block-quicktabs-social_media_feeds #block-fb_likebox-0 iframe {
+      width: 100% !important; }
 .sidebar #block-boxes-front_second_sidebar_bottom {
   background: none;
   box-shadow: 0 0 0;
   padding: 0; }
-
-.block-fb-likebox iframe {
-  width: 100% !important; }
 
 .sidebar #block-views-calendar_of_events-list,
 .sidebar #block-views-calendar_of_events-calendar {
