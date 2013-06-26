@@ -217,6 +217,8 @@ a
   background: $grey_dark
   color: #fff
   font-family: "georgia"
+  .container-inner
+    position: relative
   .content
     font-size: 14px
   a
@@ -237,6 +239,7 @@ a
   #block-menu-menu-amani-main-menu,
   #block-menu-menu-meta
     @include span-columns(3 of 12)
+    margin-bottom: $margin
     @include media($motab)
       @include fill-parent
       @include omega
@@ -252,10 +255,14 @@ a
   #block-boxes-amani_special_thanks
     @include span-columns(3 of 12)
     margin-bottom: $margin
+    position: absolute
+    right: 0
+    margin-right: 0
     @include media($motab)
       @include fill-parent
       @include omega
       text-align: center
+      position: static
   #block-search-form
     @include span-columns(3 of 12)
     @include media($motab)

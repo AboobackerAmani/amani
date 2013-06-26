@@ -423,6 +423,8 @@ a {
   background: #414042;
   color: white;
   font-family: "georgia"; }
+  #footer .container-inner {
+    position: relative; }
   #footer .content {
     font-size: 14px; }
   #footer a:link, #footer a:visited {
@@ -450,7 +452,8 @@ a {
     display: block;
     float: left;
     margin-right: 2.12766%;
-    width: 23.40426%; }
+    width: 23.40426%;
+    margin-bottom: 30px; }
     #footer #block-system-main-menu:last-child,
     #footer #block-menu-menu-amani-main-menu:last-child,
     #footer #block-menu-menu-meta:last-child {
@@ -477,14 +480,18 @@ a {
     float: left;
     margin-right: 2.12766%;
     width: 23.40426%;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    position: absolute;
+    right: 0;
+    margin-right: 0; }
     #footer #block-boxes-amani_special_thanks:last-child {
       margin-right: 0; }
     @media screen and (max-width: 600px) {
       #footer #block-boxes-amani_special_thanks {
         width: 100%;
         margin-right: 0;
-        text-align: center; } }
+        text-align: center;
+        position: static; } }
   #footer #block-search-form {
     display: block;
     float: left;
