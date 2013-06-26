@@ -1121,20 +1121,32 @@ a {
 
 .page-resources .view-resources .views-exposed-form .views-exposed-widget {
   float: none;
-  padding: 10px 20px 10px 0;
+  padding: 10px 0;
   line-height: 1em; }
 .page-resources .view-resources .views-exposed-form .col {
+  display: block;
   float: left;
-  margin-right: 20px; }
+  margin-right: 2.12766%;
+  width: 40.42553%; }
+  .page-resources .view-resources .views-exposed-form .col:last-child {
+    margin-right: 0; }
+.page-resources .view-resources .views-exposed-form #col3 {
+  display: block;
+  float: left;
+  margin-right: 2.12766%;
+  width: 14.89362%; }
+  .page-resources .view-resources .views-exposed-form #col3:last-child {
+    margin-right: 0; }
 .page-resources .view-resources .views-exposed-form label {
   color: #ee8f1c;
   font-weight: normal;
   display: inline-block;
   font-style: italic;
-  width: 90px;
+  width: 25%;
   vertical-align: top; }
 .page-resources .view-resources .views-exposed-form .views-widget {
-  display: inline-block; }
+  display: inline-block;
+  width: 70%; }
 .page-resources .view-resources .views-exposed-form .form-text {
   border: 0;
   background: white;
@@ -1142,51 +1154,54 @@ a {
   box-shadow: 2px 3px 4px #c8c8c8;
   display: inline-block;
   height: 45px;
-  width: 230px;
+  width: 100%;
   font-size: 16px; }
 .page-resources .view-resources .views-exposed-form select {
   border: 0;
-  background: white url("../images/icons/orange_arrow.png") no-repeat 85% 50%;
-  margin-right: -80px;
-  width: 240px; }
+  background: white url("../images/icons/orange_arrow.png") no-repeat 75% 50%;
+  width: 130%; }
 .page-resources .view-resources .views-exposed-form .form-type-select {
-  background: white url("../images/icons/orange_arrow.png") no-repeat 95% 50%;
   border: 0;
   background: white;
   padding: 10px;
   box-shadow: 2px 3px 4px #c8c8c8;
   font-size: 16px;
-  width: 230px;
+  width: 100%;
   height: 45px;
   overflow: hidden; }
 .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-min-wrapper,
 .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper {
-  float: left; }
+  float: left;
+  width: 48%;
+  margin-right: 4%; }
   .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-min-wrapper .form-item,
   .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper .form-item {
     position: relative;
-    margin-right: 5px; }
+    margin: 0; }
     .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-min-wrapper .form-item .date-padding,
     .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper .form-item .date-padding {
       float: none; }
     .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-min-wrapper .form-item input,
     .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper .form-item input {
-      width: 110px;
+      width: 100%;
       margin: 0; }
     .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-min-wrapper .form-item label,
     .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper .form-item label {
       position: absolute;
-      top: 45px; }
+      top: 45px;
+      width: 100%; }
     .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-min-wrapper .form-item .description,
     .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper .form-item .description {
       position: relative;
       top: 10px; }
+.page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper {
+  margin-right: 0; }
 .page-resources .view-resources .views-exposed-form .views-submit-button .form-submit,
 .page-resources .view-resources .views-exposed-form .views-reset-button .form-submit {
   background: #ee8f1c;
   border: 0;
   color: white;
-  width: 100px;
+  width: 100%;
   height: 45px;
   margin-top: 0; }
 .page-resources .view-resources .view-content {
