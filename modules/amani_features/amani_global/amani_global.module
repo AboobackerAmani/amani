@@ -41,7 +41,7 @@ function amani_global_block_view($delta = '') {
 
   switch ($delta) {
     case 'add_content_links':
-      $block['subject'] = t('Manage content');
+      $block['subject'] = t('Manage logo & site info');
       $block['content'] = amani_global_add_content_links();
       break;
   }
@@ -57,8 +57,11 @@ function amani_global_add_content_links() {
 
   // Manage logo and tagline (site slogan)
   if (user_access('administer site configuration')) {
+    $items['items'] = array(
+      l('Manage site logo and info', 'amani/site-info'),
+    );
     $output = '<div class="manage-logo">'
-      . l('Manage site logo and info', 'amani/site-info')
+      . theme('item_list', $items)
       . '</div>';
   }
 
@@ -66,7 +69,7 @@ function amani_global_add_content_links() {
   $item = menu_get_item('node/add');
   $content = system_admin_menu_block($item);
   if ($content) {
-    $output .= '<div><span class="node-type-list">Add content</span><ul>';
+    $output .= '<div><span class="node-type-list">Add new content</span><ul>';
     foreach ($content as $item) {
       $output .= '<li>' . l('Add ' . $item['title'], $item['href'], $item['localized_options']) . '</li>';
     }
