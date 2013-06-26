@@ -81,7 +81,7 @@
         padding: 10px 0
         border: none
         &.active
-          background: $grey_text
+          background: $grey_dark
           border: none
           a
             color: #fff
@@ -92,7 +92,7 @@
             content: ''
     #quicktabs-container-social_media_feeds
       border: none
-      border-top: 2px solid $grey_text
+      border-top: 2px solid $grey_dark
       background: none
       padding: 0
     // Twitter block
@@ -107,6 +107,18 @@
         list-style-type: none
         padding: $padding/2 0
         border-bottom: 1px dotted $grey
+        .views-field-screen-name
+          display: none
+      li.views-row-1
+        padding-top: 0
+        .views-field-screen-name
+          display: block
+          background: url('../images/icons/twitter_bird.png') no-repeat center left
+          padding-left: 35px
+          font-size: 20px
+          border-bottom: 2px solid $grey_dark
+          padding: $padding/3 35px
+          margin-bottom: $margin/2
     // Facebook block
     #block-fb_likebox-0
       background: transparent

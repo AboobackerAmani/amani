@@ -583,7 +583,7 @@ a {
       padding: 10px 0;
       border: none; }
       .sidebar #block-quicktabs-social_media_feeds ul.quicktabs-tabs li.active {
-        background: #4c4d4f;
+        background: #414042;
         border: none; }
         .sidebar #block-quicktabs-social_media_feeds ul.quicktabs-tabs li.active a {
           color: white; }
@@ -594,7 +594,7 @@ a {
           content: ""; }
   .sidebar #block-quicktabs-social_media_feeds #quicktabs-container-social_media_feeds {
     border: none;
-    border-top: 2px solid #4c4d4f;
+    border-top: 2px solid #414042;
     background: none;
     padding: 0; }
   .sidebar #block-quicktabs-social_media_feeds #block-views-tweets-block_1 {
@@ -608,6 +608,18 @@ a {
       list-style-type: none;
       padding: 15px 0;
       border-bottom: 1px dotted #cccccc; }
+      .sidebar #block-quicktabs-social_media_feeds #block-views-tweets-block_1 li.views-row .views-field-screen-name {
+        display: none; }
+    .sidebar #block-quicktabs-social_media_feeds #block-views-tweets-block_1 li.views-row-1 {
+      padding-top: 0; }
+      .sidebar #block-quicktabs-social_media_feeds #block-views-tweets-block_1 li.views-row-1 .views-field-screen-name {
+        display: block;
+        background: url("../images/icons/twitter_bird.png") no-repeat center left;
+        padding-left: 35px;
+        font-size: 20px;
+        border-bottom: 2px solid #414042;
+        padding: 10px 35px;
+        margin-bottom: 15px; }
   .sidebar #block-quicktabs-social_media_feeds #block-fb_likebox-0 {
     background: transparent; }
     .sidebar #block-quicktabs-social_media_feeds #block-fb_likebox-0 iframe {
