@@ -1119,6 +1119,9 @@ a {
     width: 40.42553%; }
     .page-about .view-about-page .views-row .views-field-field-image:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 600px) {
+      .page-about .view-about-page .views-row .views-field-field-image {
+        width: 100%; } }
     .page-about .view-about-page .views-row .views-field-field-image img {
       width: 100%;
       height: auto; }
@@ -1132,6 +1135,9 @@ a {
     font-size: 16px; }
     .page-about .view-about-page .views-row .views-field-title:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 600px) {
+      .page-about .view-about-page .views-row .views-field-title {
+        width: 100%; } }
   .page-about .view-about-page .views-row .views-field-body {
     display: block;
     float: left;
@@ -1141,6 +1147,9 @@ a {
     font-family: "Georgia"; }
     .page-about .view-about-page .views-row .views-field-body:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 600px) {
+      .page-about .view-about-page .views-row .views-field-body {
+        width: 100%; } }
 
 .page-get-involved .view-get-involved.view-display-id-page {
   margin-top: 30px;
