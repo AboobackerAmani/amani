@@ -148,6 +148,11 @@
     .date-prev
       margin-left: 0
 
+// Calendar
+#block-views-calendar_of_events-calendar
+  @include media($motab)
+    margin-top: $margin !important
+
 // Donate block
 #block-boxes-amani_donate
   background: #fff
@@ -320,6 +325,12 @@
   .block
     @include span-columns(4 of 8)
     @include omega(2n)
+
+// Incident map
+#incident-map-default
+  @include media($motab)
+    height: 300px !important
+
 // Map 3x region
 .region-map-region-3x
   margin-top: $margin
@@ -328,6 +339,9 @@
     @include omega(3n)
     margin-top: $margin
     margin-bottom: $margin
+    @include media($motab)
+      @include fill-parent
+      margin-top: 0
     h2.block-title
       font-size: 1.2em
 
