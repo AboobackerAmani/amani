@@ -81,6 +81,8 @@
         background: #fff url('../images/icons/orange_arrow.png') no-repeat 85% 50%
         margin-right: -80px
         width: 210px
+        @include media($motab)
+          background-position: 67% 50%
       .form-type-select
         background: #fff url('../images/icons/orange_arrow.png') no-repeat 95% 50%
         border: 0
@@ -90,6 +92,8 @@
         font-size: 16px
         width: 200px
         overflow: hidden
+        @include media($motab)
+          width: 170px
       label
         display: none
       #edit-keys-wrapper
@@ -234,6 +238,8 @@
         img
           width: 40px
           height: auto
+    .views-field-field-document
+      overflow: hidden
     .views-field-field-date
       @include media($motab)
         display: none
@@ -329,6 +335,23 @@
       tr.odd
         background: none
         border-bottom: 1px solid $grey
+      td
+        vertical-align: top
+      h3
+        color: $orange
+      .views-field-field-date
+        text-align: center
+        a
+          display: block
+          width: 96px
+          height: 96px
+          text-indent: -9999px
+          &.link
+            background: url('../images/icons/fileicon_web.png') no-repeat
+        &.text-plain a
+          background: url('../images/icons/fileicon_txt.png') no-repeat
+        &.application-pdf a
+          background: url('../images/icons/fileicon_pdf.png') no-repeat
 
 // Get invlolved node
 .node-type-get-involved
