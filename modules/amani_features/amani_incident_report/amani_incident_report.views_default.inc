@@ -47,7 +47,7 @@ function amani_incident_report_views_default_views() {
   $handler->display->display_options['fields']['field_incident_date']['label'] = '';
   $handler->display->display_options['fields']['field_incident_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_incident_date']['settings'] = array(
-    'format_type' => 'short',
+    'format_type' => 'event_day',
     'fromto' => '',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -61,6 +61,7 @@ function amani_incident_report_views_default_views() {
   $handler->display->display_options['fields']['field_incident_address']['label'] = '';
   $handler->display->display_options['fields']['field_incident_address']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_incident_address']['click_sort_column'] = 'country';
+  $handler->display->display_options['fields']['field_incident_address']['type'] = 'amani_address_city';
   $handler->display->display_options['fields']['field_incident_address']['settings'] = array(
     'use_widget_handlers' => 0,
     'format_handlers' => array(
