@@ -81,6 +81,10 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'I\'m sorry but there are no resources for the selected criteria.';
   $handler->display->display_options['empty']['area']['format'] = 'plain_text';
+  /* Relationship: Content: Document (field_document:fid) */
+  $handler->display->display_options['relationships']['field_document_fid']['id'] = 'field_document_fid';
+  $handler->display->display_options['relationships']['field_document_fid']['table'] = 'field_data_field_document';
+  $handler->display->display_options['relationships']['field_document_fid']['field'] = 'field_document_fid';
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
@@ -93,11 +97,21 @@ function amani_resource_views_default_views() {
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_image']['group_column'] = 'fid';
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<h3>[title]</h3>
+[body]';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Link */
@@ -105,20 +119,33 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['label'] = '';
+  $handler->display->display_options['fields']['field_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['alter']['text'] = '[field_link-title]';
+  $handler->display->display_options['fields']['field_link']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['alter']['path'] = '[field_link-url]';
+  $handler->display->display_options['fields']['field_link']['alter']['link_class'] = 'link';
   $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
-  /* Field: Content: Document */
-  $handler->display->display_options['fields']['field_document']['id'] = 'field_document';
-  $handler->display->display_options['fields']['field_document']['table'] = 'field_data_field_document';
-  $handler->display->display_options['fields']['field_document']['field'] = 'field_document';
-  $handler->display->display_options['fields']['field_document']['label'] = '';
-  $handler->display->display_options['fields']['field_document']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_document']['click_sort_column'] = 'fid';
+  /* Field: File: Mime type */
+  $handler->display->display_options['fields']['filemime']['id'] = 'filemime';
+  $handler->display->display_options['fields']['filemime']['table'] = 'file_managed';
+  $handler->display->display_options['fields']['filemime']['field'] = 'filemime';
+  $handler->display->display_options['fields']['filemime']['relationship'] = 'field_document_fid';
+  $handler->display->display_options['fields']['filemime']['label'] = '';
+  $handler->display->display_options['fields']['filemime']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['filemime']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['filemime']['link_to_file'] = TRUE;
   /* Field: Content: Date */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['label'] = '';
+  $handler->display->display_options['fields']['field_date']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_date']['alter']['text'] = '[field_link]
+[filemime]
+[field_date]';
+  $handler->display->display_options['fields']['field_date']['element_class'] = '[filemime]';
   $handler->display->display_options['fields']['field_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_date']['settings'] = array(
     'format_type' => 'month_year',
@@ -275,6 +302,13 @@ function amani_resource_views_default_views() {
     t('last »'),
     t('No results'),
     t('I\'m sorry but there are no resources for the selected criteria.'),
+    t('file from field_document'),
+    t('<h3>[title]</h3>
+[body]'),
+    t('[field_link-title]'),
+    t('[field_link]
+[filemime]
+[field_date]'),
     t('Resource Type'),
     t('Theme'),
     t('Location'),
