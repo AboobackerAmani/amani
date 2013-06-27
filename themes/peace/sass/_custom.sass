@@ -87,6 +87,10 @@ a
 .region-home-content-top-callout-right
   @include span-columns(3)
   @include omega
+  @include media($motab)
+    @include fill-parent
+    #block-boxes-pilot_project
+      margin-bottom: 0
   .block
     @include fill-parent
     @include omega
@@ -131,6 +135,8 @@ a
     background: #fff
     padding: $padding
     margin-bottom: $margin
+    @include media($motab)
+      @include fill-parent
     .views-field-title
       text-transform: uppercase
       font-size: 16px

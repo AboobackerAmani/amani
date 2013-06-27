@@ -259,6 +259,11 @@ a {
   margin-right: 0; }
   .region-home-content-top-callout-right:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 600px) {
+    .region-home-content-top-callout-right {
+      width: 100%; }
+      .region-home-content-top-callout-right #block-boxes-pilot_project {
+        margin-bottom: 0; } }
   .region-home-content-top-callout-right .block {
     width: 100%;
     margin-right: 0;
@@ -318,6 +323,9 @@ a {
     margin-right: 0; }
   .page-programs .views-row:nth-child(2n) {
     margin-right: 0; }
+  @media screen and (max-width: 600px) {
+    .page-programs .views-row {
+      width: 100%; } }
   .page-programs .views-row .views-field-title {
     text-transform: uppercase;
     font-size: 16px;
@@ -986,6 +994,11 @@ a {
   position: absolute;
   top: -70px;
   right: -30px; }
+  @media screen and (max-width: 600px) {
+    .page-team .view-id-team.view-display-id-page .views-exposed-form {
+      top: -90px; }
+      .page-team .view-id-team.view-display-id-page .views-exposed-form #edit-keys-wrapper {
+        display: none; } }
   .page-team .view-id-team.view-display-id-page .views-exposed-form .views-exposed-widget {
     margin: 0;
     padding: 0;
@@ -1070,6 +1083,9 @@ a {
   width: 74.46809%; }
   .page-about .region-home-content-top-rotator:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 600px) {
+    .page-about .region-home-content-top-rotator {
+      width: 100%; } }
   .page-about .region-home-content-top-rotator #block-views-about_page-block_1 .views-row {
     border: 0;
     margin: 0;
@@ -1165,6 +1181,13 @@ a {
     .page-get-involved .view-get-involved.view-display-id-page .views-field-body:last-child {
       margin-right: 0; }
 
+@media screen and (max-width: 600px) {
+  .page-resources .view-resources .views-field-field-image img {
+    width: 40px;
+    height: auto; } }
+@media screen and (max-width: 600px) {
+  .page-resources .view-resources .views-field-field-date {
+    display: none; } }
 .page-resources .view-resources .views-exposed-form .views-exposed-widget {
   float: none;
   padding: 10px 0;

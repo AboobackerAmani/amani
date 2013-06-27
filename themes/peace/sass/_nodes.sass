@@ -58,6 +58,10 @@
       position: absolute
       top: -70px
       right: -30px
+      @include media($motab)
+        top: -90px
+        #edit-keys-wrapper
+          display: none
       .views-exposed-widget
         margin: 0
         padding: 0
@@ -134,6 +138,8 @@
   .region-home-content-top-rotator
     background: none
     @include span-columns(9)
+    @include media($motab)
+      @include fill-parent
     #block-views-about_page-block_1
       .views-row
         border: 0
@@ -207,6 +213,14 @@
 // Resources page
 .page-resources
   .view-resources
+    .views-field-field-image
+      @include media($motab)
+        img
+          width: 40px
+          height: auto
+    .views-field-field-date
+      @include media($motab)
+        display: none
     .views-exposed-form
       .views-exposed-widget
         float: none
