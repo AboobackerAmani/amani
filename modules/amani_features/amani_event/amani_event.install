@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Delete unwanted event fields from Open Outreach debut_event feature.
+ */
+function amani_overrides_update_7000() {
+
+  $instance = field_info_instance('node', 'field_content_image', 'event');
+  field_delete_instance($instance, FALSE);
+
+}
