@@ -197,6 +197,12 @@
       overflow: hidden
     .views-field-field-image
       @include span-columns(2)
+      @include media($motab)
+        @include fill-parent
+        margin-bottom: $margin
+        img
+          width: 100%
+          height: auto
     .views-field-title
       @include span-columns(10)
       @include omega
@@ -205,10 +211,14 @@
       font-size: 16px
       text-transform: uppercase
       margin-bottom: 5px
+      @include media($motab)
+        @include fill-parent
     .views-field-body
       @include span-columns(10)
       @include omega
       font-family: "Georgia"
+      @include media($motab)
+        @include fill-parent
 
 // Resources page
 .page-resources
@@ -313,6 +323,15 @@
       tr.odd
         background: none
         border-bottom: 1px solid $grey
+
+// Get invlolved node
+.node-type-get-involved
+  .field-name-field-graphic
+    @include media($motab)
+      margin-bottom: $margin
+      img
+        width: 100%
+        height: auto
 
 // Contact page
 .page-contact

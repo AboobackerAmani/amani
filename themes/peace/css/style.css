@@ -1158,6 +1158,13 @@ a {
     width: 14.89362%; }
     .page-get-involved .view-get-involved.view-display-id-page .views-field-field-image:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 600px) {
+      .page-get-involved .view-get-involved.view-display-id-page .views-field-field-image {
+        width: 100%;
+        margin-bottom: 30px; }
+        .page-get-involved .view-get-involved.view-display-id-page .views-field-field-image img {
+          width: 100%;
+          height: auto; } }
   .page-get-involved .view-get-involved.view-display-id-page .views-field-title {
     display: block;
     float: left;
@@ -1171,6 +1178,9 @@ a {
     margin-bottom: 5px; }
     .page-get-involved .view-get-involved.view-display-id-page .views-field-title:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 600px) {
+      .page-get-involved .view-get-involved.view-display-id-page .views-field-title {
+        width: 100%; } }
   .page-get-involved .view-get-involved.view-display-id-page .views-field-body {
     display: block;
     float: left;
@@ -1180,6 +1190,9 @@ a {
     font-family: "Georgia"; }
     .page-get-involved .view-get-involved.view-display-id-page .views-field-body:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 600px) {
+      .page-get-involved .view-get-involved.view-display-id-page .views-field-body {
+        width: 100%; } }
 
 @media screen and (max-width: 600px) {
   .page-resources .view-resources .views-field-field-image img {
@@ -1296,6 +1309,13 @@ a {
   .page-resources .view-resources .view-content tr.odd {
     background: none;
     border-bottom: 1px solid #cccccc; }
+
+@media screen and (max-width: 600px) {
+  .node-type-get-involved .field-name-field-graphic {
+    margin-bottom: 30px; }
+    .node-type-get-involved .field-name-field-graphic img {
+      width: 100%;
+      height: auto; } }
 
 .page-contact .form-item label {
   font-weight: normal;
