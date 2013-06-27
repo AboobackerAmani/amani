@@ -1031,6 +1031,9 @@ a {
     background: white url("../images/icons/orange_arrow.png") no-repeat 85% 50%;
     margin-right: -80px;
     width: 210px; }
+    @media screen and (max-width: 600px) {
+      .page-team .view-id-team.view-display-id-page .views-exposed-form select {
+        background-position: 67% 50%; } }
   .page-team .view-id-team.view-display-id-page .views-exposed-form .form-type-select {
     background: white url("../images/icons/orange_arrow.png") no-repeat 95% 50%;
     border: 0;
@@ -1040,6 +1043,9 @@ a {
     font-size: 16px;
     width: 200px;
     overflow: hidden; }
+    @media screen and (max-width: 600px) {
+      .page-team .view-id-team.view-display-id-page .views-exposed-form .form-type-select {
+        width: 170px; } }
   .page-team .view-id-team.view-display-id-page .views-exposed-form label {
     display: none; }
   .page-team .view-id-team.view-display-id-page .views-exposed-form #edit-keys-wrapper {
@@ -1220,6 +1226,8 @@ a {
   .page-resources .view-resources .views-field-field-image img {
     width: 40px;
     height: auto; } }
+.page-resources .view-resources .views-field-field-document {
+  overflow: hidden; }
 @media screen and (max-width: 600px) {
   .page-resources .view-resources .views-field-field-date {
     display: none; } }
