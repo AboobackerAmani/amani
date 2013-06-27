@@ -37,6 +37,11 @@ Drupal.behaviors.heritageTheme = {
     //     }
     //   }
     // });
+    
+    // Mobile menu functionality
+    $('.mobile-menu-link').click(function() {
+      $(this).siblings('.sf-menu').slideToggle();
+    });
 
     // text fields
     $('#edit-keys-wrapper input:not(.processed)').addClass('processed').each(function() {

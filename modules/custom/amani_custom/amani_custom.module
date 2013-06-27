@@ -9,11 +9,16 @@ function amani_custom_block_view_alter(&$data, $block) {
     case "menu-menu-amani-main-menu":
     case "menu-menu-meta":
     case "menu-menu-social-media":
-    case "superfish-1":
     case "284":
     case 'locale-language':
       // Remove the title from the menu block.
       $data['subject'] = '';
+      break;
+    case "superfish-1":
+      $data['subject'] = '';
+      // Add mobile menu link.
+      $data['content'] = '<div class="mobile-menu-link"><a href="#">' . t('Menu') . '</a></div>' . $data['content'];
+      //krumo($data);
       break;
   }
 }
