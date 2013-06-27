@@ -212,11 +212,13 @@ a {
   #header-region:last-child {
     margin-right: 0; }
   @media screen and (max-width: 600px) {
-    #header-region #block-locale-language,
-    #header-region #block-menu-menu-meta,
-    #header-region #block-search-form,
-    #header-region #block-menu-menu-social-media {
-      display: none !important; } }
+    #header-region {
+      margin-bottom: 45px; }
+      #header-region #block-locale-language,
+      #header-region #block-menu-menu-meta,
+      #header-region #block-search-form,
+      #header-region #block-menu-menu-social-media {
+        display: none !important; } }
 
 .region-home-content-top-rotator {
   width: 100%;
@@ -384,6 +386,7 @@ a {
       background: white;
       padding: 15px 0;
       border-top: 1px solid #cccccc;
+      border-bottom: 1px solid #cccccc;
       text-transform: uppercase; } }
 
 #header-region #block-superfish-1 {
@@ -400,9 +403,14 @@ a {
       background: white;
       z-index: 999;
       width: 100%; }
+      #header-region #block-superfish-1.fixed {
+        position: fixed;
+        top: 0;
+        height: 50px; }
       #header-region #block-superfish-1 #superfish-1 {
         background: white;
-        display: none; }
+        display: none;
+        box-shadow: 0 10px 10px #999999; }
         #header-region #block-superfish-1 #superfish-1 li {
           display: block;
           text-align: center;
@@ -410,6 +418,8 @@ a {
           padding: 15px 0;
           margin: 0;
           background: none; }
+          #header-region #block-superfish-1 #superfish-1 li.last {
+            margin-bottom: 15px; }
           #header-region #block-superfish-1 #superfish-1 li a {
             border-bottom: 1px solid #ee8f1c;
             display: inline;

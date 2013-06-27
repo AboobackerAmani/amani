@@ -57,6 +57,7 @@ a
   @include span-columns(9)
   @include omega
   @include media($motab)
+    margin-bottom: $margin*1.5
     #block-locale-language,
     #block-menu-menu-meta,
     #block-search-form,
@@ -179,6 +180,7 @@ a
     background: #fff
     padding: $padding/2 0
     border-top: 1px solid #ccc
+    border-bottom: 1px solid #ccc
     text-transform: uppercase
 #header-region #block-superfish-1
   display: block !important
@@ -193,10 +195,15 @@ a
     background: #fff
     z-index: 999
     width: 100%
+    &.fixed
+      position: fixed
+      top: 0
+      height: 50px
     //padding: $padding
     #superfish-1
       background: #fff
       display: none
+      box-shadow: 0 10px 10px #999
       li
         display: block
         text-align: center
@@ -204,6 +211,8 @@ a
         padding: $padding/2 0
         margin: 0
         background: none
+        &.last
+          margin-bottom: $margin/2
         a
           border-bottom: 1px solid $orange
           display: inline
