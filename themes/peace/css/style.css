@@ -701,6 +701,10 @@ a {
   .sidebar #block-views-calendar_of_events-calendar .date-prev {
     margin-left: 0; }
 
+@media screen and (max-width: 600px) {
+  #block-views-calendar_of_events-calendar {
+    margin-top: 30px !important; } }
+
 #block-boxes-amani_donate {
   background: white;
   box-shadow: 5px 5px 5px #e9e9e9;
