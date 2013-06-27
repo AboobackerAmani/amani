@@ -22,6 +22,15 @@ Drupal.behaviors.heritageTheme = {
 
     $(document).scroll(function() {
       // scroll functions.
+      var h = $('#header').height();
+      var y = $(window).scrollTop();
+      //lert(y);
+      if( y > (h - 50)) {
+       // if we are show keyboardTips
+       $("#block-superfish-1").addClass('fixed');
+      } else {
+       $('#block-superfish-1').removeClass('fixed');
+      }
     });
 
     // All other functions upon load.
@@ -37,10 +46,11 @@ Drupal.behaviors.heritageTheme = {
     //     }
     //   }
     // });
-    
+
     // Mobile menu functionality
-    $('.mobile-menu-link').click(function() {
+    $('.mobile-menu-link:not(.processed)').addClass('processed').click(function() {
       $(this).siblings('.sf-menu').slideToggle();
+      return false;
     });
 
     // text fields
