@@ -1,3 +1,4 @@
+@charset "IBM437";
 /* Font styles. */
 body {
   margin: 0;
@@ -1339,6 +1340,23 @@ a {
   .page-resources .view-resources .view-content tr.odd {
     background: none;
     border-bottom: 1px solid #cccccc; }
+  .page-resources .view-resources .view-content td {
+    vertical-align: top; }
+  .page-resources .view-resources .view-content h3 {
+    color: #ee8f1c; }
+  .page-resources .view-resources .view-content .views-field-field-date {
+    text-align: center; }
+    .page-resources .view-resources .view-content .views-field-field-date a {
+      display: block;
+      width: 96px;
+      height: 96px;
+      text-indent: -9999px; }
+      .page-resources .view-resources .view-content .views-field-field-date a.link {
+        background: url("../images/icons/fileicon_web.png") no-repeat; }
+    .page-resources .view-resources .view-content .views-field-field-date.text-plain a {
+      background: url("../images/icons/fileicon_txt.png") no-repeat; }
+    .page-resources .view-resources .view-content .views-field-field-date.application-pdf a {
+      background: url("../images/icons/fileicon_pdf.png") no-repeat; }
 
 @media screen and (max-width: 600px) {
   .node-type-get-involved .field-name-field-graphic {
