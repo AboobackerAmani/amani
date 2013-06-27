@@ -1336,6 +1336,10 @@ a {
   box-shadow: 2px 3px 4px #c8c8c8;
   border: 0;
   padding: 10px; }
+  @media screen and (max-width: 600px) {
+    .page-contact .form-text,
+    .page-contact .form-textarea {
+      width: 100%; } }
 .page-contact .form-type-textarea .grippie {
   display: none !important; }
 .page-contact #edit-actions {
