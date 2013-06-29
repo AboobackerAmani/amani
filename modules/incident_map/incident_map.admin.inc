@@ -27,10 +27,10 @@ function incident_map_settings() {
 
 function incident_map_settings_submit($form, &$form_state) {
   $values = $form_state['values']; 
-  $title = variable_get('incident-map-map-record-title', $default = 'Incident reports'); 
+  $title = $values['incident-map-map-record-title'];
   $path = array (
     'source' => 'incident-reports', 
-    'alias' => $title,
+    'alias' => preg_replace('/\s/', '-', strtolower(trim($title))),
   ); 
   path_save($path); 
   drupal_clear_path_cache('incident-reports'); 
