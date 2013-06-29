@@ -7,7 +7,6 @@ require_once('incident_map.admin.inc');
  */
 function incident_map_menu() {
   $items = array();
-
   $items['incident-reports'] = array(
     'title' => t('Incident reports'),
     'description' => '',
@@ -100,7 +99,6 @@ function incident_map_block_info() {
 
   $filters = incident_map_filters_by_field_type();
   $fields = incident_map_get_field_info('node', 'incident_report', array_keys($filters));
-
   $prefix = 'incident-map-filter';
   foreach ($fields as $field_name => $field_info) {
     if (variable_get("$prefix-enabled-$field_name", FALSE)) {
@@ -119,7 +117,6 @@ function incident_map_block_view($delta = '') {
   $prefix = 'incident-map-filter';
 
   $block = array();
-
   $filter_type = variable_get("$prefix-$delta", NULL);
   $filters = incident_map_filters();
 
@@ -135,6 +132,24 @@ function incident_map_block_view($delta = '') {
 
   return $block;
 }
+
+/**
+ * Implementation of hook_block_view_alter()
+ */
+function incident_map_block_view_alter(&$data, $block) {
+  $block_title = '';
+  $map_title = variable_get('incident-map-map-record-title',null);
+  if ($block->module === 'views' && $block->delta === 'incident_reports-latest') {
+    if(!empty($map_title)){
+      $block_title = 'Latest '.variable_get('incident-map-map-record-title',NULL);
+    }
+    else {
+      $block_title = 'Latest Incident Reports';
+    }
+    $data['subject'] = $block_title;
+  }
+}
+
 
 /**
  * Returns a list of field instances attached to a particular bundle. Can be
@@ -166,7 +181,11 @@ function incident_map_reports() {
   leaflet_framework_extend_map('incident_reports', $map_id, array(
     'source-url' => '/geojson/incident-reports',
   ));
-
+  $title = variable_get('incident-map-map-record-title', NULL);
+  if (empty($title)){
+    $title = "Incident report";
+  }
+  drupal_set_title($title);
   // Markup.
   return array('map' => $map);
 }
