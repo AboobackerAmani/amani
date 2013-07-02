@@ -33,6 +33,14 @@ function amani_news_events_blog_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['label'] = 'No nodes ';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No nodes of this type created!';
+  $handler->display->display_options['empty']['area']['format'] = 'wysiwyg_editor';
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_content_image']['id'] = 'field_content_image';
   $handler->display->display_options['fields']['field_content_image']['table'] = 'field_data_field_content_image';
@@ -265,6 +273,8 @@ function amani_news_events_blog_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('No nodes '),
+    t('No nodes of this type created!'),
     t('Page'),
     t('(more)'),
     t('Block'),
