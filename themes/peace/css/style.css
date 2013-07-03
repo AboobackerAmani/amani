@@ -1,4 +1,3 @@
-@charset "IBM437";
 /* Font styles. */
 body {
   margin: 0;
@@ -435,6 +434,9 @@ a {
             display: inline;
             padding: 10px 0;
             color: #333333; } }
+        @media screen and (max-width: 600px) and (max-width: 600px) {
+          #header-region #block-superfish-1 #superfish-1 li ul {
+            width: 100% !important; } }
 
 #sidebar-second .block {
   background: white;
@@ -632,12 +634,13 @@ a {
   .sidebar #block-quicktabs-social_media_feeds > .block-inner > h2.block-title {
     display: none; }
   .sidebar #block-quicktabs-social_media_feeds ul.quicktabs-tabs {
-    height: 27px;
+    height: 39px;
     border: none; }
     .sidebar #block-quicktabs-social_media_feeds ul.quicktabs-tabs li {
       background: white;
       padding: 10px 0;
-      border: none; }
+      border: none;
+      display: inline-block; }
       .sidebar #block-quicktabs-social_media_feeds ul.quicktabs-tabs li.active {
         background: #414042;
         border: none; }
@@ -646,6 +649,9 @@ a {
       .sidebar #block-quicktabs-social_media_feeds ul.quicktabs-tabs li a {
         padding: 10px 20px;
         color: #ee8f1c; }
+        @media screen and (max-width: 768px) {
+          .sidebar #block-quicktabs-social_media_feeds ul.quicktabs-tabs li a {
+            padding: 10px 5px; } }
         .sidebar #block-quicktabs-social_media_feeds ul.quicktabs-tabs li a:after {
           content: ""; }
   .sidebar #block-quicktabs-social_media_feeds #quicktabs-container-social_media_feeds {

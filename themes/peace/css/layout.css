@@ -191,6 +191,13 @@
       #sidebar-second:last-child {
         margin-right: 0; } }
 
+@media screen and (max-width: 480px) {
+  body.page-news-and-events #sidebar-second {
+    margin-left: -106.66667%; } }
+@media screen and (max-width: 480px) {
+  body.page-news-and-events #content {
+    margin-top: 320px; } }
+
 #footer {
   float: none;
   clear: both; }

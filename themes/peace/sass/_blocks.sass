@@ -74,12 +74,13 @@
     > .block-inner > h2.block-title
       display: none
     ul.quicktabs-tabs
-      height: 27px
+      height: 39px
       border: none
       li
         background: #fff
         padding: 10px 0
         border: none
+        display: inline-block
         &.active
           background: $grey_dark
           border: none
@@ -88,6 +89,8 @@
         a
           padding: 10px 20px
           color: $orange
+          @include media($tablet)
+            padding: 10px 5px
           &:after
             content: ''
     #quicktabs-container-social_media_feeds
