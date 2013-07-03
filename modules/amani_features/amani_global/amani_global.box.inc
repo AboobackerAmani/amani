@@ -19,7 +19,7 @@ function amani_global_default_box() {
   $box->description = 'Amani: Powered by';
   $box->options = array(
     'body' => array(
-      'value' => '<img src="<?php echo base_path() . \'sites/default/files/resource-field_image/AmaniFooterLogo.png\'; ?>" />
+      'value' => '<img src="<?php echo base_path() . \'sites/default/files/resource-field_image/AmaniFooter_PoweredBy-04.png\'; ?>" />
 
 ',
       'format' => 'php_code',

@@ -8,6 +8,27 @@
  * Implements hook_field_default_fields_alter().
  */
 function amani_overrides_field_default_fields_alter(&$data) {
+  if (isset($data['node-article-body'])) {
+    $data['node-article-body']['field_instance']['display']['ical'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['node-article-body']['field_instance']['widget']['weight'] = '3'; /* WAS: '4' */
+  }
+  if (isset($data['node-article-field_content_image'])) {
+    unset($data['node-article-field_content_image']);
+  }
+  if (isset($data['node-article-field_tags'])) {
+    $data['node-article-field_tags']['field_instance']['display']['ical'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['node-article-field_tags']['field_instance']['widget']['weight'] = '2'; /* WAS: '3' */
+  }
   if (isset($data['redhen_contact-general-field_additional_info'])) {
     $data['redhen_contact-general-field_additional_info']['field_instance']['display']['ical'] = array(
       'label' => 'above',
@@ -173,17 +194,70 @@ function amani_overrides_field_default_fields_alter(&$data) {
 }
 
 /**
- * Implements hook_default_redhen_membership_type_alter().
+ * Implements hook_strongarm_alter().
  */
-function amani_overrides_default_redhen_membership_type_alter(&$data) {
-  if (isset($data['standard'])) {
-    $data['standard']->data = NULL; /* WAS: '' */
-    $data['standard']->is_new = TRUE; /* WAS: '' */
-    $data['standard']->label = ''; /* WAS: '' */
-    $data['standard']->locked = '0'; /* WAS: '' */
-    $data['standard']->name = 'standard'; /* WAS: '' */
-    $data['standard']->rdf_mapping = array(); /* WAS: '' */
-    $data['standard']->role_id = '7'; /* WAS: '' */
-    $data['standard']->weight = '0'; /* WAS: '' */
+function amani_overrides_strongarm_alter(&$data) {
+  if (isset($data['node_options_article'])) {
+    unset($data['node_options_article']->value['1']);
+  }
+  if (isset($data['pathauto_node_article_pattern'])) {
+    $data['pathauto_node_article_pattern']->value = 'news/[node:title]'; /* WAS: 'article/[node:title]' */
+  }
+}
+
+/**
+ * Implements hook_views_default_views_alter().
+ */
+function amani_overrides_views_default_views_alter(&$data) {
+  if (isset($data['article'])) {
+    $data['article']->display['block_1']->display_options['defaults']['hide_admin_links'] = FALSE; /* WAS: '' */
+    $data['article']->display['block_2']->display_options['defaults']['hide_admin_links'] = FALSE; /* WAS: '' */
+    $data['article']->display['default']->display_options['use_more_always'] = FALSE; /* WAS: '' */
+    $data['article']->display['feed_1']->display_options['defaults']['hide_admin_links'] = FALSE; /* WAS: '' */
+    $data['article']->display['page_1']->display_options['defaults']['hide_admin_links'] = FALSE; /* WAS: '' */
+    $data['article']->display['page_1']->display_options['fields']['body']['hide_alter_empty'] = FALSE; /* WAS: 0 */
+    $data['article']->display['page_1']->display_options['fields']['created']['element_label_colon'] = FALSE; /* WAS: 0 */
+    $data['article']->display['page_1']->display_options['fields']['created']['hide_alter_empty'] = FALSE; /* WAS: 0 */
+    $data['article']->display['page_1']->display_options['fields']['field_content_image']['hide_alter_empty'] = FALSE; /* WAS: 0 */
+    $data['article']->display['page_1']->display_options['fields']['title']['hide_alter_empty'] = FALSE; /* WAS: 0 */
+    $data['article']->display['page_1']->display_options['fields']['view_node']['hide_alter_empty'] = FALSE; /* WAS: 0 */
+    unset($data['article']->display['block_2']->display_options['arguments']['uid']['break_phrase']);
+    unset($data['article']->display['block_2']->display_options['arguments']['uid']['default_argument_skip_url']);
+    unset($data['article']->display['block_2']->display_options['arguments']['uid']['not']);
+    unset($data['article']->display['default']->display_options['arguments']['nid']['break_phrase']);
+    unset($data['article']->display['default']->display_options['arguments']['nid']['not']);
+    unset($data['article']->display['default']->display_options['fields']['title']['alter']);
+    unset($data['article']->display['default']->display_options['fields']['title']['element_default_classes']);
+    unset($data['article']->display['default']->display_options['fields']['title']['element_label_colon']);
+    unset($data['article']->display['default']->display_options['fields']['title']['empty_zero']);
+    unset($data['article']->display['default']->display_options['fields']['title']['hide_empty']);
+    unset($data['article']->display['default']->display_options['fields']['title']['link_to_node']);
+    unset($data['article']->display['default']->display_options['pager']['options']['expose']);
+    unset($data['article']->display['feed_1']->display_options['arguments']['nid']['break_phrase']);
+    unset($data['article']->display['feed_1']->display_options['arguments']['nid']['not']);
+    unset($data['article']->display['page_1']->display_options['fields']['body']['alter']);
+    unset($data['article']->display['page_1']->display_options['fields']['body']['element_default_classes']);
+    unset($data['article']->display['page_1']->display_options['fields']['body']['empty_zero']);
+    unset($data['article']->display['page_1']->display_options['fields']['body']['field_api_classes']);
+    unset($data['article']->display['page_1']->display_options['fields']['body']['hide_empty']);
+    unset($data['article']->display['page_1']->display_options['fields']['created']['alter']);
+    unset($data['article']->display['page_1']->display_options['fields']['created']['element_default_classes']);
+    unset($data['article']->display['page_1']->display_options['fields']['created']['empty_zero']);
+    unset($data['article']->display['page_1']->display_options['fields']['created']['hide_empty']);
+    unset($data['article']->display['page_1']->display_options['fields']['field_content_image']['alter']);
+    unset($data['article']->display['page_1']->display_options['fields']['field_content_image']['element_default_classes']);
+    unset($data['article']->display['page_1']->display_options['fields']['field_content_image']['empty_zero']);
+    unset($data['article']->display['page_1']->display_options['fields']['field_content_image']['field_api_classes']);
+    unset($data['article']->display['page_1']->display_options['fields']['field_content_image']['hide_empty']);
+    unset($data['article']->display['page_1']->display_options['fields']['title']['alter']);
+    unset($data['article']->display['page_1']->display_options['fields']['title']['element_default_classes']);
+    unset($data['article']->display['page_1']->display_options['fields']['title']['empty_zero']);
+    unset($data['article']->display['page_1']->display_options['fields']['title']['hide_empty']);
+    unset($data['article']->display['page_1']->display_options['fields']['title']['link_to_node']);
+    unset($data['article']->display['page_1']->display_options['fields']['view_node']['alter']);
+    unset($data['article']->display['page_1']->display_options['fields']['view_node']['element_default_classes']);
+    unset($data['article']->display['page_1']->display_options['fields']['view_node']['empty_zero']);
+    unset($data['article']->display['page_1']->display_options['fields']['view_node']['hide_empty']);
+    unset($data['article']->display['page_1']->display_options['pager']['options']['expose']);
   }
 }

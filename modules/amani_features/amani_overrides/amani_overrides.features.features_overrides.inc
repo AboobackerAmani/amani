@@ -12,6 +12,21 @@ function amani_overrides_features_override_default_overrides() {
   $overrides = array();
 
   // Exported overrides for: field
+  $overrides["field.node-article-body.field_instance|display|ical"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.node-article-body.field_instance|widget|weight"] = '3';
+  $overrides["field.node-article-field_content_image.node-article-field_content_image"]["DELETED"] = TRUE;
+  $overrides["field.node-article-field_tags.field_instance|display|ical"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.node-article-field_tags.field_instance|widget|weight"] = '2';
   $overrides["field.redhen_contact-general-field_additional_info.field_instance|display|ical"] = array(
     'label' => 'above',
     'settings' => array(),
@@ -149,15 +164,60 @@ function amani_overrides_features_override_default_overrides() {
     'weight' => 0,
   );
 
-  // Exported overrides for: redhen_membership_type
-  $overrides["redhen_membership_type.standard.data"] = NULL;
-  $overrides["redhen_membership_type.standard.is_new"] = TRUE;
-  $overrides["redhen_membership_type.standard.label"] = '';
-  $overrides["redhen_membership_type.standard.locked"] = '0';
-  $overrides["redhen_membership_type.standard.name"] = 'standard';
-  $overrides["redhen_membership_type.standard.rdf_mapping"] = array();
-  $overrides["redhen_membership_type.standard.role_id"] = '7';
-  $overrides["redhen_membership_type.standard.weight"] = '0';
+  // Exported overrides for: variable
+  $overrides["variable.node_options_article.value|1"]["DELETED"] = TRUE;
+  $overrides["variable.pathauto_node_article_pattern.value"] = 'news/[node:title]';
+
+  // Exported overrides for: views_view
+  $overrides["views_view.article.display|block_1|display_options|defaults|hide_admin_links"] = FALSE;
+  $overrides["views_view.article.display|block_2|display_options|arguments|uid|break_phrase"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|block_2|display_options|arguments|uid|default_argument_skip_url"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|block_2|display_options|arguments|uid|not"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|block_2|display_options|defaults|hide_admin_links"] = FALSE;
+  $overrides["views_view.article.display|default|display_options|arguments|nid|break_phrase"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|default|display_options|arguments|nid|not"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|default|display_options|fields|title|alter"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|default|display_options|fields|title|element_default_classes"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|default|display_options|fields|title|element_label_colon"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|default|display_options|fields|title|empty_zero"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|default|display_options|fields|title|hide_empty"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|default|display_options|fields|title|link_to_node"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|default|display_options|pager|options|expose"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|default|display_options|use_more_always"] = FALSE;
+  $overrides["views_view.article.display|feed_1|display_options|arguments|nid|break_phrase"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|feed_1|display_options|arguments|nid|not"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|feed_1|display_options|defaults|hide_admin_links"] = FALSE;
+  $overrides["views_view.article.display|page_1|display_options|defaults|hide_admin_links"] = FALSE;
+  $overrides["views_view.article.display|page_1|display_options|fields|body|alter"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|body|element_default_classes"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|body|empty_zero"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|body|field_api_classes"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|body|hide_alter_empty"] = FALSE;
+  $overrides["views_view.article.display|page_1|display_options|fields|body|hide_empty"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|created|alter"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|created|element_default_classes"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|created|element_label_colon"] = FALSE;
+  $overrides["views_view.article.display|page_1|display_options|fields|created|empty_zero"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|created|hide_alter_empty"] = FALSE;
+  $overrides["views_view.article.display|page_1|display_options|fields|created|hide_empty"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|field_content_image|alter"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|field_content_image|element_default_classes"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|field_content_image|empty_zero"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|field_content_image|field_api_classes"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|field_content_image|hide_alter_empty"] = FALSE;
+  $overrides["views_view.article.display|page_1|display_options|fields|field_content_image|hide_empty"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|title|alter"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|title|element_default_classes"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|title|empty_zero"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|title|hide_alter_empty"] = FALSE;
+  $overrides["views_view.article.display|page_1|display_options|fields|title|hide_empty"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|title|link_to_node"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|view_node|alter"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|view_node|element_default_classes"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|view_node|empty_zero"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|fields|view_node|hide_alter_empty"] = FALSE;
+  $overrides["views_view.article.display|page_1|display_options|fields|view_node|hide_empty"]["DELETED"] = TRUE;
+  $overrides["views_view.article.display|page_1|display_options|pager|options|expose"]["DELETED"] = TRUE;
 
  return $overrides;
 }
