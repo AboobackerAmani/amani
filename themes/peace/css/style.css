@@ -477,6 +477,14 @@ a {
       width: 100%;
       height: auto; }
 
+.node-article .field-name-field-media {
+  background: #eeeeee;
+  padding: 30px;
+  margin-bottom: 30px;
+  text-align: center; }
+  .node-article .field-name-field-media img {
+    margin-bottom: 15px; }
+
 #footer {
   background: #414042;
   color: white;
@@ -937,9 +945,7 @@ a {
       display: inline-block;
       float: right; }
       #header-region #block-menu-menu-social-media .content li:last-child {
-        background: none;
-        padding-right: 0;
-        margin-right: 0; }
+        background: none; }
       #header-region #block-menu-menu-social-media .content li a {
         display: block;
         overflow: hidden;
@@ -979,25 +985,45 @@ a {
   .page-node .node > .content .field-name-field-incident-geolocation .openlayers-container {
     width: 100% !important; }
 
-.page-news-and-events .view-news-and-events {
+.page-news-and-events #block-system-main {
   background: white;
   background: white;
   padding: 30px;
   box-shadow: 2px 3px 4px #c8c8c8;
   font-family: "Georgia";
   line-height: 1.4; }
-  .page-news-and-events .view-news-and-events .views-row {
+  .page-news-and-events #block-system-main .views-row {
     border-bottom: 1px solid #cccccc;
     padding-bottom: 30px;
     margin-bottom: 30px; }
-    .page-news-and-events .view-news-and-events .views-row.views-row-last {
+    .page-news-and-events #block-system-main .views-row.views-row-last {
       border-bottom: 0;
       margin-bottom: 0;
       padding-bottom: 0; }
-    .page-news-and-events .view-news-and-events .views-row .views-field-title {
+    .page-news-and-events #block-system-main .views-row .views-field-title {
       font-family: "bariol_regularregular";
       text-transform: uppercase;
       font-size: 16px; }
+.page-news-and-events #block-views-news_and_events-block .views-row {
+  display: block;
+  float: left;
+  margin-right: 2.12766%;
+  width: 23.40426%;
+  background: white;
+  box-shadow: 2px 3px 4px #c8c8c8;
+  padding: 30px; }
+  .page-news-and-events #block-views-news_and_events-block .views-row:last-child {
+    margin-right: 0; }
+  .page-news-and-events #block-views-news_and_events-block .views-row:nth-child(4n) {
+    margin-right: 0; }
+  .page-news-and-events #block-views-news_and_events-block .views-row .views-field-title {
+    font-family: "bariol_regularregular";
+    font-weight: normal;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 5px; }
+  .page-news-and-events #block-views-news_and_events-block .views-row .views-field-field-media {
+    width: 100%; }
 
 .page-incident-reports .block-incident-map label span {
   font-weight: normal; }

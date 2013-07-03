@@ -123,6 +123,13 @@
         </aside>
       <?php endif; ?> <!-- /sidebar-second -->
     </div>
+
+    <?php if(!empty($page['content_bottom'])): ?>
+      <div class="container-inner">
+        <?php print render($page['content_bottom']) ?>
+      </div>
+    <?php endif; ?>
+
   </div> <!-- /main -->
 
   <!-- ______________________ FOOTER _______________________ -->
