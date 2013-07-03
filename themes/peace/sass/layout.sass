@@ -100,6 +100,14 @@
     @include span-columns(4)
     @include shift(0)
 
+body.page-news-and-events
+  #sidebar-second
+    @include media($mobile)
+      @include shift(-4)
+  #content
+    @include media($mobile)
+      margin-top: 320px
+
 #footer
   float: none
   clear: both
