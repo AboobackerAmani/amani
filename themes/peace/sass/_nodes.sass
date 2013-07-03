@@ -22,7 +22,7 @@
           width: 100% !important
 
 .page-news-and-events
-  .view-news-and-events
+  #block-system-main
     background: #fff
     background: #fff
     padding: $padding
@@ -41,6 +41,21 @@
         font-family: "bariol_regularregular"
         text-transform: uppercase
         font-size: 16px
+  #block-views-news_and_events-block
+    .views-row
+      @include span-columns(3)
+      @include omega(4n)
+      background: #fff
+      box-shadow: 2px 3px 4px #C8C8C8
+      padding: $padding
+      .views-field-title
+        font-family: "bariol_regularregular"
+        font-weight: normal
+        font-size: 16px
+        text-transform: uppercase
+        margin-bottom: 5px
+      .views-field-field-media
+        @include fill-parent
 
 // Incident reports
 .page-incident-reports

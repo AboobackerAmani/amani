@@ -29,8 +29,8 @@ function amani_block_and_views_context_default_contexts() {
         'views-news_and_events-block' => array(
           'module' => 'views',
           'delta' => 'news_and_events-block',
-          'region' => 'content',
-          'weight' => '10',
+          'region' => 'content_bottom',
+          'weight' => '-10',
         ),
         'views-calendar_of_events-list' => array(
           'module' => 'views',
