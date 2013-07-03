@@ -59,6 +59,7 @@ function amani_global_add_content_links() {
   if (user_access('administer site configuration')) {
     $items['items'] = array(
       l('Manage site logo and info', 'amani/site-info'),
+      l('Edit map settings', 'admin/config/incident-reports'),
     );
     $output = '<div class="manage-logo">'
       . theme('item_list', $items)
