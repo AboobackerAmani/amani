@@ -18,12 +18,12 @@ function amani_overrides_strongarm_alter(&$variables) {
 /**
  * Implements hook_field_default_fields_alter().
  */
-function amani_overrides_field_default_fields_alter(&$fields) {
-  if (isset($fields['node-article-field_content_image'])) {
-    $fields['node-article-field_content_image']['field_instance']['settings']['file_directory'] = 'article-media';
-    $fields['node-article-field_content_image']['field_instance']['widget']['settings']['browser_plugins'] = array(
-      'media_default--media_browser_1' => 'media_default--media_browser_1',
-      'upload' => 'upload',
-    );
-  }
-}
+//function amani_overrides_field_default_fields_alter(&$fields) {
+//  if (isset($fields['node-article-field_content_image'])) {
+//    $fields['node-article-field_content_image']['field_instance']['settings']['file_directory'] = 'article-media';
+//    $fields['node-article-field_content_image']['field_instance']['widget']['settings']['browser_plugins'] = array(
+//      'media_default--media_browser_1' => 'media_default--media_browser_1',
+//      'upload' => 'upload',
+//    );
+//  }
+//}
