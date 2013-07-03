@@ -357,7 +357,7 @@
     position: absolute
     bottom: $gutter
     right: 0
-    top: 110px
+    top: 115px
     .content
       font-size: 16px
       li
@@ -370,26 +370,24 @@
           background: none
           padding-right: 0
           margin-right: 0
-        &.facebook
-          a
-            background: url('../images/icons/social_icons.png') no-repeat
-            background-position: -28px 0
-            &:hover
-              background-position: -28px -27px
-        &.twitter
-          a
-            background: url('../images/icons/social_icons.png') no-repeat
-            background-position: 0 0
-            &:hover
-              background-position: 0 -27px
         a
           display: block
-          height: 22px
-          width: 22px
-          text-indent: -999px
           overflow: hidden
+          font-family: "SSSocial"
+          font-style: normal
+          font-weight: normal
+          text-decoration: none
+          text-rendering: optimizeLegibility
+          white-space: nowrap
+          /*-webkit-font-feature-settings: "liga"; Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
+          -moz-font-feature-settings: "liga=1"
+          -moz-font-feature-settings: "liga"
+          -ms-font-feature-settings: "liga" 1
+          -o-font-feature-settings: "liga"
+          font-feature-settings: "liga"
+          -webkit-font-smoothing: antialiased
           &:link, &:visited,
           &.active
-            color: $orange
+            color: #666
           &:hover, &:active
-            color: lighten($orange, 10%)
+            color: lighten(#666, 10%)
