@@ -14,6 +14,7 @@
 function incident_map_settings() {
   $settings = module_invoke_all('incident_map_settings');
   $form = array();
+  $form['#submit'][] = 'incident_map_settings_submit';  
   foreach ($settings as $setting) {
     $form[] = $setting['form'] + array(
       '#type' => 'fieldset',
@@ -24,6 +25,16 @@ function incident_map_settings() {
   return system_settings_form($form);
 }
 
+function incident_map_settings_submit($form, &$form_state) {
+  $values = $form_state['values']; 
+  $title = $values['incident-map-map-record-title'];
+  $path = array (
+    'source' => 'incident-reports', 
+    'alias' => preg_replace('/\s/', '-', strtolower(trim($title))),
+  ); 
+  path_save($path); 
+  drupal_clear_path_cache('incident-reports'); 
+}
 /**
  * Implements hook_incident_map_settings().
  */
@@ -31,8 +42,16 @@ function incident_map_incident_map_settings() {
   $filter_prefix = 'incident-map-filter';
   $marker_prefix = 'incident-map-marker';
   $map_prefix = 'incident-map-map-settings';
+  $map_record_prefix = 'incident-map-map-record';
 
   return array(
+    'map_record' => array(
+      'prefix' => $map_record_prefix,
+      'form' => array(
+        '#title' => t('Map Record'),
+        'map_record_settings' => incident_map_map_record_settings($map_record_prefix)
+      ),
+    ),
     'map' => array(
       'prefix' => $map_prefix,
       'form' => array(
@@ -58,6 +77,17 @@ function incident_map_incident_map_settings() {
       'properties_callback' => 'incident_map_add_markers',
     ),
   );
+}
+
+
+/**
+ * Provides the map settings form.
+ */
+function incident_map_map_record_settings($prefix) {
+  $items = array();
+  $title = "$prefix-title";
+  $items[$title] = array('#type' => 'textfield', '#title' => t("Map Title"),'#default_value' => variable_get($title, NULL));
+  return $items;
 }
 
 /**
@@ -91,7 +121,6 @@ function incident_map_map_settings($prefix) {
   $items[$id]['#states'] = array(
     'visible' => array(":input[name='$auto']" => array('checked' => FALSE)),
   );
-
   return $items;
 }
 
