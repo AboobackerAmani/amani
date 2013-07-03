@@ -5,25 +5,3 @@
  */
 
 include_once 'amani_overrides.features.inc';
-
-/**
- *
- */
-function amani_overrides_strongarm_alter(&$variables) {
-  if (isset($variables['pathauto_node_article_pattern'])) {
-    $variables['pathauto_node_article_pattern']->value = 'news/[node:title]';
-  }
-}
-
-/**
- * Implements hook_field_default_fields_alter().
- */
-//function amani_overrides_field_default_fields_alter(&$fields) {
-//  if (isset($fields['node-article-field_content_image'])) {
-//    $fields['node-article-field_content_image']['field_instance']['settings']['file_directory'] = 'article-media';
-//    $fields['node-article-field_content_image']['field_instance']['widget']['settings']['browser_plugins'] = array(
-//      'media_default--media_browser_1' => 'media_default--media_browser_1',
-//      'upload' => 'upload',
-//    );
-//  }
-//}
