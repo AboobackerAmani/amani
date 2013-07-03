@@ -12,6 +12,206 @@ function amani_overrides_features_override_default_overrides() {
   $overrides = array();
 
   // Exported overrides for: field
+  $overrides["field.file-application-field_tags.field_instance|display|ical"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-application-media_description.field_instance|display|ical"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-audio-field_tags.field_instance|display|ical"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-audio-field_tags.field_instance|display|media_gallery_block_thumbnail"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-audio-field_tags.field_instance|display|media_gallery_collection_thumbnail"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-audio-field_tags.field_instance|display|media_gallery_detail"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-audio-field_tags.field_instance|display|media_gallery_lightbox"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-audio-field_tags.field_instance|display|media_gallery_thumbnail"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-audio-media_description.field_instance|display|ical"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-audio-media_description.field_instance|display|media_gallery_block_thumbnail"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-audio-media_description.field_instance|display|media_gallery_collection_thumbnail"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-default-field_tags.field_instance|display|ical"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-default-media_description.field_instance|display|ical"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-image-field_tags.field_instance|display|default|module"]["DELETED"] = TRUE;
+  $overrides["field.file-image-field_tags.field_instance|display|default|type"] = 'hidden';
+  $overrides["field.file-image-field_tags.field_instance|display|ical"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-image-field_tags.field_instance|display|media_gallery_block_thumbnail"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-image-field_tags.field_instance|display|media_gallery_collection_thumbnail"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-image-field_tags.field_instance|display|media_gallery_detail"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-image-field_tags.field_instance|display|media_gallery_lightbox"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-image-field_tags.field_instance|display|media_gallery_thumbnail"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-image-media_description.field_instance|display|ical"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-image-media_description.field_instance|display|media_gallery_block_thumbnail"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-image-media_description.field_instance|display|media_gallery_collection_thumbnail"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-text-field_tags.field_instance|display|ical"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-text-media_description.field_instance|display|ical"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-video-field_tags.field_instance|display|ical"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-video-field_tags.field_instance|display|media_gallery_block_thumbnail"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-video-field_tags.field_instance|display|media_gallery_collection_thumbnail"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-video-field_tags.field_instance|display|media_gallery_detail"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-video-field_tags.field_instance|display|media_gallery_lightbox"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-video-field_tags.field_instance|display|media_gallery_thumbnail"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-video-media_description.field_instance|display|ical"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-video-media_description.field_instance|display|media_gallery_block_thumbnail"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
+  $overrides["field.file-video-media_description.field_instance|display|media_gallery_collection_thumbnail"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => 0,
+  );
   $overrides["field.node-article-body.field_instance|display|ical"] = array(
     'label' => 'above',
     'settings' => array(),

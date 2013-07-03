@@ -8,6 +8,230 @@
  * Implements hook_field_default_fields_alter().
  */
 function amani_overrides_field_default_fields_alter(&$data) {
+  if (isset($data['file-application-field_tags'])) {
+    $data['file-application-field_tags']['field_instance']['display']['ical'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+  }
+  if (isset($data['file-application-media_description'])) {
+    $data['file-application-media_description']['field_instance']['display']['ical'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+  }
+  if (isset($data['file-audio-field_tags'])) {
+    $data['file-audio-field_tags']['field_instance']['display']['ical'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-audio-field_tags']['field_instance']['display']['media_gallery_block_thumbnail'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-audio-field_tags']['field_instance']['display']['media_gallery_collection_thumbnail'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-audio-field_tags']['field_instance']['display']['media_gallery_detail'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-audio-field_tags']['field_instance']['display']['media_gallery_lightbox'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-audio-field_tags']['field_instance']['display']['media_gallery_thumbnail'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+  }
+  if (isset($data['file-audio-media_description'])) {
+    $data['file-audio-media_description']['field_instance']['display']['ical'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-audio-media_description']['field_instance']['display']['media_gallery_block_thumbnail'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-audio-media_description']['field_instance']['display']['media_gallery_collection_thumbnail'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+  }
+  if (isset($data['file-default-field_tags'])) {
+    $data['file-default-field_tags']['field_instance']['display']['ical'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+  }
+  if (isset($data['file-default-media_description'])) {
+    $data['file-default-media_description']['field_instance']['display']['ical'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+  }
+  if (isset($data['file-image-field_tags'])) {
+    $data['file-image-field_tags']['field_instance']['display']['default']['type'] = 'hidden'; /* WAS: 'taxonomy_term_reference_link' */
+    $data['file-image-field_tags']['field_instance']['display']['ical'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-image-field_tags']['field_instance']['display']['media_gallery_block_thumbnail'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-image-field_tags']['field_instance']['display']['media_gallery_collection_thumbnail'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-image-field_tags']['field_instance']['display']['media_gallery_detail'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-image-field_tags']['field_instance']['display']['media_gallery_lightbox'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-image-field_tags']['field_instance']['display']['media_gallery_thumbnail'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    unset($data['file-image-field_tags']['field_instance']['display']['default']['module']);
+  }
+  if (isset($data['file-image-media_description'])) {
+    $data['file-image-media_description']['field_instance']['display']['ical'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-image-media_description']['field_instance']['display']['media_gallery_block_thumbnail'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-image-media_description']['field_instance']['display']['media_gallery_collection_thumbnail'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+  }
+  if (isset($data['file-text-field_tags'])) {
+    $data['file-text-field_tags']['field_instance']['display']['ical'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+  }
+  if (isset($data['file-text-media_description'])) {
+    $data['file-text-media_description']['field_instance']['display']['ical'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+  }
+  if (isset($data['file-video-field_tags'])) {
+    $data['file-video-field_tags']['field_instance']['display']['ical'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-video-field_tags']['field_instance']['display']['media_gallery_block_thumbnail'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-video-field_tags']['field_instance']['display']['media_gallery_collection_thumbnail'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-video-field_tags']['field_instance']['display']['media_gallery_detail'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-video-field_tags']['field_instance']['display']['media_gallery_lightbox'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-video-field_tags']['field_instance']['display']['media_gallery_thumbnail'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+  }
+  if (isset($data['file-video-media_description'])) {
+    $data['file-video-media_description']['field_instance']['display']['ical'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-video-media_description']['field_instance']['display']['media_gallery_block_thumbnail'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+    $data['file-video-media_description']['field_instance']['display']['media_gallery_collection_thumbnail'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ); /* WAS: '' */
+  }
   if (isset($data['node-article-body'])) {
     $data['node-article-body']['field_instance']['display']['ical'] = array(
       'label' => 'above',
