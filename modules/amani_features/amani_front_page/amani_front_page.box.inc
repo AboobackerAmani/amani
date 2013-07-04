@@ -19,8 +19,8 @@ function amani_front_page_default_box() {
   $box->description = 'Front page second sidebar bottom';
   $box->options = array(
     'body' => array(
-      'value' => '<p>Static box for bottom of the second sidebar on bottom of front page&nbsp;</p>',
-      'format' => 'wysiwyg_editor',
+      'value' => '<?php echo l(t(\'Newsletter\'), \'http://peacegeeks.us2.list-manage.com/subscribe?u=951e6313af8a044ad05fdc097&id=638c8b529c&orig-lang=1\', array(\'attributes\' => array(\'class\' => \'button\', \'target\' => \'_blank\'))); ?>',
+      'format' => 'php_code',
     ),
     'additional_classes' => '',
   );
