@@ -775,17 +775,26 @@ a.button {
         color: #ee8f1c;
         display: block; }
 
-.sidebar #block-views-get_involved-block_2 h2.block-title {
-  text-align: center;
-  font-size: 30px;
-  font-style: oblique; }
-.sidebar #block-views-get_involved-block_2 .views-row {
-  width: 100%;
-  margin-right: 0;
-  overflow: hidden; }
-  .sidebar #block-views-get_involved-block_2 .views-row img {
+.sidebar #block-views-get_involved-block_2 {
+  background: none;
+  padding: 0;
+  box-shadow: 0 0 0; }
+  .sidebar #block-views-get_involved-block_2 h2.block-title {
+    text-align: left;
+    font-size: 25px;
+    border-bottom-color: black; }
+  .sidebar #block-views-get_involved-block_2 .views-row {
     width: 100%;
-    height: auto; }
+    margin-right: 0;
+    overflow: hidden;
+    background: none;
+    padding: 30px 0;
+    border-bottom: 1px dotted #333333; }
+    .sidebar #block-views-get_involved-block_2 .views-row .views-field-field-graphic a:after {
+      content: ""; }
+    .sidebar #block-views-get_involved-block_2 .views-row img {
+      width: 100%;
+      height: auto; }
 
 #block-views-get_involved-block_1 .views-row {
   display: block;

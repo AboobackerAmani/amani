@@ -194,17 +194,24 @@
 // Get involved block.
 .sidebar
   #block-views-get_involved-block_2
-    //background: none
-    //padding: 0
-    //box-shadow: 0 0 0
+    background: none
+    padding: 0
+    box-shadow: 0 0 0
     h2.block-title
-      text-align: center
-      font-size: 30px
-      font-style: oblique
+      text-align: left
+      font-size: 25px
+      border-bottom-color: #000
     .views-row
       @include fill-parent
       @include omega
       overflow: hidden
+      background: none
+      padding: $padding 0
+      border-bottom: 1px dotted #333
+      .views-field-field-graphic
+        a
+          &:after
+            content: ""
       img
         width: 100%
         height: auto
