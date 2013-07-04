@@ -204,6 +204,19 @@ a {
   #header .container-inner {
     position: relative; }
 
+a.button {
+  background: #ee8f1c url("../images/icons/yellow_button_plus.png") 100% 50% no-repeat;
+  padding: 20px;
+  padding-right: 90px;
+  color: white;
+  font-family: "bariol_regularregular";
+  font-style: oblique;
+  font-size: 25px;
+  font-weight: normal;
+  box-shadow: 3px 3px 8px #999999; }
+  a.button:after {
+    content: "" !important; }
+
 #header-region {
   display: block;
   float: left;

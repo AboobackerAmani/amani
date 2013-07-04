@@ -53,6 +53,20 @@ a
   .container-inner
     position: relative
 
+// Yellow button plus.
+a.button
+  background: $orange url('../images/icons/yellow_button_plus.png') 100% 50% no-repeat
+  padding: $padding - 10px
+  padding-right: $padding*3
+  color: #fff
+  font-family: "bariol_regularregular"
+  font-style: oblique
+  font-size: 25px
+  font-weight: normal
+  box-shadow: 3px 3px 8px #999
+  &:after
+    content: "" !important
+
 // Header region
 #header-region
   @include span-columns(9)
