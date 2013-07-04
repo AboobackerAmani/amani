@@ -93,13 +93,13 @@ function amani_incident_report_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '15',
+          'weight' => '5',
         ),
         'title' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
         'path' => array(
-          'weight' => '14',
+          'weight' => '4',
         ),
       ),
       'display' => array(),

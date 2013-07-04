@@ -80,7 +80,7 @@ function amani_incident_report_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '4',
+        'weight' => '2',
       ),
     ),
   );
@@ -142,7 +142,7 @@ function amani_incident_report_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'email_textfield',
-        'weight' => '2',
+        'weight' => '4',
       ),
     ),
   );
@@ -179,7 +179,7 @@ function amani_incident_report_field_default_fields() {
         ),
       ),
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Use the address fields here or use the map tools below to pick out a point directly on the map.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -221,7 +221,7 @@ function amani_incident_report_field_default_fields() {
           ),
         ),
         'type' => 'addressfield_standard',
-        'weight' => '5',
+        'weight' => '6',
       ),
     ),
   );
@@ -314,7 +314,7 @@ function amani_incident_report_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '7',
+        'weight' => '3',
       ),
     ),
   );
@@ -375,7 +375,7 @@ function amani_incident_report_field_default_fields() {
       'bundle' => 'incident_report',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'asdfasd asd fasdf asdfasd fad f',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -437,7 +437,7 @@ function amani_incident_report_field_default_fields() {
           'use_geocoder' => 1,
         ),
         'type' => 'geofield_openlayers',
-        'weight' => '6',
+        'weight' => '7',
       ),
     ),
   );
@@ -543,7 +543,7 @@ function amani_incident_report_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '10',
+        'weight' => '6',
       ),
     ),
   );
@@ -621,7 +621,7 @@ function amani_incident_report_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '8',
+        'weight' => '4',
       ),
     ),
   );
@@ -699,7 +699,7 @@ function amani_incident_report_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '9',
+        'weight' => '5',
       ),
     ),
   );
@@ -789,7 +789,7 @@ function amani_incident_report_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '13',
+        'weight' => '7',
       ),
     ),
   );
@@ -970,7 +970,7 @@ Prof.',
         'module' => 'name',
         'settings' => array(),
         'type' => 'name_widget',
-        'weight' => '1',
+        'weight' => '3',
       ),
     ),
   );
@@ -1045,7 +1045,7 @@ Prof.',
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '3',
+        'weight' => '5',
       ),
     ),
   );
@@ -1063,6 +1063,8 @@ Prof.',
   t('Media (images/videos/documents)');
   t('Phone number');
   t('Submitter Name (Optional)');
+  t('Use the address fields here or use the map tools below to pick out a point directly on the map.');
+  t('asdfasd asd fasdf asdfasd fad f');
 
   return $fields;
 }
