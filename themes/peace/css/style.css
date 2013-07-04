@@ -188,15 +188,18 @@ a {
     font-style: oblique;
     font-size: 14px;
     color: #999999;
-    font-family: Georgia; }
+    font-family: Georgia;
+    text-align: center; }
 
-#site-name a {
-  display: inline-block;
-  height: 70px;
-  width: 92px;
-  background-repeat: no-repeat;
-  text-indent: -999px;
-  background-size: 100%; }
+#site-name {
+  text-align: center; }
+  #site-name a {
+    display: inline-block;
+    height: 70px;
+    width: 92px;
+    background-repeat: no-repeat;
+    text-indent: -999px;
+    background-size: 100%; }
 
 #header {
   background: white;
