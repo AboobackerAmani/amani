@@ -500,15 +500,19 @@ a.button {
     padding: 0;
     box-shadow: none; }
 
+.view-news-and-events-blog .views-row, 
 .view-news-and-events .views-row {
   overflow: hidden; }
+  .view-news-and-events-blog .views-row .views-field-field-media, 
   .view-news-and-events .views-row .views-field-field-media {
     display: block;
     float: left;
     margin-right: 5.26316%;
     width: 36.84211%; }
+    .view-news-and-events-blog .views-row .views-field-field-media:last-child,
     .view-news-and-events .views-row .views-field-field-media:last-child {
       margin-right: 0; }
+    .view-news-and-events-blog .views-row .views-field-field-media img,
     .view-news-and-events .views-row .views-field-field-media img {
       width: 100%;
       height: auto; }
@@ -1056,22 +1060,26 @@ a.button {
   .page-node .node > .content .field-name-field-incident-geolocation .openlayers-container {
     width: 100% !important; }
 
-.page-news-and-events #block-system-main {
+.page-blog .view-news-and-events-blog, 
+.page-news-and-events .view-news-and-events {
   background: white;
   background: white;
   padding: 30px;
   box-shadow: 2px 3px 4px #c8c8c8;
   font-family: "Georgia";
   line-height: 1.4; }
-  .page-news-and-events #block-system-main .views-row {
+  .page-blog .view-news-and-events-blog .views-row, 
+  .page-news-and-events .view-news-and-events .views-row {
     border-bottom: 1px solid #cccccc;
     padding-bottom: 30px;
     margin-bottom: 30px; }
-    .page-news-and-events #block-system-main .views-row.views-row-last {
+    .page-blog .view-news-and-events-blog .views-row .views-row-last, 
+    .page-news-and-events .view-news-and-events .views-row.views-row-last {
       border-bottom: 0;
       margin-bottom: 0;
       padding-bottom: 0; }
-    .page-news-and-events #block-system-main .views-row .views-field-title {
+    .page-blog .view-news-and-events-blog .views-row .views-field-title, 
+    .page-news-and-events .view-news-and-events .views-row .views-field-title {
       font-family: "bariol_regularregular";
       text-transform: uppercase;
       font-size: 16px; }
@@ -1095,6 +1103,7 @@ a.button {
     margin-bottom: 5px; }
   .page-news-and-events #block-views-news_and_events-block .views-row .views-field-field-media {
     width: 100%; }
+
 
 .page-incident-reports .block-incident-map label span {
   font-weight: normal; }
