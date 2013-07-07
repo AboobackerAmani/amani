@@ -23,16 +23,17 @@ function amani_incident_report_field_group_info() {
     'label' => 'Content Group',
     'weight' => '0',
     'children' => array(
-      0 => 'group_incident_main',
-      1 => 'group_incident_location',
-      2 => 'group_incident_submitter',
-      3 => 'group_incident_media',
+      0 => 'group_incident_location',
+      1 => 'group_incident_main',
+      2 => 'group_incident_media',
+      3 => 'group_incident_submitter',
     ),
-    'format_type' => 'tabs',
+    'format_type' => 'accordion',
     'format_settings' => array(
-      'formatter' => '',
+      'label' => 'Content Group',
       'instance_settings' => array(
         'classes' => '',
+        'effect' => 'bounceslide',
       ),
     ),
   );
@@ -54,7 +55,7 @@ function amani_incident_report_field_group_info() {
       0 => 'field_incident_address',
       1 => 'field_incident_geolocation',
     ),
-    'format_type' => 'tab',
+    'format_type' => 'accordion-item',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
@@ -85,14 +86,15 @@ function amani_incident_report_field_group_info() {
       3 => 'field_incident_severity',
       4 => 'title',
     ),
-    'format_type' => 'tab',
+    'format_type' => 'accordion-item',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Incident',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
         'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_incident_main|node|incident_report|form'] = $field_group;
@@ -113,7 +115,7 @@ function amani_incident_report_field_group_info() {
       0 => 'field_links',
       1 => 'field_incident_media',
     ),
-    'format_type' => 'tab',
+    'format_type' => 'accordion-item',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
@@ -142,7 +144,7 @@ function amani_incident_report_field_group_info() {
       1 => 'field_name',
       2 => 'field_phone',
     ),
-    'format_type' => 'tab',
+    'format_type' => 'accordion-item',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
