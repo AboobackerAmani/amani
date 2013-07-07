@@ -1,0 +1,14 @@
+name = Amani: News & Events Blog
+core = 7.x
+package = Amani
+php = 5.2.4
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = media
+dependencies[] = twitter
+dependencies[] = views
+features[context][] = twitter_feed
+features[ctools][] = context:context:3
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[views_view][] = news_and_events_blog
