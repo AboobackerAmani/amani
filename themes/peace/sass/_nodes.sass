@@ -329,7 +329,7 @@
               top: 10px
         #edit-field-date-value-max-wrapper
           margin-right: 0
-      .views-submit-button, 
+      .views-submit-button,
       .views-reset-button
         .form-submit
           background: $orange
@@ -345,15 +345,26 @@
           margin-left: 2%
     //links
     .attachment-before
-      @include span-columns(4 of 12)
+      @include span-columns(4)
       float: right
       margin: 0
+      // mobile
+      @include media($tablet)
+        @include span-columns(2)
+        @include shift(0)
+        @include omega()
+        float: right
+      // 100% width for mobile devices.
+      @include media($mobile)
+        @include span-columns(4)
+        @include shift(0)
+        @include omega()
       .view-header
         background: url('../images/icons/resources_links.png') no-repeat top left
         min-height: 60px
         padding-bottom: $padding/3
         border-bottom: 2px solid $grey_dark
-        margin-bottom: $margin/3 
+        margin-bottom: $margin/3
         h2
           margin: 0 0 0 70px
         p
@@ -373,8 +384,13 @@
         @include span-columns(3)
         @include omega(4n)
         background: #fff
-        height: 350px
+        min-height: 350px
         margin-bottom: $margin/2
+        @include media($tablet)
+          @include span-columns(4)
+          @include omega(2n)
+        @include media($mobile)
+          @include fill-parent()
         .views-field-field-video
           position: relative
           a
@@ -386,14 +402,21 @@
             height: 100%
           img
             width: 100%
+            height: auto
         .views-field-title, .views-field-body
           padding: 5px 10px 0
     //documents
     .view-content-wrapper
-      @include span-columns(8 of 12)
+      @include span-columns(8)
       background: #fff
       padding: $padding
       box-shadow: 2px 3px 4px #C8C8C8
+      // document mobile
+      @include media($tablet)
+        @include span-columns(6)
+      // 100% width for mobile devices.
+      @include media($mobile)
+        @include span-columns(4)
       tbody
         border-top: none
       tr.even, tr.odd
