@@ -612,6 +612,19 @@ a.button {
         margin-right: 0;
         margin-bottom: 30px; } }
 
+.ui-accordion .ui-accordion-header {
+  margin-top: 5px; }
+
+.field-group-accordion-wrapper .field-group-accordion-item {
+  border: 0;
+  background: none;
+  padding: 0; }
+.field-group-accordion-wrapper h3.ui-accordion-header {
+  border: 0;
+  background: white;
+  padding: 10px 10px 10px 2em;
+  font-size: 22px; }
+
 #block-boxes-amani_powered_by {
   border-right: 1px solid white; }
 
@@ -1818,8 +1831,7 @@ a.button {
     padding: 5px 0; }
 .node-incident_report-form .field-name-field-description {
   margin-bottom: 30px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #999999; }
+  padding-bottom: 30px; }
 .node-incident_report-form .field-name-field-incident-address {
   display: block;
   float: left;
@@ -1848,7 +1860,6 @@ a.button {
   .node-incident_report-form .field-name-field-incident-geolocation:last-child {
     margin-right: 0; }
 .node-incident_report-form .field-name-field-incident-date {
-  border-top: 1px solid #999999;
   padding-top: 10px;
   margin-top: 30px;
   clear: both; }
