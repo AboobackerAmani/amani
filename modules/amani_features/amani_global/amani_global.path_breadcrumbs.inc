@@ -12,6 +12,28 @@ function amani_global_path_breadcrumbs_settings_info() {
 
   $path_breadcrumb = new stdClass();
   $path_breadcrumb->api_version = 1;
+  $path_breadcrumb->machine_name = 'add_incident_report';
+  $path_breadcrumb->name = 'Add incident report';
+  $path_breadcrumb->path = 'node/add/incident-report';
+  $path_breadcrumb->data = array(
+    'titles' => array(
+      0 => 'Resources',
+      1 => 'Map',
+    ),
+    'paths' => array(
+      0 => 'resources',
+      1 => 'incident-reports',
+    ),
+    'home' => 0,
+    'translatable' => 0,
+    'arguments' => NULL,
+    'access' => array(),
+  );
+  $path_breadcrumb->weight = 0;
+  $export['add_incident_report'] = $path_breadcrumb;
+
+  $path_breadcrumb = new stdClass();
+  $path_breadcrumb->api_version = 1;
   $path_breadcrumb->machine_name = 'blog_nodes';
   $path_breadcrumb->name = 'Blog nodes';
   $path_breadcrumb->path = 'node/%node';
@@ -22,7 +44,7 @@ function amani_global_path_breadcrumbs_settings_info() {
     'paths' => array(
       0 => 'blog',
     ),
-    'home' => 1,
+    'home' => 0,
     'translatable' => 0,
     'arguments' => array(
       'node' => array(
@@ -64,7 +86,7 @@ function amani_global_path_breadcrumbs_settings_info() {
     'paths' => array(
       0 => 'about',
     ),
-    'home' => 1,
+    'home' => 0,
     'translatable' => 0,
     'arguments' => NULL,
     'access' => array(),
@@ -86,7 +108,7 @@ function amani_global_path_breadcrumbs_settings_info() {
       0 => 'about',
       1 => 'gallery',
     ),
-    'home' => 1,
+    'home' => 0,
     'translatable' => 0,
     'arguments' => array(
       'node' => array(
@@ -128,7 +150,7 @@ function amani_global_path_breadcrumbs_settings_info() {
     'paths' => array(
       0 => 'get-involved',
     ),
-    'home' => 1,
+    'home' => 0,
     'translatable' => 0,
     'arguments' => array(
       'node' => array(
@@ -170,7 +192,7 @@ function amani_global_path_breadcrumbs_settings_info() {
     'paths' => array(
       0 => 'news-and-events',
     ),
-    'home' => 1,
+    'home' => 0,
     'translatable' => 0,
     'arguments' => array(
       'node' => array(
@@ -213,7 +235,7 @@ function amani_global_path_breadcrumbs_settings_info() {
     'paths' => array(
       0 => 'programs',
     ),
-    'home' => 1,
+    'home' => 0,
     'translatable' => 0,
     'arguments' => array(
       'node' => array(
@@ -255,7 +277,7 @@ function amani_global_path_breadcrumbs_settings_info() {
     'paths' => array(
       0 => 'resources',
     ),
-    'home' => 1,
+    'home' => 0,
     'translatable' => 0,
     'arguments' => array(
       'node' => array(
@@ -299,7 +321,7 @@ function amani_global_path_breadcrumbs_settings_info() {
       0 => 'about',
       1 => 'team',
     ),
-    'home' => 1,
+    'home' => 0,
     'translatable' => 0,
     'arguments' => array(
       'node' => array(
