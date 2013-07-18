@@ -1,5 +1,5 @@
 name = Amani: Overrides
-description = Exports overrides of Open Outreach features (using features_overrides). See also amani_event which exports overrides of debut_event.
+description = Exports overrides of Open Outreach features. See also amani_event - exports debut_event overrides.
 core = 7.x
 package = Amani
 php = 5.2.4
@@ -156,3 +156,4 @@ features[features_overrides][] = views_view.article.display|page_1|display_optio
 features[features_overrides][] = views_view.article.display|page_1|display_options|fields|view_node|hide_alter_empty
 features[features_overrides][] = views_view.article.display|page_1|display_options|fields|view_node|hide_empty
 features[features_overrides][] = views_view.article.display|page_1|display_options|pager|options|expose
+features[field][] = node-article-field_featured_

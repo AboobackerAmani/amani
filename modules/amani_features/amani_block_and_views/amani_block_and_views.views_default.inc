@@ -33,17 +33,6 @@ function amani_block_and_views_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Image */
-  $handler->display->display_options['fields']['field_content_image']['id'] = 'field_content_image';
-  $handler->display->display_options['fields']['field_content_image']['table'] = 'field_data_field_content_image';
-  $handler->display->display_options['fields']['field_content_image']['field'] = 'field_content_image';
-  $handler->display->display_options['fields']['field_content_image']['label'] = '';
-  $handler->display->display_options['fields']['field_content_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_content_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_content_image']['settings'] = array(
-    'image_style' => 'medium',
-    'image_link' => '',
-  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -51,15 +40,6 @@ function amani_block_and_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['alter']['max_length'] = '300';
-  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
