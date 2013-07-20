@@ -1,4 +1,3 @@
-@charset "IBM437";
 /* Font styles. */
 body {
   margin: 0;
@@ -496,7 +495,7 @@ a.button {
     list-style-type: none;
     list-style-image: none; }
   #sidebar-second .block a:after {
-    content: " »"; }
+    content: " \bb"; }
   #sidebar-second .block .block {
     padding: 0;
     box-shadow: none; }
@@ -834,6 +833,9 @@ a.button {
   .sidebar #block-views-calendar_of_events-list .date-prev,
   .sidebar #block-views-calendar_of_events-calendar .date-prev {
     margin-left: 0; }
+  .sidebar #block-views-calendar_of_events-list a:after,
+  .sidebar #block-views-calendar_of_events-calendar a:after {
+    content: ""; }
 
 @media screen and (max-width: 600px) {
   #block-views-calendar_of_events-calendar {
