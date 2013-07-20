@@ -833,9 +833,9 @@ a.button {
   .sidebar #block-views-calendar_of_events-list .date-prev,
   .sidebar #block-views-calendar_of_events-calendar .date-prev {
     margin-left: 0; }
-  .sidebar #block-views-calendar_of_events-list a:after,
-  .sidebar #block-views-calendar_of_events-calendar a:after {
-    content: ""; }
+
+.sidebar #block-views-calendar_of_events-calendar a:after {
+  content: ""; }
 
 @media screen and (max-width: 600px) {
   #block-views-calendar_of_events-calendar {
