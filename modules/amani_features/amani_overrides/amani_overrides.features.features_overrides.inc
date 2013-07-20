@@ -11,10 +11,6 @@ function amani_overrides_features_override_default_overrides() {
   // This code is only used for UI in features. Exported alters hooks do the magic.
   $overrides = array();
 
-  // Exported overrides for: context
-  $overrides["context.article-content-type.reactions|breadcrumb"] = 'news-and-events';
-  $overrides["context.article-content-type.reactions|menu"] = 'news-and-events';
-
   // Exported overrides for: field
   $overrides["field.file-application-field_tags.field_instance|display|ical"] = array(
     'label' => 'above',

@@ -5,16 +5,6 @@
  */
 
 /**
- * Implements hook_context_default_contexts_alter().
- */
-function amani_overrides_context_default_contexts_alter(&$data) {
-  if (isset($data['article-content-type'])) {
-    $data['article-content-type']->reactions['breadcrumb'] = 'news-and-events'; /* WAS: 'article' */
-    $data['article-content-type']->reactions['menu'] = 'news-and-events'; /* WAS: 'article' */
-  }
-}
-
-/**
  * Implements hook_field_default_fields_alter().
  */
 function amani_overrides_field_default_fields_alter(&$data) {
