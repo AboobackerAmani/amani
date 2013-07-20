@@ -37,6 +37,7 @@ function amani_programs_campaigns_context_default_contexts() {
         ),
       ),
     ),
+    'breadcrumb' => 'programs',
     'menu' => 'programs',
   );
   $context->condition_mode = 0;

@@ -639,6 +639,46 @@ a.button {
   padding: 10px 10px 10px 2em;
   font-size: 22px; }
 
+.breadcrumb {
+  display: block;
+  float: left;
+  margin-right: 2.12766%;
+  width: 74.46809%;
+  margin-left: 25.53191%;
+  font-style: oblique;
+  font-size: 11px;
+  color: #999999;
+  font-family: Georgia;
+  position: relative;
+  top: -30px; }
+  .breadcrumb:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 600px) {
+    .breadcrumb {
+      display: block;
+      float: left;
+      margin-right: 3.22581%;
+      width: 151.6129%;
+      *zoom: 1;
+      max-width: 68em;
+      margin-left: auto;
+      margin-right: auto; }
+      .breadcrumb:last-child {
+        margin-right: 0; }
+      .breadcrumb:before, .breadcrumb:after {
+        content: " ";
+        display: table; }
+      .breadcrumb:after {
+        clear: both; } }
+  .breadcrumb a {
+    color: #999999;
+    margin: 0 5px; }
+    .breadcrumb a:first-child {
+      margin-left: 0; }
+    .breadcrumb a:last-child {
+      color: #ee8f1c;
+      font-style: normal; }
+
 #block-boxes-amani_powered_by {
   border-right: 1px solid white; }
 
@@ -1126,13 +1166,6 @@ a.button {
 .page-incident-reports .block-incident-map label span {
   font-weight: normal; }
 
-.page-team h1.title {
-  display: block;
-  float: left;
-  margin-right: 2.12766%;
-  width: 23.40426%; }
-  .page-team h1.title:last-child {
-    margin-right: 0; }
 .page-team .view-id-team.view-display-id-page .views-exposed-form {
   margin-right: 0;
   position: absolute;

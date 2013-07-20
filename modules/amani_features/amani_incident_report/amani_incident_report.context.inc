@@ -76,9 +76,37 @@ function amani_incident_report_context_default_contexts() {
         ),
       ),
     ),
+    'breadcrumb' => 'resources',
   );
   $context->condition_mode = 0;
   $export['incident_map'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'incidentreport-content-type';
+  $context->description = 'When viewing an incident report, show contextual information.';
+  $context->tag = 'Content types';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'incident_report' => 'incident_report',
+      ),
+      'options' => array(
+        'node_form' => '1',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'breadcrumb' => 'incident-reports',
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Content types');
+  t('When viewing an incident report, show contextual information.');
+  $export['incidentreport-content-type'] = $context;
 
   return $export;
 }
