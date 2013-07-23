@@ -121,7 +121,7 @@ function amani_install() {
     'link_title' => st('Blog'),
     'link_path' => '/blog',
     'menu_name' => 'menu-amani-main-menu',
-    'weight' => -46,
+    'weight' => -40,
   );
   menu_link_save($item);
   menu_link_save($blog_item);

@@ -100,7 +100,7 @@ function amani_news_events_blog_views_default_views() {
   $handler->display->display_options['fields']['field_media']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_media']['type'] = 'file_rendered';
   $handler->display->display_options['fields']['field_media']['settings'] = array(
-    'file_view_mode' => 'full',
+    'file_view_mode' => 'default',
   );
   $handler->display->display_options['fields']['field_media']['delta_offset'] = '0';
   /* Field: Content: Title */
