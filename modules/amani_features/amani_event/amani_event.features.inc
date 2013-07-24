@@ -28,9 +28,6 @@ function amani_event_field_default_fields_alter(&$data) {
   if (isset($data['node-event-body'])) {
     $data['node-event-body']['field_instance']['widget']['weight'] = '10'; /* WAS: '5' */
   }
-  if (isset($data['node-event-field_content_image'])) {
-    unset($data['node-event-field_content_image']);
-  }
   if (isset($data['node-event-field_event_type'])) {
     $data['node-event-field_event_type']['field_instance']['widget']['weight'] = '15'; /* WAS: '2' */
   }

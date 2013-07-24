@@ -13,7 +13,6 @@ function amani_event_features_override_default_overrides() {
 
   // Exported overrides for: field
   $overrides["field.node-event-body.field_instance|widget|weight"] = '10';
-  $overrides["field.node-event-field_content_image.node-event-field_content_image"]["DELETED"] = TRUE;
   $overrides["field.node-event-field_event_type.field_instance|widget|weight"] = '15';
   $overrides["field.node-event-field_tags.field_instance|widget|weight"] = '17';
 
