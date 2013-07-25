@@ -286,11 +286,24 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h2>Documents</h2>';
   $handler->display->display_options['header']['area']['format'] = 'wysiwyg_editor';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Video */
+  $handler->display->display_options['fields']['field_video']['id'] = 'field_video';
+  $handler->display->display_options['fields']['field_video']['table'] = 'field_data_field_video';
+  $handler->display->display_options['fields']['field_video']['field'] = 'field_video';
+  $handler->display->display_options['fields']['field_video']['label'] = '';
+  $handler->display->display_options['fields']['field_video']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_video']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_video']['type'] = 'file_rendered';
+  $handler->display->display_options['fields']['field_video']['settings'] = array(
+    'file_view_mode' => 'preview',
+  );
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
@@ -298,6 +311,15 @@ function amani_resource_views_default_views() {
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_image']['group_column'] = 'fid';
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['text'] = '[field_video]
+[field_image]';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -459,16 +481,6 @@ function amani_resource_views_default_views() {
   );
   $handler->display->display_options['filters']['field_date_value']['form_type'] = 'date_popup';
   $handler->display->display_options['filters']['field_date_value']['year_range'] = '-10:+0';
-  /* Filter criterion: Content: Video (field_video:fid) */
-  $handler->display->display_options['filters']['field_video_fid']['id'] = 'field_video_fid';
-  $handler->display->display_options['filters']['field_video_fid']['table'] = 'field_data_field_video';
-  $handler->display->display_options['filters']['field_video_fid']['field'] = 'field_video_fid';
-  $handler->display->display_options['filters']['field_video_fid']['operator'] = 'empty';
-  /* Filter criterion: Content: Link (field_link:url) */
-  $handler->display->display_options['filters']['field_link_url']['id'] = 'field_link_url';
-  $handler->display->display_options['filters']['field_link_url']['table'] = 'field_data_field_link';
-  $handler->display->display_options['filters']['field_link_url']['field'] = 'field_link_url';
-  $handler->display->display_options['filters']['field_link_url']['operator'] = 'empty';
   $handler->display->display_options['path'] = 'resources';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Resources';
@@ -652,14 +664,15 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['filters']['field_link_url']['field'] = 'field_link_url';
   $handler->display->display_options['filters']['field_link_url']['operator'] = 'not empty';
   $handler->display->display_options['displays'] = array(
-    'page' => 'page',
     'default' => 0,
+    'page' => 0,
   );
   $handler->display->display_options['inherit_exposed_filters'] = TRUE;
 
   /* Display: Videos Attachment */
   $handler = $view->new_display('attachment', 'Videos Attachment', 'attachment_2');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -845,8 +858,8 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['filters']['field_video_fid']['field'] = 'field_video_fid';
   $handler->display->display_options['filters']['field_video_fid']['operator'] = 'not empty';
   $handler->display->display_options['displays'] = array(
-    'page' => 'page',
     'default' => 0,
+    'page' => 0,
   );
   $handler->display->display_options['attachment_position'] = 'after';
   $handler->display->display_options['inherit_exposed_filters'] = TRUE;
@@ -874,6 +887,8 @@ function amani_resource_views_default_views() {
     t('Date'),
     t('Page'),
     t('<h2>Documents</h2>'),
+    t('[field_video]
+[field_image]'),
     t('[filemime]
 [field_date]'),
     t('Links Attachment'),

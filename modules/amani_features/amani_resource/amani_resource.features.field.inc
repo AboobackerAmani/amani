@@ -52,7 +52,7 @@ function amani_resource_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '0',
+          'weight' => 0,
         ),
         'ical' => array(
           'label' => 'above',
@@ -222,7 +222,7 @@ function amani_resource_field_default_fields() {
             'show_repeat_rule' => 'show',
           ),
           'type' => 'date_default',
-          'weight' => '3',
+          'weight' => 3,
         ),
         'ical' => array(
           'label' => 'above',
@@ -309,7 +309,7 @@ function amani_resource_field_default_fields() {
           'module' => 'file',
           'settings' => array(),
           'type' => 'file_default',
-          'weight' => '4',
+          'weight' => 4,
         ),
         'ical' => array(
           'label' => 'above',
@@ -565,7 +565,7 @@ function amani_resource_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '2',
+          'weight' => 2,
         ),
         'ical' => array(
           'label' => 'above',
