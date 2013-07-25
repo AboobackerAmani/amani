@@ -620,7 +620,7 @@ a.button {
   background: none;
   padding: 0; }
 .field-group-accordion-wrapper h3.ui-accordion-header {
-  border: 0;
+  border: 1px solid #cccccc;
   background: white;
   padding: 10px 10px 10px 2em;
   font-size: 22px; }
@@ -1872,6 +1872,9 @@ a.button {
   margin-bottom: 30px; }
   .node-incident_report-form .field-name-field-incident-geolocation:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    .node-incident_report-form .field-name-field-incident-geolocation {
+      width: 100%; } }
 .node-incident_report-form .field-name-field-incident-date {
   border-top: 1px solid #999999;
   padding-top: 10px;
