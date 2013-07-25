@@ -158,7 +158,7 @@ function peace_breadcrumb($variables) {
 
     // Optionally get rid of the homepage link.
     $show_breadcrumb_home = theme_get_setting('peace_breadcrumb_home');
-    if (!$show_breadcrumb_home) {
+    if (!$show_breadcrumb_home AND (isset($breadcrumb[0]) AND strpos($breadcrumb[0], 'Home'))) {
       array_shift($breadcrumb);
     }
 

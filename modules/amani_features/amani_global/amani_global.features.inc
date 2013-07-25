@@ -16,10 +16,6 @@ function amani_global_ctools_plugin_api() {
   if ($module == "context" && $api == "context") {
     return array("version" => "3");
   }
-  list($module, $api) = func_get_args();
-  if ($module == "path_breadcrumbs" && $api == "path_breadcrumbs") {
-    return array("version" => "1");
-  }
 }
 
 /**

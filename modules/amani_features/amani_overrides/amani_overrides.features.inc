@@ -5,6 +5,23 @@
  */
 
 /**
+ * Implements hook_context_default_contexts_alter().
+ */
+function amani_overrides_context_default_contexts_alter(&$data) {
+  if (isset($data['article-content-type'])) {
+    $data['article-content-type']->reactions['block']['blocks']['views-article-block_1']['weight'] = '0'; /* WAS: 0 */
+    $data['article-content-type']->reactions['block']['blocks']['views-article-block_2']['weight'] = '1'; /* WAS: 1 */
+    $data['article-content-type']->reactions['breadcrumb'] = 'news-and-events'; /* WAS: 'article' */
+    $data['article-content-type']->reactions['menu'] = 'news-and-events'; /* WAS: 'article' */
+  }
+  if (isset($data['event-content-type'])) {
+    $data['event-content-type']->reactions['breadcrumb'] = 'news-and-events'; /* WAS: 'event' */
+    $data['event-content-type']->reactions['menu'] = 'news-and-events'; /* WAS: 'event' */
+    unset($data['event-content-type']->reactions['block']);
+  }
+}
+
+/**
  * Implements hook_field_default_fields_alter().
  */
 function amani_overrides_field_default_fields_alter(&$data) {

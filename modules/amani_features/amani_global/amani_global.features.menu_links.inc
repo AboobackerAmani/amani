@@ -26,7 +26,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '1',
     'expanded' => '0',
-    'weight' => '-3',
+    'weight' => '-50',
   );
   // Exported menu link: menu-amani-main-menu:contact
   $menu_links['menu-amani-main-menu:contact'] = array(
@@ -44,7 +44,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '2',
+    'weight' => '-43',
   );
   // Exported menu link: menu-amani-main-menu:gallery
   $menu_links['menu-amani-main-menu:gallery'] = array(
@@ -81,7 +81,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-1',
+    'weight' => '-47',
   );
   // Exported menu link: menu-amani-main-menu:incident-reports
   $menu_links['menu-amani-main-menu:incident-reports'] = array(
@@ -118,7 +118,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '1',
+    'weight' => '-44',
   );
   // Exported menu link: menu-amani-main-menu:programs
   $menu_links['menu-amani-main-menu:programs'] = array(
@@ -136,7 +136,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-2',
+    'weight' => '-49',
   );
   // Exported menu link: menu-amani-main-menu:resources
   $menu_links['menu-amani-main-menu:resources'] = array(
@@ -154,7 +154,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '1',
     'expanded' => '0',
-    'weight' => '0',
+    'weight' => '-45',
   );
   // Exported menu link: menu-amani-main-menu:team
   $menu_links['menu-amani-main-menu:team'] = array(

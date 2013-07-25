@@ -13,9 +13,9 @@ function amani_news_events_blog_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'twitter_feed';
+  $context->name = 'blog_page';
   $context->description = '';
-  $context->tag = '';
+  $context->tag = 'blog';
   $context->conditions = array(
     'path' => array(
       'values' => array(
@@ -26,17 +26,21 @@ function amani_news_events_blog_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-tweets-block_1' => array(
-          'module' => 'views',
-          'delta' => 'tweets-block_1',
+        'quicktabs-social_media_feeds' => array(
+          'module' => 'quicktabs',
+          'delta' => 'social_media_feeds',
           'region' => 'sidebar_second',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
       ),
     ),
   );
   $context->condition_mode = 1;
-  $export['twitter_feed'] = $context;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('blog');
+  $export['blog_page'] = $context;
 
   return $export;
 }
