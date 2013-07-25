@@ -648,16 +648,11 @@ a.button {
   top: -15px; }
   @media screen and (max-width: 600px) {
     .breadcrumb {
-      display: block;
-      float: left;
-      margin-right: 3.22581%;
-      width: 151.6129%;
+      width: 100%;
       *zoom: 1;
       max-width: 68em;
       margin-left: auto;
       margin-right: auto; }
-      .breadcrumb:last-child {
-        margin-right: 0; }
       .breadcrumb:before, .breadcrumb:after {
         content: " ";
         display: table; }
