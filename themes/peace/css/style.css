@@ -1590,31 +1590,16 @@ a.button {
     .page-resources .view-resources .attachment-after .views-row .views-field-title, .page-resources .view-resources .attachment-after .views-row .views-field-body {
       padding: 5px 10px 0; }
 .page-resources .view-resources .view-content-wrapper {
-  display: block;
-  float: left;
-  margin-right: 2.12766%;
-  width: 65.95745%;
+  width: 100%;
   background: white;
   padding: 30px;
   box-shadow: 2px 3px 4px #c8c8c8; }
-  .page-resources .view-resources .view-content-wrapper:last-child {
-    margin-right: 0; }
   @media screen and (max-width: 768px) {
     .page-resources .view-resources .view-content-wrapper {
-      display: block;
-      float: left;
-      margin-right: 3.22581%;
-      width: 74.19355%; }
-      .page-resources .view-resources .view-content-wrapper:last-child {
-        margin-right: 0; } }
+      width: 100%; } }
   @media screen and (max-width: 480px) {
     .page-resources .view-resources .view-content-wrapper {
-      display: block;
-      float: left;
-      margin-right: 6.66667%;
-      width: 100%; }
-      .page-resources .view-resources .view-content-wrapper:last-child {
-        margin-right: 0; } }
+      width: 100%; } }
   .page-resources .view-resources .view-content-wrapper tbody {
     border-top: none; }
   .page-resources .view-resources .view-content-wrapper tr.even, .page-resources .view-resources .view-content-wrapper tr.odd {
@@ -1624,6 +1609,9 @@ a.button {
     border-bottom: none; }
   .page-resources .view-resources .view-content-wrapper td {
     vertical-align: top; }
+    .page-resources .view-resources .view-content-wrapper td .file img {
+      width: 100px;
+      height: auto; }
   .page-resources .view-resources .view-content-wrapper h3 {
     color: #ee8f1c; }
   .page-resources .view-resources .view-content-wrapper .views-field-field-date {

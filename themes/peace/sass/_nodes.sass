@@ -405,16 +405,16 @@
           padding: 5px 10px 0
     //documents
     .view-content-wrapper
-      @include span-columns(8)
+      @include fill-parent
       background: #fff
       padding: $padding
       box-shadow: 2px 3px 4px #C8C8C8
       // document mobile
       @include media($tablet)
-        @include span-columns(6)
+        @include fill-parent
       // 100% width for mobile devices.
       @include media($mobile)
-        @include span-columns(4)
+        @include fill-parent
       tbody
         border-top: none
       tr.even, tr.odd
@@ -424,6 +424,10 @@
         border-bottom: none
       td
         vertical-align: top
+        .file
+          img
+            width: 100px
+            height: auto
       h3
         color: $orange
       .views-field-field-date
