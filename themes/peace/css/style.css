@@ -1914,7 +1914,18 @@ body.node-type-project .node-project .field-name-field-media {
 .node-incident_report-form .field-name-field-description {
   margin-bottom: 30px;
   padding-bottom: 30px; }
+.node-incident_report-form .field-type-name .name-given-wrapper,
+.node-incident_report-form .field-type-name .name-middle-wrapper,
+.node-incident_report-form .field-type-name .name-family-wrapper {
+  width: 140px; }
+  @media screen and (max-width: 768px) {
+    .node-incident_report-form .field-type-name .name-given-wrapper,
+    .node-incident_report-form .field-type-name .name-middle-wrapper,
+    .node-incident_report-form .field-type-name .name-family-wrapper {
+      clear: both;
+      width: 100%; } }
 .node-incident_report-form .field-name-field-incident-address {
+  margin-top: 30px;
   display: block;
   float: left;
   margin-right: 2.12766%;
@@ -1935,6 +1946,7 @@ body.node-type-project .node-project .field-name-field-media {
       margin: 0;
       padding: 4px 0; }
 .node-incident_report-form .field-name-field-incident-geolocation {
+  margin-top: 30px;
   display: block;
   float: left;
   margin-right: 2.12766%;
