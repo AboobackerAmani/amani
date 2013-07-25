@@ -164,6 +164,7 @@ function amani_programs_campaigns_views_default_views() {
   /* Display: Other projects */
   $handler = $view->new_display('block', 'Other projects', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Other Projects and Campaigns';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
@@ -231,6 +232,7 @@ function amani_programs_campaigns_views_default_views() {
     t('Other news'),
     t('Other News'),
     t('Other projects'),
+    t('Other Projects and Campaigns'),
   );
   $export['programs_campaigns'] = $view;
 

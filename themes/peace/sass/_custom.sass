@@ -403,14 +403,13 @@ a.button
 
 // breadcrumb
 .breadcrumb
-  @include span-columns(9)
-  @include shift(3)
+  @include fill-parent
   font-style: oblique
   font-size: 11px
   color: #999
   font-family: Georgia
   position: relative
-  top: -$margin
+  top: -$margin/2
   @include media($motab)
     @include span-columns(12)
     @include outer-container

@@ -639,19 +639,13 @@ a.button {
   font-size: 22px; }
 
 .breadcrumb {
-  display: block;
-  float: left;
-  margin-right: 2.12766%;
-  width: 74.46809%;
-  margin-left: 25.53191%;
+  width: 100%;
   font-style: oblique;
   font-size: 11px;
   color: #999999;
   font-family: Georgia;
   position: relative;
-  top: -30px; }
-  .breadcrumb:last-child {
-    margin-right: 0; }
+  top: -15px; }
   @media screen and (max-width: 600px) {
     .breadcrumb {
       display: block;
@@ -913,6 +907,15 @@ a.button {
 #views_slideshow_cycle_teaser_section_front_page_slideshow-block {
   overflow: hidden;
   width: 100% !important; }
+
+#block-views-programs_campaigns-block_1 .views-row {
+  margin: 10px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #cccccc; }
+  #block-views-programs_campaigns-block_1 .views-row.views-row-last {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0; }
 
 #block-search-form {
   position: relative;
@@ -1634,6 +1637,11 @@ a.button {
     .node-type-get-involved .field-name-field-graphic img {
       width: 100%;
       height: auto; } }
+
+body.node-type-project .node-project .field-name-field-media {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px; }
 
 .page-contact .form-item label {
   font-weight: normal;
