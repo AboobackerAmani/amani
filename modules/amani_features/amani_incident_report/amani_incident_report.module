@@ -7,50 +7,6 @@
 include_once 'amani_incident_report.features.inc';
 
 /**
- * Implements hook_FORM_ID_form_alter().
- */
-function amani_incident_report_form_incident_report_node_form_alter(&$form, &$form_state) {
-  $form['#validate'][] = 'amani_incident_report_node_form_validate';
-}
-
-/**
- * Validate handler for incident_report_node_form.
- */
-function amani_incident_report_node_form_validate($form, &$form_state) {
-  // Require address OR geolocation
-  $geolocation = $form_state['values']['field_incident_geolocation'][LANGUAGE_NONE][0];
-  $address_fields = $form_state['values']['field_incident_address'][LANGUAGE_NONE][0];
-
-  $error = FALSE;
-
-  if (empty($geolocation['geom'])) {
-    // Check that all required address fields are filled out
-    $required_fields = array(
-      'country',
-      'thoroughfare',
-      'locality',
-      'administrative_area',
-    );
-    foreach ($address_fields as $key => $value) {
-      if (in_array($key, $required_fields) && !$value) {
-        $error = TRUE;
-      }
-    }
-    if ($error) {
-      form_set_error('field_incident_geolocation', t('Please complete the address fields or mark a location on the map.'));
-    }
-    else {
-      // Geocode address and set geolocation field value
-      unset($address_fields['element_key']);
-      $point = geocoder('google', implode(', ', $address_fields));
-      $wkt = 'POINT (' . $point->coords[0] . ' ' . $point->coords[1] . ')';
-      $form_state['values']['field_incident_geolocation'][LANGUAGE_NONE][0] = $wkt;
-    }
-  }
-
-}
-
-/**
  * Implements hook_field_formatter_info().
  */
 function amani_incident_report_field_formatter_info() {
