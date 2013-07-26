@@ -32,23 +32,17 @@ function amani_about_context_default_contexts() {
           'region' => 'home_content_top_rotator',
           'weight' => '-10',
         ),
-        'boxes-amani_donate' => array(
-          'module' => 'boxes',
-          'delta' => 'amani_donate',
+        'bean-donate' => array(
+          'module' => 'bean',
+          'delta' => 'donate',
           'region' => 'home_content_top_callout_right',
-          'weight' => '-10',
+          'weight' => '-8',
         ),
-        'boxes-pilot_project' => array(
-          'module' => 'boxes',
-          'delta' => 'pilot_project',
+        'bean-become-a-pilot-project' => array(
+          'module' => 'bean',
+          'delta' => 'become-a-pilot-project',
           'region' => 'home_content_top_callout_right',
-          'weight' => '-9',
-        ),
-        'menu-menu-learn-more' => array(
-          'module' => 'menu',
-          'delta' => 'menu-learn-more',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
+          'weight' => '-7',
         ),
       ),
     ),

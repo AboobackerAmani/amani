@@ -59,35 +59,35 @@ function amani_global_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'boxes-amani_powered_by' => array(
-          'module' => 'boxes',
-          'delta' => 'amani_powered_by',
+        'bean-amani-powered-by' => array(
+          'module' => 'bean',
+          'delta' => 'amani-powered-by',
           'region' => 'footer',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'menu-menu-amani-main-menu' => array(
           'module' => 'menu',
           'delta' => 'menu-amani-main-menu',
           'region' => 'footer',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
         'menu-menu-meta' => array(
           'module' => 'menu',
           'delta' => 'menu-meta',
           'region' => 'footer',
-          'weight' => '-8',
+          'weight' => '-7',
         ),
         'search-form' => array(
           'module' => 'search',
           'delta' => 'form',
           'region' => 'footer',
-          'weight' => '-7',
-        ),
-        'boxes-amani_special_thanks' => array(
-          'module' => 'boxes',
-          'delta' => 'amani_special_thanks',
-          'region' => 'footer',
           'weight' => '-6',
+        ),
+        'bean-amani-special-thanks' => array(
+          'module' => 'bean',
+          'delta' => 'amani-special-thanks',
+          'region' => 'footer',
+          'weight' => '-4',
         ),
       ),
     ),
@@ -146,17 +146,17 @@ function amani_global_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
-        'boxes-front_second_sidebar_bottom' => array(
-          'module' => 'boxes',
-          'delta' => 'front_second_sidebar_bottom',
+        'bean-front-page-second-sidebar-bottom' => array(
+          'module' => 'bean',
+          'delta' => 'front-page-second-sidebar-bottom',
           'region' => 'sidebar_second',
-          'weight' => '-43',
+          'weight' => '-9',
         ),
         'quicktabs-social_media_feeds' => array(
           'module' => 'quicktabs',
           'delta' => 'social_media_feeds',
           'region' => 'sidebar_second',
-          'weight' => '-42',
+          'weight' => '-8',
         ),
       ),
     ),

@@ -286,6 +286,7 @@ function amani_global_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('About');
+  t('Blog');
   t('Contact');
   t('Facebook');
   t('Get Involved');

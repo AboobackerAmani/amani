@@ -32,29 +32,29 @@ function amani_incident_report_context_default_contexts() {
           'region' => 'content',
           'weight' => '37',
         ),
-        'boxes-amani_add_record' => array(
-          'module' => 'boxes',
-          'delta' => 'amani_add_record',
+        'bean-amani-add-map-record' => array(
+          'module' => 'bean',
+          'delta' => 'amani-add-map-record',
           'region' => 'sidebar_second',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'incident_map-field_incident_report_type' => array(
           'module' => 'incident_map',
           'delta' => 'field_incident_report_type',
           'region' => 'sidebar_second',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
         'incident_map-field_incident_severity' => array(
           'module' => 'incident_map',
           'delta' => 'field_incident_severity',
           'region' => 'sidebar_second',
-          'weight' => '-8',
+          'weight' => '-7',
         ),
         'views-incident_reports-latest' => array(
           'module' => 'views',
           'delta' => 'incident_reports-latest',
           'region' => 'sidebar_second',
-          'weight' => '-7',
+          'weight' => '-6',
         ),
         'bean-total-incidents' => array(
           'module' => 'bean',
