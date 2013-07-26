@@ -48,11 +48,21 @@
     margin-bottom: $margin
     padding-bottom: $padding
     //border-bottom: 1px solid #999
-
+  .field-type-name
+    .name-given-wrapper,
+    .name-middle-wrapper,
+    .name-family-wrapper
+      width: 140px
+      @include media($tablet)
+        clear: both
+        width: 100%
+  .field-type-taxonomy-term-reference
+    select
+      width: 150px
   .field-name-field-incident-address
     //border-top: 1px solid #999
     //padding-top: $padding/3
-    //margin-top: $margin/3
+    margin-top: $margin
     @include span-columns(6)
     @include media($tablet)
       @include fill-parent
@@ -68,8 +78,11 @@
           margin: 0
           padding: 4px 0
   .field-name-field-incident-geolocation
+    margin-top: $margin
     @include span-columns(6)
     @include omega
+    @include media($tablet)
+      @include fill-parent
     overflow: hidden
     margin-bottom: $margin
   .field-name-field-incident-date

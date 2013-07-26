@@ -164,6 +164,7 @@ function amani_programs_campaigns_views_default_views() {
   /* Display: Other projects */
   $handler = $view->new_display('block', 'Other projects', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Other Projects and Campaigns';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
@@ -176,17 +177,18 @@ function amani_programs_campaigns_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Image */
-  $handler->display->display_options['fields']['field_content_image']['id'] = 'field_content_image';
-  $handler->display->display_options['fields']['field_content_image']['table'] = 'field_data_field_content_image';
-  $handler->display->display_options['fields']['field_content_image']['field'] = 'field_content_image';
-  $handler->display->display_options['fields']['field_content_image']['label'] = '';
-  $handler->display->display_options['fields']['field_content_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_content_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_content_image']['settings'] = array(
-    'image_style' => 'medium',
-    'image_link' => '',
+  /* Field: Content: Media */
+  $handler->display->display_options['fields']['field_media']['id'] = 'field_media';
+  $handler->display->display_options['fields']['field_media']['table'] = 'field_data_field_media';
+  $handler->display->display_options['fields']['field_media']['field'] = 'field_media';
+  $handler->display->display_options['fields']['field_media']['label'] = '';
+  $handler->display->display_options['fields']['field_media']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_media']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_media']['type'] = 'file_rendered';
+  $handler->display->display_options['fields']['field_media']['settings'] = array(
+    'file_view_mode' => 'preview',
   );
+  $handler->display->display_options['fields']['field_media']['delta_offset'] = '0';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -231,6 +233,7 @@ function amani_programs_campaigns_views_default_views() {
     t('Other news'),
     t('Other News'),
     t('Other projects'),
+    t('Other Projects and Campaigns'),
   );
   $export['programs_campaigns'] = $view;
 

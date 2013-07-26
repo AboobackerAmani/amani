@@ -396,23 +396,22 @@ a.button
     background: none
     padding: 0
   h3.ui-accordion-header
-    border: 0
+    border: 1px solid #ccc
     background: #fff
     padding: 10px 10px 10px 2em
     font-size: 22px
 
 // breadcrumb
 .breadcrumb
-  @include span-columns(9)
-  @include shift(3)
+  @include fill-parent
   font-style: oblique
   font-size: 11px
   color: #999
   font-family: Georgia
   position: relative
-  top: -$margin
+  top: -$margin/2
   @include media($motab)
-    @include span-columns(12)
+    @include fill-parent
     @include outer-container
   a
     color: #999

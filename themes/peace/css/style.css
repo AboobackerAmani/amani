@@ -633,37 +633,26 @@ a.button {
   background: none;
   padding: 0; }
 .field-group-accordion-wrapper h3.ui-accordion-header {
-  border: 0;
+  border: 1px solid #cccccc;
   background: white;
   padding: 10px 10px 10px 2em;
   font-size: 22px; }
 
 .breadcrumb {
-  display: block;
-  float: left;
-  margin-right: 2.12766%;
-  width: 74.46809%;
-  margin-left: 25.53191%;
+  width: 100%;
   font-style: oblique;
   font-size: 11px;
   color: #999999;
   font-family: Georgia;
   position: relative;
-  top: -30px; }
-  .breadcrumb:last-child {
-    margin-right: 0; }
+  top: -15px; }
   @media screen and (max-width: 600px) {
     .breadcrumb {
-      display: block;
-      float: left;
-      margin-right: 3.22581%;
-      width: 151.6129%;
+      width: 100%;
       *zoom: 1;
       max-width: 68em;
       margin-left: auto;
       margin-right: auto; }
-      .breadcrumb:last-child {
-        margin-right: 0; }
       .breadcrumb:before, .breadcrumb:after {
         content: " ";
         display: table; }
@@ -913,6 +902,26 @@ a.button {
 #views_slideshow_cycle_teaser_section_front_page_slideshow-block {
   overflow: hidden;
   width: 100% !important; }
+
+#block-views-programs_campaigns-block_1 .views-row {
+  margin: 10px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #cccccc; }
+  #block-views-programs_campaigns-block_1 .views-row.views-row-last {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0; }
+  #block-views-programs_campaigns-block_1 .views-row .views-field-field-media {
+    text-align: center;
+    display: block;
+    float: left;
+    margin-right: 6.66667%;
+    width: 20%; }
+    #block-views-programs_campaigns-block_1 .views-row .views-field-field-media:last-child {
+      margin-right: 0; }
+    #block-views-programs_campaigns-block_1 .views-row .views-field-field-media img {
+      width: 100%;
+      height: auto; }
 
 #block-search-form {
   position: relative;
@@ -1590,31 +1599,16 @@ a.button {
     .page-resources .view-resources .attachment-after .views-row .views-field-title, .page-resources .view-resources .attachment-after .views-row .views-field-body {
       padding: 5px 10px 0; }
 .page-resources .view-resources .view-content-wrapper {
-  display: block;
-  float: left;
-  margin-right: 2.12766%;
-  width: 65.95745%;
+  width: 100%;
   background: white;
   padding: 30px;
   box-shadow: 2px 3px 4px #c8c8c8; }
-  .page-resources .view-resources .view-content-wrapper:last-child {
-    margin-right: 0; }
   @media screen and (max-width: 768px) {
     .page-resources .view-resources .view-content-wrapper {
-      display: block;
-      float: left;
-      margin-right: 3.22581%;
-      width: 74.19355%; }
-      .page-resources .view-resources .view-content-wrapper:last-child {
-        margin-right: 0; } }
+      width: 100%; } }
   @media screen and (max-width: 480px) {
     .page-resources .view-resources .view-content-wrapper {
-      display: block;
-      float: left;
-      margin-right: 6.66667%;
-      width: 100%; }
-      .page-resources .view-resources .view-content-wrapper:last-child {
-        margin-right: 0; } }
+      width: 100%; } }
   .page-resources .view-resources .view-content-wrapper tbody {
     border-top: none; }
   .page-resources .view-resources .view-content-wrapper tr.even, .page-resources .view-resources .view-content-wrapper tr.odd {
@@ -1624,6 +1618,9 @@ a.button {
     border-bottom: none; }
   .page-resources .view-resources .view-content-wrapper td {
     vertical-align: top; }
+    .page-resources .view-resources .view-content-wrapper td .file img {
+      width: 100px;
+      height: auto; }
   .page-resources .view-resources .view-content-wrapper h3 {
     color: #ee8f1c; }
   .page-resources .view-resources .view-content-wrapper .views-field-field-date {
@@ -1646,6 +1643,11 @@ a.button {
     .node-type-get-involved .field-name-field-graphic img {
       width: 100%;
       height: auto; } }
+
+body.node-type-project .node-project .field-name-field-media {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px; }
 
 .page-contact .form-item label {
   font-weight: normal;
@@ -1912,7 +1914,20 @@ a.button {
 .node-incident_report-form .field-name-field-description {
   margin-bottom: 30px;
   padding-bottom: 30px; }
+.node-incident_report-form .field-type-name .name-given-wrapper,
+.node-incident_report-form .field-type-name .name-middle-wrapper,
+.node-incident_report-form .field-type-name .name-family-wrapper {
+  width: 140px; }
+  @media screen and (max-width: 768px) {
+    .node-incident_report-form .field-type-name .name-given-wrapper,
+    .node-incident_report-form .field-type-name .name-middle-wrapper,
+    .node-incident_report-form .field-type-name .name-family-wrapper {
+      clear: both;
+      width: 100%; } }
+.node-incident_report-form .field-type-taxonomy-term-reference select {
+  width: 150px; }
 .node-incident_report-form .field-name-field-incident-address {
+  margin-top: 30px;
   display: block;
   float: left;
   margin-right: 2.12766%;
@@ -1933,6 +1948,7 @@ a.button {
       margin: 0;
       padding: 4px 0; }
 .node-incident_report-form .field-name-field-incident-geolocation {
+  margin-top: 30px;
   display: block;
   float: left;
   margin-right: 2.12766%;
@@ -1942,6 +1958,9 @@ a.button {
   margin-bottom: 30px; }
   .node-incident_report-form .field-name-field-incident-geolocation:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    .node-incident_report-form .field-name-field-incident-geolocation {
+      width: 100%; } }
 .node-incident_report-form .field-name-field-incident-date {
   border-top: 1px solid #999999;
   padding-top: 10px;
