@@ -1913,9 +1913,6 @@ body.node-type-project .node-project .field-name-field-media {
   .node-incident_report-form .field-widget-name-widget .form-item .description {
     clear: both;
     padding: 5px 0; }
-.node-incident_report-form .field-name-field-description {
-  margin-bottom: 30px;
-  padding-bottom: 30px; }
 .node-incident_report-form .field-type-name .name-given-wrapper,
 .node-incident_report-form .field-type-name .name-middle-wrapper,
 .node-incident_report-form .field-type-name .name-family-wrapper {
@@ -1964,9 +1961,6 @@ body.node-type-project .node-project .field-name-field-media {
     .node-incident_report-form .field-name-field-incident-geolocation {
       width: 100%; } }
 .node-incident_report-form .field-name-field-incident-date {
-  border-top: 1px solid #999999;
-  padding-top: 10px;
-  margin-top: 30px;
   clear: both; }
   .node-incident_report-form .field-name-field-incident-date fieldset {
     border: 0; }
@@ -2061,6 +2055,26 @@ body.node-type-project .node-project .field-name-field-media {
   .node-incident_report-form #edit-field-incident-videos:last-child,
   .node-incident_report-form #edit-field-links:last-child {
     margin-right: 0; }
+  .node-incident_report-form #edit-field-incident-media tbody,
+  .node-incident_report-form #edit-field-incident-media th,
+  .node-incident_report-form #edit-field-incident-videos tbody,
+  .node-incident_report-form #edit-field-incident-videos th,
+  .node-incident_report-form #edit-field-links tbody,
+  .node-incident_report-form #edit-field-links th {
+    border: 0; }
+    .node-incident_report-form #edit-field-incident-media tbody tr.odd,
+    .node-incident_report-form #edit-field-incident-media tbody tr.even,
+    .node-incident_report-form #edit-field-incident-media th tr.odd,
+    .node-incident_report-form #edit-field-incident-media th tr.even,
+    .node-incident_report-form #edit-field-incident-videos tbody tr.odd,
+    .node-incident_report-form #edit-field-incident-videos tbody tr.even,
+    .node-incident_report-form #edit-field-incident-videos th tr.odd,
+    .node-incident_report-form #edit-field-incident-videos th tr.even,
+    .node-incident_report-form #edit-field-links tbody tr.odd,
+    .node-incident_report-form #edit-field-links tbody tr.even,
+    .node-incident_report-form #edit-field-links th tr.odd,
+    .node-incident_report-form #edit-field-links th tr.even {
+      border: 0; }
   @media screen and (max-width: 768px) {
     .node-incident_report-form #edit-field-incident-media,
     .node-incident_report-form #edit-field-incident-videos,

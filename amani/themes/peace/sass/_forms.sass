@@ -45,9 +45,6 @@
         clear: both
         padding: 5px 0
   .field-name-field-description
-    margin-bottom: $margin
-    padding-bottom: $padding
-    //border-bottom: 1px solid #999
   .field-type-name
     .name-given-wrapper,
     .name-middle-wrapper,
@@ -86,9 +83,6 @@
     overflow: hidden
     margin-bottom: $margin
   .field-name-field-incident-date
-    border-top: 1px solid #999
-    padding-top: $padding/3
-    margin-top: $margin
     clear: both
     fieldset
       border: 0
@@ -154,6 +148,12 @@
   #edit-field-incident-videos,
   #edit-field-links
     @include span-columns(6)
+    tbody,
+    th
+      border: 0
+      tr.odd,
+      tr.even
+        border: 0
     @include media($tablet)
       @include fill-parent
     .field-multiple-drag
