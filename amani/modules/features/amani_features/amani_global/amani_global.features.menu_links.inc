@@ -280,6 +280,60 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '1',
   );
+  // Exported menu link: menu-social-media:http://www.google.com/peacegeeks
+  $menu_links['menu-social-media:http://www.google.com/peacegeeks'] = array(
+    'menu_name' => 'menu-social-media',
+    'link_path' => 'http://www.google.com/peacegeeks',
+    'router_path' => '',
+    'link_title' => 'Google+',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '1',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '0',
+  );
+  // Exported menu link: menu-social-media:http://www.linkedin.com/peacegeeks
+  $menu_links['menu-social-media:http://www.linkedin.com/peacegeeks'] = array(
+    'menu_name' => 'menu-social-media',
+    'link_path' => 'http://www.linkedin.com/peacegeeks',
+    'router_path' => '',
+    'link_title' => 'LinkedIn',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '1',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '0',
+  );
+  // Exported menu link: menu-social-media:http://www.youtube.com/peacegeeks
+  $menu_links['menu-social-media:http://www.youtube.com/peacegeeks'] = array(
+    'menu_name' => 'menu-social-media',
+    'link_path' => 'http://www.youtube.com/peacegeeks',
+    'router_path' => '',
+    'link_title' => 'YouTube',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '1',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '0',
+  );
   // Translatables
   // Included for use with string extractors like potx.
   t('About');
@@ -287,13 +341,16 @@ function amani_global_menu_default_menu_links() {
   t('Contact');
   t('Facebook');
   t('Get Involved');
+  t('Google+');
   t('Image Gallery');
+  t('LinkedIn');
   t('Map');
   t('News & Events');
   t('Projects');
   t('Resources');
   t('Team');
   t('Twitter');
+  t('YouTube');
   t('about');
   t('admin');
   t('home');
