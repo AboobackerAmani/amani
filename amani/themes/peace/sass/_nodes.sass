@@ -424,9 +424,13 @@
         border-bottom: none
       td
         vertical-align: top
+        &.views-field-nid
+          width: 80px
+          @include media($motab)
+            width: 50px
         .file
           img
-            width: 100px
+            width: 100%
             height: auto
       h3
         color: $orange
