@@ -34,17 +34,14 @@ function amani_global_menu_default_menu_links() {
     'link_path' => 'blog',
     'router_path' => 'blog',
     'link_title' => 'Blog',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
+    'options' => array(),
+    'module' => 'system',
     'hidden' => '0',
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-46',
+    'weight' => '-50',
+    'parent_path' => 'news-and-events',
   );
   // Exported menu link: menu-amani-main-menu:contact
   $menu_links['menu-amani-main-menu:contact'] = array(
@@ -134,7 +131,7 @@ function amani_global_menu_default_menu_links() {
     'module' => 'menu',
     'hidden' => '0',
     'external' => '0',
-    'has_children' => '0',
+    'has_children' => '1',
     'expanded' => '0',
     'weight' => '-44',
   );
