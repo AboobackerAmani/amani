@@ -137,9 +137,19 @@
         @include span-columns(3)
         text-align: right
         margin-top: 24px
+        @include media($mobile)
+          @include fill-parent
+          text-align: left
       .fieldset-wrapper
         @include span-columns(8)
         @include omega
+        @include media($mobile)
+          @include fill-parent
+          .edit-field-incident-date-und-0-value
+            @include fill-parent
+          .form-item .form-item
+            @include span-columns(2 of 4)
+            @include omega(2n)
   #edit-field-incident-media,
   #edit-field-incident-videos,
   #edit-field-links

@@ -2024,6 +2024,10 @@ body.node-type-project .node-project .field-name-field-media {
   margin-top: 24px; }
   .node-incident_report-form #edit-field-incident-date .form-wrapper legend:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 480px) {
+    .node-incident_report-form #edit-field-incident-date .form-wrapper legend {
+      width: 100%;
+      text-align: left; } }
 .node-incident_report-form #edit-field-incident-date .form-wrapper .fieldset-wrapper {
   display: block;
   float: left;
@@ -2032,6 +2036,20 @@ body.node-type-project .node-project .field-name-field-media {
   margin-right: 0; }
   .node-incident_report-form #edit-field-incident-date .form-wrapper .fieldset-wrapper:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 480px) {
+    .node-incident_report-form #edit-field-incident-date .form-wrapper .fieldset-wrapper {
+      width: 100%; }
+      .node-incident_report-form #edit-field-incident-date .form-wrapper .fieldset-wrapper .edit-field-incident-date-und-0-value {
+        width: 100%; }
+      .node-incident_report-form #edit-field-incident-date .form-wrapper .fieldset-wrapper .form-item .form-item {
+        display: block;
+        float: left;
+        margin-right: 6.66667%;
+        width: 46.66667%; }
+        .node-incident_report-form #edit-field-incident-date .form-wrapper .fieldset-wrapper .form-item .form-item:last-child {
+          margin-right: 0; }
+        .node-incident_report-form #edit-field-incident-date .form-wrapper .fieldset-wrapper .form-item .form-item:nth-child(2n) {
+          margin-right: 0; } }
 .node-incident_report-form #edit-field-incident-media,
 .node-incident_report-form #edit-field-incident-videos,
 .node-incident_report-form #edit-field-links {
