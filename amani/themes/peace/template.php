@@ -287,6 +287,6 @@ function peace_menu_local_tasks(&$variables) {
  * Override fb_likebox theme tpl
  */
 function peace_theme_registry_alter(&$theme_registry) {
-  $theme_registry['fb_likebox_facebook']['original']['path'] = 'sites/all/themes/peace/templates';
-  $theme_registry['fb_likebox_facebook']['path'] = 'sites/all/themes/peace/templates';
+  $theme_registry['fb_likebox_facebook']['original']['path'] = 'profiles/amani/themes/peace/templates';
+  $theme_registry['fb_likebox_facebook']['path'] = 'profiles/amani/themes/peace/templates';
 }
