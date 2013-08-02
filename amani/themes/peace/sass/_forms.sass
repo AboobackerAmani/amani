@@ -45,9 +45,6 @@
         clear: both
         padding: 5px 0
   .field-name-field-description
-    margin-bottom: $margin
-    padding-bottom: $padding
-    //border-bottom: 1px solid #999
   .field-type-name
     .name-given-wrapper,
     .name-middle-wrapper,
@@ -86,9 +83,6 @@
     overflow: hidden
     margin-bottom: $margin
   .field-name-field-incident-date
-    border-top: 1px solid #999
-    padding-top: $padding/3
-    margin-top: $margin
     clear: both
     fieldset
       border: 0
@@ -131,10 +125,35 @@
       border: 0
       margin: 0
       padding: 0
+  #edit-field-incident-date
+    .form-wrapper
+      legend
+        @include span-columns(3)
+        text-align: right
+        margin-top: 24px
+        @include media($mobile)
+          @include fill-parent
+          text-align: left
+      .fieldset-wrapper
+        @include span-columns(8)
+        @include omega
+        @include media($mobile)
+          @include fill-parent
+          .edit-field-incident-date-und-0-value
+            @include fill-parent
+          .form-item .form-item
+            @include span-columns(2 of 4)
+            @include omega(2n)
   #edit-field-incident-media,
   #edit-field-incident-videos,
   #edit-field-links
     @include span-columns(6)
+    tbody,
+    th
+      border: 0
+      tr.odd,
+      tr.even
+        border: 0
     @include media($tablet)
       @include fill-parent
     .field-multiple-drag
