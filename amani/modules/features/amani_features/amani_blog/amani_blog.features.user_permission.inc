@@ -27,7 +27,6 @@ function amani_blog_user_default_permissions() {
     'name' => 'delete any blog content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
     ),
     'module' => 'node',
   );
@@ -36,8 +35,10 @@ function amani_blog_user_default_permissions() {
   $permissions['delete own blog content'] = array(
     'name' => 'delete own blog content',
     'roles' => array(
-      0 => 'blogger',
-      1 => 'contributor',
+      0 => 'administrator',
+      1 => 'blogger',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -56,8 +57,10 @@ function amani_blog_user_default_permissions() {
   $permissions['edit own blog content'] = array(
     'name' => 'edit own blog content',
     'roles' => array(
-      0 => 'blogger',
-      1 => 'contributor',
+      0 => 'administrator',
+      1 => 'blogger',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );

@@ -26,7 +26,6 @@ function amani_event_user_default_permissions() {
     'name' => 'delete any event content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
     ),
     'module' => 'node',
   );
@@ -35,7 +34,9 @@ function amani_event_user_default_permissions() {
   $permissions['delete own event content'] = array(
     'name' => 'delete own event content',
     'roles' => array(
-      0 => 'contributor',
+      0 => 'administrator',
+      1 => 'contributor',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -54,7 +55,9 @@ function amani_event_user_default_permissions() {
   $permissions['edit own event content'] = array(
     'name' => 'edit own event content',
     'roles' => array(
-      0 => 'contributor',
+      0 => 'administrator',
+      1 => 'contributor',
+      2 => 'editor',
     ),
     'module' => 'node',
   );

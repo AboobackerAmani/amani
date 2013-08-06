@@ -26,7 +26,6 @@ function amani_article_user_default_permissions() {
     'name' => 'delete any article content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
     ),
     'module' => 'node',
   );
@@ -35,7 +34,9 @@ function amani_article_user_default_permissions() {
   $permissions['delete own article content'] = array(
     'name' => 'delete own article content',
     'roles' => array(
-      0 => 'contributor',
+      0 => 'administrator',
+      1 => 'contributor',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -54,7 +55,9 @@ function amani_article_user_default_permissions() {
   $permissions['edit own article content'] = array(
     'name' => 'edit own article content',
     'roles' => array(
-      0 => 'contributor',
+      0 => 'administrator',
+      1 => 'contributor',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
