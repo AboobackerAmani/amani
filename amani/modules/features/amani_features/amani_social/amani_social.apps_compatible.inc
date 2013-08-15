@@ -8,7 +8,7 @@
 /**
  * Implements hook_apps_compatible_info().
  */
-function debut_social_apps_compatible_info() {
+function amani_social_apps_compatible_info() {
   return array(
     // Ensure a set of roles is created.
     'role' => array(

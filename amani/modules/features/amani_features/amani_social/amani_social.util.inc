@@ -5,7 +5,7 @@
  *
  * To activate service links for its node type, a feature should include the
  * following in its .info file:
- * debut[social][node_types][my_content_type] = my_content_type
+ * amani[social][node_types][my_content_type] = my_content_type
  * where my_content_type is the name of a feature-provided content type.
  *
  * The social links status of a feature's content type can be altered by using
@@ -18,7 +18,7 @@
  * }
  * %endcode
  */
-function debut_social_add_node_types($modules) {
+function amani_social_add_node_types($modules) {
   $social_types = array();
 
   // Load info of feature modules.
@@ -29,11 +29,11 @@ function debut_social_add_node_types($modules) {
 
     if (isset($info['features']['node'])) {
       foreach ($info['features']['node'] as $type) {
-        if (isset($info['debut']) && isset($info['debut']['social']) && isset($info['debut']['social']['node_types']) && in_array($type, $info['debut']['social']['node_types'])) {
+        if (isset($info['amani']) && isset($info['amani']['social']) && isset($info['amani']['social']['node_types']) && in_array($type, $info['amani']['social']['node_types'])) {
           $social_types[$type] = $type;
         }
         // Unset follow display only for Debut features.
-        elseif (strpos($feature->name, 'debut') === 0) {
+        elseif (strpos($feature->name, 'amani') === 0) {
           // Follow defaults to TRUE. If this is not a social node type,
           // explicitly exclude it from follow display.
           variable_set('forward_display_' . $type, FALSE);

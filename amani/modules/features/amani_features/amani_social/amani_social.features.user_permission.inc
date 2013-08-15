@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * debut_social.features.user_permission.inc
+ * amani_social.features.user_permission.inc
  */
 
 /**
  * Implements hook_user_default_permissions().
  */
-function debut_social_user_default_permissions() {
+function amani_social_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: access forward.

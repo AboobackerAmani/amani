@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * debut_social.strongarm.inc
+ * amani_social.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function debut_social_strongarm() {
+function amani_social_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

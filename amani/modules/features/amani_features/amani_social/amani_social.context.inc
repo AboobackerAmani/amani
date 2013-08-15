@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * debut_social.context.inc
+ * amani_social.context.inc
  */
 
 /**
  * Implements hook_context_default_contexts().
  */
-function debut_social_context_default_contexts() {
+function amani_social_context_default_contexts() {
   $export = array();
 
   $context = new stdClass();
@@ -16,13 +16,7 @@ function debut_social_context_default_contexts() {
   $context->name = 'social-follow-site';
   $context->description = 'Display social media follow links sitewide.';
   $context->tag = 'Social media';
-  $context->conditions = array(
-    'sitewide' => array(
-      'values' => array(
-        1 => 1,
-      ),
-    ),
-  );
+  $context->conditions = array();
   $context->reactions = array(
     'block' => array(
       'blocks' => array(

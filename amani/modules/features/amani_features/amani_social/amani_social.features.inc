@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * debut_social.features.inc
+ * amani_social.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function debut_social_ctools_plugin_api() {
+function amani_social_ctools_plugin_api() {
   list($module, $api) = func_get_args();
   if ($module == "context" && $api == "context") {
     return array("version" => "3");
