@@ -1,10 +1,10 @@
-name = Debut Comment
+name = Amani Comment
 description = Basic comment feature including comment notification, CAPTCHA and log in customizations.
 core = 7.x
-package = Features
+package = Amani
 php = 5.2.4
-author = Chocolate Lily
-author_url = http://chocolatelilyweb.ca
+version = 7.x-1.0-rc3
+project = amani_comment
 dependencies[] = apps_compatible
 dependencies[] = captcha
 dependencies[] = comment_notify
@@ -12,6 +12,9 @@ dependencies[] = context
 dependencies[] = features
 dependencies[] = logintoboggan
 dependencies[] = strongarm
+author = Chocolate Lily
+author_url = http://chocolatelilyweb.ca
+datestamp = 1354709513
 features[context][] = comment-login
 features[ctools][] = context:context:3
 features[ctools][] = strongarm:strongarm:1
@@ -29,10 +32,3 @@ features[variable][] = logintoboggan_confirm_email_at_registration
 features[variable][] = logintoboggan_login_block_type
 features[variable][] = logintoboggan_login_with_email
 features[variable][] = logintoboggan_override_destination_parameter
-
-; Information added by drupal.org packaging script on 2012-12-05
-version = "7.x-1.0-rc3"
-core = "7.x"
-project = "debut_comment"
-datestamp = "1354709513"
-

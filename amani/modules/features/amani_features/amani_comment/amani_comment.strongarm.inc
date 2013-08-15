@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * debut_comment.strongarm.inc
+ * amani_comment.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function debut_comment_strongarm() {
+function amani_comment_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

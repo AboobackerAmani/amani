@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * debut_comment.context.inc
+ * amani_comment.context.inc
  */
 
 /**
  * Implements hook_context_default_contexts().
  */
-function debut_comment_context_default_contexts() {
+function amani_comment_context_default_contexts() {
   $export = array();
 
   $context = new stdClass();
@@ -23,24 +23,7 @@ function debut_comment_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'user-login' => array(
-          'module' => 'user',
-          'delta' => 'login',
-          'region' => 'sidebar_second',
-          'weight' => '-26',
-        ),
-        'logintoboggan-logintoboggan_logged_in' => array(
-          'module' => 'logintoboggan',
-          'delta' => 'logintoboggan_logged_in',
-          'region' => 'sidebar_second',
-          'weight' => '-25',
-        ),
-      ),
-    ),
-  );
+  $context->reactions = array();
   $context->condition_mode = 0;
 
   // Translatables
