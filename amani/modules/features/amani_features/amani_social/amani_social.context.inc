@@ -16,19 +16,14 @@ function amani_social_context_default_contexts() {
   $context->name = 'social-follow-site';
   $context->description = 'Display social media follow links sitewide.';
   $context->tag = 'Social media';
-  $context->conditions = array();
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'follow-site' => array(
-          'module' => 'follow',
-          'delta' => 'site',
-          'region' => 'sidebar_second',
-          'weight' => '-21',
-        ),
+  $context->conditions = array(
+    'sitewide' => array(
+      'values' => array(
+        1 => 1,
       ),
     ),
   );
+  $context->reactions = array();
   $context->condition_mode = 0;
 
   // Translatables
