@@ -22,3 +22,9 @@ function amani_custom_update_7001() {
 
   return t('Updated module weight to 80.');
 }
+
+function amani_custom_update_7002() {
+  enable_image_file_display();
+  return t('Updated file display settings.');
+}
+
