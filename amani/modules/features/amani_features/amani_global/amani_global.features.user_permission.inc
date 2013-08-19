@@ -26,8 +26,25 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'anonymous user',
+      2 => 'authenticated user',
+      3 => 'blogger',
+      4 => 'contributor',
+      5 => 'crm manager',
+      6 => 'crm viewer',
+      7 => 'editor',
+      8 => 'member',
     ),
     'module' => 'search',
+  );
+
+  // Exported permission: view any static_content bean.
+  $permissions['view any static_content bean'] = array(
+    'name' => 'view any static_content bean',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'anonymous user',
+    ),
+    'module' => 'bean',
   );
 
   return $permissions;
