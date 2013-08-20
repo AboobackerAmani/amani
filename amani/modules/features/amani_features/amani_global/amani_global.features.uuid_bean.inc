@@ -58,7 +58,7 @@ function amani_global_uuid_features_default_beans() {
     'field_bean_body' => array(
       'und' => array(
         0 => array(
-          'value' => '<img src="<?php echo base_path();  ?>sites/all/themes/peace/images/amani_powered_by.png" />',
+          'value' => '<img src="<?php echo base_path();  ?>profiles/amani/themes/peace/images/amani_powered_by.png" />',
           'format' => 'php_code',
         ),
       ),
