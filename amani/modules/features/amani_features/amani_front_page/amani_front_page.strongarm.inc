@@ -111,7 +111,6 @@ function amani_front_page_strongarm() {
   $strongarm->name = 'node_options_front_page_box';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
   );
   $export['node_options_front_page_box'] = $strongarm;
 
