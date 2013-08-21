@@ -190,6 +190,42 @@ function amani_global_menu_default_menu_links() {
     'weight' => '-50',
     'parent_path' => 'about',
   );
+  // Exported menu link: menu-amani-main-menu:user/login
+  $menu_links['menu-amani-main-menu:user/login'] = array(
+    'menu_name' => 'menu-amani-main-menu',
+    'link_path' => 'user/login',
+    'router_path' => 'user/login',
+    'link_title' => 'Log In',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '50',
+  );
+  // Exported menu link: menu-amani-main-menu:user/logout
+  $menu_links['menu-amani-main-menu:user/logout'] = array(
+    'menu_name' => 'menu-amani-main-menu',
+    'link_path' => 'user/logout',
+    'router_path' => 'user/logout',
+    'link_title' => 'Log Out',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '50',
+  );
   // Exported menu link: menu-meta:<front>
   $menu_links['menu-meta:<front>'] = array(
     'menu_name' => 'menu-meta',
@@ -344,6 +380,8 @@ function amani_global_menu_default_menu_links() {
   t('Google+');
   t('Image Gallery');
   t('LinkedIn');
+  t('Log In');
+  t('Log Out');
   t('Map');
   t('News & Events');
   t('Projects');
