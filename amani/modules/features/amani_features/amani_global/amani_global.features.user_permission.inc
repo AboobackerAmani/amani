@@ -43,6 +43,7 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'anonymous user',
+      2 => 'authenticated user',
     ),
     'module' => 'bean',
   );
