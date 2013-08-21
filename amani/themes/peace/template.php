@@ -76,6 +76,11 @@ function peace_preprocess_html(&$vars) {
 }
 
 function peace_preprocess_page(&$vars, $hook) {
+  //Remove add content link and welcome title.
+  if($vars['is_front']){
+    $vars['title'] = ''; 
+    $vars['page']['content']['system_main']['default_message'] = array(); 
+  };
   if (isset($vars['node_title'])) {
     $vars['title'] = $vars['node_title'];
   }
