@@ -10,5 +10,6 @@
   <div class="right-col">
     <h2><?php echo $item['title']; ?></h2>
     <?php echo $item['field_description']; ?>
+    <?php echo $item['field_link_1']; ?>
   </div>
 </div>
