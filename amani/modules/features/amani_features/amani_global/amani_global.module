@@ -24,7 +24,7 @@ function amani_global_menu() {
     'title' => 'Home Page',
     'description' => 'Default home page.',
     'page callback' => 'amani_global_home_page',
-    'access arguments' => array('access site content'),
+    'access arguments' => array('access content'),
     'type' => MENU_CALLBACK,
   );
   return $items;

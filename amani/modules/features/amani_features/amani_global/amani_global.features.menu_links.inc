@@ -190,42 +190,6 @@ function amani_global_menu_default_menu_links() {
     'weight' => '-50',
     'parent_path' => 'about',
   );
-  // Exported menu link: menu-amani-main-menu:user/login
-  $menu_links['menu-amani-main-menu:user/login'] = array(
-    'menu_name' => 'menu-amani-main-menu',
-    'link_path' => 'user/login',
-    'router_path' => 'user/login',
-    'link_title' => 'Log In',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '50',
-  );
-  // Exported menu link: menu-amani-main-menu:user/logout
-  $menu_links['menu-amani-main-menu:user/logout'] = array(
-    'menu_name' => 'menu-amani-main-menu',
-    'link_path' => 'user/logout',
-    'router_path' => 'user/logout',
-    'link_title' => 'Log Out',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '50',
-  );
   // Exported menu link: menu-meta:<front>
   $menu_links['menu-meta:<front>'] = array(
     'menu_name' => 'menu-meta',
@@ -244,24 +208,6 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-1',
   );
-  // Exported menu link: menu-meta:about
-  $menu_links['menu-meta:about'] = array(
-    'menu_name' => 'menu-meta',
-    'link_path' => 'about',
-    'router_path' => 'about',
-    'link_title' => 'about',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '0',
-  );
   // Exported menu link: menu-meta:amani/content-admin
   $menu_links['menu-meta:amani/content-admin'] = array(
     'menu_name' => 'menu-meta',
@@ -279,6 +225,42 @@ function amani_global_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '1',
+  );
+  // Exported menu link: menu-meta:user/login
+  $menu_links['menu-meta:user/login'] = array(
+    'menu_name' => 'menu-meta',
+    'link_path' => 'user/login',
+    'router_path' => 'user/login',
+    'link_title' => 'login ',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '50',
+  );
+  // Exported menu link: menu-meta:user/logout
+  $menu_links['menu-meta:user/logout'] = array(
+    'menu_name' => 'menu-meta',
+    'link_path' => 'user/logout',
+    'router_path' => 'user/logout',
+    'link_title' => 'logout',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '50',
   );
   // Exported menu link: menu-social-media:http://facebook.com
   $menu_links['menu-social-media:http://facebook.com'] = array(
@@ -380,8 +362,6 @@ function amani_global_menu_default_menu_links() {
   t('Google+');
   t('Image Gallery');
   t('LinkedIn');
-  t('Log In');
-  t('Log Out');
   t('Map');
   t('News & Events');
   t('Projects');
@@ -389,9 +369,10 @@ function amani_global_menu_default_menu_links() {
   t('Team');
   t('Twitter');
   t('YouTube');
-  t('about');
   t('admin');
   t('home');
+  t('login ');
+  t('logout');
 
 
   return $menu_links;
