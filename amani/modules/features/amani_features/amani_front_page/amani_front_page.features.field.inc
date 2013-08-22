@@ -233,7 +233,7 @@ function amani_front_page_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_link',
       'label' => 'Link',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'attributes' => array(
           'class' => '',
