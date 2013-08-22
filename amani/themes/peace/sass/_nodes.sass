@@ -56,6 +56,15 @@
         margin-bottom: 5px
       .views-field-field-media
         @include fill-parent
+  #block-views-calendar_of_events-calendar
+    @include media($mobile) 
+      .pager
+        padding: 0px
+      .date-nav 
+        padding-bottom: 0px !important
+      .views-row 
+        width: 47.804% !important
+        margin-bottom: 10px !important     
 
 // Incident reports
 .page-incident-reports
@@ -71,6 +80,8 @@
       position: absolute
       top: -70px
       right: -30px
+      @include media($mobile)
+        top: -115px
       @include media($motab)
         top: -90px
         #edit-keys-wrapper
@@ -139,7 +150,7 @@
         margin-bottom: 5px
       .views-field-field-team-bio
         font-family: "Georgia"
-      .views-field-title
+      .views-field-title,
       .views-field-view-node
         text-align: right
         margin-top: 10px

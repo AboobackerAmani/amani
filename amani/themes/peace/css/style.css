@@ -669,6 +669,9 @@ a.button {
     .breadcrumb a:last-child {
       color: #ee8f1c;
       font-style: normal; }
+  @media screen and (max-width: 480px) {
+    .breadcrumb {
+      top: 0px; } }
 
 #block-bean-amani-powered-by {
   border-right: 1px solid white; }
@@ -1174,6 +1177,14 @@ a.button {
     margin-bottom: 5px; }
   .page-news-and-events #block-views-news_and_events-block .views-row .views-field-field-media {
     width: 100%; }
+@media screen and (max-width: 480px) {
+  .page-news-and-events #block-views-calendar_of_events-calendar .pager {
+    padding: 0px; }
+  .page-news-and-events #block-views-calendar_of_events-calendar .date-nav {
+    padding-bottom: 0px !important; }
+  .page-news-and-events #block-views-calendar_of_events-calendar .views-row {
+    width: 47.804% !important;
+    margin-bottom: 10px !important; } }
 
 .page-incident-reports .block-incident-map label span {
   font-weight: normal; }
@@ -1183,6 +1194,9 @@ a.button {
   position: absolute;
   top: -70px;
   right: -30px; }
+  @media screen and (max-width: 480px) {
+    .page-team .view-id-team.view-display-id-page .views-exposed-form {
+      top: -115px; } }
   @media screen and (max-width: 600px) {
     .page-team .view-id-team.view-display-id-page .views-exposed-form {
       top: -90px; }
@@ -1255,6 +1269,7 @@ a.button {
     margin-bottom: 5px; }
   .page-team .view-id-team.view-display-id-page .views-row .views-field-field-team-bio {
     font-family: "Georgia"; }
+  .page-team .view-id-team.view-display-id-page .views-row .views-field-title,
   .page-team .view-id-team.view-display-id-page .views-row .views-field-view-node {
     text-align: right;
     margin-top: 10px; }
