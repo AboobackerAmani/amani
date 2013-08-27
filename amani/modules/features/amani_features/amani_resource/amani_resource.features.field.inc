@@ -831,7 +831,6 @@ function amani_resource_field_default_fields() {
         'module' => 'media',
         'settings' => array(
           'allowed_schemes' => array(
-            'private' => 0,
             'public' => 'public',
             'vimeo' => 'vimeo',
             'youtube' => 'youtube',
@@ -843,10 +842,10 @@ function amani_resource_field_default_fields() {
             'video' => 'video',
           ),
           'browser_plugins' => array(
-            'media_default--media_browser_1' => 0,
-            'media_default--media_browser_my_files' => 0,
+            'media_default--media_browser_1' => 'media_default--media_browser_1',
+            'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
             'media_internet' => 'media_internet',
-            'upload' => 0,
+            'upload' => 'upload',
             'youtube' => 0,
           ),
           'progress_indicator' => 'throbber',

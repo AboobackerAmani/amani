@@ -132,6 +132,7 @@ function amani_blog_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'blog',
+      'default_value' => array(),
       'deleted' => '0',
       'description' => 'Select an image to be displayed in association with this piece of content.  The maximum allowed image size is 1000 x 1000 pixels.',
       'display' => array(
@@ -274,10 +275,10 @@ function amani_blog_field_default_fields() {
             'video' => 'video',
           ),
           'browser_plugins' => array(
-            'media_default--media_browser_1' => 0,
-            'media_default--media_browser_my_files' => 0,
+            'media_default--media_browser_1' => 'media_default--media_browser_1',
+            'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
             'media_internet' => 0,
-            'upload' => 0,
+            'upload' => 'upload',
             'youtube' => 0,
           ),
           'progress_indicator' => 'throbber',

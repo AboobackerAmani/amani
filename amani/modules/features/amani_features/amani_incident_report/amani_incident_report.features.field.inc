@@ -534,8 +534,8 @@ function amani_incident_report_field_default_fields() {
             'video' => 'video',
           ),
           'browser_plugins' => array(
-            'media_default--media_browser_1' => 0,
-            'media_default--media_browser_my_files' => 0,
+            'media_default--media_browser_1' => 'media_default--media_browser_1',
+            'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
             'media_internet' => 'media_internet',
             'upload' => 'upload',
             'youtube' => 0,

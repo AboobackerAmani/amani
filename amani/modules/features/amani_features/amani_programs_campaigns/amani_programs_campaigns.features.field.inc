@@ -258,7 +258,6 @@ function amani_programs_campaigns_field_default_fields() {
         'module' => 'media',
         'settings' => array(
           'allowed_schemes' => array(
-            'private' => 0,
             'public' => 'public',
             'vimeo' => 'vimeo',
             'youtube' => 'youtube',
@@ -270,7 +269,7 @@ function amani_programs_campaigns_field_default_fields() {
             'video' => 0,
           ),
           'browser_plugins' => array(
-            'media_default--media_browser_1' => 0,
+            'media_default--media_browser_1' => 'media_default--media_browser_1',
             'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
             'media_internet' => 'media_internet',
             'upload' => 'upload',
