@@ -91,7 +91,7 @@ function amani_blog_views_default_views() {
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Image */
+  /* Field: Content: Main Image */
   $handler->display->display_options['fields']['field_content_image']['id'] = 'field_content_image';
   $handler->display->display_options['fields']['field_content_image']['table'] = 'field_data_field_content_image';
   $handler->display->display_options['fields']['field_content_image']['field'] = 'field_content_image';

@@ -164,7 +164,7 @@ function amani_blog_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_content_image',
-      'label' => 'Image',
+      'label' => 'Main Image',
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
@@ -371,7 +371,7 @@ function amani_blog_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Enter a comma-separated list of words to describe your content.');
-  t('Image');
+  t('Main Image');
   t('Media');
   t('Select an image to be displayed in association with this piece of content.  The maximum allowed image size is 1000 x 1000 pixels.');
   t('Tags');
