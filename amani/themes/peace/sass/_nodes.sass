@@ -96,10 +96,12 @@
       position: absolute
       top: -70px
       right: -30px
-      @include media($mobile)
-        top: -115px
       @include media($motab)
         top: -90px
+        width: 180px
+        right: 0px
+      @include media($mobile)
+        top: -115px
         #edit-keys-wrapper
           display: none
       .views-exposed-widget
