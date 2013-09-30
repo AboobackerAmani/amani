@@ -101,14 +101,14 @@ function incident_map_map_settings($prefix) {
 
   $id = "$prefix-lat";
   $title = t('Latitude');
-  $items[$id] = incident_map_setting_input_textfield($title, 0.0);
+  $items[$id] = incident_map_setting_input_textfield($title, variable_get($id, 0.0));
   $items[$id]['#states'] = array(
     'visible' => array(":input[name='$auto']" => array('checked' => FALSE)),
   );
 
   $id = "$prefix-lng";
   $title = t('Longtitude');
-  $items[$id] = incident_map_setting_input_textfield($title, 0.0);
+  $items[$id] = incident_map_setting_input_textfield($title, variable_get($id, 0.0));
   $items[$id]['#states'] = array(
     'visible' => array(":input[name='$auto']" => array('checked' => FALSE)),
   );
