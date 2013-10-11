@@ -15,7 +15,8 @@ function debut_forum_user_default_permissions() {
     'name' => 'administer advanced forum',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'advanced_forum',
   );
@@ -25,7 +26,8 @@ function debut_forum_user_default_permissions() {
     'name' => 'administer forums',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'forum',
   );
@@ -44,7 +46,8 @@ function debut_forum_user_default_permissions() {
     'name' => 'delete any forum content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -63,7 +66,8 @@ function debut_forum_user_default_permissions() {
     'name' => 'edit any forum content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -82,7 +86,8 @@ function debut_forum_user_default_permissions() {
     'name' => 'view forum statistics',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'advanced_forum',
   );
@@ -92,7 +97,8 @@ function debut_forum_user_default_permissions() {
     'name' => 'view last edited notice',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'advanced_forum',
   );

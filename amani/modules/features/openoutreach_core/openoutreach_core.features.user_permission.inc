@@ -15,7 +15,8 @@ function openoutreach_core_user_default_permissions() {
     'name' => 'access administration pages',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'system',
   );
@@ -36,7 +37,8 @@ function openoutreach_core_user_default_permissions() {
     'name' => 'access content overview',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -46,7 +48,8 @@ function openoutreach_core_user_default_permissions() {
     'name' => 'administer nodes',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -56,7 +59,8 @@ function openoutreach_core_user_default_permissions() {
     'name' => 'administer taxonomy',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'taxonomy',
   );
@@ -66,8 +70,9 @@ function openoutreach_core_user_default_permissions() {
     'name' => 'cancel account',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'user',
   );
@@ -77,8 +82,9 @@ function openoutreach_core_user_default_permissions() {
     'name' => 'change own username',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'user',
   );
@@ -88,7 +94,8 @@ function openoutreach_core_user_default_permissions() {
     'name' => 'delete revisions',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -98,7 +105,8 @@ function openoutreach_core_user_default_permissions() {
     'name' => 'revert revisions',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -108,8 +116,9 @@ function openoutreach_core_user_default_permissions() {
     'name' => 'view own unpublished content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -119,8 +128,9 @@ function openoutreach_core_user_default_permissions() {
     'name' => 'view revisions',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -130,7 +140,8 @@ function openoutreach_core_user_default_permissions() {
     'name' => 'view the administration theme',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'system',
   );

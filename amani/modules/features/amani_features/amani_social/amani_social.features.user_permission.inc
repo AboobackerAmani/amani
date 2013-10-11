@@ -64,7 +64,8 @@ function amani_social_user_default_permissions() {
     'name' => 'edit any user follow links',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'follow',
   );
@@ -102,7 +103,8 @@ function amani_social_user_default_permissions() {
     'name' => 'override flood control',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'forward',
   );

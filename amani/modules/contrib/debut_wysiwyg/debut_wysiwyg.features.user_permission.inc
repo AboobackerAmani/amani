@@ -15,8 +15,9 @@ function debut_wysiwyg_user_default_permissions() {
     'name' => 'use text format wysiwyg_contributor',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'filter',
   );
@@ -26,7 +27,8 @@ function debut_wysiwyg_user_default_permissions() {
     'name' => 'use text format wysiwyg_editor',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'filter',
   );

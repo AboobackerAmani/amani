@@ -15,7 +15,8 @@ function amani_team_user_default_permissions() {
     'name' => 'create team content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -34,7 +35,8 @@ function amani_team_user_default_permissions() {
     'name' => 'delete own team content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -44,7 +46,8 @@ function amani_team_user_default_permissions() {
     'name' => 'edit any team content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -54,7 +57,8 @@ function amani_team_user_default_permissions() {
     'name' => 'edit own team content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );

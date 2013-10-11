@@ -33,7 +33,8 @@ function debut_seo_user_default_permissions() {
     'name' => 'create url aliases',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'path',
   );
@@ -43,7 +44,8 @@ function debut_seo_user_default_permissions() {
     'name' => 'edit meta tags',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'metatag',
   );
