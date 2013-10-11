@@ -22,7 +22,9 @@ function debut_location_user_default_permissions() {
   // Exported permission: create location content.
   $permissions['create location content'] = array(
     'name' => 'create location content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 
@@ -36,21 +38,27 @@ function debut_location_user_default_permissions() {
   // Exported permission: delete own location content.
   $permissions['delete own location content'] = array(
     'name' => 'delete own location content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit any location content.
   $permissions['edit any location content'] = array(
     'name' => 'edit any location content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit own location content.
   $permissions['edit own location content'] = array(
     'name' => 'edit own location content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 

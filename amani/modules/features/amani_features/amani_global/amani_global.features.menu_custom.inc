@@ -10,6 +10,12 @@
 function amani_global_menu_default_menu_custom() {
   $menus = array();
 
+  // Exported menu: menu-amani-admin-menu.
+  $menus['menu-amani-admin-menu'] = array(
+    'menu_name' => 'menu-amani-admin-menu',
+    'title' => 'Amani admin menu',
+    'description' => '',
+  );
   // Exported menu: menu-amani-main-menu.
   $menus['menu-amani-main-menu'] = array(
     'menu_name' => 'menu-amani-main-menu',
@@ -30,6 +36,7 @@ function amani_global_menu_default_menu_custom() {
   );
   // Translatables
   // Included for use with string extractors like potx.
+  t('Amani admin menu');
   t('Amani main menu');
   t('Social media');
   t('Social media widgets for the header');

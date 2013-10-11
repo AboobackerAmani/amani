@@ -20,21 +20,7 @@ function amani_global_menu() {
     'weight' => 0,
   );
 
-  $items['home'] = array(
-    'title' => 'Home Page',
-    'description' => 'Default home page.',
-    'page callback' => 'amani_global_home_page',
-    'access arguments' => array('access content'),
-    'type' => MENU_CALLBACK,
-  );
   return $items;
-}
-
-/**
- * Home page callback.
- */
-function amani_global_home_page() {
-  return '';
 }
 
 /**

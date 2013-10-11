@@ -15,8 +15,9 @@ function debut_redhen_user_default_permissions() {
     'name' => 'access redhen',
     'roles' => array(
       0 => 'administrator',
-      1 => 'crm manager',
-      2 => 'crm viewer',
+      1 => 'amani administrator',
+      2 => 'crm manager',
+      3 => 'crm viewer',
     ),
     'module' => 'redhen',
   );
@@ -59,7 +60,8 @@ function debut_redhen_user_default_permissions() {
     'name' => 'administer redhen',
     'roles' => array(
       0 => 'administrator',
-      1 => 'crm manager',
+      1 => 'amani administrator',
+      2 => 'crm manager',
     ),
     'module' => 'redhen',
   );

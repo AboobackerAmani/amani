@@ -13,6 +13,38 @@ function amani_global_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'amani_admin_menu';
+  $context->description = 'Display the admin menu block when amani admins are logged in.';
+  $context->tag = '';
+  $context->conditions = array(
+    'user' => array(
+      'values' => array(
+        'amani administrator' => 'amani administrator',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'menu-menu-amani-admin-menu' => array(
+          'module' => 'menu',
+          'delta' => 'menu-amani-admin-menu',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Display the admin menu block when amani admins are logged in.');
+  $export['amani_admin_menu'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'content_admin';
   $context->description = '';
   $context->tag = 'admin';

@@ -20,13 +20,63 @@ function amani_global_user_default_permissions() {
     'module' => 'contact',
   );
 
+  // Exported permission: administer beans.
+  $permissions['administer beans'] = array(
+    'name' => 'administer beans',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: administer google analytics.
   $permissions['administer google analytics'] = array(
     'name' => 'administer google analytics',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'googleanalytics',
+  );
+
+  // Exported permission: create front_page_box content.
+  $permissions['create front_page_box content'] = array(
+    'name' => 'create front_page_box content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete own front_page_box content.
+  $permissions['delete own front_page_box content'] = array(
+    'name' => 'delete own front_page_box content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit any front_page_box content.
+  $permissions['edit any front_page_box content'] = array(
+    'name' => 'edit any front_page_box content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit own front_page_box content.
+  $permissions['edit own front_page_box content'] = array(
+    'name' => 'edit own front_page_box content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: search content.
