@@ -15,8 +15,9 @@ function amani_article_user_default_permissions() {
     'name' => 'create article content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -35,8 +36,9 @@ function amani_article_user_default_permissions() {
     'name' => 'delete own article content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -46,7 +48,8 @@ function amani_article_user_default_permissions() {
     'name' => 'edit any article content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -56,8 +59,9 @@ function amani_article_user_default_permissions() {
     'name' => 'edit own article content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );

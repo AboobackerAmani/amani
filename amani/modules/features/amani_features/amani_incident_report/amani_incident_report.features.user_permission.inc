@@ -25,7 +25,8 @@ function amani_incident_report_user_default_permissions() {
     'name' => 'delete any incident_report content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -35,8 +36,9 @@ function amani_incident_report_user_default_permissions() {
     'name' => 'delete own incident_report content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -46,7 +48,8 @@ function amani_incident_report_user_default_permissions() {
     'name' => 'edit any incident_report content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );

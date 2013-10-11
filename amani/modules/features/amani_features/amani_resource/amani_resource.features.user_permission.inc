@@ -15,8 +15,9 @@ function amani_resource_user_default_permissions() {
     'name' => 'create resource content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -35,8 +36,9 @@ function amani_resource_user_default_permissions() {
     'name' => 'delete own resource content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -46,8 +48,9 @@ function amani_resource_user_default_permissions() {
     'name' => 'edit any resource content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -57,8 +60,9 @@ function amani_resource_user_default_permissions() {
     'name' => 'edit own resource content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
