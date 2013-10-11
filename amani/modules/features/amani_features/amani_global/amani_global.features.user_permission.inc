@@ -20,6 +20,15 @@ function amani_global_user_default_permissions() {
     'module' => 'contact',
   );
 
+  // Exported permission: administer google analytics.
+  $permissions['administer google analytics'] = array(
+    'name' => 'administer google analytics',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'googleanalytics',
+  );
+
   // Exported permission: search content.
   $permissions['search content'] = array(
     'name' => 'search content',
