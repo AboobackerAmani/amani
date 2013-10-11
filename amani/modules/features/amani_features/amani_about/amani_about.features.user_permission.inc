@@ -15,7 +15,8 @@ function amani_about_user_default_permissions() {
     'name' => 'create about content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -25,7 +26,8 @@ function amani_about_user_default_permissions() {
     'name' => 'delete any about content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -35,7 +37,8 @@ function amani_about_user_default_permissions() {
     'name' => 'delete own about content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -45,7 +48,8 @@ function amani_about_user_default_permissions() {
     'name' => 'edit any about content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -55,7 +59,8 @@ function amani_about_user_default_permissions() {
     'name' => 'edit own about content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );

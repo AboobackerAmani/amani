@@ -15,8 +15,9 @@ function amani_event_user_default_permissions() {
     'name' => 'create event content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -35,8 +36,9 @@ function amani_event_user_default_permissions() {
     'name' => 'delete own event content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -46,7 +48,8 @@ function amani_event_user_default_permissions() {
     'name' => 'edit any event content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -56,8 +59,9 @@ function amani_event_user_default_permissions() {
     'name' => 'edit own event content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -67,8 +71,9 @@ function amani_event_user_default_permissions() {
     'name' => 'view date repeats',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'date_repeat_field',
   );

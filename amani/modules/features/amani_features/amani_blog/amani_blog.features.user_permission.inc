@@ -15,9 +15,10 @@ function amani_blog_user_default_permissions() {
     'name' => 'create blog content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'blogger',
-      2 => 'contributor',
-      3 => 'editor',
+      1 => 'amani administrator',
+      2 => 'blogger',
+      3 => 'contributor',
+      4 => 'editor',
     ),
     'module' => 'node',
   );
@@ -36,9 +37,10 @@ function amani_blog_user_default_permissions() {
     'name' => 'delete own blog content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'blogger',
-      2 => 'contributor',
-      3 => 'editor',
+      1 => 'amani administrator',
+      2 => 'blogger',
+      3 => 'contributor',
+      4 => 'editor',
     ),
     'module' => 'node',
   );
@@ -48,7 +50,8 @@ function amani_blog_user_default_permissions() {
     'name' => 'edit any blog content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -58,9 +61,10 @@ function amani_blog_user_default_permissions() {
     'name' => 'edit own blog content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'blogger',
-      2 => 'contributor',
-      3 => 'editor',
+      1 => 'amani administrator',
+      2 => 'blogger',
+      3 => 'contributor',
+      4 => 'editor',
     ),
     'module' => 'node',
   );

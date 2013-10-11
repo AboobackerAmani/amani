@@ -44,7 +44,8 @@ function amani_comment_user_default_permissions() {
     'name' => 'administer comments',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'comment',
   );
@@ -54,8 +55,9 @@ function amani_comment_user_default_permissions() {
     'name' => 'edit own comments',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'comment',
   );
@@ -75,8 +77,9 @@ function amani_comment_user_default_permissions() {
     'name' => 'skip CAPTCHA',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'captcha',
   );
@@ -86,7 +89,8 @@ function amani_comment_user_default_permissions() {
     'name' => 'skip comment approval',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'comment',
   );

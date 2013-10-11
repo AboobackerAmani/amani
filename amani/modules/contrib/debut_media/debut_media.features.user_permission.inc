@@ -15,8 +15,9 @@ function debut_media_user_default_permissions() {
     'name' => 'add media from remote sources',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'media_internet',
   );
@@ -26,8 +27,9 @@ function debut_media_user_default_permissions() {
     'name' => 'create files',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'file_entity',
   );
@@ -37,7 +39,8 @@ function debut_media_user_default_permissions() {
     'name' => 'delete any files',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'file_entity',
   );
@@ -47,8 +50,9 @@ function debut_media_user_default_permissions() {
     'name' => 'delete own files',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'file_entity',
   );
@@ -58,7 +62,8 @@ function debut_media_user_default_permissions() {
     'name' => 'edit any files',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'file_entity',
   );
@@ -68,8 +73,9 @@ function debut_media_user_default_permissions() {
     'name' => 'edit own files',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'file_entity',
   );
@@ -79,8 +85,9 @@ function debut_media_user_default_permissions() {
     'name' => 'import media',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'media',
   );
@@ -103,8 +110,9 @@ function debut_media_user_default_permissions() {
     'name' => 'view own private files',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'file_entity',
   );
@@ -114,8 +122,9 @@ function debut_media_user_default_permissions() {
     'name' => 'view own unpublished files',
     'roles' => array(
       0 => 'administrator',
-      1 => 'contributor',
-      2 => 'editor',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'file_admin',
   );
