@@ -46,6 +46,24 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-48',
   );
+  // Exported menu link: menu-amani-admin-menu:admin/structure/contact
+  $menu_links['menu-amani-admin-menu:admin/structure/contact'] = array(
+    'menu_name' => 'menu-amani-admin-menu',
+    'link_path' => 'admin/structure/contact',
+    'router_path' => 'admin/structure/contact',
+    'link_title' => 'Contact page settings',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-43',
+  );
   // Exported menu link: menu-amani-admin-menu:admin/structure/menu/manage/menu-social-media/list
   $menu_links['menu-amani-admin-menu:admin/structure/menu/manage/menu-social-media/list'] = array(
     'menu_name' => 'menu-amani-admin-menu',
@@ -158,7 +176,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-43',
+    'weight' => '-42',
   );
   // Exported menu link: menu-amani-main-menu:about
   $menu_links['menu-amani-main-menu:about'] = array(
@@ -509,6 +527,7 @@ function amani_global_menu_default_menu_links() {
   t('Add terms');
   t('Blog');
   t('Contact');
+  t('Contact page settings');
   t('Edit content');
   t('Facebook');
   t('Get Involved');
