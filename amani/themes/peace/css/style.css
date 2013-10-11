@@ -222,6 +222,11 @@ a.button {
   a.button:after {
     content: "" !important; }
 
+#content-header h2 {
+  margin: 0; }
+#content-header h1 {
+  margin: 0; }
+
 #header-region {
   display: block;
   float: left;
@@ -658,8 +663,7 @@ a.button {
   font-size: 11px;
   color: #999999;
   font-family: Georgia;
-  position: relative;
-  top: -15px; }
+  position: relative; }
   @media screen and (max-width: 600px) {
     .breadcrumb {
       width: 100%;
@@ -683,6 +687,10 @@ a.button {
   @media screen and (max-width: 480px) {
     .breadcrumb {
       top: 0px; } }
+
+.front #main .container-inner {
+  margin-top: 0;
+  padding-top: 0; }
 
 #block-bean-amani-powered-by {
   border-right: 1px solid white; }

@@ -70,6 +70,13 @@ a.button
   &:after
     content: "" !important
 
+// Content header
+#content-header
+  h2
+    margin: 0
+  h1
+    margin: 0
+
 // Header region
 #header-region
   @include span-columns(9)
@@ -421,7 +428,7 @@ a.button
   color: #999
   font-family: Georgia
   position: relative
-  top: -$margin/2
+  //top: -$margin/2
   @include media($motab)
     @include fill-parent
     @include outer-container
@@ -435,3 +442,10 @@ a.button
       font-style: normal
   @include media($mobile)
     top: 0px
+
+// Home page
+.front
+  #main
+    .container-inner
+      margin-top: 0
+      padding-top: 0
