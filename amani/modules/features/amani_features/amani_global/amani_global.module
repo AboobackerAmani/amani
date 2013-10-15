@@ -11,6 +11,14 @@ include_once 'amani_global.features.inc';
  */
 function amani_global_menu() {
 
+  $items['home'] = array(
+    'title' => 'Home Page',
+    'description' => 'Default home page.',
+    'page callback' => 'amani_global_home_page',
+    'access arguments' => array('access site content'),
+    'type' => MENU_CALLBACK,
+  );
+
   $items['amani/site-info'] = array(
     'title' => 'Amani site settings',
     'description' => 'Manage site name, e-mail address, slogan, logo and favicon.',
@@ -21,6 +29,13 @@ function amani_global_menu() {
   );
 
   return $items;
+}
+
+/**
+ * Home page callback.
+ */
+function amani_global_home_page() {
+  return '';
 }
 
 /**
