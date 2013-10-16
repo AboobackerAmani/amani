@@ -22,6 +22,14 @@ function amani_global_context_default_contexts() {
         'amani administrator' => 'amani administrator',
       ),
     ),
+    'user_page' => array(
+      'values' => array(
+        'view' => 'view',
+      ),
+      'options' => array(
+        'mode' => 'current',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
@@ -35,7 +43,7 @@ function amani_global_context_default_contexts() {
       ),
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
 
   // Translatables
   // Included for use with string extractors like potx.
