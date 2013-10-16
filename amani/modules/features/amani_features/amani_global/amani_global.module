@@ -15,7 +15,7 @@ function amani_global_menu() {
     'title' => 'Home Page',
     'description' => 'Default home page.',
     'page callback' => 'amani_global_home_page',
-    'access arguments' => array('access site content'),
+    'access callback' => TRUE,
     'type' => MENU_CALLBACK,
   );
 
@@ -56,7 +56,6 @@ function amani_global_block_view($delta = '') {
 
   switch ($delta) {
     case 'add_content_links':
-      $block['subject'] = t('Manage logo & site info');
       $block['content'] = amani_global_add_content_links();
       break;
   }
@@ -69,17 +68,6 @@ function amani_global_block_view($delta = '') {
  */
 function amani_global_add_content_links() {
   $output = '';
-
-  // Manage logo and tagline (site slogan)
-  if (user_access('administer site configuration')) {
-    $items['items'] = array(
-      l('Manage site logo and info', 'amani/site-info'),
-      l('Edit map settings', 'admin/config/incident-reports'),
-    );
-    $output = '<div class="manage-logo">'
-      . theme('item_list', $items)
-      . '</div>';
-  }
 
   // Add content links
   $item = menu_get_item('node/add');

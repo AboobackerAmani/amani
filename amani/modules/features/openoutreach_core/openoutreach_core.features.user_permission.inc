@@ -38,7 +38,8 @@ function openoutreach_core_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
-      2 => 'editor',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -60,7 +61,8 @@ function openoutreach_core_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
-      2 => 'editor',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'taxonomy',
   );

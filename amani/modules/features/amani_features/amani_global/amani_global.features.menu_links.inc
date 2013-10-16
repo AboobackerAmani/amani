@@ -10,6 +10,24 @@
 function amani_global_menu_default_menu_links() {
   $menu_links = array();
 
+  // Exported menu link: menu-amani-admin-menu:admin/config/services/twitter/settings
+  $menu_links['menu-amani-admin-menu:admin/config/services/twitter/settings'] = array(
+    'menu_name' => 'menu-amani-admin-menu',
+    'link_path' => 'admin/config/services/twitter/settings',
+    'router_path' => 'admin/config/services/twitter/settings',
+    'link_title' => 'Twitter feed settings',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-45',
+  );
   // Exported menu link: menu-amani-admin-menu:admin/config/system/googleanalytics
   $menu_links['menu-amani-admin-menu:admin/config/system/googleanalytics'] = array(
     'menu_name' => 'menu-amani-admin-menu',
@@ -28,13 +46,16 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-47',
   );
-  // Exported menu link: menu-amani-admin-menu:admin/content
-  $menu_links['menu-amani-admin-menu:admin/content'] = array(
+  // Exported menu link: menu-amani-admin-menu:admin/structure/block/manage/fb_likebox/0/configure
+  $menu_links['menu-amani-admin-menu:admin/structure/block/manage/fb_likebox/0/configure'] = array(
     'menu_name' => 'menu-amani-admin-menu',
-    'link_path' => 'admin/content',
-    'router_path' => 'admin/content',
-    'link_title' => 'Edit content',
+    'link_path' => 'admin/structure/block/manage/fb_likebox/0/configure',
+    'router_path' => 'admin/structure/block/manage/%/%/configure',
+    'link_title' => 'Facebook feed settings',
     'options' => array(
+      'query' => array(
+        'destination' => 'home',
+      ),
       'attributes' => array(
         'title' => '',
       ),
@@ -44,7 +65,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-48',
+    'weight' => '-44',
   );
   // Exported menu link: menu-amani-admin-menu:admin/structure/contact
   $menu_links['menu-amani-admin-menu:admin/structure/contact'] = array(
@@ -62,14 +83,32 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-43',
+    'weight' => '-42',
+  );
+  // Exported menu link: menu-amani-admin-menu:admin/structure/menu/manage/menu-amani-main-menu
+  $menu_links['menu-amani-admin-menu:admin/structure/menu/manage/menu-amani-main-menu'] = array(
+    'menu_name' => 'menu-amani-admin-menu',
+    'link_path' => 'admin/structure/menu/manage/menu-amani-main-menu',
+    'router_path' => 'admin/structure/menu/manage/%',
+    'link_title' => 'Amani main menu links',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-49',
   );
   // Exported menu link: menu-amani-admin-menu:admin/structure/menu/manage/menu-social-media/list
   $menu_links['menu-amani-admin-menu:admin/structure/menu/manage/menu-social-media/list'] = array(
     'menu_name' => 'menu-amani-admin-menu',
     'link_path' => 'admin/structure/menu/manage/menu-social-media/list',
     'router_path' => 'admin/structure/menu/manage/%/list',
-    'link_title' => 'Social media feeds',
+    'link_title' => 'Social media icons',
     'options' => array(
       'query' => array(
         'destination' => 'home',
@@ -83,7 +122,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-44',
+    'weight' => '-46',
   );
   // Exported menu link: menu-amani-admin-menu:admin/structure/taxonomy
   $menu_links['menu-amani-admin-menu:admin/structure/taxonomy'] = array(
@@ -101,7 +140,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-49',
+    'weight' => '-50',
   );
   // Exported menu link: menu-amani-admin-menu:block/front-page-second-sidebar-bottom/edit
   $menu_links['menu-amani-admin-menu:block/front-page-second-sidebar-bottom/edit'] = array(
@@ -122,25 +161,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-46',
-  );
-  // Exported menu link: menu-amani-admin-menu:node/add
-  $menu_links['menu-amani-admin-menu:node/add'] = array(
-    'menu_name' => 'menu-amani-admin-menu',
-    'link_path' => 'node/add',
-    'router_path' => 'node/add',
-    'link_title' => 'Add content',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-50',
+    'weight' => '-43',
   );
   // Exported menu link: menu-amani-admin-menu:redhen
   $menu_links['menu-amani-admin-menu:redhen'] = array(
@@ -158,7 +179,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-45',
+    'weight' => '-48',
   );
   // Exported menu link: menu-amani-admin-menu:user
   $menu_links['menu-amani-admin-menu:user'] = array(
@@ -176,7 +197,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-42',
+    'weight' => '-39',
   );
   // Exported menu link: menu-amani-main-menu:about
   $menu_links['menu-amani-main-menu:about'] = array(
@@ -523,13 +544,13 @@ function amani_global_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('About');
-  t('Add content');
   t('Add terms');
+  t('Amani main menu links');
   t('Blog');
   t('Contact');
   t('Contact page settings');
-  t('Edit content');
   t('Facebook');
+  t('Facebook feed settings');
   t('Get Involved');
   t('Google analytics');
   t('Google+');
@@ -542,9 +563,10 @@ function amani_global_menu_default_menu_links() {
   t('Projects');
   t('RedHen admin');
   t('Resources');
-  t('Social media feeds');
+  t('Social media icons');
   t('Team');
   t('Twitter');
+  t('Twitter feed settings');
   t('YouTube');
   t('admin');
   t('home');
