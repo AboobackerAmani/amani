@@ -10,6 +10,24 @@
 function amani_global_menu_default_menu_links() {
   $menu_links = array();
 
+  // Exported menu link: menu-amani-admin-menu:admin/config/incident-reports
+  $menu_links['menu-amani-admin-menu:admin/config/incident-reports'] = array(
+    'menu_name' => 'menu-amani-admin-menu',
+    'link_path' => 'admin/config/incident-reports',
+    'router_path' => 'admin/config/incident-reports',
+    'link_title' => 'Edit map settings',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-41',
+  );
   // Exported menu link: menu-amani-admin-menu:admin/config/services/twitter/settings
   $menu_links['menu-amani-admin-menu:admin/config/services/twitter/settings'] = array(
     'menu_name' => 'menu-amani-admin-menu',
@@ -141,6 +159,24 @@ function amani_global_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-50',
+  );
+  // Exported menu link: menu-amani-admin-menu:amani/site-info
+  $menu_links['menu-amani-admin-menu:amani/site-info'] = array(
+    'menu_name' => 'menu-amani-admin-menu',
+    'link_path' => 'amani/site-info',
+    'router_path' => 'amani/site-info',
+    'link_title' => 'Manage site logo and info',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-40',
   );
   // Exported menu link: menu-amani-admin-menu:block/front-page-second-sidebar-bottom/edit
   $menu_links['menu-amani-admin-menu:block/front-page-second-sidebar-bottom/edit'] = array(
@@ -549,6 +585,7 @@ function amani_global_menu_default_menu_links() {
   t('Blog');
   t('Contact');
   t('Contact page settings');
+  t('Edit map settings');
   t('Facebook');
   t('Facebook feed settings');
   t('Get Involved');
@@ -556,6 +593,7 @@ function amani_global_menu_default_menu_links() {
   t('Google+');
   t('Image Gallery');
   t('LinkedIn');
+  t('Manage site logo and info');
   t('Map');
   t('My account');
   t('News & Events');
