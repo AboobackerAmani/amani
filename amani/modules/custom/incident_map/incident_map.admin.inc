@@ -137,7 +137,7 @@ function incident_map_filter_settings($prefix) {
     $set = array('#type' => 'fieldset', '#title' => $field_info['label'], '#collapsible' => TRUE, '#collapsed' => TRUE);
 
     $enabled = "$prefix-enabled-{$field_name}";
-    $set[$enabled] = array('#type' => 'checkbox', '#title' => t('Enabled'), '#default_value' => variable_get($enabled, FALSE));
+    $set[$enabled] = array('#type' => 'checkbox', '#title' => t('Enabled'), '#default_value' => variable_get($enabled, TRUE));
 
     $available = $filters[$field_info['type']];
     $names = array_map(function ($filter) { return $filter['name']; }, $available);
