@@ -49,6 +49,26 @@ function amani_global_user_default_permissions() {
     'module' => 'googleanalytics',
   );
 
+  // Exported permission: administer map configuration.
+  $permissions['administer map configuration'] = array(
+    'name' => 'administer map configuration',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'incident_map',
+  );
+
+  // Exported permission: administer site settings.
+  $permissions['administer site settings'] = array(
+    'name' => 'administer site settings',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'amani_global',
+  );
+
   // Exported permission: create front_page_box content.
   $permissions['create front_page_box content'] = array(
     'name' => 'create front_page_box content',

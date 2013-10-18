@@ -24,11 +24,23 @@ function amani_global_menu() {
     'description' => 'Manage site name, e-mail address, slogan, logo and favicon.',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('amani_site_information_settings'),
-    'access arguments' => array('administer site configuration'),
+    'access arguments' => array('administer site settings'),
     'weight' => 0,
   );
 
   return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function amani_global_permission() {
+  return array(
+    'administer site settings' => array(
+      'title' => t('Administer site settings'),
+      'description' => t('Administer the site settings form.'),
+    ),
+  );
 }
 
 /**

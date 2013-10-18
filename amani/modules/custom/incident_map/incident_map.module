@@ -20,11 +20,23 @@ function incident_map_menu() {
     'description' => '',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('incident_map_settings'),
-    'access arguments' => array('administer site configuration'),
+    'access arguments' => array('administer map configuration'),
     'file' => 'incident_map.admin.inc',
   );
 
   return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function incident_map_permission() {
+  return array(
+    'administer map configuration' => array(
+      'title' => t('Administer map configuration'),
+      'description' => t('Perform administrative tasks for the incident map.'),
+    ),
+  );
 }
 
 /**
