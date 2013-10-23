@@ -133,5 +133,33 @@ function amani_slideshow_strongarm() {
   $strongarm->value = 'slide/[node:title]';
   $export['pathauto_node_slideshow_pattern'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'weight_default_slideshow';
+  $strongarm->value = '0';
+  $export['weight_default_slideshow'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'weight_enabled_slideshow';
+  $strongarm->value = '1';
+  $export['weight_enabled_slideshow'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'weight_menu_slideshow';
+  $strongarm->value = '0';
+  $export['weight_menu_slideshow'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'weight_range_slideshow';
+  $strongarm->value = '20';
+  $export['weight_range_slideshow'] = $strongarm;
+
   return $export;
 }

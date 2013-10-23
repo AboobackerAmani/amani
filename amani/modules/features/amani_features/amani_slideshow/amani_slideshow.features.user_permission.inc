@@ -10,6 +10,16 @@
 function amani_slideshow_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: assign node weight.
+  $permissions['assign node weight'] = array(
+    'name' => 'assign node weight',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'weight',
+  );
+
   // Exported permission: create slideshow content.
   $permissions['create slideshow content'] = array(
     'name' => 'create slideshow content',

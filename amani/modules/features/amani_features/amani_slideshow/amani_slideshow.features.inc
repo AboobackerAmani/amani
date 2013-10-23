@@ -64,6 +64,7 @@ function amani_slideshow_image_default_styles() {
         'weight' => '2',
       ),
     ),
+    'label' => 'front_page_slideshow',
   );
 
   return $styles;

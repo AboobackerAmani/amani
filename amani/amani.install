@@ -116,7 +116,6 @@ function amani_install() {
     'menu_name' => 'main-menu',
     'weight' => -10,
   );
-  // Add blog to amani menu
   menu_link_save($item);
   // Update the menu router information.
   menu_rebuild();
