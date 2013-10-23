@@ -5,12 +5,13 @@
   <header id="header" class="container">
     <div class="container-inner">
 
-      <?php if ($site_name || $site_slogan): ?>
+      <?php if ($site_name || $site_slogan || $logo): ?>
         <hgroup id="name-and-slogan">
 
+          <?php if ($logo) { ?><a href="<?php print $base_path ?>" title="<?php print t('Home') ?>" id="site-logo"><img src="<?php print $logo ?>" alt="<?php print t('Home') ?>" /></a><?php } ?>
           <?php if ($site_name): ?>
             <div id="site-name">
-              <a href="<?php print $front_page; ?>" style="background-image: url('<?php print $logo; ?>');" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a>
+              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a>
             </div>
           <?php endif; ?>
           <?php if ($site_slogan): ?>
