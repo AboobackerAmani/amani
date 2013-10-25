@@ -10,6 +10,24 @@
 function amani_global_menu_default_menu_links() {
   $menu_links = array();
 
+  // Exported menu link: menu-amani-admin-menu:admin/config/development/css-injector
+  $menu_links['menu-amani-admin-menu:admin/config/development/css-injector'] = array(
+    'menu_name' => 'menu-amani-admin-menu',
+    'link_path' => 'admin/config/development/css-injector',
+    'router_path' => 'admin/config/development/css-injector',
+    'link_title' => 'Manage site css',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-39',
+  );
   // Exported menu link: menu-amani-admin-menu:admin/config/incident-reports
   $menu_links['menu-amani-admin-menu:admin/config/incident-reports'] = array(
     'menu_name' => 'menu-amani-admin-menu',
@@ -233,7 +251,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-39',
+    'weight' => '-38',
   );
   // Exported menu link: menu-amani-main-menu:about
   $menu_links['menu-amani-main-menu:about'] = array(
@@ -593,6 +611,7 @@ function amani_global_menu_default_menu_links() {
   t('Google+');
   t('Image Gallery');
   t('LinkedIn');
+  t('Manage site css');
   t('Manage site logo and info');
   t('Map');
   t('My account');

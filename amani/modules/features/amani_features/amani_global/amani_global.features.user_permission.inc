@@ -39,6 +39,16 @@ function amani_global_user_default_permissions() {
     'module' => 'contact',
   );
 
+  // Exported permission: administer css injection.
+  $permissions['administer css injection'] = array(
+    'name' => 'administer css injection',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'css_injector',
+  );
+
   // Exported permission: administer google analytics.
   $permissions['administer google analytics'] = array(
     'name' => 'administer google analytics',
@@ -57,16 +67,6 @@ function amani_global_user_default_permissions() {
       1 => 'amani administrator',
     ),
     'module' => 'incident_map',
-  );
-
-  // Exported permission: administer site settings.
-  $permissions['administer site settings'] = array(
-    'name' => 'administer site settings',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'amani administrator',
-    ),
-    'module' => 'amani_global',
   );
 
   // Exported permission: create front_page_box content.
