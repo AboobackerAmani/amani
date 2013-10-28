@@ -99,14 +99,14 @@ function amani_blog_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-blog-field_content_image'.
-  $fields['node-blog-field_content_image'] = array(
+  // Exported field: 'node-blog-field_image'.
+  $fields['node-blog-field_image'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_content_image',
+      'field_name' => 'field_image',
       'foreign keys' => array(
         'fid' => array(
           'columns' => array(
@@ -127,50 +127,39 @@ function amani_blog_field_default_fields() {
         'profile2_private' => FALSE,
         'uri_scheme' => 'public',
       ),
-      'translatable' => '1',
+      'translatable' => '0',
       'type' => 'image',
     ),
     'field_instance' => array(
       'bundle' => 'blog',
-      'default_value' => array(),
       'deleted' => '0',
-      'description' => 'Select an image to be displayed in association with this piece of content.  The maximum allowed image size is 1000 x 1000 pixels.',
+      'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
+          'label' => 'above',
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'medium_large',
+            'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => '0',
+          'weight' => 5,
         ),
-        'ical' => array(
+        'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
         ),
-        'teaser' => array(
-          'label' => 'hidden',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => 'content',
-            'image_style' => 'medium',
-          ),
-          'type' => 'image',
-          'weight' => '0',
-        ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_content_image',
-      'label' => 'Main Image',
+      'field_name' => 'field_image',
+      'label' => 'Lead Image',
       'required' => 0,
       'settings' => array(
-        'alt_field' => 1,
+        'alt_field' => 0,
         'default_image' => 0,
-        'file_directory' => 'blog-field_content_image',
+        'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
         'max_resolution' => '',
@@ -180,12 +169,17 @@ function amani_blog_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'image',
+        'module' => 'imagefield_crop',
         'settings' => array(
+          'collapsible' => '2',
+          'croparea' => '500x500',
+          'enforce_minimum' => 1,
+          'enforce_ratio' => 1,
           'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
+          'resolution' => '200x150',
         ),
-        'type' => 'image_image',
+        'type' => 'imagefield_crop_widget',
         'weight' => '1',
       ),
     ),
@@ -195,7 +189,7 @@ function amani_blog_field_default_fields() {
   $fields['node-blog-field_media'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '-1',
+      'cardinality' => '10',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_media',
@@ -269,22 +263,22 @@ function amani_blog_field_default_fields() {
             'youtube' => 0,
           ),
           'allowed_types' => array(
-            'audio' => 0,
-            'document' => 0,
+            'audio' => 'audio',
+            'document' => 'document',
             'image' => 'image',
             'video' => 'video',
           ),
           'browser_plugins' => array(
             'media_default--media_browser_1' => 'media_default--media_browser_1',
             'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-            'media_internet' => 0,
+            'media_internet' => 'media_internet',
             'upload' => 'upload',
-            'youtube' => 0,
+            'youtube' => 'youtube',
           ),
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '4',
+        'weight' => '2',
       ),
     ),
   );
@@ -363,7 +357,7 @@ function amani_blog_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '2',
+        'weight' => '5',
       ),
     ),
   );
@@ -372,9 +366,8 @@ function amani_blog_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Enter a comma-separated list of words to describe your content.');
-  t('Main Image');
+  t('Lead Image');
   t('Media');
-  t('Select an image to be displayed in association with this piece of content.  The maximum allowed image size is 1000 x 1000 pixels.');
   t('Tags');
 
   return $fields;
