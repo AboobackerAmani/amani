@@ -116,9 +116,8 @@ function amani_global_user_default_permissions() {
       0 => 'administrator',
       1 => 'anonymous user',
       2 => 'authenticated user',
-      3 => 'blogger',
-      4 => 'contributor',
-      5 => 'editor',
+      3 => 'contributor',
+      4 => 'editor',
     ),
     'module' => 'search',
   );

@@ -16,9 +16,8 @@ function amani_blog_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
-      2 => 'blogger',
-      3 => 'contributor',
-      4 => 'editor',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -38,9 +37,8 @@ function amani_blog_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
-      2 => 'blogger',
-      3 => 'contributor',
-      4 => 'editor',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -62,9 +60,8 @@ function amani_blog_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
-      2 => 'blogger',
-      3 => 'contributor',
-      4 => 'editor',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
