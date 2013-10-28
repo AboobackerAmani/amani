@@ -118,10 +118,7 @@ function amani_global_user_default_permissions() {
       2 => 'authenticated user',
       3 => 'blogger',
       4 => 'contributor',
-      5 => 'crm manager',
-      6 => 'crm viewer',
-      7 => 'editor',
-      8 => 'member',
+      5 => 'editor',
     ),
     'module' => 'search',
   );
