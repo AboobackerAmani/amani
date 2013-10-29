@@ -139,7 +139,7 @@ function amani_programs_campaigns_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'ical' => array(
           'label' => 'above',
@@ -214,14 +214,13 @@ function amani_programs_campaigns_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'image',
+          'label' => 'hidden',
+          'module' => 'file_entity',
           'settings' => array(
-            'image_link' => '',
-            'image_style' => '',
+            'file_view_mode' => 'preview',
           ),
-          'type' => 'image',
-          'weight' => 4,
+          'type' => 'file_rendered',
+          'weight' => '0',
         ),
         'ical' => array(
           'label' => 'above',
@@ -313,7 +312,7 @@ function amani_programs_campaigns_field_default_fields() {
             'file_view_mode' => 'default',
           ),
           'type' => 'file_rendered',
-          'weight' => '0',
+          'weight' => '3',
         ),
         'ical' => array(
           'label' => 'above',
