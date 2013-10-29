@@ -344,8 +344,8 @@ function amani_about_field_default_fields() {
         'settings' => array(
           'allowed_schemes' => array(
             'public' => 'public',
-            'vimeo' => 0,
-            'youtube' => 0,
+            'vimeo' => 'vimeo',
+            'youtube' => 'youtube',
           ),
           'allowed_types' => array(
             'audio' => 'audio',

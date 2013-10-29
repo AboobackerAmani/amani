@@ -30,7 +30,7 @@ function amani_about_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Image */
+  /* Field: Content: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -129,7 +129,7 @@ function amani_about_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Image */
+  /* Field: Content: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -203,7 +203,7 @@ function amani_about_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  /* Field: Content: Image */
+  /* Field: Content: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
