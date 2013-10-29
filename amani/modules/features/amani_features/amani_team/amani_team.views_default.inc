@@ -48,9 +48,9 @@ function amani_team_views_default_views() {
   $handler->display->display_options['fields']['field_team_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_team_image']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_team_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_team_image']['type'] = 'file_rendered';
   $handler->display->display_options['fields']['field_team_image']['settings'] = array(
-    'image_style' => 'medium',
-    'image_link' => '',
+    'file_view_mode' => 'default',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
