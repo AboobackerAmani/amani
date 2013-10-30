@@ -20,7 +20,6 @@ function amani_global_context_default_contexts() {
     'path' => array(
       'values' => array(
         'amani/content-admin' => 'amani/content-admin',
-        'user/*/my-content' => 'user/*/my-content',
       ),
     ),
   );
