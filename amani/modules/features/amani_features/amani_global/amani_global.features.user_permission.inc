@@ -219,15 +219,6 @@ function amani_global_user_default_permissions() {
     'module' => 'boxes',
   );
 
-  // Exported permission: administer ckeditor.
-  $permissions['administer ckeditor'] = array(
-    'name' => 'administer ckeditor',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'ckeditor',
-  );
-
   // Exported permission: administer contact forms.
   $permissions['administer contact forms'] = array(
     'name' => 'administer contact forms',
@@ -586,15 +577,6 @@ function amani_global_user_default_permissions() {
       3 => 'editor',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: customize ckeditor.
-  $permissions['customize ckeditor'] = array(
-    'name' => 'customize ckeditor',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'ckeditor',
   );
 
   // Exported permission: delete all webform submissions.
