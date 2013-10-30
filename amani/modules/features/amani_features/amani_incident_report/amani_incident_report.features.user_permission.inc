@@ -14,8 +14,9 @@ function amani_incident_report_user_default_permissions() {
   $permissions['create incident_report content'] = array(
     'name' => 'create incident_report content',
     'roles' => array(
-      0 => 'anonymous user',
-      1 => 'authenticated user',
+      0 => 'amani administrator',
+      1 => 'anonymous user',
+      2 => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -25,8 +26,7 @@ function amani_incident_report_user_default_permissions() {
     'name' => 'delete any incident_report content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'amani administrator',
-      2 => 'editor',
+      1 => 'editor',
     ),
     'module' => 'node',
   );
@@ -58,7 +58,8 @@ function amani_incident_report_user_default_permissions() {
   $permissions['edit own incident_report content'] = array(
     'name' => 'edit own incident_report content',
     'roles' => array(
-      0 => 'authenticated user',
+      0 => 'amani administrator',
+      1 => 'authenticated user',
     ),
     'module' => 'node',
   );

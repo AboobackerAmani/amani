@@ -15,6 +15,7 @@ function amani_global_user_default_permissions() {
     'name' => 'access all webform results',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'webform',
   );
@@ -44,6 +45,7 @@ function amani_global_user_default_permissions() {
     'name' => 'access content overview',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -53,6 +55,7 @@ function amani_global_user_default_permissions() {
     'name' => 'access own webform results',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'webform',
   );
@@ -62,6 +65,7 @@ function amani_global_user_default_permissions() {
     'name' => 'access own webform submissions',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'webform',
   );
@@ -71,6 +75,7 @@ function amani_global_user_default_permissions() {
     'name' => 'access redhen',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen',
   );
@@ -80,6 +85,7 @@ function amani_global_user_default_permissions() {
     'name' => 'access redhen contacts',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_contact',
   );
@@ -89,6 +95,7 @@ function amani_global_user_default_permissions() {
     'name' => 'access redhen orgs',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_org',
   );
@@ -98,6 +105,7 @@ function amani_global_user_default_permissions() {
     'name' => 'access site reports',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'system',
   );
@@ -135,6 +143,7 @@ function amani_global_user_default_permissions() {
     'name' => 'add authenticated twitter accounts',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'twitter',
   );
@@ -144,6 +153,7 @@ function amani_global_user_default_permissions() {
     'name' => 'add twitter accounts',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'twitter',
   );
@@ -153,6 +163,7 @@ function amani_global_user_default_permissions() {
     'name' => 'administer advanced forum',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'advanced_forum',
   );
@@ -263,6 +274,7 @@ function amani_global_user_default_permissions() {
     'name' => 'administer forums',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'forum',
   );
@@ -337,6 +349,7 @@ function amani_global_user_default_permissions() {
     'name' => 'administer redhen',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen',
   );
@@ -346,6 +359,7 @@ function amani_global_user_default_permissions() {
     'name' => 'administer redhen contacts',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_contact',
   );
@@ -355,6 +369,7 @@ function amani_global_user_default_permissions() {
     'name' => 'administer redhen membership types',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_membership',
   );
@@ -364,6 +379,7 @@ function amani_global_user_default_permissions() {
     'name' => 'administer redhen orgs',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_org',
   );
@@ -373,6 +389,7 @@ function amani_global_user_default_permissions() {
     'name' => 'administer redhen_contact types',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_contact',
   );
@@ -382,6 +399,7 @@ function amani_global_user_default_permissions() {
     'name' => 'administer redhen_org types',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_org',
   );
@@ -410,6 +428,7 @@ function amani_global_user_default_permissions() {
     'name' => 'administer taxonomy',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'taxonomy',
   );
@@ -419,6 +438,7 @@ function amani_global_user_default_permissions() {
     'name' => 'administer twitter accounts',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'twitter',
   );
@@ -455,6 +475,7 @@ function amani_global_user_default_permissions() {
     'name' => 'cancel account',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'user',
   );
@@ -464,6 +485,7 @@ function amani_global_user_default_permissions() {
     'name' => 'change own username',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'user',
   );
@@ -491,6 +513,7 @@ function amani_global_user_default_permissions() {
     'name' => 'create files',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'file_entity',
   );
@@ -500,6 +523,7 @@ function amani_global_user_default_permissions() {
     'name' => 'create forum content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -519,6 +543,7 @@ function amani_global_user_default_permissions() {
     'name' => 'create redhen contact memberships',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_membership',
   );
@@ -528,6 +553,7 @@ function amani_global_user_default_permissions() {
     'name' => 'create redhen org memberships',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_membership',
   );
@@ -537,6 +563,7 @@ function amani_global_user_default_permissions() {
     'name' => 'create webform content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -564,6 +591,7 @@ function amani_global_user_default_permissions() {
     'name' => 'delete any files',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'file_entity',
   );
@@ -618,6 +646,7 @@ function amani_global_user_default_permissions() {
     'name' => 'delete own files',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'file_entity',
   );
@@ -627,6 +656,7 @@ function amani_global_user_default_permissions() {
     'name' => 'delete own forum content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -646,6 +676,7 @@ function amani_global_user_default_permissions() {
     'name' => 'delete own webform content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -655,6 +686,7 @@ function amani_global_user_default_permissions() {
     'name' => 'delete own webform submissions',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'webform',
   );
@@ -682,6 +714,7 @@ function amani_global_user_default_permissions() {
     'name' => 'delete revisions',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -767,6 +800,7 @@ function amani_global_user_default_permissions() {
     'name' => 'edit all webform submissions',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'webform',
   );
@@ -776,6 +810,7 @@ function amani_global_user_default_permissions() {
     'name' => 'edit any files',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'file_entity',
   );
@@ -785,6 +820,7 @@ function amani_global_user_default_permissions() {
     'name' => 'edit any forum content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -822,6 +858,7 @@ function amani_global_user_default_permissions() {
     'name' => 'edit any webform content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -849,6 +886,7 @@ function amani_global_user_default_permissions() {
     'name' => 'edit meta tags',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'metatag',
   );
@@ -858,6 +896,7 @@ function amani_global_user_default_permissions() {
     'name' => 'edit own files',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'file_entity',
   );
@@ -867,6 +906,7 @@ function amani_global_user_default_permissions() {
     'name' => 'edit own forum content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -886,6 +926,7 @@ function amani_global_user_default_permissions() {
     'name' => 'edit own redhen contact',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_contact',
   );
@@ -895,6 +936,7 @@ function amani_global_user_default_permissions() {
     'name' => 'edit own webform content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -904,6 +946,7 @@ function amani_global_user_default_permissions() {
     'name' => 'edit own webform submissions',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'webform',
   );
@@ -913,6 +956,7 @@ function amani_global_user_default_permissions() {
     'name' => 'edit redhen contact connections',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_relation',
   );
@@ -922,6 +966,7 @@ function amani_global_user_default_permissions() {
     'name' => 'edit redhen contact memberships',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_membership',
   );
@@ -931,6 +976,7 @@ function amani_global_user_default_permissions() {
     'name' => 'edit redhen org connections',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_relation',
   );
@@ -940,6 +986,7 @@ function amani_global_user_default_permissions() {
     'name' => 'edit redhen org memberships',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_membership',
   );
@@ -1025,6 +1072,7 @@ function amani_global_user_default_permissions() {
     'name' => 'import media',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'media',
   );
@@ -1034,6 +1082,7 @@ function amani_global_user_default_permissions() {
     'name' => 'list redhen memberships',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_membership',
   );
@@ -1043,6 +1092,7 @@ function amani_global_user_default_permissions() {
     'name' => 'manage redhen contacts',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_contact',
   );
@@ -1052,6 +1102,7 @@ function amani_global_user_default_permissions() {
     'name' => 'manage redhen orgs',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_org',
   );
@@ -1070,6 +1121,7 @@ function amani_global_user_default_permissions() {
     'name' => 'post to twitter',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'twitter_post',
   );
@@ -1079,6 +1131,7 @@ function amani_global_user_default_permissions() {
     'name' => 'revert revisions',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -1088,10 +1141,11 @@ function amani_global_user_default_permissions() {
     'name' => 'search content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'anonymous user',
-      2 => 'authenticated user',
-      3 => 'contributor',
-      4 => 'editor',
+      1 => 'amani administrator',
+      2 => 'anonymous user',
+      3 => 'authenticated user',
+      4 => 'contributor',
+      5 => 'editor',
     ),
     'module' => 'search',
   );
@@ -1128,7 +1182,8 @@ function amani_global_user_default_permissions() {
     'name' => 'use advanced search',
     'roles' => array(
       0 => 'administrator',
-      1 => 'anonymous user',
+      1 => 'amani administrator',
+      2 => 'anonymous user',
     ),
     'module' => 'search',
   );
@@ -1216,6 +1271,7 @@ function amani_global_user_default_permissions() {
     'name' => 'view forum statistics',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'advanced_forum',
   );
@@ -1225,6 +1281,7 @@ function amani_global_user_default_permissions() {
     'name' => 'view last edited notice',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'advanced_forum',
   );
@@ -1243,6 +1300,7 @@ function amani_global_user_default_permissions() {
     'name' => 'view own private files',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'file_entity',
   );
@@ -1252,6 +1310,7 @@ function amani_global_user_default_permissions() {
     'name' => 'view own redhen contact',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_contact',
   );
@@ -1261,6 +1320,7 @@ function amani_global_user_default_permissions() {
     'name' => 'view own unpublished content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -1270,6 +1330,7 @@ function amani_global_user_default_permissions() {
     'name' => 'view own unpublished files',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'file_admin',
   );
@@ -1279,6 +1340,7 @@ function amani_global_user_default_permissions() {
     'name' => 'view redhen contact connections',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_relation',
   );
@@ -1288,6 +1350,7 @@ function amani_global_user_default_permissions() {
     'name' => 'view redhen contact memberships',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_membership',
   );
@@ -1297,6 +1360,7 @@ function amani_global_user_default_permissions() {
     'name' => 'view redhen org connections',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_relation',
   );
@@ -1306,6 +1370,7 @@ function amani_global_user_default_permissions() {
     'name' => 'view redhen org memberships',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'redhen_membership',
   );
@@ -1315,6 +1380,7 @@ function amani_global_user_default_permissions() {
     'name' => 'view revisions',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );

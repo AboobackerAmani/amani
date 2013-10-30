@@ -15,6 +15,7 @@ function amani_programs_campaigns_user_default_permissions() {
     'name' => 'create project content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -33,6 +34,7 @@ function amani_programs_campaigns_user_default_permissions() {
     'name' => 'delete own project content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -42,6 +44,7 @@ function amani_programs_campaigns_user_default_permissions() {
     'name' => 'edit any project content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -51,6 +54,7 @@ function amani_programs_campaigns_user_default_permissions() {
     'name' => 'edit own project content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );

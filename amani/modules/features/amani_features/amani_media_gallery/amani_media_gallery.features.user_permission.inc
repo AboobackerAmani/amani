@@ -15,6 +15,7 @@ function amani_media_gallery_user_default_permissions() {
     'name' => 'create media_gallery content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -33,6 +34,7 @@ function amani_media_gallery_user_default_permissions() {
     'name' => 'delete own media_gallery content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -42,6 +44,7 @@ function amani_media_gallery_user_default_permissions() {
     'name' => 'edit any media_gallery content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -51,6 +54,7 @@ function amani_media_gallery_user_default_permissions() {
     'name' => 'edit own media_gallery content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
