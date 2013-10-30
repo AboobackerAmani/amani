@@ -16,7 +16,8 @@ function amani_team_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
-      2 => 'editor',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -36,7 +37,8 @@ function amani_team_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
-      2 => 'editor',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -58,7 +60,8 @@ function amani_team_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
-      2 => 'editor',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );

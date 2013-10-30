@@ -83,7 +83,7 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['relationships']['field_document_fid']['id'] = 'field_document_fid';
   $handler->display->display_options['relationships']['field_document_fid']['table'] = 'field_data_field_document';
   $handler->display->display_options['relationships']['field_document_fid']['field'] = 'field_document_fid';
-  /* Field: Content: Image */
+  /* Field: Content: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -298,7 +298,7 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['fields']['field_video']['settings'] = array(
     'file_view_mode' => 'preview',
   );
-  /* Field: Content: Image */
+  /* Field: Content: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';

@@ -46,6 +46,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -66,6 +68,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'webform',
   );
@@ -116,6 +120,7 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'anonymous user',
+      2 => 'authenticated user',
     ),
     'module' => 'contact',
   );
@@ -125,6 +130,7 @@ function amani_global_user_default_permissions() {
     'name' => 'access user contact forms',
     'roles' => array(
       0 => 'administrator',
+      1 => 'authenticated user',
     ),
     'module' => 'contact',
   );
@@ -429,6 +435,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'taxonomy',
   );
@@ -476,6 +484,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'user',
   );
@@ -486,6 +496,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'user',
   );
@@ -514,6 +526,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'file_entity',
   );
@@ -524,6 +538,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -534,6 +550,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -564,6 +582,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -647,6 +667,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'file_entity',
   );
@@ -657,6 +679,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -667,6 +691,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -677,6 +703,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -687,6 +715,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'webform',
   );
@@ -715,6 +745,7 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -731,7 +762,9 @@ function amani_global_user_default_permissions() {
   // Exported permission: delete terms in 10.
   $permissions['delete terms in 10'] = array(
     'name' => 'delete terms in 10',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -756,42 +789,54 @@ function amani_global_user_default_permissions() {
   // Exported permission: delete terms in 4.
   $permissions['delete terms in 4'] = array(
     'name' => 'delete terms in 4',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: delete terms in 5.
   $permissions['delete terms in 5'] = array(
     'name' => 'delete terms in 5',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: delete terms in 6.
   $permissions['delete terms in 6'] = array(
     'name' => 'delete terms in 6',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: delete terms in 7.
   $permissions['delete terms in 7'] = array(
     'name' => 'delete terms in 7',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: delete terms in 8.
   $permissions['delete terms in 8'] = array(
     'name' => 'delete terms in 8',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: delete terms in 9.
   $permissions['delete terms in 9'] = array(
     'name' => 'delete terms in 9',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -821,6 +866,7 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -831,6 +877,7 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -859,6 +906,7 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -897,6 +945,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'file_entity',
   );
@@ -907,6 +957,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -917,6 +969,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -937,6 +991,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
@@ -947,6 +1003,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'webform',
   );
@@ -1003,7 +1061,9 @@ function amani_global_user_default_permissions() {
   // Exported permission: edit terms in 10.
   $permissions['edit terms in 10'] = array(
     'name' => 'edit terms in 10',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1028,42 +1088,54 @@ function amani_global_user_default_permissions() {
   // Exported permission: edit terms in 4.
   $permissions['edit terms in 4'] = array(
     'name' => 'edit terms in 4',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: edit terms in 5.
   $permissions['edit terms in 5'] = array(
     'name' => 'edit terms in 5',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: edit terms in 6.
   $permissions['edit terms in 6'] = array(
     'name' => 'edit terms in 6',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: edit terms in 7.
   $permissions['edit terms in 7'] = array(
     'name' => 'edit terms in 7',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: edit terms in 8.
   $permissions['edit terms in 8'] = array(
     'name' => 'edit terms in 8',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: edit terms in 9.
   $permissions['edit terms in 9'] = array(
     'name' => 'edit terms in 9',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1132,6 +1204,7 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -1301,6 +1374,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'file_entity',
   );
@@ -1321,6 +1396,7 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -1381,6 +1457,7 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
