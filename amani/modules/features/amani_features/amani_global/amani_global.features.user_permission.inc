@@ -1063,6 +1063,39 @@ function amani_global_user_default_permissions() {
     'module' => 'search',
   );
 
+  // Exported permission: use text format php_code.
+  $permissions['use text format php_code'] = array(
+    'name' => 'use text format php_code',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: use text format wysiwyg_advanced.
+  $permissions['use text format wysiwyg_advanced'] = array(
+    'name' => 'use text format wysiwyg_advanced',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: use text format wysiwyg_public.
+  $permissions['use text format wysiwyg_public'] = array(
+    'name' => 'use text format wysiwyg_public',
+    'roles' => array(
+      0 => 'anonymous user',
+      1 => 'authenticated user',
+      2 => 'contributor',
+      3 => 'editor',
+    ),
+    'module' => 'filter',
+  );
+
   // Exported permission: view advanced help index.
   $permissions['view advanced help index'] = array(
     'name' => 'view advanced help index',
