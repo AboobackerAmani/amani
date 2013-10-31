@@ -189,7 +189,7 @@ function amani_blog_field_default_fields() {
   $fields['node-blog-field_media'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '10',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_media',
