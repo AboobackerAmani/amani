@@ -270,104 +270,6 @@ function amani_about_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-about-field_media'.
-  $fields['node-about-field_media'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '10',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_media',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'file',
-      'settings' => array(
-        'display_default' => 0,
-        'display_field' => 0,
-        'profile2_private' => FALSE,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '0',
-      'type' => 'file',
-    ),
-    'field_instance' => array(
-      'bundle' => 'about',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'file',
-          'settings' => array(),
-          'type' => 'file_default',
-          'weight' => 4,
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_media',
-      'label' => 'Media',
-      'required' => 0,
-      'settings' => array(
-        'description_field' => 0,
-        'file_directory' => '',
-        'file_extensions' => 'jpeg png mov avi txt',
-        'max_filesize' => '',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'media',
-        'settings' => array(
-          'allowed_schemes' => array(
-            'public' => 'public',
-            'vimeo' => 'vimeo',
-            'youtube' => 'youtube',
-          ),
-          'allowed_types' => array(
-            'audio' => 'audio',
-            'document' => 'document',
-            'image' => 'image',
-            'video' => 'video',
-          ),
-          'browser_plugins' => array(
-            'media_default--media_browser_1' => 'media_default--media_browser_1',
-            'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-            'media_internet' => 'media_internet',
-            'upload' => 'upload',
-            'youtube' => 'youtube',
-          ),
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'media_generic',
-        'weight' => '2',
-      ),
-    ),
-  );
-
   // Exported field: 'node-about-field_weight'.
   $fields['node-about-field_weight'] = array(
     'field_config' => array(
@@ -448,7 +350,6 @@ function amani_about_field_default_fields() {
   t('Check this box to display this item at the top of the About page.');
   t('Lead Image');
   t('Main item');
-  t('Media');
   t('Use this field to determine the order of items shown in a view or list. Items will be sorted from smallest weight to largest.');
   t('Weight');
 

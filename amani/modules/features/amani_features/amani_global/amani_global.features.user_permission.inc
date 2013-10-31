@@ -253,6 +253,9 @@ function amani_global_user_default_permissions() {
     'name' => 'administer files',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'file_entity',
   );
@@ -947,6 +950,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'media',
   );
@@ -1199,6 +1204,9 @@ function amani_global_user_default_permissions() {
     'name' => 'view own files',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'file_entity',
   );
@@ -1242,6 +1250,8 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
+      2 => 'contributor',
+      3 => 'editor',
     ),
     'module' => 'file_admin',
   );
