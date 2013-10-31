@@ -108,8 +108,7 @@ function amani_get_involved_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '<span>become a</span>
-<h3>[title]</h3>';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<h3>[title]</h3>';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
 
@@ -147,8 +146,7 @@ function amani_get_involved_views_default_views() {
     t('There are no <em>Get involved</em> items created yet. As soon as you <a href="/node/add/get-  involved?destination=get-involved">create some</a> they will appear here instead of this message.'),
     t('Page'),
     t('Block'),
-    t('<span>become a</span>
-<h3>[title]</h3>'),
+    t('<h3>[title]</h3>'),
   );
   $export['get_involved'] = $view;
 
