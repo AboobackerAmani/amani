@@ -136,7 +136,7 @@ function amani_event_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 6,
+          'weight' => '5',
         ),
         'ical' => array(
           'label' => 'above',
@@ -218,7 +218,7 @@ function amani_event_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 7,
+          'weight' => '6',
         ),
         'ical' => array(
           'label' => 'above',
@@ -303,7 +303,7 @@ function amani_event_field_default_fields() {
             'use_widget_handlers' => 1,
           ),
           'type' => 'addressfield_default',
-          'weight' => 11,
+          'weight' => '9',
         ),
         'ical' => array(
           'label' => 'above',
@@ -515,7 +515,7 @@ function amani_event_field_default_fields() {
             'data' => 'full',
           ),
           'type' => 'geofield_wkt',
-          'weight' => 10,
+          'weight' => '8',
         ),
         'ical' => array(
           'label' => 'above',
@@ -697,10 +697,9 @@ function amani_event_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'list',
           'settings' => array(),
-          'type' => 'list_default',
-          'weight' => 12,
+          'type' => 'hidden',
+          'weight' => '11',
         ),
         'ical' => array(
           'label' => 'above',
@@ -773,7 +772,7 @@ function amani_event_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 8,
+          'weight' => '7',
         ),
         'ical' => array(
           'label' => 'above',
@@ -851,14 +850,13 @@ function amani_event_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'image',
+          'label' => 'hidden',
+          'module' => 'file_entity',
           'settings' => array(
-            'image_link' => '',
-            'image_style' => '',
+            'file_view_mode' => 'default',
           ),
-          'type' => 'image',
-          'weight' => 14,
+          'type' => 'file_rendered',
+          'weight' => '0',
         ),
         'ical' => array(
           'label' => 'above',
@@ -944,11 +942,13 @@ function amani_event_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'file',
-          'settings' => array(),
-          'type' => 'file_default',
-          'weight' => 13,
+          'label' => 'hidden',
+          'module' => 'file_entity',
+          'settings' => array(
+            'file_view_mode' => 'default',
+          ),
+          'type' => 'file_rendered',
+          'weight' => '10',
         ),
         'ical' => array(
           'label' => 'above',

@@ -136,9 +136,12 @@ function amani_get_involved_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '2',
+          'module' => 'file_entity',
+          'settings' => array(
+            'file_view_mode' => 'default',
+          ),
+          'type' => 'file_rendered',
+          'weight' => '0',
         ),
         'ical' => array(
           'label' => 'above',
@@ -230,13 +233,13 @@ function amani_get_involved_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'file_entity',
           'settings' => array(
             'file_view_mode' => 'default',
           ),
           'type' => 'file_rendered',
-          'weight' => '4',
+          'weight' => '2',
         ),
         'ical' => array(
           'label' => 'above',

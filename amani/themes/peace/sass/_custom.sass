@@ -349,14 +349,22 @@ a.button
     padding-top: $padding
     border-top: 1px solid $grey
 
-.node-article
+.node-article,
+.node-get-involved,
+.node-event,
+.node-blog,
+.node-project
   .field-name-field-media
+    @include clearfix
     background: #eee
     padding: $padding
     margin-bottom: $margin
-    text-align: center
-    img
-      margin-bottom: $margin/2
+    .field-item
+      float: left
+      width: 33%
+      > div
+        margin: 10px 5px
+      
 // Footer
 #footer
   background: $grey_dark

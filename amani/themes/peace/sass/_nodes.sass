@@ -486,10 +486,21 @@
         width: 100%
         height: auto
 
-// Node projects
-body.node-type-project
-  .node-project
+// Node blog/articles/projects
+body.node-type-blog,
+body.node-type-project,
+body.node-type-article,
+body.node-type-event,
+body.node-type-get-involved,
+  .node-get-involved,
+  .node-event,
+  .node-blog,
+  .node-project,
+  .node-article
+    > .content > .field-name-body + div
+      clear: left
     .field-name-field-image,
+      clear: none
       float: left
       margin-right: 20px
       margin-bottom: 20px

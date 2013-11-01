@@ -96,6 +96,12 @@ function amani_event_strongarm() {
       'ical' => array(
         'custom_settings' => TRUE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'media_gallery_block' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

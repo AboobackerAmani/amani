@@ -556,13 +556,45 @@ a.button {
   padding-top: 30px;
   border-top: 1px solid #cccccc; }
 
-.node-article .field-name-field-media {
+.node-article .field-name-field-media,
+.node-get-involved .field-name-field-media,
+.node-event .field-name-field-media,
+.node-blog .field-name-field-media,
+.node-project .field-name-field-media {
+  *zoom: 1;
   background: #eeeeee;
   padding: 30px;
-  margin-bottom: 30px;
-  text-align: center; }
-  .node-article .field-name-field-media img {
-    margin-bottom: 15px; }
+  margin-bottom: 30px; }
+  .node-article .field-name-field-media:before, .node-article .field-name-field-media:after,
+  .node-get-involved .field-name-field-media:before,
+  .node-get-involved .field-name-field-media:after,
+  .node-event .field-name-field-media:before,
+  .node-event .field-name-field-media:after,
+  .node-blog .field-name-field-media:before,
+  .node-blog .field-name-field-media:after,
+  .node-project .field-name-field-media:before,
+  .node-project .field-name-field-media:after {
+    content: " ";
+    display: table; }
+  .node-article .field-name-field-media:after,
+  .node-get-involved .field-name-field-media:after,
+  .node-event .field-name-field-media:after,
+  .node-blog .field-name-field-media:after,
+  .node-project .field-name-field-media:after {
+    clear: both; }
+  .node-article .field-name-field-media .field-item,
+  .node-get-involved .field-name-field-media .field-item,
+  .node-event .field-name-field-media .field-item,
+  .node-blog .field-name-field-media .field-item,
+  .node-project .field-name-field-media .field-item {
+    float: left;
+    width: 33%; }
+    .node-article .field-name-field-media .field-item > div,
+    .node-get-involved .field-name-field-media .field-item > div,
+    .node-event .field-name-field-media .field-item > div,
+    .node-blog .field-name-field-media .field-item > div,
+    .node-project .field-name-field-media .field-item > div {
+      margin: 10px 5px; }
 
 #footer {
   background: #414042;
@@ -1705,7 +1737,58 @@ a.button {
       width: 100%;
       height: auto; } }
 
-body.node-type-project .node-project .field-name-field-image {
+body.node-type-blog .node-get-involved > .content > .field-name-body + div,
+body.node-type-blog .node-event > .content > .field-name-body + div,
+body.node-type-blog .node-blog > .content > .field-name-body + div,
+body.node-type-blog .node-project > .content > .field-name-body + div,
+body.node-type-blog .node-article > .content > .field-name-body + div,
+body.node-type-project .node-get-involved > .content > .field-name-body + div,
+body.node-type-project .node-event > .content > .field-name-body + div,
+body.node-type-project .node-blog > .content > .field-name-body + div,
+body.node-type-project .node-project > .content > .field-name-body + div,
+body.node-type-project .node-article > .content > .field-name-body + div,
+body.node-type-article .node-get-involved > .content > .field-name-body + div,
+body.node-type-article .node-event > .content > .field-name-body + div,
+body.node-type-article .node-blog > .content > .field-name-body + div,
+body.node-type-article .node-project > .content > .field-name-body + div,
+body.node-type-article .node-article > .content > .field-name-body + div,
+body.node-type-event .node-get-involved > .content > .field-name-body + div,
+body.node-type-event .node-event > .content > .field-name-body + div,
+body.node-type-event .node-blog > .content > .field-name-body + div,
+body.node-type-event .node-project > .content > .field-name-body + div,
+body.node-type-event .node-article > .content > .field-name-body + div,
+body.node-type-get-involved .node-get-involved > .content > .field-name-body + div,
+body.node-type-get-involved .node-event > .content > .field-name-body + div,
+body.node-type-get-involved .node-blog > .content > .field-name-body + div,
+body.node-type-get-involved .node-project > .content > .field-name-body + div,
+body.node-type-get-involved .node-article > .content > .field-name-body + div {
+  clear: left; }
+body.node-type-blog .node-get-involved .field-name-field-image,
+body.node-type-blog .node-event .field-name-field-image,
+body.node-type-blog .node-blog .field-name-field-image,
+body.node-type-blog .node-project .field-name-field-image,
+body.node-type-blog .node-article .field-name-field-image,
+body.node-type-project .node-get-involved .field-name-field-image,
+body.node-type-project .node-event .field-name-field-image,
+body.node-type-project .node-blog .field-name-field-image,
+body.node-type-project .node-project .field-name-field-image,
+body.node-type-project .node-article .field-name-field-image,
+body.node-type-article .node-get-involved .field-name-field-image,
+body.node-type-article .node-event .field-name-field-image,
+body.node-type-article .node-blog .field-name-field-image,
+body.node-type-article .node-project .field-name-field-image,
+body.node-type-article .node-article .field-name-field-image,
+body.node-type-event .node-get-involved .field-name-field-image,
+body.node-type-event .node-event .field-name-field-image,
+body.node-type-event .node-blog .field-name-field-image,
+body.node-type-event .node-project .field-name-field-image,
+body.node-type-event .node-article .field-name-field-image,
+body.node-type-get-involved .node-get-involved .field-name-field-image,
+body.node-type-get-involved .node-event .field-name-field-image,
+body.node-type-get-involved .node-blog .field-name-field-image,
+body.node-type-get-involved .node-project .field-name-field-image,
+body.node-type-get-involved .node-article .field-name-field-image {
+  clear: none;
   float: left;
   margin-right: 20px;
   margin-bottom: 20px; }
