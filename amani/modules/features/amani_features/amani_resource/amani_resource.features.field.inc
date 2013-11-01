@@ -48,11 +48,11 @@ function amani_resource_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
+          'label' => 'above',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '1',
+          'weight' => 9,
         ),
         'ical' => array(
           'label' => 'above',
@@ -61,18 +61,15 @@ function amani_resource_field_default_fields() {
           'weight' => 0,
         ),
         'teaser' => array(
-          'label' => 'hidden',
-          'module' => 'text',
-          'settings' => array(
-            'trim_length' => 600,
-          ),
-          'type' => 'text_summary_or_trimmed',
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
           'weight' => 0,
         ),
       ),
       'entity_type' => 'node',
       'field_name' => 'body',
-      'label' => 'Summary',
+      'label' => 'Body',
       'required' => 0,
       'settings' => array(
         'display_summary' => 1,
@@ -87,7 +84,7 @@ function amani_resource_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '4',
+        'weight' => '2',
       ),
     ),
   );
@@ -261,7 +258,7 @@ function amani_resource_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '2',
+        'weight' => '3',
       ),
     ),
   );
@@ -519,7 +516,7 @@ function amani_resource_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
@@ -565,7 +562,7 @@ function amani_resource_field_default_fields() {
           'label' => 'hidden',
           'module' => 'file_entity',
           'settings' => array(
-            'file_view_mode' => 'default',
+            'file_view_mode' => 'media_gallery_block_thumbnail',
           ),
           'type' => 'file_rendered',
           'weight' => '8',
@@ -782,13 +779,13 @@ function amani_resource_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Body');
   t('Date');
   t('Lead Image');
   t('Link');
   t('Location');
   t('Media');
   t('Resource type');
-  t('Summary');
   t('Tags');
   t('Theme(s)');
 
