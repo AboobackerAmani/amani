@@ -970,7 +970,7 @@ function amani_event_field_default_fields() {
       'settings' => array(
         'description_field' => 0,
         'file_directory' => '',
-        'file_extensions' => 'jpeg png mov avi txt',
+        'file_extensions' => 'jpeg jpg png mov avi',
         'max_filesize' => '',
         'user_register_form' => FALSE,
       ),
