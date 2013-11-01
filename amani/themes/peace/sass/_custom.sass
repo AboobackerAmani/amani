@@ -314,29 +314,14 @@ a.button
       padding: 0
       box-shadow: none
 
-// News and Events
-.view-news-and-events
+// Resource,blog,news and events views
+.view-news-and-events,
+.view-news-and-events-blog,
+.view-resources
   .views-row
     overflow: hidden
     .views-field-field-image,
     .views-field-field-media
-      @include span-columns(2 of 5)
-      img
-        width: 100%
-        height: auto
-
-// Blog
-.view-news-and-events-blog
-  .views-row
-    overflow: hidden
-    .views-field-field-image,
-    .views-field-field-media
-      @include span-columns(2 of 5)
-      img
-        width: 100%
-        height: auto
-
-    .views-field-field-content-image
       @include span-columns(2 of 5)
       img
         width: 100%
@@ -350,6 +335,7 @@ a.button
     border-top: 1px solid $grey
 
 .node-article,
+.node-resource,
 .node-get-involved,
 .node-event,
 .node-blog,
