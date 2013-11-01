@@ -127,7 +127,7 @@ function amani_article_field_default_fields() {
         ),
       ),
       'deleted' => '0',
-      'description' => 'Will this node receive special emphasis by appearing on lists and blocks?',
+      'description' => 'If featured this event will appear on the front page of the website and in blocks at the bottom of the news and events page.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -428,10 +428,10 @@ function amani_article_field_default_fields() {
   t('Body');
   t('Enter a comma-separated list of words to describe your content.');
   t('Featured?');
+  t('If featured this event will appear on the front page of the website and in blocks at the bottom of the news and events page.');
   t('Lead Image');
   t('Media');
   t('Tags');
-  t('Will this node receive special emphasis by appearing on lists and blocks?');
 
   return $fields;
 }
