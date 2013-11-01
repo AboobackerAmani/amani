@@ -693,7 +693,7 @@ function amani_event_field_default_fields() {
         ),
       ),
       'deleted' => '0',
-      'description' => 'Will this event be highlighted at the top of lists?',
+      'description' => 'If featured this event will appear on the front page of the website and in blocks at the bottom of the news and events page.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -1095,10 +1095,10 @@ function amani_event_field_default_fields() {
   t('Featured?');
   t('Geolocation');
   t('Host name');
+  t('If featured this event will appear on the front page of the website and in blocks at the bottom of the news and events page.');
   t('Lead Image');
   t('Media');
   t('Tags');
-  t('Will this event be highlighted at the top of lists?');
 
   return $fields;
 }
