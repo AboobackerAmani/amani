@@ -684,7 +684,7 @@ function amani_resource_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_resource_type',
-      'label' => 'Resource type',
+      'label' => 'Resource Type',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -762,7 +762,7 @@ function amani_resource_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_theme_s_',
-      'label' => 'Theme(s)',
+      'label' => 'Resource Theme(s)',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -785,9 +785,9 @@ function amani_resource_field_default_fields() {
   t('Link');
   t('Location');
   t('Media');
-  t('Resource type');
+  t('Resource Theme(s)');
+  t('Resource Type');
   t('Tags');
-  t('Theme(s)');
 
   return $fields;
 }
