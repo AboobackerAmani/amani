@@ -523,6 +523,42 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '0',
   );
+  // Exported menu link: menu-social-media:http://google.com
+  $menu_links['menu-social-media:http://google.com'] = array(
+    'menu_name' => 'menu-social-media',
+    'link_path' => 'http://google.com',
+    'router_path' => '',
+    'link_title' => 'Rss',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '1',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '0',
+  );
+  // Exported menu link: menu-social-media:http://pinterest.com
+  $menu_links['menu-social-media:http://pinterest.com'] = array(
+    'menu_name' => 'menu-social-media',
+    'link_path' => 'http://pinterest.com',
+    'router_path' => '',
+    'link_title' => 'Pinterest',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '1',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '0',
+  );
   // Exported menu link: menu-social-media:http://twitter.com
   $menu_links['menu-social-media:http://twitter.com'] = array(
     'menu_name' => 'menu-social-media',
@@ -540,6 +576,24 @@ function amani_global_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '1',
+  );
+  // Exported menu link: menu-social-media:http://vimeo.com
+  $menu_links['menu-social-media:http://vimeo.com'] = array(
+    'menu_name' => 'menu-social-media',
+    'link_path' => 'http://vimeo.com',
+    'router_path' => '',
+    'link_title' => 'Vimeo',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '1',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '0',
   );
   // Exported menu link: menu-social-media:http://www.google.com/peacegeeks
   $menu_links['menu-social-media:http://www.google.com/peacegeeks'] = array(
@@ -617,13 +671,16 @@ function amani_global_menu_default_menu_links() {
   t('My account');
   t('News & Events');
   t('Newsletter settings');
+  t('Pinterest');
   t('Projects');
   t('RedHen admin');
   t('Resources');
+  t('Rss');
   t('Social media icons');
   t('Team');
   t('Twitter');
   t('Twitter feed settings');
+  t('Vimeo');
   t('YouTube');
   t('admin');
   t('home');

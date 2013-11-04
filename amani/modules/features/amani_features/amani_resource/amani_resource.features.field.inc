@@ -562,7 +562,7 @@ function amani_resource_field_default_fields() {
           'label' => 'hidden',
           'module' => 'file_entity',
           'settings' => array(
-            'file_view_mode' => 'media_gallery_block_thumbnail',
+            'file_view_mode' => 'default',
           ),
           'type' => 'file_rendered',
           'weight' => '8',
