@@ -151,6 +151,12 @@ function amani_global_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
+        'views-calendar_of_events-calendar' => array(
+          'module' => 'views',
+          'delta' => 'calendar_of_events-calendar',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
         'bean-front-page-second-sidebar-bottom' => array(
           'module' => 'bean',
           'delta' => 'front-page-second-sidebar-bottom',
