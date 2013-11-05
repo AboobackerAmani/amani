@@ -126,7 +126,7 @@ function amani_global_menu_default_menu_links() {
     'menu_name' => 'menu-amani-admin-menu',
     'link_path' => 'admin/structure/menu/manage/menu-amani-main-menu',
     'router_path' => 'admin/structure/menu/manage/%',
-    'link_title' => 'Amani main menu links',
+    'link_title' => 'Edit main menu links',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -383,7 +383,7 @@ function amani_global_menu_default_menu_links() {
     'menu_name' => 'menu-amani-main-menu',
     'link_path' => 'programs',
     'router_path' => 'programs',
-    'link_title' => 'Projects',
+    'link_title' => 'Programs',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -653,10 +653,10 @@ function amani_global_menu_default_menu_links() {
   // Included for use with string extractors like potx.
   t('About');
   t('Add terms');
-  t('Amani main menu links');
   t('Blog');
   t('Contact');
   t('Contact page settings');
+  t('Edit main menu links');
   t('Edit map settings');
   t('Facebook');
   t('Facebook feed settings');
@@ -672,7 +672,7 @@ function amani_global_menu_default_menu_links() {
   t('News & Events');
   t('Newsletter settings');
   t('Pinterest');
-  t('Projects');
+  t('Programs');
   t('RedHen admin');
   t('Resources');
   t('Rss');

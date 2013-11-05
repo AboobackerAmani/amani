@@ -31,7 +31,7 @@ function amani_programs_campaigns_views_api() {
 function amani_programs_campaigns_node_info() {
   $items = array(
     'project' => array(
-      'name' => t('Program/Campaign'),
+      'name' => t('Program'),
       'base' => 'node_content',
       'description' => t('A program or campaign by your organization'),
       'has_title' => '1',
