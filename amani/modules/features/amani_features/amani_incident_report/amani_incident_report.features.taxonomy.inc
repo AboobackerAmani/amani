@@ -10,7 +10,7 @@
 function amani_incident_report_taxonomy_default_vocabularies() {
   return array(
     'incident_severity' => array(
-      'name' => 'Incident severity (1-5)',
+      'name' => 'Report filter #2 (1-5)',
       'machine_name' => 'incident_severity',
       'description' => '',
       'hierarchy' => '0',
@@ -33,10 +33,10 @@ function amani_incident_report_taxonomy_default_vocabularies() {
       ),
     ),
     'report_type' => array(
-      'name' => 'Incident report type',
+      'name' => 'Report filter #1',
       'machine_name' => 'report_type',
       'description' => '',
-      'hierarchy' => '1',
+      'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '0',
       'rdf_mapping' => array(
