@@ -65,7 +65,6 @@ function amani_global_block_info() {
  * Implements hook_block_view().
  */
 function amani_global_block_view($delta = '') {
-
   switch ($delta) {
     case 'add_content_links':
       $block['content'] = amani_global_add_content_links();
@@ -73,6 +72,18 @@ function amani_global_block_view($delta = '') {
   }
 
   return $block;
+}
+
+/**
+ * Implements hook_block_view_alter().
+ */
+function amani_global_block_view_alter(&$data, $block) {
+  switch ($block->delta) {
+    case 'form':
+      $data['content']['search_block_form']['#attributes']['placeholder'] = t('Search');
+      break;
+
+  }
 }
 
 /**
