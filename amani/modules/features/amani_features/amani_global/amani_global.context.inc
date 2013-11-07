@@ -196,35 +196,35 @@ function amani_global_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'locale-language' => array(
-          'module' => 'locale',
-          'delta' => 'language',
+        'search-form' => array(
+          'module' => 'search',
+          'delta' => 'form',
           'region' => 'header',
-          'weight' => '-37',
+          'weight' => '-41',
         ),
         'menu-menu-meta' => array(
           'module' => 'menu',
           'delta' => 'menu-meta',
           'region' => 'header',
-          'weight' => '-36',
+          'weight' => '-40',
         ),
-        'search-form' => array(
-          'module' => 'search',
-          'delta' => 'form',
+        'locale-language' => array(
+          'module' => 'locale',
+          'delta' => 'language',
           'region' => 'header',
-          'weight' => '-35',
+          'weight' => '-39',
         ),
         'menu-menu-social-media' => array(
           'module' => 'menu',
           'delta' => 'menu-social-media',
           'region' => 'header',
-          'weight' => '-34',
+          'weight' => '-38',
         ),
         'superfish-1' => array(
           'module' => 'superfish',
           'delta' => '1',
-          'region' => 'header',
-          'weight' => '-33',
+          'region' => 'navigation_region',
+          'weight' => '-10',
         ),
       ),
     ),

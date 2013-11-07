@@ -177,13 +177,10 @@ a {
     text-decoration: none; }
 
 #name-and-slogan {
-  width: 36% !important;
-  display: block;
   float: left;
-  margin-right: 2.12766%;
-  width: 23.40426%; }
-  #name-and-slogan:last-child {
-    margin-right: 0; }
+  display: block;
+  margin-right: 30px;
+  margin-top: 30px; }
   @media screen and (max-width: 600px) {
     #name-and-slogan {
       width: 100% !important;
@@ -191,17 +188,24 @@ a {
       float: left; }
       #name-and-slogan #site-logo {
         display: block; } }
-  #name-and-slogan .site-slogan {
-    margin-left: 10px;
-    display: inline-block;
-    font-style: oblique;
-    font-size: 14px;
-    color: #999999;
-    font-family: Georgia;
-    text-align: left;
-    width: 170px; }
   #name-and-slogan a {
     display: inline-block; }
+
+.site-slogan {
+  display: inline-block;
+  font-style: oblique;
+  font-size: 14px;
+  color: #999999;
+  font-family: Georgia;
+  text-align: left;
+  width: 170px;
+  margin-top: 70px;
+  margin-bottom: 7.5px; }
+  @media screen and (max-width: 600px) {
+    .site-slogan {
+      margin-top: 0;
+      width: 100%;
+      text-align: center; } }
 
 #site-name {
   display: none; }
@@ -214,6 +218,9 @@ a {
       margin-bottom: 45px; } }
   #header .container-inner {
     position: relative; }
+    @media screen and (max-width: 600px) {
+      #header .container-inner {
+        padding: 30px 0; } }
 
 @media screen and (max-width: 600px) {
   #page {
@@ -393,54 +400,72 @@ a.button {
     width: 100%;
     height: auto; }
 
-#header-region #navigation, #header-region
-#block-superfish-superfish_1, #header-region
-#block-superfish-1, #header-region
-#block-menu-menu-amani-main-menu {
-  position: absolute;
-  bottom: 15px; }
-  #header-region #navigation .content, #header-region
-  #block-superfish-superfish_1 .content, #header-region
-  #block-superfish-1 .content, #header-region
-  #block-menu-menu-amani-main-menu .content {
-    font-size: 16px; }
-    #header-region #navigation .content li, #header-region
-    #block-superfish-superfish_1 .content li, #header-region
-    #block-superfish-1 .content li, #header-region
-    #block-menu-menu-amani-main-menu .content li {
-      margin-right: 7.5px;
-      background: url("../images/icons/bullet.png") 100% 50% no-repeat;
-      padding-right: 15px;
-      padding-left: 0;
-      margin-left: 0;
-      display: inline-block;
-      padding-top: 0; }
-      #header-region #navigation .content li:last-child, #header-region
-      #block-superfish-superfish_1 .content li:last-child, #header-region
-      #block-superfish-1 .content li:last-child, #header-region
-      #block-menu-menu-amani-main-menu .content li:last-child {
-        background: none;
-        padding-right: 0;
-        margin-right: 0; }
-      #header-region #navigation .content li a:link, #header-region #navigation .content li a:visited, #header-region #navigation .content li a.active, #header-region
-      #block-superfish-superfish_1 .content li a:link, #header-region
-      #block-superfish-superfish_1 .content li a:visited, #header-region
-      #block-superfish-superfish_1 .content li a.active, #header-region
-      #block-superfish-1 .content li a:link, #header-region
-      #block-superfish-1 .content li a:visited, #header-region
-      #block-superfish-1 .content li a.active, #header-region
-      #block-menu-menu-amani-main-menu .content li a:link, #header-region
-      #block-menu-menu-amani-main-menu .content li a:visited, #header-region
-      #block-menu-menu-amani-main-menu .content li a.active {
-        color: #ee8f1c; }
-      #header-region #navigation .content li a:hover, #header-region #navigation .content li a:active, #header-region
-      #block-superfish-superfish_1 .content li a:hover, #header-region
-      #block-superfish-superfish_1 .content li a:active, #header-region
-      #block-superfish-1 .content li a:hover, #header-region
-      #block-superfish-1 .content li a:active, #header-region
-      #block-menu-menu-amani-main-menu .content li a:hover, #header-region
-      #block-menu-menu-amani-main-menu .content li a:active {
-        color: #f2a64b; }
+#header-region #navigation .content, #navigation #navigation .content, #header-region
+#block-superfish-superfish_1 .content, #navigation
+#block-superfish-superfish_1 .content, #header-region
+#block-superfish-1 .content, #navigation
+#block-superfish-1 .content, #header-region
+#block-menu-menu-amani-main-menu .content, #navigation
+#block-menu-menu-amani-main-menu .content {
+  font-size: 16px; }
+  #header-region #navigation .content li, #navigation #navigation .content li, #header-region
+  #block-superfish-superfish_1 .content li, #navigation
+  #block-superfish-superfish_1 .content li, #header-region
+  #block-superfish-1 .content li, #navigation
+  #block-superfish-1 .content li, #header-region
+  #block-menu-menu-amani-main-menu .content li, #navigation
+  #block-menu-menu-amani-main-menu .content li {
+    margin-right: 7.5px;
+    background: url("../images/icons/bullet.png") 100% 50% no-repeat;
+    padding-right: 15px;
+    padding-left: 0;
+    margin-left: 0;
+    display: inline-block;
+    padding-top: 0; }
+    #header-region #navigation .content li:last-child, #navigation #navigation .content li:last-child, #header-region
+    #block-superfish-superfish_1 .content li:last-child, #navigation
+    #block-superfish-superfish_1 .content li:last-child, #header-region
+    #block-superfish-1 .content li:last-child, #navigation
+    #block-superfish-1 .content li:last-child, #header-region
+    #block-menu-menu-amani-main-menu .content li:last-child, #navigation
+    #block-menu-menu-amani-main-menu .content li:last-child {
+      background: none;
+      padding-right: 0;
+      margin-right: 0; }
+    #header-region #navigation .content li a:link, #header-region #navigation .content li a:visited, #header-region #navigation .content li a.active, #navigation #navigation .content li a:link, #navigation #navigation .content li a:visited, #navigation #navigation .content li a.active, #header-region
+    #block-superfish-superfish_1 .content li a:link, #header-region
+    #block-superfish-superfish_1 .content li a:visited, #header-region
+    #block-superfish-superfish_1 .content li a.active, #navigation
+    #block-superfish-superfish_1 .content li a:link, #navigation
+    #block-superfish-superfish_1 .content li a:visited, #navigation
+    #block-superfish-superfish_1 .content li a.active, #header-region
+    #block-superfish-1 .content li a:link, #header-region
+    #block-superfish-1 .content li a:visited, #header-region
+    #block-superfish-1 .content li a.active, #navigation
+    #block-superfish-1 .content li a:link, #navigation
+    #block-superfish-1 .content li a:visited, #navigation
+    #block-superfish-1 .content li a.active, #header-region
+    #block-menu-menu-amani-main-menu .content li a:link, #header-region
+    #block-menu-menu-amani-main-menu .content li a:visited, #header-region
+    #block-menu-menu-amani-main-menu .content li a.active, #navigation
+    #block-menu-menu-amani-main-menu .content li a:link, #navigation
+    #block-menu-menu-amani-main-menu .content li a:visited, #navigation
+    #block-menu-menu-amani-main-menu .content li a.active {
+      color: #ee8f1c; }
+    #header-region #navigation .content li a:hover, #header-region #navigation .content li a:active, #navigation #navigation .content li a:hover, #navigation #navigation .content li a:active, #header-region
+    #block-superfish-superfish_1 .content li a:hover, #header-region
+    #block-superfish-superfish_1 .content li a:active, #navigation
+    #block-superfish-superfish_1 .content li a:hover, #navigation
+    #block-superfish-superfish_1 .content li a:active, #header-region
+    #block-superfish-1 .content li a:hover, #header-region
+    #block-superfish-1 .content li a:active, #navigation
+    #block-superfish-1 .content li a:hover, #navigation
+    #block-superfish-1 .content li a:active, #header-region
+    #block-menu-menu-amani-main-menu .content li a:hover, #header-region
+    #block-menu-menu-amani-main-menu .content li a:active, #navigation
+    #block-menu-menu-amani-main-menu .content li a:hover, #navigation
+    #block-menu-menu-amani-main-menu .content li a:active {
+      color: #f2a64b; }
 
 .mobile-menu-link {
   display: none;
@@ -454,44 +479,56 @@ a.button {
       border-bottom: 1px solid #cccccc;
       text-transform: uppercase; } }
 
-#header-region #block-superfish-1 {
+#header-region .container-inner,
+#navigation .container-inner {
+  padding: 0; }
+#header-region #block-superfish-1,
+#navigation #block-superfish-1 {
   display: block !important; }
   @media screen and (min-width: 600px) {
-    #header-region #block-superfish-1 #superfish-1 {
+    #header-region #block-superfish-1 #superfish-1,
+    #navigation #block-superfish-1 #superfish-1 {
       display: block !important; } }
   @media screen and (max-width: 600px) {
-    #header-region #block-superfish-1 {
+    #header-region #block-superfish-1,
+    #navigation #block-superfish-1 {
       position: absolute;
-      top: 158px;
+      top: 30px;
       display: block !important;
       left: 0;
       background: white;
       z-index: 9999;
       width: 100%; }
-      #header-region #block-superfish-1.fixed {
+      #header-region #block-superfish-1.fixed,
+      #navigation #block-superfish-1.fixed {
         position: fixed;
         top: 0;
         height: 50px; }
-      #header-region #block-superfish-1 #superfish-1 {
+      #header-region #block-superfish-1 #superfish-1,
+      #navigation #block-superfish-1 #superfish-1 {
         background: white;
         display: none;
         box-shadow: 0 10px 10px #999999; }
-        #header-region #block-superfish-1 #superfish-1 li {
+        #header-region #block-superfish-1 #superfish-1 li,
+        #navigation #block-superfish-1 #superfish-1 li {
           display: block;
           text-align: center;
           float: none;
           padding: 15px 0;
           margin: 0;
           background: none; }
-          #header-region #block-superfish-1 #superfish-1 li.last {
+          #header-region #block-superfish-1 #superfish-1 li.last,
+          #navigation #block-superfish-1 #superfish-1 li.last {
             margin-bottom: 15px; }
-          #header-region #block-superfish-1 #superfish-1 li a {
+          #header-region #block-superfish-1 #superfish-1 li a,
+          #navigation #block-superfish-1 #superfish-1 li a {
             border-bottom: 1px solid #ee8f1c;
             display: inline;
             padding: 10px 0;
             color: #333333; } }
         @media screen and (max-width: 600px) and (max-width: 600px) {
-          #header-region #block-superfish-1 #superfish-1 li ul {
+          #header-region #block-superfish-1 #superfish-1 li ul,
+          #navigation #block-superfish-1 #superfish-1 li ul {
             width: 100% !important; } }
 
 #sidebar-second .block {
@@ -697,7 +734,7 @@ a.button {
       #footer #block-search-form {
         width: 100%;
         margin-right: 0;
-        margin-bottom: 30px; } }
+        margin-bottom: 10px; } }
 
 .ui-accordion .ui-accordion-header {
   margin-top: 5px; }
@@ -762,21 +799,20 @@ a.button {
   font-style: italic; }
 
 #block-locale-language {
-  display: block;
-  float: left;
-  margin-right: 2.85714%;
-  width: 22.85714%;
-  margin-left: 40%;
-  margin-bottom: 7.5px; }
-  #block-locale-language:last-child {
-    margin-right: 0; }
+  float: right;
+  display: inline-block; }
   #block-locale-language ul.language-switcher-locale-url {
     text-align: right; }
     #block-locale-language ul.language-switcher-locale-url li {
       list-style-type: none;
       display: inline-block;
       margin-left: 11px;
-      font-size: 16px; }
+      font-size: 16px;
+      padding-right: 10px;
+      border-right: 1px solid #cccccc; }
+      #block-locale-language ul.language-switcher-locale-url li:last-child {
+        border-right: 0;
+        margin-right: 15px; }
 
 .sidebar #block-menu-menu-learn-more {
   background: none;
@@ -1009,7 +1045,8 @@ a.button {
   float: left;
   margin-right: 2.12766%;
   width: 31.91489%;
-  margin-right: 0; }
+  margin-right: 0;
+  margin-bottom: 7.5px; }
   #block-search-form:last-child {
     margin-right: 0; }
   #header-region #block-search-form {
@@ -1032,8 +1069,8 @@ a.button {
     -webkit-border-top-right-radius: 5px;
     -webkit-border-bottom-left-radius: 5px;
     -webkit-border-bottom-right-radius: 5px;
-    font-size: 18px;
-    padding: 7.5px; }
+    font-size: 16px;
+    padding: 6px; }
     #block-search-form .form-text::-webkit-input-placeholder {
       font-style: italic; }
     #block-search-form .form-text:-moz-placeholder {
@@ -1089,14 +1126,10 @@ a.button {
     height: auto; }
 
 #header-region #block-menu-menu-meta {
-  display: block;
-  float: left;
-  margin-right: 2.85714%;
-  width: 34.28571%;
+  float: right;
+  display: inline-block;
   margin-right: 0;
   margin-bottom: 7.5px; }
-  #header-region #block-menu-menu-meta:last-child {
-    margin-right: 0; }
   #header-region #block-menu-menu-meta .content {
     font-size: 16px; }
     #header-region #block-menu-menu-meta .content ul {
@@ -1158,8 +1191,8 @@ a.button {
   margin-left: 68.08511%;
   margin-right: 0;
   position: absolute;
-  right: 290px;
-  top: 28px; }
+  right: 190px;
+  top: 36px; }
   #header-region #block-menu-menu-social-media:last-child {
     margin-right: 0; }
   #header-region #block-menu-menu-social-media .content {

@@ -17,9 +17,8 @@
 
 // Locale block
 #block-locale-language
-  @include span-columns(2.25 of 9)
-  @include shift(3.5)
-  margin-bottom: $margin/4
+  float: right
+  display: inline-block
   ul.language-switcher-locale-url
     text-align: right
     li
@@ -27,6 +26,11 @@
       display: inline-block
       margin-left: 11px
       font-size: 16px
+      padding-right: $padding/3
+      border-right: 1px solid #ccc
+      &:last-child
+        border-right: 0
+        margin-right: $margin/2
 
 // Learn more block
 .sidebar
@@ -270,6 +274,7 @@
   position: relative
   @include span-columns(4)
   @include omega
+  margin-bottom: $margin/4
   #header-region &
     @include shift(8)
   .form-submit
@@ -285,9 +290,9 @@
   .form-text
     width: 100%
     @include border-radius(5px)
-    font-size: 18px
-    padding: $padding/4
-    @include placeholder 
+    font-size: 16px
+    padding: $padding/5
+    @include placeholder
       font-style: italic
 
 #block-views-front_page_slideshow-block
@@ -340,8 +345,8 @@
 // meta menu
 #block-menu-menu-meta
   #header-region &
-    @include span-columns(3.25 of 9)
-    //@include shift(8)
+    float: right
+    display: inline-block
     @include omega
     margin-bottom: $margin/4
     .content
@@ -398,8 +403,8 @@
     @include shift(8)
     @include omega
     position: absolute
-    right: 290px
-    top: 28px
+    right: 190px
+    top: 36px
     .content
       font-size: 16px
       li

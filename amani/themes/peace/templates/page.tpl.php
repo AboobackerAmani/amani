@@ -14,9 +14,6 @@
               <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a>
             </div>
           <?php endif; ?>
-          <?php if ($site_slogan): ?>
-            <div class="site-slogan"><?php print $site_slogan; ?></div>
-          <?php endif; ?>
 
         </hgroup>
       <?php endif; ?>
@@ -27,6 +24,10 @@
         </div>
       <?php endif; ?>
 
+
+      <?php if ($site_slogan): ?>
+        <div class="site-slogan"><?php print $site_slogan; ?></div>
+      <?php endif; ?>
 
       <?php if ($page['navigation_region']): ?>
         <nav id="navigation" class="container menu <?php if (!empty($main_menu)) {print "with-primary";}
