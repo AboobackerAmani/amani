@@ -63,6 +63,10 @@
       background: #fff
       box-shadow: 2px 3px 4px #C8C8C8
       padding: $padding
+      @include breakpoint($motab)
+        @include omega(1n)
+        margin: $margin/2 0
+        @include fill-parent
       .views-field-title
         font-family: "bariol_regularregular"
         font-weight: normal
@@ -73,7 +77,7 @@
       .views-field-field-media
         @include fill-parent
   #block-views-calendar_of_events-calendar
-    @include media($mobile) 
+    @include media($mobile)
       .pager
         padding: 0px
       .date-nav 

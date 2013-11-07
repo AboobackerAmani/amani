@@ -1253,6 +1253,12 @@ a.button {
     margin-right: 0; }
   .page-news-and-events #block-views-news_and_events-block .views-row:nth-child(4n) {
     margin-right: 0; }
+  @media screen and (max-width: 600px) {
+    .page-news-and-events #block-views-news_and_events-block .views-row {
+      margin: 15px 0;
+      width: 100%; }
+      .page-news-and-events #block-views-news_and_events-block .views-row:nth-child(1n) {
+        margin-right: 0; } }
   .page-news-and-events #block-views-news_and_events-block .views-row .views-field-title {
     font-family: "bariol_regularregular";
     font-weight: normal;
