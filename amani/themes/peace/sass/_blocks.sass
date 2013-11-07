@@ -1,5 +1,25 @@
 // _blocks.sass
 
+// Donation region
+.region-donation-region
+  position: fixed
+  right: 0
+  top: $gutter*4
+  h2.block-title
+    display: none
+  ul.menu
+    li
+      list-style-type: none
+      list-style-image: none
+      a
+        background: $orange
+        padding: $padding/1.5
+        color: #fff
+        font-size: 18px
+        box-shadow: 3px 3px 8px #999
+        @include transition(padding 0.4s ease)
+        &:hover
+          padding-right: $padding*1.2
 
 // Footer _blocks
 #block-bean-amani-powered-by

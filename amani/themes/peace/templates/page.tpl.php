@@ -37,6 +37,10 @@
           </div>
         </nav> <!-- /navigation -->
       <?php endif; ?>
+
+      <?php if ($page['donation_region']): ?>
+        <?php print render($page['donation_region']); ?>
+      <?php endif; ?>
     </div>
   </header> <!-- /header -->
 

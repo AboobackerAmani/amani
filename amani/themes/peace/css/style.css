@@ -784,6 +784,29 @@ a.button {
   margin-top: 0;
   padding-top: 0; }
 
+.region-donation-region {
+  position: fixed;
+  right: 0;
+  top: 120px; }
+  .region-donation-region h2.block-title {
+    display: none; }
+  .region-donation-region ul.menu li {
+    list-style-type: none;
+    list-style-image: none; }
+    .region-donation-region ul.menu li a {
+      background: #ee8f1c;
+      padding: 20px;
+      color: white;
+      font-size: 18px;
+      box-shadow: 3px 3px 8px #999999;
+      -webkit-transition: padding 0.4s ease;
+      -moz-transition: padding 0.4s ease;
+      -ms-transition: padding 0.4s ease;
+      -o-transition: padding 0.4s ease;
+      transition: padding 0.4s ease; }
+      .region-donation-region ul.menu li a:hover {
+        padding-right: 36px; }
+
 #block-bean-amani-powered-by {
   border-right: 1px solid white; }
 

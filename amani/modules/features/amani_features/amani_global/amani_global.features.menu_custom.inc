@@ -22,6 +22,12 @@ function amani_global_menu_default_menu_custom() {
     'title' => 'Amani main menu',
     'description' => 'The main menu for Amani - displayed in the header and the footer',
   );
+  // Exported menu: menu-donate.
+  $menus['menu-donate'] = array(
+    'menu_name' => 'menu-donate',
+    'title' => 'Donate',
+    'description' => 'Donation fly-out. sitewide.',
+  );
   // Exported menu: menu-meta.
   $menus['menu-meta'] = array(
     'menu_name' => 'menu-meta',
@@ -38,6 +44,8 @@ function amani_global_menu_default_menu_custom() {
   // Included for use with string extractors like potx.
   t('Amani admin menu');
   t('Amani main menu');
+  t('Donate');
+  t('Donation fly-out. sitewide.');
   t('Social media');
   t('Social media widgets for the header');
   t('The main menu for Amani - displayed in the header and the footer');
