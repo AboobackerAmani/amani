@@ -32,18 +32,6 @@ function amani_about_context_default_contexts() {
           'region' => 'home_content_top_rotator',
           'weight' => '-10',
         ),
-        'bean-donate' => array(
-          'module' => 'bean',
-          'delta' => 'donate',
-          'region' => 'home_content_top_callout_right',
-          'weight' => '-8',
-        ),
-        'bean-become-a-pilot-project' => array(
-          'module' => 'bean',
-          'delta' => 'become-a-pilot-project',
-          'region' => 'home_content_top_callout_right',
-          'weight' => '-7',
-        ),
       ),
     ),
   );
