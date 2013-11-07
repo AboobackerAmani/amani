@@ -948,6 +948,23 @@ a.button {
   background: none;
   padding: 0;
   box-shadow: 0 0 0; }
+  .sidebar #block-views-calendar_of_events-list .pager,
+  .sidebar #block-views-calendar_of_events-calendar .pager {
+    margin-top: 15px;
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-bottom: 0; }
+    .sidebar #block-views-calendar_of_events-list .pager .date-next,
+    .sidebar #block-views-calendar_of_events-list .pager .date-prev,
+    .sidebar #block-views-calendar_of_events-calendar .pager .date-next,
+    .sidebar #block-views-calendar_of_events-calendar .pager .date-prev {
+      display: block;
+      height: 30px;
+      width: 30px; }
+    .sidebar #block-views-calendar_of_events-list .pager .date-next a,
+    .sidebar #block-views-calendar_of_events-calendar .pager .date-next a {
+      margin-top: -20px;
+      display: block; }
   .sidebar #block-views-calendar_of_events-list h2.block-title,
   .sidebar #block-views-calendar_of_events-calendar h2.block-title {
     border-color: #cccccc; }
