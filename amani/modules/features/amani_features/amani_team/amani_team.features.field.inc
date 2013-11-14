@@ -769,7 +769,7 @@ Prof.',
       ),
       'entity_type' => 'node',
       'field_name' => 'field_team_title',
-      'label' => 'Title',
+      'label' => 'Position',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
@@ -797,7 +797,7 @@ Prof.',
   t('Phone');
   t('Photo');
   t('Please choose an order that you would like this team member displayed. 1 is first.');
-  t('Title');
+  t('Position');
 
   return $fields;
 }
