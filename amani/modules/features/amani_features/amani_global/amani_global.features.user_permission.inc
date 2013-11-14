@@ -179,6 +179,7 @@ function amani_global_user_default_permissions() {
     'name' => 'administer bean settings',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'bean',
   );
@@ -197,6 +198,7 @@ function amani_global_user_default_permissions() {
     'name' => 'administer beans',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'bean',
   );
@@ -206,6 +208,7 @@ function amani_global_user_default_permissions() {
     'name' => 'administer blocks',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'block',
   );
@@ -414,6 +417,16 @@ function amani_global_user_default_permissions() {
     'module' => 'search',
   );
 
+  // Exported permission: administer site configuration.
+  $permissions['administer site configuration'] = array(
+    'name' => 'administer site configuration',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'system',
+  );
+
   // Exported permission: administer site settings.
   $permissions['administer site settings'] = array(
     'name' => 'administer site settings',
@@ -500,6 +513,7 @@ function amani_global_user_default_permissions() {
     'name' => 'create any static_content bean',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'bean',
   );
@@ -781,6 +795,7 @@ function amani_global_user_default_permissions() {
     'name' => 'edit any static_content bean',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'bean',
   );
@@ -790,6 +805,7 @@ function amani_global_user_default_permissions() {
     'name' => 'edit any summaries_block bean',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'bean',
   );
@@ -1163,6 +1179,7 @@ function amani_global_user_default_permissions() {
     'name' => 'view bean revisions',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'bean',
   );
