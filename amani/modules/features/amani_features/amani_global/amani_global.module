@@ -134,7 +134,7 @@ function amani_site_information_settings($form, &$form_state, $key = 'peace') {
     '#type' => 'textfield',
     '#title' => t('Tagline'),
     '#default_value' => variable_get('site_slogan', ''),
-    '#description' => t("This text will be displayed under the logo."),
+    '#description' => t("This text will be displayed beside the logo."),
   );
   $form['site_information']['site_mail'] = array(
     '#type' => 'textfield',
