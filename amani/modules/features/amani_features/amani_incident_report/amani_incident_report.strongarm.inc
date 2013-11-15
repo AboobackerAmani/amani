@@ -89,6 +89,9 @@ function amani_incident_report_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'media_gallery_block' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

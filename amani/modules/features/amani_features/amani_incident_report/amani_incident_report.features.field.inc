@@ -113,7 +113,7 @@ function amani_incident_report_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '6',
+          'weight' => '8',
         ),
         'ical' => array(
           'label' => 'above',
@@ -185,7 +185,7 @@ function amani_incident_report_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '12',
+          'weight' => '10',
         ),
         'ical' => array(
           'label' => 'above',
@@ -385,7 +385,7 @@ function amani_incident_report_field_default_fields() {
             'map_preset' => 'geofield_formatter_map',
           ),
           'type' => 'geofield_openlayers',
-          'weight' => '5',
+          'weight' => '6',
         ),
         'ical' => array(
           'label' => 'above',
@@ -480,13 +480,13 @@ function amani_incident_report_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
+          'label' => 'above',
           'module' => 'file_entity',
           'settings' => array(
             'file_view_mode' => 'default',
           ),
           'type' => 'file_rendered',
-          'weight' => '9',
+          'weight' => '5',
         ),
         'ical' => array(
           'label' => 'above',
@@ -746,7 +746,7 @@ function amani_incident_report_field_default_fields() {
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => '8',
+          'weight' => '4',
         ),
         'ical' => array(
           'label' => 'above',
@@ -905,7 +905,7 @@ Prof.',
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '4',
+          'weight' => '7',
         ),
         'ical' => array(
           'label' => 'above',
@@ -1015,7 +1015,7 @@ Prof.',
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '11',
+          'weight' => '9',
         ),
         'ical' => array(
           'label' => 'above',
