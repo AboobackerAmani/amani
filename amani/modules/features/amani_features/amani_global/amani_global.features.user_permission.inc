@@ -1088,6 +1088,7 @@ function amani_global_user_default_permissions() {
     'name' => 'use text format php_code',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'filter',
   );
