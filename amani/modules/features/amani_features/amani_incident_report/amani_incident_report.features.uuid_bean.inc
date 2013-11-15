@@ -22,9 +22,10 @@ function amani_incident_report_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => '1374820482',
     'log' => '',
-    'uid' => '22',
+    'uid' => '0',
     'default_revision' => '1',
     'revisions' => array(),
+    'vuuid' => '9815aaf6-5adb-4781-a8a4-06467ae21f5b',
     'uuid' => 'f2b3f616-05ba-41f2-b726-b095f7d8da04',
     'field_bean_body' => array(
       'und' => array(

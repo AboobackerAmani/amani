@@ -22,9 +22,10 @@ function amani_about_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => '1374819466',
     'log' => '',
-    'uid' => '22',
+    'uid' => '0',
     'default_revision' => '1',
     'revisions' => array(),
+    'vuuid' => 'a10be71c-d8f3-48fa-821e-bbc8af91d057',
     'uuid' => '82e67cd3-daf1-48b3-b352-eab33699f5b3',
     'field_bean_body' => array(
       'und' => array(
@@ -48,9 +49,10 @@ function amani_about_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => '1374819541',
     'log' => '',
-    'uid' => '22',
+    'uid' => '0',
     'default_revision' => '1',
     'revisions' => array(),
+    'vuuid' => '054bc504-c75f-433c-8f80-481bbf213f39',
     'uuid' => 'e20f355f-afc3-4ece-a87b-65372e44faf1',
     'field_bean_body' => array(
       'und' => array(
