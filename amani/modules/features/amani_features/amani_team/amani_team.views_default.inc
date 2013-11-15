@@ -76,7 +76,7 @@ function amani_team_views_default_views() {
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Read more';
-  /* Field: Content: Contact type */
+  /* Field: Content: Team contact type */
   $handler->display->display_options['fields']['field_team_contact_type']['id'] = 'field_team_contact_type';
   $handler->display->display_options['fields']['field_team_contact_type']['table'] = 'field_data_field_team_contact_type';
   $handler->display->display_options['fields']['field_team_contact_type']['field'] = 'field_team_contact_type';
@@ -106,7 +106,7 @@ function amani_team_views_default_views() {
     'team' => 'team',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Contact type (field_team_contact_type) */
+  /* Filter criterion: Content: Team contact type (field_team_contact_type) */
   $handler->display->display_options['filters']['field_team_contact_type_value']['id'] = 'field_team_contact_type_value';
   $handler->display->display_options['filters']['field_team_contact_type_value']['table'] = 'field_data_field_team_contact_type';
   $handler->display->display_options['filters']['field_team_contact_type_value']['field'] = 'field_team_contact_type_value';

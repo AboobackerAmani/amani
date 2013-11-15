@@ -591,7 +591,7 @@ Prof.',
       ),
       'entity_type' => 'node',
       'field_name' => 'field_team_contact_type',
-      'label' => 'Contact type',
+      'label' => 'Team contact type',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -790,7 +790,6 @@ Prof.',
   // Translatables
   // Included for use with string extractors like potx.
   t('Bio');
-  t('Contact type');
   t('Display Ranking');
   t('Email');
   t('Name');
@@ -798,6 +797,7 @@ Prof.',
   t('Photo');
   t('Please choose an order that you would like this team member displayed. 1 is first.');
   t('Position');
+  t('Team contact type');
 
   return $fields;
 }
