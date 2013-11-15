@@ -462,6 +462,7 @@ function amani_global_user_default_permissions() {
     'name' => 'administer users',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'user',
   );
@@ -473,6 +474,45 @@ function amani_global_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'video_embed_field',
+  );
+
+  // Exported permission: assign all roles.
+  $permissions['assign all roles'] = array(
+    'name' => 'assign all roles',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'role_delegation',
+  );
+
+  // Exported permission: assign amani administrator role.
+  $permissions['assign amani administrator role'] = array(
+    'name' => 'assign amani administrator role',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'role_delegation',
+  );
+
+  // Exported permission: assign contributor role.
+  $permissions['assign contributor role'] = array(
+    'name' => 'assign contributor role',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'role_delegation',
+  );
+
+  // Exported permission: assign editor role.
+  $permissions['assign editor role'] = array(
+    'name' => 'assign editor role',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'role_delegation',
   );
 
   // Exported permission: bypass file access.
