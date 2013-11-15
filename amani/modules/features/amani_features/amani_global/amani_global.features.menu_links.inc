@@ -82,6 +82,24 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-47',
   );
+  // Exported menu link: menu-amani-admin-menu:admin/people/create
+  $menu_links['menu-amani-admin-menu:admin/people/create'] = array(
+    'menu_name' => 'menu-amani-admin-menu',
+    'link_path' => 'admin/people/create',
+    'router_path' => 'admin/people/create',
+    'link_title' => 'Create users',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-38',
+  );
   // Exported menu link: menu-amani-admin-menu:admin/structure/block/manage/fb_likebox/0/configure
   $menu_links['menu-amani-admin-menu:admin/structure/block/manage/fb_likebox/0/configure'] = array(
     'menu_name' => 'menu-amani-admin-menu',
@@ -656,6 +674,7 @@ function amani_global_menu_default_menu_links() {
   t('Blog');
   t('Contact');
   t('Contact page settings');
+  t('Create users');
   t('Edit main menu links');
   t('Edit map settings');
   t('Facebook');
