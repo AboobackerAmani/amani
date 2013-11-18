@@ -587,7 +587,7 @@ function amani_resource_field_default_fields() {
       'settings' => array(
         'description_field' => 0,
         'file_directory' => 'resource-field_media',
-        'file_extensions' => 'avi mov txt pdf doc docx xls ods odt ppt',
+        'file_extensions' => 'avi mov txt pdf doc docx xls ods odt ppt gif jpeg jpg png',
         'max_filesize' => '',
         'user_register_form' => FALSE,
       ),

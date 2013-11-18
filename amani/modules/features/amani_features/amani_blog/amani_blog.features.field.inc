@@ -250,7 +250,7 @@ function amani_blog_field_default_fields() {
       'settings' => array(
         'description_field' => 0,
         'file_directory' => '',
-        'file_extensions' => 'jpeg jpg png mov avi',
+        'file_extensions' => 'jpeg jpg png mov avi gif pdf',
         'max_filesize' => '',
         'user_register_form' => FALSE,
       ),

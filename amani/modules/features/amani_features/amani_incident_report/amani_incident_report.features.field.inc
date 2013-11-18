@@ -514,7 +514,7 @@ function amani_incident_report_field_default_fields() {
       'settings' => array(
         'description_field' => 0,
         'file_directory' => 'incident-media',
-        'file_extensions' => 'jpeg jpg png mov avi',
+        'file_extensions' => 'jpeg jpg png mov avi gif pdf',
         'max_filesize' => '',
         'user_register_form' => FALSE,
       ),
