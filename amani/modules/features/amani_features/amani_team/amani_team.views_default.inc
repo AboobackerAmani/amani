@@ -48,9 +48,9 @@ function amani_team_views_default_views() {
   $handler->display->display_options['fields']['field_team_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_team_image']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_team_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_team_image']['type'] = 'file_rendered';
   $handler->display->display_options['fields']['field_team_image']['settings'] = array(
-    'image_style' => 'medium',
-    'image_link' => '',
+    'file_view_mode' => 'default',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -76,14 +76,14 @@ function amani_team_views_default_views() {
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Read more';
-  /* Field: Content: Contact type */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_team_contact_type']['id'] = 'field_team_contact_type';
   $handler->display->display_options['fields']['field_team_contact_type']['table'] = 'field_data_field_team_contact_type';
   $handler->display->display_options['fields']['field_team_contact_type']['field'] = 'field_team_contact_type';
   $handler->display->display_options['fields']['field_team_contact_type']['label'] = '';
   $handler->display->display_options['fields']['field_team_contact_type']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_team_contact_type']['element_label_colon'] = FALSE;
-  /* Sort criterion: Content: Display Ranking (field_display_ranking) */
+  /* Sort criterion: Content: Display ranking (field_display_ranking) */
   $handler->display->display_options['sorts']['field_display_ranking_value']['id'] = 'field_display_ranking_value';
   $handler->display->display_options['sorts']['field_display_ranking_value']['table'] = 'field_data_field_display_ranking';
   $handler->display->display_options['sorts']['field_display_ranking_value']['field'] = 'field_display_ranking_value';
@@ -106,7 +106,7 @@ function amani_team_views_default_views() {
     'team' => 'team',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Contact type (field_team_contact_type) */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['field_team_contact_type_value']['id'] = 'field_team_contact_type_value';
   $handler->display->display_options['filters']['field_team_contact_type_value']['table'] = 'field_data_field_team_contact_type';
   $handler->display->display_options['filters']['field_team_contact_type_value']['field'] = 'field_team_contact_type_value';

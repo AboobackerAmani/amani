@@ -33,7 +33,7 @@ function amani_resource_taxonomy_default_vocabularies() {
       ),
     ),
     'theme' => array(
-      'name' => 'Theme',
+      'name' => 'Resource Theme',
       'machine_name' => 'theme',
       'description' => 'The theme of resources or programs',
       'hierarchy' => '0',

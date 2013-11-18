@@ -81,7 +81,7 @@ function amani_team_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_display_ranking',
-      'label' => 'Display Ranking',
+      'label' => 'Display ranking',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -530,82 +530,6 @@ Prof.',
     ),
   );
 
-  // Exported field: 'node-team-field_team_contact_type'.
-  $fields['node-team-field_team_contact_type'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_team_contact_type',
-      'foreign keys' => array(),
-      'indexes' => array(
-        'value' => array(
-          0 => 'value',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'list',
-      'settings' => array(
-        'allowed_values' => array(
-          'Core Team' => 'Core Team',
-          'Board of Directors' => 'Board of Directors',
-          'Support Team' => 'Support Team',
-        ),
-        'allowed_values_function' => '',
-        'profile2_private' => FALSE,
-      ),
-      'translatable' => '0',
-      'type' => 'list_text',
-    ),
-    'field_instance' => array(
-      'bundle' => 'team',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '6',
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'node_gallery_node_thumbnail' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_team_contact_type',
-      'label' => 'Contact type',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '7',
-      ),
-    ),
-  );
-
   // Exported field: 'node-team-field_team_image'.
   $fields['node-team-field_team_image'] = array(
     'field_config' => array(
@@ -705,6 +629,83 @@ Prof.',
     ),
   );
 
+  // Exported field: 'node-team-field_team_member_type'.
+  $fields['node-team-field_team_member_type'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_team_member_type',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'team_member_type',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'team',
+      'default_value' => array(),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 8,
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_team_member_type',
+      'label' => 'Team member type',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '7',
+      ),
+    ),
+  );
+
   // Exported field: 'node-team-field_team_title'.
   $fields['node-team-field_team_title'] = array(
     'field_config' => array(
@@ -769,7 +770,7 @@ Prof.',
       ),
       'entity_type' => 'node',
       'field_name' => 'field_team_title',
-      'label' => 'Title',
+      'label' => 'Position',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
@@ -790,14 +791,14 @@ Prof.',
   // Translatables
   // Included for use with string extractors like potx.
   t('Bio');
-  t('Contact type');
-  t('Display Ranking');
+  t('Display ranking');
   t('Email');
   t('Name');
   t('Phone');
   t('Photo');
   t('Please choose an order that you would like this team member displayed. 1 is first.');
-  t('Title');
+  t('Position');
+  t('Team member type');
 
   return $fields;
 }

@@ -34,7 +34,6 @@
           margin: 1px 5px 1px 1px
           padding: 1px
 
-      
 
 // News and Event
 .page-news-and-events
@@ -64,16 +63,21 @@
       background: #fff
       box-shadow: 2px 3px 4px #C8C8C8
       padding: $padding
+      @include breakpoint($motab)
+        @include omega(1n)
+        margin: $margin/2 0
+        @include fill-parent
       .views-field-title
         font-family: "bariol_regularregular"
         font-weight: normal
         font-size: 16px
         text-transform: uppercase
         margin-bottom: 5px
+      .views-field-field-image,
       .views-field-field-media
         @include fill-parent
   #block-views-calendar_of_events-calendar
-    @include media($mobile) 
+    @include media($mobile)
       .pager
         padding: 0px
       .date-nav 
@@ -183,7 +187,7 @@
 .page-about
   .region-home-content-top-rotator
     background: none
-    @include span-columns(9)
+    //@include span-columns(9)
     @include media($motab)
       @include fill-parent
     #block-views-about_page-block_1
@@ -278,7 +282,7 @@
     .views-field-field-image
       @include media($motab)
         img
-          width: 40px
+          width: 100%
           height: auto
     .views-field-field-document
       overflow: hidden
@@ -485,14 +489,31 @@
         width: 100%
         height: auto
 
-// Node projects
-body.node-type-project
-  .node-project
-    .field-name-field-media
+// Nodes
+
+body.node-type-blog,
+body.node-type-project,
+body.node-type-article,
+body.node-type-event,
+body.node-type-get-involved,
+body.node-type-resource,
+  .node-get-involved,
+  .node-resource,
+  .node-event,
+  .node-blog,
+  .node-project,
+  .node-article
+    > .content > .field-name-body + div
+      clear: left
+    .field-name-field-image,
+      clear: none
       float: left
       margin-right: 20px
-      margin-bottom: 20px
+      margin-bottom: 10px
 
+body.node-type-resource,
+  .node-resource,
+    
 // Contact page
 .page-contact
   .form-item

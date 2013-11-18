@@ -38,7 +38,7 @@ function amani_get_involved_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'There are no <em>Get involved</em> items created yet. As soon as you <a href="/node/add/get-  involved?destination=get-involved">create some</a> they will appear here instead of this message.';
   $handler->display->display_options['empty']['area']['format'] = 'wysiwyg_editor';
-  /* Field: Content: Image */
+  /* Field: Content: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -47,7 +47,7 @@ function amani_get_involved_views_default_views() {
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'thumbnail',
-    'image_link' => 'content',
+    'image_link' => '',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -91,16 +91,16 @@ function amani_get_involved_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Large image */
-  $handler->display->display_options['fields']['field_graphic']['id'] = 'field_graphic';
-  $handler->display->display_options['fields']['field_graphic']['table'] = 'field_data_field_graphic';
-  $handler->display->display_options['fields']['field_graphic']['field'] = 'field_graphic';
-  $handler->display->display_options['fields']['field_graphic']['label'] = '';
-  $handler->display->display_options['fields']['field_graphic']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_graphic']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_graphic']['settings'] = array(
-    'image_style' => 'medium',
-    'image_link' => '',
+  /* Field: Content: Lead Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['type'] = 'file_rendered';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'file_view_mode' => 'default',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -108,8 +108,7 @@ function amani_get_involved_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '<span>become a</span>
-<h3>[title]</h3>';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<h3>[title]</h3>';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
 
@@ -117,16 +116,16 @@ function amani_get_involved_views_default_views() {
   $handler = $view->new_display('block', 'Get Involved', 'block_2');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Large image */
-  $handler->display->display_options['fields']['field_graphic']['id'] = 'field_graphic';
-  $handler->display->display_options['fields']['field_graphic']['table'] = 'field_data_field_graphic';
-  $handler->display->display_options['fields']['field_graphic']['field'] = 'field_graphic';
-  $handler->display->display_options['fields']['field_graphic']['label'] = '';
-  $handler->display->display_options['fields']['field_graphic']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_graphic']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_graphic']['settings'] = array(
-    'image_style' => 'medium',
-    'image_link' => 'content',
+  /* Field: Content: Lead Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['type'] = 'file_rendered';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'file_view_mode' => 'default',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -147,8 +146,7 @@ function amani_get_involved_views_default_views() {
     t('There are no <em>Get involved</em> items created yet. As soon as you <a href="/node/add/get-  involved?destination=get-involved">create some</a> they will appear here instead of this message.'),
     t('Page'),
     t('Block'),
-    t('<span>become a</span>
-<h3>[title]</h3>'),
+    t('<h3>[title]</h3>'),
   );
   $export['get_involved'] = $view;
 

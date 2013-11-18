@@ -82,6 +82,24 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-47',
   );
+  // Exported menu link: menu-amani-admin-menu:admin/people/create
+  $menu_links['menu-amani-admin-menu:admin/people/create'] = array(
+    'menu_name' => 'menu-amani-admin-menu',
+    'link_path' => 'admin/people/create',
+    'router_path' => 'admin/people/create',
+    'link_title' => 'Create users',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-38',
+  );
   // Exported menu link: menu-amani-admin-menu:admin/structure/block/manage/fb_likebox/0/configure
   $menu_links['menu-amani-admin-menu:admin/structure/block/manage/fb_likebox/0/configure'] = array(
     'menu_name' => 'menu-amani-admin-menu',
@@ -126,7 +144,7 @@ function amani_global_menu_default_menu_links() {
     'menu_name' => 'menu-amani-admin-menu',
     'link_path' => 'admin/structure/menu/manage/menu-amani-main-menu',
     'router_path' => 'admin/structure/menu/manage/%',
-    'link_title' => 'Amani main menu links',
+    'link_title' => 'Edit main menu links',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -251,7 +269,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-38',
+    'weight' => '-37',
   );
   // Exported menu link: menu-amani-main-menu:about
   $menu_links['menu-amani-main-menu:about'] = array(
@@ -383,7 +401,7 @@ function amani_global_menu_default_menu_links() {
     'menu_name' => 'menu-amani-main-menu',
     'link_path' => 'programs',
     'router_path' => 'programs',
-    'link_title' => 'Projects',
+    'link_title' => 'Programs',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -523,6 +541,42 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '0',
   );
+  // Exported menu link: menu-social-media:http://google.com
+  $menu_links['menu-social-media:http://google.com'] = array(
+    'menu_name' => 'menu-social-media',
+    'link_path' => 'http://google.com',
+    'router_path' => '',
+    'link_title' => 'Rss',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '1',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '0',
+  );
+  // Exported menu link: menu-social-media:http://pinterest.com
+  $menu_links['menu-social-media:http://pinterest.com'] = array(
+    'menu_name' => 'menu-social-media',
+    'link_path' => 'http://pinterest.com',
+    'router_path' => '',
+    'link_title' => 'Pinterest',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '1',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '0',
+  );
   // Exported menu link: menu-social-media:http://twitter.com
   $menu_links['menu-social-media:http://twitter.com'] = array(
     'menu_name' => 'menu-social-media',
@@ -540,6 +594,24 @@ function amani_global_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '1',
+  );
+  // Exported menu link: menu-social-media:http://vimeo.com
+  $menu_links['menu-social-media:http://vimeo.com'] = array(
+    'menu_name' => 'menu-social-media',
+    'link_path' => 'http://vimeo.com',
+    'router_path' => '',
+    'link_title' => 'Vimeo',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '1',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '0',
   );
   // Exported menu link: menu-social-media:http://www.google.com/peacegeeks
   $menu_links['menu-social-media:http://www.google.com/peacegeeks'] = array(
@@ -599,10 +671,11 @@ function amani_global_menu_default_menu_links() {
   // Included for use with string extractors like potx.
   t('About');
   t('Add terms');
-  t('Amani main menu links');
   t('Blog');
   t('Contact');
   t('Contact page settings');
+  t('Create users');
+  t('Edit main menu links');
   t('Edit map settings');
   t('Facebook');
   t('Facebook feed settings');
@@ -617,13 +690,16 @@ function amani_global_menu_default_menu_links() {
   t('My account');
   t('News & Events');
   t('Newsletter settings');
-  t('Projects');
+  t('Pinterest');
+  t('Programs');
   t('RedHen admin');
   t('Resources');
+  t('Rss');
   t('Social media icons');
   t('Team');
   t('Twitter');
   t('Twitter feed settings');
+  t('Vimeo');
   t('YouTube');
   t('admin');
   t('home');

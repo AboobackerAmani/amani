@@ -113,7 +113,7 @@ function amani_incident_report_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '6',
+          'weight' => '8',
         ),
         'ical' => array(
           'label' => 'above',
@@ -185,7 +185,7 @@ function amani_incident_report_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '12',
+          'weight' => '10',
         ),
         'ical' => array(
           'label' => 'above',
@@ -385,7 +385,7 @@ function amani_incident_report_field_default_fields() {
             'map_preset' => 'geofield_formatter_map',
           ),
           'type' => 'geofield_openlayers',
-          'weight' => '5',
+          'weight' => '6',
         ),
         'ical' => array(
           'label' => 'above',
@@ -480,13 +480,13 @@ function amani_incident_report_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
+          'label' => 'above',
           'module' => 'file_entity',
           'settings' => array(
             'file_view_mode' => 'default',
           ),
           'type' => 'file_rendered',
-          'weight' => '9',
+          'weight' => '5',
         ),
         'ical' => array(
           'label' => 'above',
@@ -514,7 +514,7 @@ function amani_incident_report_field_default_fields() {
       'settings' => array(
         'description_field' => 0,
         'file_directory' => 'incident-media',
-        'file_extensions' => 'jpg jpeg gif png avi mov txt pdf doc docx xls ods odt ppt',
+        'file_extensions' => 'jpeg jpg png mov avi',
         'max_filesize' => '',
         'user_register_form' => FALSE,
       ),
@@ -538,7 +538,7 @@ function amani_incident_report_field_default_fields() {
             'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
             'media_internet' => 'media_internet',
             'upload' => 'upload',
-            'youtube' => 0,
+            'youtube' => 'youtube',
           ),
           'progress_indicator' => 'throbber',
         ),
@@ -611,7 +611,7 @@ function amani_incident_report_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_incident_report_type',
-      'label' => 'Incident report type',
+      'label' => 'Report filter #1',
       'required' => 1,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -689,7 +689,7 @@ function amani_incident_report_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_incident_severity',
-      'label' => 'Incident severity',
+      'label' => 'Report filter #2',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -746,7 +746,7 @@ function amani_incident_report_field_default_fields() {
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => '8',
+          'weight' => '4',
         ),
         'ical' => array(
           'label' => 'above',
@@ -905,7 +905,7 @@ Prof.',
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '4',
+          'weight' => '7',
         ),
         'ical' => array(
           'label' => 'above',
@@ -1015,7 +1015,7 @@ Prof.',
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '11',
+          'weight' => '9',
         ),
         'ical' => array(
           'label' => 'above',
@@ -1057,11 +1057,11 @@ Prof.',
   t('Description');
   t('Email');
   t('Geolocation');
-  t('Incident report type');
-  t('Incident severity');
   t('Links');
   t('Media (images/videos/documents)');
   t('Phone number');
+  t('Report filter #1');
+  t('Report filter #2');
   t('Submitter Name (Optional)');
   t('Use the address fields here or use the map tools below to pick out a point directly on the map.');
   t('asdfasd asd fasdf asdfasd fad f');

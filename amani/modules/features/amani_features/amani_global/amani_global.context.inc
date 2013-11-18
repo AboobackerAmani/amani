@@ -20,7 +20,6 @@ function amani_global_context_default_contexts() {
     'path' => array(
       'values' => array(
         'amani/content-admin' => 'amani/content-admin',
-        'user/*/my-content' => 'user/*/my-content',
       ),
     ),
   );
@@ -48,6 +47,38 @@ function amani_global_context_default_contexts() {
   // Included for use with string extractors like potx.
   t('admin');
   $export['content_admin'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'donation-region';
+  $context->description = '';
+  $context->tag = 'donation';
+  $context->conditions = array(
+    'sitewide' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'menu-menu-donate' => array(
+          'module' => 'menu',
+          'delta' => 'menu-donate',
+          'region' => 'donation_region',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('donation');
+  $export['donation-region'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
@@ -152,6 +183,12 @@ function amani_global_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
+        'views-calendar_of_events-calendar' => array(
+          'module' => 'views',
+          'delta' => 'calendar_of_events-calendar',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
         'bean-front-page-second-sidebar-bottom' => array(
           'module' => 'bean',
           'delta' => 'front-page-second-sidebar-bottom',
@@ -191,35 +228,35 @@ function amani_global_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'locale-language' => array(
-          'module' => 'locale',
-          'delta' => 'language',
+        'search-form' => array(
+          'module' => 'search',
+          'delta' => 'form',
           'region' => 'header',
-          'weight' => '-37',
+          'weight' => '-41',
         ),
         'menu-menu-meta' => array(
           'module' => 'menu',
           'delta' => 'menu-meta',
           'region' => 'header',
-          'weight' => '-36',
+          'weight' => '-40',
         ),
-        'search-form' => array(
-          'module' => 'search',
-          'delta' => 'form',
+        'locale-language' => array(
+          'module' => 'locale',
+          'delta' => 'language',
           'region' => 'header',
-          'weight' => '-35',
+          'weight' => '-39',
         ),
         'menu-menu-social-media' => array(
           'module' => 'menu',
           'delta' => 'menu-social-media',
           'region' => 'header',
-          'weight' => '-34',
+          'weight' => '-38',
         ),
         'superfish-1' => array(
           'module' => 'superfish',
           'delta' => '1',
-          'region' => 'header',
-          'weight' => '-33',
+          'region' => 'navigation_region',
+          'weight' => '-10',
         ),
       ),
     ),

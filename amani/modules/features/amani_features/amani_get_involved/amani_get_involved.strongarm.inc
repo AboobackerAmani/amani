@@ -89,6 +89,9 @@ function amani_get_involved_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'media_gallery_block' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

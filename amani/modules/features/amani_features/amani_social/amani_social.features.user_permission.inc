@@ -65,7 +65,6 @@ function amani_social_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
-      2 => 'editor',
     ),
     'module' => 'follow',
   );

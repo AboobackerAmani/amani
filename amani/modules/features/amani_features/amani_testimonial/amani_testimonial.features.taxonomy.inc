@@ -10,7 +10,7 @@
 function amani_testimonial_taxonomy_default_vocabularies() {
   return array(
     'contributor_type' => array(
-      'name' => 'Contributor type',
+      'name' => 'Testimonial contributor type',
       'machine_name' => 'contributor_type',
       'description' => '',
       'hierarchy' => '0',

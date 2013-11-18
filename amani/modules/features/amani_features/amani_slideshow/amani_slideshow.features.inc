@@ -30,6 +30,7 @@ function amani_slideshow_image_default_styles() {
   // Exported image style: front_page_slideshow.
   $styles['front_page_slideshow'] = array(
     'name' => 'front_page_slideshow',
+    'label' => 'front_page_slideshow',
     'effects' => array(
       1 => array(
         'label' => 'Scale',
@@ -64,7 +65,6 @@ function amani_slideshow_image_default_styles() {
         'weight' => '2',
       ),
     ),
-    'label' => 'front_page_slideshow',
   );
 
   return $styles;

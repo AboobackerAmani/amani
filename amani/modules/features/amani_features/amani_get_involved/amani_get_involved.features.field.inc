@@ -97,116 +97,6 @@ function amani_get_involved_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-get_involved-field_graphic'.
-  $fields['node-get_involved-field_graphic'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_graphic',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'image',
-      'settings' => array(
-        'default_image' => 0,
-        'profile2_private' => FALSE,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '0',
-      'type' => 'image',
-    ),
-    'field_instance' => array(
-      'bundle' => 'get_involved',
-      'deleted' => '0',
-      'description' => 'Large image displayed at the top of the get-involved page and also on the page of the individual get-involved item.',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => 'medium_large',
-          ),
-          'type' => 'image',
-          'weight' => '0',
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'node_gallery_node_thumbnail' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_graphic',
-      'label' => 'Large image',
-      'required' => 0,
-      'settings' => array(
-        'alt_field' => 0,
-        'default_image' => 0,
-        'file_directory' => 'gallery_image-field_graphic',
-        'file_extensions' => 'png gif jpg jpeg',
-        'max_filesize' => '',
-        'max_resolution' => '',
-        'min_resolution' => '',
-        'title_field' => 0,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'media',
-        'settings' => array(
-          'allowed_schemes' => array(
-            'public' => 'public',
-            'vimeo' => 0,
-            'youtube' => 0,
-          ),
-          'allowed_types' => array(
-            'audio' => 0,
-            'document' => 0,
-            'image' => 'image',
-            'video' => 0,
-          ),
-          'browser_plugins' => array(
-            'media_default--media_browser_1' => 'media_default--media_browser_1',
-            'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-            'media_internet' => 0,
-            'upload' => 'upload',
-            'youtube' => 0,
-          ),
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'media_generic',
-        'weight' => '1',
-      ),
-    ),
-  );
-
   // Exported field: 'node-get_involved-field_image'.
   $fields['node-get_involved-field_image'] = array(
     'field_config' => array(
@@ -242,13 +132,16 @@ function amani_get_involved_field_default_fields() {
       'bundle' => 'get_involved',
       'default_value' => array(),
       'deleted' => '0',
-      'description' => 'Smaller image displayed in the list of items at the bottom of the get-involved page.',
+      'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '2',
+          'module' => 'file_entity',
+          'settings' => array(
+            'file_view_mode' => 'default',
+          ),
+          'type' => 'file_rendered',
+          'weight' => '0',
         ),
         'ical' => array(
           'label' => 'above',
@@ -271,7 +164,7 @@ function amani_get_involved_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_image',
-      'label' => 'Small image',
+      'label' => 'Lead Image',
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
@@ -286,25 +179,113 @@ function amani_get_involved_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
+        'module' => 'imagefield_crop',
+        'settings' => array(
+          'collapsible' => '2',
+          'croparea' => '500x500',
+          'enforce_minimum' => 1,
+          'enforce_ratio' => 1,
+          'preview_image_style' => 'thumbnail',
+          'progress_indicator' => 'throbber',
+          'resolution' => '200x150',
+        ),
+        'type' => 'imagefield_crop_widget',
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-get_involved-field_media'.
+  $fields['node-get_involved-field_media'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_media',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 0,
+        'display_field' => 0,
+        'profile2_private' => FALSE,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'file',
+    ),
+    'field_instance' => array(
+      'bundle' => 'get_involved',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'file_entity',
+          'settings' => array(
+            'file_view_mode' => 'default',
+          ),
+          'type' => 'file_rendered',
+          'weight' => '2',
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_media',
+      'label' => 'Media',
+      'required' => 0,
+      'settings' => array(
+        'description_field' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'jpeg jpg png mov avi',
+        'max_filesize' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
         'module' => 'media',
         'settings' => array(
           'allowed_schemes' => array(
             'public' => 'public',
-            'vimeo' => 0,
-            'youtube' => 0,
+            'vimeo' => 'vimeo',
+            'youtube' => 'youtube',
           ),
           'allowed_types' => array(
-            'audio' => 0,
-            'document' => 0,
+            'audio' => 'audio',
+            'document' => 'document',
             'image' => 'image',
-            'video' => 0,
+            'video' => 'video',
           ),
           'browser_plugins' => array(
             'media_default--media_browser_1' => 'media_default--media_browser_1',
             'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-            'media_internet' => 0,
+            'media_internet' => 'media_internet',
             'upload' => 'upload',
-            'youtube' => 0,
+            'youtube' => 'youtube',
           ),
           'progress_indicator' => 'throbber',
         ),
@@ -391,10 +372,8 @@ function amani_get_involved_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Large image');
-  t('Large image displayed at the top of the get-involved page and also on the page of the individual get-involved item.');
-  t('Small image');
-  t('Smaller image displayed in the list of items at the bottom of the get-involved page.');
+  t('Lead Image');
+  t('Media');
   t('Use this field to determine the order of items shown in a view or list. Items will be sorted from smallest weight to largest.');
   t('Weight');
 

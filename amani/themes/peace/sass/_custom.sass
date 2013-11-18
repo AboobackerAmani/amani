@@ -11,6 +11,9 @@ body
   background: $grey_dark
   font-family: "bariol_regularregular"
 
+.cke_show_borders
+  background: white
+
 #main,
 #content-top
   background: $blue_light
@@ -27,33 +30,52 @@ a
 
 // Logo
 #name-and-slogan
-  width: 36% !important
-  @include span-columns(3)
+  float: left
+  display: block
+  margin-right: $margin
+  margin-top: $margin
   @include media($motab)
-    @include fill-parent
+    width: 100% !important
     text-align: center
     float: left
-  .site-slogan
-    margin-left: 10px
-    display: inline-block
-    font-style: oblique
-    font-size: 14px
-    color: #999
-    font-family: Georgia
-    text-align: left 
-    width: 170px
+    #site-logo
+      display: block
   a
     display: inline-block
 
-#site-name 
-  display: none 
+.site-slogan
+  display: inline-block
+  font-style: oblique
+  font-size: 14px
+  color: #999
+  font-family: Georgia
+  text-align: left
+  width: 170px
+  margin-top: 70px
+  margin-bottom: $margin/4
+  @include breakpoint($motab)
+    margin-top: 0
+    width: 100%
+    text-align: center
+
+#site-name
+  display: none
 
 // header
 #header
   background: #fff
   box-shadow: 0 8px 8px #c8c8c8
+  @include breakpoint($motab)
+    margin-bottom: $margin*1.5
   .container-inner
     position: relative
+    @include breakpoint($motab)
+      padding: $gutter 0
+
+// Page
+#page
+  @include breakpoint($motab)
+    overflow: hidden
 
 // Yellow button plus.
 a.button
@@ -79,13 +101,17 @@ a.button
 
 // Header region
 #header-region
-  float: right 
-  width: 61% 
-  padding-bottom: 10px 
+  float: right
+  width: 61%
+  padding-bottom: 10px
+  position: absolute
+  right: $gutter
   //@include span-columns(9)
   @include omega
   @include media($motab)
-    margin-bottom: $margin*1.5
+    float: none
+    width: 100%
+    margin: 0
     #block-locale-language,
     #block-menu-menu-meta,
     #block-search-form,
@@ -196,6 +222,7 @@ a.button
       margin-bottom: 5px
     .views-field-body
       font-family: "Georgia"
+    .views-field-field-image,
     .views-field-field-media
       img
         width: 100%
@@ -206,9 +233,8 @@ a.button
 #block-superfish-superfish_1,
 #block-superfish-1,
 #block-menu-menu-amani-main-menu
-  #header-region &
-    position: absolute
-    bottom: $gutter/2
+  #header-region &,
+  #navigation &
     .content
       font-size: 16px
       li
@@ -241,45 +267,50 @@ a.button
     border-top: 1px solid #ccc
     border-bottom: 1px solid #ccc
     text-transform: uppercase
-#header-region #block-superfish-1
-  display: block !important
-  @include media($bt_motab)
-    #superfish-1
-      display: block !important
-  @include media($motab)
-    position: absolute
-    top: 158px
+#header-region,
+#navigation
+  .container-inner
+    padding: 0
+  #block-superfish-1
     display: block !important
-    left: 0
-    background: #fff
-    z-index: 9999
-    width: 100%
-    &.fixed
-      position: fixed
-      top: 0
-      height: 50px
-    //padding: $padding
-    #superfish-1
+    @include media($bt_motab)
+      #superfish-1
+        display: block !important
+    @include media($motab)
+      position: absolute
+      top: $gutter
+      display: block !important
+      left: 0
       background: #fff
-      display: none
-      box-shadow: 0 10px 10px #999
-      li
-        display: block
-        text-align: center
-        float: none
-        padding: $padding/2 0
-        margin: 0
-        background: none
-        @include media($motab)
-          ul
-            width: 100% !important
-        &.last
-          margin-bottom: $margin/2
-        a
-          border-bottom: 1px solid $orange
-          display: inline
-          padding: $padding/3 0
-          color: #333
+      z-index: 9999
+      width: 100%
+      &.fixed
+        position: fixed
+        top: 0
+        height: 50px
+      //padding: $padding
+      #superfish-1
+        background: #fff
+        display: none
+        box-shadow: 0 10px 10px #999
+        li
+          display: block
+          text-align: center
+          float: none
+          padding: $padding/2 0
+          margin: 0
+          background: none
+          @include media($motab)
+            ul
+              width: 100% !important
+          &.last
+            margin-bottom: $margin/2
+          a
+            border-bottom: 1px solid $orange
+            display: inline
+            padding: $padding/3 0
+            color: #333
+
 // Sidebar
 #sidebar-second
   .block
@@ -310,27 +341,22 @@ a.button
       padding: 0
       box-shadow: none
 
-// News and Events
-.view-news-and-events
+// Resource,blog,news and events views
+.view-news-and-events,
+.view-news-and-events-blog,
+.view-resources
   .views-row
     overflow: hidden
+    margin: $margin 0
+    border-bottom: 1px solid $grey
+    &.views-row-last
+      border-bottom: 0
+      margin-bottom: 0
+    .views-field-title
+      font-size: 16px
+      margin-bottom: $margin/2
+    .views-field-field-image,
     .views-field-field-media
-      @include span-columns(2 of 5)
-      img
-        width: 100%
-        height: auto
-
-// Blog
-.view-news-and-events-blog
-  .views-row
-    overflow: hidden
-    .views-field-field-media
-      @include span-columns(2 of 5)
-      img
-        width: 100%
-        height: auto
-
-    .views-field-field-content-image
       @include span-columns(2 of 5)
       img
         width: 100%
@@ -343,14 +369,23 @@ a.button
     padding-top: $padding
     border-top: 1px solid $grey
 
-.node-article
+.node-article,
+.node-resource,
+.node-get-involved,
+.node-event,
+.node-blog,
+.node-project
   .field-name-field-media
+    @include clearfix
     background: #eee
     padding: $padding
     margin-bottom: $margin
-    text-align: center
-    img
-      margin-bottom: $margin/2
+    .field-item
+      float: left
+      width: 33%
+      > div
+        margin: 10px 5px
+      
 // Footer
 #footer
   background: $grey_dark
@@ -407,7 +442,7 @@ a.button
     @include media($motab)
       @include fill-parent
       @include omega
-      margin-bottom: $margin
+      margin-bottom: $margin/3
 
 // accordian styling
 .ui-accordion .ui-accordion-header
