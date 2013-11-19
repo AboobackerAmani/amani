@@ -27,6 +27,7 @@ function amani_event_user_default_permissions() {
     'name' => 'delete any event content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
