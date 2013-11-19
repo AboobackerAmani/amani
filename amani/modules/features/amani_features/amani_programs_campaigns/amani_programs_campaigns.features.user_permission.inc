@@ -27,6 +27,7 @@ function amani_programs_campaigns_user_default_permissions() {
     'name' => 'delete any project content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );

@@ -37,6 +37,7 @@ function amani_slideshow_user_default_permissions() {
     'name' => 'delete any slideshow content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );

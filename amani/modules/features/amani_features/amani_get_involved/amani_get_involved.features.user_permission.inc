@@ -27,6 +27,7 @@ function amani_get_involved_user_default_permissions() {
     'name' => 'delete any get_involved content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );

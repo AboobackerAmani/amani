@@ -27,6 +27,7 @@ function amani_resource_user_default_permissions() {
     'name' => 'delete any resource content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );

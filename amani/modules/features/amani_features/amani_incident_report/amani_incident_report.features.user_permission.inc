@@ -26,6 +26,7 @@ function amani_incident_report_user_default_permissions() {
     'name' => 'delete any incident_report content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );

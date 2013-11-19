@@ -659,6 +659,7 @@ function amani_global_user_default_permissions() {
     'name' => 'delete any forum content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -668,6 +669,7 @@ function amani_global_user_default_permissions() {
     'name' => 'delete any front_page_box content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -695,6 +697,7 @@ function amani_global_user_default_permissions() {
     'name' => 'delete any webform content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
