@@ -109,7 +109,7 @@ class IncidentSummariesBean extends BeanPlugin {
 			),
 			'#default_value' => $bean->settings['incident_report_type'],
 		);
-    dpm($form);
+
     $form['settings']['incident_severity'] = array (
 			'#type' => 'select',
 			'#title' => t($form['settings']['options']['#options']['field_incident_severity']),
