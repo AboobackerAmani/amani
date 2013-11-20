@@ -33,9 +33,8 @@ class IncidentSummariesBean extends BeanPlugin {
 		$taxonomy_terms = array();
 		$taxonomy_terms_names = array();
 		$field = incident_map_get_field_info('node', 'incident_report', array('taxonomy_term_reference'));
-
 		foreach($field as $key => $value){
-			$vocabulary_options[$field[$key]['label']] = $field[$key]['label'];
+			$vocabulary_options[$field[$key]['field_name']] = $field[$key]['label'];
 			$vocabulary_names[$key] = $field[$key]['settings']['allowed_values']['0']['vocabulary'];
 		}
 		foreach($vocabulary_names as $value) {
@@ -84,7 +83,7 @@ class IncidentSummariesBean extends BeanPlugin {
     $form['settings']['all'] = array (
 			'#type' => 'checkbox',
 			'#title' => t('All incidents'),
-			'#default_value' => $bean->settings['all'],
+			'#default_value' => isset($bean->settings['all']['checked']) ? $bean->settings['all']['checked'] : TRUE,
 		);
 
 		$form['settings']['options'] = array (
@@ -105,7 +104,7 @@ class IncidentSummariesBean extends BeanPlugin {
 			'#options' => $taxonomy_terms['report_type'],
 			'#states' => array(
 				'visible' => array(
-					':input[name="settings[options]"]' => array('value' => 'Incident report type'),
+					':input[name="settings[options]"]' => array('value' => 'field_incident_report_type'),
 					':input[name="settings[all]"]' => array('checked' => FALSE),
 				),
 			),
@@ -118,7 +117,7 @@ class IncidentSummariesBean extends BeanPlugin {
 			'#options' => $taxonomy_terms['incident_severity'],
 			'#states' => array(
 				'visible' => array(
-					':input[name="settings[options]"]' => array('value' => 'Incident severity'),
+					':input[name="settings[options]"]' => array('value' => 'field_incident_severity'),
 					':input[name="settings[all]"]' => array('checked' => FALSE),
 				),
 			),
