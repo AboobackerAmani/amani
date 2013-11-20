@@ -99,7 +99,7 @@ class IncidentSummariesBean extends BeanPlugin {
 
 		$form['settings']['incident_report_type'] = array (
 			'#type' => 'select',
-			'#title' => t('Incident Report Type:'),
+			'#title' => t($form['settings']['options']['#options']['field_incident_report_type']),
 			'#options' => $taxonomy_terms['report_type'],
 			'#states' => array(
 				'visible' => array(
@@ -109,10 +109,10 @@ class IncidentSummariesBean extends BeanPlugin {
 			),
 			'#default_value' => $bean->settings['incident_report_type'],
 		);
-
+    dpm($form);
     $form['settings']['incident_severity'] = array (
 			'#type' => 'select',
-			'#title' => t('Incident Severity'),
+			'#title' => t($form['settings']['options']['#options']['field_incident_severity']),
 			'#options' => $taxonomy_terms['incident_severity'],
 			'#states' => array(
 				'visible' => array(
