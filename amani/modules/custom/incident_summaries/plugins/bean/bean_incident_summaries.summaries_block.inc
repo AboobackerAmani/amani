@@ -14,7 +14,7 @@ class IncidentSummariesBean extends BeanPlugin {
 				'month' => '',
         'incident_label' => '',
 				'options' => '',
-				'all' => array('checked' => TRUE),
+				'all' => TRUE,
         'incident_report_type' => '',
 				'incident_severity' => '',
 			),
@@ -83,9 +83,8 @@ class IncidentSummariesBean extends BeanPlugin {
     $form['settings']['all'] = array (
 			'#type' => 'checkbox',
 			'#title' => t('All incidents'),
-			'#default_value' => isset($bean->settings['all']['checked']) ? $bean->settings['all']['checked'] : TRUE,
+			'#default_value' => isset($bean->settings['all']) ? $bean->settings['all'] : TRUE,
 		);
-
 		$form['settings']['options'] = array (
 			'#type' => 'select',
 			'#title' => t('Vocabulary: '),
@@ -141,7 +140,7 @@ class IncidentSummariesBean extends BeanPlugin {
 		$vocabulary = $bean->settings['options'];
 		$heading_one = 'All dates';
 
-    if(strcmp($vocabulary,'Incident report type') == 0){
+    if($vocabulary == 'field_incident_report_type'){
 			unset($tid_array);
       $taxonomy_term_field = 'field_incident_report_type';
 			$term_name = $bean->settings['incident_report_type'];
@@ -152,7 +151,7 @@ class IncidentSummariesBean extends BeanPlugin {
 
 		}
 
-    else{
+    else {
 			unset($tid_array);
 			$taxonomy_term_field = 'field_incident_severity';
 			$term_name = $bean->settings['incident_severity'];
