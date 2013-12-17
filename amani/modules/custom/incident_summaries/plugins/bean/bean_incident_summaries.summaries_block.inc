@@ -43,7 +43,6 @@ class IncidentSummariesBean extends BeanPlugin {
 
 
 		}
-
 		foreach($vocabulary_objects as $key => $value) {
 			foreach($value as $object){
 				$taxonomy_terms_names[$object->name] = $object->name;
