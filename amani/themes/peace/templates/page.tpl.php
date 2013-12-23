@@ -31,7 +31,7 @@
 
       <?php if ($page['navigation_region']): ?>
         <nav id="navigation" class="container menu <?php if (!empty($main_menu)) {print "with-primary";}
-          if (!empty($secondary_menu)) {print " with-secondary";} ?>">
+          if (!empty($secondary_menu)) {print " with-secondary";} if (empty($site_slogan)) {print " without-slogan";} ?>">
           <div class="container-inner">
             <?php print render($page['navigation_region']); ?>
           </div>
