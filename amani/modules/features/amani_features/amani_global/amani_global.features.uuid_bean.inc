@@ -22,7 +22,7 @@ function amani_global_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => '1374818202',
     'log' => '',
-    'uid' => '0',
+    'uid' => '1',
     'default_revision' => '1',
     'revisions' => array(),
     'vuuid' => '7ea64c8e-3953-4284-9751-74f2cdbcb001',
@@ -30,10 +30,7 @@ function amani_global_uuid_features_default_beans() {
     'field_bean_body' => array(
       'und' => array(
         0 => array(
-          'value' => '<div class="credits-text">special thanks to:</div>
-<div class="credits-logo"><img src="<?php echo base_path() . path_to_theme(); ?>/images/icons/logo_berghof.png" /></div>
-<div class="credits-text">a project by PeaceGeeks:</div>
-<div class="credits-logo"><img src="<?php echo base_path() . path_to_theme(); ?>/images/icons/logo_peacegeeks.png" /></div>',
+          'value' => '<div class="sponsor-logos"></div>',
           'format' => 'php_code',
         ),
       ),
@@ -52,7 +49,7 @@ function amani_global_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => '1374817913',
     'log' => '',
-    'uid' => '0',
+    'uid' => '1',
     'default_revision' => '1',
     'revisions' => array(),
     'vuuid' => '74895912-6a98-4d34-9f5f-ebd01453fd1a',
@@ -60,7 +57,9 @@ function amani_global_uuid_features_default_beans() {
     'field_bean_body' => array(
       'und' => array(
         0 => array(
-          'value' => '<img src="<?php echo base_path();  ?>profiles/amani/themes/peace/images/amani_powered_by.png" />',
+          'value' => '<img src="<?php echo base_path();  ?>profiles/amani/themes/peace/images/amani_powered_by.png" />
+<div class="credits-text">a project by PeaceGeeks:</div>
+<div class="credits-logo"><img src="<?php echo base_path() . path_to_theme(); ?>/images/icons/logo_peacegeeks.png" /></div>',
           'format' => 'php_code',
         ),
       ),
