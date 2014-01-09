@@ -75,6 +75,7 @@ function amani_global_wysiwyg_default_profiles() {
           'BulletedList' => 1,
           'NumberedList' => 1,
           'Link' => 1,
+          'Image' => 1,
         ),
       ),
       'toolbar_loc' => 'top',
