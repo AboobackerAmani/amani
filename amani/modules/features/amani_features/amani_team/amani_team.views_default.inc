@@ -76,13 +76,6 @@ function amani_team_views_default_views() {
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Read more';
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_team_contact_type']['id'] = 'field_team_contact_type';
-  $handler->display->display_options['fields']['field_team_contact_type']['table'] = 'field_data_field_team_contact_type';
-  $handler->display->display_options['fields']['field_team_contact_type']['field'] = 'field_team_contact_type';
-  $handler->display->display_options['fields']['field_team_contact_type']['label'] = '';
-  $handler->display->display_options['fields']['field_team_contact_type']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_team_contact_type']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Display ranking (field_display_ranking) */
   $handler->display->display_options['sorts']['field_display_ranking_value']['id'] = 'field_display_ranking_value';
   $handler->display->display_options['sorts']['field_display_ranking_value']['table'] = 'field_data_field_display_ranking';
@@ -106,28 +99,6 @@ function amani_team_views_default_views() {
     'team' => 'team',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['field_team_contact_type_value']['id'] = 'field_team_contact_type_value';
-  $handler->display->display_options['filters']['field_team_contact_type_value']['table'] = 'field_data_field_team_contact_type';
-  $handler->display->display_options['filters']['field_team_contact_type_value']['field'] = 'field_team_contact_type_value';
-  $handler->display->display_options['filters']['field_team_contact_type_value']['group'] = 1;
-  $handler->display->display_options['filters']['field_team_contact_type_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_team_contact_type_value']['expose']['operator_id'] = 'field_team_contact_type_value_op';
-  $handler->display->display_options['filters']['field_team_contact_type_value']['expose']['label'] = 'Our team';
-  $handler->display->display_options['filters']['field_team_contact_type_value']['expose']['operator'] = 'field_team_contact_type_value_op';
-  $handler->display->display_options['filters']['field_team_contact_type_value']['expose']['identifier'] = 'field_team_contact_type_value';
-  $handler->display->display_options['filters']['field_team_contact_type_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    8 => 0,
-    4 => 0,
-    7 => 0,
-    5 => 0,
-    6 => 0,
-    10 => 0,
-    9 => 0,
-  );
   /* Filter criterion: Search: Search Terms */
   $handler->display->display_options['filters']['keys']['id'] = 'keys';
   $handler->display->display_options['filters']['keys']['table'] = 'search_index';
@@ -150,6 +121,25 @@ function amani_team_views_default_views() {
     10 => 0,
     9 => 0,
   );
+  /* Filter criterion: Content: Team member type (field_team_member_type) */
+  $handler->display->display_options['filters']['field_team_member_type_tid']['id'] = 'field_team_member_type_tid';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['table'] = 'field_data_field_team_member_type';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['field'] = 'field_team_member_type_tid';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['operator_id'] = 'field_team_member_type_tid_op';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['label'] = 'Team member type (field_team_member_type)';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['operator'] = 'field_team_member_type_tid_op';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['identifier'] = 'field_team_member_type_tid';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+  );
+  $handler->display->display_options['filters']['field_team_member_type_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['vocabulary'] = 'team_member_type';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -165,8 +155,8 @@ function amani_team_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Read more'),
-    t('Our team'),
     t('Search'),
+    t('Team member type (field_team_member_type)'),
     t('Page'),
   );
   $export['team'] = $view;
