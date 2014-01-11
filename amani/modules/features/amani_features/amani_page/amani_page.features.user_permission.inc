@@ -25,7 +25,6 @@ function amani_page_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
-      2 => 'editor',
     ),
     'module' => 'node',
   );
@@ -35,6 +34,7 @@ function amani_page_user_default_permissions() {
     'name' => 'delete own page content',
     'roles' => array(
       0 => 'authenticated user',
+      1 => 'editor',
     ),
     'module' => 'node',
   );
@@ -55,6 +55,7 @@ function amani_page_user_default_permissions() {
     'name' => 'edit own page content',
     'roles' => array(
       0 => 'authenticated user',
+      1 => 'editor',
     ),
     'module' => 'node',
   );
