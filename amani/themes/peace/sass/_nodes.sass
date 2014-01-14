@@ -493,12 +493,14 @@
 // Nodes
 
 body.node-type-blog,
+body.node-type-team,
 body.node-type-project,
 body.node-type-article,
 body.node-type-event,
 body.node-type-get-involved,
 body.node-type-resource,
   .node-get-involved,
+  .node-team,
   .node-resource,
   .node-event,
   .node-blog,
@@ -506,10 +508,18 @@ body.node-type-resource,
   .node-article
     > .content > .field-name-body + div
       clear: left
+    .field-name-field-team-image,
     .field-name-field-image,
       clear: none
       float: left
       margin-right: 20px
+      margin-bottom: 10px
+    // Team specific
+    .field-name-field-team-title,
+      clear: left
+      margin-top: 20px
+    .field-name-field-name,
+      font-size: large
       margin-bottom: 10px
 
 body.node-type-resource,
