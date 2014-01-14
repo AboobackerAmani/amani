@@ -121,14 +121,17 @@ function amani_resource_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_resource';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'menu-amani-main-menu',
+    1 => 'menu-meta',
+  );
   $export['menu_options_resource'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_resource';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'menu-amani-main-menu:0';
   $export['menu_parent_resource'] = $strongarm;
 
   $strongarm = new stdClass();

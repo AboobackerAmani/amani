@@ -122,7 +122,8 @@ function amani_programs_campaigns_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_project';
   $strongarm->value = array(
-    0 => 'main-menu',
+    0 => 'menu-amani-main-menu',
+    1 => 'menu-meta',
   );
   $export['menu_options_project'] = $strongarm;
 
@@ -130,7 +131,7 @@ function amani_programs_campaigns_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_project';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'menu-amani-main-menu:0';
   $export['menu_parent_project'] = $strongarm;
 
   $strongarm = new stdClass();

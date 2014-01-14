@@ -198,7 +198,8 @@ function amani_global_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_webform';
   $strongarm->value = array(
-    0 => 'main-menu',
+    0 => 'menu-amani-main-menu',
+    1 => 'menu-meta',
   );
   $export['menu_options_webform'] = $strongarm;
 
@@ -206,7 +207,7 @@ function amani_global_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_webform';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'menu-amani-main-menu:0';
   $export['menu_parent_webform'] = $strongarm;
 
   $strongarm = new stdClass();
