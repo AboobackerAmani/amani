@@ -56,8 +56,11 @@ function amani_global_home_page() {
 function amani_global_block_info() {
   return array(
     'add_content_links' => array(
-      'info' => t('Amani: add content links'),
+      'info' => t('Amani: add content links')
     ),
+    'site_contact_info' => array(
+      'info' => t('Amani: site contact info')
+    )
   );
 }
 
@@ -68,6 +71,10 @@ function amani_global_block_view($delta = '') {
   switch ($delta) {
     case 'add_content_links':
       $block['content'] = amani_global_add_content_links();
+      break;
+    case 'site_contact_info':
+      $block['title'] = 'Where are we?';
+      $block['content'] = amani_global_site_contact_info();
       break;
   }
 
@@ -104,6 +111,87 @@ function amani_global_add_content_links() {
   }
 
   return $output;
+}
+
+/**
+ * Return html for site_contact_info block.
+ */
+function amani_global_site_contact_info() {
+  $output = '';
+  $map_id = 'contact_form_map';
+  $map = leaflet_framework_map($map_id, array(), array());
+
+  $content = array(
+    '' => variable_get('site_address', NULL),
+    'T: ' => variable_get('site_phone', NULL),
+    'E: ' => variable_get('site_mail', NULL),
+    'Hours: ' => variable_get('site_hours', NULL)
+  );
+  if ($content) {
+    $output .= '<div id="contact_form_site_info">';
+    foreach ($content as $item => $value) {
+      $output .= '<p>'.$item.nl2br($value).'</p>';
+    }
+    $output .= drupal_render($map);
+    $output .='</div>';
+  }
+  return $output;
+}
+
+/**
+ * Implements hook_leaflet_framework_plugins().
+ */
+function amani_global_leaflet_framework_plugins() {
+  $plugins['contact_form'] = array(
+    'library' => array('amani_global', 'ContactFormMap'),
+    'logical' => 'AmaniGlobal.ContactForm',
+    'points' => array()
+  );
+
+  return $plugins;
+}
+
+/**
+ * Implements hook_library().
+ */
+function amani_global_library() {
+  $libararies = array();
+  $path = drupal_get_path('module', 'amani_global');
+  // Use libraries from pre-existing map implementation.
+  $incident_map_path = drupal_get_path('module', 'incident_map');
+
+  $libraries['ContactFormMap'] = array(
+    'title' => 'Contact form map visualization',
+    'version' => '7.x-1.x',
+    'js' => array("$path/js/ContactForm.js" => array()),
+  );
+
+  return $libraries;
+}
+
+/**
+ * Implements hook_leaflet_framework_maps().
+ */
+function amani_global_leaflet_framework_maps() {
+  $maps = array();
+  $maps['contact_form_map'] = array(
+    'title' => 'Contact Form Map',
+    'defaults' => array(
+      'height' => '200px'
+    ),
+    'plugins' => array(
+      'lf_layers' => array(),
+      'contact_form' => array(
+         'points' => array(variable_get('site_address_lat',0.0),variable_get('site_address_long',0.0))
+      ),
+      'lf_view' => array(
+        'center' => array(variable_get('site_address_lat',0.0),variable_get('site_address_long',0.0)),
+        'zoom' => 15,
+      )
+    )
+  );
+
+  return $maps;
 }
 
 /**
@@ -144,6 +232,45 @@ function amani_site_information_settings($form, &$form_state, $key = 'peace') {
     '#required' => TRUE,
   );
 
+  $form['site_information']['site_address'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Address'),
+    '#default_value' => variable_get('site_address', NULL),
+    '#description' => t("Your organization's mailing address, this will appear on the contact form of your site."),
+    '#required' => FALSE,
+  );
+
+  $form['site_information']['site_address_lat'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Lat'),
+    '#default_value' => variable_get('site_address_lat', 0.0),
+    '#description' => t('Your organizations address latitude. <a href="@url">convert your address</a>', array('@url' => url('http://www.latlong.net/convert-address-to-lat-long.html'))),
+    '#required' => FALSE,
+  );
+
+  $form['site_information']['site_address_long'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Long'),
+    '#default_value' => variable_get('site_address_long', 0.0),
+    '#description' => t('Your organizations address longtitude. <a href="@url">convert your address</a>', array('@url' => url('http://www.latlong.net/convert-address-to-lat-long.html'))),
+    '#required' => FALSE,
+  );
+
+  $form['site_information']['site_phone'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Phone'),
+    '#default_value' => variable_get('site_phone', NULL),
+    '#description' => t("Your organization's phone number, this will appear on the contact form of your site."),
+    '#required' => FALSE,
+  );
+
+  $form['site_information']['site_hours'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Hours of operation'),
+    '#default_value' => variable_get('site_hours', NULL),
+    '#description' => t("Your organization's hours of operation (ie. mon thru fri 9am-5pm), this will appear on the contact form of your site."),
+    '#required' => FALSE,
+  );
   $form['var'] = array('#type' => 'hidden', '#value' => 'theme_' . $key . '_settings');
 
   $form['logo'] = array(
@@ -151,6 +278,7 @@ function amani_site_information_settings($form, &$form_state, $key = 'peace') {
     '#title' => t('Logo image settings'),
     '#attributes' => array('class' => array('theme-settings-bottom')),
   );
+
   $form['logo']['default_logo'] = array(
     '#type' => 'checkbox',
     '#title' => t('Use the default logo'),
@@ -158,6 +286,7 @@ function amani_site_information_settings($form, &$form_state, $key = 'peace') {
     '#tree' => FALSE,
     '#description' => t('Check here if you want the theme to use the logo supplied with it.')
   );
+
   $form['logo']['settings'] = array(
     '#type' => 'container',
     '#states' => array(
@@ -167,6 +296,7 @@ function amani_site_information_settings($form, &$form_state, $key = 'peace') {
       ),
     ),
   );
+
   $form['logo']['settings']['logo_path'] = array(
     '#type' => 'textfield',
     '#title' => t('Path to custom logo'),
@@ -227,6 +357,7 @@ function amani_site_information_settings($form, &$form_state, $key = 'peace') {
       }
     }
   }
+
 
   $form = system_settings_form($form);
   // We don't want to call system_settings_form_submit(), so change #submit.

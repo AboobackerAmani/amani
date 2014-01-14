@@ -2109,6 +2109,12 @@ body.node-type-resource .node-article .field-name-field-image {
       text-transform: uppercase;
       font-size: 16px; }
 
+#contact_form_map {
+  height: 200px !important; }
+  #contact_form_map .leaflet-control-container,
+  #contact_form_map .leaflet-control-layers {
+    display: none; }
+
 .node-incident_report-form .form-item {
   clear: both;
   overflow: hidden;

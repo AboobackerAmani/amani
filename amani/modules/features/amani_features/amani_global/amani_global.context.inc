@@ -269,5 +269,33 @@ function amani_global_context_default_contexts() {
   t('sitewide header blocks');
   $export['header'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'site_contact_form';
+  $context->description = '';
+  $context->tag = '';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'contact' => 'contact',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'amani_global-site_contact_info' => array(
+          'module' => 'amani_global',
+          'delta' => 'site_contact_info',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+  $export['site_contact_form'] = $context;
+
   return $export;
 }
