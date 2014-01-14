@@ -35,9 +35,35 @@
           margin: 1px 5px 1px 1px
           padding: 1px
 
+// Partners
+.page-partners,
+  #block-system-main
+    background: #fff
+    background: #fff
+    padding: $padding
+    box-shadow: 2px 3px 4px #C8C8C8
+    font-family: "Georgia"
+    line-height: 1.4
+    .views-row
+      padding-bottom: $padding
+      margin-bottom: $margin
+      &.views-row-last
+        border-bottom: 0
+        margin-bottom: 0
+        padding-bottom: 0
+      .views-field-title
+        font-family: "bariol_regularregular"
+        text-transform: uppercase
+        font-size: 16px
+      .views-field-field-image
+        margin: 0
+        @include span-columns(3)
+        img
+          width: 100%
+          height: auto
 
 // News and Event
-.page-news-and-events
+.page-news-and-events,
   #block-system-main
     background: #fff
     background: #fff
@@ -94,7 +120,7 @@
       font-weight: normal
 
 // Team page.
-.page-team
+.page-team,
   .view-id-team.view-display-id-page
     .views-exposed-form
       @include omega
@@ -493,6 +519,7 @@
 // Nodes
 
 body.node-type-blog,
+body.node-type-partner,
 body.node-type-team,
 body.node-type-project,
 body.node-type-article,
@@ -505,7 +532,8 @@ body.node-type-resource,
   .node-event,
   .node-blog,
   .node-project,
-  .node-article
+  .node-article,
+  .node-partner
     > .content > .field-name-body + div
       clear: left
     .field-name-field-team-image,
