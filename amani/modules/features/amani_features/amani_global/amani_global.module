@@ -65,6 +65,17 @@ function amani_global_block_info() {
 }
 
 /**
+ * Redirect user to the amani admin page on login.
+ */
+function amani_global_user_login(&$edit, $account) {
+  if (!isset($_POST['form_id']) || $_POST['form_id'] != 'user_pass_reset') {
+    if(count($account->roles) > 1) {
+      $_GET['destination'] = 'amani/content-admin';
+    }
+  }
+}
+
+/**
  * Implements hook_block_view().
  */
 function amani_global_block_view($delta = '') {
