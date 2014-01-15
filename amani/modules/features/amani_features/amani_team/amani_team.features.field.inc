@@ -395,11 +395,7 @@ Prof.',
     ),
     'field_instance' => array(
       'bundle' => 'team',
-      'default_value' => array(
-        0 => array(
-          'value' => '(XXX) XXX-XXXX ',
-        ),
-      ),
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
