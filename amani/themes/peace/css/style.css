@@ -424,8 +424,6 @@ a.button {
   #block-menu-menu-amani-main-menu .content li, #navigation
   #block-menu-menu-amani-main-menu .content li {
     margin-right: 7.5px;
-    background: url("../images/icons/bullet.png") 100% 50% no-repeat;
-    padding-right: 15px;
     padding-left: 0;
     margin-left: 0;
     display: inline-block;
@@ -474,6 +472,45 @@ a.button {
     #block-menu-menu-amani-main-menu .content li a:hover, #navigation
     #block-menu-menu-amani-main-menu .content li a:active {
       color: #f2a64b; }
+    #header-region #navigation .content li.sf-depth-1, #navigation #navigation .content li.sf-depth-1, #header-region
+    #block-superfish-superfish_1 .content li.sf-depth-1, #navigation
+    #block-superfish-superfish_1 .content li.sf-depth-1, #header-region
+    #block-superfish-1 .content li.sf-depth-1, #navigation
+    #block-superfish-1 .content li.sf-depth-1, #header-region
+    #block-menu-menu-amani-main-menu .content li.sf-depth-1, #navigation
+    #block-menu-menu-amani-main-menu .content li.sf-depth-1 {
+      padding-right: 15px;
+      position: relative; }
+      #header-region #navigation .content li.sf-depth-1:after, #navigation #navigation .content li.sf-depth-1:after, #header-region
+      #block-superfish-superfish_1 .content li.sf-depth-1:after, #navigation
+      #block-superfish-superfish_1 .content li.sf-depth-1:after, #header-region
+      #block-superfish-1 .content li.sf-depth-1:after, #navigation
+      #block-superfish-1 .content li.sf-depth-1:after, #header-region
+      #block-menu-menu-amani-main-menu .content li.sf-depth-1:after, #navigation
+      #block-menu-menu-amani-main-menu .content li.sf-depth-1:after {
+        content: "•";
+        color: #ee8f1c;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 0; }
+      #header-region #navigation .content li.sf-depth-1:last-child, #navigation #navigation .content li.sf-depth-1:last-child, #header-region
+      #block-superfish-superfish_1 .content li.sf-depth-1:last-child, #navigation
+      #block-superfish-superfish_1 .content li.sf-depth-1:last-child, #header-region
+      #block-superfish-1 .content li.sf-depth-1:last-child, #navigation
+      #block-superfish-1 .content li.sf-depth-1:last-child, #header-region
+      #block-menu-menu-amani-main-menu .content li.sf-depth-1:last-child, #navigation
+      #block-menu-menu-amani-main-menu .content li.sf-depth-1:last-child {
+        padding-right: 0; }
+        #header-region #navigation .content li.sf-depth-1:last-child:after, #navigation #navigation .content li.sf-depth-1:last-child:after, #header-region
+        #block-superfish-superfish_1 .content li.sf-depth-1:last-child:after, #navigation
+        #block-superfish-superfish_1 .content li.sf-depth-1:last-child:after, #header-region
+        #block-superfish-1 .content li.sf-depth-1:last-child:after, #navigation
+        #block-superfish-1 .content li.sf-depth-1:last-child:after, #header-region
+        #block-menu-menu-amani-main-menu .content li.sf-depth-1:last-child:after, #navigation
+        #block-menu-menu-amani-main-menu .content li.sf-depth-1:last-child:after {
+          content: "";
+          display: none; }
 
 .mobile-menu-link {
   display: none;

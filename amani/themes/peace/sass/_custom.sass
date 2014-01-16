@@ -246,8 +246,7 @@ a.button
       font-size: 16px
       li
         margin-right: $margin/4
-        background: url('../images/icons/bullet.png') 100% 50% no-repeat
-        padding-right: $padding/2
+        //background: url('../images/icons/bullet.png') 100% 50% no-repeat
         padding-left: 0
         margin-left: 0
         display: inline-block
@@ -262,6 +261,21 @@ a.button
             color: $orange
           &:hover, &:active
             color: lighten($orange, 10%)
+        &.sf-depth-1
+          padding-right: $padding/2
+          position: relative
+          &:after
+            content: '•'
+            color: $orange
+            display: inline-block
+            position: absolute
+            right: 0
+            top: 0
+          &:last-child
+            padding-right: 0
+            &:after
+              content: ''
+              display: none
 
 // Mobile menu
 .mobile-menu-link
