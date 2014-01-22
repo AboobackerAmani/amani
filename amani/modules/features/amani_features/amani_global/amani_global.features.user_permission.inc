@@ -257,8 +257,7 @@ function amani_global_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
-      2 => 'contributor',
-      3 => 'editor',
+      2 => 'editor',
     ),
     'module' => 'file_entity',
   );
@@ -325,6 +324,8 @@ function amani_global_user_default_permissions() {
     'name' => 'administer media galleries',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'media_gallery',
   );
@@ -520,6 +521,8 @@ function amani_global_user_default_permissions() {
     'name' => 'bypass file access',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
+      2 => 'editor',
     ),
     'module' => 'file_entity',
   );
