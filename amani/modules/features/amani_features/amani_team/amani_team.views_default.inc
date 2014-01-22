@@ -67,7 +67,7 @@ function amani_team_views_default_views() {
   $handler->display->display_options['fields']['field_team_bio']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_team_bio']['type'] = 'text_trimmed';
   $handler->display->display_options['fields']['field_team_bio']['settings'] = array(
-    'trim_length' => '300',
+    'trim_length' => '600',
   );
   /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
