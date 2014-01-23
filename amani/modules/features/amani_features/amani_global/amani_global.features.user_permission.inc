@@ -52,6 +52,17 @@ function amani_global_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: access contextual links.
+  $permissions['access contextual links'] = array(
+    'name' => 'access contextual links',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+      2 => 'editor',
+    ),
+    'module' => 'contextual',
+  );
+
   // Exported permission: access own webform results.
   $permissions['access own webform results'] = array(
     'name' => 'access own webform results',
