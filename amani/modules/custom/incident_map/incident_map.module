@@ -189,7 +189,7 @@ function incident_map_reports() {
   $map_id = 'incident-map-default';
 
   // Map.
-  $map = leaflet_framework_map($map_id, array(), array('height' => '300px', 'maxZoom' => '10'));
+  $map = leaflet_framework_map($map_id, array(), array('height' => '300px', 'maxZoom' => '15'));
   leaflet_framework_extend_map('incident_reports', $map_id, array(
     'source-url' => '/geojson/incident-reports',
   ));
