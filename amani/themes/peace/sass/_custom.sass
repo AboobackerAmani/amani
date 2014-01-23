@@ -423,7 +423,7 @@ a.button
       color: lighten($orange, 10%)
       text-decoration: none
   #block-bean-amani-powered-by
-    @include span-columns(3 of 12)
+    @include span-columns(2 of 12)
     @include media($motab)
       @include fill-parent
       @include omega
@@ -433,7 +433,7 @@ a.button
   #block-system-main-menu,
   #block-menu-menu-amani-main-menu,
   #block-menu-menu-meta
-    @include span-columns(3 of 12)
+    @include span-columns(2 of 12)
     margin-bottom: $margin
     @include media($motab)
       @include fill-parent
@@ -448,10 +448,9 @@ a.button
         list-style-type: none
         list-style-image: none
   #block-bean-amani-special-thanks
-    @include span-columns(3 of 12)
+    @include span-columns(5 of 12)
+    @include shift()
     margin-bottom: $margin
-    position: absolute
-    right: 0
     margin-right: 0
     @include media($motab)
       @include fill-parent
@@ -459,10 +458,14 @@ a.button
       text-align: center
       position: static
   #block-search-form
-    @include span-columns(3 of 12)
+    @include span-columns(2 of 12)
+    @include shift(-2)
+    margin-top: $margin*3
     @include media($motab)
       @include fill-parent
       @include omega
+      @include shift(0)
+      margin-top: 0
       margin-bottom: $margin/3
 
 // accordian styling
