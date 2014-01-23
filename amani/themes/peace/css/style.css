@@ -229,7 +229,7 @@ a {
   #page {
     overflow: hidden; } }
 
-a.button {
+a.button:not(.launcher):not(.remove):not(.edit) {
   background: #ee8f1c url("../images/icons/yellow_button_plus.png") 100% 50% no-repeat;
   padding: 20px;
   padding-right: 90px;
@@ -240,7 +240,7 @@ a.button {
   font-size: 25px;
   font-weight: normal;
   box-shadow: 3px 3px 8px #999999; }
-  a.button:after {
+  a.button:not(.launcher):not(.remove):not(.edit):after {
     content: "" !important; }
 
 #content-header h2 {
@@ -428,6 +428,30 @@ a.button {
     margin-left: 0;
     display: inline-block;
     padding-top: 0; }
+    #header-region #navigation .content li li, #navigation #navigation .content li li, #header-region
+    #block-superfish-superfish_1 .content li li, #navigation
+    #block-superfish-superfish_1 .content li li, #header-region
+    #block-superfish-1 .content li li, #navigation
+    #block-superfish-1 .content li li, #header-region
+    #block-menu-menu-amani-main-menu .content li li, #navigation
+    #block-menu-menu-amani-main-menu .content li li {
+      margin: 10px 0; }
+      #header-region #navigation .content li li:first-child, #navigation #navigation .content li li:first-child, #header-region
+      #block-superfish-superfish_1 .content li li:first-child, #navigation
+      #block-superfish-superfish_1 .content li li:first-child, #header-region
+      #block-superfish-1 .content li li:first-child, #navigation
+      #block-superfish-1 .content li li:first-child, #header-region
+      #block-menu-menu-amani-main-menu .content li li:first-child, #navigation
+      #block-menu-menu-amani-main-menu .content li li:first-child {
+        margin-top: 0; }
+      #header-region #navigation .content li li:last-child, #navigation #navigation .content li li:last-child, #header-region
+      #block-superfish-superfish_1 .content li li:last-child, #navigation
+      #block-superfish-superfish_1 .content li li:last-child, #header-region
+      #block-superfish-1 .content li li:last-child, #navigation
+      #block-superfish-1 .content li li:last-child, #header-region
+      #block-menu-menu-amani-main-menu .content li li:last-child, #navigation
+      #block-menu-menu-amani-main-menu .content li li:last-child {
+        margin-bottom: 0; }
     #header-region #navigation .content li:last-child, #navigation #navigation .content li:last-child, #header-region
     #block-superfish-superfish_1 .content li:last-child, #navigation
     #block-superfish-superfish_1 .content li:last-child, #header-region
@@ -715,6 +739,8 @@ a.button {
     width: 14.89362%; }
     #footer #block-bean-amani-powered-by:last-child {
       margin-right: 0; }
+    #footer #block-bean-amani-powered-by .credits-text {
+      font-size: 12px; }
     @media screen and (max-width: 600px) {
       #footer #block-bean-amani-powered-by {
         width: 100%;
@@ -755,7 +781,7 @@ a.button {
     display: block;
     float: left;
     margin-right: 2.12766%;
-    width: 40.42553%;
+    width: 48.93617%;
     margin-left: 8.51064%;
     margin-bottom: 30px;
     margin-right: 0; }

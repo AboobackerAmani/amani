@@ -58,7 +58,7 @@ function amani_global_uuid_features_default_beans() {
       'und' => array(
         0 => array(
           'value' => '<img src="<?php echo base_path();  ?>profiles/amani/themes/peace/images/amani_powered_by.png" style="width: 50%; margin-bottom: 20px;" />
-<div class="credits-text">a project by PeaceGeeks:</div>
+<div class="credits-text">a project by</div>
 <div class="credits-logo"><img src="<?php echo base_path() . path_to_theme(); ?>/images/icons/logo_peacegeeks.png" style="width: 50%;" /></div>',
           'format' => 'php_code',
         ),

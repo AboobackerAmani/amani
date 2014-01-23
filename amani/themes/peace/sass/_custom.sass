@@ -81,7 +81,7 @@ a
     overflow: hidden
 
 // Yellow button plus.
-a.button
+a.button:not(.launcher):not(.remove):not(.edit)
   background: $orange url('../images/icons/yellow_button_plus.png') 100% 50% no-repeat
   padding: $padding - 10px
   padding-right: $padding*3
@@ -251,6 +251,12 @@ a.button
         margin-left: 0
         display: inline-block
         padding-top: 0
+        li
+          margin: $margin/3 0
+          &:first-child
+            margin-top: 0
+          &:last-child
+            margin-bottom: 0
         &:last-child
           background: none
           padding-right: 0
@@ -424,6 +430,8 @@ a.button
       text-decoration: none
   #block-bean-amani-powered-by
     @include span-columns(2 of 12)
+    .credits-text
+      font-size: 12px
     @include media($motab)
       @include fill-parent
       @include omega
@@ -448,7 +456,7 @@ a.button
         list-style-type: none
         list-style-image: none
   #block-bean-amani-special-thanks
-    @include span-columns(5 of 12)
+    @include span-columns(6 of 12)
     @include shift()
     margin-bottom: $margin
     margin-right: 0
