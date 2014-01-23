@@ -154,6 +154,8 @@ div.status {
 body {
   background: #414042;
   font-family: "bariol_regularregular"; }
+  body.page-file-edit.section-file {
+    background: white; }
 
 .cke_show_borders {
   background: white; }
@@ -709,8 +711,24 @@ a.button:not(.launcher):not(.remove):not(.edit) {
   .node-event .field-name-field-media .field-item,
   .node-blog .field-name-field-media .field-item,
   .node-project .field-name-field-media .field-item {
+    display: block;
     float: left;
-    width: 33%; }
+    margin-right: 2.12766%;
+    width: 31.91489%; }
+    .node-article .field-name-field-media .field-item:last-child,
+    .node-resource .field-name-field-media .field-item:last-child,
+    .node-get-involved .field-name-field-media .field-item:last-child,
+    .node-event .field-name-field-media .field-item:last-child,
+    .node-blog .field-name-field-media .field-item:last-child,
+    .node-project .field-name-field-media .field-item:last-child {
+      margin-right: 0; }
+    .node-article .field-name-field-media .field-item:nth-child(3n),
+    .node-resource .field-name-field-media .field-item:nth-child(3n),
+    .node-get-involved .field-name-field-media .field-item:nth-child(3n),
+    .node-event .field-name-field-media .field-item:nth-child(3n),
+    .node-blog .field-name-field-media .field-item:nth-child(3n),
+    .node-project .field-name-field-media .field-item:nth-child(3n) {
+      margin-right: 0; }
     .node-article .field-name-field-media .field-item > div,
     .node-resource .field-name-field-media .field-item > div,
     .node-get-involved .field-name-field-media .field-item > div,
@@ -718,6 +736,20 @@ a.button:not(.launcher):not(.remove):not(.edit) {
     .node-blog .field-name-field-media .field-item > div,
     .node-project .field-name-field-media .field-item > div {
       margin: 10px 5px; }
+    .node-article .field-name-field-media .field-item img:not(.file-icon),
+    .node-article .field-name-field-media .field-item iframe,
+    .node-resource .field-name-field-media .field-item img:not(.file-icon),
+    .node-resource .field-name-field-media .field-item iframe,
+    .node-get-involved .field-name-field-media .field-item img:not(.file-icon),
+    .node-get-involved .field-name-field-media .field-item iframe,
+    .node-event .field-name-field-media .field-item img:not(.file-icon),
+    .node-event .field-name-field-media .field-item iframe,
+    .node-blog .field-name-field-media .field-item img:not(.file-icon),
+    .node-blog .field-name-field-media .field-item iframe,
+    .node-project .field-name-field-media .field-item img:not(.file-icon),
+    .node-project .field-name-field-media .field-item iframe {
+      width: 100%;
+      height: auto; }
 
 #footer {
   background: #414042;

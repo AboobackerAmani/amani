@@ -10,6 +10,8 @@
 body
   background: $grey_dark
   font-family: "bariol_regularregular"
+  &.page-file-edit.section-file
+    background: #fff
 
 .cke_show_borders
   background: white
@@ -408,11 +410,14 @@ a.button:not(.launcher):not(.remove):not(.edit)
     padding: $padding
     margin-bottom: $margin
     .field-item
-      float: left
-      width: 33%
+      @include span-columns(12/3)
+      @include omega(3n)
       > div
         margin: 10px 5px
-      
+      img:not(.file-icon),
+      iframe
+        width: 100%
+        height: auto
 // Footer
 #footer
   background: $grey_dark
