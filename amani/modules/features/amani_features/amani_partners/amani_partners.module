@@ -5,3 +5,16 @@
  */
 
 include_once 'amani_partners.features.inc';
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function amani_partners_entity_info_alter(&$entity_info) {
+
+  // Create a view mode for partner images that may come
+  // in different sizes and aspect ratios.
+  $entity_info['file']['view modes']['max_height'] = array(
+    'label' => t('Fixed maximum height'),
+    'custom settings' => TRUE,
+  );
+}

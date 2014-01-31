@@ -67,6 +67,12 @@ class jcarousel_style_plugin extends views_plugin_style {
       '#options' => $skins,
       '#description' => t('Skins may be provided by other modules. Set to "None" if your theme includes carousel theming directly in style.css or another stylesheet. "None" does not include any built-in navigation, arrows, or positioning at all.'),
     );
+    $form['responsive'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Responsive'),
+      '#default_value' => $this->options['responsive'],
+      '#description' => t('Select this option to have the carousel automatically adjust the number of visible items and the number of items to scroll at a time based on the available width.') . ' <strong>' . t('Changing this option will override the "Visible" and "Scroll" options and set carousel orientation to "horizontal".') . '</strong>',
+    );
     $form['visible'] = array(
       '#type' => 'select',
       '#title' => t('Number of visible items'),

@@ -890,6 +890,30 @@ a.button:not(.launcher):not(.remove):not(.edit) {
   margin-top: 0;
   padding-top: 0; }
 
+.view-partners-carousel .jcarousel-container-horizontal {
+  width: 100%;
+  height: 120px;
+  padding: 20px 5px;
+  margin: auto; }
+  .view-partners-carousel .jcarousel-container-horizontal .jcarousel-clip-horizontal {
+    width: 80%;
+    overflow: hidden;
+    margin: auto; }
+    .view-partners-carousel .jcarousel-container-horizontal .jcarousel-clip-horizontal .jcarousel-item-horizontal,
+    .view-partners-carousel .jcarousel-container-horizontal .jcarousel-clip-horizontal .jcarousel-item {
+      margin: 0 18px;
+      padding: 0;
+      width: auto;
+      height: auto;
+      border: none;
+      background: none; }
+  .view-partners-carousel .jcarousel-container-horizontal .jcarousel-prev-horizontal {
+    top: 55px;
+    left: 0px; }
+  .view-partners-carousel .jcarousel-container-horizontal .jcarousel-next-horizontal {
+    top: 55px;
+    right: 0px; }
+
 .region-donation-region {
   position: fixed;
   right: -10px;
