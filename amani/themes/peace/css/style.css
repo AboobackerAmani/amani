@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Font styles. */
 body {
   margin: 0;
@@ -890,6 +891,18 @@ a.button:not(.launcher):not(.remove):not(.edit) {
   margin-top: 0;
   padding-top: 0; }
 
+#block-views-partners_carousel-block .view-content ul li.jcarousel-item {
+  height: 100px;
+  position: relative;
+  display: table; }
+  #block-views-partners_carousel-block .view-content ul li.jcarousel-item .views-field {
+    display: table-cell;
+    vertical-align: middle; }
+  #block-views-partners_carousel-block .view-content ul li.jcarousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 100px; }
+
 .view-partners-carousel .jcarousel-container-horizontal {
   width: 100%;
   height: 120px;
@@ -901,7 +914,7 @@ a.button:not(.launcher):not(.remove):not(.edit) {
     margin: auto; }
     .view-partners-carousel .jcarousel-container-horizontal .jcarousel-clip-horizontal .jcarousel-item-horizontal,
     .view-partners-carousel .jcarousel-container-horizontal .jcarousel-clip-horizontal .jcarousel-item {
-      margin: 0 18px;
+      margin: 0 10px;
       padding: 0;
       width: auto;
       height: auto;
@@ -1353,6 +1366,11 @@ a.button:not(.launcher):not(.remove):not(.edit) {
         margin-top: 0; } }
     .region-map-region-3x .block h2.block-title {
       font-size: 1.2em; }
+
+#block-views-partners_carousel-block .view-content ul li.jcarousel-item img {
+  width: 100%;
+  height: auto;
+  max-height: 100px; }
 
 #header-region #block-menu-menu-social-media {
   width: 100%;
