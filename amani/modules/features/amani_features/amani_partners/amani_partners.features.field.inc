@@ -209,9 +209,11 @@ function amani_partners_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'file',
-          'settings' => array(),
-          'type' => 'file_default',
+          'module' => 'file_entity',
+          'settings' => array(
+            'file_view_mode' => 'partner_logo',
+          ),
+          'type' => 'file_rendered',
           'weight' => '2',
         ),
         'teaser' => array(

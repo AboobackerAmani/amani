@@ -132,7 +132,7 @@ function amani_partners_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'jcarousel';
   $handler->display->display_options['style_options']['wrap'] = 'circular';
   $handler->display->display_options['style_options']['visible'] = '';
-  $handler->display->display_options['style_options']['auto'] = '8';
+  $handler->display->display_options['style_options']['auto'] = '0';
   $handler->display->display_options['style_options']['autoPause'] = 1;
   $handler->display->display_options['style_options']['easing'] = '';
   $handler->display->display_options['style_options']['vertical'] = 0;
@@ -146,7 +146,7 @@ function amani_partners_views_default_views() {
   $handler->display->display_options['fields']['field_media']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_media']['type'] = 'file_rendered';
   $handler->display->display_options['fields']['field_media']['settings'] = array(
-    'file_view_mode' => 'max_height',
+    'file_view_mode' => 'partner_logo',
   );
   $handler->display->display_options['fields']['field_media']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_media']['delta_offset'] = '0';
