@@ -527,6 +527,29 @@ a.button:not(.launcher):not(.remove):not(.edit)
 
 // partners carousel
 #block-views-partners_carousel-block
+  a
+    &.jcarousel-next
+      display: inline-block
+      background: url('../images/icons/rotator_arrows.png') no-repeat -19px 0
+      height: 22px
+      width: 11px
+      text-indent: -999px
+      overflow: hidden
+      position: absolute
+      right: 20px
+      bottom: 20px
+      z-index: 99
+    &.jcarousel-prev
+      display: inline-block
+      background: url('../images/icons/rotator_arrows.png') no-repeat 0 0
+      height: 22px
+      width: 11px
+      text-indent: -999px
+      overflow: hidden
+      position: absolute
+      right: 50px
+      bottom: 20px
+      z-index: 99
   .view-content
     ul
       li.jcarousel-item
@@ -537,9 +560,12 @@ a.button:not(.launcher):not(.remove):not(.edit)
           display: table-cell
           vertical-align: middle
         img
-          width: 100%
-          height: auto
+          //width: 100%
+          max-width: 155px
           max-height: 100px
+          width: auto
+          height: auto
+          display: block
 
 // Partners carousel
 .view-partners-carousel
