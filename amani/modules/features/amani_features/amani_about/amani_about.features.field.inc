@@ -181,7 +181,7 @@ function amani_about_field_default_fields() {
           'enforce_ratio' => 1,
           'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
-          'resolution' => '200x150',
+          'resolution' => '800x600',
         ),
         'type' => 'imagefield_crop_widget',
         'weight' => '1',
