@@ -22,7 +22,7 @@ function amani_team_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Amani Team';
+  $handler->display->display_options['title'] = 'Team';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
@@ -147,7 +147,7 @@ function amani_team_views_default_views() {
   $handler->display->display_options['path'] = 'team';
   $translatables['team'] = array(
     t('Master'),
-    t('Amani Team'),
+    t('Team'),
     t('more'),
     t('Apply'),
     t('Reset'),
