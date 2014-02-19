@@ -1435,7 +1435,8 @@ a.button:not(.launcher):not(.remove):not(.edit) {
   box-shadow: 2px 3px 4px #c8c8c8;
   font-family: "Georgia";
   line-height: 1.4;
-  *zoom: 1; }
+  *zoom: 1;
+  /* List styles. */ }
   .page-node .node > .content:before, .page-node .node > .content:after {
     content: " ";
     display: table; }
@@ -1463,6 +1464,9 @@ a.button:not(.launcher):not(.remove):not(.edit) {
     float: left;
     margin: 1px 5px 1px 1px;
     padding: 1px; }
+  .page-node .node > .content ul, .page-node .node > .content ol {
+    margin-left: 0.5em;
+    padding-left: 1em; }
 
 .page-partners #block-system-main {
   background: white;
@@ -2556,6 +2560,9 @@ body.node-type-resource .node-partner .field-name-field-name {
   #contact_form_map .leaflet-control-container,
   #contact_form_map .leaflet-control-layers {
     display: none; }
+
+input[type=submit] {
+  padding: 3px 7px; }
 
 .node-incident_report-form .form-item {
   clear: both;
