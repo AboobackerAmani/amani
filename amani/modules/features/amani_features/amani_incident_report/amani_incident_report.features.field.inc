@@ -292,7 +292,7 @@ function amani_incident_report_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_incident_date',
-      'label' => 'Date of incident',
+      'label' => 'Date of report',
       'required' => 1,
       'settings' => array(
         'default_value' => 'now',
@@ -373,7 +373,7 @@ function amani_incident_report_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'incident_report',
-      'default_value' => NULL,
+      'default_value' => array(),
       'deleted' => '0',
       'description' => 'asdfasd asd fasdf asdfasd fad f',
       'display' => array(
@@ -1053,7 +1053,7 @@ Prof.',
   // Translatables
   // Included for use with string extractors like potx.
   t('Address');
-  t('Date of incident');
+  t('Date of report');
   t('Description');
   t('Email');
   t('Geolocation');
