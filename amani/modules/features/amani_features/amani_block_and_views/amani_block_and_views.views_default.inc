@@ -219,9 +219,9 @@ function amani_block_and_views_views_default_views() {
   $handler->display->display_options['fields']['field_image']['label'] = '';
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_image']['type'] = 'file_rendered';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'file_view_mode' => 'default',
+    'image_style' => 'medium',
+    'image_link' => 'content',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
