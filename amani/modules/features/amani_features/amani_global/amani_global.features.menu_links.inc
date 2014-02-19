@@ -51,7 +51,7 @@ function amani_global_menu_default_menu_links() {
     'menu_name' => 'menu-amani-admin-menu',
     'link_path' => 'admin/config/services/twitter/settings',
     'router_path' => 'admin/config/services/twitter/settings',
-    'link_title' => 'Twitter feed settings',
+    'link_title' => 'Configure Twitter feed',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -69,7 +69,7 @@ function amani_global_menu_default_menu_links() {
     'menu_name' => 'menu-amani-admin-menu',
     'link_path' => 'admin/config/system/googleanalytics',
     'router_path' => 'admin/config/system/googleanalytics',
-    'link_title' => 'Google analytics',
+    'link_title' => 'Configure Google analytics',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -105,7 +105,7 @@ function amani_global_menu_default_menu_links() {
     'menu_name' => 'menu-amani-admin-menu',
     'link_path' => 'admin/structure/block/manage/fb_likebox/0/configure',
     'router_path' => 'admin/structure/block/manage/%/%/configure',
-    'link_title' => 'Facebook feed settings',
+    'link_title' => 'Configure Facebook feed',
     'options' => array(
       'query' => array(
         'destination' => 'home',
@@ -126,7 +126,7 @@ function amani_global_menu_default_menu_links() {
     'menu_name' => 'menu-amani-admin-menu',
     'link_path' => 'admin/structure/contact',
     'router_path' => 'admin/structure/contact',
-    'link_title' => 'Contact page settings',
+    'link_title' => 'Configure Contact page',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -162,7 +162,7 @@ function amani_global_menu_default_menu_links() {
     'menu_name' => 'menu-amani-admin-menu',
     'link_path' => 'admin/structure/menu/manage/menu-social-media/list',
     'router_path' => 'admin/structure/menu/manage/%/list',
-    'link_title' => 'Social media icons',
+    'link_title' => 'Configure Social media icons',
     'options' => array(
       'query' => array(
         'destination' => 'home',
@@ -201,7 +201,7 @@ function amani_global_menu_default_menu_links() {
     'menu_name' => 'menu-amani-admin-menu',
     'link_path' => 'amani/site-info',
     'router_path' => 'amani/site-info',
-    'link_title' => 'Manage site logo and info',
+    'link_title' => 'Manage logo, tagline & office details',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -219,7 +219,7 @@ function amani_global_menu_default_menu_links() {
     'menu_name' => 'menu-amani-admin-menu',
     'link_path' => 'block/front-page-second-sidebar-bottom/edit',
     'router_path' => 'block/%/edit',
-    'link_title' => 'Newsletter settings',
+    'link_title' => 'Configure Newsletter link',
     'options' => array(
       'query' => array(
         'destination' => 'home',
@@ -240,7 +240,7 @@ function amani_global_menu_default_menu_links() {
     'menu_name' => 'menu-amani-admin-menu',
     'link_path' => 'redhen',
     'router_path' => 'redhen',
-    'link_title' => 'RedHen admin',
+    'link_title' => 'Configure RedHen CRM',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -672,33 +672,33 @@ function amani_global_menu_default_menu_links() {
   t('About');
   t('Add terms');
   t('Blog');
+  t('Configure Contact page');
+  t('Configure Facebook feed');
+  t('Configure Google analytics');
+  t('Configure Newsletter link');
+  t('Configure RedHen CRM');
+  t('Configure Social media icons');
+  t('Configure Twitter feed');
   t('Contact');
-  t('Contact page settings');
   t('Create users');
   t('Edit main menu links');
   t('Edit map settings');
   t('Facebook');
-  t('Facebook feed settings');
   t('Get Involved');
-  t('Google analytics');
   t('Google+');
   t('Image Gallery');
   t('LinkedIn');
+  t('Manage logo, tagline & office details');
   t('Manage site css');
-  t('Manage site logo and info');
   t('Map');
   t('My account');
   t('News & Events');
-  t('Newsletter settings');
   t('Pinterest');
   t('Programs');
-  t('RedHen admin');
   t('Resources');
   t('Rss');
-  t('Social media icons');
   t('Team');
   t('Twitter');
-  t('Twitter feed settings');
   t('Vimeo');
   t('YouTube');
   t('admin');
