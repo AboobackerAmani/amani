@@ -1719,6 +1719,9 @@ a.button:not(.launcher):not(.remove):not(.edit) {
     font-family: "Georgia"; }
     .page-about .view-about-page .views-row .views-field-body:last-child {
       margin-right: 0; }
+    .page-about .view-about-page .views-row .views-field-body ul, .page-about .view-about-page .views-row .views-field-body ol {
+      margin-left: 0.5em;
+      padding-left: 1em; }
     @media screen and (max-width: 600px) {
       .page-about .view-about-page .views-row .views-field-body {
         width: 100%; } }
