@@ -1,3 +1,5 @@
+
+
 <?php
 /**
  * @file
@@ -36,4 +38,19 @@ function amani_incident_report_field_formatter_view($entity_type, $entity, $fiel
   }
 
   return $element;
+}
+
+/**
+ * Implements hook_widget_form_alter().
+ *
+ * Make the geocoder address lookup button text more intuitive.
+ */
+function amani_incident_report_field_widget_form_alter(&$element, &$form_state, $context){
+  if (is_array($element) && isset($element[0]) && is_array($element[0])){
+    if (isset($element[0]['use_geocoder']) && is_array($element[0]['use_geocoder'])){
+      if (isset($element[0]['use_geocoder']['#value'])){
+        $element[0]['use_geocoder']['#value'] = t('Find Address on Map');
+      }
+    }
+  }
 }
