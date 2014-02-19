@@ -373,7 +373,7 @@ function amani_incident_report_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'incident_report',
-      'default_value' => array(),
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => 'asdfasd asd fasdf asdfasd fad f',
       'display' => array(
@@ -433,7 +433,7 @@ function amani_incident_report_field_default_fields() {
               ),
             ),
           ),
-          'openlayers_map' => 'geofield_widget_map',
+          'openlayers_map' => 'amani_geofield_widget_map',
           'use_geocoder' => 1,
         ),
         'type' => 'geofield_openlayers',
