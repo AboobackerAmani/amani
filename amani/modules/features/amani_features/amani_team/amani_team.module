@@ -5,3 +5,21 @@
  */
 
 include_once 'amani_team.features.inc';
+
+/**
+ * Node preprocessor.
+ */
+function amani_team_preprocess_node(&$vars) {
+
+  if ($vars['type'] == 'team') {
+    // Team member type and team title are displayed inline. We add a dash
+    // to separate the two fields only if neither field is empty.
+    if (isset($vars['content']['group_right']['field_team_member_type'])
+          && isset($vars['content']['group_right']['field_team_title'])) {
+
+      $vars['content']['group_right']['field_team_title'][0]['#markup'] =
+        '&nbsp;&nbsp;-&nbsp;&nbsp;'
+        . $vars['content']['group_right']['field_team_title'][0]['#markup'];
+    }
+  }
+}
