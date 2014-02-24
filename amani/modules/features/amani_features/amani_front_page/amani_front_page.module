@@ -5,3 +5,14 @@
  */
 
 include_once 'amani_front_page.features.inc';
+
+/**
+ * Page preprocessor.
+ */
+function amani_front_page_preprocess_page(&$vars) {
+
+  // Do not display title on homepage.
+  if ($vars['is_front']) {
+    drupal_set_title('');
+  }
+}
