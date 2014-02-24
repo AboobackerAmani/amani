@@ -40,6 +40,12 @@ function amani_team_views_default_views() {
     ),
   );
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_team_member_type' => 'field_team_member_type',
+    'field_team_title' => 'field_team_title',
+  );
+  $handler->display->display_options['row_options']['separator'] = ' - ';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
   /* Field: Content: Photo */
   $handler->display->display_options['fields']['field_team_image']['id'] = 'field_team_image';
   $handler->display->display_options['fields']['field_team_image']['table'] = 'field_data_field_team_image';
@@ -59,6 +65,18 @@ function amani_team_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Team member type */
+  $handler->display->display_options['fields']['field_team_member_type']['id'] = 'field_team_member_type';
+  $handler->display->display_options['fields']['field_team_member_type']['table'] = 'field_data_field_team_member_type';
+  $handler->display->display_options['fields']['field_team_member_type']['field'] = 'field_team_member_type';
+  $handler->display->display_options['fields']['field_team_member_type']['label'] = '';
+  $handler->display->display_options['fields']['field_team_member_type']['element_label_colon'] = FALSE;
+  /* Field: Content: Position */
+  $handler->display->display_options['fields']['field_team_title']['id'] = 'field_team_title';
+  $handler->display->display_options['fields']['field_team_title']['table'] = 'field_data_field_team_title';
+  $handler->display->display_options['fields']['field_team_title']['field'] = 'field_team_title';
+  $handler->display->display_options['fields']['field_team_title']['label'] = '';
+  $handler->display->display_options['fields']['field_team_title']['element_label_colon'] = FALSE;
   /* Field: Content: Bio */
   $handler->display->display_options['fields']['field_team_bio']['id'] = 'field_team_bio';
   $handler->display->display_options['fields']['field_team_bio']['table'] = 'field_data_field_team_bio';

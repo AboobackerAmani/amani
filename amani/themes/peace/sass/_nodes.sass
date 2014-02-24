@@ -199,6 +199,7 @@
         margin-bottom: 5px
       .views-field-field-team-bio
         font-family: "Georgia"
+        margin-top: 10px
       //.views-field-title
       .views-field-view-node
         text-align: right
@@ -542,13 +543,39 @@ body.node-type-resource,
       float: left
       margin-right: 20px
       margin-bottom: 10px
-    // Team specific
-    .field-name-field-team-title,
-      clear: left
-      margin-top: 20px
-    .field-name-field-name,
-      font-size: large
-      margin-bottom: 10px
+      @include span-columns(4)
+      img
+        width: 100%
+        height: auto
+      @include media($mobile)
+        @include fill-parent
+        @include omega
+    .field-group-div.group-right
+      @include span-columns(8)
+      @include omega
+      @include media($mobile)
+        @include fill-parent
+        @include omega
+  // Team specific
+  .node-team
+    .group-right
+      float: left
+      .field
+        margin-bottom: 2px
+      .field-name-field-name
+        font-size: large
+        margin-top: 0
+        margin-bottom: 5px
+      .field-name-field-team-title
+        margin-left: 10px
+        .field-items
+          .field-item:before
+            content: "\2013\00a0\00a0\00a0"
+      .field-name-field-team-title,
+      .field-name-field-team-member-type
+        display: inline-block
+      .field-name-field-team-bio
+        margin-top: 15px
 
 body.node-type-resource,
   .node-resource,
