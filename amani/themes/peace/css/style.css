@@ -3076,6 +3076,20 @@ body.node-type-resource .node-team .group-right {
   #contact_form_map .leaflet-control-layers {
     display: none; }
 
+.page-taxonomy #block-system-main .node-teaser {
+  width: 100%;
+  background: white;
+  padding: 30px;
+  box-shadow: 2px 3px 4px #c8c8c8;
+  margin-bottom: 30px;
+  overflow: hidden; }
+  .page-taxonomy #block-system-main .node-teaser:nth-child(1n) {
+    margin-right: 0; }
+  .page-taxonomy #block-system-main .node-teaser .links {
+    float: right; }
+  .page-taxonomy #block-system-main .node-teaser .content .field {
+    margin: 8px 0; }
+
 .node-incident_report-form .form-item {
   clear: both;
   overflow: hidden;

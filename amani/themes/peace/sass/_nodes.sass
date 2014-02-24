@@ -747,3 +747,20 @@ body.node-type-resource,
   .leaflet-control-container,
   .leaflet-control-layers
     display: none
+
+// Taxonomy pages
+.page-taxonomy
+  #block-system-main
+    .node-teaser
+      @include fill-parent()
+      @include omega(1n)
+      background: #fff
+      padding: $padding
+      box-shadow: 2px 3px 4px #C8C8C8
+      margin-bottom: $margin
+      overflow: hidden
+      .links
+        float: right
+      .content
+        .field
+          margin: 8px 0
