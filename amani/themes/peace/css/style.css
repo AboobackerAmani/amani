@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Font styles. */
 body {
   margin: 0;
@@ -1369,9 +1368,11 @@ a.button:not(.launcher):not(.remove):not(.edit) {
   .region-map-region-2x .block:nth-child(2n) {
     margin-right: 0; }
 
-@media screen and (max-width: 600px) {
-  #incident-map-default {
-    height: 300px !important; } }
+#incident-map-default {
+  height: 415px !important; }
+  @media screen and (max-width: 600px) {
+    #incident-map-default {
+      height: 300px !important; } }
 
 .region-map-region-3x {
   margin-top: 30px; }
@@ -1436,7 +1437,8 @@ a.button:not(.launcher):not(.remove):not(.edit) {
   box-shadow: 2px 3px 4px #c8c8c8;
   font-family: "Georgia";
   line-height: 1.4;
-  *zoom: 1; }
+  *zoom: 1;
+  /* List styles. */ }
   .page-node .node > .content:before, .page-node .node > .content:after {
     content: " ";
     display: table; }
@@ -1464,6 +1466,9 @@ a.button:not(.launcher):not(.remove):not(.edit) {
     float: left;
     margin: 1px 5px 1px 1px;
     padding: 1px; }
+  .page-node .node > .content ul, .page-node .node > .content ol {
+    margin-left: 0.5em;
+    padding-left: 1em; }
 
 .page-partners #block-system-main {
   background: white;
@@ -1717,6 +1722,9 @@ a.button:not(.launcher):not(.remove):not(.edit) {
     font-family: "Georgia"; }
     .page-about .view-about-page .views-row .views-field-body:last-child {
       margin-right: 0; }
+    .page-about .view-about-page .views-row .views-field-body ul, .page-about .view-about-page .views-row .views-field-body ol {
+      margin-left: 0.5em;
+      padding-left: 1em; }
     @media screen and (max-width: 600px) {
       .page-about .view-about-page .views-row .views-field-body {
         width: 100%; } }
@@ -3089,6 +3097,10 @@ body.node-type-resource .node-team .group-right {
     float: right; }
   .page-taxonomy #block-system-main .node-teaser .content .field {
     margin: 8px 0; }
+
+input[type=submit] {
+  padding: 3px 7px; }
+
 
 .node-incident_report-form .form-item {
   clear: both;

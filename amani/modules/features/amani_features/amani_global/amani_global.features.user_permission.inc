@@ -1111,6 +1111,20 @@ function amani_global_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: show format tips.
+  $permissions['show format tips'] = array(
+    'name' => 'show format tips',
+    'roles' => array(),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: show more format tips link.
+  $permissions['show more format tips link'] = array(
+    'name' => 'show more format tips link',
+    'roles' => array(),
+    'module' => 'better_formats',
+  );
+
   // Exported permission: translate interface.
   $permissions['translate interface'] = array(
     'name' => 'translate interface',

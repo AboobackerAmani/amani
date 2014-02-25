@@ -22,7 +22,7 @@ function amani_team_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Amani Team';
+  $handler->display->display_options['title'] = 'Team';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
@@ -54,9 +54,9 @@ function amani_team_views_default_views() {
   $handler->display->display_options['fields']['field_team_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_team_image']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_team_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_team_image']['type'] = 'file_rendered';
   $handler->display->display_options['fields']['field_team_image']['settings'] = array(
-    'file_view_mode' => 'default',
+    'image_style' => 'large',
+    'image_link' => 'content',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -165,7 +165,7 @@ function amani_team_views_default_views() {
   $handler->display->display_options['path'] = 'team';
   $translatables['team'] = array(
     t('Master'),
-    t('Amani Team'),
+    t('Team'),
     t('more'),
     t('Apply'),
     t('Reset'),
