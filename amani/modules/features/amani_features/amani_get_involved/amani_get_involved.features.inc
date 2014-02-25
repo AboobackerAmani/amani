@@ -26,6 +26,38 @@ function amani_get_involved_views_api() {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function amani_get_involved_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: get_involved__207x160_.
+  $styles['get_involved__207x160_'] = array(
+    'name' => 'get_involved__207x160_',
+    'label' => 'Get Involved (207x160)',
+    'effects' => array(
+      1 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '207',
+          'height' => '160',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function amani_get_involved_node_info() {

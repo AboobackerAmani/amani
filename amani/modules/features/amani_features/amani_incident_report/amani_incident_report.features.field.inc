@@ -292,7 +292,7 @@ function amani_incident_report_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_incident_date',
-      'label' => 'Date of incident',
+      'label' => 'Date of report',
       'required' => 1,
       'settings' => array(
         'default_value' => 'now',
@@ -433,7 +433,7 @@ function amani_incident_report_field_default_fields() {
               ),
             ),
           ),
-          'openlayers_map' => 'geofield_widget_map',
+          'openlayers_map' => 'amani_geofield_widget_map',
           'use_geocoder' => 1,
         ),
         'type' => 'geofield_openlayers',
@@ -1053,7 +1053,7 @@ Prof.',
   // Translatables
   // Included for use with string extractors like potx.
   t('Address');
-  t('Date of incident');
+  t('Date of report');
   t('Description');
   t('Email');
   t('Geolocation');

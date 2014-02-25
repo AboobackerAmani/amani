@@ -40,6 +40,13 @@ function amani_global_context_default_contexts() {
         ),
       ),
     ),
+    'context_metadata' => array(
+      'metadata_title' => 'Search and Manage Content',
+      'metadata_description' => '',
+      'metadata_keywords' => '',
+      'metadata_canonical' => '',
+      'metadata_h1' => 'Search and Manage Content',
+    ),
   );
   $context->condition_mode = 0;
 

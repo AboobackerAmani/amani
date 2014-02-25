@@ -1,4 +1,4 @@
-// _nodes.sass 
+// _nodes.sass
 
 .page-node
   .node
@@ -21,19 +21,23 @@
         .openlayers-map,
         .openlayers-container
           width: 100% !important
-      .field-name-field-tags 
-        .field-label 
+      .field-name-field-tags
+        .field-label
           margin-bottom: 0px !important
           margin-top: 0px !important
           float: left
           display: inline
-      .field-name-field-tags 
-        .field-item 
+      .field-name-field-tags
+        .field-item
           background-color: #EEEEEE
           border: 1px dashed #E1E1E1
           float: left
           margin: 1px 5px 1px 1px
           padding: 1px
+      /* List styles.
+      ul, ol
+        margin-left: .5em
+        padding-left: 1em
 
 // Partners
 .page-partners,
@@ -107,11 +111,11 @@
     @include media($mobile)
       .pager
         padding: 0px
-      .date-nav 
+      .date-nav
         padding-bottom: 0px !important
-      .views-row 
+      .views-row
         width: 47.804% !important
-        margin-bottom: 10px !important     
+        margin-bottom: 10px !important
 
 // Incident reports
 .page-incident-reports
@@ -265,6 +269,9 @@
         @include span-columns(10)
         @include omega()
         font-family: "Georgia"
+        ul, ol
+          margin-left: .5em
+          padding-left: 1em
         @include media($motab)
           @include fill-parent
 
@@ -573,7 +580,7 @@ body.node-type-resource,
 
 body.node-type-resource,
   .node-resource,
-    
+
 // Contact page
 .page-contact
   .form-item

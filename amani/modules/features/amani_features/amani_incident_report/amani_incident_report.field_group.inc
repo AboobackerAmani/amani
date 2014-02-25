@@ -77,7 +77,7 @@ function amani_incident_report_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_content';
   $field_group->data = array(
-    'label' => 'Incident',
+    'label' => 'Map Report',
     'weight' => '1',
     'children' => array(
       0 => 'field_description',
@@ -88,7 +88,7 @@ function amani_incident_report_field_group_info() {
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
-      'label' => 'Incident',
+      'label' => 'Map Report',
       'instance_settings' => array(
         'required_fields' => 1,
         'classes' => '',
@@ -112,8 +112,8 @@ function amani_incident_report_field_group_info() {
     'label' => 'Media',
     'weight' => '2',
     'children' => array(
-      0 => 'field_links',
-      1 => 'field_incident_media',
+      0 => 'field_incident_media',
+      1 => 'field_links',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
