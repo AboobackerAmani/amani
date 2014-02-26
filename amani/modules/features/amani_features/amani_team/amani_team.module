@@ -21,5 +21,16 @@ function amani_team_preprocess_node(&$vars) {
         '&nbsp;&nbsp;-&nbsp;&nbsp;'
         . $vars['content']['group_right']['field_team_title'][0]['#markup'];
     }
+
+    if ($vars['view_mode'] == 'teaser') {
+      // Set page to true so title is not displayed. For team nodes, field_name
+      // is used as title (auto-generated with auto_nodetitle), and it is
+      // easier to place for theming.
+      $vars['page'] = TRUE;
+      // Make field_name link to node.
+      $name = $vars['content']['group_right']['field_name'][0]['#markup'];
+      $path = 'node/' . $vars['nid'];
+      $vars['content']['group_right']['field_name'][0]['#markup'] = l($name, $path);
+    }
   }
 }

@@ -3097,10 +3097,52 @@ body.node-type-resource .node-team .group-right {
     float: right; }
   .page-taxonomy #block-system-main .node-teaser .content .field {
     margin: 8px 0; }
+  .page-taxonomy #block-system-main .node-teaser .content .field-name-field-team-image,
+  .page-taxonomy #block-system-main .node-teaser .content .field-name-field-image {
+    clear: none;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 31.91489%;
+    max-width: 220px; }
+    .page-taxonomy #block-system-main .node-teaser .content .field-name-field-team-image:last-child,
+    .page-taxonomy #block-system-main .node-teaser .content .field-name-field-image:last-child {
+      margin-right: 0; }
+    .page-taxonomy #block-system-main .node-teaser .content .field-name-field-team-image img,
+    .page-taxonomy #block-system-main .node-teaser .content .field-name-field-image img {
+      width: 100%;
+      height: auto; }
+    @media screen and (max-width: 480px) {
+      .page-taxonomy #block-system-main .node-teaser .content .field-name-field-team-image,
+      .page-taxonomy #block-system-main .node-teaser .content .field-name-field-image {
+        width: 100%;
+        margin-right: 0; } }
+  .page-taxonomy #block-system-main .node-teaser .content .field-group-div.group-right {
+    float: left;
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 65.95745%;
+    margin-right: 0; }
+    .page-taxonomy #block-system-main .node-teaser .content .field-group-div.group-right:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 480px) {
+      .page-taxonomy #block-system-main .node-teaser .content .field-group-div.group-right {
+        width: 100%;
+        margin-right: 0; } }
+  .page-taxonomy #block-system-main .node-teaser .content .field-name-field-name {
+    font-family: "bariol_regularregular";
+    text-transform: uppercase;
+    margin-bottom: 5px; }
+  .page-taxonomy #block-system-main .node-teaser .content .field-name-field-team-bio {
+    font-family: "Georgia";
+    margin-top: 10px; }
 
 input[type=submit] {
   padding: 3px 7px; }
-
 
 .node-incident_report-form .form-item {
   clear: both;

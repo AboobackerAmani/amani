@@ -771,3 +771,31 @@ body.node-type-resource,
       .content
         .field
           margin: 8px 0
+        .field-name-field-team-image,
+        .field-name-field-image,
+          clear: none
+          float: left
+          margin-right: 20px
+          margin-bottom: 10px
+          @include span-columns(4)
+          max-width: 220px
+          img
+            width: 100%
+            height: auto
+          @include media($mobile)
+            @include fill-parent
+            @include omega
+        .field-group-div.group-right
+          float: left
+          @include span-columns(8)
+          @include omega
+          @include media($mobile)
+            @include fill-parent
+            @include omega
+        .field-name-field-name
+          font-family: "bariol_regularregular"
+          text-transform: uppercase
+          margin-bottom: 5px
+        .field-name-field-team-bio
+          font-family: "Georgia"
+          margin-top: 10px
