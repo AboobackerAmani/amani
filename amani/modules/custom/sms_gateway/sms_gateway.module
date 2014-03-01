@@ -1,0 +1,15 @@
+<?php
+function sms_gateway_menu() {
+	$items = array();
+	$items['sms_gateway/rec'] = array(
+		'title' => 'trial',
+		'page callback' => 'sms_gateway_rec',
+		'access callback'   => true,
+		'type' => MENU_CALLBACK,
+	);
+	return $items;
+}
+
+function sms_gateway_rec() {
+	die(json_encode(array('success'=>'true')));
+}
