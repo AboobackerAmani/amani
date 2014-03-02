@@ -11,5 +11,46 @@ function sms_gateway_menu() {
 }
 
 function sms_gateway_rec() {
+  sms_gate_create_map_record(array('foo' => 'bar'));
 	die(json_encode(array('success'=>'true')));
 }
+
+
+function sms_gate_create_map_record($sms_stuff){
+
+  // entity_create replaces the procedural steps in the first example of
+  // creating a new object $node and setting its 'type' and uid property
+  $values = array(
+    'type' => 'incident_report',
+    'uid' => 1,  /// user id here
+    'status' => 0,  // 0 = unpublished
+    'comment' => 0,
+    'promote' => 0,
+  );
+  $entity = entity_create('node', $values);
+
+  // The entity is now created, but we have not yet simplified use of it.
+  // Now create an entity_metadata_wrapper around the new node entity
+  // to make getting and setting values easier
+  $ewrapper = entity_metadata_wrapper('node', $entity);
+  // Using the wrapper, we do not have to worry about telling Drupal
+  // what language we are using. The Entity API handles that for us.
+  $ewrapper->title->set('SMS Message: ' .time());
+
+  // Setting the body is a bit different from other properties or fields
+  // because the body can have both its complete value and its
+  // summary
+  $my_body_content = 'A bunch of text about things that interest me';
+  $ewrapper->body->set(array('value' => $my_body_content));
+  $ewrapper->body->summary->set('Things that interest me');
+
+  // SEE https://drupal.org/node/1388922 for more field examples.
+
+  // Now just save the wrapper and the entity
+  // There is some suggestion that the 'true' argument is necessary to
+  // the entity save method to circumvent a bug in Entity API. If there is
+  // such a bug, it almost certainly will get fixed, so make sure to check.
+  $ewrapper->save();
+}
+
+
