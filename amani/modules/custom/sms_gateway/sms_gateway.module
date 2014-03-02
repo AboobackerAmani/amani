@@ -1,56 +1,183 @@
 <?php
 function sms_gateway_menu() {
 	$items = array();
-	$items['sms_gateway/rec'] = array(
+
+	//callback
+	$items['sms_gateway'] = array(
 		'title' => 'trial',
 		'page callback' => 'sms_gateway_rec',
 		'access callback'   => true,
 		'type' => MENU_CALLBACK,
 	);
+
+	//configuration
+	$items['admin/config/sms_gateway'] = array(
+		'title' => 'SMS Gateway Settings',
+		'description' => 'Configuration settings of Amani SMS Gateway',
+		'page callback' => 'drupal_get_form',
+		'page arguments' => array( 'sms_gateway_admin' ),
+		'access arguments' => array( 'administer sms_gateway settings' ),
+		'type' => MENU_NORMAL_ITEM,
+	);
+
 	return $items;
 }
 
 function sms_gateway_rec() {
-  sms_gate_create_map_record(array('foo' => 'bar'));
-	die(json_encode(array('success'=>'true')));
+
+	$record_keys = array('secret','from','message','sent_timestamp','sent_to','message_id');
+
+	$sms_record = array_intersect_key($_REQUEST, array_flip($record_keys));
+
+	$error = false;
+
+	//input sanitation
+	foreach($sms_record as &$r) {
+		$r = htmlspecialchars($r);
+	}
+
+	//simple validation
+	foreach($record_keys as &$k) {
+		if (!isset($sms_record[$k]) ) {
+			$error = '"'.$k.'" is missing in API call';
+			break;
+		}
+	}
+
+
+	//TODO API Secret Check
+	if ($error === false) {
+		if ( variable_get( 'sms_gateway_apisecret' ) === $sms_record['secret'] ) {
+			try {
+				sms_gateway_create_map_record( $sms_record );
+			}
+			catch (Exception $e) {
+				$error = $e->getMessage();
+			}
+		}
+		else {
+			$error = "API Secret doesn't match";
+		}
+	}
+
+	/* success:'false',message:'message' */
+	die( json_encode(
+			array(
+				'payload'=>  array(
+					'success' => ( empty( $error ) ? 'true' : 'false' ),
+					'error' => ( empty( $error ) ? NULL : $error ) )
+				)
+			)
+		);
+	}
+
+	function sms_gateway_create_map_record( $sms_record ) {
+
+		// entity_create replaces the procedural steps in the first example of
+		// creating a new object $node and setting its 'type' and uid property
+		$values = array(
+			'type' => 'incident_report',
+			'uid' => 1,  /// user id here
+			'status' => 0,  // 0 = unpublished
+			'comment' => 0,
+			'promote' => 0,
+		);
+
+		$entity = entity_create( 'node', $values );
+
+		$ewrapper = entity_metadata_wrapper( 'node', $entity );
+
+		$ewrapper->title->set( 'Map Record via SMS' );
+		$ewrapper->field_description->set( $sms_record['message'] );
+
+		//field_phone
+		if (!variable_get('sms_gateway_anonymous',true)) {
+			$ewrapper->field_phone->set($sms_record['from']);
+		}
+
+		//field_incident_date
+		$timezone = variable_get( 'date_default_timezone', '' );
+
+		$entity->field_incident_date[LANGUAGE_NONE][0] = array(
+			'value' => date( 'Y-m-d H:i:s', $sms_record['sent_timestamp']),
+			'timezone' => empty( $timezone ) ? 'UTC' : $timezone,
+			'timezone_db' => 'UTC',
+		);
+
+		//TODO a geocoding API (such as https://developers.google.com/maps/documentation/geocoding/)
+		//can be installed as a RESTful service to peacegeeks HQ server in order to get
+		//automatic lat/long detection
+
+		//TODO keywords can be defined and mapped for report filters.
+		//field_incident_report_type
+
+		$ewrapper->save();
+
+		//TODO what could go wrong within drupal internals? throw exception.
+		//throw new Exception('spideys senses are tingling');
+	}
+
+	function sms_gateway_admin() {
+		global $base_url;
+
+		$form = array();
+
+		$form['sms_gateway_apisecret'] = array(
+			'#type' => 'textfield',
+			'#title' => t( 'Secret Key' ),
+			'#default_value' => variable_get( 'sms_gateway_apisecret', user_password( 6 ) ),
+			'#size' => 32,
+			'#maxlength' => 32,
+			'#minlength' => 6,
+			'#description' => t( "Please choose a fairly complicated password as API Secret Key for SMSSync Android App.<br/>Usage of this key is explained in \"How to setup\" section which can be found below." ),
+			'#required' => true,
+		);
+
+		$form['sms_gateway_anonymous'] = array(
+			'#type' => 'checkbox',
+			'#title' => t( 'Anonymous Mode' ),
+			'#default_value' => variable_get( 'sms_gateway_anonymous', true ),
+			'#description' => t( "When unchecked, site will start saving phone numbers of reporters on submitter section of incident records" )
+		);
+
+		$form['sms_gateway_installation'] = array(
+			'#type' => 'fieldset',
+			'#title' => t( 'How to setup?' ),
+			'#weight' => 5,
+			'#description' => t('
+				<ul>
+					<li>Set an API Secret key for your application from above form and hit submit. </li>
+					<li>Install <a href="https://play.google.com/store/apps/details?id=org.addhen.smssync">SMSSync</a> App on receiver phone;
+					the phone will need internet connection and will be used as a gateway.</li>
+					<li>Run the application</li>
+					<li>From Menu, select Sync URL</li>
+					<li>Tap the plus (+) sign which can be found at the top-right of the screen in order to setup a sms gateway service.</li>
+					<li>Title field: Enter a title of your choice.</li>
+					<li>Secret key field: Enter your secret <span style="font-family:Courier New, monospace;padding:5px;background-color:#ddd;border:1px dashed #ccc">'.variable_get('sms_gateway_apisecret').'</span></li>
+					<li>Keyword field: (optional) You may enter a keyword for received messages. Only messages that contain this word will be sent to the site.</li>
+					<li>Sync URL field: Enter <span style="font-family:Courier New, monospace;padding:5px;background-color:#ddd;border:1px dashed #ccc">'.$base_url.'/sms_gateway</a></li>
+					<li>Tap OK.</li>
+					<li>To enable your gateway service, tap the checkbox near "Start SMSSync Service".</li>
+					<li>Your phone will now save received text messages as incident reports.</li>
+				</ul>
+			'),
+			'#collapsible' => variable_get( 'sms_gateway_anonymous', true ),
+			'#collapsed' => true
+		);
+
+
+		return system_settings_form( $form );
+	}
+
+	/*
+auto min/max?
+function onthisdate_admin_validate($form, &$form_state) {
+  $maxdisp = $form_state['values']['sms_gate_apisecret'];
+  if (strlen($maxdisp) < 6) {
+    form_set_error('sms_gate_apisecret', t('Secret key must be at least 6 characters long'));
+  }
 }
+*/
 
 
-function sms_gate_create_map_record($sms_stuff){
-
-  // entity_create replaces the procedural steps in the first example of
-  // creating a new object $node and setting its 'type' and uid property
-  $values = array(
-    'type' => 'incident_report',
-    'uid' => 1,  /// user id here
-    'status' => 0,  // 0 = unpublished
-    'comment' => 0,
-    'promote' => 0,
-  );
-  $entity = entity_create('node', $values);
-
-  // The entity is now created, but we have not yet simplified use of it.
-  // Now create an entity_metadata_wrapper around the new node entity
-  // to make getting and setting values easier
-  $ewrapper = entity_metadata_wrapper('node', $entity);
-  // Using the wrapper, we do not have to worry about telling Drupal
-  // what language we are using. The Entity API handles that for us.
-  $ewrapper->title->set('SMS Message: ' .time());
-
-  // Setting the body is a bit different from other properties or fields
-  // because the body can have both its complete value and its
-  // summary
-  $my_body_content = 'A bunch of text about things that interest me';
-  $ewrapper->body->set(array('value' => $my_body_content));
-  $ewrapper->body->summary->set('Things that interest me');
-
-  // SEE https://drupal.org/node/1388922 for more field examples.
-
-  // Now just save the wrapper and the entity
-  // There is some suggestion that the 'true' argument is necessary to
-  // the entity save method to circumvent a bug in Entity API. If there is
-  // such a bug, it almost certainly will get fixed, so make sure to check.
-  $ewrapper->save();
-}
-
-
+	
