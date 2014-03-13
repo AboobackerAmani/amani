@@ -255,7 +255,7 @@ function amani_site_information_settings($form, &$form_state, $key = 'peace') {
     '#type' => 'textfield',
     '#title' => t('Lat'),
     '#default_value' => variable_get('site_address_lat', 0.0),
-    '#description' => t('Your organizations address latitude. <a href="@url">convert your address</a>', array('@url' => url('http://www.latlong.net/convert-address-to-lat-long.html'))),
+    '#description' => t('Your organizations address latitude. <a target="_blank" href="@url">convert your address</a>', array('@url' => url('http://www.latlong.net/convert-address-to-lat-long.html'))),
     '#required' => FALSE,
   );
 
@@ -263,7 +263,7 @@ function amani_site_information_settings($form, &$form_state, $key = 'peace') {
     '#type' => 'textfield',
     '#title' => t('Long'),
     '#default_value' => variable_get('site_address_long', 0.0),
-    '#description' => t('Your organizations address longtitude. <a href="@url">convert your address</a>', array('@url' => url('http://www.latlong.net/convert-address-to-lat-long.html'))),
+    '#description' => t('Your organizations address longtitude. <a target="_blank" href="@url">convert your address</a>', array('@url' => url('http://www.latlong.net/convert-address-to-lat-long.html'))),
     '#required' => FALSE,
   );
 
