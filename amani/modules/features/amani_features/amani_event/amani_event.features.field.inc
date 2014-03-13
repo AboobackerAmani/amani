@@ -70,7 +70,7 @@ function amani_event_field_default_fields() {
             'trim_length' => 600,
           ),
           'type' => 'text_summary_or_trimmed',
-          'weight' => '2',
+          'weight' => '3',
         ),
       ),
       'entity_type' => 'node',
@@ -93,87 +93,6 @@ function amani_event_field_default_fields() {
         'weight' => '12',
       ),
       'widget_type' => 'text_textarea_with_summary',
-    ),
-  );
-
-  // Exported field: 'node-event-field_additional_information'.
-  $fields['node-event-field_additional_information'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_additional_information',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(
-        'profile2_private' => FALSE,
-      ),
-      'translatable' => '0',
-      'type' => 'text_long',
-    ),
-    'field_instance' => array(
-      'bundle' => 'event',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '5',
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'node_gallery_node_thumbnail' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_additional_information',
-      'label' => 'Additional information',
-      'required' => 0,
-      'settings' => array(
-        'text_processing' => '0',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'rows' => '5',
-        ),
-        'type' => 'text_textarea',
-        'weight' => '11',
-      ),
     ),
   );
 
@@ -236,7 +155,7 @@ function amani_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '8',
         ),
       ),
       'entity_type' => 'node',
@@ -321,7 +240,7 @@ function amani_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '9',
         ),
       ),
       'entity_type' => 'node',
@@ -407,7 +326,7 @@ function amani_event_field_default_fields() {
           'weight' => '0',
         ),
         'teaser' => array(
-          'label' => 'inline',
+          'label' => 'hidden',
           'module' => 'date',
           'settings' => array(
             'format_type' => 'long',
@@ -418,7 +337,7 @@ function amani_event_field_default_fields() {
             'show_repeat_rule' => 'hide',
           ),
           'type' => 'date_default',
-          'weight' => '1',
+          'weight' => '2',
         ),
       ),
       'entity_type' => 'node',
@@ -533,7 +452,7 @@ function amani_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '7',
         ),
       ),
       'entity_type' => 'node',
@@ -635,10 +554,9 @@ function amani_event_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'inline',
-          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '3',
+          'type' => 'hidden',
+          'weight' => '4',
         ),
       ),
       'entity_type' => 'node',
@@ -711,7 +629,7 @@ function amani_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '6',
         ),
       ),
       'entity_type' => 'node',
@@ -790,7 +708,7 @@ function amani_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '5',
         ),
       ),
       'entity_type' => 'node',
@@ -865,10 +783,14 @@ function amani_event_field_default_fields() {
           'weight' => 0,
         ),
         'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'label' => 'hidden',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => 'content',
+            'image_style' => 'medium',
+          ),
+          'type' => 'image',
+          'weight' => '0',
         ),
       ),
       'entity_type' => 'node',
@@ -960,7 +882,7 @@ function amani_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '10',
         ),
       ),
       'entity_type' => 'node',
@@ -1061,7 +983,7 @@ function amani_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '5',
+          'weight' => '11',
         ),
       ),
       'entity_type' => 'node',
@@ -1085,7 +1007,6 @@ function amani_event_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Additional information');
   t('Address');
   t('Contact');
   t('Date');
