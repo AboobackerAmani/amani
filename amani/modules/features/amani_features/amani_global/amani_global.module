@@ -473,3 +473,36 @@ function amani_theme_settings_submit($form, &$form_state) {
 
   cache_clear_all();
 }
+
+/**
+ * Page preprocessor.
+ */
+function amani_global_preprocess_page(&$vars) {
+
+  // Add breadcrumbs on some taxonomy term pages.
+  if (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))) {
+    $term = taxonomy_term_load(arg(2));
+
+    $breadcrumb = drupal_set_breadcrumb();
+
+    switch ($term->vocabulary_machine_name) {
+      case 'event_type':
+        $breadcrumb[] = l(t('News & Events'), 'news-and-events');
+        break;
+      case 'project_location':
+      case 'project_status':
+        $breadcrumb[] = l(t('Programs'), 'programs');
+        break;
+      case 'resource_type':
+      case 'theme':
+        $breadcrumb[] = l(t('Resources'), 'resources');
+        break;
+      case 'team_member_type':
+        $breadcrumb[] = l(t('About'), 'about');
+        $breadcrumb[] = l(t('Team'), 'team');
+        break;
+    }
+
+    drupal_set_breadcrumb($breadcrumb);
+  }
+}
