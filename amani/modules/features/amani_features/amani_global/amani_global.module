@@ -251,11 +251,23 @@ function amani_site_information_settings($form, &$form_state, $key = 'peace') {
     '#required' => FALSE,
   );
 
+  $options = array(
+    'attributes' => array(
+      'class' => array('colorbox-load'),
+    ),
+    'query' => array(
+      'width' => '800',
+      'height' => '500',
+      'iframe' => 'true',
+    ),
+  );
+  $link = l(t('Convert your address'), 'http://www.latlong.net/convert-address-to-lat-long.html', $options);
+
   $form['site_information']['site_address_lat'] = array(
     '#type' => 'textfield',
     '#title' => t('Lat'),
     '#default_value' => variable_get('site_address_lat', 0.0),
-    '#description' => t('Your organizations address latitude. <a target="_blank" href="@url">convert your address</a>', array('@url' => url('http://www.latlong.net/convert-address-to-lat-long.html'))),
+    '#description' => t('Your organizations address latitude. !link', array('!link' => $link)),
     '#required' => FALSE,
   );
 
@@ -263,7 +275,7 @@ function amani_site_information_settings($form, &$form_state, $key = 'peace') {
     '#type' => 'textfield',
     '#title' => t('Long'),
     '#default_value' => variable_get('site_address_long', 0.0),
-    '#description' => t('Your organizations address longtitude. <a target="_blank" href="@url">convert your address</a>', array('@url' => url('http://www.latlong.net/convert-address-to-lat-long.html'))),
+    '#description' => t('Your organizations address longtitude. !link', array('!link' => $link)),
     '#required' => FALSE,
   );
 
