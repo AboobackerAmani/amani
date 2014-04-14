@@ -311,7 +311,7 @@ function amani_incident_report_field_default_fields() {
           'label_position' => 'above',
           'repeat_collapsed' => 0,
           'text_parts' => array(),
-          'year_range' => '-3:+3',
+          'year_range' => '-99:+3',
         ),
         'type' => 'date_popup',
         'weight' => '3',
