@@ -10,7 +10,7 @@
 function amani_programs_campaigns_taxonomy_default_vocabularies() {
   return array(
     'project_location' => array(
-      'name' => 'Project Location',
+      'name' => 'Program Location',
       'machine_name' => 'project_location',
       'description' => 'Where this program or campaign is taking place',
       'hierarchy' => '0',
