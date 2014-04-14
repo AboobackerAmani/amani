@@ -82,12 +82,12 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-47',
   );
-  // Exported menu link: menu-amani-admin-menu:admin/people/create
-  $menu_links['menu-amani-admin-menu:admin/people/create'] = array(
+  // Exported menu link: menu-amani-admin-menu:admin/people
+  $menu_links['menu-amani-admin-menu:admin/people'] = array(
     'menu_name' => 'menu-amani-admin-menu',
-    'link_path' => 'admin/people/create',
-    'router_path' => 'admin/people/create',
-    'link_title' => 'Create users',
+    'link_path' => 'admin/people',
+    'router_path' => 'admin/people',
+    'link_title' => 'Manage users',
     'options' => array(
       'attributes' => array(
         'title' => '',
