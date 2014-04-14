@@ -183,7 +183,7 @@ function amani_global_menu_default_menu_links() {
     'menu_name' => 'menu-amani-admin-menu',
     'link_path' => 'admin/structure/taxonomy',
     'router_path' => 'admin/structure/taxonomy',
-    'link_title' => 'Add terms',
+    'link_title' => 'Manage drop down lists',
     'options' => array(
       'attributes' => array(
         'title' => '',
