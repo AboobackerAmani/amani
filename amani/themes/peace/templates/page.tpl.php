@@ -50,6 +50,9 @@
     <section id="content-top" class="clearfix" class="container">
       <div class="container-inner">
         <?php if ($page['home_content_top_rotator']): ?>
+          <?php if ($breadcrumb): ?>
+            <?php print $breadcrumb; ?>
+          <?php endif; ?>
           <?php print render($page['home_content_top_rotator']); ?>
         <?php endif; ?>
 
@@ -72,7 +75,9 @@
       <?php if ($breadcrumb || $title|| $messages || $tabs || $action_links): ?>
         <div id="content-header">
 
-          <?php print $breadcrumb; ?>
+          <?php if ($breadcrumb && !$page['home_content_top_rotator']): ?>
+            <?php print $breadcrumb; ?>
+         <?php endif; ?>
 
           <?php if ($page['highlighted']): ?>
             <div id="highlighted"><?php print render($page['highlighted']) ?></div>
