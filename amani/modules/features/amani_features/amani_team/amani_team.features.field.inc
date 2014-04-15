@@ -540,6 +540,81 @@ Prof.',
     ),
   );
 
+  // Exported field: 'node-team-field_team_display_on_page'.
+  $fields['node-team-field_team_display_on_page'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_team_display_on_page',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => '',
+          1 => 'Display on team page',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_boolean',
+    ),
+    'field_instance' => array(
+      'bundle' => 'team',
+      'default_value' => array(
+        0 => array(
+          'value' => 1,
+        ),
+      ),
+      'deleted' => '0',
+      'description' => 'If this box is checked, the team member will show up on the team page. Otherwise the will only show up if you click through to the full member type list.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => 9,
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_team_display_on_page',
+      'label' => 'Display on team page?',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(
+          'display_label' => 0,
+        ),
+        'type' => 'options_onoff',
+        'weight' => '11',
+      ),
+    ),
+  );
+
   // Exported field: 'node-team-field_team_image'.
   $fields['node-team-field_team_image'] = array(
     'field_config' => array(
@@ -806,8 +881,10 @@ Prof.',
   // Translatables
   // Included for use with string extractors like potx.
   t('Bio');
+  t('Display on team page?');
   t('Display ranking');
   t('Email');
+  t('If this box is checked, the team member will show up on the team page. Otherwise the will only show up if you click through to the full member type list.');
   t('Name');
   t('Phone');
   t('Photo');

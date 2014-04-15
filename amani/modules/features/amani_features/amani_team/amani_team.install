@@ -6,3 +6,19 @@
 function amani_team_update_7000() {
   field_delete_field('field_phone');
 }
+
+/**
+ * Add values for the new "Display on team page" field.
+ */
+function amani_team_update_7001() {
+    $result = db_query("SELECT * FROM {node} WHERE type = 'team'");
+    foreach ($result as $row) {
+      $nodes[$row->nid] = $row;
+    }
+
+    foreach ($nodes as $nid => $row){
+      $result = db_query("INSERT INTO {field_data_field_team_display_on_page} VALUES ('node', 'team',0, :nid, :vid, 'und', 0, 1)", array(':nid' => $row->nid, ':vid' => $row->vid));
+      $result = db_query("INSERT INTO {field_revision_field_team_display_on_page} VALUES ('node', 'team',0, :nid, :vid, 'und', 0, 1)", array(':nid' => $row->nid, ':vid' => $row->vid));
+    }
+
+}

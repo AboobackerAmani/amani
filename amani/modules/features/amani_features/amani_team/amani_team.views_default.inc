@@ -34,7 +34,7 @@ function amani_team_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
-      'field' => 'field_team_contact_type',
+      'field' => 'field_team_member_type',
       'rendered' => 1,
       'rendered_strip' => 0,
     ),
@@ -70,6 +70,7 @@ function amani_team_views_default_views() {
   $handler->display->display_options['fields']['field_team_member_type']['table'] = 'field_data_field_team_member_type';
   $handler->display->display_options['fields']['field_team_member_type']['field'] = 'field_team_member_type';
   $handler->display->display_options['fields']['field_team_member_type']['label'] = '';
+  $handler->display->display_options['fields']['field_team_member_type']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_team_member_type']['element_label_colon'] = FALSE;
   /* Field: Content: Position */
   $handler->display->display_options['fields']['field_team_title']['id'] = 'field_team_title';

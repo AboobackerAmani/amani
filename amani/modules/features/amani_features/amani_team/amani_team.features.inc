@@ -35,7 +35,7 @@ function amani_team_views_api() {
 function amani_team_node_info() {
   $items = array(
     'team' => array(
-      'name' => t('Team'),
+      'name' => t('Team member'),
       'base' => 'node_content',
       'description' => t('A team member picture and bio for the team page'),
       'has_title' => '1',
