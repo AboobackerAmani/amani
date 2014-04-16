@@ -9,14 +9,18 @@
  */
 function uuid_bean_features_export_options() {
   $options = array();
-  if (module_exists("bean_uuid")) {
-    $query = 'SELECT b.bid, b.title, b.type, b.uuid
-      FROM {bean} b ORDER BY b.type, b.title ASC';
-    $results = db_query($query);
-    foreach ($results as $bean) {
-      $options[$bean->uuid] = t('@type: @title', array(
+  $types = variable_get('uuid_features_entity_bean', FALSE);
+  if (module_exists("bean_uuid") && !empty($types)) {
+    $query = db_select('bean', 'n');
+    $query->fields('n', array('bid', 'delta', 'type', 'uuid'))
+      ->condition('type', $types)
+      ->orderBy('type')
+      ->orderBy('delta', 'ASC');
+    $beans = $query->execute()->fetchAll();
+    foreach ($beans as $bean) {
+      $options[$bean->uuid] = t('@type: @delta', array(
         '@type' => $bean->type,
-        '@title' => $bean->title,
+        '@delta' => $bean->delta,
       ));
     }
   }
@@ -90,13 +94,17 @@ function uuid_bean_features_export_render($module, $data) {
     if (!count($beans)) {
       continue;
     }
-    $export = reset($beans);
+    $first_bean = reset($beans);
+    $export = clone $first_bean;
 
     // Unset some things that dont need to be exported.
     unset($export->bid);
     unset($export->rdf_mapping);
     unset($export->changed);
     unset($export->vid);
+
+    // Enable file field exports.
+    uuid_features_file_field_export($export, 'bean');
 
     // Allow other modules to alter the export rendering.
     // The hook_alter signature is:
@@ -132,17 +140,15 @@ function uuid_bean_features_revert($module) {
  * Rebuilds beans based on UUID from code defaults.
  */
 function uuid_bean_features_rebuild($module) {
-  $beans = module_invoke($module, 'uuid_features_default_beans');
+  $beans = features_get_default('uuid_bean', $module);
 
   if (!empty($beans)) {
-
+    // Get info about current beans types available in system.
+    $entity_info = bean_entity_info();
     // Loop through the export.
     foreach ($beans as $data) {
-      // Determine bean type (bundle).
-      $entity_info = bean_entity_info();
-      // Double-check that module-provided bean types are still
-      // being instantiated by their respective plugins.
-      if (!in_array($data['type'], array_keys($entity_info['bean']['bundles']))) {
+      // Double-check that bean can be created/reverted.
+      if (!isset($entity_info['bean']['bundles'][$data['type']])) {
         drupal_set_message('Bundle not found for bean of type ' . $data['type'] . '. Bean was not created/reverted.', 'warning');
       }
       else {
@@ -158,6 +164,8 @@ function uuid_bean_features_rebuild($module) {
           // Create a new bean.
           $bean = entity_create('bean', $data);
         }
+        // Import file fields.
+        uuid_features_file_field_import($bean, 'bean');
         if (!$bean->save()) {
           drupal_set_message('Failed to create ' . $data['type'] . ' bean ' . $data['label'], 'error');
         }
