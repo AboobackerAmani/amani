@@ -670,7 +670,6 @@ function amani_global_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('About');
-  t('Add terms');
   t('Blog');
   t('Configure Contact page');
   t('Configure Facebook feed');
@@ -680,7 +679,6 @@ function amani_global_menu_default_menu_links() {
   t('Configure Social media icons');
   t('Configure Twitter feed');
   t('Contact');
-  t('Create users');
   t('Edit main menu links');
   t('Edit map settings');
   t('Facebook');
@@ -688,8 +686,10 @@ function amani_global_menu_default_menu_links() {
   t('Google+');
   t('Image Gallery');
   t('LinkedIn');
+  t('Manage drop down lists');
   t('Manage logo, tagline & office details');
   t('Manage site css');
+  t('Manage users');
   t('Map');
   t('My account');
   t('News & Events');
