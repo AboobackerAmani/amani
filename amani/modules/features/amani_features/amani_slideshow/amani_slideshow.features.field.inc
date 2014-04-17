@@ -182,7 +182,7 @@ function amani_slideshow_field_default_fields() {
           'enforce_ratio' => 1,
           'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'bar',
-          'resolution' => '500x250',
+          'resolution' => '750x375',
         ),
         'type' => 'imagefield_crop_widget',
         'weight' => 0,
