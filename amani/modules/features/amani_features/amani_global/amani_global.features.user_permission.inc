@@ -175,6 +175,15 @@ function amani_global_user_default_permissions() {
     'module' => 'twitter',
   );
 
+  // Exported permission: administer BOTCHA settings.
+  $permissions['administer BOTCHA settings'] = array(
+    'name' => 'administer BOTCHA settings',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'botcha',
+  );
+
   // Exported permission: administer advanced forum.
   $permissions['administer advanced forum'] = array(
     'name' => 'administer advanced forum',
@@ -1123,6 +1132,15 @@ function amani_global_user_default_permissions() {
     'name' => 'show more format tips link',
     'roles' => array(),
     'module' => 'better_formats',
+  );
+
+  // Exported permission: skip BOTCHA.
+  $permissions['skip BOTCHA'] = array(
+    'name' => 'skip BOTCHA',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'botcha',
   );
 
   // Exported permission: translate interface.
