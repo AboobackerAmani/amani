@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Delete unused field_additional_information field.
+ */
+function amani_event_update_7000() {
+
+  $field_instance = field_info_instance('node', 'field_additional_information', 'event');
+  if ($field_instance) {
+    field_delete_instance($field_instance);
+  }
+
+  return t('Deleted field_additional_information');
+}

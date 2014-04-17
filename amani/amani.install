@@ -109,17 +109,6 @@ function amani_install() {
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
 
-  // Create a Home link in the main menu.
-  $item = array(
-    'link_title' => st('Home'),
-    'link_path' => '<front>',
-    'menu_name' => 'main-menu',
-    'weight' => -10,
-  );
-  menu_link_save($item);
-  // Update the menu router information.
-  menu_rebuild();
-
   // Enable the admin theme, fusion engine, and the default theme.
   $themes = array($admin_theme, 'fusion_core');
   db_update('system')
@@ -129,21 +118,6 @@ function amani_install() {
     ->execute();
   variable_set('admin_theme', $admin_theme);
   variable_set('node_admin_theme', '1');
-
-  // Rename the default shortcut set and add a taxonomy admin link.
-  $shortcut_set = shortcut_set_load(SHORTCUT_DEFAULT_SET_NAME);
-  $shortcut_set->title = $t('Content');
-  $shortcut_set->links[] = array(
-    'link_path' => 'admin/structure/taxonomy',
-    'link_title' => $t('Add terms'),
-    'weight' => -18,
-  );
-  $shortcut_set->links[] = array(
-    'link_path' => 'user',
-    'link_title' => $t('My account'),
-    'weight' => -10,
-  );
-  shortcut_set_save($shortcut_set);
 }
 
 /**
@@ -196,14 +170,4 @@ function amani_check_memory_limit($required, $memory_limit = NULL) {
   // - The memory limit is greater than or equal to the memory required for
   //   the operation.
   return ((!$memory_limit) || ($memory_limit == -1) || (parse_size($memory_limit) >= parse_size($required)));
-}
-
-/**
- * Enable openoutreach_core and apps modules.
- */
-function amani_update_7000() {
-  $module_list = array('openoutreach_core', 'apps');
-  module_enable($module_list);
-
-  return t('Open Outreach now uses the Apps module to install its features. Click the Apps link on your toolbar to see available and installed apps.');
 }

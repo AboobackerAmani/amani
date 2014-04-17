@@ -297,7 +297,7 @@ function amani_get_involved_field_default_fields() {
           'enforce_ratio' => 1,
           'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
-          'resolution' => '200x150',
+          'resolution' => '207x160',
         ),
         'type' => 'imagefield_crop_widget',
         'weight' => '1',

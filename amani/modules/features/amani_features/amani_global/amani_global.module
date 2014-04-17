@@ -162,6 +162,67 @@ function amani_global_leaflet_framework_plugins() {
   return $plugins;
 }
 
+
+/**
+ * Implementation of hook_requirements().
+ */
+function amani_global_requirements($phase) {
+  if ('runtime' == $phase) {
+    if ($version = amani_global_get_version()) {
+      // Show version on status report page
+      $requirements['amani_version'] = array(
+        'title' => t('Amani Version'),
+        'value' => $version,
+        'severity' => REQUIREMENT_OK,
+      );
+      return $requirements;
+    }
+    else {
+      // Show error since version not found
+      $requirements['amani_version'] = array(
+        'title' => t('Amani Version'),
+        'value' => t('Amani Version could not be determined'),
+        'severity' => REQUIREMENT_ERROR,
+      );
+      return $requirements;
+    }
+  }
+}
+
+
+/**
+ * Get the Amani version from the VERSION.txt file
+ */
+function amani_global_get_version() {
+  $version_path = drupal_realpath(drupal_get_path('profile', 'amani') . '/VERSION.txt');
+  if (file_exists($version_path)) {
+    if ($version_file = fopen($version_path, 'r')) {
+      if ($version = trim(fgets($version_file))) {
+        if (preg_match('/^Amani \d\.\d+/', $version)) {
+          return $version;
+        }
+      }
+      // Create watchdog error, could not identify version in VERSION.txt
+      watchdog(
+        'amani_global',
+        'The version could not be determined from the file %file',
+        array('%file' => $version_path),
+        WATCHDOG_ERROR
+      );
+      return '';
+    }
+  }
+  // Create watchdog error, could not open VERSION.txt
+  watchdog(
+    'amani_global',
+    'The version could not be determined because the file %file could not be opened',
+    array('%file' => $version_path),
+    WATCHDOG_ERROR
+  );
+  return '';
+}
+
+
 /**
  * Implements hook_library().
  */
@@ -251,11 +312,23 @@ function amani_site_information_settings($form, &$form_state, $key = 'peace') {
     '#required' => FALSE,
   );
 
+  $options = array(
+    'attributes' => array(
+      'class' => array('colorbox-load'),
+    ),
+    'query' => array(
+      'width' => '800',
+      'height' => '500',
+      'iframe' => 'true',
+    ),
+  );
+  $link = l(t('Convert your address'), 'http://www.latlong.net/convert-address-to-lat-long.html', $options);
+
   $form['site_information']['site_address_lat'] = array(
     '#type' => 'textfield',
     '#title' => t('Lat'),
     '#default_value' => variable_get('site_address_lat', 0.0),
-    '#description' => t('Your organizations address latitude. <a href="@url">convert your address</a>', array('@url' => url('http://www.latlong.net/convert-address-to-lat-long.html'))),
+    '#description' => t('Your organizations address latitude. !link', array('!link' => $link)),
     '#required' => FALSE,
   );
 
@@ -263,7 +336,7 @@ function amani_site_information_settings($form, &$form_state, $key = 'peace') {
     '#type' => 'textfield',
     '#title' => t('Long'),
     '#default_value' => variable_get('site_address_long', 0.0),
-    '#description' => t('Your organizations address longtitude. <a href="@url">convert your address</a>', array('@url' => url('http://www.latlong.net/convert-address-to-lat-long.html'))),
+    '#description' => t('Your organizations address longtitude. !link', array('!link' => $link)),
     '#required' => FALSE,
   );
 
@@ -473,3 +546,37 @@ function amani_theme_settings_submit($form, &$form_state) {
 
   cache_clear_all();
 }
+
+/**
+ * Page preprocessor.
+ */
+function amani_global_preprocess_page(&$vars) {
+
+  // Add breadcrumbs on some taxonomy term pages.
+  if (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))) {
+    $term = taxonomy_term_load(arg(2));
+
+    $breadcrumb = drupal_set_breadcrumb();
+
+    switch ($term->vocabulary_machine_name) {
+      case 'event_type':
+        $breadcrumb[] = l(t('News & Events'), 'news-and-events');
+        break;
+      case 'project_location':
+      case 'project_status':
+        $breadcrumb[] = l(t('Programs'), 'programs');
+        break;
+      case 'resource_type':
+      case 'theme':
+        $breadcrumb[] = l(t('Resources'), 'resources');
+        break;
+      case 'team_member_type':
+        $breadcrumb[] = l(t('About'), 'about');
+        $breadcrumb[] = l(t('Team'), 'team');
+        break;
+    }
+
+    drupal_set_breadcrumb($breadcrumb);
+  }
+}
+

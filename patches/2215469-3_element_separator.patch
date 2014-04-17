@@ -1,0 +1,74 @@
+diff --git a/features_override.export.inc b/features_override.export.inc
+index c7dc404..c7700e9 100644
+--- a/features_override.export.inc
++++ b/features_override.export.inc
+@@ -8,26 +8,18 @@
+ /**
+  * Parses the identifier into indivudal parts.
+  *
+- * As the keys may have a period in them, cannot use explode or similair ways.
+- *
+  * @param $identifier
+- *   A string in the form  <comonent>.<element>.<keys> or <component>.<element>.
++ *   A string in the form <component>||<element>||<keys> or <component>||<element>
+  * @return
+  *   An array of component, element, and keys string
+  * @see features_override_make_key()
+  */
+ function features_override_parse_identifier($identifier) {
+-  $first_period = strpos($identifier, '.');
+-  $component = substr($identifier, 0, $first_period);
+-  if ($second_period = strpos($identifier, '.', $first_period + 1)) {
+-    $element = substr($identifier, $first_period + 1, $second_period - $first_period - 1);
+-    $keys = substr($identifier, $second_period + 1);
+-  }
+-  else {
+-    $element = substr($identifier, $first_period + 1);
+-    $keys = FALSE;
++  $parts = explode('||', $identifier, 3);
++  while (count($parts) < 3) {
++    $parts[] = FALSE;
+   }
+-  return array($component, $element, $keys);
++  return $parts;
+ }
+ 
+ /**
+diff --git a/features_override.features.inc b/features_override.features.inc
+index cea1445..7e1d2a3 100644
+--- a/features_override.features.inc
++++ b/features_override.features.inc
+@@ -15,7 +15,7 @@ function features_override_items_features_export_options() {
+   $overrides = features_override_get_overrides();
+   foreach ($overrides as $component => $elements) {
+     foreach ($elements as $key => $element) {
+-      $options["{$component}.{$key}"] =  "{$component} {$key} ";
++      $options["{$component}||{$key}"] = "{$component} {$key} ";
+     }
+   }
+   return $options;
+@@ -32,19 +32,19 @@ function features_overrides_features_export_options() {
+   $overrides = features_override_get_overrides();
+   foreach ($overrides as $component => $elements) {
+     foreach ($elements as $key => $element) {
+-      $identifier = "{$component}.{$key}";
++      $identifier = "{$component}||{$key}";
+       $identifier_spaced = "{$component} {$key} ";
+       $main_links[features_override_encode_string($identifier)] = url('admin/structure/features/features_override/' . $component . '/' . $key);
+       if (!empty($element['additions'])) {
+         foreach ($element['additions'] as $change_key => $changes) {
+-          $options[$identifier . '.' . $change_key] = $identifier_spaced . ' addition: of ' . features_override_export_keys($changes['keys']);
+-          $sub_links[features_override_encode_string($identifier . '.' . $change_key)] = url('admin/structure/features/features_override/' . $component . '/' . $key, array('query' => array('key' => $change_key)));
++          $options[$identifier . '||' . $change_key] = $identifier_spaced . ' addition: of ' . features_override_export_keys($changes['keys']);
++          $sub_links[features_override_encode_string($identifier . '||' . $change_key)] = url('admin/structure/features/features_override/' . $component . '/' . $key, array('query' => array('key' => $change_key)));
+         }
+       }
+       if (!empty($element['deletions'])) {
+         foreach ($element['deletions'] as $change_key => $changes) {
+-          $options[$identifier . '.' . $change_key] = $identifier_spaced . ' deletion of ' . features_override_export_keys($changes['keys']);
+-          $sub_links[features_override_encode_string($identifier . '.' . $change_key)] = url('admin/structure/features/features_override/' . $component . '/' . $key, array('query' => array('key' => $change_key)));
++          $options[$identifier . '||' . $change_key] = $identifier_spaced . ' deletion of ' . features_override_export_keys($changes['keys']);
++          $sub_links[features_override_encode_string($identifier . '||' . $change_key)] = url('admin/structure/features/features_override/' . $component . '/' . $key, array('query' => array('key' => $change_key)));
+         }
+       }
+     }

@@ -82,12 +82,12 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-47',
   );
-  // Exported menu link: menu-amani-admin-menu:admin/people/create
-  $menu_links['menu-amani-admin-menu:admin/people/create'] = array(
+  // Exported menu link: menu-amani-admin-menu:admin/people
+  $menu_links['menu-amani-admin-menu:admin/people'] = array(
     'menu_name' => 'menu-amani-admin-menu',
-    'link_path' => 'admin/people/create',
-    'router_path' => 'admin/people/create',
-    'link_title' => 'Create users',
+    'link_path' => 'admin/people',
+    'router_path' => 'admin/people',
+    'link_title' => 'Manage users',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -183,7 +183,7 @@ function amani_global_menu_default_menu_links() {
     'menu_name' => 'menu-amani-admin-menu',
     'link_path' => 'admin/structure/taxonomy',
     'router_path' => 'admin/structure/taxonomy',
-    'link_title' => 'Add terms',
+    'link_title' => 'Manage drop down lists',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -355,7 +355,7 @@ function amani_global_menu_default_menu_links() {
     'module' => 'menu',
     'hidden' => '0',
     'external' => '0',
-    'has_children' => '0',
+    'has_children' => '1',
     'expanded' => '0',
     'weight' => '-47',
   );
@@ -670,7 +670,6 @@ function amani_global_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('About');
-  t('Add terms');
   t('Blog');
   t('Configure Contact page');
   t('Configure Facebook feed');
@@ -680,7 +679,6 @@ function amani_global_menu_default_menu_links() {
   t('Configure Social media icons');
   t('Configure Twitter feed');
   t('Contact');
-  t('Create users');
   t('Edit main menu links');
   t('Edit map settings');
   t('Facebook');
@@ -688,8 +686,10 @@ function amani_global_menu_default_menu_links() {
   t('Google+');
   t('Image Gallery');
   t('LinkedIn');
+  t('Manage drop down lists');
   t('Manage logo, tagline & office details');
   t('Manage site css');
+  t('Manage users');
   t('Map');
   t('My account');
   t('News & Events');

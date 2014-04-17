@@ -311,7 +311,7 @@ function amani_incident_report_field_default_fields() {
           'label_position' => 'above',
           'repeat_collapsed' => 0,
           'text_parts' => array(),
-          'year_range' => '-3:+3',
+          'year_range' => '-99:+3',
         ),
         'type' => 'date_popup',
         'weight' => '3',
@@ -611,7 +611,7 @@ function amani_incident_report_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_incident_report_type',
-      'label' => 'Report filter #1',
+      'label' => 'Map filter #1',
       'required' => 1,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -689,7 +689,7 @@ function amani_incident_report_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_incident_severity',
-      'label' => 'Report filter #2',
+      'label' => 'Map filter #2',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -1060,8 +1060,8 @@ Prof.',
   t('Links');
   t('Media (images/videos/documents)');
   t('Phone number');
-  t('Report filter #1');
-  t('Report filter #2');
+  t('Map filter #1');
+  t('Map filter #2');
   t('Submitter Name (Optional)');
   t('Use the address fields here or use the map tools below to pick out a point directly on the map.');
   t('asdfasd asd fasdf asdfasd fad f');
