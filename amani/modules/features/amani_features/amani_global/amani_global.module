@@ -162,6 +162,67 @@ function amani_global_leaflet_framework_plugins() {
   return $plugins;
 }
 
+
+/**
+ * Implementation of hook_requirements().
+ */
+function amani_global_requirements($phase) {
+  if ('runtime' == $phase) {
+    if ($version = amani_global_get_version()) {
+      // Show version on status report page
+      $requirements['amani_version'] = array(
+        'title' => t('Amani Version'),
+        'value' => $version,
+        'severity' => REQUIREMENT_OK,
+      );
+      return $requirements;
+    }
+    else {
+      // Show error since version not found
+      $requirements['amani_version'] = array(
+        'title' => t('Amani Version'),
+        'value' => t('Amani Version could not be determined'),
+        'severity' => REQUIREMENT_ERROR,
+      );
+      return $requirements;
+    }
+  }
+}
+
+
+/**
+ * Get the Amani version from the VERSION.txt file
+ */
+function amani_global_get_version() {
+  $version_path = drupal_realpath(drupal_get_path('profile', 'amani') . '/VERSION.txt');
+  if (file_exists($version_path)) {
+    if ($version_file = fopen($version_path, 'r')) {
+      if ($version = trim(fgets($version_file))) {
+        if (preg_match('/^Amani \d\.\d+/', $version)) {
+          return $version;
+        }
+      }
+      // Create watchdog error, could not identify version in VERSION.txt
+      watchdog(
+        'amani_global',
+        'The version could not be determined from the file %file',
+        array('%file' => $version_path),
+        WATCHDOG_ERROR
+      );
+      return '';
+    }
+  }
+  // Create watchdog error, could not open VERSION.txt
+  watchdog(
+    'amani_global',
+    'The version could not be determined because the file %file could not be opened',
+    array('%file' => $version_path),
+    WATCHDOG_ERROR
+  );
+  return '';
+}
+
+
 /**
  * Implements hook_library().
  */
@@ -518,3 +579,4 @@ function amani_global_preprocess_page(&$vars) {
     drupal_set_breadcrumb($breadcrumb);
   }
 }
+
