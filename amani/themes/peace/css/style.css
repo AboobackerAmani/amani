@@ -1477,6 +1477,17 @@ a.button:not(.launcher):not(.remove):not(.edit) {
     float: left;
     margin: 1px 5px 1px 1px;
     padding: 1px; }
+  .page-node .node > .content .field-name-field-category .field-label {
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+    float: left;
+    display: inline; }
+  .page-node .node > .content .field-name-field-category .field-item {
+    background-color: #eeeeee;
+    border: 1px dashed #e1e1e1;
+    float: left;
+    margin: 1px 5px 1px 1px;
+    padding: 1px; }
   .page-node .node > .content ul, .page-node .node > .content ol {
     margin-left: 0.5em;
     padding-left: 1em; }
