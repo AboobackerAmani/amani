@@ -9,9 +9,9 @@
  */
 function amani_blog_taxonomy_default_vocabularies() {
   return array(
-    'category' => array(
-      'name' => 'Category',
-      'machine_name' => 'category',
+    'categories' => array(
+      'name' => 'Categories',
+      'machine_name' => 'categories',
       'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',

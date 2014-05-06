@@ -74,7 +74,7 @@ function amani_blog_field_default_fields() {
             'trim_length' => 600,
           ),
           'type' => 'text_summary_or_trimmed',
-          'weight' => '1',
+          'weight' => '0',
         ),
       ),
       'entity_type' => 'node',
@@ -103,7 +103,7 @@ function amani_blog_field_default_fields() {
   $fields['node-blog-field_category'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_category',
@@ -125,7 +125,7 @@ function amani_blog_field_default_fields() {
       'settings' => array(
         'allowed_values' => array(
           0 => array(
-            'vocabulary' => 'category',
+            'vocabulary' => 'categories',
             'parent' => '0',
           ),
         ),
@@ -147,15 +147,16 @@ function amani_blog_field_default_fields() {
           'weight' => '3',
         ),
         'teaser' => array(
-          'label' => 'above',
+          'label' => 'inline',
+          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '1',
         ),
       ),
       'entity_type' => 'node',
       'field_name' => 'field_category',
-      'label' => 'Category',
+      'label' => 'Categories',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -219,7 +220,7 @@ function amani_blog_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '3',
         ),
       ),
       'entity_type' => 'node',
@@ -311,7 +312,7 @@ function amani_blog_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '2',
         ),
       ),
       'entity_type' => 'node',
@@ -437,7 +438,7 @@ function amani_blog_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Category');
+  t('Categories');
   t('Enter a comma-separated list of words to describe your content.');
   t('Lead Image');
   t('Media');
