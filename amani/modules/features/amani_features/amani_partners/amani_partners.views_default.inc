@@ -40,7 +40,7 @@ function amani_partners_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'large',
+    'image_style' => 'partner_480',
     'image_link' => 'content',
   );
   /* Field: Content: Title */
@@ -131,25 +131,24 @@ function amani_partners_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'jcarousel';
   $handler->display->display_options['style_options']['wrap'] = 'circular';
-  $handler->display->display_options['style_options']['visible'] = '';
+  $handler->display->display_options['style_options']['visible'] = '4';
+  $handler->display->display_options['style_options']['scroll'] = '1';
   $handler->display->display_options['style_options']['auto'] = '0';
   $handler->display->display_options['style_options']['autoPause'] = 1;
   $handler->display->display_options['style_options']['easing'] = '';
   $handler->display->display_options['style_options']['vertical'] = 0;
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Media */
-  $handler->display->display_options['fields']['field_media']['id'] = 'field_media';
-  $handler->display->display_options['fields']['field_media']['table'] = 'field_data_field_media';
-  $handler->display->display_options['fields']['field_media']['field'] = 'field_media';
-  $handler->display->display_options['fields']['field_media']['label'] = '';
-  $handler->display->display_options['fields']['field_media']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_media']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_media']['type'] = 'file_rendered';
-  $handler->display->display_options['fields']['field_media']['settings'] = array(
-    'file_view_mode' => 'partner_logo',
+  /* Field: Content: Lead Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'partner_480',
+    'image_link' => '',
   );
-  $handler->display->display_options['fields']['field_media']['delta_limit'] = '1';
-  $handler->display->display_options['fields']['field_media']['delta_offset'] = '0';
   /* Sort criterion: Global: Random */
   $handler->display->display_options['sorts']['random']['id'] = 'random';
   $handler->display->display_options['sorts']['random']['table'] = 'views';
