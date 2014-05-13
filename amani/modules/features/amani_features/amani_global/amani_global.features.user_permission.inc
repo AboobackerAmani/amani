@@ -252,16 +252,6 @@ function amani_global_user_default_permissions() {
     'module' => 'contact',
   );
 
-  // Exported permission: administer css injection.
-  $permissions['administer css injection'] = array(
-    'name' => 'administer css injection',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'amani administrator',
-    ),
-    'module' => 'css_injector',
-  );
-
   // Exported permission: administer file types.
   $permissions['administer file types'] = array(
     'name' => 'administer file types',

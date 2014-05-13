@@ -15,9 +15,6 @@ function amani_comment_apps_compatible_info() {
       'administrator' => array(
         'machine name' => 'administrator',
       ),
-      'editor' => array(
-        'machine name' => 'editor',
-      ),
       'contributor' => array(
         'machine name' => 'contributor',
       ),
