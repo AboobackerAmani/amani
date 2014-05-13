@@ -523,150 +523,6 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '50',
   );
-  // Exported menu link: menu-social-media:http://facebook.com
-  $menu_links['menu-social-media:http://facebook.com'] = array(
-    'menu_name' => 'menu-social-media',
-    'link_path' => 'http://facebook.com',
-    'router_path' => '',
-    'link_title' => 'Facebook',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '1',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '0',
-  );
-  // Exported menu link: menu-social-media:http://google.com
-  $menu_links['menu-social-media:http://google.com'] = array(
-    'menu_name' => 'menu-social-media',
-    'link_path' => 'http://google.com',
-    'router_path' => '',
-    'link_title' => 'Rss',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '1',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '0',
-  );
-  // Exported menu link: menu-social-media:http://pinterest.com
-  $menu_links['menu-social-media:http://pinterest.com'] = array(
-    'menu_name' => 'menu-social-media',
-    'link_path' => 'http://pinterest.com',
-    'router_path' => '',
-    'link_title' => 'Pinterest',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '1',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '0',
-  );
-  // Exported menu link: menu-social-media:http://twitter.com
-  $menu_links['menu-social-media:http://twitter.com'] = array(
-    'menu_name' => 'menu-social-media',
-    'link_path' => 'http://twitter.com',
-    'router_path' => '',
-    'link_title' => 'Twitter',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '1',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '1',
-  );
-  // Exported menu link: menu-social-media:http://vimeo.com
-  $menu_links['menu-social-media:http://vimeo.com'] = array(
-    'menu_name' => 'menu-social-media',
-    'link_path' => 'http://vimeo.com',
-    'router_path' => '',
-    'link_title' => 'Vimeo',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '1',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '0',
-  );
-  // Exported menu link: menu-social-media:http://www.google.com/peacegeeks
-  $menu_links['menu-social-media:http://www.google.com/peacegeeks'] = array(
-    'menu_name' => 'menu-social-media',
-    'link_path' => 'http://www.google.com/peacegeeks',
-    'router_path' => '',
-    'link_title' => 'Google+',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '1',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '0',
-  );
-  // Exported menu link: menu-social-media:http://www.linkedin.com/peacegeeks
-  $menu_links['menu-social-media:http://www.linkedin.com/peacegeeks'] = array(
-    'menu_name' => 'menu-social-media',
-    'link_path' => 'http://www.linkedin.com/peacegeeks',
-    'router_path' => '',
-    'link_title' => 'LinkedIn',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '1',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '0',
-  );
-  // Exported menu link: menu-social-media:http://www.youtube.com/peacegeeks
-  $menu_links['menu-social-media:http://www.youtube.com/peacegeeks'] = array(
-    'menu_name' => 'menu-social-media',
-    'link_path' => 'http://www.youtube.com/peacegeeks',
-    'router_path' => '',
-    'link_title' => 'YouTube',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '1',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '0',
-  );
   // Translatables
   // Included for use with string extractors like potx.
   t('About');
@@ -681,11 +537,8 @@ function amani_global_menu_default_menu_links() {
   t('Contact');
   t('Edit main menu links');
   t('Edit map settings');
-  t('Facebook');
   t('Get Involved');
-  t('Google+');
   t('Image Gallery');
-  t('LinkedIn');
   t('Manage drop down lists');
   t('Manage logo, tagline & office details');
   t('Manage site css');
@@ -693,14 +546,9 @@ function amani_global_menu_default_menu_links() {
   t('Map');
   t('My account');
   t('News & Events');
-  t('Pinterest');
   t('Programs');
   t('Resources');
-  t('Rss');
   t('Team');
-  t('Twitter');
-  t('Vimeo');
-  t('YouTube');
   t('admin');
   t('home');
   t('login ');
