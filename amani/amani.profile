@@ -13,6 +13,7 @@ function amani_install_tasks() {
 
   $tasks['amani_setup_roles_and_permissions'] = array(
     'type' => 'normal',
+    'display_name' => 'Set up roles and permissions',
     'run' => INSTALL_TASK_RUN_IF_NOT_COMPLETED,
     'function' => 'amani_setup_roles_and_permissions',
   );
@@ -37,16 +38,55 @@ function revert_amani_features() {
  * Setup amani base roles and permissions for those roles.
  */
 function amani_setup_roles_and_permissions() {
-  // Create the role if necessary.
+  // Enable default permissions for system roles.
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access comments'));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access comments', 'post comments', 'skip comment approval'));
+
+  // Create a default role for site administrators, with all available permissions assigned.
+  if (!$admin_role = user_role_load_by_name('administrator')) {
+    $admin_role = new stdClass();
+    $admin_role->name = 'administrator';
+    user_role_save($admin_role);
+  }
+  user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
+  // Set this as the administrator role.
+  variable_set('user_admin_role', $admin_role->rid);
+
+  // Assign user 1 the "administrator" role.
+  db_insert('users_roles')
+    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
+    ->execute();
+
+  // Create contributor role.
   $role = user_role_load_by_name('contributor');
   if (!$role) {
     $role = new stdClass();
     $role->name = 'contributor';
     user_role_save($role);
+    $permissions = amani_get_permissions_by_role_name('contributor');
+    user_role_grant_permissions($role->rid, $permissions);
   }
 
-  // Add the permissions to the role.
-  $permissions = amani_get_permissions_by_role_name('contributor');
+  // Create editor role.
+  $role = user_role_load_by_name('editor');
+  if (!$role) {
+    $role = new stdClass();
+    $role->name = 'editor';
+    user_role_save($role);
+    $permissions = amani_get_permissions_by_role_name('editor');
+    user_role_grant_permissions($role->rid, $permissions);
+  }
+
+  // Create amani admin role.
+  $role = user_role_load_by_name('amani administrator');
+  if (!$role) {
+    $role = new stdClass();
+    $role->name = 'amani administrator';
+    user_role_save($role);
+    $permissions = amani_get_permissions_by_role_name('amani administrator');
+    user_role_grant_permissions($role->rid, $permissions);
+  }
+
 }
 
 /**
@@ -123,7 +163,7 @@ function amani_get_permissions_by_role_name($name) {
  );
 
 
-  if ($name == 'contributor') {
+  if ($name == 'editor') {
     $permisssion = array_merge($permissions, get_contributor_editor_diff());
   }
 
@@ -132,7 +172,7 @@ function amani_get_permissions_by_role_name($name) {
     $permissions = array_merge($permissions, get_editor_admin_diff());
   }
 
-  return $permisssions;
+  return $permissions;
 }
 
 /**
