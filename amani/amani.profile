@@ -13,7 +13,7 @@ function amani_install_tasks() {
 
   $tasks['amani_setup_roles_and_permissions'] = array(
     'type' => 'normal',
-    'display_name' => 'Set up roles and permissions',
+    'display_name' => 'Set up additional roles and permissions',
     'run' => INSTALL_TASK_RUN_IF_NOT_COMPLETED,
     'function' => 'amani_setup_roles_and_permissions',
   );
@@ -39,23 +39,8 @@ function revert_amani_features() {
  */
 function amani_setup_roles_and_permissions() {
   // Enable default permissions for system roles.
-  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access comments'));
-  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access comments', 'post comments', 'skip comment approval'));
-
-  // Create a default role for site administrators, with all available permissions assigned.
-  if (!$admin_role = user_role_load_by_name('administrator')) {
-    $admin_role = new stdClass();
-    $admin_role->name = 'administrator';
-    user_role_save($admin_role);
-  }
-  user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
-  // Set this as the administrator role.
-  variable_set('user_admin_role', $admin_role->rid);
-
-  // Assign user 1 the "administrator" role.
-  db_insert('users_roles')
-    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
-    ->execute();
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, amani_get_permissions_by_role_name());
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, amani_get_permissions_by_role_name('authenticated'));
 
   // Create contributor role.
   $role = user_role_load_by_name('contributor');
@@ -92,9 +77,69 @@ function amani_setup_roles_and_permissions() {
 /**
  * Get the permissions for a specified role.
  */
-function amani_get_permissions_by_role_name($name) {
-  // default permissions represent the lowest level of permission ie. the contributor role.
- $permissions = array(
+function amani_get_permissions_by_role_name($name = 'anon') {
+  // default permissions represent the lowest level of permission (anonymous).
+  $permissions = array(
+    'view any static_content bean',
+    'view any summaries_block bean',
+    'access comments',
+    'subscribe to comments',
+    'access site-wide contact form',
+    'view files',
+    'use text format wysiwyg_public',
+    'access forward',
+    'access content',
+    'create incident_report content',
+    'edit own incident_report content',
+    'search content',
+    'access service links',
+  );
+
+  switch($name) {
+    case 'authenticated':
+      $permissions = array_merge($permissions, get_auth_anon_diff());
+      break;
+    case 'contributor':
+      $permissions = array_merge($permissions, get_auth_anon_diff());
+      $permissions = array_merge($permissions, get_auth_contributor_diff());
+      break;
+    case 'editor':
+      $permissions = array_merge($permissions, get_auth_anon_diff());
+      $permissions = array_merge($permissions, get_auth_contributor_diff());
+      $permissions = array_merge($permissions, get_contributor_editor_diff());
+      break;
+    case 'amani administrator':
+      $permissions = array_merge($permissions, get_auth_anon_diff());
+      $permissions = array_merge($permissions, get_auth_contributor_diff());
+      $permissions = array_merge($permissions, get_contributor_editor_diff());
+      $permissions = array_merge($permissions, get_editor_admin_diff());
+      break;
+    default:
+      break;
+  }
+
+  return $permissions;
+}
+
+/**
+ * Get the permission gained with authenticated role.
+ */
+function get_auth_anon_diff() {
+  return array(
+    'access user contact forms',
+    'create page content',
+    'delete own page content',
+    'edit own follow links',
+    'edit own page content',
+    'post comments',
+ );
+}
+
+/**
+ * Get the permissions gained with contributor role.
+ */
+function get_auth_contributor_diff() {
+  return array(
    'access content overview',
    'access own webform submissions',
    'administer css injection',
@@ -153,40 +198,26 @@ function amani_get_permissions_by_role_name($name) {
    'edit own webform content',
    'edit own webform submissions',
    'import media',
-   'search content',
    'skip CAPTCHA',
-   'use text format wysiwyg_public',
    'view date repeats',
    'view own files',
    'view own private files',
    'view own unpublished files',
  );
-
-
-  if ($name == 'editor') {
-    $permisssion = array_merge($permissions, get_contributor_editor_diff());
-  }
-
-  elseif ($name == 'amani administrator') {
-    $permissions = array_merge($permissions, get_contributor_editor_diff());
-    $permissions = array_merge($permissions, get_editor_admin_diff());
-  }
-
-  return $permissions;
 }
 
 /**
- * Get the permission diff between contributor and editor roles.
+ * Get the permissions gained with editor role.
  */
 function get_contributor_editor_diff() {
   return array(
+   'administer media galleries',
    'access contextual links',
    'administer comments',
    'administer files',
    'administer media galleries',
    'bypass file access',
    'delete any page content',
-   'delete own page content',
    'delete revisions',
    'edit any about content',
    'edit any article content',
@@ -205,7 +236,6 @@ function get_contributor_editor_diff() {
    'edit any team content',
    'edit any testimonial content',
    'edit any webform content',
-   'edit own page content',
    'override flood control',
    'revert revisions',
    'skip comment approval',
@@ -215,7 +245,7 @@ function get_contributor_editor_diff() {
 }
 
 /**
- * Get the permission diff between editor and amani admin roles.
+ * Get the permissions gained with amani admin role.
  */
 function get_editor_admin_diff() {
   return array(
@@ -247,12 +277,8 @@ function get_editor_admin_diff() {
     'administer taxonomy',
     'administer twitter accounts',
     'administer users',
-    'assign amani administrator role',
-    'assign contributor role',
-    'assign editor role',
     'assign node weight',
     'create any static_content bean',
-    'create incident_report content',
     'create redhen contact memberships',
     'create redhen org memberships',
     'delete any about content',
@@ -278,7 +304,6 @@ function get_editor_admin_diff() {
     'edit any summaries_block bean',
     'edit any user follow links',
     'edit meta tags',
-    'edit own incident_report content',
     'edit own redhen contact',
     'edit redhen contact connections',
     'edit redhen contact memberships',
@@ -297,5 +322,8 @@ function get_editor_admin_diff() {
     'view redhen contact memberships',
     'view redhen org connections',
     'view redhen org memberships',
+    'assign contributor role',
+    'assign editor role',
+    'assign amani administrator role',
   );
 }
