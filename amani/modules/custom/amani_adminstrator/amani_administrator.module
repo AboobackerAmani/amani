@@ -1,0 +1,212 @@
+<?php
+
+/**
+ * Implements hook_menu.
+ */
+function amani_administrator_menu() {
+  $items = array();
+  $items['admin/configure-amani'] = array(
+    'title' => 'Configure amani',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('amani_administrator_configure_amani_form'),
+    'access arguments' => array('access amani administrator'),
+    'type' => MENU_NORMAL_ITEM
+  );
+
+  return $items;
+}
+
+function amani_administrator_permission() {
+  return array(
+    'access amani administrator' => array(
+      'title' => t('Access amani administrator page'),
+      'description' => t('Perform administrative tasks for various amani components.'),
+    ),
+  );
+}
+
+function amani_administrator_configure_amani_form() {
+  $form = array();
+  $form['social_media_menu'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Social media menu'),
+    '#description' => 'This populate button will populate the social media menu with default values. It will not
+    remove any values you have already added to the menu.',
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['social_media_menu'][] = array(
+    '#type' => 'button',
+    '#value' => t('Populate social media links'),
+    '#executes_submit_callback' => TRUE
+  );
+
+  $form['social_media_menu'][] = array(
+    '#type' => 'button',
+    '#value' => t('See social media menu'),
+    '#executes_submit_callback' => TRUE
+  );
+
+  $form['main_menu'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Main menu'),
+    '#description' => 'This populate button will populate the main menu with default values. It will not
+    remove any values you have already added to the menu.',
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['main_menu'][] = array(
+    '#type' => 'button',
+    '#value' => t('Populate main menu links'),
+    '#executes_submit_callback' => TRUE
+  );
+
+  $form['main_menu'][] = array(
+    '#type' => 'button',
+    '#value' => t('See main menu'),
+    '#executes_submit_callback' => TRUE
+  );
+
+  $form['donate_menu'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Donate menu'),
+    '#description' => 'This populate button will populate the donate menu with default values. It will not
+    remove any values you have already added to the menu.',
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['donate_menu'][] = array(
+    '#type' => 'button',
+    '#value' => t('Populate donate menu link'),
+    '#executes_submit_callback' => TRUE
+  );
+
+  $form['donate_menu'][] = array(
+    '#type' => 'button',
+    '#value' => t('See donate menu'),
+    '#executes_submit_callback' => TRUE
+  );
+  return $form;
+}
+
+function amani_administrator_configure_amani_form_submit($form, &$form_state) {
+  switch ($form_state['clicked_button']['#value']) {
+    case 'Populate social media links':
+      amani_administrator_create_menu_links('menu-social-media');
+      drupal_set_message('Menu link paths can now be configured ' . l('here', 'admin/structure/menu/manage/menu-social-media'));
+      break;
+    case 'Populate main menu links':
+      amani_administrator_create_menu_links('menu-amani-main-menu');
+      drupal_set_message('Menu link paths can now be configured ' . l('here', 'admin/structure/menu/manage/menu-amani-main-menu'));
+      break;
+    case 'Populate donate menu link':
+      amani_administrator_create_menu_links('menu-donate');
+      drupal_set_message('Menu link paths can now be configured ' . l('here', 'admin/structure/menu/manage/menu-donate'));
+      break;
+    case 'See social media menu':
+      drupal_goto('admin/structure/menu/manage/menu-social-media');
+      break;
+    case 'See main menu':
+      drupal_goto('admin/structure/menu/manage/menu-amani-main-menu');
+      break;
+    case 'See donate menu':
+      drupal_goto('admin/structure/menu/manage/menu-donate');
+      break;
+  }
+}
+
+function amani_administrator_create_menu_links($menu_machine_name) {
+  $default_links = array();
+  switch($menu_machine_name) {
+    case 'menu-social-media':
+      $default_links = amani_administrator_get_media_links();
+      break;
+    case 'menu-amani-main-menu':
+      $default_links = amani_administrator_get_main_menu_links();
+      break;
+    case 'menu-donate':
+      $default_links = amani_administrator_get_donate_menu_links();
+      break;
+  }
+  $current_menu_links = array();
+  // We will have to consider the link title the unique identifier for the link
+  // in this menu. If a link with the same title already exists we wont be
+  // adding the corresponding default value.
+  foreach (menu_load_links($menu_machine_name) as $link) {
+    $current_menu_links[] = $link['link_title'];
+  }
+  foreach ($default_links as $title => $path) {
+    if (!in_array($title, $current_menu_links)) {
+      $link = array('link_path' => $path,'link_title' => $title,'menu_name' => $menu_machine_name);
+      menu_link_save($link);
+    }
+  }
+
+  menu_cache_clear_all();
+}
+
+function amani_administrator_get_media_links() {
+  if (module_exists('amani_social_media')) {
+    return array(
+      'Twitter' => 'http://twitter.com',
+      'Facebook' => 'http://facebook.com',
+      'LinkedIn' => 'http://linkedin.com',
+      'Pinterest' => 'http://pinterest.com',
+      'Rss' => 'http://google.com',
+      'Vimeo' => 'http://vimeo.com',
+      'YouTube' => 'http://youtube.com',
+      'Google+' => 'https://plus.google.com',
+    );
+  }
+
+  return array();
+}
+
+function amani_administrator_get_main_menu_links() {
+  $links = array();
+  // Checking if the module exists is not entirely necessary
+  // drupal will not create a link to path that doenst exist.
+  if (module_exists('amani_about')) {
+    $links['About'] = 'about';
+  }
+  if (module_exists('amani_team')) {
+    $links['Team'] = 'team';
+  }
+  if (module_exists('amani_media_gallery')) {
+    $links['Image Gallery'] = 'gallery';
+  }
+  if (module_exists('amani_partners')) {
+    $links['Partners'] = 'partners';
+  }
+  if (module_exists('amani_programs_campaigns')) {
+    $links['Programs'] = 'programs';
+  }
+  if (module_exists('amani_get_involved')) {
+    $links['Get Involved'] = 'get-involved';
+  }
+  if (module_exists('amani_resource')) {
+    $links['Resources'] = 'resources';
+  }
+  if (module_exists('amani_incident_report')) {
+    $links['Map'] = 'incident-reports';
+  }
+  if (module_exists('amani_block_and_views')) {
+    $links['News & Events'] = 'news-and-events';
+  }
+  if (module_exists('amani_blog')) {
+    $links['Blog'] = 'blog';
+  }
+  if (module_exists('contact')) {
+    $links['Contact'] = 'contact';
+  }
+  return $links;
+}
+
+function amani_administrator_get_donate_menu_links() {
+  return array(
+    'Donate' => '<front>'
+  );
+}
