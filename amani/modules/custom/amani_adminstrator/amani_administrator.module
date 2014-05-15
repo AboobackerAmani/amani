@@ -44,7 +44,7 @@ function amani_administrator_configure_amani_form() {
 
   $form['social_media_menu'][] = array(
     '#type' => 'button',
-    '#value' => t('See social media menu'),
+    '#value' => t('Configure social media menu'),
     '#executes_submit_callback' => TRUE
   );
 
@@ -65,7 +65,7 @@ function amani_administrator_configure_amani_form() {
 
   $form['main_menu'][] = array(
     '#type' => 'button',
-    '#value' => t('See main menu'),
+    '#value' => t('Configure main menu'),
     '#executes_submit_callback' => TRUE
   );
 
@@ -86,9 +86,42 @@ function amani_administrator_configure_amani_form() {
 
   $form['donate_menu'][] = array(
     '#type' => 'button',
-    '#value' => t('See donate menu'),
+    '#value' => t('Configure donate menu'),
     '#executes_submit_callback' => TRUE
   );
+
+  $form['newsletter'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Newsletter'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['newsletter'][] = array(
+    '#type' => 'button',
+    '#value' => t('Enable and position newsletter button'),
+    '#executes_submit_callback' => TRUE,
+  );
+
+  $form['newsletter'][] = array(
+    '#type' => 'button',
+    '#value' => t('Configure newsletter button content'),
+    '#executes_submit_callback' => TRUE,
+  );
+
+  $form['features'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Features'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['features'][] = array(
+    '#type' => 'button',
+    '#value' => t('Configure features'),
+    '#executes_submit_callback' => TRUE,
+  );
+
   return $form;
 }
 
@@ -106,14 +139,23 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       amani_administrator_create_menu_links('menu-donate');
       drupal_set_message('Menu link paths can now be configured ' . l('here', 'admin/structure/menu/manage/menu-donate'));
       break;
-    case 'See social media menu':
+    case 'Configure social media menu':
       drupal_goto('admin/structure/menu/manage/menu-social-media');
       break;
-    case 'See main menu':
+    case 'Configure main menu':
       drupal_goto('admin/structure/menu/manage/menu-amani-main-menu');
       break;
-    case 'See donate menu':
+    case 'Configure donate menu':
       drupal_goto('admin/structure/menu/manage/menu-donate');
+      break;
+    case 'Enable and position newsletter button':
+      drupal_goto('admin/structure/block/manage/bean/front-page-second-sidebar-bottom/configure');
+      break;
+    case 'Configure newsletter button content':
+      drupal_goto('block/front-page-second-sidebar-bottom/edit');
+      break;
+    case 'Configure features':
+      drupal_goto('admin/structure/features');
       break;
   }
 }

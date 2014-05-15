@@ -325,5 +325,6 @@ function get_editor_admin_diff() {
     'assign contributor role',
     'assign editor role',
     'assign amani administrator role',
+    'access amani administrator',
   );
 }
