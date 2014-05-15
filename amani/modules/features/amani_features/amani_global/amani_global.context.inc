@@ -202,6 +202,12 @@ function amani_global_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-8',
         ),
+        'bean-front-page-second-sidebar-bottom' => array(
+          'module' => 'bean',
+          'delta' => 'front-page-second-sidebar-bottom',
+          'region' => 'sidebar_second',
+          'weight' => '-7',
+        ),
       ),
     ),
   );
