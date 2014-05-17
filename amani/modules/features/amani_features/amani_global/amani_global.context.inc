@@ -196,12 +196,6 @@ function amani_global_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
-        'bean-front-page-second-sidebar-bottom' => array(
-          'module' => 'bean',
-          'delta' => 'front-page-second-sidebar-bottom',
-          'region' => 'sidebar_second',
-          'weight' => '-9',
-        ),
         'quicktabs-social_media_feeds' => array(
           'module' => 'quicktabs',
           'delta' => 'social_media_feeds',

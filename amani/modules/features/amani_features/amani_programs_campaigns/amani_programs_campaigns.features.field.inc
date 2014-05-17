@@ -507,7 +507,7 @@ function amani_programs_campaigns_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 7,
+          'weight' => '7',
         ),
         'ical' => array(
           'label' => 'above',

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Font styles. */
 body {
   margin: 0;
@@ -587,7 +588,12 @@ a.button:not(.launcher):not(.remove):not(.edit) {
           float: none;
           padding: 15px 0;
           margin: 0;
-          background: none; }
+          background: none; } }
+      @media screen and (max-width: 600px) and (max-width: 600px) {
+        #header-region #block-superfish-1 #superfish-1 li ul,
+        #navigation #block-superfish-1 #superfish-1 li ul {
+          width: 100% !important; } }
+  @media screen and (max-width: 600px) {
           #header-region #block-superfish-1 #superfish-1 li.last,
           #navigation #block-superfish-1 #superfish-1 li.last {
             margin-bottom: 15px; }
@@ -597,10 +603,6 @@ a.button:not(.launcher):not(.remove):not(.edit) {
             display: inline;
             padding: 10px 0;
             color: #333333; } }
-        @media screen and (max-width: 600px) and (max-width: 600px) {
-          #header-region #block-superfish-1 #superfish-1 li ul,
-          #navigation #block-superfish-1 #superfish-1 li ul {
-            width: 100% !important; } }
 
 #sidebar-second .block {
   background: white;
@@ -680,7 +682,8 @@ a.button:not(.launcher):not(.remove):not(.edit) {
 .node-get-involved .field-name-field-media,
 .node-event .field-name-field-media,
 .node-blog .field-name-field-media,
-.node-project .field-name-field-media {
+.node-project .field-name-field-media,
+.node-activity .field-name-field-media {
   *zoom: 1;
   background: #eeeeee;
   padding: 30px;
@@ -695,7 +698,9 @@ a.button:not(.launcher):not(.remove):not(.edit) {
   .node-blog .field-name-field-media:before,
   .node-blog .field-name-field-media:after,
   .node-project .field-name-field-media:before,
-  .node-project .field-name-field-media:after {
+  .node-project .field-name-field-media:after,
+  .node-activity .field-name-field-media:before,
+  .node-activity .field-name-field-media:after {
     content: " ";
     display: table; }
   .node-article .field-name-field-media:after,
@@ -703,14 +708,16 @@ a.button:not(.launcher):not(.remove):not(.edit) {
   .node-get-involved .field-name-field-media:after,
   .node-event .field-name-field-media:after,
   .node-blog .field-name-field-media:after,
-  .node-project .field-name-field-media:after {
+  .node-project .field-name-field-media:after,
+  .node-activity .field-name-field-media:after {
     clear: both; }
   .node-article .field-name-field-media .field-item,
   .node-resource .field-name-field-media .field-item,
   .node-get-involved .field-name-field-media .field-item,
   .node-event .field-name-field-media .field-item,
   .node-blog .field-name-field-media .field-item,
-  .node-project .field-name-field-media .field-item {
+  .node-project .field-name-field-media .field-item,
+  .node-activity .field-name-field-media .field-item {
     display: block;
     float: left;
     margin-right: 2.12766%;
@@ -720,21 +727,24 @@ a.button:not(.launcher):not(.remove):not(.edit) {
     .node-get-involved .field-name-field-media .field-item:last-child,
     .node-event .field-name-field-media .field-item:last-child,
     .node-blog .field-name-field-media .field-item:last-child,
-    .node-project .field-name-field-media .field-item:last-child {
+    .node-project .field-name-field-media .field-item:last-child,
+    .node-activity .field-name-field-media .field-item:last-child {
       margin-right: 0; }
     .node-article .field-name-field-media .field-item:nth-child(3n),
     .node-resource .field-name-field-media .field-item:nth-child(3n),
     .node-get-involved .field-name-field-media .field-item:nth-child(3n),
     .node-event .field-name-field-media .field-item:nth-child(3n),
     .node-blog .field-name-field-media .field-item:nth-child(3n),
-    .node-project .field-name-field-media .field-item:nth-child(3n) {
+    .node-project .field-name-field-media .field-item:nth-child(3n),
+    .node-activity .field-name-field-media .field-item:nth-child(3n) {
       margin-right: 0; }
     .node-article .field-name-field-media .field-item > div,
     .node-resource .field-name-field-media .field-item > div,
     .node-get-involved .field-name-field-media .field-item > div,
     .node-event .field-name-field-media .field-item > div,
     .node-blog .field-name-field-media .field-item > div,
-    .node-project .field-name-field-media .field-item > div {
+    .node-project .field-name-field-media .field-item > div,
+    .node-activity .field-name-field-media .field-item > div {
       margin: 10px 5px; }
     .node-article .field-name-field-media .field-item img:not(.file-icon),
     .node-article .field-name-field-media .field-item iframe,
@@ -747,7 +757,9 @@ a.button:not(.launcher):not(.remove):not(.edit) {
     .node-blog .field-name-field-media .field-item img:not(.file-icon),
     .node-blog .field-name-field-media .field-item iframe,
     .node-project .field-name-field-media .field-item img:not(.file-icon),
-    .node-project .field-name-field-media .field-item iframe {
+    .node-project .field-name-field-media .field-item iframe,
+    .node-activity .field-name-field-media .field-item img:not(.file-icon),
+    .node-activity .field-name-field-media .field-item iframe {
       width: 100%;
       height: auto; }
 
@@ -856,6 +868,7 @@ a.button:not(.launcher):not(.remove):not(.edit) {
   font-size: 22px; }
 
 .breadcrumb {
+  background: #eef0f4;
   width: 100%;
   font-style: oblique;
   font-size: 11px;
@@ -1466,25 +1479,38 @@ a.button:not(.launcher):not(.remove):not(.edit) {
     float: left;
     margin: 1px 5px 1px 1px;
     padding: 1px; }
+  .page-node .node > .content .field-name-field-category .field-label {
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+    float: left;
+    display: inline; }
+  .page-node .node > .content .field-name-field-category .field-item {
+    background-color: #eeeeee;
+    border: 1px dashed #e1e1e1;
+    float: left;
+    margin: 1px 5px 1px 1px;
+    padding: 1px; }
   .page-node .node > .content ul, .page-node .node > .content ol {
     margin-left: 0.5em;
     padding-left: 1em; }
 
 .page-partners #block-system-main {
-  background: white;
-  background: white;
-  padding: 30px;
-  box-shadow: 2px 3px 4px #c8c8c8;
+  background: none;
+  box-shadow: 0;
   font-family: "Georgia";
   line-height: 1.4; }
   .page-partners #block-system-main .views-row {
-    padding-bottom: 30px;
+    width: 100%;
+    background: white;
+    padding: 30px;
+    box-shadow: 2px 3px 4px #c8c8c8;
     margin-bottom: 30px;
-    clear: left; }
+    overflow: hidden; }
+    .page-partners #block-system-main .views-row:nth-child(1n) {
+      margin-right: 0; }
     .page-partners #block-system-main .views-row.views-row-last {
       border-bottom: 0;
-      margin-bottom: 0;
-      padding-bottom: 0; }
+      margin-bottom: 0; }
     .page-partners #block-system-main .views-row .views-field-title {
       font-family: "bariol_regularregular";
       text-transform: uppercase;
@@ -2059,6 +2085,7 @@ body.node-type-blog .node-event > .content > .field-name-body + div,
 body.node-type-blog .node-blog > .content > .field-name-body + div,
 body.node-type-blog .node-project > .content > .field-name-body + div,
 body.node-type-blog .node-article > .content > .field-name-body + div,
+body.node-type-blog .node-activity > .content > .field-name-body + div,
 body.node-type-blog .node-partner > .content > .field-name-body + div,
 body.node-type-partner .node-get-involved > .content > .field-name-body + div,
 body.node-type-partner .node-team > .content > .field-name-body + div,
@@ -2067,6 +2094,7 @@ body.node-type-partner .node-event > .content > .field-name-body + div,
 body.node-type-partner .node-blog > .content > .field-name-body + div,
 body.node-type-partner .node-project > .content > .field-name-body + div,
 body.node-type-partner .node-article > .content > .field-name-body + div,
+body.node-type-partner .node-activity > .content > .field-name-body + div,
 body.node-type-partner .node-partner > .content > .field-name-body + div,
 body.node-type-team .node-get-involved > .content > .field-name-body + div,
 body.node-type-team .node-team > .content > .field-name-body + div,
@@ -2075,6 +2103,7 @@ body.node-type-team .node-event > .content > .field-name-body + div,
 body.node-type-team .node-blog > .content > .field-name-body + div,
 body.node-type-team .node-project > .content > .field-name-body + div,
 body.node-type-team .node-article > .content > .field-name-body + div,
+body.node-type-team .node-activity > .content > .field-name-body + div,
 body.node-type-team .node-partner > .content > .field-name-body + div,
 body.node-type-project .node-get-involved > .content > .field-name-body + div,
 body.node-type-project .node-team > .content > .field-name-body + div,
@@ -2083,6 +2112,7 @@ body.node-type-project .node-event > .content > .field-name-body + div,
 body.node-type-project .node-blog > .content > .field-name-body + div,
 body.node-type-project .node-project > .content > .field-name-body + div,
 body.node-type-project .node-article > .content > .field-name-body + div,
+body.node-type-project .node-activity > .content > .field-name-body + div,
 body.node-type-project .node-partner > .content > .field-name-body + div,
 body.node-type-article .node-get-involved > .content > .field-name-body + div,
 body.node-type-article .node-team > .content > .field-name-body + div,
@@ -2091,6 +2121,7 @@ body.node-type-article .node-event > .content > .field-name-body + div,
 body.node-type-article .node-blog > .content > .field-name-body + div,
 body.node-type-article .node-project > .content > .field-name-body + div,
 body.node-type-article .node-article > .content > .field-name-body + div,
+body.node-type-article .node-activity > .content > .field-name-body + div,
 body.node-type-article .node-partner > .content > .field-name-body + div,
 body.node-type-event .node-get-involved > .content > .field-name-body + div,
 body.node-type-event .node-team > .content > .field-name-body + div,
@@ -2099,6 +2130,7 @@ body.node-type-event .node-event > .content > .field-name-body + div,
 body.node-type-event .node-blog > .content > .field-name-body + div,
 body.node-type-event .node-project > .content > .field-name-body + div,
 body.node-type-event .node-article > .content > .field-name-body + div,
+body.node-type-event .node-activity > .content > .field-name-body + div,
 body.node-type-event .node-partner > .content > .field-name-body + div,
 body.node-type-get-involved .node-get-involved > .content > .field-name-body + div,
 body.node-type-get-involved .node-team > .content > .field-name-body + div,
@@ -2107,6 +2139,7 @@ body.node-type-get-involved .node-event > .content > .field-name-body + div,
 body.node-type-get-involved .node-blog > .content > .field-name-body + div,
 body.node-type-get-involved .node-project > .content > .field-name-body + div,
 body.node-type-get-involved .node-article > .content > .field-name-body + div,
+body.node-type-get-involved .node-activity > .content > .field-name-body + div,
 body.node-type-get-involved .node-partner > .content > .field-name-body + div,
 body.node-type-resource .node-get-involved > .content > .field-name-body + div,
 body.node-type-resource .node-team > .content > .field-name-body + div,
@@ -2115,7 +2148,17 @@ body.node-type-resource .node-event > .content > .field-name-body + div,
 body.node-type-resource .node-blog > .content > .field-name-body + div,
 body.node-type-resource .node-project > .content > .field-name-body + div,
 body.node-type-resource .node-article > .content > .field-name-body + div,
-body.node-type-resource .node-partner > .content > .field-name-body + div {
+body.node-type-resource .node-activity > .content > .field-name-body + div,
+body.node-type-resource .node-partner > .content > .field-name-body + div,
+body.node-type-activity .node-get-involved > .content > .field-name-body + div,
+body.node-type-activity .node-team > .content > .field-name-body + div,
+body.node-type-activity .node-resource > .content > .field-name-body + div,
+body.node-type-activity .node-event > .content > .field-name-body + div,
+body.node-type-activity .node-blog > .content > .field-name-body + div,
+body.node-type-activity .node-project > .content > .field-name-body + div,
+body.node-type-activity .node-article > .content > .field-name-body + div,
+body.node-type-activity .node-activity > .content > .field-name-body + div,
+body.node-type-activity .node-partner > .content > .field-name-body + div {
   clear: left; }
 body.node-type-blog .node-get-involved .field-name-field-team-image,
 body.node-type-blog .node-get-involved .field-name-field-image,
@@ -2131,6 +2174,8 @@ body.node-type-blog .node-project .field-name-field-team-image,
 body.node-type-blog .node-project .field-name-field-image,
 body.node-type-blog .node-article .field-name-field-team-image,
 body.node-type-blog .node-article .field-name-field-image,
+body.node-type-blog .node-activity .field-name-field-team-image,
+body.node-type-blog .node-activity .field-name-field-image,
 body.node-type-blog .node-partner .field-name-field-team-image,
 body.node-type-blog .node-partner .field-name-field-image,
 body.node-type-partner .node-get-involved .field-name-field-team-image,
@@ -2147,6 +2192,8 @@ body.node-type-partner .node-project .field-name-field-team-image,
 body.node-type-partner .node-project .field-name-field-image,
 body.node-type-partner .node-article .field-name-field-team-image,
 body.node-type-partner .node-article .field-name-field-image,
+body.node-type-partner .node-activity .field-name-field-team-image,
+body.node-type-partner .node-activity .field-name-field-image,
 body.node-type-partner .node-partner .field-name-field-team-image,
 body.node-type-partner .node-partner .field-name-field-image,
 body.node-type-team .node-get-involved .field-name-field-team-image,
@@ -2163,6 +2210,8 @@ body.node-type-team .node-project .field-name-field-team-image,
 body.node-type-team .node-project .field-name-field-image,
 body.node-type-team .node-article .field-name-field-team-image,
 body.node-type-team .node-article .field-name-field-image,
+body.node-type-team .node-activity .field-name-field-team-image,
+body.node-type-team .node-activity .field-name-field-image,
 body.node-type-team .node-partner .field-name-field-team-image,
 body.node-type-team .node-partner .field-name-field-image,
 body.node-type-project .node-get-involved .field-name-field-team-image,
@@ -2179,6 +2228,8 @@ body.node-type-project .node-project .field-name-field-team-image,
 body.node-type-project .node-project .field-name-field-image,
 body.node-type-project .node-article .field-name-field-team-image,
 body.node-type-project .node-article .field-name-field-image,
+body.node-type-project .node-activity .field-name-field-team-image,
+body.node-type-project .node-activity .field-name-field-image,
 body.node-type-project .node-partner .field-name-field-team-image,
 body.node-type-project .node-partner .field-name-field-image,
 body.node-type-article .node-get-involved .field-name-field-team-image,
@@ -2195,6 +2246,8 @@ body.node-type-article .node-project .field-name-field-team-image,
 body.node-type-article .node-project .field-name-field-image,
 body.node-type-article .node-article .field-name-field-team-image,
 body.node-type-article .node-article .field-name-field-image,
+body.node-type-article .node-activity .field-name-field-team-image,
+body.node-type-article .node-activity .field-name-field-image,
 body.node-type-article .node-partner .field-name-field-team-image,
 body.node-type-article .node-partner .field-name-field-image,
 body.node-type-event .node-get-involved .field-name-field-team-image,
@@ -2211,6 +2264,8 @@ body.node-type-event .node-project .field-name-field-team-image,
 body.node-type-event .node-project .field-name-field-image,
 body.node-type-event .node-article .field-name-field-team-image,
 body.node-type-event .node-article .field-name-field-image,
+body.node-type-event .node-activity .field-name-field-team-image,
+body.node-type-event .node-activity .field-name-field-image,
 body.node-type-event .node-partner .field-name-field-team-image,
 body.node-type-event .node-partner .field-name-field-image,
 body.node-type-get-involved .node-get-involved .field-name-field-team-image,
@@ -2227,6 +2282,8 @@ body.node-type-get-involved .node-project .field-name-field-team-image,
 body.node-type-get-involved .node-project .field-name-field-image,
 body.node-type-get-involved .node-article .field-name-field-team-image,
 body.node-type-get-involved .node-article .field-name-field-image,
+body.node-type-get-involved .node-activity .field-name-field-team-image,
+body.node-type-get-involved .node-activity .field-name-field-image,
 body.node-type-get-involved .node-partner .field-name-field-team-image,
 body.node-type-get-involved .node-partner .field-name-field-image,
 body.node-type-resource .node-get-involved .field-name-field-team-image,
@@ -2243,8 +2300,28 @@ body.node-type-resource .node-project .field-name-field-team-image,
 body.node-type-resource .node-project .field-name-field-image,
 body.node-type-resource .node-article .field-name-field-team-image,
 body.node-type-resource .node-article .field-name-field-image,
+body.node-type-resource .node-activity .field-name-field-team-image,
+body.node-type-resource .node-activity .field-name-field-image,
 body.node-type-resource .node-partner .field-name-field-team-image,
-body.node-type-resource .node-partner .field-name-field-image {
+body.node-type-resource .node-partner .field-name-field-image,
+body.node-type-activity .node-get-involved .field-name-field-team-image,
+body.node-type-activity .node-get-involved .field-name-field-image,
+body.node-type-activity .node-team .field-name-field-team-image,
+body.node-type-activity .node-team .field-name-field-image,
+body.node-type-activity .node-resource .field-name-field-team-image,
+body.node-type-activity .node-resource .field-name-field-image,
+body.node-type-activity .node-event .field-name-field-team-image,
+body.node-type-activity .node-event .field-name-field-image,
+body.node-type-activity .node-blog .field-name-field-team-image,
+body.node-type-activity .node-blog .field-name-field-image,
+body.node-type-activity .node-project .field-name-field-team-image,
+body.node-type-activity .node-project .field-name-field-image,
+body.node-type-activity .node-article .field-name-field-team-image,
+body.node-type-activity .node-article .field-name-field-image,
+body.node-type-activity .node-activity .field-name-field-team-image,
+body.node-type-activity .node-activity .field-name-field-image,
+body.node-type-activity .node-partner .field-name-field-team-image,
+body.node-type-activity .node-partner .field-name-field-image {
   clear: none;
   float: left;
   margin-right: 20px;
@@ -2267,6 +2344,8 @@ body.node-type-resource .node-partner .field-name-field-image {
   body.node-type-blog .node-project .field-name-field-image:last-child,
   body.node-type-blog .node-article .field-name-field-team-image:last-child,
   body.node-type-blog .node-article .field-name-field-image:last-child,
+  body.node-type-blog .node-activity .field-name-field-team-image:last-child,
+  body.node-type-blog .node-activity .field-name-field-image:last-child,
   body.node-type-blog .node-partner .field-name-field-team-image:last-child,
   body.node-type-blog .node-partner .field-name-field-image:last-child,
   body.node-type-partner .node-get-involved .field-name-field-team-image:last-child,
@@ -2283,6 +2362,8 @@ body.node-type-resource .node-partner .field-name-field-image {
   body.node-type-partner .node-project .field-name-field-image:last-child,
   body.node-type-partner .node-article .field-name-field-team-image:last-child,
   body.node-type-partner .node-article .field-name-field-image:last-child,
+  body.node-type-partner .node-activity .field-name-field-team-image:last-child,
+  body.node-type-partner .node-activity .field-name-field-image:last-child,
   body.node-type-partner .node-partner .field-name-field-team-image:last-child,
   body.node-type-partner .node-partner .field-name-field-image:last-child,
   body.node-type-team .node-get-involved .field-name-field-team-image:last-child,
@@ -2299,6 +2380,8 @@ body.node-type-resource .node-partner .field-name-field-image {
   body.node-type-team .node-project .field-name-field-image:last-child,
   body.node-type-team .node-article .field-name-field-team-image:last-child,
   body.node-type-team .node-article .field-name-field-image:last-child,
+  body.node-type-team .node-activity .field-name-field-team-image:last-child,
+  body.node-type-team .node-activity .field-name-field-image:last-child,
   body.node-type-team .node-partner .field-name-field-team-image:last-child,
   body.node-type-team .node-partner .field-name-field-image:last-child,
   body.node-type-project .node-get-involved .field-name-field-team-image:last-child,
@@ -2315,6 +2398,8 @@ body.node-type-resource .node-partner .field-name-field-image {
   body.node-type-project .node-project .field-name-field-image:last-child,
   body.node-type-project .node-article .field-name-field-team-image:last-child,
   body.node-type-project .node-article .field-name-field-image:last-child,
+  body.node-type-project .node-activity .field-name-field-team-image:last-child,
+  body.node-type-project .node-activity .field-name-field-image:last-child,
   body.node-type-project .node-partner .field-name-field-team-image:last-child,
   body.node-type-project .node-partner .field-name-field-image:last-child,
   body.node-type-article .node-get-involved .field-name-field-team-image:last-child,
@@ -2331,6 +2416,8 @@ body.node-type-resource .node-partner .field-name-field-image {
   body.node-type-article .node-project .field-name-field-image:last-child,
   body.node-type-article .node-article .field-name-field-team-image:last-child,
   body.node-type-article .node-article .field-name-field-image:last-child,
+  body.node-type-article .node-activity .field-name-field-team-image:last-child,
+  body.node-type-article .node-activity .field-name-field-image:last-child,
   body.node-type-article .node-partner .field-name-field-team-image:last-child,
   body.node-type-article .node-partner .field-name-field-image:last-child,
   body.node-type-event .node-get-involved .field-name-field-team-image:last-child,
@@ -2347,6 +2434,8 @@ body.node-type-resource .node-partner .field-name-field-image {
   body.node-type-event .node-project .field-name-field-image:last-child,
   body.node-type-event .node-article .field-name-field-team-image:last-child,
   body.node-type-event .node-article .field-name-field-image:last-child,
+  body.node-type-event .node-activity .field-name-field-team-image:last-child,
+  body.node-type-event .node-activity .field-name-field-image:last-child,
   body.node-type-event .node-partner .field-name-field-team-image:last-child,
   body.node-type-event .node-partner .field-name-field-image:last-child,
   body.node-type-get-involved .node-get-involved .field-name-field-team-image:last-child,
@@ -2363,6 +2452,8 @@ body.node-type-resource .node-partner .field-name-field-image {
   body.node-type-get-involved .node-project .field-name-field-image:last-child,
   body.node-type-get-involved .node-article .field-name-field-team-image:last-child,
   body.node-type-get-involved .node-article .field-name-field-image:last-child,
+  body.node-type-get-involved .node-activity .field-name-field-team-image:last-child,
+  body.node-type-get-involved .node-activity .field-name-field-image:last-child,
   body.node-type-get-involved .node-partner .field-name-field-team-image:last-child,
   body.node-type-get-involved .node-partner .field-name-field-image:last-child,
   body.node-type-resource .node-get-involved .field-name-field-team-image:last-child,
@@ -2379,8 +2470,28 @@ body.node-type-resource .node-partner .field-name-field-image {
   body.node-type-resource .node-project .field-name-field-image:last-child,
   body.node-type-resource .node-article .field-name-field-team-image:last-child,
   body.node-type-resource .node-article .field-name-field-image:last-child,
+  body.node-type-resource .node-activity .field-name-field-team-image:last-child,
+  body.node-type-resource .node-activity .field-name-field-image:last-child,
   body.node-type-resource .node-partner .field-name-field-team-image:last-child,
-  body.node-type-resource .node-partner .field-name-field-image:last-child {
+  body.node-type-resource .node-partner .field-name-field-image:last-child,
+  body.node-type-activity .node-get-involved .field-name-field-team-image:last-child,
+  body.node-type-activity .node-get-involved .field-name-field-image:last-child,
+  body.node-type-activity .node-team .field-name-field-team-image:last-child,
+  body.node-type-activity .node-team .field-name-field-image:last-child,
+  body.node-type-activity .node-resource .field-name-field-team-image:last-child,
+  body.node-type-activity .node-resource .field-name-field-image:last-child,
+  body.node-type-activity .node-event .field-name-field-team-image:last-child,
+  body.node-type-activity .node-event .field-name-field-image:last-child,
+  body.node-type-activity .node-blog .field-name-field-team-image:last-child,
+  body.node-type-activity .node-blog .field-name-field-image:last-child,
+  body.node-type-activity .node-project .field-name-field-team-image:last-child,
+  body.node-type-activity .node-project .field-name-field-image:last-child,
+  body.node-type-activity .node-article .field-name-field-team-image:last-child,
+  body.node-type-activity .node-article .field-name-field-image:last-child,
+  body.node-type-activity .node-activity .field-name-field-team-image:last-child,
+  body.node-type-activity .node-activity .field-name-field-image:last-child,
+  body.node-type-activity .node-partner .field-name-field-team-image:last-child,
+  body.node-type-activity .node-partner .field-name-field-image:last-child {
     margin-right: 0; }
   body.node-type-blog .node-get-involved .field-name-field-team-image img,
   body.node-type-blog .node-get-involved .field-name-field-image img,
@@ -2396,6 +2507,8 @@ body.node-type-resource .node-partner .field-name-field-image {
   body.node-type-blog .node-project .field-name-field-image img,
   body.node-type-blog .node-article .field-name-field-team-image img,
   body.node-type-blog .node-article .field-name-field-image img,
+  body.node-type-blog .node-activity .field-name-field-team-image img,
+  body.node-type-blog .node-activity .field-name-field-image img,
   body.node-type-blog .node-partner .field-name-field-team-image img,
   body.node-type-blog .node-partner .field-name-field-image img,
   body.node-type-partner .node-get-involved .field-name-field-team-image img,
@@ -2412,6 +2525,8 @@ body.node-type-resource .node-partner .field-name-field-image {
   body.node-type-partner .node-project .field-name-field-image img,
   body.node-type-partner .node-article .field-name-field-team-image img,
   body.node-type-partner .node-article .field-name-field-image img,
+  body.node-type-partner .node-activity .field-name-field-team-image img,
+  body.node-type-partner .node-activity .field-name-field-image img,
   body.node-type-partner .node-partner .field-name-field-team-image img,
   body.node-type-partner .node-partner .field-name-field-image img,
   body.node-type-team .node-get-involved .field-name-field-team-image img,
@@ -2428,6 +2543,8 @@ body.node-type-resource .node-partner .field-name-field-image {
   body.node-type-team .node-project .field-name-field-image img,
   body.node-type-team .node-article .field-name-field-team-image img,
   body.node-type-team .node-article .field-name-field-image img,
+  body.node-type-team .node-activity .field-name-field-team-image img,
+  body.node-type-team .node-activity .field-name-field-image img,
   body.node-type-team .node-partner .field-name-field-team-image img,
   body.node-type-team .node-partner .field-name-field-image img,
   body.node-type-project .node-get-involved .field-name-field-team-image img,
@@ -2444,6 +2561,8 @@ body.node-type-resource .node-partner .field-name-field-image {
   body.node-type-project .node-project .field-name-field-image img,
   body.node-type-project .node-article .field-name-field-team-image img,
   body.node-type-project .node-article .field-name-field-image img,
+  body.node-type-project .node-activity .field-name-field-team-image img,
+  body.node-type-project .node-activity .field-name-field-image img,
   body.node-type-project .node-partner .field-name-field-team-image img,
   body.node-type-project .node-partner .field-name-field-image img,
   body.node-type-article .node-get-involved .field-name-field-team-image img,
@@ -2460,6 +2579,8 @@ body.node-type-resource .node-partner .field-name-field-image {
   body.node-type-article .node-project .field-name-field-image img,
   body.node-type-article .node-article .field-name-field-team-image img,
   body.node-type-article .node-article .field-name-field-image img,
+  body.node-type-article .node-activity .field-name-field-team-image img,
+  body.node-type-article .node-activity .field-name-field-image img,
   body.node-type-article .node-partner .field-name-field-team-image img,
   body.node-type-article .node-partner .field-name-field-image img,
   body.node-type-event .node-get-involved .field-name-field-team-image img,
@@ -2476,6 +2597,8 @@ body.node-type-resource .node-partner .field-name-field-image {
   body.node-type-event .node-project .field-name-field-image img,
   body.node-type-event .node-article .field-name-field-team-image img,
   body.node-type-event .node-article .field-name-field-image img,
+  body.node-type-event .node-activity .field-name-field-team-image img,
+  body.node-type-event .node-activity .field-name-field-image img,
   body.node-type-event .node-partner .field-name-field-team-image img,
   body.node-type-event .node-partner .field-name-field-image img,
   body.node-type-get-involved .node-get-involved .field-name-field-team-image img,
@@ -2492,6 +2615,8 @@ body.node-type-resource .node-partner .field-name-field-image {
   body.node-type-get-involved .node-project .field-name-field-image img,
   body.node-type-get-involved .node-article .field-name-field-team-image img,
   body.node-type-get-involved .node-article .field-name-field-image img,
+  body.node-type-get-involved .node-activity .field-name-field-team-image img,
+  body.node-type-get-involved .node-activity .field-name-field-image img,
   body.node-type-get-involved .node-partner .field-name-field-team-image img,
   body.node-type-get-involved .node-partner .field-name-field-image img,
   body.node-type-resource .node-get-involved .field-name-field-team-image img,
@@ -2508,8 +2633,28 @@ body.node-type-resource .node-partner .field-name-field-image {
   body.node-type-resource .node-project .field-name-field-image img,
   body.node-type-resource .node-article .field-name-field-team-image img,
   body.node-type-resource .node-article .field-name-field-image img,
+  body.node-type-resource .node-activity .field-name-field-team-image img,
+  body.node-type-resource .node-activity .field-name-field-image img,
   body.node-type-resource .node-partner .field-name-field-team-image img,
-  body.node-type-resource .node-partner .field-name-field-image img {
+  body.node-type-resource .node-partner .field-name-field-image img,
+  body.node-type-activity .node-get-involved .field-name-field-team-image img,
+  body.node-type-activity .node-get-involved .field-name-field-image img,
+  body.node-type-activity .node-team .field-name-field-team-image img,
+  body.node-type-activity .node-team .field-name-field-image img,
+  body.node-type-activity .node-resource .field-name-field-team-image img,
+  body.node-type-activity .node-resource .field-name-field-image img,
+  body.node-type-activity .node-event .field-name-field-team-image img,
+  body.node-type-activity .node-event .field-name-field-image img,
+  body.node-type-activity .node-blog .field-name-field-team-image img,
+  body.node-type-activity .node-blog .field-name-field-image img,
+  body.node-type-activity .node-project .field-name-field-team-image img,
+  body.node-type-activity .node-project .field-name-field-image img,
+  body.node-type-activity .node-article .field-name-field-team-image img,
+  body.node-type-activity .node-article .field-name-field-image img,
+  body.node-type-activity .node-activity .field-name-field-team-image img,
+  body.node-type-activity .node-activity .field-name-field-image img,
+  body.node-type-activity .node-partner .field-name-field-team-image img,
+  body.node-type-activity .node-partner .field-name-field-image img {
     width: 100%;
     height: auto; }
   @media screen and (max-width: 480px) {
@@ -2527,6 +2672,8 @@ body.node-type-resource .node-partner .field-name-field-image {
     body.node-type-blog .node-project .field-name-field-image,
     body.node-type-blog .node-article .field-name-field-team-image,
     body.node-type-blog .node-article .field-name-field-image,
+    body.node-type-blog .node-activity .field-name-field-team-image,
+    body.node-type-blog .node-activity .field-name-field-image,
     body.node-type-blog .node-partner .field-name-field-team-image,
     body.node-type-blog .node-partner .field-name-field-image,
     body.node-type-partner .node-get-involved .field-name-field-team-image,
@@ -2543,6 +2690,8 @@ body.node-type-resource .node-partner .field-name-field-image {
     body.node-type-partner .node-project .field-name-field-image,
     body.node-type-partner .node-article .field-name-field-team-image,
     body.node-type-partner .node-article .field-name-field-image,
+    body.node-type-partner .node-activity .field-name-field-team-image,
+    body.node-type-partner .node-activity .field-name-field-image,
     body.node-type-partner .node-partner .field-name-field-team-image,
     body.node-type-partner .node-partner .field-name-field-image,
     body.node-type-team .node-get-involved .field-name-field-team-image,
@@ -2559,6 +2708,8 @@ body.node-type-resource .node-partner .field-name-field-image {
     body.node-type-team .node-project .field-name-field-image,
     body.node-type-team .node-article .field-name-field-team-image,
     body.node-type-team .node-article .field-name-field-image,
+    body.node-type-team .node-activity .field-name-field-team-image,
+    body.node-type-team .node-activity .field-name-field-image,
     body.node-type-team .node-partner .field-name-field-team-image,
     body.node-type-team .node-partner .field-name-field-image,
     body.node-type-project .node-get-involved .field-name-field-team-image,
@@ -2575,6 +2726,8 @@ body.node-type-resource .node-partner .field-name-field-image {
     body.node-type-project .node-project .field-name-field-image,
     body.node-type-project .node-article .field-name-field-team-image,
     body.node-type-project .node-article .field-name-field-image,
+    body.node-type-project .node-activity .field-name-field-team-image,
+    body.node-type-project .node-activity .field-name-field-image,
     body.node-type-project .node-partner .field-name-field-team-image,
     body.node-type-project .node-partner .field-name-field-image,
     body.node-type-article .node-get-involved .field-name-field-team-image,
@@ -2591,6 +2744,8 @@ body.node-type-resource .node-partner .field-name-field-image {
     body.node-type-article .node-project .field-name-field-image,
     body.node-type-article .node-article .field-name-field-team-image,
     body.node-type-article .node-article .field-name-field-image,
+    body.node-type-article .node-activity .field-name-field-team-image,
+    body.node-type-article .node-activity .field-name-field-image,
     body.node-type-article .node-partner .field-name-field-team-image,
     body.node-type-article .node-partner .field-name-field-image,
     body.node-type-event .node-get-involved .field-name-field-team-image,
@@ -2607,6 +2762,8 @@ body.node-type-resource .node-partner .field-name-field-image {
     body.node-type-event .node-project .field-name-field-image,
     body.node-type-event .node-article .field-name-field-team-image,
     body.node-type-event .node-article .field-name-field-image,
+    body.node-type-event .node-activity .field-name-field-team-image,
+    body.node-type-event .node-activity .field-name-field-image,
     body.node-type-event .node-partner .field-name-field-team-image,
     body.node-type-event .node-partner .field-name-field-image,
     body.node-type-get-involved .node-get-involved .field-name-field-team-image,
@@ -2623,6 +2780,8 @@ body.node-type-resource .node-partner .field-name-field-image {
     body.node-type-get-involved .node-project .field-name-field-image,
     body.node-type-get-involved .node-article .field-name-field-team-image,
     body.node-type-get-involved .node-article .field-name-field-image,
+    body.node-type-get-involved .node-activity .field-name-field-team-image,
+    body.node-type-get-involved .node-activity .field-name-field-image,
     body.node-type-get-involved .node-partner .field-name-field-team-image,
     body.node-type-get-involved .node-partner .field-name-field-image,
     body.node-type-resource .node-get-involved .field-name-field-team-image,
@@ -2639,8 +2798,28 @@ body.node-type-resource .node-partner .field-name-field-image {
     body.node-type-resource .node-project .field-name-field-image,
     body.node-type-resource .node-article .field-name-field-team-image,
     body.node-type-resource .node-article .field-name-field-image,
+    body.node-type-resource .node-activity .field-name-field-team-image,
+    body.node-type-resource .node-activity .field-name-field-image,
     body.node-type-resource .node-partner .field-name-field-team-image,
-    body.node-type-resource .node-partner .field-name-field-image {
+    body.node-type-resource .node-partner .field-name-field-image,
+    body.node-type-activity .node-get-involved .field-name-field-team-image,
+    body.node-type-activity .node-get-involved .field-name-field-image,
+    body.node-type-activity .node-team .field-name-field-team-image,
+    body.node-type-activity .node-team .field-name-field-image,
+    body.node-type-activity .node-resource .field-name-field-team-image,
+    body.node-type-activity .node-resource .field-name-field-image,
+    body.node-type-activity .node-event .field-name-field-team-image,
+    body.node-type-activity .node-event .field-name-field-image,
+    body.node-type-activity .node-blog .field-name-field-team-image,
+    body.node-type-activity .node-blog .field-name-field-image,
+    body.node-type-activity .node-project .field-name-field-team-image,
+    body.node-type-activity .node-project .field-name-field-image,
+    body.node-type-activity .node-article .field-name-field-team-image,
+    body.node-type-activity .node-article .field-name-field-image,
+    body.node-type-activity .node-activity .field-name-field-team-image,
+    body.node-type-activity .node-activity .field-name-field-image,
+    body.node-type-activity .node-partner .field-name-field-team-image,
+    body.node-type-activity .node-partner .field-name-field-image {
       width: 100%;
       margin-right: 0; } }
 body.node-type-blog .node-get-involved .field-group-div.group-right,
@@ -2650,6 +2829,7 @@ body.node-type-blog .node-event .field-group-div.group-right,
 body.node-type-blog .node-blog .field-group-div.group-right,
 body.node-type-blog .node-project .field-group-div.group-right,
 body.node-type-blog .node-article .field-group-div.group-right,
+body.node-type-blog .node-activity .field-group-div.group-right,
 body.node-type-blog .node-partner .field-group-div.group-right,
 body.node-type-partner .node-get-involved .field-group-div.group-right,
 body.node-type-partner .node-team .field-group-div.group-right,
@@ -2658,6 +2838,7 @@ body.node-type-partner .node-event .field-group-div.group-right,
 body.node-type-partner .node-blog .field-group-div.group-right,
 body.node-type-partner .node-project .field-group-div.group-right,
 body.node-type-partner .node-article .field-group-div.group-right,
+body.node-type-partner .node-activity .field-group-div.group-right,
 body.node-type-partner .node-partner .field-group-div.group-right,
 body.node-type-team .node-get-involved .field-group-div.group-right,
 body.node-type-team .node-team .field-group-div.group-right,
@@ -2666,6 +2847,7 @@ body.node-type-team .node-event .field-group-div.group-right,
 body.node-type-team .node-blog .field-group-div.group-right,
 body.node-type-team .node-project .field-group-div.group-right,
 body.node-type-team .node-article .field-group-div.group-right,
+body.node-type-team .node-activity .field-group-div.group-right,
 body.node-type-team .node-partner .field-group-div.group-right,
 body.node-type-project .node-get-involved .field-group-div.group-right,
 body.node-type-project .node-team .field-group-div.group-right,
@@ -2674,6 +2856,7 @@ body.node-type-project .node-event .field-group-div.group-right,
 body.node-type-project .node-blog .field-group-div.group-right,
 body.node-type-project .node-project .field-group-div.group-right,
 body.node-type-project .node-article .field-group-div.group-right,
+body.node-type-project .node-activity .field-group-div.group-right,
 body.node-type-project .node-partner .field-group-div.group-right,
 body.node-type-article .node-get-involved .field-group-div.group-right,
 body.node-type-article .node-team .field-group-div.group-right,
@@ -2682,6 +2865,7 @@ body.node-type-article .node-event .field-group-div.group-right,
 body.node-type-article .node-blog .field-group-div.group-right,
 body.node-type-article .node-project .field-group-div.group-right,
 body.node-type-article .node-article .field-group-div.group-right,
+body.node-type-article .node-activity .field-group-div.group-right,
 body.node-type-article .node-partner .field-group-div.group-right,
 body.node-type-event .node-get-involved .field-group-div.group-right,
 body.node-type-event .node-team .field-group-div.group-right,
@@ -2690,6 +2874,7 @@ body.node-type-event .node-event .field-group-div.group-right,
 body.node-type-event .node-blog .field-group-div.group-right,
 body.node-type-event .node-project .field-group-div.group-right,
 body.node-type-event .node-article .field-group-div.group-right,
+body.node-type-event .node-activity .field-group-div.group-right,
 body.node-type-event .node-partner .field-group-div.group-right,
 body.node-type-get-involved .node-get-involved .field-group-div.group-right,
 body.node-type-get-involved .node-team .field-group-div.group-right,
@@ -2698,6 +2883,7 @@ body.node-type-get-involved .node-event .field-group-div.group-right,
 body.node-type-get-involved .node-blog .field-group-div.group-right,
 body.node-type-get-involved .node-project .field-group-div.group-right,
 body.node-type-get-involved .node-article .field-group-div.group-right,
+body.node-type-get-involved .node-activity .field-group-div.group-right,
 body.node-type-get-involved .node-partner .field-group-div.group-right,
 body.node-type-resource .node-get-involved .field-group-div.group-right,
 body.node-type-resource .node-team .field-group-div.group-right,
@@ -2706,7 +2892,17 @@ body.node-type-resource .node-event .field-group-div.group-right,
 body.node-type-resource .node-blog .field-group-div.group-right,
 body.node-type-resource .node-project .field-group-div.group-right,
 body.node-type-resource .node-article .field-group-div.group-right,
-body.node-type-resource .node-partner .field-group-div.group-right {
+body.node-type-resource .node-activity .field-group-div.group-right,
+body.node-type-resource .node-partner .field-group-div.group-right,
+body.node-type-activity .node-get-involved .field-group-div.group-right,
+body.node-type-activity .node-team .field-group-div.group-right,
+body.node-type-activity .node-resource .field-group-div.group-right,
+body.node-type-activity .node-event .field-group-div.group-right,
+body.node-type-activity .node-blog .field-group-div.group-right,
+body.node-type-activity .node-project .field-group-div.group-right,
+body.node-type-activity .node-article .field-group-div.group-right,
+body.node-type-activity .node-activity .field-group-div.group-right,
+body.node-type-activity .node-partner .field-group-div.group-right {
   display: block;
   float: left;
   margin-right: 2.12766%;
@@ -2719,6 +2915,7 @@ body.node-type-resource .node-partner .field-group-div.group-right {
   body.node-type-blog .node-blog .field-group-div.group-right:last-child,
   body.node-type-blog .node-project .field-group-div.group-right:last-child,
   body.node-type-blog .node-article .field-group-div.group-right:last-child,
+  body.node-type-blog .node-activity .field-group-div.group-right:last-child,
   body.node-type-blog .node-partner .field-group-div.group-right:last-child,
   body.node-type-partner .node-get-involved .field-group-div.group-right:last-child,
   body.node-type-partner .node-team .field-group-div.group-right:last-child,
@@ -2727,6 +2924,7 @@ body.node-type-resource .node-partner .field-group-div.group-right {
   body.node-type-partner .node-blog .field-group-div.group-right:last-child,
   body.node-type-partner .node-project .field-group-div.group-right:last-child,
   body.node-type-partner .node-article .field-group-div.group-right:last-child,
+  body.node-type-partner .node-activity .field-group-div.group-right:last-child,
   body.node-type-partner .node-partner .field-group-div.group-right:last-child,
   body.node-type-team .node-get-involved .field-group-div.group-right:last-child,
   body.node-type-team .node-team .field-group-div.group-right:last-child,
@@ -2735,6 +2933,7 @@ body.node-type-resource .node-partner .field-group-div.group-right {
   body.node-type-team .node-blog .field-group-div.group-right:last-child,
   body.node-type-team .node-project .field-group-div.group-right:last-child,
   body.node-type-team .node-article .field-group-div.group-right:last-child,
+  body.node-type-team .node-activity .field-group-div.group-right:last-child,
   body.node-type-team .node-partner .field-group-div.group-right:last-child,
   body.node-type-project .node-get-involved .field-group-div.group-right:last-child,
   body.node-type-project .node-team .field-group-div.group-right:last-child,
@@ -2743,6 +2942,7 @@ body.node-type-resource .node-partner .field-group-div.group-right {
   body.node-type-project .node-blog .field-group-div.group-right:last-child,
   body.node-type-project .node-project .field-group-div.group-right:last-child,
   body.node-type-project .node-article .field-group-div.group-right:last-child,
+  body.node-type-project .node-activity .field-group-div.group-right:last-child,
   body.node-type-project .node-partner .field-group-div.group-right:last-child,
   body.node-type-article .node-get-involved .field-group-div.group-right:last-child,
   body.node-type-article .node-team .field-group-div.group-right:last-child,
@@ -2751,6 +2951,7 @@ body.node-type-resource .node-partner .field-group-div.group-right {
   body.node-type-article .node-blog .field-group-div.group-right:last-child,
   body.node-type-article .node-project .field-group-div.group-right:last-child,
   body.node-type-article .node-article .field-group-div.group-right:last-child,
+  body.node-type-article .node-activity .field-group-div.group-right:last-child,
   body.node-type-article .node-partner .field-group-div.group-right:last-child,
   body.node-type-event .node-get-involved .field-group-div.group-right:last-child,
   body.node-type-event .node-team .field-group-div.group-right:last-child,
@@ -2759,6 +2960,7 @@ body.node-type-resource .node-partner .field-group-div.group-right {
   body.node-type-event .node-blog .field-group-div.group-right:last-child,
   body.node-type-event .node-project .field-group-div.group-right:last-child,
   body.node-type-event .node-article .field-group-div.group-right:last-child,
+  body.node-type-event .node-activity .field-group-div.group-right:last-child,
   body.node-type-event .node-partner .field-group-div.group-right:last-child,
   body.node-type-get-involved .node-get-involved .field-group-div.group-right:last-child,
   body.node-type-get-involved .node-team .field-group-div.group-right:last-child,
@@ -2767,6 +2969,7 @@ body.node-type-resource .node-partner .field-group-div.group-right {
   body.node-type-get-involved .node-blog .field-group-div.group-right:last-child,
   body.node-type-get-involved .node-project .field-group-div.group-right:last-child,
   body.node-type-get-involved .node-article .field-group-div.group-right:last-child,
+  body.node-type-get-involved .node-activity .field-group-div.group-right:last-child,
   body.node-type-get-involved .node-partner .field-group-div.group-right:last-child,
   body.node-type-resource .node-get-involved .field-group-div.group-right:last-child,
   body.node-type-resource .node-team .field-group-div.group-right:last-child,
@@ -2775,7 +2978,17 @@ body.node-type-resource .node-partner .field-group-div.group-right {
   body.node-type-resource .node-blog .field-group-div.group-right:last-child,
   body.node-type-resource .node-project .field-group-div.group-right:last-child,
   body.node-type-resource .node-article .field-group-div.group-right:last-child,
-  body.node-type-resource .node-partner .field-group-div.group-right:last-child {
+  body.node-type-resource .node-activity .field-group-div.group-right:last-child,
+  body.node-type-resource .node-partner .field-group-div.group-right:last-child,
+  body.node-type-activity .node-get-involved .field-group-div.group-right:last-child,
+  body.node-type-activity .node-team .field-group-div.group-right:last-child,
+  body.node-type-activity .node-resource .field-group-div.group-right:last-child,
+  body.node-type-activity .node-event .field-group-div.group-right:last-child,
+  body.node-type-activity .node-blog .field-group-div.group-right:last-child,
+  body.node-type-activity .node-project .field-group-div.group-right:last-child,
+  body.node-type-activity .node-article .field-group-div.group-right:last-child,
+  body.node-type-activity .node-activity .field-group-div.group-right:last-child,
+  body.node-type-activity .node-partner .field-group-div.group-right:last-child {
     margin-right: 0; }
   @media screen and (max-width: 480px) {
     body.node-type-blog .node-get-involved .field-group-div.group-right,
@@ -2785,6 +2998,7 @@ body.node-type-resource .node-partner .field-group-div.group-right {
     body.node-type-blog .node-blog .field-group-div.group-right,
     body.node-type-blog .node-project .field-group-div.group-right,
     body.node-type-blog .node-article .field-group-div.group-right,
+    body.node-type-blog .node-activity .field-group-div.group-right,
     body.node-type-blog .node-partner .field-group-div.group-right,
     body.node-type-partner .node-get-involved .field-group-div.group-right,
     body.node-type-partner .node-team .field-group-div.group-right,
@@ -2793,6 +3007,7 @@ body.node-type-resource .node-partner .field-group-div.group-right {
     body.node-type-partner .node-blog .field-group-div.group-right,
     body.node-type-partner .node-project .field-group-div.group-right,
     body.node-type-partner .node-article .field-group-div.group-right,
+    body.node-type-partner .node-activity .field-group-div.group-right,
     body.node-type-partner .node-partner .field-group-div.group-right,
     body.node-type-team .node-get-involved .field-group-div.group-right,
     body.node-type-team .node-team .field-group-div.group-right,
@@ -2801,6 +3016,7 @@ body.node-type-resource .node-partner .field-group-div.group-right {
     body.node-type-team .node-blog .field-group-div.group-right,
     body.node-type-team .node-project .field-group-div.group-right,
     body.node-type-team .node-article .field-group-div.group-right,
+    body.node-type-team .node-activity .field-group-div.group-right,
     body.node-type-team .node-partner .field-group-div.group-right,
     body.node-type-project .node-get-involved .field-group-div.group-right,
     body.node-type-project .node-team .field-group-div.group-right,
@@ -2809,6 +3025,7 @@ body.node-type-resource .node-partner .field-group-div.group-right {
     body.node-type-project .node-blog .field-group-div.group-right,
     body.node-type-project .node-project .field-group-div.group-right,
     body.node-type-project .node-article .field-group-div.group-right,
+    body.node-type-project .node-activity .field-group-div.group-right,
     body.node-type-project .node-partner .field-group-div.group-right,
     body.node-type-article .node-get-involved .field-group-div.group-right,
     body.node-type-article .node-team .field-group-div.group-right,
@@ -2817,6 +3034,7 @@ body.node-type-resource .node-partner .field-group-div.group-right {
     body.node-type-article .node-blog .field-group-div.group-right,
     body.node-type-article .node-project .field-group-div.group-right,
     body.node-type-article .node-article .field-group-div.group-right,
+    body.node-type-article .node-activity .field-group-div.group-right,
     body.node-type-article .node-partner .field-group-div.group-right,
     body.node-type-event .node-get-involved .field-group-div.group-right,
     body.node-type-event .node-team .field-group-div.group-right,
@@ -2825,6 +3043,7 @@ body.node-type-resource .node-partner .field-group-div.group-right {
     body.node-type-event .node-blog .field-group-div.group-right,
     body.node-type-event .node-project .field-group-div.group-right,
     body.node-type-event .node-article .field-group-div.group-right,
+    body.node-type-event .node-activity .field-group-div.group-right,
     body.node-type-event .node-partner .field-group-div.group-right,
     body.node-type-get-involved .node-get-involved .field-group-div.group-right,
     body.node-type-get-involved .node-team .field-group-div.group-right,
@@ -2833,6 +3052,7 @@ body.node-type-resource .node-partner .field-group-div.group-right {
     body.node-type-get-involved .node-blog .field-group-div.group-right,
     body.node-type-get-involved .node-project .field-group-div.group-right,
     body.node-type-get-involved .node-article .field-group-div.group-right,
+    body.node-type-get-involved .node-activity .field-group-div.group-right,
     body.node-type-get-involved .node-partner .field-group-div.group-right,
     body.node-type-resource .node-get-involved .field-group-div.group-right,
     body.node-type-resource .node-team .field-group-div.group-right,
@@ -2841,7 +3061,17 @@ body.node-type-resource .node-partner .field-group-div.group-right {
     body.node-type-resource .node-blog .field-group-div.group-right,
     body.node-type-resource .node-project .field-group-div.group-right,
     body.node-type-resource .node-article .field-group-div.group-right,
-    body.node-type-resource .node-partner .field-group-div.group-right {
+    body.node-type-resource .node-activity .field-group-div.group-right,
+    body.node-type-resource .node-partner .field-group-div.group-right,
+    body.node-type-activity .node-get-involved .field-group-div.group-right,
+    body.node-type-activity .node-team .field-group-div.group-right,
+    body.node-type-activity .node-resource .field-group-div.group-right,
+    body.node-type-activity .node-event .field-group-div.group-right,
+    body.node-type-activity .node-blog .field-group-div.group-right,
+    body.node-type-activity .node-project .field-group-div.group-right,
+    body.node-type-activity .node-article .field-group-div.group-right,
+    body.node-type-activity .node-activity .field-group-div.group-right,
+    body.node-type-activity .node-partner .field-group-div.group-right {
       width: 100%;
       margin-right: 0; } }
 body.node-type-blog .node-team .group-right,
@@ -2851,7 +3081,8 @@ body.node-type-project .node-team .group-right,
 body.node-type-article .node-team .group-right,
 body.node-type-event .node-team .group-right,
 body.node-type-get-involved .node-team .group-right,
-body.node-type-resource .node-team .group-right {
+body.node-type-resource .node-team .group-right,
+body.node-type-activity .node-team .group-right {
   float: left; }
   body.node-type-blog .node-team .group-right .field,
   body.node-type-partner .node-team .group-right .field,
@@ -2860,7 +3091,8 @@ body.node-type-resource .node-team .group-right {
   body.node-type-article .node-team .group-right .field,
   body.node-type-event .node-team .group-right .field,
   body.node-type-get-involved .node-team .group-right .field,
-  body.node-type-resource .node-team .group-right .field {
+  body.node-type-resource .node-team .group-right .field,
+  body.node-type-activity .node-team .group-right .field {
     margin-bottom: 2px; }
   body.node-type-blog .node-team .group-right .field-name-field-name,
   body.node-type-partner .node-team .group-right .field-name-field-name,
@@ -2869,7 +3101,8 @@ body.node-type-resource .node-team .group-right {
   body.node-type-article .node-team .group-right .field-name-field-name,
   body.node-type-event .node-team .group-right .field-name-field-name,
   body.node-type-get-involved .node-team .group-right .field-name-field-name,
-  body.node-type-resource .node-team .group-right .field-name-field-name {
+  body.node-type-resource .node-team .group-right .field-name-field-name,
+  body.node-type-activity .node-team .group-right .field-name-field-name {
     font-size: large;
     margin-bottom: 5px; }
   body.node-type-blog .node-team .group-right .field-name-field-team-title,
@@ -2887,7 +3120,9 @@ body.node-type-resource .node-team .group-right {
   body.node-type-get-involved .node-team .group-right .field-name-field-team-title,
   body.node-type-get-involved .node-team .group-right .field-name-field-team-member-type,
   body.node-type-resource .node-team .group-right .field-name-field-team-title,
-  body.node-type-resource .node-team .group-right .field-name-field-team-member-type {
+  body.node-type-resource .node-team .group-right .field-name-field-team-member-type,
+  body.node-type-activity .node-team .group-right .field-name-field-team-title,
+  body.node-type-activity .node-team .group-right .field-name-field-team-member-type {
     display: inline-block; }
   body.node-type-blog .node-team .group-right .field-name-field-team-bio,
   body.node-type-partner .node-team .group-right .field-name-field-team-bio,
@@ -2896,7 +3131,8 @@ body.node-type-resource .node-team .group-right {
   body.node-type-article .node-team .group-right .field-name-field-team-bio,
   body.node-type-event .node-team .group-right .field-name-field-team-bio,
   body.node-type-get-involved .node-team .group-right .field-name-field-team-bio,
-  body.node-type-resource .node-team .group-right .field-name-field-team-bio {
+  body.node-type-resource .node-team .group-right .field-name-field-team-bio,
+  body.node-type-activity .node-team .group-right .field-name-field-team-bio {
     margin-top: 15px; }
 
 .page-contact .form-item label {

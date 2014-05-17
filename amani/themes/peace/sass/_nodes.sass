@@ -34,7 +34,20 @@
           float: left
           margin: 1px 5px 1px 1px
           padding: 1px
-      /* List styles.
+      .field-name-field-category
+        .field-label
+          margin-bottom: 0px !important
+          margin-top: 0px !important
+          float: left
+          display: inline
+      .field-name-field-category
+        .field-item
+          background-color: #EEEEEE
+          border: 1px dashed #E1E1E1
+          float: left
+          margin: 1px 5px 1px 1px
+          padding: 1px
+      /* List styles. */
       ul, ol
         margin-left: .5em
         padding-left: 1em
@@ -42,20 +55,22 @@
 // Partners
 .page-partners,
   #block-system-main
-    background: #fff
-    background: #fff
-    padding: $padding
-    box-shadow: 2px 3px 4px #C8C8C8
+    background: none
+    //padding: $padding
+    box-shadow: 0
     font-family: "Georgia"
     line-height: 1.4
     .views-row
-      padding-bottom: $padding
+      @include fill-parent()
+      @include omega(1n)
+      background: #fff
+      padding: $padding
+      box-shadow: 2px 3px 4px #C8C8C8
       margin-bottom: $margin
-      clear: left
+      overflow: hidden
       &.views-row-last
         border-bottom: 0
         margin-bottom: 0
-        padding-bottom: 0
       .views-field-title
         font-family: "bariol_regularregular"
         text-transform: uppercase
@@ -552,6 +567,7 @@ body.node-type-article,
 body.node-type-event,
 body.node-type-get-involved,
 body.node-type-resource,
+body.node-type-activity,
   .node-get-involved,
   .node-team,
   .node-resource,
@@ -559,6 +575,7 @@ body.node-type-resource,
   .node-blog,
   .node-project,
   .node-article,
+  .node-activity,
   .node-partner
     > .content > .field-name-body + div
       clear: left

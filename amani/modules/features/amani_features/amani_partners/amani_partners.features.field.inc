@@ -119,6 +119,7 @@ function amani_partners_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'partner',
+      'default_value' => array(),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -141,7 +142,7 @@ function amani_partners_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_image',
       'label' => 'Lead Image',
-      'required' => FALSE,
+      'required' => 0,
       'settings' => array(
         'alt_field' => 0,
         'default_image' => 0,
@@ -154,17 +155,18 @@ function amani_partners_field_default_fields() {
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'module' => 'imagefield_crop',
+        'active' => 1,
+        'module' => 'image',
         'settings' => array(
-          'collapsible' => 2,
+          'collapsible' => '2',
           'croparea' => '500x500',
-          'enforce_minimum' => TRUE,
-          'enforce_ratio' => TRUE,
+          'enforce_minimum' => 0,
+          'enforce_ratio' => 0,
           'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
           'resolution' => '200x150',
         ),
-        'type' => 'imagefield_crop_widget',
+        'type' => 'image_image',
         'weight' => '1',
       ),
     ),
@@ -212,7 +214,7 @@ function amani_partners_field_default_fields() {
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => 4,
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -293,12 +295,9 @@ function amani_partners_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'file_entity',
-          'settings' => array(
-            'file_view_mode' => 'partner_logo',
-          ),
-          'type' => 'file_rendered',
-          'weight' => '2',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -404,7 +403,7 @@ function amani_partners_field_default_fields() {
             'link' => 1,
           ),
           'type' => 'entityreference_label',
-          'weight' => '3',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',

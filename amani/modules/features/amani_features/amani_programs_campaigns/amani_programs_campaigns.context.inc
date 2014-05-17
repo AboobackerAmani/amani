@@ -29,11 +29,17 @@ function amani_programs_campaigns_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-activities-block' => array(
+          'module' => 'views',
+          'delta' => 'activities-block',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
         'views-programs_campaigns-block_1' => array(
           'module' => 'views',
           'delta' => 'programs_campaigns-block_1',
           'region' => 'sidebar_second',
-          'weight' => '3',
+          'weight' => '-9',
         ),
       ),
     ),
