@@ -75,6 +75,26 @@ function peace_preprocess_html(&$vars) {
 
 }
 
+/**
+ * Override or insert variables into the page template.
+ */
+function peace_process_page(&$variables) {
+  // Hook into color.module
+  if (module_exists('color')) {
+    _color_page_alter($variables);
+  }
+}
+
+/**
+ * Override or insert variables into the html template.
+ */
+function peace_process_html(&$variables) {
+  // Hook into color.module
+  if (module_exists('color')) {
+    _color_html_alter($variables);
+  }
+}
+
 function peace_preprocess_page(&$vars, $hook) {
 
   if (isset($vars['node_title'])) {
