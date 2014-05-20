@@ -234,7 +234,7 @@ function amani_global_menu_default_menu_links() {
     'menu_name' => 'menu-meta',
     'link_path' => 'admin/configure-amani',
     'router_path' => 'admin/configure-amani',
-    'link_title' => 'configure amani',
+    'link_title' => 'configure',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -315,7 +315,7 @@ function amani_global_menu_default_menu_links() {
   t('Manage users');
   t('My account');
   t('admin');
-  t('configure amani');
+  t('configure');
   t('home');
   t('login ');
   t('logout');
