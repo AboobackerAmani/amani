@@ -26,7 +26,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-39',
+    'weight' => '-41',
   );
   // Exported menu link: menu-amani-admin-menu:admin/config/incident-reports
   $menu_links['menu-amani-admin-menu:admin/config/incident-reports'] = array(
@@ -44,7 +44,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-41',
+    'weight' => '-43',
   );
   // Exported menu link: menu-amani-admin-menu:admin/config/services/twitter/settings
   $menu_links['menu-amani-admin-menu:admin/config/services/twitter/settings'] = array(
@@ -62,7 +62,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-45',
+    'weight' => '-46',
   );
   // Exported menu link: menu-amani-admin-menu:admin/config/system/googleanalytics
   $menu_links['menu-amani-admin-menu:admin/config/system/googleanalytics'] = array(
@@ -98,7 +98,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-38',
+    'weight' => '-40',
   );
   // Exported menu link: menu-amani-admin-menu:admin/structure/block/manage/fb_likebox/0/configure
   $menu_links['menu-amani-admin-menu:admin/structure/block/manage/fb_likebox/0/configure'] = array(
@@ -119,7 +119,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-44',
+    'weight' => '-45',
   );
   // Exported menu link: menu-amani-admin-menu:admin/structure/contact
   $menu_links['menu-amani-admin-menu:admin/structure/contact'] = array(
@@ -137,7 +137,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-42',
+    'weight' => '-44',
   );
   // Exported menu link: menu-amani-admin-menu:admin/structure/taxonomy
   $menu_links['menu-amani-admin-menu:admin/structure/taxonomy'] = array(
@@ -155,7 +155,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-50',
+    'weight' => '-49',
   );
   // Exported menu link: menu-amani-admin-menu:amani/site-info
   $menu_links['menu-amani-admin-menu:amani/site-info'] = array(
@@ -173,7 +173,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-40',
+    'weight' => '-42',
   );
   // Exported menu link: menu-amani-admin-menu:redhen
   $menu_links['menu-amani-admin-menu:redhen'] = array(
@@ -209,7 +209,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-37',
+    'weight' => '-39',
   );
   // Exported menu link: menu-meta:<front>
   $menu_links['menu-meta:<front>'] = array(
