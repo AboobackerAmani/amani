@@ -139,45 +139,6 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-42',
   );
-  // Exported menu link: menu-amani-admin-menu:admin/structure/menu/manage/menu-amani-main-menu
-  $menu_links['menu-amani-admin-menu:admin/structure/menu/manage/menu-amani-main-menu'] = array(
-    'menu_name' => 'menu-amani-admin-menu',
-    'link_path' => 'admin/structure/menu/manage/menu-amani-main-menu',
-    'router_path' => 'admin/structure/menu/manage/%',
-    'link_title' => 'Edit main menu links',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-49',
-  );
-  // Exported menu link: menu-amani-admin-menu:admin/structure/menu/manage/menu-social-media/list
-  $menu_links['menu-amani-admin-menu:admin/structure/menu/manage/menu-social-media/list'] = array(
-    'menu_name' => 'menu-amani-admin-menu',
-    'link_path' => 'admin/structure/menu/manage/menu-social-media/list',
-    'router_path' => 'admin/structure/menu/manage/%/list',
-    'link_title' => 'Configure Social media icons',
-    'options' => array(
-      'query' => array(
-        'destination' => 'home',
-      ),
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-46',
-  );
   // Exported menu link: menu-amani-admin-menu:admin/structure/taxonomy
   $menu_links['menu-amani-admin-menu:admin/structure/taxonomy'] = array(
     'menu_name' => 'menu-amani-admin-menu',
@@ -213,27 +174,6 @@ function amani_global_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-40',
-  );
-  // Exported menu link: menu-amani-admin-menu:block/front-page-second-sidebar-bottom/edit
-  $menu_links['menu-amani-admin-menu:block/front-page-second-sidebar-bottom/edit'] = array(
-    'menu_name' => 'menu-amani-admin-menu',
-    'link_path' => 'block/front-page-second-sidebar-bottom/edit',
-    'router_path' => 'block/%/edit',
-    'link_title' => 'Configure Newsletter link',
-    'options' => array(
-      'query' => array(
-        'destination' => 'home',
-      ),
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-43',
   );
   // Exported menu link: menu-amani-admin-menu:redhen
   $menu_links['menu-amani-admin-menu:redhen'] = array(
@@ -348,11 +288,8 @@ function amani_global_menu_default_menu_links() {
   t('Configure Contact page');
   t('Configure Facebook feed');
   t('Configure Google analytics');
-  t('Configure Newsletter link');
   t('Configure RedHen CRM');
-  t('Configure Social media icons');
   t('Configure Twitter feed');
-  t('Edit main menu links');
   t('Edit map settings');
   t('Manage drop down lists');
   t('Manage logo, tagline & office details');
