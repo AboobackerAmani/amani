@@ -100,7 +100,7 @@ function amani_administrator_configure_amani_form() {
 
   $form['newsletter'][] = array(
     '#type' => 'button',
-    '#value' => t('Enable and position newsletter button'),
+    '#value' => t('Enable and position newsletter block'),
     '#executes_submit_callback' => TRUE,
   );
 
@@ -150,7 +150,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
     case 'Configure donate menu':
       drupal_goto('admin/structure/menu/manage/menu-donate');
       break;
-    case 'Enable and position newsletter button':
+    case 'Enable and position newsletter block':
       drupal_goto('admin/structure/block/manage/bean/front-page-second-sidebar-bottom/configure');
       break;
     case 'Configure newsletter button content':

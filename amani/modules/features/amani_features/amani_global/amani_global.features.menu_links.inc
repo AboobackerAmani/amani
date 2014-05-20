@@ -82,6 +82,24 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-47',
   );
+  // Exported menu link: menu-amani-admin-menu:admin/configure-amani
+  $menu_links['menu-amani-admin-menu:admin/configure-amani'] = array(
+    'menu_name' => 'menu-amani-admin-menu',
+    'link_path' => 'admin/configure-amani',
+    'router_path' => 'admin/configure-amani',
+    'link_title' => 'Configure amani',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-50',
+  );
   // Exported menu link: menu-amani-admin-menu:admin/people
   $menu_links['menu-amani-admin-menu:admin/people'] = array(
     'menu_name' => 'menu-amani-admin-menu',
@@ -227,7 +245,25 @@ function amani_global_menu_default_menu_links() {
     'external' => '1',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-1',
+    'weight' => '-50',
+  );
+  // Exported menu link: menu-meta:admin/configure-amani
+  $menu_links['menu-meta:admin/configure-amani'] = array(
+    'menu_name' => 'menu-meta',
+    'link_path' => 'admin/configure-amani',
+    'router_path' => 'admin/configure-amani',
+    'link_title' => 'configure amani',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-48',
   );
   // Exported menu link: menu-meta:amani/content-admin
   $menu_links['menu-meta:amani/content-admin'] = array(
@@ -245,7 +281,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '1',
+    'weight' => '-49',
   );
   // Exported menu link: menu-meta:user/login
   $menu_links['menu-meta:user/login'] = array(
@@ -263,7 +299,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '50',
+    'weight' => '-47',
   );
   // Exported menu link: menu-meta:user/logout
   $menu_links['menu-meta:user/logout'] = array(
@@ -281,7 +317,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '50',
+    'weight' => '-46',
   );
   // Translatables
   // Included for use with string extractors like potx.
@@ -290,6 +326,7 @@ function amani_global_menu_default_menu_links() {
   t('Configure Google analytics');
   t('Configure RedHen CRM');
   t('Configure Twitter feed');
+  t('Configure amani');
   t('Edit map settings');
   t('Manage drop down lists');
   t('Manage logo, tagline & office details');
@@ -297,6 +334,7 @@ function amani_global_menu_default_menu_links() {
   t('Manage users');
   t('My account');
   t('admin');
+  t('configure amani');
   t('home');
   t('login ');
   t('logout');
