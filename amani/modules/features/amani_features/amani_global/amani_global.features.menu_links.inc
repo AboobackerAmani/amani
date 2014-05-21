@@ -10,78 +10,6 @@
 function amani_global_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-amani-admin-menu:admin/config/development/css-injector
-  $menu_links['menu-amani-admin-menu:admin/config/development/css-injector'] = array(
-    'menu_name' => 'menu-amani-admin-menu',
-    'link_path' => 'admin/config/development/css-injector',
-    'router_path' => 'admin/config/development/css-injector',
-    'link_title' => 'Manage site css',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-41',
-  );
-  // Exported menu link: menu-amani-admin-menu:admin/config/incident-reports
-  $menu_links['menu-amani-admin-menu:admin/config/incident-reports'] = array(
-    'menu_name' => 'menu-amani-admin-menu',
-    'link_path' => 'admin/config/incident-reports',
-    'router_path' => 'admin/config/incident-reports',
-    'link_title' => 'Edit map settings',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-43',
-  );
-  // Exported menu link: menu-amani-admin-menu:admin/config/services/twitter/settings
-  $menu_links['menu-amani-admin-menu:admin/config/services/twitter/settings'] = array(
-    'menu_name' => 'menu-amani-admin-menu',
-    'link_path' => 'admin/config/services/twitter/settings',
-    'router_path' => 'admin/config/services/twitter/settings',
-    'link_title' => 'Configure Twitter feed',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-46',
-  );
-  // Exported menu link: menu-amani-admin-menu:admin/config/system/googleanalytics
-  $menu_links['menu-amani-admin-menu:admin/config/system/googleanalytics'] = array(
-    'menu_name' => 'menu-amani-admin-menu',
-    'link_path' => 'admin/config/system/googleanalytics',
-    'router_path' => 'admin/config/system/googleanalytics',
-    'link_title' => 'Configure Google analytics',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-47',
-  );
   // Exported menu link: menu-amani-admin-menu:admin/people
   $menu_links['menu-amani-admin-menu:admin/people'] = array(
     'menu_name' => 'menu-amani-admin-menu',
@@ -100,45 +28,6 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-40',
   );
-  // Exported menu link: menu-amani-admin-menu:admin/structure/block/manage/fb_likebox/0/configure
-  $menu_links['menu-amani-admin-menu:admin/structure/block/manage/fb_likebox/0/configure'] = array(
-    'menu_name' => 'menu-amani-admin-menu',
-    'link_path' => 'admin/structure/block/manage/fb_likebox/0/configure',
-    'router_path' => 'admin/structure/block/manage/%/%/configure',
-    'link_title' => 'Configure Facebook feed',
-    'options' => array(
-      'query' => array(
-        'destination' => 'home',
-      ),
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-45',
-  );
-  // Exported menu link: menu-amani-admin-menu:admin/structure/contact
-  $menu_links['menu-amani-admin-menu:admin/structure/contact'] = array(
-    'menu_name' => 'menu-amani-admin-menu',
-    'link_path' => 'admin/structure/contact',
-    'router_path' => 'admin/structure/contact',
-    'link_title' => 'Configure Contact page',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-44',
-  );
   // Exported menu link: menu-amani-admin-menu:admin/structure/taxonomy
   $menu_links['menu-amani-admin-menu:admin/structure/taxonomy'] = array(
     'menu_name' => 'menu-amani-admin-menu',
@@ -156,42 +45,6 @@ function amani_global_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-49',
-  );
-  // Exported menu link: menu-amani-admin-menu:amani/site-info
-  $menu_links['menu-amani-admin-menu:amani/site-info'] = array(
-    'menu_name' => 'menu-amani-admin-menu',
-    'link_path' => 'amani/site-info',
-    'router_path' => 'amani/site-info',
-    'link_title' => 'Manage logo, tagline & office details',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-42',
-  );
-  // Exported menu link: menu-amani-admin-menu:redhen
-  $menu_links['menu-amani-admin-menu:redhen'] = array(
-    'menu_name' => 'menu-amani-admin-menu',
-    'link_path' => 'redhen',
-    'router_path' => 'redhen',
-    'link_title' => 'Configure RedHen CRM',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-48',
   );
   // Exported menu link: menu-amani-admin-menu:user
   $menu_links['menu-amani-admin-menu:user'] = array(
@@ -303,15 +156,7 @@ function amani_global_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Configure Contact page');
-  t('Configure Facebook feed');
-  t('Configure Google analytics');
-  t('Configure RedHen CRM');
-  t('Configure Twitter feed');
-  t('Edit map settings');
   t('Manage drop down lists');
-  t('Manage logo, tagline & office details');
-  t('Manage site css');
   t('Manage users');
   t('My account');
   t('admin');

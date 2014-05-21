@@ -90,40 +90,131 @@ function amani_administrator_configure_amani_form() {
     '#executes_submit_callback' => TRUE
   );
 
-  $form['newsletter'] = array(
+  $form['blocks'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Newsletter'),
-    '#description' => 'Enable and position newsletter block, suggested region setting is \'Second sidebar\'.',
+    '#title' => t('Blocks'),
+    '#description' => 'Configure and place the sitewide blocks.',
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
 
-  $form['newsletter'][] = array(
+  $form['blocks'][] = array(
     '#type' => 'button',
-    '#value' => t('Enable and position newsletter block'),
+    '#value' => t('Configure blocks'),
     '#executes_submit_callback' => TRUE,
   );
 
-  $form['newsletter'][] = array(
-    '#type' => 'button',
-    '#value' => t('Configure newsletter button content'),
-    '#executes_submit_callback' => TRUE,
-  );
-
-  $form['partners'] = array(
+  $form['site-info'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Partners'),
-    '#description' => 'Enable and position partners block, suggested region setting is \'Content bottom\'.',
+    '#title' => t('Site info'),
+    '#description' => 'Manage the site logo, tagline and office details.',
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
 
-  $form['partners'][] = array(
+  $form['site-info'][] = array(
     '#type' => 'button',
-    '#value' => t('Enable and position partners block'),
+    '#value' => t('Configure site info'),
     '#executes_submit_callback' => TRUE,
   );
 
+  $form['map'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Map'),
+    '#description' => 'Manage the details of the map including marker, filter and map title settings.',
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['map'][] = array(
+    '#type' => 'button',
+    '#value' => t('Configure map'),
+    '#executes_submit_callback' => TRUE,
+  );
+
+  $form['google'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Google analytics'),
+    '#description' => 'Manage the settings associated with google analytics including tracking for pages, roles and users.',
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['google'][] = array(
+    '#type' => 'button',
+    '#value' => t('Configure google analytics'),
+    '#executes_submit_callback' => TRUE,
+  );
+
+  $form['twitter'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Twitter feed'),
+    '#description' => 'Manage the settings associated with the twitter feed located on the front page.',
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['twitter'][] = array(
+    '#type' => 'button',
+    '#value' => t('Configure twitter feed'),
+    '#executes_submit_callback' => TRUE,
+  );
+
+  $form['facebook'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Facebook feed'),
+    '#description' => 'Manage the settings associated with the facebook feed located on the front page.',
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['facebook'][] = array(
+    '#type' => 'button',
+    '#value' => t('Configure facebook feed'),
+    '#executes_submit_callback' => TRUE,
+  );
+
+  $form['redhen'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Redhen CRM'),
+    '#description' => 'Manage the settings associated with the built in customer relationship management framework.',
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['redhen'][] = array(
+    '#type' => 'button',
+    '#value' => t('Configure redhen'),
+    '#executes_submit_callback' => TRUE,
+  );
+
+  $form['contact'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Contact'),
+    '#description' => 'Manage the recipients of the sitewide contact form submissions.',
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['contact'][] = array(
+    '#type' => 'button',
+    '#value' => t('Configure contact'),
+    '#executes_submit_callback' => TRUE,
+  );
+
+  $form['css'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('CSS'),
+    '#description' => 'Manage the visual aspects of your site by creating css rules.',
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['css'][] = array(
+    '#type' => 'button',
+    '#value' => t('Configure css'),
+    '#executes_submit_callback' => TRUE,
+  );
   return $form;
 }
 
@@ -153,11 +244,32 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
     case 'Enable and position newsletter block':
       drupal_goto('admin/structure/block/manage/bean/front-page-second-sidebar-bottom/configure');
       break;
-    case 'Configure newsletter button content':
-      drupal_goto('block/front-page-second-sidebar-bottom/edit');
+    case 'Configure blocks':
+      drupal_goto('admin/structure/block');
       break;
-    case 'Enable and position partners block':
-      drupal_goto('admin/structure/block/manage/views/partners_carousel-block/configure');
+    case 'Configure site info':
+      drupal_goto('amani/site-info');
+      break;
+    case 'Configure map':
+      drupal_goto('admin/config/incident-reports');
+      break;
+    case 'Configure google analytics':
+      drupal_goto('admin/config/system/googleanalytics');
+      break;
+    case 'Configure twitter feed':
+      drupal_goto('admin/config/services/twitter/settings');
+      break;
+    case 'Configure facebook feed':
+      drupal_goto('admin/structure/block/manage/fb_likebox/0/configure');
+      break;
+    case 'Configure redhen':
+      drupal_goto('redhen');
+      break;
+    case 'Configure contact':
+      drupal_goto('admin/structure/contact');
+      break;
+    case 'Configure css':
+      drupal_goto('admin/config/development/css-injector');
       break;
   }
 }
