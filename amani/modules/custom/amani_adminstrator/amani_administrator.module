@@ -39,6 +39,7 @@ function amani_administrator_configure_amani_form() {
   $form['social_media_menu'][] = array(
     '#type' => 'button',
     '#value' => t('Populate social media links'),
+    '#attributes' => array('onclick' => 'if(!confirm("Are you sure?")){return false;}'),
     '#executes_submit_callback' => TRUE
   );
 
@@ -60,6 +61,7 @@ function amani_administrator_configure_amani_form() {
   $form['main_menu'][] = array(
     '#type' => 'button',
     '#value' => t('Populate main menu links'),
+    '#attributes' => array('onclick' => 'if(!confirm("Are you sure?")){return false;}'),
     '#executes_submit_callback' => TRUE
   );
 
@@ -81,6 +83,7 @@ function amani_administrator_configure_amani_form() {
   $form['donate_menu'][] = array(
     '#type' => 'button',
     '#value' => t('Populate donate menu link'),
+    '#attributes' => array('onclick' => 'if(!confirm("Are you sure?")){return false;}'),
     '#executes_submit_callback' => TRUE
   );
 
@@ -215,6 +218,7 @@ function amani_administrator_configure_amani_form() {
     '#value' => t('Configure css'),
     '#executes_submit_callback' => TRUE,
   );
+
   return $form;
 }
 
