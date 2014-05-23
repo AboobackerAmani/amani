@@ -632,18 +632,21 @@ a.button:not(.launcher):not(.remove):not(.edit) {
 
 .view-news-and-events .views-row,
 .view-news-and-events-blog .views-row,
-.view-resources .views-row {
+.view-resources .views-row,
+.view-legislation .views-row {
   overflow: hidden;
   margin: 30px 0;
   border-bottom: 1px solid #cccccc; }
   .view-news-and-events .views-row.views-row-last,
   .view-news-and-events-blog .views-row.views-row-last,
-  .view-resources .views-row.views-row-last {
+  .view-resources .views-row.views-row-last,
+  .view-legislation .views-row.views-row-last {
     border-bottom: 0;
     margin-bottom: 0; }
   .view-news-and-events .views-row .views-field-title,
   .view-news-and-events-blog .views-row .views-field-title,
-  .view-resources .views-row .views-field-title {
+  .view-resources .views-row .views-field-title,
+  .view-legislation .views-row .views-field-title {
     font-size: 16px;
     margin-bottom: 15px; }
   .view-news-and-events .views-row .views-field-field-image,
@@ -651,7 +654,9 @@ a.button:not(.launcher):not(.remove):not(.edit) {
   .view-news-and-events-blog .views-row .views-field-field-image,
   .view-news-and-events-blog .views-row .views-field-field-media,
   .view-resources .views-row .views-field-field-image,
-  .view-resources .views-row .views-field-field-media {
+  .view-resources .views-row .views-field-field-media,
+  .view-legislation .views-row .views-field-field-image,
+  .view-legislation .views-row .views-field-field-media {
     display: block;
     float: left;
     margin-right: 5.26316%;
@@ -661,14 +666,18 @@ a.button:not(.launcher):not(.remove):not(.edit) {
     .view-news-and-events-blog .views-row .views-field-field-image:last-child,
     .view-news-and-events-blog .views-row .views-field-field-media:last-child,
     .view-resources .views-row .views-field-field-image:last-child,
-    .view-resources .views-row .views-field-field-media:last-child {
+    .view-resources .views-row .views-field-field-media:last-child,
+    .view-legislation .views-row .views-field-field-image:last-child,
+    .view-legislation .views-row .views-field-field-media:last-child {
       margin-right: 0; }
     .view-news-and-events .views-row .views-field-field-image img,
     .view-news-and-events .views-row .views-field-field-media img,
     .view-news-and-events-blog .views-row .views-field-field-image img,
     .view-news-and-events-blog .views-row .views-field-field-media img,
     .view-resources .views-row .views-field-field-image img,
-    .view-resources .views-row .views-field-field-media img {
+    .view-resources .views-row .views-field-field-media img,
+    .view-legislation .views-row .views-field-field-image img,
+    .view-legislation .views-row .views-field-field-media img {
       width: 100%;
       height: auto; }
 
