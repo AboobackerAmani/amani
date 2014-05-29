@@ -85,6 +85,7 @@ function amani_incident_report_field_group_info() {
       2 => 'field_incident_report_type',
       3 => 'field_incident_severity',
       4 => 'title',
+      5 => 'field_image',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
