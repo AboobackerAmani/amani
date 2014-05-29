@@ -205,7 +205,7 @@ function amani_article_field_default_fields() {
           'label' => 'hidden',
           'module' => 'file_entity',
           'settings' => array(
-            'file_view_mode' => 'preview',
+            'file_view_mode' => 'default',
           ),
           'type' => 'file_rendered',
           'weight' => '0',
