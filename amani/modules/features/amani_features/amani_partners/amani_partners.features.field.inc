@@ -81,7 +81,7 @@ function amani_partners_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '2',
+        'weight' => '3',
       ),
     ),
   );
@@ -148,7 +148,7 @@ function amani_partners_field_default_fields() {
           'rows' => '2',
         ),
         'type' => 'text_textarea',
-        'weight' => '3',
+        'weight' => '5',
       ),
     ),
   );
@@ -203,7 +203,7 @@ function amani_partners_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'email_textfield',
-        'weight' => '13',
+        'weight' => '18',
       ),
     ),
   );
@@ -286,7 +286,7 @@ function amani_partners_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '9',
+        'weight' => '14',
       ),
     ),
   );
@@ -376,7 +376,7 @@ function amani_partners_field_default_fields() {
           'resolution' => '200x150',
         ),
         'type' => 'imagefield_crop_widget',
-        'weight' => '1',
+        'weight' => '2',
       ),
     ),
   );
@@ -460,7 +460,7 @@ function amani_partners_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '4',
+        'weight' => '8',
       ),
     ),
   );
@@ -551,7 +551,89 @@ function amani_partners_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '3',
+        'weight' => '6',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-partner-field_partner_map_record'.
+  $fields['node-partner-field_partner_map_record'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_partner_map_record',
+      'foreign keys' => array(
+        'node' => array(
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'entityreference',
+      'settings' => array(
+        'handler' => 'base',
+        'handler_settings' => array(
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+          'sort' => array(
+            'type' => 'none',
+          ),
+          'target_bundles' => array(
+            'incident_report' => 'incident_report',
+          ),
+        ),
+        'target_type' => 'node',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'partner',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Optionally associate this content with a map record.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'entityreference',
+          'settings' => array(
+            'link' => FALSE,
+          ),
+          'type' => 'entityreference_label',
+          'weight' => 18,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_partner_map_record',
+      'label' => 'Map record',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '20',
       ),
     ),
   );
@@ -695,7 +777,7 @@ function amani_partners_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '12',
+        'weight' => '17',
       ),
     ),
   );
@@ -777,7 +859,7 @@ function amani_partners_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '5',
+        'weight' => '11',
       ),
     ),
   );
@@ -846,7 +928,7 @@ function amani_partners_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '11',
+        'weight' => '16',
       ),
     ),
   );
@@ -915,7 +997,7 @@ function amani_partners_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '10',
+        'weight' => '15',
       ),
     ),
   );
@@ -998,7 +1080,7 @@ function amani_partners_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '8',
+        'weight' => '13',
       ),
     ),
   );
@@ -1065,7 +1147,7 @@ function amani_partners_field_default_fields() {
           'rows' => '2',
         ),
         'type' => 'text_textarea',
-        'weight' => '4',
+        'weight' => '7',
       ),
     ),
   );
@@ -1132,7 +1214,7 @@ function amani_partners_field_default_fields() {
           'rows' => '2',
         ),
         'type' => 'text_textarea',
-        'weight' => '5',
+        'weight' => '10',
       ),
     ),
   );
@@ -1144,7 +1226,9 @@ function amani_partners_field_default_fields() {
   t('Email');
   t('Facebook');
   t('Lead Image');
+  t('Map record');
   t('Media');
+  t('Optionally associate this content with a map record.');
   t('Partner Type');
   t('Phone Number');
   t('Programs');
