@@ -96,6 +96,87 @@ function amani_event_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-event-field_additional_information'.
+  $fields['node-event-field_additional_information'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_additional_information',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'profile2_private' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'text_long',
+    ),
+    'field_instance' => array(
+      'bundle' => 'event',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '6',
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'node_gallery_node_thumbnail' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_additional_information',
+      'label' => 'Additional information',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'rows' => '5',
+        ),
+        'type' => 'text_textarea',
+        'weight' => '11',
+      ),
+    ),
+  );
+
   // Exported field: 'node-event-field_contact'.
   $fields['node-event-field_contact'] = array(
     'field_config' => array(
@@ -137,7 +218,7 @@ function amani_event_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '6',
+          'weight' => '7',
         ),
         'ical' => array(
           'label' => 'above',
@@ -222,7 +303,7 @@ function amani_event_field_default_fields() {
             'use_widget_handlers' => 1,
           ),
           'type' => 'addressfield_default',
-          'weight' => '9',
+          'weight' => '10',
         ),
         'ical' => array(
           'label' => 'above',
@@ -434,7 +515,7 @@ function amani_event_field_default_fields() {
             'data' => 'full',
           ),
           'type' => 'geofield_wkt',
-          'weight' => '8',
+          'weight' => '9',
         ),
         'ical' => array(
           'label' => 'above',
@@ -497,6 +578,94 @@ function amani_event_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-event-field_event_map_record'.
+  $fields['node-event-field_event_map_record'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_event_map_record',
+      'foreign keys' => array(
+        'node' => array(
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'entityreference',
+      'settings' => array(
+        'handler' => 'base',
+        'handler_settings' => array(
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+          'sort' => array(
+            'type' => 'none',
+          ),
+          'target_bundles' => array(
+            'incident_report' => 'incident_report',
+          ),
+        ),
+        'target_type' => 'node',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'event',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Optionally associate this content with a map record.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'entityreference',
+          'settings' => array(
+            'link' => FALSE,
+          ),
+          'type' => 'entityreference_label',
+          'weight' => '3',
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_event_map_record',
+      'label' => 'Map record',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '13',
+      ),
+    ),
+  );
+
   // Exported field: 'node-event-field_event_type'.
   $fields['node-event-field_event_type'] = array(
     'field_config' => array(
@@ -543,7 +712,7 @@ function amani_event_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'ical' => array(
           'label' => 'inline',
@@ -571,7 +740,7 @@ function amani_event_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '13',
+        'weight' => '14',
       ),
     ),
   );
@@ -617,7 +786,7 @@ function amani_event_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '11',
+          'weight' => '12',
         ),
         'ical' => array(
           'label' => 'above',
@@ -690,7 +859,7 @@ function amani_event_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '7',
+          'weight' => '8',
         ),
         'ical' => array(
           'label' => 'above',
@@ -870,7 +1039,7 @@ function amani_event_field_default_fields() {
             'file_view_mode' => 'default',
           ),
           'type' => 'file_rendered',
-          'weight' => '10',
+          'weight' => '11',
         ),
         'ical' => array(
           'label' => 'above',
@@ -971,7 +1140,7 @@ function amani_event_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '4',
+          'weight' => '5',
         ),
         'ical' => array(
           'label' => 'above',
@@ -1000,13 +1169,14 @@ function amani_event_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '14',
+        'weight' => '15',
       ),
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Additional information');
   t('Address');
   t('Contact');
   t('Date');
@@ -1017,7 +1187,9 @@ function amani_event_field_default_fields() {
   t('Geolocation');
   t('Host name');
   t('Lead Image');
+  t('Map record');
   t('Media');
+  t('Optionally associate this content with a map record.');
   t('Tags');
   t('Will this node receive special emphasis by appearing on lists and blocks?');
 
