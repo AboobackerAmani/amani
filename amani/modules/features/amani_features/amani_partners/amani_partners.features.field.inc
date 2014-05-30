@@ -124,7 +124,7 @@ function amani_partners_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -180,7 +180,7 @@ function amani_partners_field_default_fields() {
           'module' => 'email',
           'settings' => array(),
           'type' => 'email_default',
-          'weight' => '12',
+          'weight' => '10',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -249,7 +249,7 @@ function amani_partners_field_default_fields() {
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_url',
-          'weight' => '13',
+          'weight' => '11',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -423,7 +423,7 @@ function amani_partners_field_default_fields() {
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => '3',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -506,7 +506,7 @@ function amani_partners_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '4',
+          'weight' => '15',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -609,10 +609,10 @@ function amani_partners_field_default_fields() {
           'label' => 'above',
           'module' => 'entityreference',
           'settings' => array(
-            'link' => FALSE,
+            'link' => 1,
           ),
           'type' => 'entityreference_label',
-          'weight' => 18,
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -633,7 +633,7 @@ function amani_partners_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '20',
+        'weight' => '4',
       ),
     ),
   );
@@ -687,7 +687,7 @@ function amani_partners_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 15,
+          'weight' => '12',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -753,7 +753,7 @@ function amani_partners_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '11',
+          'weight' => '9',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -838,7 +838,7 @@ function amani_partners_field_default_fields() {
             'link' => 1,
           ),
           'type' => 'entityreference_label',
-          'weight' => '2',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -904,7 +904,7 @@ function amani_partners_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 16,
+          'weight' => '13',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -973,7 +973,7 @@ function amani_partners_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 17,
+          'weight' => '14',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1123,7 +1123,7 @@ function amani_partners_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '4',
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1190,7 +1190,7 @@ function amani_partners_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '5',
+          'weight' => '7',
         ),
         'teaser' => array(
           'label' => 'above',
