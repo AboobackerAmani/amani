@@ -96,13 +96,16 @@ function amani_programs_campaigns_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '5',
+          'weight' => '9',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '12',
+        ),
+        'redirect' => array(
+          'weight' => '17',
         ),
       ),
       'display' => array(),
