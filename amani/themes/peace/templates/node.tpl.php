@@ -15,7 +15,7 @@
         </div>
       <?php endif; ?>
 
-      <?php if ($unpublished): ?>
+      <?php if ($unpublished && !($type == 'project')): ?>
         <p class="unpublished"><?php print t('Unpublished'); ?></p>
       <?php endif; ?>
     </header>
