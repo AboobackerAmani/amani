@@ -28,6 +28,24 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '0',
   );
+  // Exported menu link: menu-amani-admin-menu:admin/structure/menu/manage/menu-amani-main-menu
+  $menu_links['menu-amani-admin-menu:admin/structure/menu/manage/menu-amani-main-menu'] = array(
+    'menu_name' => 'menu-amani-admin-menu',
+    'link_path' => 'admin/structure/menu/manage/menu-amani-main-menu',
+    'router_path' => 'admin/structure/menu/manage/%',
+    'link_title' => 'Edit main menu',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '0',
+  );
   // Exported menu link: menu-amani-admin-menu:admin/people
   $menu_links['menu-amani-admin-menu:admin/people'] = array(
     'menu_name' => 'menu-amani-admin-menu',
