@@ -96,7 +96,7 @@ function amani_administrator_configure_amani_form() {
   $form['permissions'] = array(
     '#type' => 'fieldset',
     '#title' => t('Permissions'),
-    '#description' => 'This button will ensure the default permissions are set.',
+    '#description' => '\'Set\' to ensure you have default permissions (does not delete any permissions), \'Clear and set\' to remove any overrides you may have to default permissions (removes overrides).',
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
@@ -406,7 +406,8 @@ function amani_administrator_clear_permissions() {
     $role_obj = user_role_load_by_name($role);
     if($role_obj) {
       $roles_array = array($role_obj->rid => $role_obj->name);
-      $perms_array = array_keys(user_role_permissions($roles_array)[$role_obj->rid]);
+      $urp = user_role_permissions($roles_array);
+      $perms_array = array_keys($urp[$role_obj->rid]);
       user_role_revoke_permissions($role_obj->rid, $perms_array);
     }
   }
