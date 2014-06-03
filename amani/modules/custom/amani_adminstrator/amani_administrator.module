@@ -93,6 +93,20 @@ function amani_administrator_configure_amani_form() {
     '#executes_submit_callback' => TRUE
   );
 
+  $form['permissions'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Permissions'),
+    '#description' => 'This button will ensure the default permissions are set.',
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['permissions'][] = array(
+    '#type' => 'button',
+    '#value' => t('Set default permissions'),
+    '#executes_submit_callback' => TRUE
+  );
+
   $form['blocks'] = array(
     '#type' => 'fieldset',
     '#title' => t('Blocks'),
@@ -274,6 +288,9 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       break;
     case 'Configure css':
       drupal_goto('admin/config/development/css-injector');
+      break;
+    case 'Set default permissions':
+      amani_setup_roles_and_permissions();
       break;
   }
 }

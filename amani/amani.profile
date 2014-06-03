@@ -42,15 +42,24 @@ function amani_setup_roles_and_permissions() {
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, amani_get_permissions_by_role_name());
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, amani_get_permissions_by_role_name('authenticated'));
 
+  // Create admin role.
+  $role = user_role_load_by_name('administrator');
+  if (!$role) {
+    $role = new stdClass();
+    $role->name = 'administrator';
+    user_role_save($admin_role);
+  }
+  user_role_grant_permissions($role->rid, array_keys(module_invoke_all('permission')));
+
   // Create contributor role.
   $role = user_role_load_by_name('contributor');
   if (!$role) {
     $role = new stdClass();
     $role->name = 'contributor';
     user_role_save($role);
-    $permissions = amani_get_permissions_by_role_name('contributor');
-    user_role_grant_permissions($role->rid, $permissions);
   }
+  $permissions = amani_get_permissions_by_role_name('contributor');
+  user_role_grant_permissions($role->rid, $permissions);
 
   // Create editor role.
   $role = user_role_load_by_name('editor');
@@ -58,9 +67,9 @@ function amani_setup_roles_and_permissions() {
     $role = new stdClass();
     $role->name = 'editor';
     user_role_save($role);
-    $permissions = amani_get_permissions_by_role_name('editor');
-    user_role_grant_permissions($role->rid, $permissions);
   }
+  $permissions = amani_get_permissions_by_role_name('editor');
+  user_role_grant_permissions($role->rid, $permissions);
 
   // Create amani admin role.
   $role = user_role_load_by_name('amani administrator');
@@ -68,9 +77,9 @@ function amani_setup_roles_and_permissions() {
     $role = new stdClass();
     $role->name = 'amani administrator';
     user_role_save($role);
-    $permissions = amani_get_permissions_by_role_name('amani administrator');
-    user_role_grant_permissions($role->rid, $permissions);
   }
+  $permissions = amani_get_permissions_by_role_name('amani administrator');
+  user_role_grant_permissions($role->rid, $permissions);
 
 }
 
@@ -257,6 +266,7 @@ function get_editor_admin_diff() {
     'access site reports',
     'add authenticated twitter accounts',
     'add twitter accounts',
+    'administer nodes',
     'administer advanced forum',
     'administer bean settings',
     'administer beans',
