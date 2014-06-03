@@ -39,8 +39,8 @@ function revert_amani_features() {
  */
 function amani_setup_roles_and_permissions() {
   // Enable default permissions for system roles.
-  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, amani_get_permissions_by_role_name());
-  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, amani_get_permissions_by_role_name('authenticated'));
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, amani_check_permissions(amani_get_permissions_by_role_name()));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, amani_check_permissions(amani_get_permissions_by_role_name('authenticated user')));
 
   // Create admin role.
   $role = user_role_load_by_name('administrator');
@@ -59,6 +59,7 @@ function amani_setup_roles_and_permissions() {
     user_role_save($role);
   }
   $permissions = amani_get_permissions_by_role_name('contributor');
+  $permissions = amani_check_permissions($permissions);
   user_role_grant_permissions($role->rid, $permissions);
 
   // Create editor role.
@@ -69,6 +70,7 @@ function amani_setup_roles_and_permissions() {
     user_role_save($role);
   }
   $permissions = amani_get_permissions_by_role_name('editor');
+  $permissions = amani_check_permissions($permissions);
   user_role_grant_permissions($role->rid, $permissions);
 
   // Create amani admin role.
@@ -79,8 +81,24 @@ function amani_setup_roles_and_permissions() {
     user_role_save($role);
   }
   $permissions = amani_get_permissions_by_role_name('amani administrator');
+  $permissions = amani_check_permissions($permissions);
   user_role_grant_permissions($role->rid, $permissions);
 
+}
+
+/**
+ * Helper function, ensure the permissions exist, if not remove it from list 
+ * of permissions we're going to grant to the role.
+ */
+function amani_check_permissions(array $permissions) {
+  $permissions_modules = user_permission_get_modules();
+  foreach ($permissions as $index => $perm) {
+    if (empty($permissions_modules[$perm])) {
+      unset($permissions[$index]);
+    }
+  }
+
+  return $permissions;
 }
 
 /**
@@ -105,7 +123,7 @@ function amani_get_permissions_by_role_name($name = 'anon') {
   );
 
   switch($name) {
-    case 'authenticated':
+    case 'authenticated user':
       $permissions = array_merge($permissions, get_auth_anon_diff());
       break;
     case 'contributor':
@@ -149,69 +167,37 @@ function get_auth_anon_diff() {
  */
 function get_auth_contributor_diff() {
   return array(
-   'access content overview',
-   'access own webform submissions',
-   'administer css injection',
-   'cancel account',
-   'change own username',
-   'create about content',
-   'create article content',
-   'create blog content',
-   'create event content',
-   'create files',
-   'create forum content',
-   'create front_page_box content',
-   'create get_involved content',
-   'create media_gallery content',
-   'create partner content',
-   'create project content',
-   'create resource content',
-   'create slideshow content',
-   'create team content',
-   'create testimonial content',
-   'create webform content',
-   'delete own about content',
-   'delete own article content',
-   'delete own blog content',
-   'delete own event content',
-   'delete own files',
-   'delete own forum content',
-   'delete own front_page_box content',
-   'delete own get_involved content',
-   'delete own incident_report content',
-   'delete own media_gallery content',
-   'delete own partner content',
-   'delete own project content',
-   'delete own resource content',
-   'delete own slideshow content',
-   'delete own team content',
-   'delete own testimonial content',
-   'delete own webform content',
-   'delete own webform submissions',
-   'edit own about content',
-   'edit own article content',
-   'edit own blog content',
-   'edit own comments',
-   'edit own event content',
-   'edit own files',
-   'edit own forum content',
-   'edit own front_page_box content',
-   'edit own get_involved content',
-   'edit own media_gallery content',
-   'edit own partner content',
-   'edit own project content',
-   'edit own resource content',
-   'edit own slideshow content',
-   'edit own team content',
-   'edit own testimonial content',
-   'edit own webform content',
-   'edit own webform submissions',
-   'import media',
-   'skip CAPTCHA',
-   'view date repeats',
-   'view own files',
-   'view own private files',
-   'view own unpublished files',
+    'access content overview',
+    'access own webform submissions',
+    'cancel account',
+    'change own username',
+    'create article content',
+    'create event content',
+    'create files',
+    'create forum content',
+    'create media_gallery content',
+    'create partner content',
+    'delete own article content',
+    'delete own event content',
+    'delete own files',
+    'delete own forum content',
+    'delete own incident_report content',
+    'delete own media_gallery content',
+    'delete own partner content',
+    'edit own article content',
+    'edit own comments',
+    'edit own event content',
+    'edit own files',
+    'edit own forum content',
+    'edit own media_gallery content',
+    'edit own partner content',
+    'edit own webform submissions',
+    'import media',
+    'skip CAPTCHA',
+    'view date repeats',
+    'view own files',
+    'view own private files',
+    'view own unpublished files',
  );
 }
 
@@ -220,6 +206,38 @@ function get_auth_contributor_diff() {
  */
 function get_contributor_editor_diff() {
   return array(
+   'administer css injection',
+   'create about content',
+   'create blog content',
+   'create front_page_box content',
+   'create get_involved content',
+   'create project content',
+   'create resource content',
+   'create slideshow content',
+   'create team content',
+   'create testimonial content',
+   'create webform content',
+   'delete own about content',
+   'delete own blog content',
+   'delete own front_page_box content',
+   'delete own get_involved content',
+   'delete own project content',
+   'delete own resource content',
+   'delete own slideshow content',
+   'delete own team content',
+   'delete own testimonial content',
+   'delete own webform content',
+   'delete own webform submissions',
+   'edit own about content',
+   'edit own blog content',
+   'edit own front_page_box content',
+   'edit own get_involved content',
+   'edit own project content',
+   'edit own resource content',
+   'edit own slideshow content',
+   'edit own team content',
+   'edit own testimonial content',
+   'edit own webform content',
    'administer media galleries',
    'access contextual links',
    'administer comments',
