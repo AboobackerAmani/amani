@@ -50,7 +50,7 @@ function amani_incident_report_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '0',
+          'weight' => '1',
         ),
         'ical' => array(
           'label' => 'above',
@@ -116,7 +116,7 @@ function amani_incident_report_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '8',
+          'weight' => '9',
         ),
         'ical' => array(
           'label' => 'above',
@@ -187,14 +187,13 @@ function amani_incident_report_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'image',
+          'label' => 'hidden',
+          'module' => 'file_entity',
           'settings' => array(
-            'image_link' => '',
-            'image_style' => '',
+            'file_view_mode' => 'default',
           ),
-          'type' => 'image',
-          'weight' => 11,
+          'type' => 'file_rendered',
+          'weight' => '0',
         ),
         'ical' => array(
           'label' => 'above',
@@ -284,7 +283,7 @@ function amani_incident_report_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '10',
+          'weight' => '11',
         ),
         'ical' => array(
           'label' => 'above',
@@ -374,7 +373,7 @@ function amani_incident_report_field_default_fields() {
             'show_repeat_rule' => 'show',
           ),
           'type' => 'date_default',
-          'weight' => '1',
+          'weight' => '2',
         ),
         'ical' => array(
           'label' => 'above',
@@ -484,7 +483,7 @@ function amani_incident_report_field_default_fields() {
             'map_preset' => 'geofield_formatter_map',
           ),
           'type' => 'geofield_openlayers',
-          'weight' => '6',
+          'weight' => '7',
         ),
         'ical' => array(
           'label' => 'above',
@@ -585,7 +584,7 @@ function amani_incident_report_field_default_fields() {
             'file_view_mode' => 'default',
           ),
           'type' => 'file_rendered',
-          'weight' => '5',
+          'weight' => '6',
         ),
         'ical' => array(
           'label' => 'above',
@@ -693,7 +692,7 @@ function amani_incident_report_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'ical' => array(
           'label' => 'above',
@@ -771,7 +770,7 @@ function amani_incident_report_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '2',
+          'weight' => '3',
         ),
         'ical' => array(
           'label' => 'above',
@@ -845,7 +844,7 @@ function amani_incident_report_field_default_fields() {
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => '4',
+          'weight' => '5',
         ),
         'ical' => array(
           'label' => 'above',
@@ -1004,7 +1003,7 @@ Prof.',
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '7',
+          'weight' => '8',
         ),
         'ical' => array(
           'label' => 'above',
@@ -1114,7 +1113,7 @@ Prof.',
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '9',
+          'weight' => '10',
         ),
         'ical' => array(
           'label' => 'above',
