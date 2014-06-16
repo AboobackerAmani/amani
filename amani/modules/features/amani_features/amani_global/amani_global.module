@@ -145,11 +145,17 @@ function amani_global_site_contact_info() {
   $map = leaflet_framework_map($map_id, array(), array());
 
   $content = array(
-    '' => variable_get('site_address', NULL),
-    'T: ' => variable_get('site_phone', NULL),
-    'E: ' => variable_get('site_mail', NULL),
-    'Hours: ' => variable_get('site_hours', NULL)
+    '' => variable_get('site_address', NULL)
   );
+  if ($phone = variable_get('site_phone', NULL)) {
+    $content['T: '] = $phone;
+  }
+  if ($mail = variable_get('site_mail', NULL)) {
+    $content['E: '] = $mail;
+  }
+  if ($hours = variable_get('site_hours', NULL)) {
+    $content['Hours: '] = $hours;
+  }
   if ($content) {
     $output .= '<div id="contact_form_site_info">';
     foreach ($content as $item => $value) {
