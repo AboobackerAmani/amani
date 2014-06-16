@@ -40,7 +40,7 @@ function amani_activity_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'square_thumbnail',
+    'image_style' => 'large',
     'image_link' => 'content',
   );
   /* Field: Content: Title */
@@ -55,13 +55,21 @@ function amani_activity_views_default_views() {
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['alter']['max_length'] = '100';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '300';
   $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
+  $handler->display->display_options['fields']['title_1']['table'] = 'node';
+  $handler->display->display_options['fields']['title_1']['field'] = 'title';
+  $handler->display->display_options['fields']['title_1']['label'] = '';
+  $handler->display->display_options['fields']['title_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title_1']['alter']['text'] = '(more)';
+  $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -103,6 +111,7 @@ function amani_activity_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('(more)'),
     t('Program activities'),
     t('All'),
   );
