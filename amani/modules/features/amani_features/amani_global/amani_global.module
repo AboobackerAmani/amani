@@ -19,13 +19,25 @@ function amani_global_menu() {
     'type' => MENU_CALLBACK,
   );
 
-  $items['amani/site-info'] = array(
+  $version = amani_global_get_version();
+
+  $items['admin/configure-amani/site-info'] = array(
     'title' => 'Amani site settings',
     'description' => 'Manage site name, e-mail address, slogan, logo and favicon.',
     'page callback' => 'drupal_get_form',
+    'type' => MENU_NORMAL_ITEM,
     'page arguments' => array('amani_site_information_settings'),
     'access arguments' => array('administer site settings'),
-    'weight' => 0,
+    'weight' => 20,
+  );
+
+  $items['admin/configure-amani/release-notes'] = array(
+    'title' => t('Release Notes', array('!version' => $version)),
+    'description' => 'Amani Release Notes',
+    'page callback' => 'amani_global_release_notes',
+    'access arguments' => array('administer site settings'),
+    'type' => MENU_NORMAL_ITEM,
+    'weight' => 20,
   );
 
   return $items;
@@ -189,6 +201,13 @@ function amani_global_requirements($phase) {
   }
 }
 
+
+/**
+ * Menu callback; Amani Release Notes
+ */
+function amani_global_release_notes () {
+  return nl2br(file_get_contents(drupal_get_path('profile', 'amani') . '/VERSION.txt'));
+}
 
 /**
  * Get the Amani version from the VERSION.txt file
