@@ -114,31 +114,6 @@ function amani_administrator_configure_amani_form() {
     '#suffix' => '<p>This action allows users to enable, disable or delete your \'Donate\' button and set your \'Donate\' button link. The \'Donate\' button will appear as a dynamically scrolling button on the right side of your page.</p></div>',
   );
 
-  $form['permissions'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Set User Permissions'),
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-
-  $form['permissions'][] = array(
-    '#type' => 'button',
-    '#value' => t('Set Default Permissions'),
-    '#executes_submit_callback' => TRUE,
-    '#prefix' => $prefix,
-    '#suffix' => '<p>By clicking \'Set Default Permissions\', you ensure that default permissions are restored. Please note that this 
-      action does not delete any permissions.</p></div>',
-  );
-
-  $form['permissions'][] = array(
-    '#type' => 'button',
-    '#value' => t('Clear and Set Default Permissions'),
-    '#executes_submit_callback' => TRUE,
-    '#prefix' => $prefix,
-    '#suffix' => '<p>By clicking \'Clear & Set Default Permissions\', you will remove any custom permissions you may have created and will 
-      restore all <a href="http://projectamani.org/content/amani-users-and-roles">default permissions</a>.</p></div>',
-  );
-
   $form['blocks'] = array(
     '#type' => 'fieldset',
     '#title' => t('Manage Amani Blocks'),
@@ -433,13 +408,6 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
     case 'Configure Css':
       drupal_goto('admin/config/development/css-injector');
       break;
-    case 'Set Default Permissions':
-      //See amani.profile
-      amani_setup_roles_and_permissions();
-      break;
-    case 'Clear and Set Default Permissions':
-      amani_administrator_clear_permissions();
-      break;
   }
 }
 
@@ -602,25 +570,4 @@ function amani_administrator_get_donate_menu_links() {
   return array(
     'Donate' => '<front>'
   );
-}
-
-function amani_administrator_clear_permissions() {
-  // The amani roles
-  $roles = array('anonymous user', 'authenticated user', 'contributor', 'editor', 'amani administrator');
-  // Remove permissions
-  foreach($roles as $role) {
-    $role_obj = user_role_load_by_name($role);
-    if($role_obj) {
-      $roles_array = array($role_obj->rid => $role_obj->name);
-      $urp = user_role_permissions($roles_array);
-      $perms_array = array_keys($urp[$role_obj->rid]);
-      user_role_revoke_permissions($role_obj->rid, $perms_array);
-    }
-  }
-  // Set default roles/permissions(see amani.profile)
-  amani_setup_roles_and_permissions();
-}
-
-function amani_administrator_fieldset() {
-
 }
