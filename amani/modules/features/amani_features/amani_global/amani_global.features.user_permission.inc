@@ -20,5 +20,41 @@ function amani_global_user_default_permissions() {
     'module' => 'amani_administrator',
   );
 
+  // Exported permission: exclude from message filtering.
+  $permissions['exclude from message filtering'] = array(
+    'name' => 'exclude from message filtering',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'disable_messages',
+  );
+
+  // Exported permission: view error messages.
+  $permissions['view error messages'] = array(
+    'name' => 'view error messages',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'disable_messages',
+  );
+
+  // Exported permission: view status messages.
+  $permissions['view status messages'] = array(
+    'name' => 'view status messages',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'disable_messages',
+  );
+
+  // Exported permission: view warning messages.
+  $permissions['view warning messages'] = array(
+    'name' => 'view warning messages',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'disable_messages',
+  );
+
   return $permissions;
 }
