@@ -15,7 +15,7 @@ function amani_social_media_quicktabs_default_quicktabs() {
   $quicktabs->api_version = 1;
   $quicktabs->machine_name = 'social_media_feeds';
   $quicktabs->ajax = 0;
-  $quicktabs->hide_empty_tabs = FALSE;
+  $quicktabs->hide_empty_tabs = TRUE;
   $quicktabs->default_tab = 0;
   $quicktabs->title = 'Social Media Feeds';
   $quicktabs->tabs = array(
