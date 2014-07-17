@@ -10,6 +10,16 @@
 function amani_incident_report_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: administer map configuration.
+  $permissions['administer map configuration'] = array(
+    'name' => 'administer map configuration',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'incident_map',
+  );
+
   // Exported permission: create incident_report content.
   $permissions['create incident_report content'] = array(
     'name' => 'create incident_report content',
