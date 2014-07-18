@@ -14,7 +14,7 @@
 function incident_map_settings() {
   $settings = module_invoke_all('incident_map_settings');
   $form = array();
-  $form['#submit'][] = 'incident_map_settings_submit';  
+  $form['#submit'][] = 'incident_map_settings_submit';
   foreach ($settings as $setting) {
     $form[] = $setting['form'] + array(
       '#type' => 'fieldset',
@@ -26,14 +26,14 @@ function incident_map_settings() {
 }
 
 function incident_map_settings_submit($form, &$form_state) {
-  $values = $form_state['values']; 
+  $values = $form_state['values'];
   $title = $values['incident-map-map-record-title'];
   $path = array (
-    'source' => 'incident-reports', 
+    'source' => 'incident-reports',
     'alias' => preg_replace('/\s/', '-', strtolower(trim($title))),
-  ); 
-  path_save($path); 
-  drupal_clear_path_cache('incident-reports'); 
+  );
+  path_save($path);
+  drupal_clear_path_cache('incident-reports');
 }
 /**
  * Implements hook_incident_map_settings().
@@ -41,6 +41,7 @@ function incident_map_settings_submit($form, &$form_state) {
 function incident_map_incident_map_settings() {
   $filter_prefix = 'incident-map-filter';
   $marker_prefix = 'incident-map-marker';
+  $button_prefix= 'incident-map-button';
   $map_prefix = 'incident-map-map-settings';
   $map_record_prefix = 'incident-map-map-record';
 
@@ -76,9 +77,30 @@ function incident_map_incident_map_settings() {
       ),
       'properties_callback' => 'incident_map_add_markers',
     ),
+    'add_button' => array(
+      'prefix' => $button_prefix,
+      'form' => array(
+        '#title' => t('Manage Map Record Collection'),
+        'button_settings' => incident_map_button_settings($marker_prefix),
+      ),
+    ),
   );
 }
 
+/**
+ * Provides the map button settings form.
+ */
+function incident_map_button_settings($prefix) {
+  $items = array();
+  $add_button = "$prefix-add_button";
+  $items[$add_button] = array(
+    '#type' => 'checkbox',
+    '#title' => t("Display the ‘Add Map Record’ button on the Map page and allow crowdsourced map record collection (i.e. ‘Anonymous Users’ are able to add map records)"),
+    '#default_value' => variable_get($add_button, FALSE),
+  );
+
+  return $items;
+}
 
 /**
  * Provides the map settings form.

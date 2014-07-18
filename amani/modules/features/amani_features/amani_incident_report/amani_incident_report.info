@@ -30,6 +30,7 @@ dependencies[] = taxonomy
 dependencies[] = uuid_features
 dependencies[] = video_embed_field
 __drupal_alter_by_ref[][bean][static_content] = static_content
+features[context][] = add_map_record_button
 features[context][] = incident_map
 features[context][] = incidentreport-content-type
 features[ctools][] = context:context:3

@@ -376,10 +376,10 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       drupal_goto('block/front-page-second-sidebar-bottom/edit');
       break;
     case 'Disable \'Newsletter\' Button':
-      amani_administrator_alter_front_page_context('disable');
+      variable_set('amani_admin_newsletter_button_show', 0);
       break;
     case 'Enable \'Newsletter\' Button':
-      amani_administrator_alter_front_page_context('enable');
+      variable_set('amani_admin_newsletter_button_show', 1);
       break;
     case 'Manage Logo and Header':
       drupal_goto('admin/configure-amani/site-info');
@@ -409,45 +409,6 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       drupal_goto('admin/config/development/css-injector');
       break;
   }
-}
-
-/**
- * Removes the show newsletter block condition from the front page context.
- * Do not alter or try and use outside of this module.
- *
- * @param $op default value adds the block 'disable' removes it.
- */
-function amani_administrator_alter_front_page_context($op) {
-  // Hardcoded values, this function is not designed to be used from outside
-  // this module.
-  $context = context_load('front_page');
-  $block_name = 'bean-front-page-second-sidebar-bottom';
-
-  if (!$context) {
-    return;
-  }
-  // If this reaction already exists and the operation is to enable it, return.
-  if (array_key_exists($block_name, $context->reactions['block']['blocks']) && $op == 'enable') {
-    return;
-  }
-  // If this reaction does not exist and the operation is to disable it, return.
-  if (!(array_key_exists($block_name, $context->reactions['block']['blocks'])) && $op == 'disable') {
-    return;
-  }
-
-  if ($op == 'disable') {
-    unset($context->reactions['block']['blocks'][$block_name]);
-  }
-  elseif ($op == 'enable') {
-    $context->reactions['block']['blocks'][$block_name] = array(
-      'module' => 'bean',
-      'delta' => 'front-page-second-sidebar-bottom',
-      'region' => 'sidebar_second',
-      'weight' => '-7'
-    );
-  }
-
-  context_save($context);
 }
 
 /**
