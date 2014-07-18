@@ -433,7 +433,6 @@ function amani_global_user_default_permissions() {
     'name' => 'administer blocks',
     'roles' => array(
       0 => 'administrator',
-      1 => 'amani administrator',
     ),
     'module' => 'block',
   );
@@ -531,6 +530,15 @@ function amani_global_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'features',
+  );
+
+  // Exported permission: administer features menu items.
+  $permissions['administer features menu items'] = array(
+    'name' => 'administer features menu items',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'menu_admin_per_menu',
   );
 
   // Exported permission: administer fieldgroups.
@@ -708,16 +716,6 @@ function amani_global_user_default_permissions() {
     'name' => 'administer menu-meta menu items',
     'roles' => array(
       0 => 'administrator',
-    ),
-    'module' => 'menu_admin_per_menu',
-  );
-
-  // Exported permission: administer menu-social-media menu items.
-  $permissions['administer menu-social-media menu items'] = array(
-    'name' => 'administer menu-social-media menu items',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'amani administrator',
     ),
     'module' => 'menu_admin_per_menu',
   );
@@ -1205,6 +1203,15 @@ function amani_global_user_default_permissions() {
     'module' => 'path',
   );
 
+  // Exported permission: create webform content.
+  $permissions['create webform content'] = array(
+    'name' => 'create webform content',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: customize shortcut links.
   $permissions['customize shortcut links'] = array(
     'name' => 'customize shortcut links',
@@ -1261,6 +1268,15 @@ function amani_global_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: delete any webform content.
+  $permissions['delete any webform content'] = array(
+    'name' => 'delete any webform content',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: delete backup files.
   $permissions['delete backup files'] = array(
     'name' => 'delete backup files',
@@ -1290,6 +1306,15 @@ function amani_global_user_default_permissions() {
       1 => 'amani administrator',
       2 => 'contributor',
       3 => 'editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete own webform content.
+  $permissions['delete own webform content'] = array(
+    'name' => 'delete own webform content',
+    'roles' => array(
+      0 => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1413,6 +1438,15 @@ function amani_global_user_default_permissions() {
     'module' => 'follow',
   );
 
+  // Exported permission: edit any webform content.
+  $permissions['edit any webform content'] = array(
+    'name' => 'edit any webform content',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: edit bean view mode.
   $permissions['edit bean view mode'] = array(
     'name' => 'edit bean view mode',
@@ -1498,6 +1532,15 @@ function amani_global_user_default_permissions() {
       1 => 'amani administrator',
     ),
     'module' => 'redhen_contact',
+  );
+
+  // Exported permission: edit own webform content.
+  $permissions['edit own webform content'] = array(
+    'name' => 'edit own webform content',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: edit own webform submissions.
