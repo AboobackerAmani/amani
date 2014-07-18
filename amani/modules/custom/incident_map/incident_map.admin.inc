@@ -48,22 +48,22 @@ function incident_map_incident_map_settings() {
     'map_record' => array(
       'prefix' => $map_record_prefix,
       'form' => array(
-        '#title' => t('Map Record'),
+        '#title' => t('Manage Map Record Title'),
         'map_record_settings' => incident_map_map_record_settings($map_record_prefix)
       ),
     ),
     'map' => array(
       'prefix' => $map_prefix,
       'form' => array(
-        '#title' => t('Map settings'),
+        '#title' => t('Manage Amani Map Settings'),
         'map_settings' => incident_map_map_settings($map_prefix),
       ),
     ),
     'filter' => array(
       'prefix' => $filter_prefix,
       'form' => array(
-        '#title' => t('Filter settings'),
-        '#description' => t('Select which fields you want to enable filters on.'),
+        '#title' => t('Manage Amani Map Filters'),
+        '#description' => t('Users can enable or disable three filters: Date of Report, Map Filter #1 and Map Filter #2, as well as customize the labels and manage filtering options for Map Filter #1 and Map Filter #2.'),
         'filter_settings' => incident_map_filter_settings($filter_prefix),
       ),
       'properties_callback' => 'incident_map_add_filters',
@@ -71,7 +71,7 @@ function incident_map_incident_map_settings() {
     'marker' => array(
       'prefix' => $marker_prefix,
       'form' => array(
-        '#title' => t('Marker settings'),
+        '#title' => t('Manage Amani Map Markers'),
         'marker_settings' => incident_map_marker_settings($marker_prefix),
       ),
       'properties_callback' => 'incident_map_add_markers',
@@ -86,7 +86,22 @@ function incident_map_incident_map_settings() {
 function incident_map_map_record_settings($prefix) {
   $items = array();
   $title = "$prefix-title";
-  $items[$title] = array('#type' => 'textfield', '#title' => t("Map Title"), '#description' => t("Please only use letters, numbers and spaces."), '#default_value' => variable_get($title, NULL));
+  $items[$title] = array(
+    '#type' => 'textfield',
+    '#title' => t("Map Title"),
+    '#default_value' => variable_get($title, NULL),
+    '#prefix' => '<div style="width: 30%; display: inline-block; vertical-align: top">',
+    '#suffix' =>
+    '<p>Changing this title will change your page title and settings from the default ‘Incident Record’ to reflect your map’s custom label. This includes:
+      <ul style="margin-left:20px">
+        <li>Your Map Page title (e.g. Map Record)</li>
+        <li>Your Map Page default link (from ‘www.yourdomain.org/incident-record’ to www.yourdomain.com/map-record’)</li>
+        <li>Your Map Page ‘Latest Incidents’ block label (to ‘Latest Map Record’)</li>
+      </ul>
+      Please only use letters, numbers and spaces.
+     </p>
+    </div>',
+  );
   return $items;
 }
 
@@ -97,7 +112,13 @@ function incident_map_map_settings($prefix) {
   $items = array();
 
   $auto = "$prefix-auto";
-  $items[$auto] = array('#type' => 'checkbox', '#title' => t("Fit map to features"), '#description' => t("Automatically set the viewport to include all features."), '#default_value' => variable_get($auto, TRUE));
+  $items[$auto] = array(
+    '#type' => 'checkbox',
+    '#title' => t("Fit map to features"),
+    '#prefix' => '<div style="width: 30%; display: inline-block; vertical-align: top">',
+    '#suffix' => '<p>Fit map to features (automatically set the viewport to include all features) Deselecting this box enables users to customize the map latitude, longitude and zoom</p></div>',
+    '#default_value' => variable_get($auto, TRUE),
+  );
 
   $id = "$prefix-lat";
   $title = t('Latitude');
@@ -134,7 +155,15 @@ function incident_map_filter_settings($prefix) {
 
   $fields = incident_map_get_field_info('node', 'incident_report', array_keys($filters));
   foreach ($fields as $field_name => $field_info) {
-    $set = array('#type' => 'fieldset', '#title' => $field_info['label'], '#collapsible' => TRUE, '#collapsed' => TRUE);
+    $set = array(
+      '#type' => 'fieldset',
+      '#title' => $field_info['label'],
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+    );
+    if ($field_name == 'field_incident_report_type' || $field_name == 'field_incident_severity') {
+      $set['#description'] = t("Users can customize the labels for both filters, choose between a radio button (single select) or checkbox (multi-select) and set a default value for uncategorized records.");
+    }
 
     $enabled = "$prefix-enabled-{$field_name}";
     $set[$enabled] = array('#type' => 'checkbox', '#title' => t('Enabled'), '#default_value' => variable_get($enabled, TRUE));
@@ -203,7 +232,7 @@ function incident_map_marker_settings($prefix) {
     $vocabulary = $field_info['settings']['allowed_values'][0]['vocabulary'];
 
     $fieldset = "taxonomy_term_reference-$field_name";
-    $description = t("Set the marker colour and icon you want to use for each value below. Visit !link for a list of available icons (don't include the 'icon-' prefix).", array(
+    $description = t("Users can set marker colours and can choose icons for each value below based on the !link icon set. Please note: user SHOULD NOT include the 'icon-' prefix.", array(
         '!link' => l('Font-Awesome', 'http://fortawesome.github.io/Font-Awesome/#icons-new'),
     ));
     $items[$fieldset] = array(
