@@ -514,15 +514,6 @@ function amani_global_user_default_permissions() {
     'module' => 'css_injector',
   );
 
-  // Exported permission: administer devel menu items.
-  $permissions['administer devel menu items'] = array(
-    'name' => 'administer devel menu items',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'menu_admin_per_menu',
-  );
-
   // Exported permission: administer features.
   $permissions['administer features'] = array(
     'name' => 'administer features',
@@ -530,15 +521,6 @@ function amani_global_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'features',
-  );
-
-  // Exported permission: administer features menu items.
-  $permissions['administer features menu items'] = array(
-    'name' => 'administer features menu items',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'menu_admin_per_menu',
   );
 
   // Exported permission: administer fieldgroups.
@@ -653,15 +635,6 @@ function amani_global_user_default_permissions() {
     'module' => 'menu_admin_per_menu',
   );
 
-  // Exported permission: administer management menu items.
-  $permissions['administer management menu items'] = array(
-    'name' => 'administer management menu items',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'menu_admin_per_menu',
-  );
-
   // Exported permission: administer media galleries.
   $permissions['administer media galleries'] = array(
     'name' => 'administer media galleries',
@@ -680,15 +653,6 @@ function amani_global_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'menu',
-  );
-
-  // Exported permission: administer menu-amani-admin-menu menu items.
-  $permissions['administer menu-amani-admin-menu menu items'] = array(
-    'name' => 'administer menu-amani-admin-menu menu items',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'menu_admin_per_menu',
   );
 
   // Exported permission: administer menu-amani-main-menu menu items.
@@ -711,15 +675,6 @@ function amani_global_user_default_permissions() {
     'module' => 'menu_admin_per_menu',
   );
 
-  // Exported permission: administer menu-meta menu items.
-  $permissions['administer menu-meta menu items'] = array(
-    'name' => 'administer menu-meta menu items',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'menu_admin_per_menu',
-  );
-
   // Exported permission: administer meta tags.
   $permissions['administer meta tags'] = array(
     'name' => 'administer meta tags',
@@ -736,15 +691,6 @@ function amani_global_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'system',
-  );
-
-  // Exported permission: administer navigation menu items.
-  $permissions['administer navigation menu items'] = array(
-    'name' => 'administer navigation menu items',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'menu_admin_per_menu',
   );
 
   // Exported permission: administer nodes.
@@ -954,15 +900,6 @@ function amani_global_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'path',
-  );
-
-  // Exported permission: administer user-menu menu items.
-  $permissions['administer user-menu menu items'] = array(
-    'name' => 'administer user-menu menu items',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'menu_admin_per_menu',
   );
 
   // Exported permission: administer users.
