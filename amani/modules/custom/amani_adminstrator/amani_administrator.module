@@ -46,8 +46,8 @@ function amani_administrator_configure_amani_form() {
     '#attributes' => array('onclick' => 'if(!confirm("Are you sure?")){return false;}'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
-    '#suffix' => '<p>This action enables all <a href="http://projectamani.org/content/social-media-icons">default social media icons</a>
-      and will also restore all default social media links and icons</p></div>',
+    '#suffix' => '<p>This action builds the <a href="http://projectamani.org/content/social-media-icons">default social media icons</a> menu.
+      It will not enable or remove any existing links.</p></div>',
   );
 
   $form['social_media_menu'][] = array(
@@ -79,8 +79,8 @@ function amani_administrator_configure_amani_form() {
     '#attributes' => array('onclick' => 'if(!confirm("Are you sure?")){return false;}'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
-    '#suffix' => '<p>This action resets and enables all <a href="http://projectamani.org/content/edit-main-menu-links">default main menu labels</a> 
-      and links and restores default links to default views and pages.</p></div>',
+    '#suffix' => '<p>This action builds the<a href="http://projectamani.org/content/edit-main-menu-links">default main menu</a>. 
+      It will not enable or remove any existing links.</p></div>',
   );
 
   $form['main_menu'][] = array(
@@ -235,7 +235,7 @@ function amani_administrator_configure_amani_form() {
 
   $form['map'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Configure Map Settings'),
+    '#title' => t('Manage Map Settings'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
@@ -289,7 +289,7 @@ function amani_administrator_configure_amani_form() {
 
   $form['facebook'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Configure Facebook Feed (Home Page)'),
+    '#title' => t('Manage Facebook Feed (Home Page)'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
@@ -321,7 +321,7 @@ function amani_administrator_configure_amani_form() {
 
   $form['css'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Create and Manage CSS Overrides'),
+    '#title' => t('Manage CSS Overrides'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
