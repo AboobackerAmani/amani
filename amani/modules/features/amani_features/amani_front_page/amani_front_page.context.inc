@@ -35,7 +35,7 @@ function amani_front_page_context_default_contexts() {
           'module' => 'bean',
           'delta' => 'front-page-second-sidebar-bottom',
           'region' => 'sidebar_second',
-          'weight' => '-10',
+          'weight' => '1',
         ),
       ),
     ),
