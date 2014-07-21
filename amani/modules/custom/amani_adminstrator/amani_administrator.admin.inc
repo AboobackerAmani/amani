@@ -1,6 +1,28 @@
 <?php
 
 /**
+ * Configure newsletter button form (admin/conifigure-amani/newsletter)
+ */
+function amani_administrator_configure_newsletter_button_form() {
+  $form = array();
+  $form['front_newsletter_link_title'] = array(
+    '#title' => 'Newsletter button title',
+    '#type' => 'textfield',
+    '#default_value' => variable_get('front_newsletter_link_title', 'Newsletter'),
+    '#description' => t('The text that will appear on the newsletter button.'),
+  );
+
+  $form['front_newsletter_link_url'] = array(
+    '#title' => 'Newsletter button link',
+    '#type' => 'textfield',
+    '#default_value' => variable_get('front_newsletter_link_url', ''),
+    '#description' => t('The url for the newsletter button (ie http://www.my-newsletter.com).'),
+  );
+
+  return system_settings_form($form);
+}
+
+/**
  * Configure amani page (admin/configure-amani).
  */
 function amani_administrator_configure_amani_form() {
@@ -354,7 +376,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       amani_administrator_set_block($block, 0, 0, -1);
       break;
     case 'Configure \'Newsletter\' Button':
-      drupal_goto('block/front-page-second-sidebar-bottom/edit');
+      drupal_goto('admin/configure-amani/newsletter-button');
       break;
     case 'Disable \'Newsletter\' Button':
       variable_set('amani_admin_newsletter_button_show', 0);

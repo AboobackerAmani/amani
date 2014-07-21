@@ -22,7 +22,7 @@ function amani_front_page_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => '1374820014',
     'log' => '',
-    'uid' => '0',
+    'uid' => '1',
     'default_revision' => '1',
     'revisions' => array(),
     'vuuid' => '62a67080-249f-421b-887c-f28aa34c2d11',
@@ -30,7 +30,7 @@ function amani_front_page_uuid_features_default_beans() {
     'field_bean_body' => array(
       'und' => array(
         0 => array(
-          'value' => '<?php echo l(t(\'Newsletter\'), \'http://peacegeeks.us2.list-manage.com/subscribe?u=951e6313af8a044ad05fdc097&id=638c8b529c&orig-lang=1\', array(\'attributes\' => array(\'class\' => \'button\', \'target\' => \'_blank\'))); ?>',
+          'value' => '<?php echo l(t(variable_get(\'front_newsletter_link_title\', \'Newsletter\')), variable_get(\'front_newsletter_link_url\', \'\'), array(\'attributes\' => array(\'class\' => \'button\', \'target\' => \'_blank\'))); ?>',
           'format' => 'php_code',
         ),
       ),
