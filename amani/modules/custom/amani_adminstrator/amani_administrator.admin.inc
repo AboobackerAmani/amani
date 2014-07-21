@@ -1,13 +1,16 @@
 <?php
 
 /**
- * Configure amani form.
+ * Configure amani page (admin/configure-amani).
  */
 function amani_administrator_configure_amani_form() {
   $form = array();
   // prefixes used to split the fieldsets into columns so we
   // can add help text (the suffix).
-  $prefix = '<div style="width: 30%; display: inline-block; vertical-align: top; padding: 15px 0px 0px 10px">';
+  // default (2 columns)
+  $prefix = '<div style="width: 45%; display: inline-block; vertical-align: top; padding: 15px 0px 0px 10px">';
+  // 3 columns
+  $prefix_3 = '<div style="width: 30%; display: inline-block; vertical-align: top; padding: 15px 0px 0px 10px">';
   $form['social_media_menu'] = array(
     '#type' => 'fieldset',
     '#title' => t('Manage Social Media Menu'),
@@ -107,7 +110,7 @@ function amani_administrator_configure_amani_form() {
     '#type' => 'button',
     '#value' => t('Enable \'Newsletter\' Button'),
     '#executes_submit_callback' => TRUE,
-    '#prefix' => $prefix,
+    '#prefix' => $prefix_3,
     '#suffix' => '<p>This action enables the ‘Newsletter’ button on your site, this button appears in the right sidebar of your page.</p></div>',
   );
 
@@ -115,7 +118,7 @@ function amani_administrator_configure_amani_form() {
     '#type' => 'button',
     '#value' => t('Disable \'Newsletter\' Button'),
     '#executes_submit_callback' => TRUE,
-    '#prefix' => $prefix,
+    '#prefix' => $prefix_3,
     '#suffix' => '<p>This action disables the ‘Newsletter’ button on your site, this button appears in the right sidebar of your page.</p></div>',
   );
 
@@ -123,7 +126,7 @@ function amani_administrator_configure_amani_form() {
     '#type' => 'button',
     '#value' => t('Configure \'Newsletter\' Button'),
     '#executes_submit_callback' => TRUE,
-    '#prefix' => $prefix,
+    '#prefix' => $prefix_3,
     '#suffix' => '<p>This action allows users to set your ‘Newsletter’ button link.</p></div>',
   );
 
