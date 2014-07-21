@@ -5,17 +5,17 @@
  */
 function amani_administrator_configure_newsletter_button_form() {
   $form = array();
-  $form['front_newsletter_link_title'] = array(
+  $form['amani_administrator_newsletter_title'] = array(
     '#title' => 'Newsletter button title',
     '#type' => 'textfield',
-    '#default_value' => variable_get('front_newsletter_link_title', 'Newsletter'),
+    '#default_value' => variable_get('amani_administrator_newsletter_title', 'Newsletter'),
     '#description' => t('The text that will appear on the newsletter button.'),
   );
 
-  $form['front_newsletter_link_url'] = array(
+  $form['amani_administrator_newsletter_link'] = array(
     '#title' => 'Newsletter button link',
     '#type' => 'textfield',
-    '#default_value' => variable_get('front_newsletter_link_url', ''),
+    '#default_value' => variable_get('amani_administrator_newsletter_link', ''),
     '#description' => t('The url for the newsletter button (ie http://www.my-newsletter.com).'),
   );
 
@@ -178,14 +178,14 @@ function amani_administrator_configure_amani_form() {
 
   $form['site-info'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Manage Logo and Header'),
+    '#title' => t('Manage Site Logo, Header and Information'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
 
   $form['site-info'][] = array(
     '#type' => 'button',
-    '#value' => t('Manage Logo and Header'),
+    '#value' => t('Manage Logo, Header and Information'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
     '#suffix' =>
@@ -195,6 +195,7 @@ function amani_administrator_configure_amani_form() {
         <li>Setting or editing your site’s ‘Tagline’ to the right of the logo in your site header</li>
         <li>Upload your organization’s logo and favicon</li>
         <li>Setting your office location map</li>
+        <li>Setting your site email address</li>
       </ul>
      </p>
     </div>',
@@ -205,20 +206,6 @@ function amani_administrator_configure_amani_form() {
     '#title' => t('Manage Contact Page Settings'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
-  );
-
-  $form['contact-info'][] = array(
-    '#type' => 'button',
-    '#value' => t('Manage Contact Page'),
-    '#executes_submit_callback' => TRUE,
-    '#prefix' => $prefix,
-    '#suffix' =>
-    '<p>Users can manage Contact page settings, including:
-      <ul style="margin-left:20px">
-        <li>Setting the default Email Address, Address, Phone</li>
-      </ul>
-     </p>
-    </div>',
   );
 
   $form['contact-info'][] = array(
@@ -384,11 +371,8 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
     case 'Enable \'Newsletter\' Button':
       variable_set('amani_admin_newsletter_button_show', 1);
       break;
-    case 'Manage Logo and Header':
+    case 'Manage Logo, Header and Information':
       drupal_goto('admin/configure-amani/site-info');
-      break;
-    case 'Manage Contact Page':
-      drupal_goto('contact');
       break;
     case 'Configure Map':
       drupal_goto('admin/config/incident-reports');

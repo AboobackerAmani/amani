@@ -30,7 +30,7 @@ function amani_front_page_uuid_features_default_beans() {
     'field_bean_body' => array(
       'und' => array(
         0 => array(
-          'value' => '<?php echo l(t(variable_get(\'front_newsletter_link_title\', \'Newsletter\')), variable_get(\'front_newsletter_link_url\', \'\'), array(\'attributes\' => array(\'class\' => \'button\', \'target\' => \'_blank\'))); ?>',
+          'value' => '<?php echo l(t(variable_get(\'amani_administrator_newsletter_title\', \'Newsletter\')), variable_get(\'amani_administrator_newsletter_link\', \'\'), array(\'attributes\' => array(\'class\' => \'button\', \'target\' => \'_blank\'))); ?>',
           'format' => 'php_code',
         ),
       ),
