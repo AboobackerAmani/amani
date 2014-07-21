@@ -576,7 +576,6 @@ function amani_theme_settings_submit($form, &$form_state) {
  * Page preprocessor.
  */
 function amani_global_preprocess_page(&$vars) {
-
   // Add breadcrumbs on some taxonomy term pages.
   if (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))) {
     $term = taxonomy_term_load(arg(2));
@@ -602,6 +601,17 @@ function amani_global_preprocess_page(&$vars) {
     }
 
     drupal_set_breadcrumb($breadcrumb);
+  }
+}
+
+/**
+ * Implements hook_form_alter.
+ */
+function amani_global_form_alter(&$form, &$form_state, $form_id) {
+  // Ensure the page title is 'twitter' when on administrative twitter pages.
+  $twitter_admin_forms = array('twitter_admin_form', 'twitter_post_admin_settings', 'twitter_signin_admin_settings');
+  if (in_array($form_id, $twitter_admin_forms)) {
+    drupal_set_title('Twitter');
   }
 }
 
