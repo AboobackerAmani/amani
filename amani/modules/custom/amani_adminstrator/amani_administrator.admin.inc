@@ -315,7 +315,7 @@ function amani_administrator_configure_amani_form() {
 
   $form['css'][] = array(
     '#type' => 'button',
-    '#value' => t('Configure Css'),
+    '#value' => t('Configure CSS'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
     '#suffix' => '<p>Users can manage text and button colors, add effects (such as shadows) to set elements, and otherwise manage the visual aspects of your site by creating CSS rules that override the default CSS code. Click here for a list of frequently used overrides.</p></div>',
