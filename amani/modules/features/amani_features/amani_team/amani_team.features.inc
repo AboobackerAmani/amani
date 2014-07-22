@@ -45,3 +45,20 @@ function amani_team_node_info() {
   );
   return $items;
 }
+
+/**
+ * Implements hook_weight_features_default_settings().
+ */
+function amani_team_weight_features_default_settings() {
+  $settings = array();
+
+  $settings['team'] = array(
+    'enabled' => '1',
+    'range' => '20',
+    'menu_weight' => '0',
+    'default' => '0',
+    'sync_translations' => '0',
+  );
+
+  return $settings;
+}
