@@ -178,14 +178,14 @@ function amani_administrator_configure_amani_form() {
 
   $form['site-info'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Manage Site Logo, Header and Information'),
+    '#title' => t('Manage Site Info and Logo'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
 
   $form['site-info'][] = array(
     '#type' => 'button',
-    '#value' => t('Manage Logo, Header and Information'),
+    '#value' => t('Manage Site Info and Logo'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
     '#suffix' =>
@@ -371,7 +371,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
     case 'Enable \'Newsletter\' Button':
       variable_set('amani_admin_newsletter_button_show', 1);
       break;
-    case 'Manage Logo, Header and Information':
+    case 'Manage Site Info and Logo':
       drupal_goto('admin/configure-amani/site-info');
       break;
     case 'Configure Map':
