@@ -65,6 +65,7 @@ class weight_handler_field_weight extends views_handler_field {
     );
 
     $form['#submit'][] = 'weight_views_submit';
+    $form['#action'] = request_uri();
   }
 
   function get_node_type($nid) {

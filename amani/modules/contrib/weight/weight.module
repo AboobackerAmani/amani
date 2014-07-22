@@ -449,8 +449,20 @@ function weight_feeds_processor_targets_alter(&$targets, $entity_type, $bundle_n
  *  Associative array of the mapping settings from the per mapping
  *  configuration form.
  */
-function weight_feeds_set_target($source, $entity, $target, $value) {
-  $entity->weight_weight = $value;
+function weight_feeds_set_target($source, $entity, $target, $values) {
+  if (!is_array($values)) {
+    $values = array($values);
+  }
+
+  $weight = NULL;
+  foreach ($values as $value) {
+    if (is_numeric($value)) {
+      $weight = $value;
+      break;
+    }
+  }
+
+  $entity->weight_weight = $weight;
 }
 
 /**
@@ -566,7 +578,8 @@ function _weight_set_weight($node) {
     // Get the menu weight for this node (if it exists).
     $weight = db_select('menu_links', 'ml');
     $weight->fields('ml', array('weight'))
-      ->condition('link_path', 'node/' . $node->nid);
+      ->condition('link_path', 'node/' . $node->nid)
+      ->condition('module', 'menu');
     $weight = $weight->execute()->fetchField();
     if (!$weight) {
       $weight = $settings['default'];
