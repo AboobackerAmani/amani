@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * amani_block_and_views.features.block_access.inc
+ * amani_global.features.block_access.inc
  */
 
 /**
  * Implements hook_block_access_defaults().
  */
-function amani_block_and_views_block_access_defaults() {
+function amani_global_block_access_defaults() {
   $block_access = array();
 
   // Exported Block Access settings for module fb_likebox
