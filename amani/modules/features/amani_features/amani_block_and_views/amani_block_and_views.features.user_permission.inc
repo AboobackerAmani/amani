@@ -10,11 +10,12 @@
 function amani_block_and_views_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: configure all block descriptions.
-  $permissions['configure all block descriptions'] = array(
-    'name' => 'configure all block descriptions',
+  // Exported permission: configure all block body fields.
+  $permissions['configure all block body fields'] = array(
+    'name' => 'configure all block body fields',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'block_access',
   );

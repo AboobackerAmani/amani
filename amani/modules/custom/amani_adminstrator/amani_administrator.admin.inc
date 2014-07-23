@@ -392,7 +392,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
     case 'Set Contact Page Form Categories & Contact Recipients':
       drupal_goto('admin/structure/contact');
       break;
-    case 'Configure Css':
+    case 'Configure CSS':
       drupal_goto('admin/config/development/css-injector');
       break;
   }
