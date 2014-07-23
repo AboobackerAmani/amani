@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Font styles. */
 body {
   margin: 0;
@@ -587,7 +588,12 @@ a.button:not(.launcher):not(.remove):not(.edit) {
           float: none;
           padding: 15px 0;
           margin: 0;
-          background: none; }
+          background: none; } }
+      @media screen and (max-width: 600px) and (max-width: 600px) {
+        #header-region #block-superfish-1 #superfish-1 li ul,
+        #navigation #block-superfish-1 #superfish-1 li ul {
+          width: 100% !important; } }
+  @media screen and (max-width: 600px) {
           #header-region #block-superfish-1 #superfish-1 li.last,
           #navigation #block-superfish-1 #superfish-1 li.last {
             margin-bottom: 15px; }
@@ -597,10 +603,6 @@ a.button:not(.launcher):not(.remove):not(.edit) {
             display: inline;
             padding: 10px 0;
             color: #333333; } }
-        @media screen and (max-width: 600px) and (max-width: 600px) {
-          #header-region #block-superfish-1 #superfish-1 li ul,
-          #navigation #block-superfish-1 #superfish-1 li ul {
-            width: 100% !important; } }
 
 #sidebar-second .block {
   background: white;
@@ -980,6 +982,9 @@ a.button:not(.launcher):not(.remove):not(.edit) {
   .view-partners-carousel .jcarousel-container-horizontal .jcarousel-next-horizontal {
     top: 55px;
     right: 0px; }
+
+.field-name-media-description .field-label {
+  display: none; }
 
 .region-donation-region {
   position: fixed;
