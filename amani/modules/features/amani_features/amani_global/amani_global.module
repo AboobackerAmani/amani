@@ -613,5 +613,18 @@ function amani_global_form_alter(&$form, &$form_state, $form_id) {
   if (in_array($form_id, $twitter_admin_forms)) {
     drupal_set_title('Twitter');
   }
+
+  // If your not a superadmin redirect to configure amani page after editing the
+  // facebook feeds block.
+  global $user;
+  if ($form_id == 'block_admin_configure' && !in_array('administrator', $user->roles)) {
+    $form['#submit'][] = 'amani_global_redirect_for_amani_admins';
+  }
 }
 
+/**
+ * Custom submit handler
+ */
+function amani_global_redirect_for_amani_admins($form, &$form_state) {
+  $form_state['redirect'] = 'admin/configure-amani';
+}
