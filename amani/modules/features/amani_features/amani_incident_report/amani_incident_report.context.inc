@@ -19,7 +19,7 @@ function amani_incident_report_context_default_contexts() {
   $context->conditions = array(
     'context_var' => array(
       'values' => array(
-        'incident-map-marker-add_button|1' => 'incident-map-marker-add_button|1',
+        'incident-map-button|1' => 'incident-map-button|1',
       ),
     ),
     'path' => array(

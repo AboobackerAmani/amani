@@ -41,9 +41,9 @@ function incident_map_settings_submit($form, &$form_state) {
 function incident_map_incident_map_settings() {
   $filter_prefix = 'incident-map-filter';
   $marker_prefix = 'incident-map-marker';
-  $button_prefix= 'incident-map-button';
   $map_prefix = 'incident-map-map-settings';
   $map_record_prefix = 'incident-map-map-record';
+  $button= 'incident-map-button';
 
   return array(
     'map_record' => array(
@@ -81,7 +81,7 @@ function incident_map_incident_map_settings() {
       'prefix' => $button_prefix,
       'form' => array(
         '#title' => t('Manage Map Record Collection'),
-        'button_settings' => incident_map_button_settings($marker_prefix),
+        'button_settings' => incident_map_button_settings($button),
       ),
     ),
   );
@@ -90,13 +90,12 @@ function incident_map_incident_map_settings() {
 /**
  * Provides the map button settings form.
  */
-function incident_map_button_settings($prefix) {
+function incident_map_button_settings($button) {
   $items = array();
-  $add_button = "$prefix-add_button";
-  $items[$add_button] = array(
+  $items[$button] = array(
     '#type' => 'checkbox',
     '#title' => t("Display the ‘Add Map Record’ button on the Map page and allow crowdsourced map record collection (i.e. ‘Anonymous Users’ are able to add map records)"),
-    '#default_value' => variable_get($add_button, FALSE),
+    '#default_value' => variable_get($button, FALSE),
   );
 
   return $items;
