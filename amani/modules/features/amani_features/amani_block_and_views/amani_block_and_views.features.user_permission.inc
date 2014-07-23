@@ -15,7 +15,6 @@ function amani_block_and_views_user_default_permissions() {
     'name' => 'configure all block body fields',
     'roles' => array(
       0 => 'administrator',
-      1 => 'amani administrator',
     ),
     'module' => 'block_access',
   );
