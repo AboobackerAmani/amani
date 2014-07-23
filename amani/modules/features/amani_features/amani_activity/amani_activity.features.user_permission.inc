@@ -13,35 +13,50 @@ function amani_activity_user_default_permissions() {
   // Exported permission: create activity content.
   $permissions['create activity content'] = array(
     'name' => 'create activity content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete any activity content.
   $permissions['delete any activity content'] = array(
     'name' => 'delete any activity content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete own activity content.
   $permissions['delete own activity content'] = array(
     'name' => 'delete own activity content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit any activity content.
   $permissions['edit any activity content'] = array(
     'name' => 'edit any activity content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit own activity content.
   $permissions['edit own activity content'] = array(
     'name' => 'edit own activity content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 
