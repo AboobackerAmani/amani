@@ -34,7 +34,7 @@ function amani_team_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
-      'field' => 'field_team_contact_type',
+      'field' => 'field_team_member_type',
       'rendered' => 1,
       'rendered_strip' => 0,
     ),
