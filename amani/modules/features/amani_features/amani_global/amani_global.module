@@ -611,9 +611,21 @@ function amani_global_preprocess_page(&$vars) {
     switch ($path) {
       case 'admin/structure/contact':
         drupal_set_title('Configure Contact Form');
+        break;
+      case 'admin/config/system/googleanalytics':
+        drupal_set_title('Configure Google Analytics');
+        break;
+      case 'admin/config/services/twitter/settings':
+        drupal_set_title('Configure Twitter Feed');
+        break;
+      case 'redhen':
+        drupal_set_title('Configure RedHen');
+        break;
+      case 'admin/config/development/css-injector':
+        drupal_set_title('Configure CSS');
+        break;
     }
   }
-
 }
 
 /**
