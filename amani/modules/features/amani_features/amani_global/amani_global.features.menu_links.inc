@@ -15,7 +15,7 @@ function amani_global_menu_default_menu_links() {
     'menu_name' => 'menu-amani-admin-menu',
     'link_path' => 'admin/configure-amani',
     'router_path' => 'admin/configure-amani',
-    'link_title' => 'Configure amani',
+    'link_title' => 'Configure Amani',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -174,8 +174,8 @@ function amani_global_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
+  t('Configure Amani');
   t('Configure Main Menu Links');
-  t('Configure amani');
   t('Manage drop down lists');
   t('Manage users');
   t('My account');
