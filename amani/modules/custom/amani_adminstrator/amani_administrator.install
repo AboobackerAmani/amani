@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Rename default contact category Website Feedback
+ * to General Inquiries.
+ */
+function amani_administrator_update_7100() {
+
+  db_update('contact')
+    ->fields(array('category' => 'General Inquires'))
+    ->condition('category', 'Website Feedback')
+    ->execute();
+}
