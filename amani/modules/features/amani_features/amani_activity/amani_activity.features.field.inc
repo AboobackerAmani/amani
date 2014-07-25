@@ -240,7 +240,7 @@ function amani_activity_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'activity',
-      'default_value' => NULL,
+      'default_value' => array(),
       'deleted' => '0',
       'description' => 'Optionally associate this content with a map record.',
       'display' => array(
@@ -271,7 +271,7 @@ function amani_activity_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(),
-        'type' => 'options_buttons',
+        'type' => 'options_select',
         'weight' => '3',
       ),
     ),
