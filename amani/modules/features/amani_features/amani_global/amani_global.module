@@ -602,6 +602,18 @@ function amani_global_preprocess_page(&$vars) {
 
     drupal_set_breadcrumb($breadcrumb);
   }
+
+  // Set custom page titles for none administrators.
+  global $user;
+  $is_admin = in_array('administrator', $user->roles);
+  if (!$is_admin) {
+    $path = current_path();
+    switch ($path) {
+      case 'admin/structure/contact':
+        drupal_set_title('Configure Contact Form');
+    }
+  }
+
 }
 
 /**
