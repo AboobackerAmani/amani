@@ -22,7 +22,7 @@ function amani_global_menu() {
   $version = amani_global_get_version();
 
   $items['admin/configure-amani/site-info'] = array(
-    'title' => 'Amani site settings',
+    'title' => 'Configure Site Info and Logo',
     'description' => 'Manage site name, e-mail address, slogan, logo and favicon.',
     'page callback' => 'drupal_get_form',
     'type' => MENU_NORMAL_ITEM,
@@ -608,16 +608,19 @@ function amani_global_preprocess_page(&$vars) {
  * Implements hook_form_alter.
  */
 function amani_global_form_alter(&$form, &$form_state, $form_id) {
-  // Ensure the page title is 'twitter' when on administrative twitter pages.
-  $twitter_admin_forms = array('twitter_admin_form', 'twitter_post_admin_settings', 'twitter_signin_admin_settings');
-  if (in_array($form_id, $twitter_admin_forms)) {
-    drupal_set_title('Twitter');
+  global $user;
+  $is_admin = in_array('administrator', $user->roles);
+  if (!$is_admin) {
+    // Twitter forms
+    $twitter_admin_forms = array('twitter_admin_form', 'twitter_post_admin_settings', 'twitter_signin_admin_settings');
+    if (in_array($form_id, $twitter_admin_forms)) {
+      drupal_set_title('Twitter');
+    }
   }
 
   // If your not a superadmin redirect to configure amani page after editing the
   // facebook feeds block.
-  global $user;
-  if ($form_id == 'block_admin_configure' && !in_array('administrator', $user->roles)) {
+  if ($form_id == 'block_admin_configure' && !$is_admin) {
     $form['#submit'][] = 'amani_global_redirect_for_amani_admins';
   }
 }

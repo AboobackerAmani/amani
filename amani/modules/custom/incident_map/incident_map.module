@@ -16,7 +16,7 @@ function incident_map_menu() {
   );
 
   $items['admin/config/incident-reports'] = array(
-    'title' => t('Administer the Incident reports map'),
+    'title' => t('Configure Map'),
     'description' => '',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('incident_map_settings'),

@@ -185,7 +185,7 @@ function amani_administrator_configure_amani_form() {
 
   $form['site-info'][] = array(
     '#type' => 'button',
-    '#value' => t('Manage Site Info and Logo'),
+    '#value' => t('Configure Site Info and Logo'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
     '#suffix' =>
@@ -210,7 +210,7 @@ function amani_administrator_configure_amani_form() {
 
   $form['contact-info'][] = array(
     '#type' => 'button',
-    '#value' => t('Set Contact Page Form Categories & Contact Recipients'),
+    '#value' => t('Configure Contact Form'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
     '#suffix' =>
@@ -371,7 +371,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
     case 'Enable \'Newsletter\' Button':
       variable_set('amani_admin_newsletter_button_show', 1);
       break;
-    case 'Manage Site Info and Logo':
+    case 'Configure Site Info and Logo':
       drupal_goto('admin/configure-amani/site-info');
       break;
     case 'Configure Map':
@@ -389,7 +389,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
     case 'Configure Redhen':
       drupal_goto('redhen');
       break;
-    case 'Set Contact Page Form Categories & Contact Recipients':
+    case 'Configure Contact Form':
       drupal_goto('admin/structure/contact');
       break;
     case 'Configure CSS':

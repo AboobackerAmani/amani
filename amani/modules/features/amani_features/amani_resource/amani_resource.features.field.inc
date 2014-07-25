@@ -595,7 +595,7 @@ function amani_resource_field_default_fields() {
         'description_field' => 0,
         'file_directory' => 'resource-field_media',
         'file_extensions' => 'avi mov txt pdf doc docx xls ods odt ppt gif jpeg jpg png',
-        'max_filesize' => '',
+        'max_filesize' => '20 MB',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -608,6 +608,7 @@ function amani_resource_field_default_fields() {
             'youtube' => 'youtube',
           ),
           'allowed_types' => array(
+            'application' => 0,
             'audio' => 'audio',
             'document' => 'document',
             'image' => 'image',

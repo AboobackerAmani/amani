@@ -17,7 +17,7 @@ function amani_administrator_menu() {
   );
 
   $items['admin/configure-amani/newsletter-button'] = array(
-    'title' => 'Newsletter button',
+    'title' => 'Configure Newsletter Button',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('amani_administrator_configure_newsletter_button_form'),
     'access arguments' => array('access amani administrator'),

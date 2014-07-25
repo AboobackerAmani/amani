@@ -13,12 +13,12 @@ function amani_social_media_menu_default_menu_custom() {
   // Exported menu: menu-social-media.
   $menus['menu-social-media'] = array(
     'menu_name' => 'menu-social-media',
-    'title' => 'Social media',
+    'title' => 'Configure Social Media Menu',
     'description' => 'Social media widgets for the header',
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Social media');
+  t('Configure Social Media Menu');
   t('Social media widgets for the header');
 
 

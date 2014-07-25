@@ -19,13 +19,13 @@ function amani_global_menu_default_menu_custom() {
   // Exported menu: menu-amani-main-menu.
   $menus['menu-amani-main-menu'] = array(
     'menu_name' => 'menu-amani-main-menu',
-    'title' => 'Amani main menu',
+    'title' => 'Configure Main Menu Links',
     'description' => 'The main menu for Amani - displayed in the header and the footer',
   );
   // Exported menu: menu-donate.
   $menus['menu-donate'] = array(
     'menu_name' => 'menu-donate',
-    'title' => 'Donate',
+    'title' => 'Configure Donate Button',
     'description' => 'Donation fly-out. sitewide.',
   );
   // Exported menu: menu-meta.
@@ -37,8 +37,8 @@ function amani_global_menu_default_menu_custom() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Amani admin menu');
-  t('Amani main menu');
-  t('Donate');
+  t('Configure Donate Button');
+  t('Configure Main Menu Links');
   t('Donation fly-out. sitewide.');
   t('The main menu for Amani - displayed in the header and the footer');
   t('The three item menu that appears in the header as well as the footer');
