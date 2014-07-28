@@ -321,6 +321,21 @@ function amani_administrator_configure_amani_form() {
     '#suffix' => '<p>Users can manage text and button colors, add effects (such as shadows) to set elements, and otherwise manage the visual aspects of your site by creating CSS rules that override the default CSS code. Click here for a list of frequently used overrides.</p></div>',
   );
 
+  $form['release_notes'] = array(
+    '#type' => 'fieldset',
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#title' => t('Amani Release Notes'),
+  );
+
+  $form['release_notes'][] = array(
+    '#type' => 'button',
+    '#value' => t('View Amani Release Notes'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>View your current version of amani along with past releases.</p></div>',
+  );
+
   return $form;
 }
 
@@ -394,6 +409,9 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       break;
     case 'Configure CSS':
       drupal_goto('admin/config/development/css-injector');
+      break;
+    case 'View Amani Release Notes':
+      drupal_goto('admin/configure-amani/release-notes');
       break;
   }
 }

@@ -624,6 +624,9 @@ function amani_global_preprocess_page(&$vars) {
       case 'admin/config/development/css-injector':
         drupal_set_title('Configure CSS');
         break;
+      case 'admin/structure/block/manage/fb_likebox/0/configure':
+        drupal_set_title('Configure Facebook Feed');
+        break;
     }
   }
 }
