@@ -8,7 +8,7 @@ require_once('amani_administrator.admin.inc');
 function amani_administrator_menu() {
   $items = array();
   $items['admin/configure-amani'] = array(
-    'title' => 'Configure amani',
+    'title' => 'Configure Amani',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('amani_administrator_configure_amani_form'),
     'access arguments' => array('access amani administrator'),
