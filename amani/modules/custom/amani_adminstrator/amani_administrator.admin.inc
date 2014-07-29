@@ -336,13 +336,6 @@ function amani_administrator_configure_amani_form() {
     '#suffix' => '<p>View your current version of amani along with past releases.</p></div>',
   );
 
-  //$form['additional_options'][] = array(
-  //  '#type' => 'button',
-  //  '#value' => t('Enable Amani Activity'),
-  //  '#executes_submit_callback' => TRUE,
-  //  '#prefix' => $prefix,
-  //  '#suffix' => '<p>Enable the amani activity feature. This feature includes the activity content type.</p></div>',
-  //);
   return $form;
 }
 
@@ -419,10 +412,6 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       break;
     case 'View Amani Release Notes':
       drupal_goto('admin/configure-amani/release-notes');
-      break;
-    //TODO implement this.
-    case 'Enable Amani Activity':
-      //module_enable('amani_activity');
       break;
   }
 }
