@@ -658,3 +658,15 @@ function amani_global_form_alter(&$form, &$form_state, $form_id) {
 function amani_global_redirect_for_amani_admins($form, &$form_state) {
   $form_state['redirect'] = 'admin/configure-amani';
 }
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function amani_global_entity_info_alter(&$entity_info) {
+
+  // Custom view mode.
+  $entity_info['file']['view modes']['original_image'] = array(
+    'label' => t('Original Image'),
+    'custom settings' => TRUE,
+  );
+}
