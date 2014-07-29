@@ -27,7 +27,7 @@ $info = array(
         'sec_menu_item_color' => '#ee8f1c',
         'sec_menu_item_hover_color' => '#800080',
         'text' => '#000000',
-        'link' => '#0000ff',
+        'link' => '#ee8f1c',
         'footer' => '#414042',
         'box_shadow' => '#ffffff',
       ),
