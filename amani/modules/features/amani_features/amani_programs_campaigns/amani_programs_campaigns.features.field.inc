@@ -617,7 +617,7 @@ function amani_programs_campaigns_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_project_status',
-      'label' => 'Project status',
+      'label' => 'Program status',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -640,7 +640,7 @@ function amani_programs_campaigns_field_default_fields() {
   t('Media');
   t('Optionally associate this content with a map record.');
   t('Program Location(s)');
-  t('Project status');
+  t('Program status');
   t('Summary');
   t('Will this program receive special consideration by appearing at the top of lists?');
 
