@@ -1,3 +1,19 @@
+Amani 2.04.00
+----------
+* Adding revamped configure amani section
+* Updating drupal core to version 7.30 and appying necessary security updates to modules
+* Adding block access, admin per menu, disable messages and context variable modules
+* Adding more granular control over permissions for menus and blocks
+* Ading custom form for newsletter button
+* Adding new version of weight module to allow featurized weights
+* Adding custom page titles to pages viewed by non administrators
+* Updating labels and configure amani help text
+* Fixing bugs with twitter not displaying tweets and media module not allowing uploads
+* Enforcing minimum dimensions on some image fields to ensure displays are not fuzzy
+* Removing permissions section of configure amani section
+* All permissions moved into their associated features
+* Hiding quicktabs views with no results
+
 Amani 2.03.04
 ----------
 * Adding release notes to amani admin menu
@@ -26,7 +42,7 @@ Amani 2.03.01
 * Adding BOTCHA module.
 * Switching to an image captcha.
 
-Amani 2.03.0
+Amani 2.03.00
 ----------
 * Ticket #479 - Fuzzy slideshow images
 * Ticket #470 - Change 'Add Terms' to 'Manage Drop Down Lists' in Amani Admin.
@@ -40,7 +56,7 @@ Amani 2.03.0
 * Added features_override module.
 * Adding VERSION.txt file, Amani version to status report.
 
-Amani 2.02
+Amani 2.02.00
 ----------
 * Ticket #362 - UL indent CSS fix.
 * CTools and webform security updates.
