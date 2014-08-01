@@ -1,5 +1,5 @@
 <?php
 
-// Remove 'video' field
-field_delete_field('field_video');
-field_purge_batch(1);
+// Remove 'video' field, comment out to run
+//field_delete_field('field_video');
+//field_purge_batch(1);
