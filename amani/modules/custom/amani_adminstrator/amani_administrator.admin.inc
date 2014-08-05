@@ -423,6 +423,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       break;
     case 'Enable Amani Activity':
       module_enable(array('amani_activity'));
+      cache_clear_all();
       break;
   }
 }
