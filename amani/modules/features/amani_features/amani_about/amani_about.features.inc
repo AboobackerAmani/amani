@@ -49,7 +49,7 @@ function amani_about_weight_features_default_settings() {
   $settings = array();
 
   $settings['about'] = array(
-    'enabled' => '1',
+    'enabled' => '0',
     'range' => '20',
     'menu_weight' => '0',
     'default' => '0',
