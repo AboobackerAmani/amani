@@ -62,14 +62,8 @@ function amani_incident_report_context_default_contexts() {
         'incident_map-field_incident_date' => array(
           'module' => 'incident_map',
           'delta' => 'field_incident_date',
-          'region' => 'content_bottom',
+          'region' => 'content',
           'weight' => '-10',
-        ),
-        'views-incident_reports-latest' => array(
-          'module' => 'views',
-          'delta' => 'incident_reports-latest',
-          'region' => 'sidebar_second',
-          'weight' => '41',
         ),
         'incident_map-field_incident_report_type' => array(
           'module' => 'incident_map',
@@ -82,6 +76,12 @@ function amani_incident_report_context_default_contexts() {
           'delta' => 'field_incident_severity',
           'region' => 'sidebar_second',
           'weight' => '40',
+        ),
+        'views-incident_reports-latest' => array(
+          'module' => 'views',
+          'delta' => 'incident_reports-latest',
+          'region' => 'sidebar_second',
+          'weight' => '41',
         ),
       ),
     ),
