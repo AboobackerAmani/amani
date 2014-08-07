@@ -11,22 +11,24 @@ input[type=submit]
     //margin: $margin 0
     overflow: hidden
     padding: $padding/3 0
-    label
-      @include span-columns(3)
-      text-align: right
-      padding: 5px 0
-      @include media($tablet)
-        @include fill-parent
-        text-align: left
-    input
-      border: 0
-      background: #fff
-      box-shadow: 2px 2px 2px #ccc
-      font-size: 15px
-      padding: 5px
-      @include span-columns(7)
-      @include media($tablet)
-        @include fill-parent
+    // Temporarily commenting out this styling
+    // as per request see https://github.com/PeaceGeeks/amani/issues/583
+    //label
+    //  @include span-columns(3)
+    //  text-align: right
+    //  padding: 5px 0
+    //  @include media($tablet)
+    //    @include fill-parent
+    //    text-align: left
+    //input
+    //  border: 0
+    //  background: #fff
+    //  box-shadow: 2px 2px 2px #ccc
+    //  font-size: 15px
+    //  padding: 5px
+    //  @include span-columns(7)
+    //  @include media($tablet)
+    //    @include fill-parent
     .form-textarea-wrapper
       @include span-columns(7)
       @include media($tablet)
@@ -206,3 +208,7 @@ input[type=submit]
       border: 0
       color: #fff
       margin-right: $margin/3
+
+// Configure amani form
+#amani-administrator-configure-amani-form
+  font-size: 16px

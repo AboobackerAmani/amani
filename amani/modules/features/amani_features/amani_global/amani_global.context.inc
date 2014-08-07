@@ -190,11 +190,17 @@ function amani_global_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
+        'views-calendar_of_events-list' => array(
+          'module' => 'views',
+          'delta' => 'calendar_of_events-list',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
         'views-calendar_of_events-calendar' => array(
           'module' => 'views',
           'delta' => 'calendar_of_events-calendar',
           'region' => 'sidebar_second',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'quicktabs-social_media_feeds' => array(
           'module' => 'quicktabs',

@@ -612,7 +612,7 @@ function amani_incident_report_field_default_fields() {
       'settings' => array(
         'description_field' => 0,
         'file_directory' => 'incident-media',
-        'file_extensions' => 'jpeg jpg png mov avi gif pdf',
+        'file_extensions' => 'jpeg jpg png mov avi gif pdf mp4 wmv',
         'max_filesize' => '',
         'user_register_form' => FALSE,
       ),
@@ -626,6 +626,7 @@ function amani_incident_report_field_default_fields() {
             'youtube' => 'youtube',
           ),
           'allowed_types' => array(
+            'application' => 0,
             'audio' => 0,
             'document' => 'document',
             'image' => 'image',

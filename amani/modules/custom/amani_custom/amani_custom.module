@@ -28,6 +28,16 @@ function amani_custom_block_view_alter(&$data, $block) {
 }
 
 /**
+ * Implements hook_block_info_alter().
+ */
+function amani_custom_block_info_alter(&$blocks, $theme, $code_blocks) {
+
+  // Make sure the main page content displays above any blocks added to
+  // the content region in a context.
+ $blocks['system']['main']['weight'] = -40;
+}
+
+/**
  * Implements hook_form_alter().
  */
 function amani_custom_form_alter(&$form, &$form_state, $form_id) {

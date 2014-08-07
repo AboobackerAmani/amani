@@ -42,7 +42,7 @@ function amani_slideshow_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
-          'width' => '1000',
+          'width' => '500',
           'height' => '',
           'upscale' => 1,
         ),
@@ -58,8 +58,8 @@ function amani_slideshow_image_default_styles() {
         'module' => 'image',
         'name' => 'image_crop',
         'data' => array(
-          'width' => '1000',
-          'height' => '500',
+          'width' => '500',
+          'height' => '250',
           'anchor' => 'center-center',
         ),
         'weight' => '2',

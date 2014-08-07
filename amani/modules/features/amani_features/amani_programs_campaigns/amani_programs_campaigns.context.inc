@@ -32,7 +32,7 @@ function amani_programs_campaigns_context_default_contexts() {
         'views-activities-block' => array(
           'module' => 'views',
           'delta' => 'activities-block',
-          'region' => 'sidebar_second',
+          'region' => 'content',
           'weight' => '-10',
         ),
         'views-programs_campaigns-block_1' => array(

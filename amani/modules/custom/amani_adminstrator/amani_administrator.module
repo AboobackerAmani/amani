@@ -1,21 +1,36 @@
 <?php
 
+require_once('amani_administrator.admin.inc');
+
 /**
  * Implements hook_menu.
  */
 function amani_administrator_menu() {
   $items = array();
   $items['admin/configure-amani'] = array(
-    'title' => 'Configure amani',
+    'title' => 'Configure Amani',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('amani_administrator_configure_amani_form'),
     'access arguments' => array('access amani administrator'),
-    'type' => MENU_NORMAL_ITEM
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'amani_administrator.admin.inc'
+  );
+
+  $items['admin/configure-amani/newsletter-button'] = array(
+    'title' => 'Configure Newsletter Button',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('amani_administrator_configure_newsletter_button_form'),
+    'access arguments' => array('access amani administrator'),
+    'type' => MENU_CALLBACK,
+    'file' => 'amani_administrator.admin.inc',
   );
 
   return $items;
 }
 
+/**
+ * Implements hook_permission.
+ */
 function amani_administrator_permission() {
   return array(
     'access amani administrator' => array(
@@ -25,286 +40,34 @@ function amani_administrator_permission() {
   );
 }
 
-function amani_administrator_configure_amani_form() {
-  $form = array();
-  $form['social_media_menu'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Social media menu'),
-    '#description' => 'This populate button will populate the social media menu with default values. It will not
-    remove any values you have already added to the menu.',
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-
-  $form['social_media_menu'][] = array(
-    '#type' => 'button',
-    '#value' => t('Populate social media links'),
-    '#attributes' => array('onclick' => 'if(!confirm("Are you sure?")){return false;}'),
-    '#executes_submit_callback' => TRUE
-  );
-
-  $form['social_media_menu'][] = array(
-    '#type' => 'button',
-    '#value' => t('Configure social media menu'),
-    '#executes_submit_callback' => TRUE
-  );
-
-  $form['main_menu'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Main menu'),
-    '#description' => 'This populate button will populate the main menu with default values. It will not
-    remove any values you have already added to the menu.',
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-
-  $form['main_menu'][] = array(
-    '#type' => 'button',
-    '#value' => t('Populate main menu links'),
-    '#attributes' => array('onclick' => 'if(!confirm("Are you sure?")){return false;}'),
-    '#executes_submit_callback' => TRUE
-  );
-
-  $form['main_menu'][] = array(
-    '#type' => 'button',
-    '#value' => t('Configure main menu'),
-    '#executes_submit_callback' => TRUE
-  );
-
-  $form['donate_menu'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Donate menu'),
-    '#description' => 'This populate button will populate the donate menu with default values. It will not
-    remove any values you have already added to the menu.',
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-
-  $form['donate_menu'][] = array(
-    '#type' => 'button',
-    '#value' => t('Populate donate menu link'),
-    '#attributes' => array('onclick' => 'if(!confirm("Are you sure?")){return false;}'),
-    '#executes_submit_callback' => TRUE
-  );
-
-  $form['donate_menu'][] = array(
-    '#type' => 'button',
-    '#value' => t('Configure donate menu'),
-    '#executes_submit_callback' => TRUE
-  );
-
-  $form['permissions'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Permissions'),
-    '#description' => '\'Set\' to ensure you have default permissions (does not delete any permissions), \'Clear and set\' to remove any overrides you may have to default permissions (removes overrides).',
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-
-  $form['permissions'][] = array(
-    '#type' => 'button',
-    '#value' => t('Set default permissions'),
-    '#executes_submit_callback' => TRUE
-  );
-
-  $form['permissions'][] = array(
-    '#type' => 'button',
-    '#value' => t('Clear and set default permissions'),
-    '#executes_submit_callback' => TRUE
-  );
-
-  $form['blocks'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Blocks'),
-    '#description' => 'Configure and place the sitewide blocks.',
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-
-  $form['blocks'][] = array(
-    '#type' => 'button',
-    '#value' => t('Configure blocks'),
-    '#executes_submit_callback' => TRUE,
-  );
-
-  $form['site-info'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Site info'),
-    '#description' => 'Manage the site logo, tagline and office details.',
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-
-  $form['site-info'][] = array(
-    '#type' => 'button',
-    '#value' => t('Configure site info'),
-    '#executes_submit_callback' => TRUE,
-  );
-
-  $form['map'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Map'),
-    '#description' => 'Manage the details of the map including marker, filter and map title settings.',
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-
-  $form['map'][] = array(
-    '#type' => 'button',
-    '#value' => t('Configure map'),
-    '#executes_submit_callback' => TRUE,
-  );
-
-  $form['google'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Google analytics'),
-    '#description' => 'Manage the settings associated with google analytics including tracking for pages, roles and users.',
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-
-  $form['google'][] = array(
-    '#type' => 'button',
-    '#value' => t('Configure google analytics'),
-    '#executes_submit_callback' => TRUE,
-  );
-
-  $form['twitter'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Twitter feed'),
-    '#description' => 'Manage the settings associated with the twitter feed located on the front page.',
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-
-  $form['twitter'][] = array(
-    '#type' => 'button',
-    '#value' => t('Configure twitter feed'),
-    '#executes_submit_callback' => TRUE,
-  );
-
-  $form['facebook'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Facebook feed'),
-    '#description' => 'Manage the settings associated with the facebook feed located on the front page.',
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-
-  $form['facebook'][] = array(
-    '#type' => 'button',
-    '#value' => t('Configure facebook feed'),
-    '#executes_submit_callback' => TRUE,
-  );
-
-  $form['redhen'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Redhen CRM'),
-    '#description' => 'Manage the settings associated with the built in customer relationship management framework.',
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-
-  $form['redhen'][] = array(
-    '#type' => 'button',
-    '#value' => t('Configure redhen'),
-    '#executes_submit_callback' => TRUE,
-  );
-
-  $form['contact'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Contact'),
-    '#description' => 'Manage the recipients of the sitewide contact form submissions.',
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-
-  $form['contact'][] = array(
-    '#type' => 'button',
-    '#value' => t('Configure contact'),
-    '#executes_submit_callback' => TRUE,
-  );
-
-  $form['css'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('CSS'),
-    '#description' => 'Manage the visual aspects of your site by creating css rules.',
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-
-  $form['css'][] = array(
-    '#type' => 'button',
-    '#value' => t('Configure css'),
-    '#executes_submit_callback' => TRUE,
-  );
-
-  return $form;
+/**
+ * Sets a specified block in a region, this only sets blocks for the peace theme.
+ *
+ * @param $block - an array representing the block, necessary keys are module,
+ * delta and theme.
+ * @param $status - the status of the block 0 = disabled, 1 = enabled
+ * @param $weight - the blocks weight
+ * @param $region - the blocks region a value of -1 will disable the block
+ */
+function amani_administrator_set_block(array $block, $status, $weight, $region) {
+   db_update('block')
+    ->fields(array(
+      'status' => $status,
+      'weight' => $weight,
+      'region' => $region,
+    ))
+    ->condition('module', $block['module'])
+    ->condition('delta', $block['delta'])
+    ->condition('theme', 'peace')
+    ->execute();
+  // Flush cache
+  cache_clear_all();
 }
 
-function amani_administrator_configure_amani_form_submit($form, &$form_state) {
-  switch ($form_state['clicked_button']['#value']) {
-    case 'Populate social media links':
-      amani_administrator_create_menu_links('menu-social-media');
-      drupal_set_message('Menu link paths can now be configured ' . l('here', 'admin/structure/menu/manage/menu-social-media'));
-      break;
-    case 'Populate main menu links':
-      amani_administrator_create_menu_links('menu-amani-main-menu');
-      drupal_set_message('Menu link paths can now be configured ' . l('here', 'admin/structure/menu/manage/menu-amani-main-menu'));
-      break;
-    case 'Populate donate menu link':
-      amani_administrator_create_menu_links('menu-donate');
-      drupal_set_message('Menu link paths can now be configured ' . l('here', 'admin/structure/menu/manage/menu-donate'));
-      break;
-    case 'Configure social media menu':
-      drupal_goto('admin/structure/menu/manage/menu-social-media');
-      break;
-    case 'Configure main menu':
-      drupal_goto('admin/structure/menu/manage/menu-amani-main-menu');
-      break;
-    case 'Configure donate menu':
-      drupal_goto('admin/structure/menu/manage/menu-donate');
-      break;
-    case 'Enable and position newsletter block':
-      drupal_goto('admin/structure/block/manage/bean/front-page-second-sidebar-bottom/configure');
-      break;
-    case 'Configure blocks':
-      drupal_goto('admin/structure/block');
-      break;
-    case 'Configure site info':
-      drupal_goto('amani/site-info');
-      break;
-    case 'Configure map':
-      drupal_goto('admin/config/incident-reports');
-      break;
-    case 'Configure google analytics':
-      drupal_goto('admin/config/system/googleanalytics');
-      break;
-    case 'Configure twitter feed':
-      drupal_goto('admin/config/services/twitter/settings');
-      break;
-    case 'Configure facebook feed':
-      drupal_goto('admin/structure/block/manage/fb_likebox/0/configure');
-      break;
-    case 'Configure redhen':
-      drupal_goto('redhen');
-      break;
-    case 'Configure contact':
-      drupal_goto('admin/structure/contact');
-      break;
-    case 'Configure css':
-      drupal_goto('admin/config/development/css-injector');
-      break;
-    case 'Set default permissions':
-      //See amani.profile
-      amani_setup_roles_and_permissions();
-      break;
-    case 'Clear and set default permissions':
-      amani_administrator_clear_permissions();
-      break;
-  }
-}
-
+/**
+ * Creates menu links for menu-social-media, menu-amani-main-menu and
+ * menu-donate.
+ */
 function amani_administrator_create_menu_links($menu_machine_name) {
   $default_links = array();
   switch($menu_machine_name) {
@@ -317,6 +80,7 @@ function amani_administrator_create_menu_links($menu_machine_name) {
     case 'menu-donate':
       $default_links = amani_administrator_get_donate_menu_links();
       break;
+    default: return;
   }
   $current_menu_links = array();
   // We will have to consider the link title the unique identifier for the link
@@ -396,21 +160,4 @@ function amani_administrator_get_donate_menu_links() {
   return array(
     'Donate' => '<front>'
   );
-}
-
-function amani_administrator_clear_permissions() {
-  // The amani roles
-  $roles = array('anonymous user', 'authenticated user', 'contributor', 'editor', 'amani administrator');
-  // Remove permissions
-  foreach($roles as $role) {
-    $role_obj = user_role_load_by_name($role);
-    if($role_obj) {
-      $roles_array = array($role_obj->rid => $role_obj->name);
-      $urp = user_role_permissions($roles_array);
-      $perms_array = array_keys($urp[$role_obj->rid]);
-      user_role_revoke_permissions($role_obj->rid, $perms_array);
-    }
-  }
-  // Set default roles/permissions(see amani.profile)
-  amani_setup_roles_and_permissions();
 }

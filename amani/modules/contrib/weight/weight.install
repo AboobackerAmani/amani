@@ -178,8 +178,8 @@ function weight_update_7200() {
   $types = node_type_get_names();
   $weight_types = variable_get('weight_node_types', array());
   $range = variable_get('weight_range', 20);
-  $menu_weight = variable_get('weight_use_menu', 0);
-  $default = variable_get('weight_default', 0);
+  $menu_weight = (int) variable_get('weight_use_menu', 0);
+  $default = (int) variable_get('weight_default', 0);
 
   // This is essentially the same as calling drupal_install_schema(), but
   // using weight_schema_7200() rather than the default weight_schema().

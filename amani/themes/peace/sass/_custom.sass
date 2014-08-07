@@ -374,10 +374,10 @@ a.button:not(.launcher):not(.remove):not(.edit)
 .view-news-and-events,
 .view-news-and-events-blog,
 .view-resources,
-.view-legislation
+.view-legislation,
+.view-activities
   .views-row
     overflow: hidden
-    margin: $margin 0
     border-bottom: 1px solid $grey
     &.views-row-last
       border-bottom: 0
@@ -597,3 +597,8 @@ a.button:not(.launcher):not(.remove):not(.edit)
     .jcarousel-next-horizontal
       top: 55px
       right: 0px
+
+// Hide description lable on media fields
+.field-name-media-description
+  .field-label
+    display: none

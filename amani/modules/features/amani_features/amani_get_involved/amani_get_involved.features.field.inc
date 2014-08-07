@@ -261,7 +261,7 @@ function amani_get_involved_field_default_fields() {
       'settings' => array(
         'description_field' => 0,
         'file_directory' => '',
-        'file_extensions' => 'jpeg jpg png mov avi gif pdf',
+        'file_extensions' => 'jpeg jpg png mov avi gif pdf mp3 wav mp4 wmv',
         'max_filesize' => '',
         'user_register_form' => FALSE,
       ),
@@ -275,6 +275,7 @@ function amani_get_involved_field_default_fields() {
             'youtube' => 'youtube',
           ),
           'allowed_types' => array(
+            'application' => 0,
             'audio' => 'audio',
             'document' => 'document',
             'image' => 'image',

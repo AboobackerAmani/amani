@@ -78,9 +78,35 @@ function amani_programs_campaigns_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'body',
-      'label' => 'Summary',
+      'label' => 'Description',
       'required' => 0,
       'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'php_code' => 0,
+            'plain_text' => 0,
+            'wysiwyg_advanced' => 'wysiwyg_advanced',
+            'wysiwyg_public' => 0,
+          ),
+          'allowed_formats_toggle' => 1,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'php_code' => array(
+                'weight' => '11',
+              ),
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+              'wysiwyg_advanced' => array(
+                'weight' => '-10',
+              ),
+              'wysiwyg_public' => array(
+                'weight' => '-9',
+              ),
+            ),
+          ),
+        ),
         'display_summary' => 1,
         'text_processing' => '1',
         'user_register_form' => FALSE,
@@ -345,7 +371,7 @@ function amani_programs_campaigns_field_default_fields() {
       'settings' => array(
         'description_field' => 0,
         'file_directory' => 'program-images',
-        'file_extensions' => 'jpeg jpg png mov avi gif pdf',
+        'file_extensions' => 'jpeg jpg png mov avi gif pdf mp3 wav mp4 wmv',
         'max_filesize' => '',
         'user_register_form' => FALSE,
       ),
@@ -359,6 +385,7 @@ function amani_programs_campaigns_field_default_fields() {
             'youtube' => 'youtube',
           ),
           'allowed_types' => array(
+            'application' => 0,
             'audio' => 'audio',
             'document' => 'document',
             'image' => 'image',
@@ -508,7 +535,7 @@ function amani_programs_campaigns_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'project',
-      'default_value' => NULL,
+      'default_value' => array(),
       'deleted' => '0',
       'description' => 'Optionally associate this content with a map record.',
       'display' => array(
@@ -548,7 +575,7 @@ function amani_programs_campaigns_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(),
-        'type' => 'options_buttons',
+        'type' => 'options_select',
         'weight' => '4',
       ),
     ),
@@ -616,7 +643,7 @@ function amani_programs_campaigns_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_project_status',
-      'label' => 'Project status',
+      'label' => 'Program status',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -633,14 +660,14 @@ function amani_programs_campaigns_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Description');
   t('Featured?');
   t('Lead Image');
   t('Map record');
   t('Media');
   t('Optionally associate this content with a map record.');
   t('Program Location(s)');
-  t('Project status');
-  t('Summary');
+  t('Program status');
   t('Will this program receive special consideration by appearing at the top of lists?');
 
   return $fields;

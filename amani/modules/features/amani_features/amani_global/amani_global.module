@@ -22,7 +22,7 @@ function amani_global_menu() {
   $version = amani_global_get_version();
 
   $items['admin/configure-amani/site-info'] = array(
-    'title' => 'Amani site settings',
+    'title' => 'Configure Site Info and Logo',
     'description' => 'Manage site name, e-mail address, slogan, logo and favicon.',
     'page callback' => 'drupal_get_form',
     'type' => MENU_NORMAL_ITEM,
@@ -145,11 +145,17 @@ function amani_global_site_contact_info() {
   $map = leaflet_framework_map($map_id, array(), array());
 
   $content = array(
-    '' => variable_get('site_address', NULL),
-    'T: ' => variable_get('site_phone', NULL),
-    'E: ' => variable_get('site_mail', NULL),
-    'Hours: ' => variable_get('site_hours', NULL)
+    '' => variable_get('site_address', NULL)
   );
+  if ($phone = variable_get('site_phone', NULL)) {
+    $content['T: '] = $phone;
+  }
+  if ($mail = variable_get('site_mail', NULL)) {
+    $content['E: '] = $mail;
+  }
+  if ($hours = variable_get('site_hours', NULL)) {
+    $content['Hours: '] = $hours;
+  }
   if ($content) {
     $output .= '<div id="contact_form_site_info">';
     foreach ($content as $item => $value) {
@@ -570,7 +576,6 @@ function amani_theme_settings_submit($form, &$form_state) {
  * Page preprocessor.
  */
 function amani_global_preprocess_page(&$vars) {
-
   // Add breadcrumbs on some taxonomy term pages.
   if (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))) {
     $term = taxonomy_term_load(arg(2));
@@ -597,5 +602,71 @@ function amani_global_preprocess_page(&$vars) {
 
     drupal_set_breadcrumb($breadcrumb);
   }
+
+  // Set custom page titles for none administrators.
+  global $user;
+  $is_admin = in_array('administrator', $user->roles);
+  if (!$is_admin) {
+    $path = current_path();
+    switch ($path) {
+      case 'admin/structure/contact':
+        drupal_set_title('Configure Contact Form');
+        break;
+      case 'admin/config/system/googleanalytics':
+        drupal_set_title('Configure Google Analytics');
+        break;
+      case 'admin/config/services/twitter/settings':
+        drupal_set_title('Configure Twitter Feed');
+        break;
+      case 'redhen':
+        drupal_set_title('Configure RedHen');
+        break;
+      case 'admin/config/development/css-injector':
+        drupal_set_title('Configure CSS');
+        break;
+      case 'admin/structure/block/manage/fb_likebox/0/configure':
+        drupal_set_title('Configure Facebook Feed');
+        break;
+    }
+  }
 }
 
+/**
+ * Implements hook_form_alter.
+ */
+function amani_global_form_alter(&$form, &$form_state, $form_id) {
+  global $user;
+  $is_admin = in_array('administrator', $user->roles);
+  if (!$is_admin) {
+    // Twitter forms
+    $twitter_admin_forms = array('twitter_admin_form', 'twitter_post_admin_settings', 'twitter_signin_admin_settings');
+    if (in_array($form_id, $twitter_admin_forms)) {
+      drupal_set_title('Twitter');
+    }
+  }
+
+  // If your not a superadmin redirect to configure amani page after editing the
+  // facebook feeds block.
+  if ($form_id == 'block_admin_configure' && !$is_admin) {
+    $form['#submit'][] = 'amani_global_redirect_for_amani_admins';
+  }
+}
+
+/**
+ * Custom submit handler
+ */
+function amani_global_redirect_for_amani_admins($form, &$form_state) {
+  $form_state['redirect'] = 'admin/configure-amani';
+}
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function amani_global_entity_info_alter(&$entity_info) {
+
+  // Custom view mode.
+  $entity_info['file']['view modes']['original_image'] = array(
+    'label' => t('Original Image'),
+    'custom settings' => TRUE,
+  );
+}

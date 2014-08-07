@@ -10,7 +10,7 @@
 function amani_blog_taxonomy_default_vocabularies() {
   return array(
     'categories' => array(
-      'name' => 'Categories',
+      'name' => 'Blog Categories',
       'machine_name' => 'categories',
       'description' => '',
       'hierarchy' => '0',

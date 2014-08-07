@@ -15,7 +15,7 @@ function amani_global_menu_default_menu_links() {
     'menu_name' => 'menu-amani-admin-menu',
     'link_path' => 'admin/configure-amani',
     'router_path' => 'admin/configure-amani',
-    'link_title' => 'Configure amani',
+    'link_title' => 'Configure Amani',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -26,25 +26,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '0',
-  );
-  // Exported menu link: menu-amani-admin-menu:admin/structure/menu/manage/menu-amani-main-menu
-  $menu_links['menu-amani-admin-menu:admin/structure/menu/manage/menu-amani-main-menu'] = array(
-    'menu_name' => 'menu-amani-admin-menu',
-    'link_path' => 'admin/structure/menu/manage/menu-amani-main-menu',
-    'router_path' => 'admin/structure/menu/manage/%',
-    'link_title' => 'Edit main menu',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '0',
+    'weight' => '-47',
   );
   // Exported menu link: menu-amani-admin-menu:admin/people
   $menu_links['menu-amani-admin-menu:admin/people'] = array(
@@ -62,7 +44,25 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-40',
+    'weight' => '-49',
+  );
+  // Exported menu link: menu-amani-admin-menu:admin/structure/menu/manage/menu-amani-main-menu
+  $menu_links['menu-amani-admin-menu:admin/structure/menu/manage/menu-amani-main-menu'] = array(
+    'menu_name' => 'menu-amani-admin-menu',
+    'link_path' => 'admin/structure/menu/manage/menu-amani-main-menu',
+    'router_path' => 'admin/structure/menu/manage/%',
+    'link_title' => 'Configure Main Menu Links',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-48',
   );
   // Exported menu link: menu-amani-admin-menu:admin/structure/taxonomy
   $menu_links['menu-amani-admin-menu:admin/structure/taxonomy'] = array(
@@ -80,7 +80,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-49',
+    'weight' => '-50',
   );
   // Exported menu link: menu-amani-admin-menu:user
   $menu_links['menu-amani-admin-menu:user'] = array(
@@ -98,7 +98,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-39',
+    'weight' => '-46',
   );
   // Exported menu link: menu-meta:<front>
   $menu_links['menu-meta:<front>'] = array(
@@ -174,7 +174,8 @@ function amani_global_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Configure amani');
+  t('Configure Amani');
+  t('Configure Main Menu Links');
   t('Manage drop down lists');
   t('Manage users');
   t('My account');
