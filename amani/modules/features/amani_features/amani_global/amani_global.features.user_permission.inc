@@ -1143,6 +1143,7 @@ function amani_global_user_default_permissions() {
     'name' => 'create webform content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -1208,6 +1209,7 @@ function amani_global_user_default_permissions() {
     'name' => 'delete any webform content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -1250,6 +1252,7 @@ function amani_global_user_default_permissions() {
     'name' => 'delete own webform content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -1378,6 +1381,7 @@ function amani_global_user_default_permissions() {
     'name' => 'edit any webform content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
@@ -1474,6 +1478,7 @@ function amani_global_user_default_permissions() {
     'name' => 'edit own webform content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'node',
   );
