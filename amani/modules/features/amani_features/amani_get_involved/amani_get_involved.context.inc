@@ -30,7 +30,7 @@ function amani_get_involved_context_default_contexts() {
           'module' => 'views',
           'delta' => 'get_involved-block_1',
           'region' => 'content',
-          'weight' => '-10',
+          'weight' => '-41',
         ),
       ),
     ),
