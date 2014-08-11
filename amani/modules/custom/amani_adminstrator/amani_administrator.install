@@ -11,3 +11,13 @@ function amani_administrator_update_7100() {
     ->condition('category', 'Website Feedback')
     ->execute();
 }
+
+/**
+ * Set the text format to wysiwyg_advanced for the body fields.
+ */
+function amani_administrator_update_7200() {
+
+  db_update('field_data_body')
+    ->fields(array('body_format' => 'wysiwyg_advanced'))
+    ->execute();
+}
