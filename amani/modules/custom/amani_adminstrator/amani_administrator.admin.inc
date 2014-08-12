@@ -349,7 +349,7 @@ function amani_administrator_configure_amani_form() {
     '#value' => t('View Amani Release Notes'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
-    '#suffix' => '<p>View your current version of amani along with past releases.</p></div>',
+    '#suffix' => '<p>View your current version of Amani along with past releases.</p></div>',
   );
 
   return $form;
