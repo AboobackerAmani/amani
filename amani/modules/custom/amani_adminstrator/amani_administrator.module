@@ -161,3 +161,15 @@ function amani_administrator_get_donate_menu_links() {
     'Donate' => '<front>'
   );
 }
+
+/**
+ * Implements hook_block_view_alter.
+ */
+function amani_administrator_block_view_alter(&$data, $block) {
+  if ($block->delta == 0 && $block->module == 'fb_likebox') {
+    $show_fb_feed = variable_get('amani_admin_fb_likebox_show', 1);
+    if (!$show_fb_feed) {
+      $data = '';
+    }
+  }
+}

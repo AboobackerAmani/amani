@@ -285,8 +285,24 @@ function amani_administrator_configure_amani_form() {
     '#type' => 'button',
     '#value' => t('Configure Facebook Feed'),
     '#executes_submit_callback' => TRUE,
-    '#prefix' => $prefix,
+    '#prefix' => $prefix_3,
     '#suffix' => '<p>Enable and manage your organization’s Facebook feed, located on your Home page.</p></div>',
+  );
+
+  $form['facebook'][] = array(
+    '#type' => 'button',
+    '#value' => t('Enable Facebook Feed'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix_3,
+    '#suffix' => '<p>Enable your organization’s Facebook feed, located on your Home page.</p></div>',
+  );
+
+  $form['facebook'][] = array(
+    '#type' => 'button',
+    '#value' => t('Disable Facebook Feed'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix_3,
+    '#suffix' => '<p>Disable your organization’s Facebook feed, located on your Home page.</p></div>',
   );
 
   $form['redhen'] = array(
@@ -400,6 +416,12 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       break;
     case 'Configure Facebook Feed':
       drupal_goto('admin/structure/block/manage/fb_likebox/0/configure');
+      break;
+    case 'Enable Facebook Feed':
+      variable_set('amani_admin_fb_likebox_show', 1);
+      break;
+    case 'Disable Facebook Feed':
+      variable_set('amani_admin_fb_likebox_show', 0);
       break;
     case 'Configure Redhen':
       drupal_goto('redhen');
