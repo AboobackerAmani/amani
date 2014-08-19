@@ -49,6 +49,11 @@ function amani_get_involved_context_default_contexts() {
   $context->description = 'programs listing page';
   $context->tag = 'programs';
   $context->conditions = array(
+    'context_var' => array(
+      'values' => array(
+        'amani_admin_get_involved_show|1' => 'amani_admin_get_involved_show|1',
+      ),
+    ),
     'views' => array(
       'values' => array(
         'programs_campaigns:page' => 'programs_campaigns:page',
@@ -66,8 +71,11 @@ function amani_get_involved_context_default_contexts() {
         ),
       ),
     ),
+    'theme_html' => array(
+      'class' => 'amani-admin-get-involved-activated',
+    ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
 
   // Translatables
   // Included for use with string extractors like potx.
