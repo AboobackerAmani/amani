@@ -176,6 +176,29 @@ function amani_administrator_configure_amani_form() {
     '#suffix' => '<p>This action diables the \'Partners Carousel\' on your site.</p></div>',
   );
 
+  $form['blocks']['get_involved'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Manage Get Involved Block'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['blocks']['get_involved'][] = array(
+    '#type' => 'button',
+    '#value' => t('Enable \'Get Involved\''),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action enables the \'Get Involved Block\' to appear on your site\'s /programs page.</p></div>'
+  );
+
+  $form['blocks']['get_involved'][] = array(
+    '#type' => 'button',
+    '#value' => t('Disable \'Get Involved\''),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action disables the \'Get Involved Block\' to appear on your site\'s /programs page.</p></div>'
+  );
+
   $form['site-info'] = array(
     '#type' => 'fieldset',
     '#title' => t('Manage Site Info and Logo'),
@@ -401,6 +424,12 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       break;
     case 'Enable \'Newsletter\' Button':
       variable_set('amani_admin_newsletter_button_show', 1);
+      break;
+    case 'Disable \'Get Involved\'':
+      variable_set('amani_admin_get_involved_show', 0);
+      break;
+    case 'Enable \'Get Involved\'':
+      variable_set('amani_admin_get_involved_show', 1);
       break;
     case 'Configure Site Info and Logo':
       drupal_goto('admin/configure-amani/site-info');

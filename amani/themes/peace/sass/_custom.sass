@@ -211,11 +211,32 @@ a.button:not(.launcher):not(.remove):not(.edit)
   box-shadow: 0 0 20px #ccc
   @include border-radius(0, 0, 5px, 5px)
 
-// Programs page.
+// Programs page with get-involved block enabled.
+.amani-admin-get-involved-activated
+  &.page-programs
+    .views-row
+      @include span-columns(4 of 8)
+      @include omega(2n)
+      background: #fff
+      padding: $padding
+      margin-bottom: $margin
+      @include media($motab)
+        @include fill-parent
+      .views-field-title
+        text-transform: uppercase
+        font-size: 16px
+        margin-bottom: 5px
+      .views-field-body
+        font-family: "Georgia"
+      .views-field-field-image,
+      .views-field-field-media
+        img
+          width: 100%
+          height: auto
+// Programs page with get-involved block disabled.
 .page-programs
   .views-row
-    @include span-columns(4 of 8)
-    @include omega(2n)
+    @include span-columns(4 of 12)
     background: #fff
     padding: $padding
     margin-bottom: $margin
