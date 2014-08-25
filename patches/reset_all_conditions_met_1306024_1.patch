@@ -1,0 +1,22 @@
+diff --git a/plugins/context_var_context_condition.inc b/plugins/context_var_context_condition.inc
+index 9a4563c..8914cec 100644
+--- a/plugins/context_var_context_condition.inc
++++ b/plugins/context_var_context_condition.inc
+@@ -64,7 +64,6 @@ class context_var_context_condition extends context_condition {
+         }
+         $vars = str_replace('%theme', $theme, $vars);
+         // split all values that we recieve
+-        $all_conditions_met = TRUE;
+         foreach ($vars as $var) {
+           // split based on | safely
+           $values = explode('|', filter_xss($var));
+@@ -76,6 +75,9 @@ class context_var_context_condition extends context_condition {
+           // go through each value pair and compare to drupal's current values
+           // because we use variable_get this will take into account strongarm / spaces
+           foreach ($sys_array as $key => $value) {
++            // Move this here - it ensures that if the previous variable check
++            // fails (setting all_conditions_met = FALSE) this value is reset.
++            $all_conditions_met = TRUE;
+             $sys_var = variable_get($key, array());
+             // check to see if this is an even deeper array
+             if (strpos($value, ':') === FALSE) {
