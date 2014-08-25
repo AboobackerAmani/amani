@@ -236,7 +236,12 @@ a.button:not(.launcher):not(.remove):not(.edit)
 // Programs page with get-involved block disabled.
 .page-programs
   .views-row
-    @include span-columns(4 of 12)
+    // We need slightly less than 4 of 12 columns
+    // there is probably a better way to do this.
+    display: block
+    float: left
+    margin-right: 2%
+    width: 31%
     background: #fff
     padding: $padding
     margin-bottom: $margin
