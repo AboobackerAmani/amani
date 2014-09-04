@@ -173,3 +173,20 @@ function amani_administrator_block_view_alter(&$data, $block) {
     }
   }
 }
+
+/**
+ * Implementes hook_form_alter.
+ */
+function amani_administrator_form_alter(&$form, &$form_state, $form_id) {
+  switch($form_id) {
+    case 'twitter_admin_form':
+      $form['amani_admin_twitter_block_title'] = array(
+        '#title' => 'Twitter feed title',
+        '#type' => 'textfield',
+        '#default_value' => variable_get('amani_admin_twitter_block_title', 'Twitter')
+      );
+      break;
+  }
+
+  return $form;
+}
