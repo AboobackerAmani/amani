@@ -261,6 +261,13 @@ function amani_social_media_views_default_views() {
   );
   $handler->display->display_options['row_options']['separator'] = ' &#8212; ';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<?php print(variable_get(\'amani_admin_twitter_block_title\', \'Twitter\')) ?>';
+  $handler->display->display_options['header']['area']['format'] = 'php_code';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
@@ -269,12 +276,6 @@ function amani_social_media_views_default_views() {
   $handler->display->display_options['footer']['area']['content'] = '<p align = "right"><a href = "http://twitter.com/hivevancouver" target = "_blank">more</a>';
   $handler->display->display_options['footer']['area']['format'] = 'wysiwyg_editor';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Twitter: Login name */
-  $handler->display->display_options['fields']['screen_name']['id'] = 'screen_name';
-  $handler->display->display_options['fields']['screen_name']['table'] = 'twitter';
-  $handler->display->display_options['fields']['screen_name']['field'] = 'screen_name';
-  $handler->display->display_options['fields']['screen_name']['label'] = '';
-  $handler->display->display_options['fields']['screen_name']['element_label_colon'] = FALSE;
   /* Field: Twitter: Message text */
   $handler->display->display_options['fields']['text']['id'] = 'text';
   $handler->display->display_options['fields']['text']['table'] = 'twitter';
@@ -360,6 +361,7 @@ function amani_social_media_views_default_views() {
     t('All'),
     t('Tweets by @%1'),
     t('Block'),
+    t('<?php print(variable_get(\'amani_admin_twitter_block_title\', \'Twitter\')) ?>'),
     t('<p align = "right"><a href = "http://twitter.com/hivevancouver" target = "_blank">more</a>'),
     t('Twitter feed'),
     t('Displays a formatted list of tweets'),
