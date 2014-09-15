@@ -1193,11 +1193,14 @@ a.button:not(.launcher):not(.remove):not(.edit) {
     .sidebar #block-views-calendar_of_events-calendar .pager .date-prev {
       display: block;
       height: 30px;
-      width: 30px; }
-    .sidebar #block-views-calendar_of_events-list .pager .date-next a,
-    .sidebar #block-views-calendar_of_events-calendar .pager .date-next a {
-      margin-top: -20px;
-      display: block; }
+      width: 30px;
+      padding-right: 10px; }
+    .sidebar #block-views-calendar_of_events-list .pager .date-next,
+    .sidebar #block-views-calendar_of_events-calendar .pager .date-next {
+      padding-left: 10px; }
+      .sidebar #block-views-calendar_of_events-list .pager .date-next a,
+      .sidebar #block-views-calendar_of_events-calendar .pager .date-next a {
+        display: block; }
   .sidebar #block-views-calendar_of_events-list h2.block-title,
   .sidebar #block-views-calendar_of_events-calendar h2.block-title {
     border-color: #cccccc; }
