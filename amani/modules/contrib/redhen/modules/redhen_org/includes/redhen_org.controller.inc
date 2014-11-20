@@ -16,44 +16,32 @@ class RedhenOrgEntityController extends EntityAPIController {
    * @param RedhenOrg $org
    *   The full org object to save.
    *
-   * @return RedhenOrg
+   * @return
    *   The saved org object.
    */
   public function save($org) {
-    $org->updated = REQUEST_TIME;
+    $transaction = db_transaction();
+    try {
+      $org->updated = REQUEST_TIME;
 
-    // New org, set created prop.
-    if (isset($org->is_new) && $org->is_new) {
-      $org->created = REQUEST_TIME;
+      parent::save($org, $transaction);
+
+      return $org;
+    } catch (Exception $e) {
+      $transaction->rollback();
+      watchdog_exception($this->entityType, $e);
+      throw $e;
     }
-    // Set revision flags. By default, save a new revision and set it as
-    // default.
-    else {
-      if (!isset($org->is_new_revision)) {
-        $org->is_new_revision = TRUE;
-      }
-      if (!isset($org->default_revision)) {
-        $org->default_revision = TRUE;
-      }
-    }
-
-    parent::save($org);
-
-    return $org;
   }
 
   /**
    * Deletes multiple orgs by id.
    *
-   * @param array $org_ids
+   * @param $org_ids
    *   An array of org IDs to delete.
-   * @param DatabaseTransaction $transaction
-   *   DB transaction object.
    *
-   * @return bool
+   * @return
    *   TRUE on success, FALSE otherwise.
-   *
-   * @throws Exception
    */
   public function delete($org_ids, DatabaseTransaction $transaction = NULL) {
     if (!empty($org_ids)) {
@@ -72,8 +60,7 @@ class RedhenOrgEntityController extends EntityAPIController {
       $transaction = db_transaction();
       try {
         parent::delete($org_ids, $transaction);
-      }
-      catch (Exception $e) {
+      } catch (Exception $e) {
         if (isset($transaction)) {
           $transaction->rollback();
         }

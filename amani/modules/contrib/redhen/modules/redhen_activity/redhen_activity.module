@@ -171,7 +171,7 @@ function redhen_activity_menu() {
       'access callback' => 'redhen_activity_access',
       'access arguments' => array('view', 2),
       'type' => MENU_LOCAL_TASK,
-      'weight' => 10,
+      'weight' => 10
     );
   }
 
@@ -241,7 +241,7 @@ function redhen_activity_field_refresh() {
       'redhen_note',
       'redhen_relation',
       'redhen_engagement',
-      'redhen_membership',
+      'redhen_membership'
     ),
     'label' => 'Contact',
     'required' => TRUE,
@@ -315,7 +315,7 @@ function redhen_activity_field_refresh() {
     ),
   );
 
-  // Allow other modules to alter these fields.
+  // allow other modules to alter these fields
   drupal_alter('redhen_activity_message_fields', $fields);
 
   // Create the missing fields.
@@ -393,36 +393,35 @@ function redhen_activity_message_save($entity, $type, $op) {
       $message = message_create($type, array(
         'arguments' => array(
           '%name' => $entity->label(),
-          '!op' => $op,
-        ),
+          '!op' => $op
+        )
       ), $user);
+      $wrapper = entity_metadata_wrapper('message', $message);
       $ref_field_name = "message_{$type}";
-      $message->{$ref_field_name}[LANGUAGE_NONE][0] = array('target_id' => $entity->internalIdentifier());
-      $message->save();
-      break;
+      $wrapper->$ref_field_name->set($entity);
+      $wrapper->save();
 
+      break;
     case 'redhen_note':
       $wrapper = entity_metadata_wrapper('redhen_note', $entity);
       $parent_entity = $wrapper->entity->value();
       if ($parent_entity) {
         $items = field_get_items('redhen_note', $entity, 'redhen_note_type');
-        $note_name = NULL;
-        if (isset($items[0])) {
-          $note_name = taxonomy_term_load($items[0]['tid'])->name;
-        }
+        $note_type = taxonomy_term_load($items[0]['tid']);
         $message = message_create('redhen_note', array(
           'arguments' => array(
             '%name' => $parent_entity->label(),
             '!op' => $op,
-            '%type' => $note_name,
-          ),
+            '%type' => $note_type->name
+          )
         ), $user);
+        $wrapper = entity_metadata_wrapper('message', $message);
         $ref_field_name = "message_{$entity->entity_type}";
-        $message->{$ref_field_name}[LANGUAGE_NONE][0] = array('target_id' => $parent_entity->internalIdentifier());
-        $message->save();
+        $wrapper->$ref_field_name->set($parent_entity);
+        $wrapper->save();
       }
-      break;
 
+      break;
     case 'relation':
       $endpoints = field_get_items('relation', $entity, 'endpoints');
       $endpoint_entities = array();
@@ -431,55 +430,50 @@ function redhen_activity_message_save($entity, $type, $op) {
       }
       $relation_type = relation_type_load($entity->relation_type);
 
-      // Save a message for each entity in the relationship.
+      // save a message for each entity in the relationship
       foreach ($endpoint_entities as $endpoint_entity) {
-        // During delete operations the endpoint entity may be gone, so check
-        // before creating a message:
-        if ($endpoint_entity) {
-          if (in_array($endpoint_entity->entityType(), array('redhen_contact', 'redhen_org'))) {
-            $label1 = $endpoint_entities[0] ? $endpoint_entities[0]->label() :
-              t('Entity !type with an ID of !id', array(
-                '!type' => $endpoints[0]['entity_type'],
-                '!id' => $endpoints[0]['entity_id'],
-              ));
-            $label2 = $endpoint_entities[1] ? $endpoint_entities[1]->label() :
-              t('Entity !type with an ID of !id', array(
-                '!type' => $endpoints[1]['entity_type'],
-                '!id' => $endpoints[1]['entity_id'],
-              ));
-            $message = message_create('redhen_relation', array(
-              'arguments' => array(
-                '%name1' => $label1,
-                '%name2' => $label2,
-                '!op' => $op,
-                '%type' => $relation_type->label,
-              ),
-            ), $user);
-            $ref_field_name = "message_{$endpoint_entity->entityType()}";
-            $message->{$ref_field_name}[LANGUAGE_NONE][0] = array('target_id' => $endpoint_entity->internalIdentifier());
-            $message->save();
-          }
+        if (in_array($endpoint_entity->entityType(), array('redhen_contact', 'redhen_org'))) {
+          $label1 = $endpoint_entities[0] ? $endpoint_entities[0]->label() :
+            t('Entity !type with an ID of !id', array(
+              '!type' => $endpoints[0]['entity_type'],
+              '!id' => $endpoints[0]['entity_id']
+            ));
+          $label2 = $endpoint_entities[1] ? $endpoint_entities[1]->label() :
+            t('Entity !type with an ID of !id', array(
+              '!type' => $endpoints[1]['entity_type'],
+              '!id' => $endpoints[1]['entity_id']
+            ));
+          $message = message_create('redhen_relation', array(
+            'arguments' => array(
+              '%name1' => $label1,
+              '%name2' => $label2,
+              '!op' => $op,
+              '%type' => $relation_type->label
+            )
+          ), $user);
+          $wrapper = entity_metadata_wrapper('message', $message);
+          $ref_field_name = "message_{$endpoint_entity->entityType()}";
+          $wrapper->$ref_field_name->set($endpoint_entity);
+          $wrapper->save();
         }
       }
       break;
-
     case 'redhen_engagement':
-      $wrapper = entity_metadata_wrapper('redhen_engagement', $entity);
-      $score = $wrapper->engagement_score->value();
-      $contact = $wrapper->contact->value();
+      $score = redhen_engagement_get_scores($entity->engagement_score_id);
+      $contact = redhen_contact_load($entity->contact_id);
       $message = message_create('redhen_engagement', array(
         'arguments' => array(
           '%name' => $contact->label(),
           '!op' => $op,
           '%type' => $score->label(),
-          '%score' => $score->score,
-        ),
+          '%score' => $score->score
+        )
       ), $user);
       $wrapper = entity_metadata_wrapper('message', $message);
       $wrapper->message_redhen_contact->set($contact);
       $wrapper->save();
-      break;
 
+      break;
     case 'redhen_membership':
       $wrapper = entity_metadata_wrapper('redhen_membership', $entity);
       $parent_entity = $wrapper->entity->value();
@@ -488,12 +482,14 @@ function redhen_activity_message_save($entity, $type, $op) {
           '%name' => $entity->label(),
           '!op' => $op,
           '%type' => $entity->type,
-          '%entity_name' => $parent_entity->label(),
-        ),
+          '%entity_name' => $parent_entity->label()
+        )
       ), $user);
+      $wrapper = entity_metadata_wrapper('message', $message);
       $ref_field_name = "message_{$parent_entity->entityType()}";
-      $message->{$ref_field_name}[LANGUAGE_NONE][0] = array('target_id' => $parent_entity->internalIdentifier());
-      $message->save();
+      $wrapper->$ref_field_name->set($parent_entity);
+      $wrapper->save();
+
       break;
 
     default:
@@ -510,7 +506,6 @@ function redhen_activity_message_save($entity, $type, $op) {
  * @return array
  */
 function redhen_activity_activity_page($entity = NULL, $entity_type = NULL) {
-  global $language;
   $header = array(
     'timestamp' => array(
       'field' => 'timestamp',
@@ -523,7 +518,7 @@ function redhen_activity_activity_page($entity = NULL, $entity_type = NULL) {
       'field' => 'Type',
       'type' => 'property',
       'data' => t('Type'),
-      'specifier' => 'type',
+      'specifier' => 'type'
     ),
     'author' => array(
       'data' => t('Author'),
@@ -533,21 +528,19 @@ function redhen_activity_activity_page($entity = NULL, $entity_type = NULL) {
     ),
     'message' => array(
       'data' => t('Message'),
-    ),
+    )
   );
 
 
-  // Need to ensure the query doesn't execute when posing the form.
+  // need to ensure the query doesn't execute when posing the form
   $result = FALSE;
   if (!isset($_POST['form_id'])) {
     $fields = array();
     if ($entity && $entity_type) {
       $fields = array(
         "message_{$entity_type}" => array(
-          LANGUAGE_NONE => array(
-            array('target_id' => $entity->internalIdentifier()),
-          ),
-        ),
+          'target_id' => $entity->identifier()
+        )
       );
     }
 
@@ -558,38 +551,8 @@ function redhen_activity_activity_page($entity = NULL, $entity_type = NULL) {
   }
 
   $messages = array();
-  $rows = array();
   if ($result) {
     $messages = message_load_multiple(array_keys($result['message']));
-
-    if (!empty($messages)) {
-      foreach ($messages as $message) {
-        $message_type = message_type_load($message->type);
-        $author = $message->user();
-        $url = user_uri($author);
-        $source_entity = redhen_activity_source_entity($message);
-        if ($source_entity) {
-          $source_uri = entity_uri($source_entity->entityType(), $source_entity);
-          $source = l($source_entity->label(), $source_uri['path']);
-        }
-
-        $rows[$message->mid] = array(
-          'data' => array(
-            'timestamp' => redhen_format_date($message->timestamp),
-            'type' => $message_type->description,
-            'author' => array(
-              'data' => array(
-                '#type' => 'link',
-                '#title' => $author->name,
-                '#href' => $url['path'],
-              ),
-            ),
-            'source' => $source,
-            'message' => $message->getText($language->language),
-          ),
-        );
-      }
-    }
   }
 
   return array(
@@ -597,9 +560,8 @@ function redhen_activity_activity_page($entity = NULL, $entity_type = NULL) {
     'messages' => array(
       '#theme' => 'redhen_activity_list',
       '#messages' => $messages,
-      '#header' => $header,
-      '#rows' => $rows,
-    ),
+      '#header' => $header
+    )
   );
 }
 
@@ -609,7 +571,7 @@ function redhen_activity_activity_page($entity = NULL, $entity_type = NULL) {
 function redhen_activity_entity_property_info_alter(&$info) {
   $properties = &$info['message']['properties'];
 
-  // Ensure the timestamp is a filter for RedHen forms.
+  // ensure the timestamp is a filter for RedHen forms
   $properties['timestamp']['filter'] = TRUE;
   $properties['timestamp']['field_type'] = 'textfield';
 }
@@ -620,8 +582,8 @@ function redhen_activity_entity_property_info_alter(&$info) {
 function redhen_activity_theme() {
   return array(
     'redhen_activity_list' => array(
-      'variables' => array('messages' => NULL, 'header' => NULL, 'rows' => NULL),
-    ),
+      'variables' => array('messages' => NULL, 'header' => NULL),
+    )
   );
 }
 
@@ -633,18 +595,48 @@ function redhen_activity_theme() {
  * @return string
  */
 function theme_redhen_activity_list($variables) {
-  $rows = $variables['rows'];
+  $messages = $variables['messages'];
   $header = $variables['header'];
 
-  $render['table'] = array(
-    '#theme' => 'table',
-    '#header' => $header,
-    '#rows' => $rows,
-    '#empty' => t('Sorry, there are no activities that match your criteria.'),
-  );
-  $render['pager'] = array(
-    '#theme' => 'pager',
-  );
+  if (!empty($messages)) {
+    $rows = array();
+    foreach ($messages as $message) {
+      $message_type = message_type_load($message->type);
+      $author = $message->user();
+      $url = user_uri($author);
+      $source_entity = redhen_activity_source_entity($message);
+      if ($source_entity) {
+        $source_uri = entity_uri($source_entity->entityType(), $source_entity);
+        $source = l($source_entity->label(), $source_uri['path']);
+      }
+
+      $rows[] = array(
+        'data' => array(
+          redhen_format_date($message->timestamp),
+          $message_type->description,
+          l($author->name, $url['path']),
+          $source,
+          $message->getText()
+        )
+      );
+    }
+
+    $render['table'] = array(
+      '#theme' => 'table',
+      '#header' => $header,
+      '#rows' => $rows
+    );
+    $render['pager'] = array(
+      '#theme' => 'pager',
+    );
+  }
+  else {
+    // no results, set a message
+    $render['no-result'] = array(
+      '#type' => 'markup',
+      '#markup' => t('Sorry, there are no activities that match your criteria.'),
+    );
+  }
 
   return render($render);
 }
@@ -663,12 +655,10 @@ function redhen_activity_source_entity($message) {
       $ref_field = 'message_redhen_contact';
       $ref_entity_type = 'redhen_contact';
       break;
-
     case 'redhen_org':
       $ref_field = 'message_redhen_org';
       $ref_entity_type = 'redhen_org';
       break;
-
     case 'redhen_relation':
     case 'redhen_note':
     case 'redhen_membership':

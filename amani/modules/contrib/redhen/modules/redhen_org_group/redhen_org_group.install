@@ -4,7 +4,7 @@
  * Implements hook_install().
  */
 function redhen_org_group_install() {
-  // Create the field used to references groups from other entities.
+  // create the field used to referencs groups from other entities
   $field_name = REDHEN_ORG_GROUP_FIELD;
   if (!field_info_field($field_name)) {
     $field = array(
@@ -14,6 +14,7 @@ function redhen_org_group_install() {
       'locked' => TRUE,
       'settings' => array(
         'handler' => 'redhen_org_group',
+//        'handler_submit' => 'Change handler',
         'handler_settings' => array(
           'behaviors' => array(
             'redhen_org_group_field_behavior' => array(),
@@ -25,10 +26,10 @@ function redhen_org_group_install() {
       ),
     );
 
-    field_create_field($field);
+    $field = field_create_field($field);
   }
 
-  // Inform site admins that access grants need to be rebuilt.
+  // inform site admins that access grants need to be rebuilt
   node_access_needs_rebuild(TRUE);
 }
 

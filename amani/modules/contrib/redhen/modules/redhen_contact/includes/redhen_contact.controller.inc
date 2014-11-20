@@ -13,10 +13,10 @@ class RedhenContactEntityController extends EntityAPIController {
   /**
    * Saves a contact.
    *
-   * @param RedhenContact $contact
+   * @param $contact
    *   The full contact object to save.
    *
-   * @return RedhenContact
+   * @return
    *   The saved contact object.
    */
   public function save($contact, DatabaseTransaction $transaction = NULL) {
@@ -24,7 +24,7 @@ class RedhenContactEntityController extends EntityAPIController {
     try {
       $contact->updated = REQUEST_TIME;
 
-      // New contact, set created prop.
+      // new contact, set created prop
       if (isset($contact->is_new) && $contact->is_new) {
         $contact->created = REQUEST_TIME;
       }
@@ -41,14 +41,13 @@ class RedhenContactEntityController extends EntityAPIController {
 
       parent::save($contact, $transaction);
 
-      // Set the contact user.
+      // set the contact user
       if ($contact->uid) {
         $this->setUser($contact, $transaction);
       }
 
       return $contact;
-    }
-    catch (Exception $e) {
+    } catch (Exception $e) {
       $transaction->rollback();
       watchdog_exception($this->entityType, $e);
       throw $e;
@@ -58,10 +57,10 @@ class RedhenContactEntityController extends EntityAPIController {
   /**
    * Deletes multiple contacts by ID.
    *
-   * @param array $contact_ids
+   * @param $contact_ids
    *   An array of contact IDs to delete.
    *
-   * @return bool
+   * @return
    *   TRUE on success, FALSE otherwise.
    */
   public function delete($contact_ids, DatabaseTransaction $transaction = NULL) {
@@ -82,22 +81,17 @@ class RedhenContactEntityController extends EntityAPIController {
       if (empty($contacts)) {
         return FALSE;
       }
-      // Otherwise, update the list of contact IDs to those which are deletable.
-      else {
-        $contact_ids = array_keys($contacts);
-      }
 
       $transaction = db_transaction();
       try {
         parent::delete($contact_ids, $transaction);
 
-        // Delete user connections.
+        // delete user connections
         db_delete('redhen_contact_user')
           ->condition('contact_id', $contact_ids, 'IN')
           ->execute();
 
-      }
-      catch (Exception $e) {
+      } catch (Exception $e) {
         if (isset($transaction)) {
           $transaction->rollback();
         }
@@ -111,6 +105,12 @@ class RedhenContactEntityController extends EntityAPIController {
 
   /**
    * Override buildQuery to add a join for the active Drupal user.
+   *
+   * @param $ids
+   * @param array $conditions
+   * @param bool $revision_id
+   *
+   * @return SelectQuery
    */
   protected function buildQuery($ids, $conditions = array(), $revision_id = FALSE) {
     $query = parent::buildQuery($ids, $conditions, $revision_id);
@@ -120,9 +120,9 @@ class RedhenContactEntityController extends EntityAPIController {
       array(':status' => 1)
     );
 
-    // If uid is a condition, ensure the join is against the right table.
+    // if uid is a condition, ensure the join is against the right table
     if (isset($conditions['uid'])) {
-      $query_conditions = & $query->conditions();
+      $query_conditions = &$query->conditions();
       foreach ($query_conditions as $key => $condition) {
         if (isset($condition['field']) && $condition['field'] == 'base.uid') {
           $query_conditions[$key]['field'] = 'rcu.uid';
@@ -138,8 +138,7 @@ class RedhenContactEntityController extends EntityAPIController {
   /**
    * Set the active user for a contact.
    *
-   * @param RedhenContact $contact
-   *   Contact object to associate.
+   * @param $contact
    *
    * @return bool
    *   TRUE if contact is successfully linked to user.
@@ -153,16 +152,16 @@ class RedhenContactEntityController extends EntityAPIController {
     if ($user_result->rowCount() > 0) {
       $rows = $user_result->fetchAllAssoc('uid');
       foreach ($rows as $row) {
-        // This user is already actively linked to this contact.
+        // this user is already actively linked to this contact
         if ($row->contact_id == $contact->contact_id && $row->status == 1) {
           return TRUE;
         }
-        // This user is actively linked to a different contact.
+        // this user is actively linked to a different contact
         else {
           if ($row->contact_id != $contact->contact_id && $row->status == 1) {
             return FALSE;
           }
-          // This user has been unlinked from this contact.
+          // this user has been unlinked from this contact
           else {
             if ($row->contact_id == $contact->contact_id && $row->status == NULL) {
               return FALSE;
@@ -172,7 +171,7 @@ class RedhenContactEntityController extends EntityAPIController {
       }
     }
 
-    // Now grab any record for this contact.
+    // now grab any record for this contact
     $contact_result = db_select('redhen_contact_user', 'cu')
       ->fields('cu')
       ->condition('contact_id', $contact->contact_id, '=')
@@ -180,7 +179,7 @@ class RedhenContactEntityController extends EntityAPIController {
       ->execute();
 
     try {
-      // Contact does not have a user link, insert.
+      // contact does not have a user link, insert
       if ($contact_result->rowCount() == 0) {
         db_insert('redhen_contact_user')
           ->fields(array(
@@ -188,34 +187,33 @@ class RedhenContactEntityController extends EntityAPIController {
           'uid' => $contact->uid,
           'status' => 1,
           'created' => REQUEST_TIME,
-          'updated' => REQUEST_TIME,
+          'updated' => REQUEST_TIME
         ))
           ->execute();
         module_invoke_all('redhen_contact_user_update', 'insert', $contact);
       }
-      // Update existing link with different user.
+      // update existing link with different user
       else {
-        // Update with new user.
+        // update with new user
         db_update('redhen_contact_user')
           ->fields(array(
           'uid' => $contact->uid,
-          'updated' => REQUEST_TIME,
+          'updated' => REQUEST_TIME
         ))
           ->condition('contact_id', $contact->contact_id)
           ->condition('status', 1)
           ->execute();
 
-        // Clone the contact to populate with the old user info.
+        // Clone the contact to populate with the old user info
         $old_contact = clone $contact;
         $old_user = $contact_result->fetchAssoc();
-        $old_contact->uid = $old_user['uid'];
+        $old_contact->uid = $old_user->uid;
 
         module_invoke_all('redhen_contact_user_update', 'update', $contact, $old_contact);
       }
 
       return TRUE;
-    }
-    catch (Exception $e) {
+    } catch (Exception $e) {
       if (isset($transaction)) {
         $transaction->rollback();
       }
@@ -227,12 +225,11 @@ class RedhenContactEntityController extends EntityAPIController {
   /**
    * Delete or unlink the active user for a contact.
    *
-   * @param RedhenContact $contact
-   *   RedHen contact object.
+   * @param $contact
    * @param bool $delete
    *   If true, the connection is deleted and can be recreated. False sets the
    *   connection to inactive which will prevent it from being reconnected on
-   *   subsequent attempts.
+   *   subsequent attemps.
    *
    * @return bool
    *   TRUE if user is successfully deleted or unlinked from contact.
@@ -260,8 +257,7 @@ class RedhenContactEntityController extends EntityAPIController {
       unset($contact->uid);
 
       return TRUE;
-    }
-    catch (Exception $e) {
+    } catch (Exception $e) {
       if (isset($transaction)) {
         $transaction->rollback();
       }
