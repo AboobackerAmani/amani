@@ -311,3 +311,20 @@ function peace_theme_registry_alter(&$theme_registry) {
   $theme_registry['fb_likebox_facebook']['original']['path'] = 'profiles/amani/themes/peace/templates';
   $theme_registry['fb_likebox_facebook']['path'] = 'profiles/amani/themes/peace/templates';
 }
+
+/**
+ * Override theme_file_icon()
+ */
+function peace_file_icon($variables) {
+  $file = $variables['file'];
+  $icon_directory = $variables['icon_directory'];
+
+  $mime = check_plain($file->filemime);
+  if ($mime == 'application/pdf') {
+    $icon_directory = drupal_get_path('theme', 'peace') . '/images/icons';
+    $icon_url = file_icon_url($file, $icon_directory);
+  } else {
+    $icon_url = file_icon_url($file, $icon_directory);
+  }
+  return '<img class="file-icon" alt="" title="' . $mime . '" src="' . $icon_url . '" />';
+}
