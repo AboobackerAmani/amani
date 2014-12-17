@@ -187,13 +187,6 @@ function amani_block_and_views_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'article' => 'article',
   );
-  /* Filter criterion: Content: Featured? (field_featured_) */
-  $handler->display->display_options['filters']['field_featured__value']['id'] = 'field_featured__value';
-  $handler->display->display_options['filters']['field_featured__value']['table'] = 'field_data_field_featured_';
-  $handler->display->display_options['filters']['field_featured__value']['field'] = 'field_featured__value';
-  $handler->display->display_options['filters']['field_featured__value']['value'] = array(
-    1 => '1',
-  );
   $handler->display->display_options['block_description'] = 'Other News';
 
   /* Display: Front Page */
@@ -262,13 +255,6 @@ function amani_block_and_views_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'article' => 'article',
-  );
-  /* Filter criterion: Content: Featured? (field_featured_) */
-  $handler->display->display_options['filters']['field_featured__value']['id'] = 'field_featured__value';
-  $handler->display->display_options['filters']['field_featured__value']['table'] = 'field_data_field_featured_';
-  $handler->display->display_options['filters']['field_featured__value']['field'] = 'field_featured__value';
-  $handler->display->display_options['filters']['field_featured__value']['value'] = array(
-    1 => '1',
   );
   $handler->display->display_options['block_description'] = 'Latest News';
   $translatables['news_and_events'] = array(
