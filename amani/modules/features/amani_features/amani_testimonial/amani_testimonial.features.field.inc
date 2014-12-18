@@ -273,81 +273,6 @@ function amani_testimonial_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-testimonial-field_featured_'.
-  $fields['node-testimonial-field_featured_'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_featured_',
-      'foreign keys' => array(),
-      'indexes' => array(
-        'value' => array(
-          0 => 'value',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'list',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => 'No',
-          1 => 'Yes',
-        ),
-        'allowed_values_function' => '',
-        'profile2_private' => FALSE,
-      ),
-      'translatable' => '0',
-      'type' => 'list_integer',
-    ),
-    'field_instance' => array(
-      'bundle' => 'testimonial',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => 'Should this testimonial receive special consideration by being moved to the top of lists?',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '4',
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'node_gallery_node_thumbnail' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_featured_',
-      'label' => 'Featured?',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '1',
-      ),
-    ),
-  );
-
   // Exported field: 'node-testimonial-field_name'.
   $fields['node-testimonial-field_name'] = array(
     'field_config' => array(
@@ -550,9 +475,7 @@ Prof.',
   // Included for use with string extractors like potx.
   t('Comment');
   t('Date');
-  t('Featured?');
   t('Name');
-  t('Should this testimonial receive special consideration by being moved to the top of lists?');
   t('Type of contributor');
 
   return $fields;
