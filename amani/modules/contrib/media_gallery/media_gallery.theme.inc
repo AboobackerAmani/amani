@@ -218,7 +218,7 @@ function theme_media_gallery_media_item_lightbox($variables) {
     // but we haven't found one yet.
     $download_link = '&nbsp;';
   }
-  $media_desc_class = !empty($gallery_node->media_gallery_lightbox_extras[LANGUAGE_NONE][0]['value']) ? 'lightbox-wdesc' : '';
+
   $media_gallery_detail =
       '<div class="lightbox-stack">' .
       theme('media_gallery_item', $link_vars) .
@@ -233,7 +233,7 @@ function theme_media_gallery_media_item_lightbox($variables) {
   // If the format is to have the description as well, we add it here
   if (!empty($gallery_node->media_gallery_lightbox_extras[LANGUAGE_NONE][0]['value'])) {
     $output =
-    '<div class="mg-lightbox-wrapper clearfix ' . $media_desc_class . '">' .
+    '<div class="mg-lightbox-wrapper clearfix">' .
       '<div class="lightbox-title">' . drupal_render($element['media_title']) . '</div>' .
       '<div class="mg-lightbox-detail">' .
       $media_gallery_detail .
@@ -305,8 +305,8 @@ function theme_media_gallery_media_item_detail($variables) {
     $download_link = '&nbsp;';
   }
 
-  $previous_link = !is_null($i_previous) ? l(t('« Previous'), "media-gallery/detail/{$gallery_node->nid}/{$media_ids[$i_previous]}", array('html' => TRUE, 'attributes' => array('class' => 'prev'))) : '';
-  $next_link = !is_null($i_next) ? l(t('Next »'), "media-gallery/detail/{$gallery_node->nid}/{$media_ids[$i_next]}", array('html' => TRUE, 'attributes' => array('class' => 'next'))) : '';
+  $previous_link = !is_null($i_previous) ? l(t('« Previous'), "media-gallery/detail/{$gallery_node->nid}/{$media_ids[$i_previous]}", array('html' => TRUE, 'attributes' => array('class' => array('prev')))) : '';
+  $next_link = !is_null($i_next) ? l(t('Next »'), "media-gallery/detail/{$gallery_node->nid}/{$media_ids[$i_next]}", array('html' => TRUE, 'attributes' => array('class' => array('next')))) : '';
 
   // Render the file out in a wrapper
   $output =
@@ -524,7 +524,7 @@ function theme_media_gallery_download_link($variables) {
   // Set options as per anchor format described at
   // http://microformats.org/wiki/file-format-examples
   $options['attributes']['type'] = $file->filemime . '; length=' . $file->filesize;
-  $options['attributes']['class'] = 'gallery-download';
+  $options['attributes']['class'] = array('gallery-download');
 
   return l($text, $path, $options);
 }
