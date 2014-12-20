@@ -79,11 +79,6 @@ function amani_programs_campaigns_views_default_views() {
   $handler->display->display_options['fields']['title_1']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['title_1']['alter']['text'] = '(more)';
   $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
-  /* Sort criterion: Content: Featured? (field_featured_) */
-  $handler->display->display_options['sorts']['field_featured__value']['id'] = 'field_featured__value';
-  $handler->display->display_options['sorts']['field_featured__value']['table'] = 'field_data_field_featured_';
-  $handler->display->display_options['sorts']['field_featured__value']['field'] = 'field_featured__value';
-  $handler->display->display_options['sorts']['field_featured__value']['order'] = 'DESC';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';

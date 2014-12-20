@@ -163,79 +163,6 @@ function amani_article_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-article-field_featured_'.
-  $fields['node-article-field_featured_'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_featured_',
-      'foreign keys' => array(),
-      'indexes' => array(
-        'value' => array(
-          0 => 'value',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'list',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => 'No',
-          1 => 'Yes',
-        ),
-        'allowed_values_function' => '',
-        'profile2_private' => FALSE,
-      ),
-      'translatable' => '0',
-      'type' => 'list_integer',
-    ),
-    'field_instance' => array(
-      'bundle' => 'article',
-      'default_value' => array(
-        0 => array(
-          'value' => '0',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => 'If featured this event will appear on the front page of the website and in blocks at the bottom of the news and events page.',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '4',
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_featured_',
-      'label' => 'Featured?',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '4',
-      ),
-    ),
-  );
-
   // Exported field: 'node-article-field_image'.
   $fields['node-article-field_image'] = array(
     'field_config' => array(
@@ -500,8 +427,6 @@ function amani_article_field_default_fields() {
   t('Article Type');
   t('Body');
   t('Enter a comma-separated list of words to describe your content.');
-  t('Featured?');
-  t('If featured this event will appear on the front page of the website and in blocks at the bottom of the news and events page.');
   t('Lead Image');
   t('Media');
   t('Tags');

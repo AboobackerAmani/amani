@@ -745,79 +745,6 @@ function amani_event_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-event-field_featured_'.
-  $fields['node-event-field_featured_'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_featured_',
-      'foreign keys' => array(),
-      'indexes' => array(
-        'value' => array(
-          0 => 'value',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'list',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => 'No',
-          1 => 'Yes',
-        ),
-        'allowed_values_function' => '',
-        'profile2_private' => FALSE,
-      ),
-      'translatable' => '0',
-      'type' => 'list_integer',
-    ),
-    'field_instance' => array(
-      'bundle' => 'event',
-      'default_value' => array(
-        0 => array(
-          'value' => '0',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => 'Will this node receive special emphasis by appearing on lists and blocks?',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '12',
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '6',
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_featured_',
-      'label' => 'Featured?',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '4',
-      ),
-    ),
-  );
-
   // Exported field: 'node-event-field_host_name'.
   $fields['node-event-field_host_name'] = array(
     'field_config' => array(
@@ -1184,7 +1111,6 @@ function amani_event_field_default_fields() {
   t('Description');
   t('Enter a comma-separated list of words to describe your content.');
   t('Event type');
-  t('Featured?');
   t('Geolocation');
   t('Host name');
   t('Lead Image');
@@ -1192,7 +1118,6 @@ function amani_event_field_default_fields() {
   t('Media');
   t('Optionally associate this content with a map record.');
   t('Tags');
-  t('Will this node receive special emphasis by appearing on lists and blocks?');
 
   return $fields;
 }

@@ -124,85 +124,6 @@ function amani_programs_campaigns_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-project-field_featured_'.
-  $fields['node-project-field_featured_'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_featured_',
-      'foreign keys' => array(),
-      'indexes' => array(
-        'value' => array(
-          0 => 'value',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'list',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => 'No',
-          1 => 'Yes',
-        ),
-        'allowed_values_function' => '',
-        'profile2_private' => FALSE,
-      ),
-      'translatable' => '0',
-      'type' => 'list_integer',
-    ),
-    'field_instance' => array(
-      'bundle' => 'project',
-      'default_value' => array(
-        0 => array(
-          'value' => '0',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => 'Will this program receive special consideration by appearing at the top of lists?',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '13',
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'node_gallery_node_thumbnail' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '13',
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_featured_',
-      'label' => 'Featured?',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '5',
-      ),
-    ),
-  );
-
   // Exported field: 'node-project-field_image'.
   $fields['node-project-field_image'] = array(
     'field_config' => array(
@@ -661,14 +582,12 @@ function amani_programs_campaigns_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Description');
-  t('Featured?');
   t('Lead Image');
   t('Map record');
   t('Media');
   t('Optionally associate this content with a map record.');
   t('Program Location(s)');
   t('Program status');
-  t('Will this program receive special consideration by appearing at the top of lists?');
 
   return $fields;
 }
