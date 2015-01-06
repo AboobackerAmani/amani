@@ -1471,6 +1471,16 @@ a.button:not(.launcher):not(.remove):not(.edit) {
   top: 8px; }
   #header-region #block-menu-menu-social-media .content {
     font-size: 16px; }
+    #header-region #block-menu-menu-social-media .content li.tripadvisor {
+      font-family: arial;
+      display: block;
+      overflow: hidden;
+      margin-top: 2px;
+      height: 26px;
+      width: 26px;
+      text-indent: -9999px !important;
+      background: url("../images/icons/tripadvisor.png") no-repeat;
+      text-rendering: auto; }
     #header-region #block-menu-menu-social-media .content li {
       margin-right: 7.5px;
       padding-right: 0;
