@@ -48,7 +48,7 @@ function amani_blog_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Content: Featured? (field_featured_) */
+  /* Sort criterion: Broken/missing handler */
   $handler->display->display_options['sorts']['field_featured__value']['id'] = 'field_featured__value';
   $handler->display->display_options['sorts']['field_featured__value']['table'] = 'field_data_field_featured_';
   $handler->display->display_options['sorts']['field_featured__value']['field'] = 'field_featured__value';
