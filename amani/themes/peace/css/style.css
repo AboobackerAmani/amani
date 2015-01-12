@@ -718,89 +718,89 @@ a.button:not(.launcher):not(.remove):not(.edit) {
   padding-top: 30px;
   border-top: 1px solid #ccc; }
 
-.node-article .field-name-field-media,
-.node-resource .field-name-field-media,
-.node-get-involved .field-name-field-media,
-.node-event .field-name-field-media,
-.node-blog .field-name-field-media,
-.node-project .field-name-field-media,
-.node-activity .field-name-field-media {
+.node-article .field-name-field-media > .field-items,
+.node-resource .field-name-field-media > .field-items,
+.node-get-involved .field-name-field-media > .field-items,
+.node-event .field-name-field-media > .field-items,
+.node-blog .field-name-field-media > .field-items,
+.node-project .field-name-field-media > .field-items,
+.node-activity .field-name-field-media > .field-items {
   *zoom: 1;
   background: #eee;
   padding: 30px;
   margin-bottom: 30px; }
-  .node-article .field-name-field-media:before, .node-article .field-name-field-media:after,
-  .node-resource .field-name-field-media:before,
-  .node-resource .field-name-field-media:after,
-  .node-get-involved .field-name-field-media:before,
-  .node-get-involved .field-name-field-media:after,
-  .node-event .field-name-field-media:before,
-  .node-event .field-name-field-media:after,
-  .node-blog .field-name-field-media:before,
-  .node-blog .field-name-field-media:after,
-  .node-project .field-name-field-media:before,
-  .node-project .field-name-field-media:after,
-  .node-activity .field-name-field-media:before,
-  .node-activity .field-name-field-media:after {
+  .node-article .field-name-field-media > .field-items:before, .node-article .field-name-field-media > .field-items:after,
+  .node-resource .field-name-field-media > .field-items:before,
+  .node-resource .field-name-field-media > .field-items:after,
+  .node-get-involved .field-name-field-media > .field-items:before,
+  .node-get-involved .field-name-field-media > .field-items:after,
+  .node-event .field-name-field-media > .field-items:before,
+  .node-event .field-name-field-media > .field-items:after,
+  .node-blog .field-name-field-media > .field-items:before,
+  .node-blog .field-name-field-media > .field-items:after,
+  .node-project .field-name-field-media > .field-items:before,
+  .node-project .field-name-field-media > .field-items:after,
+  .node-activity .field-name-field-media > .field-items:before,
+  .node-activity .field-name-field-media > .field-items:after {
     content: " ";
     display: table; }
-  .node-article .field-name-field-media:after,
-  .node-resource .field-name-field-media:after,
-  .node-get-involved .field-name-field-media:after,
-  .node-event .field-name-field-media:after,
-  .node-blog .field-name-field-media:after,
-  .node-project .field-name-field-media:after,
-  .node-activity .field-name-field-media:after {
+  .node-article .field-name-field-media > .field-items:after,
+  .node-resource .field-name-field-media > .field-items:after,
+  .node-get-involved .field-name-field-media > .field-items:after,
+  .node-event .field-name-field-media > .field-items:after,
+  .node-blog .field-name-field-media > .field-items:after,
+  .node-project .field-name-field-media > .field-items:after,
+  .node-activity .field-name-field-media > .field-items:after {
     clear: both; }
-  .node-article .field-name-field-media .field-item,
-  .node-resource .field-name-field-media .field-item,
-  .node-get-involved .field-name-field-media .field-item,
-  .node-event .field-name-field-media .field-item,
-  .node-blog .field-name-field-media .field-item,
-  .node-project .field-name-field-media .field-item,
-  .node-activity .field-name-field-media .field-item {
+  .node-article .field-name-field-media > .field-items > .field-item,
+  .node-resource .field-name-field-media > .field-items > .field-item,
+  .node-get-involved .field-name-field-media > .field-items > .field-item,
+  .node-event .field-name-field-media > .field-items > .field-item,
+  .node-blog .field-name-field-media > .field-items > .field-item,
+  .node-project .field-name-field-media > .field-items > .field-item,
+  .node-activity .field-name-field-media > .field-items > .field-item {
     display: block;
     float: left;
     margin-right: 2.12766%;
     width: 31.91489%; }
-    .node-article .field-name-field-media .field-item:last-child,
-    .node-resource .field-name-field-media .field-item:last-child,
-    .node-get-involved .field-name-field-media .field-item:last-child,
-    .node-event .field-name-field-media .field-item:last-child,
-    .node-blog .field-name-field-media .field-item:last-child,
-    .node-project .field-name-field-media .field-item:last-child,
-    .node-activity .field-name-field-media .field-item:last-child {
+    .node-article .field-name-field-media > .field-items > .field-item:last-child,
+    .node-resource .field-name-field-media > .field-items > .field-item:last-child,
+    .node-get-involved .field-name-field-media > .field-items > .field-item:last-child,
+    .node-event .field-name-field-media > .field-items > .field-item:last-child,
+    .node-blog .field-name-field-media > .field-items > .field-item:last-child,
+    .node-project .field-name-field-media > .field-items > .field-item:last-child,
+    .node-activity .field-name-field-media > .field-items > .field-item:last-child {
       margin-right: 0; }
-    .node-article .field-name-field-media .field-item:nth-child(3n),
-    .node-resource .field-name-field-media .field-item:nth-child(3n),
-    .node-get-involved .field-name-field-media .field-item:nth-child(3n),
-    .node-event .field-name-field-media .field-item:nth-child(3n),
-    .node-blog .field-name-field-media .field-item:nth-child(3n),
-    .node-project .field-name-field-media .field-item:nth-child(3n),
-    .node-activity .field-name-field-media .field-item:nth-child(3n) {
+    .node-article .field-name-field-media > .field-items > .field-item:nth-child(3n),
+    .node-resource .field-name-field-media > .field-items > .field-item:nth-child(3n),
+    .node-get-involved .field-name-field-media > .field-items > .field-item:nth-child(3n),
+    .node-event .field-name-field-media > .field-items > .field-item:nth-child(3n),
+    .node-blog .field-name-field-media > .field-items > .field-item:nth-child(3n),
+    .node-project .field-name-field-media > .field-items > .field-item:nth-child(3n),
+    .node-activity .field-name-field-media > .field-items > .field-item:nth-child(3n) {
       margin-right: 0; }
-    .node-article .field-name-field-media .field-item > div,
-    .node-resource .field-name-field-media .field-item > div,
-    .node-get-involved .field-name-field-media .field-item > div,
-    .node-event .field-name-field-media .field-item > div,
-    .node-blog .field-name-field-media .field-item > div,
-    .node-project .field-name-field-media .field-item > div,
-    .node-activity .field-name-field-media .field-item > div {
+    .node-article .field-name-field-media > .field-items > .field-item > div,
+    .node-resource .field-name-field-media > .field-items > .field-item > div,
+    .node-get-involved .field-name-field-media > .field-items > .field-item > div,
+    .node-event .field-name-field-media > .field-items > .field-item > div,
+    .node-blog .field-name-field-media > .field-items > .field-item > div,
+    .node-project .field-name-field-media > .field-items > .field-item > div,
+    .node-activity .field-name-field-media > .field-items > .field-item > div {
       margin: 10px 5px; }
-    .node-article .field-name-field-media .field-item img:not(.file-icon),
-    .node-article .field-name-field-media .field-item iframe,
-    .node-resource .field-name-field-media .field-item img:not(.file-icon),
-    .node-resource .field-name-field-media .field-item iframe,
-    .node-get-involved .field-name-field-media .field-item img:not(.file-icon),
-    .node-get-involved .field-name-field-media .field-item iframe,
-    .node-event .field-name-field-media .field-item img:not(.file-icon),
-    .node-event .field-name-field-media .field-item iframe,
-    .node-blog .field-name-field-media .field-item img:not(.file-icon),
-    .node-blog .field-name-field-media .field-item iframe,
-    .node-project .field-name-field-media .field-item img:not(.file-icon),
-    .node-project .field-name-field-media .field-item iframe,
-    .node-activity .field-name-field-media .field-item img:not(.file-icon),
-    .node-activity .field-name-field-media .field-item iframe {
+    .node-article .field-name-field-media > .field-items > .field-item img:not(.file-icon),
+    .node-article .field-name-field-media > .field-items > .field-item iframe,
+    .node-resource .field-name-field-media > .field-items > .field-item img:not(.file-icon),
+    .node-resource .field-name-field-media > .field-items > .field-item iframe,
+    .node-get-involved .field-name-field-media > .field-items > .field-item img:not(.file-icon),
+    .node-get-involved .field-name-field-media > .field-items > .field-item iframe,
+    .node-event .field-name-field-media > .field-items > .field-item img:not(.file-icon),
+    .node-event .field-name-field-media > .field-items > .field-item iframe,
+    .node-blog .field-name-field-media > .field-items > .field-item img:not(.file-icon),
+    .node-blog .field-name-field-media > .field-items > .field-item iframe,
+    .node-project .field-name-field-media > .field-items > .field-item img:not(.file-icon),
+    .node-project .field-name-field-media > .field-items > .field-item iframe,
+    .node-activity .field-name-field-media > .field-items > .field-item img:not(.file-icon),
+    .node-activity .field-name-field-media > .field-items > .field-item iframe {
       width: 100%;
       height: auto; }
 
