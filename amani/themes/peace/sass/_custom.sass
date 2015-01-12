@@ -435,19 +435,20 @@ a.button:not(.launcher):not(.remove):not(.edit)
 .node-project,
 .node-activity
   .field-name-field-media
-    @include clearfix
-    background: #eee
-    padding: $padding
-    margin-bottom: $margin
-    .field-item
-      @include span-columns(12/3)
-      @include omega(3n)
-      > div
-        margin: 10px 5px
-      img:not(.file-icon),
-      iframe
-        width: 100%
-        height: auto
+    > .field-items
+      @include clearfix
+      background: #eee
+      padding: $padding
+      margin-bottom: $margin
+      > .field-item
+        @include span-columns(12/3)
+        @include omega(3n)
+        > div
+          margin: 10px 5px
+        img:not(.file-icon),
+        iframe
+          width: 100%
+          height: auto
 // Footer
 #footer
   background: $grey_dark
