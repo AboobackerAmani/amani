@@ -41,6 +41,12 @@ function amani_programs_campaigns_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-9',
         ),
+        'views-testimonials-block' => array(
+          'module' => 'views',
+          'delta' => 'testimonials-block',
+          'region' => 'sidebar_second',
+          'weight' => '-8',
+        ),
       ),
     ),
     'breadcrumb' => 'programs',

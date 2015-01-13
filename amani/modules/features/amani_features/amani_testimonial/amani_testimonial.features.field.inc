@@ -50,7 +50,7 @@ function amani_testimonial_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '0',
+          'weight' => '1',
         ),
         'ical' => array(
           'label' => 'above',
@@ -76,7 +76,33 @@ function amani_testimonial_field_default_fields() {
       'label' => 'Comment',
       'required' => 0,
       'settings' => array(
-        'text_processing' => '0',
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'php_code' => 'php_code',
+            'plain_text' => 'plain_text',
+            'wysiwyg_advanced' => 'wysiwyg_advanced',
+            'wysiwyg_public' => 'wysiwyg_public',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'php_code' => array(
+                'weight' => '11',
+              ),
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+              'wysiwyg_advanced' => array(
+                'weight' => '-10',
+              ),
+              'wysiwyg_public' => array(
+                'weight' => '-9',
+              ),
+            ),
+          ),
+        ),
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -86,7 +112,7 @@ function amani_testimonial_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '4',
+        'weight' => '3',
       ),
     ),
   );
@@ -136,7 +162,7 @@ function amani_testimonial_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'ical' => array(
           'label' => 'above',
@@ -268,7 +294,75 @@ function amani_testimonial_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '3',
+        'weight' => '2',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-testimonial-field_display_on_program_pages'.
+  $fields['node-testimonial-field_display_on_program_pages'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_display_on_program_pages',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          'Yes' => 'Yes',
+          'No' => 'No',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'testimonial',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Select \'Yes\' to show this testimonial\'s comment field in a block on the associated program\'s page.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '3',
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_display_on_program_pages',
+      'label' => 'Display on program pages',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '4',
       ),
     ),
   );
@@ -395,7 +489,7 @@ Prof.',
             'output' => 'default',
           ),
           'type' => 'name_formatter',
-          'weight' => '1',
+          'weight' => '0',
         ),
         'ical' => array(
           'label' => 'above',
@@ -466,7 +560,7 @@ Prof.',
         'module' => 'name',
         'settings' => array(),
         'type' => 'name_widget',
-        'weight' => '2',
+        'weight' => '1',
       ),
     ),
   );
@@ -475,7 +569,9 @@ Prof.',
   // Included for use with string extractors like potx.
   t('Comment');
   t('Date');
+  t('Display on program pages');
   t('Name');
+  t('Select \'Yes\' to show this testimonial\'s comment field in a block on the associated program\'s page.');
   t('Type of contributor');
 
   return $fields;
