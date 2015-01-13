@@ -1767,64 +1767,60 @@ a.button:not(.launcher):not(.remove):not(.edit) {
     .page-about .region-home-content-top-rotator #block-views-about_page-block_1 .views-row .views-field-body,
     .page-about .region-home-content-top-rotator #block-views-about_page-block_1 .views-row .views-field-field-image {
       width: 100%; }
-.page-about .view-about-page {
+.page-about .view-about-page.view-display-id-page > .view-content, .page-about .view-about-page.view-display-id-block_1 > .view-content {
   background: #fff;
   padding: 30px;
   box-shadow: 2px 3px 4px #C8C8C8; }
-  .page-about .view-about-page.view-display-id-page > .view-content {
-    background: #fff;
-    padding: 30px;
-    box-shadow: 2px 3px 4px #C8C8C8; }
-  .page-about .view-about-page .views-row {
-    width: 100%;
+.page-about .view-about-page .views-row {
+  width: 100%;
+  margin-right: 0;
+  padding: 30px 0;
+  margin: 30px 0;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden; }
+  .page-about .view-about-page .views-row:first-child {
+    padding-top: 0; }
+  .page-about .view-about-page .views-row .views-field-field-image {
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 14.89362%; }
+    .page-about .view-about-page .views-row .views-field-field-image:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 600px) {
+      .page-about .view-about-page .views-row .views-field-field-image {
+        width: 100%; } }
+    .page-about .view-about-page .views-row .views-field-field-image img {
+      width: 100%;
+      height: auto; }
+  .page-about .view-about-page .views-row .views-field-title {
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 82.97872%;
     margin-right: 0;
-    padding: 30px 0;
-    margin: 30px 0;
-    border-bottom: 1px solid #ccc;
-    overflow: hidden; }
-    .page-about .view-about-page .views-row:first-child {
-      padding-top: 0; }
-    .page-about .view-about-page .views-row .views-field-field-image {
-      display: block;
-      float: left;
-      margin-right: 2.12766%;
-      width: 14.89362%; }
-      .page-about .view-about-page .views-row .views-field-field-image:last-child {
-        margin-right: 0; }
-      @media screen and (max-width: 600px) {
-        .page-about .view-about-page .views-row .views-field-field-image {
-          width: 100%; } }
-      .page-about .view-about-page .views-row .views-field-field-image img {
-        width: 100%;
-        height: auto; }
-    .page-about .view-about-page .views-row .views-field-title {
-      display: block;
-      float: left;
-      margin-right: 2.12766%;
-      width: 82.97872%;
-      margin-right: 0;
-      text-transform: uppercase;
-      font-size: 16px; }
-      .page-about .view-about-page .views-row .views-field-title:last-child {
-        margin-right: 0; }
-      @media screen and (max-width: 600px) {
-        .page-about .view-about-page .views-row .views-field-title {
-          width: 100%; } }
-    .page-about .view-about-page .views-row .views-field-body {
-      display: block;
-      float: left;
-      margin-right: 2.12766%;
-      width: 82.97872%;
-      margin-right: 0;
-      font-family: "Georgia"; }
-      .page-about .view-about-page .views-row .views-field-body:last-child {
-        margin-right: 0; }
-      .page-about .view-about-page .views-row .views-field-body ul, .page-about .view-about-page .views-row .views-field-body ol {
-        margin-left: 0.5em;
-        padding-left: 1em; }
-      @media screen and (max-width: 600px) {
-        .page-about .view-about-page .views-row .views-field-body {
-          width: 100%; } }
+    text-transform: uppercase;
+    font-size: 16px; }
+    .page-about .view-about-page .views-row .views-field-title:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 600px) {
+      .page-about .view-about-page .views-row .views-field-title {
+        width: 100%; } }
+  .page-about .view-about-page .views-row .views-field-body {
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 82.97872%;
+    margin-right: 0;
+    font-family: "Georgia"; }
+    .page-about .view-about-page .views-row .views-field-body:last-child {
+      margin-right: 0; }
+    .page-about .view-about-page .views-row .views-field-body ul, .page-about .view-about-page .views-row .views-field-body ol {
+      margin-left: 0.5em;
+      padding-left: 1em; }
+    @media screen and (max-width: 600px) {
+      .page-about .view-about-page .views-row .views-field-body {
+        width: 100%; } }
 
 .page-get-involved .view-get-involved.view-display-id-page {
   margin-top: 30px;
