@@ -15,6 +15,13 @@ function amani_testimonial_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function amani_testimonial_views_api() {
+  return array("version" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function amani_testimonial_node_info() {
