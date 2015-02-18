@@ -546,10 +546,10 @@ function incident_map_leaflet_framework_plugins() {
     'switcher' => array('position' => 'topright'),
     // 'preprocess callback' => 'incident_map_plugin_preprocess_cis_layers',
     'layers' => array(
-      array('title' => 'Terrain', 'provider' => 'google', 'set' => 'TERRAIN', 'type' => 'base'),
+      array('title' => 'OSM', 'provider' => 'tilelayer', 'urlTemplate' => 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 'type' => 'base'),
+      array('title' => 'Terrain', 'provider' => 'google', 'set' => 'TERRAIN', 'type' => 'base', 'disabled' => TRUE),
       array('title' => 'Hybrid', 'provider' => 'google', 'set' => 'HYBRID', 'type' => 'base', 'disabled' => TRUE),
       array('title' => 'Satellite', 'provider' => 'google', 'set' => 'SATELLITE', 'type' => 'base', 'disabled' => TRUE),
-      array('title' => 'OSM', 'provider' => 'tilelayer', 'urlTemplate' => 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 'type' => 'base', 'disabled' => TRUE),
     ),
   );
 
