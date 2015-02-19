@@ -43,7 +43,7 @@ function incident_map_incident_map_settings() {
   $marker_prefix = 'incident-map-marker';
   $map_prefix = 'incident-map-map-settings';
   $map_record_prefix = 'incident-map-map-record';
-  $button= 'incident-map-button';
+  $button_prefix = 'incident-map-button';
 
   return array(
     'map_record' => array(
@@ -81,7 +81,7 @@ function incident_map_incident_map_settings() {
       'prefix' => $button_prefix,
       'form' => array(
         '#title' => t('Manage Map Record Collection'),
-        'button_settings' => incident_map_button_settings($button),
+        'button_settings' => incident_map_button_settings($button_prefix),
       ),
     ),
   );
@@ -132,6 +132,12 @@ function incident_map_map_record_settings($prefix) {
 function incident_map_map_settings($prefix) {
   $items = array();
 
+  $items["$prefix-default-base-layer"] = array(
+    '#type' => 'select',
+    '#title' => t("Default map base layer"),
+    '#options' => array('terrain' => 'Terrain', 'hybrid' => 'Hybrid', 'satellite' => 'Satellite', 'osm' => 'OSM'),
+    '#default_value' => variable_get('incident-map-map-settings-default-base-layer', 'terrain'),
+  );
   $auto = "$prefix-auto";
   $items[$auto] = array(
     '#type' => 'checkbox',
