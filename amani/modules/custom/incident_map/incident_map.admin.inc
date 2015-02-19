@@ -135,7 +135,7 @@ function incident_map_map_settings($prefix) {
   $items["$prefix-default-base-layer"] = array(
     '#type' => 'select',
     '#title' => t("Default map base layer"),
-    '#options' => ['terrain' => 'Terrain', 'hybrid' => 'Hybrid', 'satellite' => 'Satellite', 'osm' => 'OSM'],
+    '#options' => array('terrain' => 'Terrain', 'hybrid' => 'Hybrid', 'satellite' => 'Satellite', 'osm' => 'OSM'),
     '#default_value' => 'terrain',
   );
   $auto = "$prefix-auto";
