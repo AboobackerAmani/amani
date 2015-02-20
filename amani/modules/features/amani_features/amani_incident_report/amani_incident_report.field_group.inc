@@ -47,7 +47,7 @@ function amani_incident_report_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'incident_report';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_content';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Location',
     'weight' => '3',
@@ -55,13 +55,18 @@ function amani_incident_report_field_group_info() {
       0 => 'field_incident_address',
       1 => 'field_incident_geolocation',
     ),
-    'format_type' => 'accordion-item',
+    'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'formatter' => 'open',
       'instance_settings' => array(
         'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
         'classes' => '',
         'required_fields' => 1,
+        'id' => '',
       ),
     ),
   );
@@ -75,27 +80,31 @@ function amani_incident_report_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'incident_report';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_content';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Map Report',
     'weight' => '1',
     'children' => array(
       0 => 'field_description',
-      1 => 'field_incident_date',
-      2 => 'field_incident_report_type',
-      3 => 'field_incident_severity',
-      4 => 'title',
-      5 => 'field_image',
+      1 => 'field_image',
+      2 => 'field_incident_date',
+      3 => 'field_incident_report_type',
+      4 => 'field_incident_severity',
+      5 => 'title',
     ),
-    'format_type' => 'accordion-item',
+    'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Map Report',
-      'instance_settings' => array(
-        'required_fields' => 1,
-        'classes' => '',
-        'description' => '',
-      ),
       'formatter' => 'open',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
     ),
   );
   $export['group_incident_main|node|incident_report|form'] = $field_group;
@@ -108,7 +117,7 @@ function amani_incident_report_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'incident_report';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_content';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Media',
     'weight' => '2',
@@ -116,13 +125,18 @@ function amani_incident_report_field_group_info() {
       0 => 'field_incident_media',
       1 => 'field_links',
     ),
-    'format_type' => 'accordion-item',
+    'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'formatter' => 'open',
       'instance_settings' => array(
         'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
         'classes' => '',
         'required_fields' => 1,
+        'id' => '',
       ),
     ),
   );
@@ -136,7 +150,7 @@ function amani_incident_report_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'incident_report';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_content';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Submitter',
     'weight' => '4',
@@ -145,13 +159,18 @@ function amani_incident_report_field_group_info() {
       1 => 'field_name',
       2 => 'field_phone',
     ),
-    'format_type' => 'accordion-item',
+    'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'formatter' => 'open',
       'instance_settings' => array(
         'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
         'classes' => '',
         'required_fields' => 1,
+        'id' => '',
       ),
     ),
   );
