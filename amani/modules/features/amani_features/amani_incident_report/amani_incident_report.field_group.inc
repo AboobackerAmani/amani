@@ -119,7 +119,7 @@ function amani_incident_report_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Media',
+    'label' => 'Supporting Documents & Links',
     'weight' => '2',
     'children' => array(
       0 => 'field_incident_media',
@@ -127,17 +127,17 @@ function amani_incident_report_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'open',
+      'label' => 'Supporting Documents & Links',
       'instance_settings' => array(
+        'required_fields' => 1,
+        'classes' => '',
         'description' => '',
-        'show_label' => 1,
+        'show_label' => '1',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
-        'classes' => '',
-        'required_fields' => 1,
-        'id' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_incident_media|node|incident_report|form'] = $field_group;
