@@ -2,8 +2,10 @@
 
 /**
  * @file
- * Provide core functions for path breadcrumbs modue.
+ * Provide core functions for path breadcrumbs module.
  */
+
+require_once 'path_breadcrumbs.info.inc';
 
 /**
  * Define module constants.
@@ -21,6 +23,16 @@ define('PATH_BREADCRUMBS_CACHE_STORAGE', 'cache_path_breadcrumbs');
  * Implements hook_page_alter().
  */
 function path_breadcrumbs_page_alter() {
+  // Do not show breadcrumbs on error pages.
+  if (!variable_get('path_breadcrumbs_enable_on_error_pages', FALSE)) {
+    $bad_statuses = array('404 Not Found', '403 Forbidden');
+    $http_headers = drupal_get_http_header();
+    $status = isset($http_headers['status']) ? $http_headers['status'] : '200 OK';
+    if (in_array($status, $bad_statuses)) {
+      return;
+    }
+  }
+
   path_breadcrumbs_set_breadcrumb();
 }
 
@@ -33,24 +45,28 @@ function path_breadcrumbs_set_breadcrumb($path = NULL) {
   }
 
   // See if current page has path breadcrumbs.
-  $breadcrumbs = path_breadcrumbs_load_variant($path);
+  $path_breadcrumbs_data = path_breadcrumbs_load_variant($path);
 
   // Set breadcrumbs for current page if it exists.
-  if ($breadcrumbs) {
-    drupal_set_breadcrumb($breadcrumbs);
+  if ($path_breadcrumbs_data && isset($path_breadcrumbs_data->build)) {
+    drupal_set_breadcrumb($path_breadcrumbs_data->build);
   }
 }
 
 /**
+ * Load and build path breadcrumb variant for page url. Results are cached.
  *
- * Load path breadcrumb variant for page url.
- *
- * @param  $path
+ * @param string $path
  *   Current page url.
+ *
  * @return object
- *   Path breadcrumb that matches page url.
+ *   Path breadcrumb object that matches page url.
+ *   Members:
+ *    - variant: raw Path Breadcrumbs variant;
+ *    - build: built Path Breadcrumbs array ready for drupal_set_breadcrumb().
  */
 function path_breadcrumbs_load_variant($path) {
+  global $language_url;
 
   if (empty($path)) {
     return FALSE;
@@ -58,15 +74,36 @@ function path_breadcrumbs_load_variant($path) {
 
   // See if user enabled cache for breadcrumbs.
   $cache_enabled = variable_get('path_breadcrumbs_cache_enabled', FALSE);
-  if ($cache_enabled) {
+  $cache_lifetime = variable_get('path_breadcrumbs_cache_lifetime', CACHE_PERMANENT);
+  // Apply current time to cache expiration time to set valid cache expire date.
+  if ($cache_lifetime > CACHE_PERMANENT) {
+    $cache_lifetime += REQUEST_TIME;
+  }
 
+  if ($cache_enabled) {
     // Trying to load breadcrumb from cache.
-    $cache_id = __FUNCTION__ . ':' . $path;
+    $cache_id = __FUNCTION__ . ':' . $path . ':' . $language_url->language;
     $cache = cache_get($cache_id, PATH_BREADCRUMBS_CACHE_STORAGE);
     if (!empty($cache->data)) {
+      // Empty results are also cached.
+      if ($cache->data == 'none') {
+        return FALSE;
+      }
+
+      // Allow to alter cached items.
+      if (count(module_implements('path_breadcrumbs_view_alter')) > 0) {
+        $built_breadcrumbs = $cache->data->build;
+        $path_breadcrumbs = $cache->data->variant;
+        $path_breadcrumbs->from_cache = TRUE;
+        $contexts = path_breadcrumbs_get_contexts_from_arguments($path_breadcrumbs->arguments, FALSE, $path);
+        drupal_alter('path_breadcrumbs_view', $built_breadcrumbs, $path_breadcrumbs, $contexts);
+      }
+
       return $cache->data;
     }
   }
+
+  $path_breadcrumbs_data = new stdClass();
 
   // Select all variants matching current path.
   $variants = path_breadcrumbs_load_by_path($path);
@@ -85,7 +122,7 @@ function path_breadcrumbs_load_variant($path) {
     if (drupal_match_path($path, $matched_path)) {
 
       // Load breadcrumbs' contexts from current path.
-      $contexts = path_breadcrumbs_get_contexts_from_arguments($breadcrumb->arguments);
+      $contexts = path_breadcrumbs_get_contexts_from_arguments($breadcrumb->arguments, FALSE, $path);
 
       // If breadcrumb contains broken context
       // it means that unable to load context from URL.
@@ -101,39 +138,37 @@ function path_breadcrumbs_load_variant($path) {
         }
       }
 
+      // Appropriate variant found.
+      $path_breadcrumbs_data->variant = $breadcrumb;
       // Build suitable breadcrumb variant.
-      $build = _path_breadcrumbs_build_breadcrumbs($breadcrumb, $contexts);
+      $path_breadcrumbs_data->build = _path_breadcrumbs_build_breadcrumbs($breadcrumb, $contexts);
 
       // Save data in cache and return it.
       if ($cache_enabled) {
-        $cache_lifetime = variable_get('path_breadcrumbs_cache_lifetime', CACHE_PERMANENT);
-
-        // Apply current time to cache expiration time to set valid cache expire date.
-        if ($cache_lifetime > CACHE_PERMANENT) {
-          $cache_lifetime += REQUEST_TIME;
-        }
-
-        cache_set($cache_id, $build, PATH_BREADCRUMBS_CACHE_STORAGE, $cache_lifetime);
+        cache_set($cache_id, $path_breadcrumbs_data, PATH_BREADCRUMBS_CACHE_STORAGE, $cache_lifetime);
       }
 
-      // Save selected variant in static cache for using Path Breadcrumbs object in other places.
-      _path_breadcrumbs_static_cache_variant($path, $breadcrumb);
-
-      return $build;
+      return $path_breadcrumbs_data;
     }
 
   }
+
+  // Save empty data in cache and return it.
+  if ($cache_enabled) {
+    cache_set($cache_id, 'none', PATH_BREADCRUMBS_CACHE_STORAGE, $cache_lifetime);
+  }
+
   return FALSE;
 }
 
 /**
- *
  * Build breadcrumbs navigation from loaded path breadcrumb variant.
  *
- * @param  $path_breadcrumb
+ * @param object $path_breadcrumb
  *   Object with path breadcrumb variant loaded from database.
- * @param $contexts
+ * @param array $contexts
  *   Ctools contexts from current URL.
+ *
  * @return array
  *   Array with breadcrumbs navigation.
  */
@@ -153,6 +188,9 @@ function _path_breadcrumbs_build_breadcrumbs($path_breadcrumb, $contexts = array
   $titles = implode("\n", $path_breadcrumb->titles);
   $paths  = implode("\n", $path_breadcrumb->paths);
 
+  // Replace %nn sequences to prevent mixing them with contexts.
+  $paths = rawurldecode($paths);
+
   // Replace module placeholders.
   $replace = array();
   $search = array();
@@ -169,19 +207,12 @@ function _path_breadcrumbs_build_breadcrumbs($path_breadcrumb, $contexts = array
   $search[]  = '!page_title';
   $replace[] = drupal_get_title();
 
-  // Replace global %site token with ctools %token:site.
-  $search[]  = '%site';
-  $replace[] = '%token:site';
-
   // Replace module placeholders.
   $titles = str_replace($search, $replace, $titles);
   $paths  = str_replace($search, $replace, $paths);
 
   // Add custom ctools context for site.
-  $global_context = new ctools_context('token');
-  $global_context->plugin = 'token';
-  $global_context->keyword = 'token';
-  $contexts['token'] = $global_context;
+  $contexts['site'] = ctools_context_create('path_breadcrumbs_site');
 
   // Replace placeholders by current context values.
   $titles = ctools_context_keyword_substitute($titles, array(), $contexts);
@@ -191,6 +222,14 @@ function _path_breadcrumbs_build_breadcrumbs($path_breadcrumb, $contexts = array
   $path_breadcrumb->titles_prepared = explode("\n", $titles);
   $path_breadcrumb->paths_prepared  = explode("\n", $paths);
 
+  // Support empty breadcrumbs (disabling).
+  if (count($path_breadcrumb->titles_prepared) == 1 &&
+      $path_breadcrumb->titles_prepared[0] == '<none>' &&
+      $path_breadcrumb->paths_prepared[0] == '<none>') {
+    $path_breadcrumb->titles_prepared = array();
+    $path_breadcrumb->paths_prepared = array();
+  }
+
   foreach ($path_breadcrumb->titles_prepared as $key => $title) {
 
     // Remove breadcrumb from navigation if it is empty.
@@ -198,21 +237,34 @@ function _path_breadcrumbs_build_breadcrumbs($path_breadcrumb, $contexts = array
       continue;
     }
 
+    $options = array();
+
     // Decode title if needed.
     $decode_html_entities = variable_get('path_breadcrumbs_decode_entities', TRUE);
     if ($decode_html_entities) {
       $title = html_entity_decode($title, ENT_QUOTES, 'UTF-8');
     }
+    // Truncate to max length, consider ellipsis (+3 symbols).
+    $truncate_length = variable_get('path_breadcrumbs_truncate_title_length', '');
+    $title_length = drupal_strlen($title);
+    if ($truncate_length && $truncate_length < $title_length) {
+      // Show full title in tooltip.
+      $options['attributes']['title'] = $title;
+      $title = truncate_utf8($title, $truncate_length + 3, TRUE, TRUE);
+    }
 
     // Set a breadcrumb as a link or as a plain text.
     if (isset($path_breadcrumb->paths_prepared[$key]) && $path_breadcrumb->paths_prepared[$key] != '<none>') {
-      $breadcrumb[] = l($title, $path_breadcrumb->paths_prepared[$key]);
+      $path = _path_breadcrumbs_clean_url($path_breadcrumb->paths_prepared[$key], $options);
+      $breadcrumb[] = l($title, $path, $options);
     }
     elseif (isset($path_breadcrumb->paths_prepared[$key]) && $path_breadcrumb->paths_prepared[$key] == '<none>') {
       $breadcrumb[] = check_plain($title);
     }
   }
 
+  // Inform other modules that this PB item wasn't loaded from cache.
+  $path_breadcrumb->from_cache = FALSE;
   // Allow other modules to alter breadcrumbs generated by this module.
   drupal_alter('path_breadcrumbs_view', $breadcrumb, $path_breadcrumb, $contexts);
 
@@ -237,13 +289,14 @@ function path_breadcrumbs_flush_caches() {
 
 /**
  * Implements hook_theme_registry_alter().
- *
- * @param $theme_registry
- *   Drupal theme registry that could be changed.
  */
 function path_breadcrumbs_theme_registry_alter(&$theme_registry) {
+  global $theme_key;
+
   $internal_render = variable_get('path_breadcrumbs_internal_render', 1);
-  if ($internal_render) {
+  $themes = variable_get('path_breadcrumbs_internal_render_themes', array());
+
+  if ($internal_render && (empty($themes) || in_array($theme_key, $themes))) {
     $theme_registry['breadcrumb']['theme path'] = drupal_get_path('module', 'path_breadcrumbs');
     $theme_registry['breadcrumb']['function'] = 'path_breadcrumbs_breadcrumb';
   }
@@ -252,8 +305,9 @@ function path_breadcrumbs_theme_registry_alter(&$theme_registry) {
 /**
  * Override default theme_breadcrumb().
  *
- * @param $variables
+ * @param array $variables
  *   Contains array with breadcrumbs.
+ *
  * @return bool|string
  *   Rendered breadcrumbs or FALSE for no breadcrumbs.
  */
@@ -269,6 +323,11 @@ function path_breadcrumbs_breadcrumb($variables) {
     $hide_single_breadcrumb = variable_get('path_breadcrumbs_hide_single_breadcrumb', 0);
     if ($hide_single_breadcrumb && count($breadcrumbs) == 1) {
       return FALSE;
+    }
+
+    // Bootstrap 3 compatibility. See: https://drupal.org/node/2178565
+    if (is_array($breadcrumbs[count($breadcrumbs) - 1])) {
+      array_pop($breadcrumbs);
     }
 
     // Add options for rich snippets.
@@ -322,9 +381,9 @@ function path_breadcrumbs_breadcrumb($variables) {
       $href = '';
       if (!empty($matches[1])) {
         global $base_path;
-        global $language;
+        global $language_url;
 
-        $base_string = $base_path;
+        $base_string = rtrim($base_path, "/");
 
         // Append additional params to base string if clean urls are disabled.
         if (!variable_get('clean_url', 0)) {
@@ -332,17 +391,19 @@ function path_breadcrumbs_breadcrumb($variables) {
         }
 
         // Append additional params to base string for multilingual sites.
-        if (!empty($language->prefix)) {
-          $base_string .= $language->prefix . '/';
+        // @note: Only core URL detection method supported.
+        $enabled_negotiation_types = variable_get("language_negotiation_language", array());
+        if (!empty($enabled_negotiation_types['locale-url']) && !empty($language_url->prefix)) {
+          $base_string .= '/' . $language_url->prefix;
         }
 
         // Means that this is href to the frontpage.
-        if (drupal_strlen($base_string) > drupal_strlen($matches[1])) {
+        if ($matches[1] == $base_string || $matches[1] == '' || $matches[1] == '/') {
           $href = '';
         }
         // All hrefs exept frontpage.
-        elseif (stripos($matches[1], $base_string) === 0) {
-          $href = drupal_substr($matches[1], drupal_strlen($base_string));
+        elseif (stripos($matches[1], "$base_string/") === 0) {
+          $href = drupal_substr($matches[1], drupal_strlen("$base_string/"));
         }
         // Other cases.
         else {
@@ -362,6 +423,19 @@ function path_breadcrumbs_breadcrumb($variables) {
         $title = '<span itemprop="title">' . $title . '</span>';
       }
 
+      // Support title attribute.
+      if (preg_match('/<a\s.*?title="([^"]+)"[^>]*>/i', $breadcrumb, $attr_matches)) {
+        $options['attributes']['title'] = $attr_matches[1];
+      }
+      else {
+        unset($options['attributes']['title']);
+      }
+
+      // Decode url to prevent double encoding in l().
+      $href = rawurldecode($href);
+      // Move query params from $href to $options.
+      $href = _path_breadcrumbs_clean_url($href, $options, 'none');
+
       // Build new text or link breadcrumb.
       $new_breadcrumb = !empty($href) ? l($title, $href, $options) : $title;
 
@@ -375,13 +449,13 @@ function path_breadcrumbs_breadcrumb($variables) {
 
     $classes = array('breadcrumb');
 
-    // Show contextial link if it is Path Breadcrumbs variant.
+    // Show contextual link if it is Path Breadcrumbs variant.
     $prefix = '';
-    $path_breadcrumbs = _path_breadcrumbs_static_cache_variant(current_path());
-    if (user_access('administer path breadcrumbs') && $path_breadcrumbs) {
+    $path_breadcrumbs_data = path_breadcrumbs_load_variant(current_path());
+    if (user_access('administer path breadcrumbs') && $path_breadcrumbs_data && isset($path_breadcrumbs_data->variant)) {
       $contextual_links = array(
         '#type' => 'contextual_links',
-        '#contextual_links' => array('path_breadcrumbs' => array('admin/structure/path-breadcrumbs/edit', array($path_breadcrumbs->machine_name))),
+        '#contextual_links' => array('path_breadcrumbs' => array('admin/structure/path-breadcrumbs/edit', array($path_breadcrumbs_data->variant->machine_name))),
       );
       $prefix = drupal_render($contextual_links);
       $classes[] = 'contextual-links-region';
@@ -400,8 +474,9 @@ function path_breadcrumbs_breadcrumb($variables) {
 /**
  * Save path breadcrumb.
  *
- * @param  $path_breadcrumbs
+ * @param object $path_breadcrumbs
  *   Object with path breadcrumb data.
+ *
  * @return int
  *   ID of inserted/updated path breadcrumb.
  */
@@ -416,6 +491,14 @@ function path_breadcrumbs_save($path_breadcrumbs) {
   }
   elseif (empty($path_breadcrumbs->access)) {
     $path_breadcrumbs->access = array();
+  }
+
+  // Set defaults.
+  if (!isset($path_breadcrumbs->arguments)) {
+    $path_breadcrumbs->arguments = array();
+  }
+  if (!isset($path_breadcrumbs->export_type)) {
+    $path_breadcrumbs->export_type = NULL;
   }
 
   // Ctools will serialize data itself.
@@ -454,9 +537,8 @@ function path_breadcrumbs_save($path_breadcrumbs) {
 /**
  * Delete path breadcrumb.
  *
- * @param  $name
+ * @param string $name
  *   Path breadcrumb's name.
- * @return void
  */
 function path_breadcrumbs_delete($name) {
   $path_breadcrumbs = path_breadcrumbs_load_by_name($name);
@@ -473,11 +555,13 @@ function path_breadcrumbs_delete($name) {
 }
 
 /**
- * Prepare raw object from Ctools to normal path_breadcrumbs object
+ * Prepare raw object from Ctools to normal path_breadcrumbs object.
  *
- * @param $path_breadcrumbs_raw
- *    Object loaded from database or ctools_export_load_object().
- * @return object $path_breadcrumbs.
+ * @param object $path_breadcrumbs_raw
+ *   Object loaded from database or ctools_export_load_object().
+ *
+ * @return object
+ *   $path_breadcrumbs prepared object.
  */
 function path_breadcrumbs_load_prepare($path_breadcrumbs_raw) {
   // Merge breadcrumb data with parent for more flattening structure.
@@ -492,10 +576,11 @@ function path_breadcrumbs_load_prepare($path_breadcrumbs_raw) {
 /**
  * Load path breadcrumbs by ID.
  *
- * @param  $path_id
- *   ID of path breadcrumb that should be loaded
+ * @param int $path_id
+ *   ID of path breadcrumb that should be loaded.
+ *
  * @return object
- *   Loaded path breadcrumb
+ *   Loaded path breadcrumb.
  */
 function path_breadcrumbs_load($path_id) {
   // Cache it because Ctools cache is not helpful for 'conditions' loading.
@@ -518,8 +603,9 @@ function path_breadcrumbs_load($path_id) {
 /**
  * Load path breadcrumb by name.
  *
- * @param  $name
+ * @param string $name
  *   Path breadcrumb's name.
+ *
  * @return object
  *   Object with path breadcrumb.
  */
@@ -538,8 +624,10 @@ function path_breadcrumbs_load_by_name($name) {
 /**
  * Load multiple objects by names.
  *
- * @param $names
+ * @param array $names
+ *
  * @return array
+ *   Array of path breadcrumbs objects.
  */
 function path_breadcrumbs_load_by_name_multiple($names) {
   ctools_include('export');
@@ -557,18 +645,18 @@ function path_breadcrumbs_load_by_name_multiple($names) {
  * Load all path breadcrumbs from database and code.
  *
  * @return array
- *    Array of path_breadcrumbs objects.
+ *   Array of path_breadcrumbs objects.
  */
 function path_breadcrumbs_load_all() {
-  $data = &drupal_static(__FUNCTION__);
-  if (empty($data)) {
-    ctools_include('export');
-    $data = ctools_export_load_object('path_breadcrumbs', 'all');
-    // Make objects more developer-friendly.
-    $data = array_map('path_breadcrumbs_load_prepare', $data);
-    // Order by weight.
-    uasort($data, '_path_breadcrumbs_sort_weight');
-  }
+
+  ctools_include('export');
+  $data = ctools_export_load_object('path_breadcrumbs', 'all');
+
+  // Make objects more developer-friendly.
+  $data = array_map('path_breadcrumbs_load_prepare', $data);
+
+  // Order by weight.
+  uasort($data, '_path_breadcrumbs_sort_weight');
   return $data;
 }
 
@@ -577,6 +665,7 @@ function path_breadcrumbs_load_all() {
  *
  * @param string $path
  *    Current page path.
+ *
  * @return array
  *    Array of path_breadcrumbs sorted by weight.
  */
@@ -620,10 +709,12 @@ function path_breadcrumbs_load_by_path($path) {
  *   URL arguments.
  * @param bool $empty
  *   Define load context for empty arguments or not
+ * @param string $path
+ *   Page url.
  * @return array
  *   Array with context plugins.
  */
-function path_breadcrumbs_get_contexts_from_arguments($arguments, $empty = FALSE) {
+function path_breadcrumbs_get_contexts_from_arguments($arguments, $empty = FALSE, $path = NULL) {
   $contexts = array();
 
   // Include ctools library for contexts.
@@ -640,7 +731,7 @@ function path_breadcrumbs_get_contexts_from_arguments($arguments, $empty = FALSE
         }
 
         // See what we should return: empty contexts or from path arguments.
-        $arg = $empty ? NULL : arg($arg['position']);
+        $arg = $empty ? NULL : arg($arg['position'], $path);
 
         // Build context.
         $context = call_user_func($argument['context'], $arg, $argument, $empty);
@@ -648,6 +739,11 @@ function path_breadcrumbs_get_contexts_from_arguments($arguments, $empty = FALSE
           $context->keyword = $keyword;
           $context->identifier = $argument['identifier'];
           $contexts[$keyword] = $context;
+
+          // Override Ctools User plugin with improved PB version.
+          if ($context->plugin == 'user') {
+            $context->plugin = 'path_breadcrumbs_user';
+          }
         }
         else {
           $contexts['broken_context'] = $keyword;
@@ -744,16 +840,18 @@ function _path_breadcrumbs_sort_weight($a, $b) {
  */
 function path_breadcrumbs_export($path_breadcrumbs, $indent) {
   // Structure object according to schema.
-  $path_breadcrumbs->data = array(
-    'titles'        => $path_breadcrumbs->titles,
-    'paths'         => $path_breadcrumbs->paths,
-    'home'          => $path_breadcrumbs->home,
-    'translatable'  => $path_breadcrumbs->translatable,
-    'arguments'     => $path_breadcrumbs->arguments,
-    'access'        => $path_breadcrumbs->access,
-  );
-  if (!empty($path_breadcrumbs->custom)) {
-    $path_breadcrumbs->data['custom'] = $path_breadcrumbs->custom;
+  if (empty($path_breadcrumbs->data)) {
+    $path_breadcrumbs->data = array(
+      'titles'        => $path_breadcrumbs->titles,
+      'paths'         => $path_breadcrumbs->paths,
+      'home'          => $path_breadcrumbs->home,
+      'translatable'  => $path_breadcrumbs->translatable,
+      'arguments'     => $path_breadcrumbs->arguments,
+      'access'        => $path_breadcrumbs->access,
+    );
+    if (!empty($path_breadcrumbs->custom)) {
+      $path_breadcrumbs->data['custom'] = $path_breadcrumbs->custom;
+    }
   }
   return ctools_export_object('path_breadcrumbs', $path_breadcrumbs, $indent);
 }
@@ -766,6 +864,7 @@ function path_breadcrumbs_export($path_breadcrumbs, $indent) {
 function path_breadcrumbs_export_list() {
   $list = array();
   $result = path_breadcrumbs_load_all();
+  uksort($result, 'strnatcmp');
   foreach ($result as $path_breadcrumbs) {
     $string = $path_breadcrumbs->name . " (" . $path_breadcrumbs->machine_name . ")";
     $list[$path_breadcrumbs->machine_name] = check_plain($string);
@@ -774,25 +873,119 @@ function path_breadcrumbs_export_list() {
 }
 
 /**
- * Static per-path cache of selected Path Breadcrumbs variant.
- */
-function _path_breadcrumbs_static_cache_variant($path, $breadcrumb = NULL) {
-  $static_cache = &drupal_static(__FUNCTION__);
-  if (empty($breadcrumb)) {
-    return !empty($static_cache[$path]) ? $static_cache[$path] : FALSE;
-  }
-
-  $static_cache[$path] = $breadcrumb;
-}
-
-/**
  * Implements hook_panels_pane_content_alter().
+ *
  * Override default 'page_breadcrumb' content.
  */
 function path_breadcrumbs_panels_pane_content_alter(&$content, $pane, $args, $context, $renderer, $display) {
+  if (empty($content)) {
+    return;
+  }
+
   if ($content->type == 'page_breadcrumb') {
     // Init Path Breadcrumbs early.
     path_breadcrumbs_set_breadcrumb();
     $content->content = theme('breadcrumb', array('breadcrumb' => drupal_get_breadcrumb()));
   }
+}
+
+/**
+ * Helper function to clean URLs according to Path Breadcrumbs settings.
+ *
+ * @param $url URL to clean.
+ * @param &$options array of options for l() function.
+ *   Function can overwrite 'query' and 'fragment' keys with data from $url.
+ * @param $method One of supported methods: 'none', 'ctools', 'pathauto'.
+ *
+ * @return string Cleared URL.
+ */
+function _path_breadcrumbs_clean_url($url, &$options, $method = NULL) {
+  // Reset options.
+  $options['fragment'] = '';
+  $options['query'] = array();
+
+  // Decode &amp; back to &.
+  $url_short = htmlspecialchars_decode($url, ENT_NOQUOTES);
+  $url_parts = parse_url($url_short);
+
+  // Remove #hash from URL.
+  if (!empty($url_parts['fragment'])) {
+    $options['fragment'] = $url_parts['fragment'];
+    list($url_short, ) = explode('#', $url_short, 2);
+  }
+  // Remove query string from URL.
+  $options['query'] = array();
+  if (!empty($url_parts['query'])) {
+    list($url_short, ) = explode('?', $url_short, 2);
+    parse_str($url_parts['query'], $query);
+    $options['query'] += $query;
+  }
+
+  if (empty($method)) {
+    $method = variable_get('path_breadcrumbs_url_cleaning_method', 'none');
+  }
+  if ($method == 'none') {
+    return $url_short;
+  }
+
+  // Ignore absolute URLs.
+  if (preg_match('@^http(s?)://@i', $url_short)) {
+    return $url_short;
+  }
+
+  $ctools_cleanstring_settings = array(
+    'clean id' => 'path_breadcrumbs_url',
+    'lower case' => TRUE,
+    'transliterate' => TRUE,
+    'reduce ascii' => FALSE,
+    'separator' => '-',
+  );
+
+  $pieces = explode('/', $url_short);
+  $results = array();
+
+  if ($method == 'ctools') {
+    ctools_include('cleanstring');
+
+    foreach ($pieces as $piece) {
+      $results[] = ctools_cleanstring($piece, $ctools_cleanstring_settings);
+    }
+    $options['fragment'] = ctools_cleanstring($options['fragment'], $ctools_cleanstring_settings);
+
+  }
+  elseif ($method == 'pathauto' && module_exists('pathauto')) {
+    module_load_include('inc', 'pathauto');
+
+    foreach ($pieces as $piece) {
+      $results[] = pathauto_cleanstring($piece);
+    }
+    $options['fragment'] = pathauto_cleanstring($options['fragment']);
+
+  }
+  else {
+    $results = $pieces;
+  }
+
+  return implode('/', $results);
+}
+
+/**
+ * Options callback for 'path_breadcrumbs_internal_render_themes' setting.
+ */
+function _path_breadcrumbs_themes_option_list() {
+  $result = array();
+  $admin_theme = variable_get('admin_theme');
+
+  foreach (list_themes() as $theme) {
+    $result[$theme->name] = $theme->info['name'];
+    if ($theme->status) {
+      $result[$theme->name] = '<strong title="' . t('This theme is enabled') . '">' . $result[$theme->name] . '</strong>';
+    }
+
+    if ($theme->name == $admin_theme) {
+      $result[$theme->name] = $theme->info['name'] . ' (<em>' . t('Administration theme') . '</em>)';
+    }
+  }
+
+  return $result;
 }
