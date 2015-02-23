@@ -49,7 +49,7 @@ function amani_global_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => '1374817913',
     'log' => '',
-    'uid' => '1',
+    'uid' => '0',
     'default_revision' => '1',
     'revisions' => array(),
     'vuuid' => '74895912-6a98-4d34-9f5f-ebd01453fd1a',

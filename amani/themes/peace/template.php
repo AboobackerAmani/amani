@@ -332,3 +332,19 @@ function peace_file_icon($variables) {
 
   return $html;
 }
+
+/**
+ * Implements hook_node_view_alter()
+ */
+function peace_node_view_alter(&$build) {
+  // If this is teaser display that uses field_description we want to
+  // trim the text and add and elipses, we've stripped html in the content type's
+  // display settings but we also require a trim.
+  if ($build['#view_mode'] == 'teaser' && isset($build['field_description'])) {
+    $description = &$build['field_description'][0]['#markup'];
+    if (strlen($description) > 300) {
+      $description = substr($build['field_description'][0]['#markup'], 0, 300);
+      $description .= ' ...';
+    }
+  }
+}
