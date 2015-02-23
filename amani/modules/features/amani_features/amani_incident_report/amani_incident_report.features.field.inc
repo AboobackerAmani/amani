@@ -1045,7 +1045,7 @@ Prof.',
       ),
       'entity_type' => 'node',
       'field_name' => 'field_name',
-      'label' => 'Submitter Name (Optional)',
+      'label' => 'Submitter Name',
       'required' => 0,
       'settings' => array(
         'component_css' => '',
@@ -1186,7 +1186,7 @@ Prof.',
   t('Map filter #2');
   t('Media (images/videos/documents)');
   t('Phone number');
-  t('Submitter Name (Optional)');
+  t('Submitter Name');
   t('Use the address fields here or use the map tools below to pick out a point directly on the map.');
   t('asdfasd asd fasdf asdfasd fad f');
 
