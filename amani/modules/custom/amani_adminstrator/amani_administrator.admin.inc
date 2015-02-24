@@ -173,7 +173,30 @@ function amani_administrator_configure_amani_form() {
     '#value' => t('Disable \'Partners Carousel\''),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
-    '#suffix' => '<p>This action diables the \'Partners Carousel\' on your site.</p></div>',
+    '#suffix' => '<p>This action disables the \'Partners Carousel\' on your site.</p></div>',
+  );
+
+  $form['blocks']['events'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Manage Upcoming Events'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['blocks']['events'][] = array(
+    '#type' => 'button',
+    '#value' => t('Enable \'Upcoming Events\''),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action enables  \'Upcoming events block\' to appear on your front page</p></div>'
+  );
+
+  $form['blocks']['events'][] = array(
+    '#type' => 'button',
+    '#value' => t('Disable \'Upcoming Events\''),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action disables \'Upcoming events block\' to appear on your front page</p></div>'
   );
 
   $form['blocks']['get_involved'] = array(
@@ -415,6 +438,12 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
         'delta' => 'partners_carousel-block',
       );
       amani_administrator_set_block($block, 0, 0, -1);
+      break;
+    case 'Enable \'Upcoming Events\'':
+      variable_set('amani_admin_events_show', 1);
+      break;
+    case 'Disable \'Upcoming Events\'':
+      variable_set('amani_admin_events_show', 0);
       break;
     case 'Configure \'Newsletter\' Button':
       drupal_goto('admin/configure-amani/newsletter-button');
