@@ -266,7 +266,7 @@ function amani_slideshow_field_default_fields() {
           'title' => '',
         ),
         'display' => array(
-          'url_cutoff' => '80',
+          'url_cutoff' => '',
         ),
         'enable_tokens' => 0,
         'title' => 'none',
