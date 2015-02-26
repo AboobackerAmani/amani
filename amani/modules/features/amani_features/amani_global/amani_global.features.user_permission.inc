@@ -976,16 +976,6 @@ function amani_global_user_default_permissions() {
     'module' => 'role_delegation',
   );
 
-  // Exported permission: assign node weight.
-  $permissions['assign node weight'] = array(
-    'name' => 'assign node weight',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'amani administrator',
-    ),
-    'module' => 'weight',
-  );
-
   // Exported permission: block IP addresses.
   $permissions['block IP addresses'] = array(
     'name' => 'block IP addresses',
