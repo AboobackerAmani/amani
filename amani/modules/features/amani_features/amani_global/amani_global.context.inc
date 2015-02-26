@@ -310,6 +310,11 @@ function amani_global_context_default_contexts() {
         'amani_admin_events_show|1' => 'amani_admin_events_show|1',
       ),
     ),
+    'path' => array(
+      'values' => array(
+        '<front>' => '<front>',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
