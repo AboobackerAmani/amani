@@ -47,5 +47,42 @@ function amani_front_page_context_default_contexts() {
   t('Context using variables');
   $export['newsletter_button'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'social_media_feeds';
+  $context->description = '';
+  $context->tag = 'Context using variables';
+  $context->conditions = array(
+    'context_var' => array(
+      'values' => array(
+        'amani_admin_social_show|1' => 'amani_admin_social_show|1',
+      ),
+    ),
+    'path' => array(
+      'values' => array(
+        '<front>' => '<front>',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'quicktabs-social_media_feeds' => array(
+          'module' => 'quicktabs',
+          'delta' => 'social_media_feeds',
+          'region' => 'sidebar_second',
+          'weight' => '2',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Context using variables');
+  $export['social_media_feeds'] = $context;
+
   return $export;
 }
