@@ -15,7 +15,7 @@ function amani_front_page_context_default_contexts() {
   $context->api_version = 3;
   $context->name = 'newsletter_button';
   $context->description = '';
-  $context->tag = '';
+  $context->tag = 'Context using variables';
   $context->conditions = array(
     'context_var' => array(
       'values' => array(
@@ -35,12 +35,16 @@ function amani_front_page_context_default_contexts() {
           'module' => 'bean',
           'delta' => 'front-page-second-sidebar-bottom',
           'region' => 'sidebar_second',
-          'weight' => '1',
+          'weight' => '0',
         ),
       ),
     ),
   );
   $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Context using variables');
   $export['newsletter_button'] = $context;
 
   return $export;

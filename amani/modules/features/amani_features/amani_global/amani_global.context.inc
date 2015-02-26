@@ -196,12 +196,6 @@ function amani_global_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
-        'quicktabs-social_media_feeds' => array(
-          'module' => 'quicktabs',
-          'delta' => 'social_media_feeds',
-          'region' => 'sidebar_second',
-          'weight' => '-8',
-        ),
       ),
     ),
   );
@@ -303,7 +297,7 @@ function amani_global_context_default_contexts() {
   $context->api_version = 3;
   $context->name = 'upcoming_events';
   $context->description = '';
-  $context->tag = '';
+  $context->tag = 'Context using variables';
   $context->conditions = array(
     'context_var' => array(
       'values' => array(
@@ -323,12 +317,16 @@ function amani_global_context_default_contexts() {
           'module' => 'views',
           'delta' => 'calendar_of_events-calendar',
           'region' => 'sidebar_second',
-          'weight' => '-10',
+          'weight' => '1',
         ),
       ),
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Context using variables');
   $export['upcoming_events'] = $context;
 
   return $export;

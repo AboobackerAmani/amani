@@ -123,7 +123,7 @@ function amani_administrator_configure_amani_form() {
 
   $form['blocks']['newsletter'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Manage Newsletter Button'),
+    '#title' => t('Manage Newsletter Button (Site wide)'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
@@ -154,7 +154,7 @@ function amani_administrator_configure_amani_form() {
 
   $form['blocks']['carousel'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Manage Partners Carousel'),
+    '#title' => t('Manage Partners Carousel (Site wide)'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
@@ -178,7 +178,7 @@ function amani_administrator_configure_amani_form() {
 
   $form['blocks']['events'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Manage Upcoming Events'),
+    '#title' => t('Manage Upcoming Events (Home Page)'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
@@ -199,9 +199,32 @@ function amani_administrator_configure_amani_form() {
     '#suffix' => '<p>This action disables \'Upcoming events block\' to appear on your front page</p></div>'
   );
 
+  $form['blocks']['social'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Manage Social Media Feeds (Home Page)'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['blocks']['social'][] = array(
+    '#type' => 'button',
+    '#value' => t('Enable \'Social Media Feeds\''),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action enables  \'Social media feeds\' to appear on your front page</p></div>'
+  );
+
+  $form['blocks']['social'][] = array(
+    '#type' => 'button',
+    '#value' => t('Disable \'Social Media Feeds\''),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action enables  \'Disables media feeds\' to appear on your front page</p></div>'
+  );
+
   $form['blocks']['get_involved'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Manage Get Involved Block'),
+    '#title' => t('Manage Get Involved Block (Programs)'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
@@ -307,7 +330,7 @@ function amani_administrator_configure_amani_form() {
 
   $form['twitter'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Manage Twitter Feed (Home Page)'),
+    '#title' => t('Manage Twitter Feed (Home page)'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
@@ -444,6 +467,12 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       break;
     case 'Disable \'Upcoming Events\'':
       variable_set('amani_admin_events_show', 0);
+      break;
+    case 'Enable \'Social Media Feeds\'':
+      variable_set('amani_admin_social_show', 1);
+      break;
+    case 'Disable \'Social Media Feeds\'':
+      variable_set('amani_admin_social_show', 0);
       break;
     case 'Configure \'Newsletter\' Button':
       drupal_goto('admin/configure-amani/newsletter-button');
