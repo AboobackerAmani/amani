@@ -1,52 +1,27 @@
 /*
-Error: Illegal nesting: Only properties may be nested beneath properties.
-        on line 463 of sass/_custom.sass
+Error: The line was indented 2 levels deeper than the previous line.
+        on line 460 of sass/_custom.sass
         from line 154 of /Volumes/boogaloo/Sites/amani/amani/themes/peace/sass/style.sass
 
+455:   padding: 10px 0
+456: 
+457: #sidebar-second form#views-exposed-form-incident-reports-page-1 .views-exposed-widget 
 458:   float:none 
-459:   label
+459: label
 460:     font-size: 130%
 461:     font-weight: 500
 462:     padding-bottom: 20px
-463:       label
-464:         font-weight:normal
-465: 
-466: // Footer
-467: #footer
-468:   background: $grey_dark
+463:   
+464: #sidebar-second form#views-exposed-form-incident-reports-page-1 .views-exposed-widget label label
+465:   font-weight: normal
 
 Backtrace:
-sass/_custom.sass:463
+sass/_custom.sass:460
 /Volumes/boogaloo/Sites/amani/amani/themes/peace/sass/style.sass:154
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/check_nesting.rb:13:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/check_nesting.rb:49:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:38:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/check_nesting.rb:15:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/check_nesting.rb:49:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:38:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/check_nesting.rb:15:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/check_nesting.rb:49:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:38:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/check_nesting.rb:15:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/check_nesting.rb:49:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/check_nesting.rb:57:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/check_nesting.rb:15:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/base.rb:24:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:324:in `block in visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/engine.rb:509:in `tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/engine.rb:396:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/engine.rb:299:in `to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/tree/visitors/perform.rb:323:in `block in visit_import'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/stack.rb:88:in `block in with_import'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/stack.rb:115:in `with_frame'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.12/lib/sass/stack.rb:88:in `with_import'
@@ -89,4 +64,4 @@ sass/_custom.sass:463
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Illegal nesting: Only properties may be nested beneath properties.\A         on line 463 of sass/_custom.sass\A         from line 154 of /Volumes/boogaloo/Sites/amani/amani/themes/peace/sass/style.sass\A \A 458:   float:none \A 459:   label\A 460:     font-size: 130%\A 461:     font-weight: 500\A 462:     padding-bottom: 20px\A 463:       label\A 464:         font-weight:normal\A 465: \A 466: // Footer\A 467: #footer\A 468:   background: $grey_dark"; }
+  content: "Error: The line was indented 2 levels deeper than the previous line.\A         on line 460 of sass/_custom.sass\A         from line 154 of /Volumes/boogaloo/Sites/amani/amani/themes/peace/sass/style.sass\A \A 455:   padding: 10px 0\A 456: \A 457: #sidebar-second form#views-exposed-form-incident-reports-page-1 .views-exposed-widget \A 458:   float:none \A 459: label\A 460:     font-size: 130%\A 461:     font-weight: 500\A 462:     padding-bottom: 20px\A 463:   \A 464: #sidebar-second form#views-exposed-form-incident-reports-page-1 .views-exposed-widget label label\A 465:   font-weight: normal"; }
