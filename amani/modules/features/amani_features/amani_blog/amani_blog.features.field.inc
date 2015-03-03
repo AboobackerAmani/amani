@@ -209,11 +209,12 @@ function amani_blog_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'file_entity',
+          'module' => 'image',
           'settings' => array(
-            'file_view_mode' => 'preview',
+            'image_link' => '',
+            'image_style' => '',
           ),
-          'type' => 'file_rendered',
+          'type' => 'image',
           'weight' => '0',
         ),
         'teaser' => array(
@@ -234,7 +235,7 @@ function amani_blog_field_default_fields() {
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
         'max_resolution' => '',
-        'min_resolution' => '',
+        'min_resolution' => '300x225',
         'title_field' => 0,
         'user_register_form' => FALSE,
       ),
@@ -243,12 +244,12 @@ function amani_blog_field_default_fields() {
         'module' => 'imagefield_crop',
         'settings' => array(
           'collapsible' => '2',
-          'croparea' => '500x500',
+          'croparea' => '200x200',
           'enforce_minimum' => 1,
           'enforce_ratio' => 1,
           'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
-          'resolution' => '200x150',
+          'resolution' => '300x225',
         ),
         'type' => 'imagefield_crop_widget',
         'weight' => '1',

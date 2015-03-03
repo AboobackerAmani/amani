@@ -545,12 +545,7 @@ function incident_map_leaflet_framework_plugins() {
     'logical' => 'Amani.Layers',
     'switcher' => array('position' => 'topright'),
     // 'preprocess callback' => 'incident_map_plugin_preprocess_cis_layers',
-    'layers' => array(
-      array('title' => 'Terrain', 'provider' => 'google', 'set' => 'TERRAIN', 'type' => 'base'),
-      array('title' => 'Hybrid', 'provider' => 'google', 'set' => 'HYBRID', 'type' => 'base', 'disabled' => TRUE),
-      array('title' => 'Satellite', 'provider' => 'google', 'set' => 'SATELLITE', 'type' => 'base', 'disabled' => TRUE),
-      array('title' => 'OSM', 'provider' => 'tilelayer', 'urlTemplate' => 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 'type' => 'base', 'disabled' => TRUE),
-    ),
+    'layers' => incident_map_get_layers(),
   );
 
   $plugins['incident_reports'] = array(
@@ -564,6 +559,28 @@ function incident_map_leaflet_framework_plugins() {
 }
 
 /**
+ * Returns an array of layers for the map with the default value from the map
+ * settings form, defaults to terrain.
+ */
+function incident_map_get_layers() {
+  $default_layer = variable_get('incident-map-map-settings-default-base-layer', 'terrain');
+  $layers = array(
+    'terrain'   => array('title' => 'Terrain', 'provider' => 'google', 'set' => 'TERRAIN', 'type' => 'base', 'disabled' => TRUE),
+    'hybrid'    => array('title' => 'Hybrid', 'provider' => 'google', 'set' => 'HYBRID', 'type' => 'base', 'disabled' => TRUE),
+    'satellite' => array('title' => 'Satellite', 'provider' => 'google', 'set' => 'SATELLITE', 'type' => 'base', 'disabled' => TRUE),
+    'osm'       => array('title' => 'OSM', 'provider' => 'tilelayer', 'urlTemplate' => 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 'type' => 'base', 'disabled' => TRUE),
+  );
+
+  // Our default layer
+  if (isset($layers[$default_layer])) {
+    unset($layers[$default_layer]['disabled']);
+  }
+
+  return $layers;
+}
+
+/**
+ *
  * Incident map setting callback;
  * Adds properties of enabled filters to geojson features.
  */

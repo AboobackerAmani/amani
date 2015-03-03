@@ -17,8 +17,8 @@ function path_breadcrumbs_ui_configure_arguments_page($path_name, $keyword) {
   $form_state = array(
     'storage' => array(
       'path_name' => $path_name,
-      'keyword' => $keyword
-    )
+      'keyword' => $keyword,
+    ),
   );
 
   // Load context selections form.
@@ -109,7 +109,7 @@ function path_breadcrumbs_ui_edit_page($path_breadcrumb) {
     'storage' => array(
       'machine_name' => $path_breadcrumb->machine_name,
       'step' => 1,
-    )
+    ),
   );
 
   $form = drupal_build_form('path_breadcrumbs_ui_edit_form', $form_state);
@@ -132,7 +132,7 @@ function path_breadcrumbs_ui_edit_form_ajax_links($breadcrumb, $step) {
     'storage' => array(
       'machine_name' => $breadcrumb->machine_name,
       'step' => $step,
-    )
+    ),
   );
 
   $form = drupal_build_form('path_breadcrumbs_ui_edit_form', $form_state);
@@ -222,7 +222,7 @@ function path_breadcrumbs_ui_tokens_ajax_autocomplete($path_breadcrumbs, $string
   // Default raw tokens.
   $raw_keywords['page_title'] = array('label' => t('Current page title'), 'description' => t('Current page title'), 'selector_sign' => '!');
   $raw_keywords['<front>'] = array('label' => t('Link to front page'), 'description' => t('Link to front page'), 'selector_sign' => '');
-  $raw_keywords['<none>'] = array('label' => t('Emply value'), 'description' => t('Emply value'), 'selector_sign' => '');
+  $raw_keywords['<none>'] = array('label' => t('Empty value'), 'description' => t('Empty value'), 'selector_sign' => '');
 
   // Load class for autocomplete ui.
   $matches = PathBreadcrumbsUIAutocomplete::processAutocomplete($string, $context_keywords, $raw_keywords);

@@ -15,7 +15,7 @@ function amani_incident_report_context_default_contexts() {
   $context->api_version = 3;
   $context->name = 'add_map_record_button';
   $context->description = '';
-  $context->tag = '';
+  $context->tag = 'Context using variables';
   $context->conditions = array(
     'context_var' => array(
       'values' => array(
@@ -41,6 +41,10 @@ function amani_incident_report_context_default_contexts() {
     ),
   );
   $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Context using variables');
   $export['add_map_record_button'] = $context;
 
   $context = new stdClass();

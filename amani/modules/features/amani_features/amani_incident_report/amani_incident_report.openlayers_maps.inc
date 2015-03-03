@@ -35,7 +35,6 @@ function amani_incident_report_openlayers_maps() {
     ),
     'behaviors' => array(
       'openlayers_behavior_geofield' => array(),
-      'openlayers_behavior_keyboarddefaults' => array(),
       'openlayers_behavior_navigation' => array(
         'zoomWheelEnabled' => 0,
         'zoomBoxEnabled' => 1,

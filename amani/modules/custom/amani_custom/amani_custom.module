@@ -43,12 +43,14 @@ function amani_custom_block_info_alter(&$blocks, $theme, $code_blocks) {
 function amani_custom_form_alter(&$form, &$form_state, $form_id) {
   switch($form_id) {
     case 'views_exposed_form':
-      // switch based on form #id.
-      switch($form['#id']) {
-        case 'views-exposed-form-team-page':
+      if ($form['#id'] == 'views-exposed-form-team-page') {
           $form['field_team_contact_type_value']['#options']['All'] = t('our team') . '...';
-          break;
       }
+      break;
+    case 'incident_report_node_form':
+      $form['field_incident_report_type'][LANGUAGE_NONE]['#title'] = variable_get('incident-map-filter-field_incident_report_type-category-title', 'Filter 1 title');
+      $form['field_incident_severity'][LANGUAGE_NONE]['#title'] = variable_get('incident-map-filter-field_incident_severity-category-title', 'Filter 2 title');
+    default:
       break;
   }
 }

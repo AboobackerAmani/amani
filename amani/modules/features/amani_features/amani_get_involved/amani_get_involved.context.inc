@@ -46,8 +46,8 @@ function amani_get_involved_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'programs';
-  $context->description = 'programs listing page';
-  $context->tag = 'programs';
+  $context->description = '';
+  $context->tag = 'Context using variables';
   $context->conditions = array(
     'context_var' => array(
       'values' => array(
@@ -79,8 +79,7 @@ function amani_get_involved_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('programs');
-  t('programs listing page');
+  t('Context using variables');
   $export['programs'] = $context;
 
   return $export;

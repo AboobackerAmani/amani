@@ -61,10 +61,8 @@ function amani_incident_report_field_default_fields() {
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'text',
-          'settings' => array(
-            'trim_length' => 600,
-          ),
-          'type' => 'text_trimmed',
+          'settings' => array(),
+          'type' => 'text_plain',
           'weight' => '1',
         ),
       ),
@@ -73,7 +71,33 @@ function amani_incident_report_field_default_fields() {
       'label' => 'Description',
       'required' => 1,
       'settings' => array(
-        'text_processing' => '0',
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'php_code' => 0,
+            'plain_text' => 'plain_text',
+            'wysiwyg_advanced' => 'wysiwyg_advanced',
+            'wysiwyg_public' => 'wysiwyg_public',
+          ),
+          'allowed_formats_toggle' => 1,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'php_code' => array(
+                'weight' => '11',
+              ),
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+              'wysiwyg_advanced' => array(
+                'weight' => '-10',
+              ),
+              'wysiwyg_public' => array(
+                'weight' => '-9',
+              ),
+            ),
+          ),
+        ),
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -1021,7 +1045,7 @@ Prof.',
       ),
       'entity_type' => 'node',
       'field_name' => 'field_name',
-      'label' => 'Submitter Name (Optional)',
+      'label' => 'Submitter Name',
       'required' => 0,
       'settings' => array(
         'component_css' => '',
@@ -1162,7 +1186,7 @@ Prof.',
   t('Map filter #2');
   t('Media (images/videos/documents)');
   t('Phone number');
-  t('Submitter Name (Optional)');
+  t('Submitter Name');
   t('Use the address fields here or use the map tools below to pick out a point directly on the map.');
   t('asdfasd asd fasdf asdfasd fad f');
 

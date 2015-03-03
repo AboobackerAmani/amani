@@ -55,6 +55,7 @@ function amani_partners_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['preserve_tags'] = '<a>';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
@@ -133,8 +134,7 @@ function amani_partners_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'jcarousel';
   $handler->display->display_options['style_options']['wrap'] = 'circular';
   $handler->display->display_options['style_options']['visible'] = '4';
-  $handler->display->display_options['style_options']['scroll'] = '1';
-  $handler->display->display_options['style_options']['auto'] = '0';
+  $handler->display->display_options['style_options']['auto'] = '2';
   $handler->display->display_options['style_options']['autoPause'] = 1;
   $handler->display->display_options['style_options']['easing'] = '';
   $handler->display->display_options['style_options']['vertical'] = 0;

@@ -196,18 +196,6 @@ function amani_global_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
-        'views-calendar_of_events-calendar' => array(
-          'module' => 'views',
-          'delta' => 'calendar_of_events-calendar',
-          'region' => 'sidebar_second',
-          'weight' => '-9',
-        ),
-        'quicktabs-social_media_feeds' => array(
-          'module' => 'quicktabs',
-          'delta' => 'social_media_feeds',
-          'region' => 'sidebar_second',
-          'weight' => '-8',
-        ),
       ),
     ),
   );
@@ -303,6 +291,43 @@ function amani_global_context_default_contexts() {
   );
   $context->condition_mode = 0;
   $export['site_contact_form'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'upcoming_events';
+  $context->description = '';
+  $context->tag = 'Context using variables';
+  $context->conditions = array(
+    'context_var' => array(
+      'values' => array(
+        'amani_admin_events_show|1' => 'amani_admin_events_show|1',
+      ),
+    ),
+    'path' => array(
+      'values' => array(
+        '<front>' => '<front>',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-calendar_of_events-calendar' => array(
+          'module' => 'views',
+          'delta' => 'calendar_of_events-calendar',
+          'region' => 'sidebar_second',
+          'weight' => '1',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Context using variables');
+  $export['upcoming_events'] = $context;
 
   return $export;
 }
