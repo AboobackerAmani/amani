@@ -113,6 +113,10 @@ function amani_slideshow_views_default_views() {
   $handler->display->display_options['fields']['field_description']['settings'] = array(
     'trim_length' => '300',
   );
+  /* Sort criterion: Content: Display ranking (field_display_ranking) */
+  $handler->display->display_options['sorts']['field_display_ranking_value']['id'] = 'field_display_ranking_value';
+  $handler->display->display_options['sorts']['field_display_ranking_value']['table'] = 'field_data_field_display_ranking';
+  $handler->display->display_options['sorts']['field_display_ranking_value']['field'] = 'field_display_ranking_value';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
