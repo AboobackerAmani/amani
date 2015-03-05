@@ -435,20 +435,35 @@ a.button:not(.launcher):not(.remove):not(.edit)
 .node-project,
 .node-activity
   .field-name-field-media
-    > .field-items
-      @include clearfix
-      background: #eee
-      padding: $padding
-      margin-bottom: $margin
-      > .field-item
-        @include span-columns(12/3)
-        @include omega(3n)
-        > div
-          margin: 10px 5px
-        img:not(.file-icon),
-        iframe
-          width: 100%
-          height: auto
+    @include clearfix
+    background: #eee
+    padding: $padding
+    margin-bottom: $margin
+    .field-item
+      @include span-columns(12/3)
+      @include omega(3n)
+      > div
+        margin: 10px 5px
+      img:not(.file-icon),
+      iframe
+        width: 100%
+        height: auto
+
+// All incidents page
+
+#block-views-incident_reports-block_1 .views_row
+  padding: 10px 0
+
+#sidebar-second form#views-exposed-form-incident-reports-page-1 .views-exposed-widget 
+  float: none 
+label
+  font-size: 130%
+  padding-bottom: 20px
+  
+#sidebar-second form#views-exposed-form-incident-reports-page-1 .views-exposed-form .views-widget label
+  font-weight: normal
+  font-size: 100%
+
 // Footer
 #footer
   background: $grey_dark
