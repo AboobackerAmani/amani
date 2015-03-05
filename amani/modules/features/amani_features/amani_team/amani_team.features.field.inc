@@ -144,7 +144,7 @@ function amani_team_field_default_fields() {
         ),
       ),
       'deleted' => '0',
-      'description' => 'Please choose an order that you would like this team member displayed. 1 is first.',
+      'description' => 'Please choose a display ranking, lower values float to the top of the list.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -903,7 +903,7 @@ Prof.',
   t('Name');
   t('Phone');
   t('Photo');
-  t('Please choose an order that you would like this team member displayed. 1 is first.');
+  t('Please choose a display ranking, lower values float to the top of the list.');
   t('Position');
   t('Team member type');
 
