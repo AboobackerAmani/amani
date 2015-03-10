@@ -15,6 +15,8 @@ function amani_social_media_menu_default_menu_custom() {
     'menu_name' => 'menu-social-media',
     'title' => 'Configure Social Media Menu',
     'description' => 'Social media widgets for the header',
+    'language' => 'und',
+    'i18n_mode' => '0',
   );
   // Translatables
   // Included for use with string extractors like potx.
