@@ -99,35 +99,17 @@ function amani_front_page_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'front_page_box' => 'front_page_box',
   );
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
 
   /* Display: Left */
   $handler = $view->new_display('block', 'Left', 'block');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'front_page_box' => 'front_page_box',
-  );
-  $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Box position (field_box_position) */
-  $handler->display->display_options['filters']['field_box_position_value']['id'] = 'field_box_position_value';
-  $handler->display->display_options['filters']['field_box_position_value']['table'] = 'field_data_field_box_position';
-  $handler->display->display_options['filters']['field_box_position_value']['field'] = 'field_box_position_value';
-  $handler->display->display_options['filters']['field_box_position_value']['value'] = array(
-    0 => '0',
-  );
-  $handler->display->display_options['filters']['field_box_position_value']['group'] = 1;
   $handler->display->display_options['block_description'] = 'Front page left';
 
   /* Display: Centre */
@@ -158,6 +140,13 @@ function amani_front_page_views_default_views() {
     1 => '1',
   );
   $handler->display->display_options['filters']['field_box_position_value']['group'] = 1;
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
   $handler->display->display_options['block_description'] = 'Front page centre';
 
   /* Display: Right */
@@ -185,6 +174,13 @@ function amani_front_page_views_default_views() {
   $handler->display->display_options['filters']['field_box_position_value']['field'] = 'field_box_position_value';
   $handler->display->display_options['filters']['field_box_position_value']['value'] = array(
     2 => '2',
+  );
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
   $handler->display->display_options['block_description'] = 'Front page right';
   $translatables['front_page_blocks'] = array(
