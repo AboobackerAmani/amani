@@ -620,6 +620,7 @@ function amani_global_user_default_permissions() {
     'name' => 'administer languages',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'locale',
   );
@@ -2033,13 +2034,44 @@ function amani_global_user_default_permissions() {
     'module' => 'devel',
   );
 
+  // Exported permission: translate admin strings.
+  $permissions['translate admin strings'] = array(
+    'name' => 'translate admin strings',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'i18n_string',
+  );
+
+  // Exported permission: translate content.
+  $permissions['translate content'] = array(
+    'name' => 'translate content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'translation',
+  );
+
   // Exported permission: translate interface.
   $permissions['translate interface'] = array(
     'name' => 'translate interface',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'locale',
+  );
+
+  // Exported permission: translate user-defined strings.
+  $permissions['translate user-defined strings'] = array(
+    'name' => 'translate user-defined strings',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'i18n_string',
   );
 
   // Exported permission: use PHP for service visibility.
