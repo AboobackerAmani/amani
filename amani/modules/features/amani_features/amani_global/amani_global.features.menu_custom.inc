@@ -16,7 +16,7 @@ function amani_global_menu_default_menu_custom() {
     'title' => 'Amani admin menu',
     'description' => '',
     'language' => 'und',
-    'i18n_mode' => '0',
+    'i18n_mode' => '5',
   );
   // Exported menu: menu-amani-main-menu.
   $menus['menu-amani-main-menu'] = array(
@@ -24,7 +24,7 @@ function amani_global_menu_default_menu_custom() {
     'title' => 'Configure Main Menu Links',
     'description' => 'The main menu for Amani - displayed in the header and the footer',
     'language' => 'und',
-    'i18n_mode' => '0',
+    'i18n_mode' => '5',
   );
   // Exported menu: menu-donate.
   $menus['menu-donate'] = array(
@@ -32,7 +32,7 @@ function amani_global_menu_default_menu_custom() {
     'title' => 'Configure Donate Button',
     'description' => 'Donation fly-out. sitewide.',
     'language' => 'und',
-    'i18n_mode' => '0',
+    'i18n_mode' => '5',
   );
   // Exported menu: menu-meta.
   $menus['menu-meta'] = array(
