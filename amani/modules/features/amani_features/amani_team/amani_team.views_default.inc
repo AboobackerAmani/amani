@@ -187,6 +187,13 @@ function amani_team_views_default_views() {
   );
   $handler->display->display_options['filters']['field_team_member_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_team_member_type_tid']['vocabulary'] = 'team_member_type';
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');

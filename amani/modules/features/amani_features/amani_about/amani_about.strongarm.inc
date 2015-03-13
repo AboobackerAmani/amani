@@ -110,8 +110,24 @@ function amani_about_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'language_content_type_about';
+  $strongarm->name = 'i18n_node_extended_about';
   $strongarm->value = '1';
+  $export['i18n_node_extended_about'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_about';
+  $strongarm->value = array(
+    0 => 'required',
+  );
+  $export['i18n_node_options_about'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_about';
+  $strongarm->value = '2';
   $export['language_content_type_about'] = $strongarm;
 
   $strongarm = new stdClass();

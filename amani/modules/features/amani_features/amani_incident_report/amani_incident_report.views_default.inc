@@ -89,6 +89,13 @@ function amani_incident_report_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'incident_report' => 'incident_report',
   );
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
 
   /* Display: Latest incidents */
   $handler = $view->new_display('block', 'Latest incidents', 'latest');

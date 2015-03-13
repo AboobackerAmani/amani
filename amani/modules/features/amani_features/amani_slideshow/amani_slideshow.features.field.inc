@@ -348,7 +348,7 @@ function amani_slideshow_field_default_fields() {
           'resolution' => '500x250',
         ),
         'type' => 'imagefield_crop_widget',
-        'weight' => '0',
+        'weight' => 0,
       ),
     ),
   );
