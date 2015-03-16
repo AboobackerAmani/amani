@@ -344,12 +344,13 @@ function amani_global_strongarm() {
     'name' => 'English',
     'native' => 'EN',
     'direction' => '0',
-    'enabled' => '1',
+    'enabled' => 1,
     'plurals' => '0',
     'formula' => '',
     'domain' => '',
     'prefix' => '',
     'weight' => '0',
+    'javascript' => '',
   );
   $export['language_default'] = $strongarm;
 
