@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "Pulling!"
+git pull origin develop
