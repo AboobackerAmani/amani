@@ -1,6 +1,5 @@
 <?php
 
-echo"Starting...";
 try {
   $payload = json_decode($_REQUEST['payload']);
 }
@@ -11,5 +10,6 @@ catch(Exception $e) {
 if ($payload->ref === 'refs/heads/develop') {
   echo"Pulling develop branch.";
   // path to your site deployment script
-  exec('./build.sh');
+  $response = shell_exec('./build.sh');
+  echo $response;
 }
