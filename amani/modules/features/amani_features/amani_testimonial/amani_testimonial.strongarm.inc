@@ -105,7 +105,14 @@ function amani_testimonial_strongarm() {
           'weight' => '7',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'language' => array(
+          'ical' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__testimonial'] = $strongarm;

@@ -108,7 +108,14 @@ function amani_programs_campaigns_strongarm() {
           'weight' => '10',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'language' => array(
+          'ical' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__project'] = $strongarm;

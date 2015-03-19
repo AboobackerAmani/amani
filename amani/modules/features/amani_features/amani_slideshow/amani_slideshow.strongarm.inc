@@ -77,7 +77,14 @@ function amani_slideshow_strongarm() {
           'weight' => '6',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'language' => array(
+          'teaser' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__slideshow'] = $strongarm;
