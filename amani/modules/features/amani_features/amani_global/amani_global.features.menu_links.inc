@@ -10,6 +10,25 @@
 function amani_global_menu_default_menu_links() {
   $menu_links = array();
 
+  // Exported menu link: menu-amani-admin-menu:admin/config/regional/language
+  $menu_links['menu-amani-admin-menu:admin/config/regional/language'] = array(
+    'menu_name' => 'menu-amani-admin-menu',
+    'link_path' => 'admin/config/regional/language',
+    'router_path' => 'admin/config/regional/language',
+    'link_title' => 'Manage languages',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '0',
+  );
   // Exported menu link: menu-amani-admin-menu:admin/configure-amani
   $menu_links['menu-amani-admin-menu:admin/configure-amani'] = array(
     'menu_name' => 'menu-amani-admin-menu',
@@ -177,6 +196,7 @@ function amani_global_menu_default_menu_links() {
   t('Configure Amani');
   t('Configure Main Menu Links');
   t('Manage drop down lists');
+  t('Manage languages');
   t('Manage users');
   t('My account');
   t('admin');
