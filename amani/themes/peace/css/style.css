@@ -957,8 +957,6 @@ label {
 .front #main .container-inner {
   margin-top: 0;
   padding-top: 0; }
-.front .block-menu .block-title {
-  display: none; }
 
 #block-views-partners_carousel-block a.jcarousel-next {
   display: inline-block;
@@ -1055,6 +1053,9 @@ label {
 #block-system-main-menu,
 #block-menu-menu-amani-main-menu {
   border-right: 1px solid #fff; }
+  #block-system-main-menu .block-title,
+  #block-menu-menu-amani-main-menu .block-title {
+    display: none; }
   #block-system-main-menu .content ul li,
   #block-menu-menu-amani-main-menu .content ul li {
     list-style-type: none;
