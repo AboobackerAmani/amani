@@ -115,6 +115,10 @@ function amani_about_strongarm() {
             'weight' => '0',
             'visible' => FALSE,
           ),
+          'ical' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),

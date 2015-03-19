@@ -50,7 +50,7 @@ function amani_slideshow_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 3,
+          'weight' => '3',
         ),
         'ical' => array(
           'label' => 'above',
@@ -228,7 +228,7 @@ function amani_slideshow_field_default_fields() {
           'module' => 'list',
           'settings' => array(),
           'type' => 'list_default',
-          'weight' => 5,
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -299,7 +299,7 @@ function amani_slideshow_field_default_fields() {
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => 1,
+          'weight' => '1',
         ),
         'ical' => array(
           'label' => 'above',
@@ -395,7 +395,7 @@ function amani_slideshow_field_default_fields() {
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => 4,
+          'weight' => '4',
         ),
         'ical' => array(
           'label' => 'above',

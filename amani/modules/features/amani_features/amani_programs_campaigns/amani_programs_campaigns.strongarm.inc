@@ -114,6 +114,14 @@ function amani_programs_campaigns_strongarm() {
             'weight' => '0',
             'visible' => FALSE,
           ),
+          'default' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),
