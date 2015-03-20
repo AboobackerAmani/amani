@@ -27,8 +27,8 @@ function amani_team_field_group_info() {
       1 => 'field_name',
       2 => 'field_phone',
       3 => 'field_team_bio',
-      4 => 'field_team_title',
-      5 => 'field_team_member_type',
+      4 => 'field_team_member_type',
+      5 => 'field_team_title',
     ),
     'format_type' => 'div',
     'format_settings' => array(

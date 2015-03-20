@@ -147,6 +147,7 @@ function amani_testimonial_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
         'profile2_private' => FALSE,
       ),
       'translatable' => '0',

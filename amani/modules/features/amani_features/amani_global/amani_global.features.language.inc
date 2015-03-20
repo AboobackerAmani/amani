@@ -29,7 +29,7 @@ function amani_global_locale_default_languages() {
     'name' => 'French',
     'native' => 'FR',
     'direction' => '0',
-    'enabled' => '0',
+    'enabled' => '1',
     'plurals' => '0',
     'formula' => '',
     'domain' => '',
