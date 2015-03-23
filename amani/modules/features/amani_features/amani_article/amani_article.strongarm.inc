@@ -140,7 +140,7 @@ function amani_article_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_options_article';
   $strongarm->value = array(
-    0 => 'required',
+    0 => 'current',
   );
   $export['i18n_node_options_article'] = $strongarm;
 

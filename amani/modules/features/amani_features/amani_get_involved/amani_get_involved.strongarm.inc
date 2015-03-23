@@ -137,7 +137,7 @@ function amani_get_involved_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_options_get_involved';
   $strongarm->value = array(
-    0 => 'required',
+    0 => 'current',
   );
   $export['i18n_node_options_get_involved'] = $strongarm;
 
