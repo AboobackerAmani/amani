@@ -133,7 +133,7 @@ function amani_blog_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_options_blog';
   $strongarm->value = array(
-    0 => 'required',
+    0 => 'current',
   );
   $export['i18n_node_options_blog'] = $strongarm;
 

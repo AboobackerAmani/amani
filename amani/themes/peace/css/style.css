@@ -2000,12 +2000,12 @@ label {
       .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-min-wrapper .form-item label,
       .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper .form-item label {
         position: absolute;
-        top: 45px;
+        top: 49px;
         width: 100%; }
       .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-min-wrapper .form-item .description,
       .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper .form-item .description {
         position: relative;
-        top: 10px; }
+        top: 12px; }
   .page-resources .view-resources .views-exposed-form .views-widget-filter-field_date_value #edit-field-date-value-max-wrapper {
     margin-right: 0; }
   .page-resources .view-resources .views-exposed-form .views-submit-button .form-submit,
@@ -3291,6 +3291,7 @@ body.node-type-activity .node-team .group-right {
   font-weight: normal;
   display: inline-block;
   font-style: italic;
+  font-size: 14px;
   display: block;
   float: left;
   margin-right: 6.66667%;
@@ -3538,6 +3539,10 @@ body.node-type-activity .node-team .group-right {
   .view-current-activations .node-teaser .content .field-name-field-team-bio {
     font-family: "Georgia";
     margin-top: 10px; }
+
+.incident-map-filter label {
+  font-size: 100%;
+  padding-bottom: 0px; }
 
 input[type=submit] {
   padding: 3px 7px; }

@@ -76,6 +76,7 @@ function amani_block_and_views_views_default_views() {
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+    'und' => 'und',
   );
 
   /* Display: Page */
@@ -283,6 +284,7 @@ function amani_block_and_views_views_default_views() {
   $handler->display->display_options['filters']['language']['field'] = 'language';
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+    'und' => 'und',
   );
   $handler->display->display_options['block_description'] = 'Latest News';
   $translatables['news_and_events'] = array(

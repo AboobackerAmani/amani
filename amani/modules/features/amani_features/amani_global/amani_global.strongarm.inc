@@ -201,15 +201,33 @@ function amani_global_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_extended_forum';
+  $strongarm->value = '1';
+  $export['i18n_node_extended_forum'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_extended_webform';
-  $strongarm->value = 1;
+  $strongarm->value = '1';
   $export['i18n_node_extended_webform'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_forum';
+  $strongarm->value = array(
+    0 => 'current',
+  );
+  $export['i18n_node_options_forum'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_options_webform';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'current',
+  );
   $export['i18n_node_options_webform'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -407,6 +425,13 @@ function amani_global_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_forum';
+  $strongarm->value = '2';
+  $export['language_content_type_forum'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_webform';
   $strongarm->value = '2';
   $export['language_content_type_webform'] = $strongarm;
@@ -442,13 +467,6 @@ function amani_global_strongarm() {
         'url_rewrite' => 'locale_language_url_rewrite_url',
       ),
       'file' => 'includes/locale.inc',
-    ),
-    'locale-browser' => array(
-      'callbacks' => array(
-        'language' => 'locale_language_from_browser',
-      ),
-      'file' => 'includes/locale.inc',
-      'cache' => 0,
     ),
     'language-default' => array(
       'callbacks' => array(
@@ -566,6 +584,15 @@ function amani_global_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_forum';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_forum'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_webform';
   $strongarm->value = array(
     0 => 'status',
@@ -576,9 +603,23 @@ function amani_global_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_forum';
+  $strongarm->value = '1';
+  $export['node_preview_forum'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_webform';
   $strongarm->value = '1';
   $export['node_preview_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_forum';
+  $strongarm->value = 1;
+  $export['node_submitted_forum'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

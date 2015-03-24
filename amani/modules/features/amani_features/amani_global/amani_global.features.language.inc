@@ -23,18 +23,5 @@ function amani_global_locale_default_languages() {
     'prefix' => '',
     'weight' => '0',
   );
-  // Exported language: fr.
-  $languages['fr'] = array(
-    'language' => 'fr',
-    'name' => 'French',
-    'native' => 'FR',
-    'direction' => '0',
-    'enabled' => '1',
-    'plurals' => '0',
-    'formula' => '',
-    'domain' => '',
-    'prefix' => 'fr',
-    'weight' => '0',
-  );
   return $languages;
 }
