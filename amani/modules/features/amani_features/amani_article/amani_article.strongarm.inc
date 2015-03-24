@@ -111,6 +111,9 @@ function amani_article_strongarm() {
         'path' => array(
           'weight' => '7',
         ),
+        'language' => array(
+          'weight' => '0',
+        ),
       ),
       'display' => array(
         'language' => array(
