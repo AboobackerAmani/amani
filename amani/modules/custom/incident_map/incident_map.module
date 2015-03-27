@@ -508,10 +508,9 @@ function incident_map_leaflet_framework_maps() {
 
   $view = array();
   if (variable_get("$prefix-auto", FALSE)) {
-    geophp_load();
-    $geojson = incident_map_report_geojson();
-    $geom = geoPHP::load(drupal_json_encode($geojson), 'json');
-    $view['auto'] = $geom->getBBox();
+    $info = geojson_info_load('incident-reports');
+    $resource = geojson_load($info);
+    $view['auto'] = $resource->getBBox();
   }
   else {
     $view['center'] = array(variable_get("$prefix-lat", 0.0), variable_get("$prefix-lng", 0.0));
@@ -635,30 +634,32 @@ function incident_map_add_markers($setting, $wrapper) {
  */
 function incident_map_geojson_info() {
   return array(
-    array(
-      'uri' => 'incident-reports',
+    'incident-reports' => array(
+      'route' => 'incident-reports',
       'name' => 'Incident Map',
-      'callback' => 'incident_map_report_geojson',
-      'access' => array('access content'),
+      'data callback' => 'incident_map_report_values',
+      'factory' => 'GeoJSONGeofieldFeatureFactory',
+      'factory args' => array(
+        'entity_type' => 'node',
+        'geofield' => 'field_incident_geolocation',
+        'properties callback' => 'incident_report_geojson_feature_factory',
+      ),
+      'access arguments' => array('access content'),
       'query' => array(
         'severity' => array('fieldCondition', 'field_incident_severity:tid', '=', NULL),
         'type' => array('fieldCondition', 'field_incident_report_type:tid', '=', NULL),
         'from' => array('fieldCondition', 'field_incident_date:value', '>=', NULL),
         'to' => array('fieldCondition', 'field_incident_date:value', '<=', NULL),
       ),
+      'use cache' => TRUE,
     ),
   );
 }
 
 /**
- * Callback for generating incident map geojson.
+ * Callback for generating incident map report nodes.
  */
-function incident_map_report_geojson($info = array()) {
-  $library = libraries_load('geojson');
-  if (!$library || !isset($library['installed'])) {
-    return MENU_NOT_FOUND;
-  }
-
+function incident_map_report_values($info = array()) {
   $query = new EntityFieldQuery();
   if (isset($info['query'])) {
     incident_map_query_handler($query, $info['query']);
@@ -671,10 +672,7 @@ function incident_map_report_geojson($info = array()) {
 
   $result = $query->execute();
   $nids = empty($result['node']) ? array() : array_keys($result['node']);
-  $wrappers = entity_metadata_wrapper('list<node>', $nids);
-
-  $factory = 'incident_report_geojson_feature_factory';
-  return Affinity\GeoJSON\feature_collection($wrappers, $factory);
+  return entity_load('node', $nids);
 }
 
 /**
@@ -687,14 +685,11 @@ function incident_map_report_geojson($info = array()) {
  *    A GeoJSON feature object.
  *    (see: Affinity\GeoJSON\feature()).
  */
-function incident_report_geojson_feature_factory($wrapper) {
-  $geofield = $wrapper->field_incident_geolocation;
-  $geom = Affinity\GeoJSON\create_geophp_geometry($geofield, 'incident_report_get_geom');
-  if (empty($geom)) return NULL;
+function incident_report_geojson_feature_factory($node) {
+  $wrapper = entity_metadata_wrapper('node', $node);
+  $uri = entity_uri('node', $node);
 
-  $uri = entity_uri($wrapper->type(), $wrapper->value());
-
-  $teaser = node_view($wrapper->value(), 'teaser');
+  $teaser = node_view($node, 'teaser');
   $properties = array(
     'title' => $wrapper->label(),
     'uri' => $uri['path'],
@@ -708,7 +703,7 @@ function incident_report_geojson_feature_factory($wrapper) {
     }
   }
 
-  return Affinity\GeoJSON\feature($geom, $properties);
+  return $properties;
 }
 
 /**
