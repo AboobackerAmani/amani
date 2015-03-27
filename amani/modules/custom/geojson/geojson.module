@@ -1,34 +1,8 @@
 <?php
 
-/**
- * Implements hook_menu().
- */
-function geojson_menu() {
-  $items = array();
+define("GEOJSON_MENU_PREFIX", "/geojson");
 
-  foreach (geojson_info() as $info) {
-     $item = array(
-      'title' => $info['name'],
-      'description' => '',
-      'page callback' => 'geojson_json_menu_callback',
-      'page arguments' => array($info['callback'], $info),
-      'access arguments' => array(),
-      'type' => MENU_CALLBACK,
-    );
-
-    if (isset($info['arguments'])) {
-      $item['page arguments'] += $info['arguments'];
-    }
-
-    if (isset($info['access'])) {
-      $item['access arguments'] += $info['access'];
-    }
-
-    $items["geojson/{$info['uri']}"] = $item;
-  }
-
-  return $items;
-}
+use Affinity\GeoJSON\Resource as GeoJSONResource;
 
 /**
  * Implements hook_libraries_info().
@@ -42,11 +16,58 @@ function geojson_libraries_info() {
       'version' => '0.0.1',
       'files' => array(
         'php' => array(
-          'geojson.php'
+          // 'Affinity/GeoJSON/CacheInterface.php',
+          'Affinity/GeoJSON/Resource.php',
+          'Affinity/GeoJSON/FeatureFactory.php'
         ),
       ),
     ),
   );
+}
+
+/**
+ * Implements hook_node_presave().
+ */
+function geojson_node_presave($node) {
+  if (isset($node->nid)) {
+    // Clear all cached geojson values for this node ('geojson:{nid}:*').
+    cache_clear_all("geojson:{$node->nid}", 'cache', TRUE);
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function geojson_menu() {
+  $items = array();
+
+  foreach (geojson_info_load() as $id => $info) {
+    $resource = geojson_load($info);
+    $offset = count(explode('/', trim($resource->endpoint(), '/')));
+
+    foreach (array('load arguments', 'page arguments', 'access arguments') as $key) {
+      if (isset($info[$key])) foreach ($info[$key] as &$argument) {
+        // Assuming numeric arguments refer to hook_menu() style url 'loaders'
+        // and therefore need to be offset by the number of components in the
+        // geojson menu prefix.
+        if (is_numeric($argument)) $argument += $offset;
+      }
+    }
+
+    $args = array($id);
+    if (isset($info['page arguments'])) $args = array_merge($args, $info['page arguments']);
+
+    $item = array_merge($info, array(
+      'page callback' => 'geojson_json_menu_callback',
+      'page arguments' => $args,
+      'type' => MENU_CALLBACK,
+    ));
+
+    $url = trim($resource->uri(), '/');
+    $items[$url] = $item;
+  }
+
+  return $items;
 }
 
 /**
@@ -57,13 +78,15 @@ function geojson_libraries_info() {
  */
 function geojson_json_menu_callback() {
   $args = func_get_args();
-  $callback = array_shift($args);
+  $info = geojson_info_load(array_shift($args));
 
-  $data = call_user_func_array($callback, $args);
+  $resource = geojson_load($info, $args);
+  $data = $resource->geojson();
 
   if (!$data) {
     return MENU_NOT_FOUND;
   }
+  // Pass error response codes on to drupal to handle.
   else if (is_numeric($data)) {
     return $data;
   }
@@ -82,12 +105,123 @@ function geojson_response_json($data) {
 }
 
 /**
- * Get all incident map geojson.
  *
- * Invokes hook_geojson_info().
  */
-function geojson_info() {
-  // TODO: Cache here.
-  $resources = module_invoke_all('geojson_info');
-  return $resources;
+function _geojson_info($reset = FALSE) {
+  $definitions = drupal_static(__FUNCTION__);
+
+  if (empty($definitions) || $reset) {
+    $cache = cache_get('geojson:resource_definitions');
+
+    if (!$cache || $reset) {
+      $definitions = module_invoke_all('geojson_info');
+      cache_set('geojson:resource_definitions', $definitions);
+      return $definitions;
+    }
+
+    $definitions = $cache->data;
+  }
+
+  return $definitions;
 }
+
+/**
+ * function geojson_info_load - Get a hook_geojson_info array.
+ *
+ * @param string $id the id of the hook_geojson_info array to be fetched
+ *
+ * @return array The hook_geojson_info array, which is similar to a menu definition.
+ *
+ */
+function geojson_info_load($id = NULL) {
+  $definitions = _geojson_info();
+
+  if (empty($id)) {
+    return $definitions;
+  }
+
+  return isset($definitions[$id]) ? $definitions[$id] : NULL;
+}
+
+/**
+ * function geojson_load - Get a geojson resource from a geojson info array.
+ *
+ * @param array $info A hook_geojson_info array
+ *
+ * @param array $args The arguments to be passed to the data callback defined in the $info array
+ *
+ * @return GeoJSONResource The resource, which can be rendered or used for setting a bounding box.
+ *
+ */
+function geojson_load($info, $args = array()) {
+  $library = libraries_load('geojson');
+  if (!$library || !isset($library['installed'])) {
+    return FALSE;
+  }
+
+  $callback = $info['data callback'];
+  $loader = function() use ($callback, $args) {
+    return call_user_func_array($callback, $args);
+  };
+
+  if (isset($info['use cache']) && $info['use cache'] && !isset($info['cache'])) {
+    $info['cache'] = new GeojsonDrupalCache();
+  }
+
+  return $resource = new GeoJSONResource(GEOJSON_MENU_PREFIX, $info, $loader);
+}
+
+/**
+ *
+ */
+function geojson_access($info) {
+  $params = array_slice(func_get_args(), 1);
+  $access = 'user_access';
+
+  if (isset($info['access callback'])) {
+    $access = $info['access callback'];
+  }
+
+  $args = array();
+  if (isset($info['access arguments'])) {
+    foreach ($info['access arguments'] as $arg) {
+      $args[] = !is_numeric($arg) ? $arg : array_shift($params);
+    }
+  }
+  $args = array_merge($args, $params);
+
+  return call_user_func_array($access, $args);
+}
+
+/**
+ * Implements hook_registry_files_alter().
+ */
+/**
+ * Drupal doesn't support namespaces in its autoload registry.
+ *
+function geojson_registry_files_alter(&$files, $modules) {
+  // Manually inserting the PHP-GeoJSON library's class definitions into
+  // Drupal's registry for autoloading.
+  // We need to do this to ensure Interfaces and base classes provided by
+  // PHP-GeoJSON are available.
+  //
+  // See: https://drupal.org/node/1092270
+  $system_list = system_list('module_enabled');
+  $weight = $system_list['geojson']->weight;
+
+  $library = libraries_detect('geojson');
+  if ($library && isset($library['installed'])) {
+    $path = $library['library path'];
+    $path = ($library['path'] !== '' ? $path . '/' . $library['path'] : $path);
+
+    if (isset($library['files']['php'])) {
+      foreach ($library['files']['php'] as $filename => $includes) {
+        $files["$path/$filename"] = array(
+          'module' => $library['module'],
+          'weight' => $weight,
+        );
+      }
+    }
+  }
+}
+ */
