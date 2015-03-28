@@ -6,7 +6,7 @@
     function barChart() {
         if (!barChart.id) barChart.id = 0;
 
-        var margin = {top: 10, right: 10, bottom: 20, left: 10},
+        var margin = {top: 10, right: 10, bottom: 80, left: 10},
             x,
             y = d3.scale.linear().range([100, 0]),
             id = barChart.id++,
@@ -57,7 +57,7 @@
                         .attr("clip-path", "url(#clip-" + id + ")");
 
                     g.append("g")
-                        .attr("class", "axis")
+                        .attr("class", "x axis")
                         .attr("transform", "translate(0," + height + ")")
                         .call(axis);
 
@@ -75,7 +75,14 @@
                         .attr("height", height + margin.top + margin.bottom);
                 clip    .attr("width", width)
                         .attr("height", height);
-                x_axis  .call(axis);
+                x_axis  .call(axis)
+                        .selectAll("text")  
+                            .style("text-anchor", "end")
+                            .attr("dx", "-.8em")
+                            .attr("dy", ".15em")
+                            .attr("transform", function(d) {
+                                return "rotate(-65)" 
+                            });
 
                 // Only redraw the brush if set externally.
                 if (brushDirty) {
