@@ -778,9 +778,9 @@ Prof.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'taxonomy',
+          'module' => 'i18n_taxonomy',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
+          'type' => 'i18n_taxonomy_term_reference_link',
           'weight' => '3',
         ),
         'ical' => array(

@@ -546,9 +546,9 @@ function amani_programs_campaigns_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'taxonomy',
+          'module' => 'i18n_taxonomy',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
+          'type' => 'i18n_taxonomy_term_reference_link',
           'weight' => '5',
         ),
         'ical' => array(

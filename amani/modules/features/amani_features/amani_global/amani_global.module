@@ -96,7 +96,7 @@ function amani_global_block_view($delta = '') {
       $block['content'] = amani_global_add_content_links();
       break;
     case 'site_contact_info':
-      $block['title'] = 'Where are we?';
+      $block['title'] = t('Where are we?');
       $block['content'] = amani_global_site_contact_info();
       break;
   }
@@ -145,23 +145,26 @@ function amani_global_site_contact_info() {
   $map = leaflet_framework_map($map_id, array(), array());
 
   $content = array(
-    '' => variable_get('site_address', NULL)
+    'Address' => variable_get('site_address', NULL)
   );
   if ($phone = variable_get('site_phone', NULL)) {
-    $content['T: '] = $phone;
+    $content['T'] = $phone;
   }
   if ($mail = variable_get('site_mail', NULL)) {
-    $content['E: '] = $mail;
+    $content['E'] = $mail;
   }
   if ($hours = variable_get('site_hours', NULL)) {
-    $content['Hours: '] = $hours;
+    $content['Hours'] = $hours;
   }
   if ($content) {
     $output .= '<div id="contact_form_site_info">';
     foreach ($content as $item => $value) {
-      $output .= '<p>'.$item.nl2br($value).'</p>';
+      $output .= '<p>';
+      // Dont show our address label
+      if ($item != 'Address') {  $output .= t($item) . ': '; }
+      $output .= nl2br($value) . '</p>';
     }
-    $output .= drupal_render($map);
+    $output .= render($map);
     $output .='</div>';
   }
   return $output;
