@@ -161,8 +161,8 @@ function amani_global_site_contact_info() {
     foreach ($content as $item => $value) {
       $output .= '<p>';
       // Dont show our address label
-      if ($item != 'Address') {  $output .= t($item) . ': '; }
-      $output .= nl2br($value) . '</p>';
+      if ($item != 'Address') {  $output .= t($item . ': '); }
+      $output .= nl2br(t($value)) . '</p>';
     }
     $output .= render($map);
     $output .='</div>';

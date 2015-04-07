@@ -8,18 +8,45 @@ function amani_administrator_configure_newsletter_button_form() {
   $form['amani_administrator_newsletter_title'] = array(
     '#title' => 'Newsletter button title',
     '#type' => 'textfield',
-    '#default_value' => variable_get('amani_administrator_newsletter_title', 'Newsletter'),
+    '#default_value' => t(variable_get('amani_administrator_newsletter_title', 'Newsletter')),
     '#description' => t('The text that will appear on the newsletter button.'),
   );
 
   $form['amani_administrator_newsletter_link'] = array(
     '#title' => 'Newsletter button link',
     '#type' => 'textfield',
-    '#default_value' => variable_get('amani_administrator_newsletter_link', ''),
+    '#default_value' => t(variable_get('amani_administrator_newsletter_link', '')),
     '#description' => t('The url for the newsletter button (ie http://www.my-newsletter.com).'),
   );
 
   return system_settings_form($form);
+}
+
+/**
+  * Implements hook_variable_info().
+  *
+  * This allows us to localize these variables.
+  */
+function amani_administrator_variable_info($options) {
+  $variables['amani_administrator_newsletter_title'] = array(
+    'type' => 'string',
+    'title' => t('Newsletter title', array(), $options),
+    'default' => 'Newsletter',
+    'description' => t('The text that will appear on the newsletter button', array(), $options),
+    'required' => FALSE,
+    'localize' => TRUE,
+  );
+
+  $variables['amani_administrator_newsletter_link'] = array(
+    'type' => 'string',
+    'title' => t('Newsletter link', array(), $options),
+    'default' => '',
+    'description' => t('The url for the newsletter', array(), $options),
+    'required' => FALSE,
+    'localize' => TRUE,
+  );
+
+  return $variables;
 }
 
 /**

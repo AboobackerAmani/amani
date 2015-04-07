@@ -233,6 +233,13 @@ function amani_global_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_variables';
+  $strongarm->value = array();
+  $export['i18n_variables'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'image_captcha_distortion_amplitude';
   $strongarm->value = '0';
   $export['image_captcha_distortion_amplitude'] = $strongarm;
