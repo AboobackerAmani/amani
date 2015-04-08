@@ -352,7 +352,7 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['nid']['alter']['text'] = '(more)';
+  $handler->display->display_options['fields']['nid']['alter']['text'] = 'more';
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nid']['link_to_node'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
@@ -505,7 +505,6 @@ function amani_resource_views_default_views() {
     t('Page'),
     t('<h2>Documents</h2>'),
     t('Resource Theme(s)'),
-    t('(more)'),
     t('Resource Theme'),
   );
   $export['resources'] = $view;
