@@ -1053,8 +1053,8 @@ label {
 #block-system-main-menu,
 #block-menu-menu-amani-main-menu {
   border-right: 1px solid #fff; }
-  #block-system-main-menu .block-title,
-  #block-menu-menu-amani-main-menu .block-title {
+  #block-system-main-menu h2.block-title,
+  #block-menu-menu-amani-main-menu h2.block-title {
     display: none; }
   #block-system-main-menu .content ul li,
   #block-menu-menu-amani-main-menu .content ul li {
@@ -1420,6 +1420,8 @@ label {
     width: 100%;
     height: auto; }
 
+#block-menu-menu-meta h2.block-title {
+  display: none; }
 #header-region #block-menu-menu-meta {
   float: right;
   display: inline-block;
