@@ -40,7 +40,7 @@ function amani_global_menu_default_menu_custom() {
     'title' => 'meta',
     'description' => 'The three item menu that appears in the header as well as the footer',
     'language' => 'und',
-    'i18n_mode' => '0',
+    'i18n_mode' => '5',
   );
   // Translatables
   // Included for use with string extractors like potx.
