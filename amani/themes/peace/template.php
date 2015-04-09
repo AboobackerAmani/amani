@@ -348,3 +348,11 @@ function peace_node_view_alter(&$build) {
     }
   }
 }
+
+/**
+ * Implements hook_view_pre_render()
+ */
+function peace_views_pre_render(&$view) {
+  // Pass views titles through t function
+  $view->set_title(t($view->get_title()));
+}

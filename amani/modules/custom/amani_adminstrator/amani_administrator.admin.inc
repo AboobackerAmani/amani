@@ -8,18 +8,45 @@ function amani_administrator_configure_newsletter_button_form() {
   $form['amani_administrator_newsletter_title'] = array(
     '#title' => 'Newsletter button title',
     '#type' => 'textfield',
-    '#default_value' => variable_get('amani_administrator_newsletter_title', 'Newsletter'),
+    '#default_value' => t(variable_get('amani_administrator_newsletter_title', 'Newsletter')),
     '#description' => t('The text that will appear on the newsletter button.'),
   );
 
   $form['amani_administrator_newsletter_link'] = array(
     '#title' => 'Newsletter button link',
     '#type' => 'textfield',
-    '#default_value' => variable_get('amani_administrator_newsletter_link', ''),
+    '#default_value' => t(variable_get('amani_administrator_newsletter_link', '')),
     '#description' => t('The url for the newsletter button (ie http://www.my-newsletter.com).'),
   );
 
   return system_settings_form($form);
+}
+
+/**
+  * Implements hook_variable_info().
+  *
+  * This allows us to localize these variables.
+  */
+function amani_administrator_variable_info($options) {
+  $variables['amani_administrator_newsletter_title'] = array(
+    'type' => 'string',
+    'title' => t('Newsletter title', array(), $options),
+    'default' => 'Newsletter',
+    'description' => t('The text that will appear on the newsletter button', array(), $options),
+    'required' => FALSE,
+    'localize' => TRUE,
+  );
+
+  $variables['amani_administrator_newsletter_link'] = array(
+    'type' => 'string',
+    'title' => t('Newsletter link', array(), $options),
+    'default' => '',
+    'description' => t('The url for the newsletter', array(), $options),
+    'required' => FALSE,
+    'localize' => TRUE,
+  );
+
+  return $variables;
 }
 
 /**
@@ -86,6 +113,39 @@ function amani_administrator_configure_amani_form() {
   $form['main_menu'][] = array(
     '#type' => 'button',
     '#value' => t('Configure Main Menu Links'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' =>
+    '<p>This action allows users to:
+      <ul style="margin-left:20px">
+        <li>Enable, disable or delete any menu links</li>
+        <li>Set menu links </li>
+        <li>Establish menu ordering and manage sub-menus</li>
+      </ul>
+     </p>
+    </div>',
+  );
+
+  $form['meta_menu'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Manage Meta Menu'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['meta_menu'][] = array(
+    '#type' => 'button',
+    '#value' => t('Reset Default Meta Menu Links'),
+    '#attributes' => array('onclick' => 'if(!confirm("Are you sure?")){return false;}'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action builds the default meta menu (home, admin, login/logout) located below the top right search.
+      It will not enable or remove any existing links.</p></div>',
+  );
+
+  $form['meta_menu'][] = array(
+    '#type' => 'button',
+    '#value' => t('Configure Meta Menu Links'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
     '#suffix' =>
@@ -437,11 +497,18 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       amani_administrator_create_menu_links('menu-amani-main-menu');
       drupal_set_message('Menu link paths can now be configured ' . l('here', 'admin/structure/menu/manage/menu-amani-main-menu'));
       break;
+    case 'Reset Default Meta Menu Links':
+      amani_administrator_create_menu_links('menu-meta');
+      drupal_set_message('Menu link paths can now be configured ' . l('here', 'admin/structure/menu/manage/menu-meta'));
+      break;
     case 'Configure Social Media Icons':
       drupal_goto('admin/structure/menu/manage/menu-social-media');
       break;
     case 'Configure Main Menu Links':
       drupal_goto('admin/structure/menu/manage/menu-amani-main-menu');
+      break;
+    case 'Configure Meta Menu Links':
+      drupal_goto('admin/structure/menu/manage/menu-meta');
       break;
     case 'Configure \'Donate\' Button':
       drupal_goto('admin/structure/menu/manage/menu-donate');

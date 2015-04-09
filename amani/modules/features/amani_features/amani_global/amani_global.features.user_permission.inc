@@ -675,6 +675,16 @@ function amani_global_user_default_permissions() {
     'module' => 'menu_admin_per_menu',
   );
 
+  // Exported permission: administer menu-meta menu items.
+  $permissions['administer menu-meta menu items'] = array(
+    'name' => 'administer menu-meta menu items',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'menu_admin_per_menu',
+  );
+
   // Exported permission: administer meta tags.
   $permissions['administer meta tags'] = array(
     'name' => 'administer meta tags',

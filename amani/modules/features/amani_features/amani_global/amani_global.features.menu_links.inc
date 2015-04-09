@@ -138,78 +138,6 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-46',
   );
-  // Exported menu link: menu-meta:<front>
-  $menu_links['menu-meta:<front>'] = array(
-    'menu_name' => 'menu-meta',
-    'link_path' => '<front>',
-    'router_path' => '',
-    'link_title' => 'home',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '1',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-50',
-  );
-  // Exported menu link: menu-meta:amani/content-admin
-  $menu_links['menu-meta:amani/content-admin'] = array(
-    'menu_name' => 'menu-meta',
-    'link_path' => 'amani/content-admin',
-    'router_path' => 'amani/content-admin',
-    'link_title' => 'admin',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'Manage content',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-49',
-  );
-  // Exported menu link: menu-meta:user/login
-  $menu_links['menu-meta:user/login'] = array(
-    'menu_name' => 'menu-meta',
-    'link_path' => 'user/login',
-    'router_path' => 'user/login',
-    'link_title' => 'login ',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-47',
-  );
-  // Exported menu link: menu-meta:user/logout
-  $menu_links['menu-meta:user/logout'] = array(
-    'menu_name' => 'menu-meta',
-    'link_path' => 'user/logout',
-    'router_path' => 'user/logout',
-    'link_title' => 'logout',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-46',
-  );
   // Translatables
   // Included for use with string extractors like potx.
   t('Configure Amani');
@@ -219,10 +147,6 @@ function amani_global_menu_default_menu_links() {
   t('Manage users');
   t('My account');
   t('Translate strings');
-  t('admin');
-  t('home');
-  t('login ');
-  t('logout');
 
 
   return $menu_links;
