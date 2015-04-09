@@ -34,6 +34,14 @@ function amani_global_menu_default_menu_custom() {
     'language' => 'und',
     'i18n_mode' => '5',
   );
+  // Exported menu: menu-meta.
+  $menus['menu-meta'] = array(
+    'menu_name' => 'menu-meta',
+    'title' => 'meta',
+    'description' => '',
+    'language' => 'und',
+    'i18n_mode' => '5',
+  );
   // Translatables
   // Included for use with string extractors like potx.
   t('Amani admin menu');
@@ -41,6 +49,7 @@ function amani_global_menu_default_menu_custom() {
   t('Configure Main Menu Links');
   t('Donation fly-out. sitewide.');
   t('The main menu for Amani - displayed in the header and the footer');
+  t('meta');
 
 
   return $menus;

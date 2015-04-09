@@ -10,7 +10,11 @@ function amani_install_tasks() {
     'run' => INSTALL_TASK_RUN_IF_NOT_COMPLETED,
     'function' => 'enable_image_file_display',
   );
-
+  $tasks['build_menus'] = array(
+    'type' => 'normal',
+    'run' => INSTALL_TASK_RUN_IF_NOT_COMPLETED,
+    'function' => 'build_amani_menus',
+  );
   $tasks['revert_amani_features_task'] = array(
     'type' => 'normal',
     'run' => INSTALL_TASK_RUN_IF_NOT_COMPLETED,
@@ -25,4 +29,14 @@ function amani_install_tasks() {
  */
 function revert_amani_features() {
   features_revert();
+}
+
+/**
+ * Build out our 4 default menus
+ */
+function build_amani_menus() {
+  amani_administrator_create_menu_links('menu-social-media');
+  amani_administrator_create_menu_links('menu-amani-main-menu');
+  amani_administrator_create_menu_links('menu-donate');
+  amani_administrator_create_menu_links('menu-meta');
 }
