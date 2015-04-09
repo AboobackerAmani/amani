@@ -86,17 +86,8 @@ function amani_administrator_create_menu_links($menu_machine_name) {
     default: return;
   }
   $current_menu_links = array();
-  // First try and load the menu, if it doesn't exist create it
-  $menu = menu_load($menu_machine_name);
-  if (!$menu) {
-    $menu = array(
-      'menu_name' => $menu_machine_name,
-      'title' => 'Please enter a name for: ' . $menu_machine_name,
-      'description' => 'Please enter a description for: ' . $menu_machine_name,
-    );
-
-    menu_save($menu);
-  }
+  // If we can't load the menu return the menus themselves are in features.
+  if (!menu_load($menu_machine_name)) { return; }
 
   // We will have to consider the link title the unique identifier for the link
   // in this menu. If a link with the same title already exists we wont be

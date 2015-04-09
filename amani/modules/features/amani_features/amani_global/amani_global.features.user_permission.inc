@@ -625,15 +625,6 @@ function amani_global_user_default_permissions() {
     'module' => 'locale',
   );
 
-  // Exported permission: administer main-menu menu items.
-  $permissions['administer main-menu menu items'] = array(
-    'name' => 'administer main-menu menu items',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'menu_admin_per_menu',
-  );
-
   // Exported permission: administer media galleries.
   $permissions['administer media galleries'] = array(
     'name' => 'administer media galleries',
@@ -653,36 +644,6 @@ function amani_global_user_default_permissions() {
       1 => 'amani administrator',
     ),
     'module' => 'menu',
-  );
-
-  // Exported permission: administer menu-amani-main-menu menu items.
-  $permissions['administer menu-amani-main-menu menu items'] = array(
-    'name' => 'administer menu-amani-main-menu menu items',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'amani administrator',
-    ),
-    'module' => 'menu_admin_per_menu',
-  );
-
-  // Exported permission: administer menu-donate menu items.
-  $permissions['administer menu-donate menu items'] = array(
-    'name' => 'administer menu-donate menu items',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'amani administrator',
-    ),
-    'module' => 'menu_admin_per_menu',
-  );
-
-  // Exported permission: administer menu-meta menu items.
-  $permissions['administer menu-meta menu items'] = array(
-    'name' => 'administer menu-meta menu items',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'amani administrator',
-    ),
-    'module' => 'menu_admin_per_menu',
   );
 
   // Exported permission: administer meta tags.
