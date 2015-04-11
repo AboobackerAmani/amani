@@ -34,7 +34,8 @@ function amani_sms_endpoint() {
     "payload"=> array(
       "success"=>$success,
       "error" => $error
-    ));
+    )
+  ));
 }
 
 /**
