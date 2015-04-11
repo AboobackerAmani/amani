@@ -1,0 +1,19 @@
+<?php 
+
+/**
+ * Implments hook_menu().
+ */
+function amani_sms_menu() {
+  $items['sms'] = array(
+    'page callback' => 'amani_sms_endpoint',
+    'access callback' => TRUE,
+  );
+
+  return $items;
+}
+
+/**
+ * Our sms endpoint.
+ */
+function amani_sms_endpoint() {
+}
