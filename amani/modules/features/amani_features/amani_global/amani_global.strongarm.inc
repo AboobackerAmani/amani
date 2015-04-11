@@ -663,5 +663,17 @@ function amani_global_strongarm() {
   $strongarm->value = 'security';
   $export['update_notification_threshold'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'variable_realm_list_language';
+  $strongarm->value = array(
+    0 => 'amani_administrator_newsletter_title',
+    1 => 'amani_administrator_newsletter_link',
+    2 => 'site_name',
+    3 => 'site_slogan',
+  );
+  $export['variable_realm_list_language'] = $strongarm;
+
   return $export;
 }
