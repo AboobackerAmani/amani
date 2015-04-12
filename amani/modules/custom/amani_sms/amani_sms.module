@@ -21,21 +21,21 @@ function amani_sms_endpoint() {
   // Set success to false as the default success status
   $success = true;
 
-  if (isset($_POST['from'])) {
-    $from = $_POST['from'];
-  }
-  else {
-    $error = 'The from variable was not set';
-  }
-
-  write_message_to_file($from);
+  //if (isset($_POST['from'])) {
+  //  $from = $_POST['from'];
+  //}
+  //else {
+  //  $error = 'The from variable was not set';
+  //}
 
   $response = json_encode(array(
-    "payload"=> array(
-      "success"=>$success,
-      "error" => $error
+    'payload' => array(
+      'success' => $success,
+      'error'   => $error
     )
   ));
+
+  return drupal_json_output($response);
 }
 
 /**
