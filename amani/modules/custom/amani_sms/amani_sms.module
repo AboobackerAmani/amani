@@ -22,10 +22,10 @@ function amani_sms_endpoint() {
   $success = true;
 
   if ($message = $_POST['message']) {
-    // save to body field on page content type.
-    $entity_type = 'page';
-    $entity = entity_create($entity_type, array('title' => 'test', 'body' => $message));
-    entity_save($entity_type, $entity);
+    $entity = entity_create('node', array('type' =>'page'));
+    $entity->title = "Testing";
+    $entity->body = array(LANGUAGE_NONE => array(0 => array('value' => "Howdy Partner!")));
+    entity_save('node', $entity);
   }
 
   $response = array(
