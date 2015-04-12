@@ -21,12 +21,12 @@ function amani_sms_endpoint() {
   // Set success to false as the default success status
   $success = true;
 
-  //if (isset($_POST['from'])) {
-  //  $from = $_POST['from'];
-  //}
-  //else {
-  //  $error = 'The from variable was not set';
-  //}
+  if ($message = $_POST['message']) {
+    // save to body field on page content type.
+    $entity_type = 'page';
+    $entity = entity_create($entity_type, array('title' => 'test', 'body' => $message));
+    entity_save($entity_type, $entity);
+  }
 
   $response = array(
     'payload' => array(
@@ -38,12 +38,3 @@ function amani_sms_endpoint() {
   return drupal_json_output($response);
 }
 
-/**
- * Writes the received responses to a file. This acts as a database.
- */
-function write_message_to_file($message) {
-    $myFile = "test.txt";
-    $fh = fopen($myFile, 'a') or die("can't open file");
-    @fwrite($fh, $message);
-    @fclose($fh);
-}
