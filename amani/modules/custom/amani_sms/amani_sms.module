@@ -28,12 +28,12 @@ function amani_sms_endpoint() {
   //  $error = 'The from variable was not set';
   //}
 
-  $response = '[' . json_encode(array(
+  $response = array(
     'payload' => array(
       'success' => $success,
       'error'   => $error
     )
-  )) . ']';
+  );
 
   return drupal_json_output($response);
 }
