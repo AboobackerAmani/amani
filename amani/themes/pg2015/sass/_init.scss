@@ -49,12 +49,12 @@ $legacy-support-for-ie8: true;
 // use in the normalize.scss file.
 // @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
 
-$base-font-size:   16px; // The font size set on the root html element.
-$base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
+$base-font-size:   13px; // The font size set on the root html element.
+$base-line-height: 20px; // This line-height determines the basic unit of vertical rhythm.
 
-$h1-font-size: 2    * $base-font-size;
-$h2-font-size: 1.5  * $base-font-size;
-$h3-font-size: 1.17 * $base-font-size;
+$h1-font-size: 2.15 * $base-font-size; // 28px
+$h2-font-size: 1.61 * $base-font-size; // 21px
+$h3-font-size: 1.23 * $base-font-size; // 16px
 $h4-font-size: 1    * $base-font-size;
 $h5-font-size: 0.83 * $base-font-size;
 $h6-font-size: 0.67 * $base-font-size;
@@ -80,29 +80,45 @@ $tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
 $helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 
+$open-sans:       "Open Sans", sans-serif;
+
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
-$base-font-family: $verdana; // The font family set on the html element.
-$font-body:        $verdana;
+$base-font-family: $open-sans; // The font family set on the html element.
+$font-body:        $open-sans;
 $font-monospace:   $courier;
 
 
 //
 // Colors, etc.
 //
+$blue: #59c2ed;
+
+$orange: #f09416;
+
+$grey-clear: #e6e7e8;
+$grey-medium: #474f5e;
+$grey-dark: #414042;
+
+$white: #fff;
+$almost-white: #fdfeff;
+
+$font-color: $grey-dark;
+$link-color: $blue;
+$link-color-hover: darken($blue, 20%);
 
 // The amount lists, blockquotes and comments are indented.
-$indent-amount: 30px;
+$indent-amount: 20px;
 
 // The height of the navigation container.
 $nav-height: 3em;
 
 // Tab styling.
-$tabs-container-bg: #fff;
-$tabs-border: #bbb;
+$tabs-container-bg: $white;
+$tabs-border: $grey-clear;
 
 
 // =============================================================================

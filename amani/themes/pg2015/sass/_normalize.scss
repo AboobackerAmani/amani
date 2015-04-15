@@ -124,6 +124,7 @@ html {
 
 /* Remove default margin. */
 body {
+  color: $font-color;
   margin: 0;
   padding: 0;
 }
@@ -134,12 +135,14 @@ body {
  * The order of link states are based on Eric Meyer's article:
  * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
  */
-a:link {
-}
+a:link,
 a:visited {
+  color: $link-color;
+  text-decoration: none;
 }
 a:hover,
 a:focus {
+  color: $link-color-hover;
 }
 a:active {
 }
@@ -168,11 +171,11 @@ a:hover {
 /* Set 1 unit of vertical rhythm on the top and bottom margin. */
 p,
 pre {
-  margin: rhythm(1) 0;
+  margin: 0 0 rhythm(1) 0;
 }
 blockquote {
   /* Also indent the quote on both sides. */
-  margin: rhythm(1) $indent-amount;
+  margin: 0 0 rhythm(1) $indent-amount;
 }
 
 /**
@@ -303,7 +306,7 @@ menu,
 ol,
 ul {
   /* Address margins set differently in IE 6/7. */
-  margin: rhythm(1) 0;
+  margin: 0 0 rhythm(1) 0;
 }
 ol,
 ul {
@@ -543,3 +546,10 @@ table {
   @include leader(1);
   @include trailer(1);
 }
+
+/**
+ * Misc
+ */
+ div {
+  @include box-sizing(border-box);
+ }

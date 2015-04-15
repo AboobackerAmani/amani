@@ -38,6 +38,7 @@ function pg2015_preprocess_html(&$variables, $hook) {
   // The body tag's classes are controlled by the $classes_array variable. To
   // remove a class from $classes_array, use array_diff().
   //$variables['classes_array'] = array_diff($variables['classes_array'], array('class-to-remove'));
+  global $base_url;
 
   // Adding favicons and app icons
   $theme_path = $base_url . '/' . drupal_get_path('theme', 'pg2015') . '/';
@@ -65,6 +66,9 @@ function pg2015_preprocess_html(&$variables, $hook) {
     'rel'  => 'manifest',
     'href' => $theme_path . 'manifest.json',
   ));
+
+  // Adding Google fonts
+  drupal_add_css('//fonts.googleapis.com/css?family=Open+Sans:300italic,700,300,600,800,400', array('group' => CSS_THEME));
 }
 
 /**
