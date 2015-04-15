@@ -34,15 +34,38 @@ function pg2015_preprocess_maintenance_page(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("html" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function pg2015_preprocess_html(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
-
   // The body tag's classes are controlled by the $classes_array variable. To
   // remove a class from $classes_array, use array_diff().
   //$variables['classes_array'] = array_diff($variables['classes_array'], array('class-to-remove'));
+
+  // Adding favicons and app icons
+  $theme_path = $base_url . '/' . drupal_get_path('theme', 'pg2015') . '/';
+  $icons = array(
+    array('rel' => 'apple-touch-icon', 'href' => $theme_path . 'apple-icon-57x57.png', 'sizes' => '57x57'),
+    array('rel' => 'apple-touch-icon', 'href' => $theme_path . 'apple-icon-60x60.png', 'sizes' => '60x60'),
+    array('rel' => 'apple-touch-icon', 'href' => $theme_path . 'apple-icon-72x72.png', 'sizes' => '72x72'),
+    array('rel' => 'apple-touch-icon', 'href' => $theme_path . 'apple-icon-76x76.png', 'sizes' => '76x76'),
+    array('rel' => 'apple-touch-icon', 'href' => $theme_path . 'apple-icon-114x114.png', 'sizes' => '114x114'),
+    array('rel' => 'apple-touch-icon', 'href' => $theme_path . 'apple-icon-120x120.png', 'sizes' => '120x120'),
+    array('rel' => 'apple-touch-icon', 'href' => $theme_path . 'apple-icon-144x144.png', 'sizes' => '144x144'),
+    array('rel' => 'apple-touch-icon', 'href' => $theme_path . 'apple-icon-152x152.png', 'sizes' => '152x152'),
+    array('rel' => 'apple-touch-icon', 'href' => $theme_path . 'apple-icon-180x180.png', 'sizes' => '180x180'),
+    array('rel' => 'icon', 'href' => $theme_path . 'android-icon-192x192.png', 'sizes' => '192x192', 'type' => 'image/png'),
+    array('rel' => 'icon', 'href' => $theme_path . 'favicon-16x16.png', 'sizes' => '16x16', 'type' => 'image/png'),
+    array('rel' => 'icon', 'href' => $theme_path . 'favicon-32x32.png', 'sizes' => '32x32', 'type' => 'image/png'),
+    array('rel' => 'icon', 'href' => $theme_path . 'favicon-96x96.png', 'sizes' => '96x96', 'type' => 'image/png'),
+  );
+
+  foreach ($icons as $icon) {
+    drupal_add_html_head_link($icon);
+  }
+
+  drupal_add_html_head_link(array(
+    'rel'  => 'manifest',
+    'href' => $theme_path . 'manifest.json',
+  ));
 }
-// */
 
 /**
  * Override or insert variables into the page templates.
