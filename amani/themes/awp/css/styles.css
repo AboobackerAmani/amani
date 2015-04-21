@@ -6,6 +6,7 @@
  * of these @include files will be combined into a single file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
 /* HTML element (SMACSS base) rules */
 /**
  * @file
@@ -111,7 +112,7 @@ audio:not([controls]) {
  */
 /* line 106, ../sass/_normalize.scss */
 html {
-  font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   /* 1 */
   font-size: 100%;
   /* 3 */
@@ -1814,30 +1815,31 @@ tr.selected td {
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
-/* line 27, ../sass/styles.scss */
+/* line 28, ../sass/styles.scss */
 body {
+  font-family: "Source Sans Pro", sans-serif;
   /*header*/
 }
-/* line 31, ../sass/styles.scss */
+/* line 33, ../sass/styles.scss */
 body #header {
   margin-top: 40px;
   /*header-links*/
   /*#block-locale-language*/
   /*block-superfish-1*/
 }
-/* line 34, ../sass/styles.scss */
+/* line 36, ../sass/styles.scss */
 body #header #name-and-slogan .header__site-name {
   display: none;
 }
-/* line 38, ../sass/styles.scss */
+/* line 40, ../sass/styles.scss */
 body #header .header__region {
   clear: none;
 }
-/* line 40, ../sass/styles.scss */
+/* line 42, ../sass/styles.scss */
 body #header .header__region #block-menu-menu-meta {
   display: none;
 }
-/* line 44, ../sass/styles.scss */
+/* line 46, ../sass/styles.scss */
 body #header .header_links {
   border-bottom: 1px solid #807F83;
   padding-bottom: 15px;
@@ -1846,24 +1848,27 @@ body #header .header_links {
   /*site--slogan*/
   /*top-icon*/
 }
-/* line 49, ../sass/styles.scss */
+/* line 51, ../sass/styles.scss */
 body #header .header_links .site--slogan {
   float: left;
+  font-weight: normal;
+  font-weight: lighter;
+  padding-left: 20px;
 }
-/* line 53, ../sass/styles.scss */
+/* line 58, ../sass/styles.scss */
 body #header .header_links .top-icons {
   float: right;
   /*saertch-link*/
   /*social-block*/
 }
-/* line 55, ../sass/styles.scss */
+/* line 60, ../sass/styles.scss */
 body #header .header_links .top-icons .search_link {
   float: left;
   border-right: 1px solid #807F83;
   padding-right: 10px;
   margin-right: 10px;
 }
-/* line 60, ../sass/styles.scss */
+/* line 65, ../sass/styles.scss */
 body #header .header_links .top-icons .search_link a.link-icon {
   font-size: 0;
   width: 25px;
@@ -1872,70 +1877,82 @@ body #header .header_links .top-icons .search_link a.link-icon {
   float: left;
   background: url("../images/header/search-icon.png") 0 0 no-repeat;
 }
-/* line 68, ../sass/styles.scss */
+/* line 73, ../sass/styles.scss */
 body #header .header_links .top-icons .search_link form {
   display: none;
 }
-/* line 73, ../sass/styles.scss */
+/* line 78, ../sass/styles.scss */
 body #header .header_links .top-icons .social-block {
   float: left;
 }
-/* line 75, ../sass/styles.scss */
+/* line 80, ../sass/styles.scss */
 body #header .header_links .top-icons .social-block .menu {
   margin: 0;
   overflow: hidden;
   padding: 0;
 }
-/* line 79, ../sass/styles.scss */
+/* line 84, ../sass/styles.scss */
 body #header .header_links .top-icons .social-block .menu li {
   list-style: none;
   float: left;
 }
-/* line 82, ../sass/styles.scss */
+/* line 87, ../sass/styles.scss */
 body #header .header_links .top-icons .social-block .menu li a {
   display: block;
   width: 25px;
   height: 25px;
   font-size: 0;
 }
-/* line 89, ../sass/styles.scss */
+/* line 94, ../sass/styles.scss */
 body #header .header_links .top-icons .social-block .menu li.first a {
   background: url("../images/header/facebook-icon.png") 0 0 no-repeat;
 }
-/* line 94, ../sass/styles.scss */
+/* line 99, ../sass/styles.scss */
 body #header .header_links .top-icons .social-block .menu li.last a {
   background: url("../images/header/twitter-icon.png") 0 0 no-repeat;
 }
-/* line 104, ../sass/styles.scss */
+/* line 109, ../sass/styles.scss */
 body #header #block-locale-language {
   float: left;
 }
-/* line 107, ../sass/styles.scss */
+/* line 112, ../sass/styles.scss */
 body #header #block-locale-language ul {
   padding: 0;
   margin: 0;
   overflow: hidden;
 }
-/* line 111, ../sass/styles.scss */
+/* line 116, ../sass/styles.scss */
 body #header #block-locale-language ul li {
   list-style: none;
   float: left;
 }
-/* line 114, ../sass/styles.scss */
+/* line 120, ../sass/styles.scss */
+body #header #block-locale-language ul li.ar {
+  min-width: 55px;
+}
+/* line 123, ../sass/styles.scss */
 body #header #block-locale-language ul li a {
   color: #000000;
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
+  padding: 2px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: normal;
 }
-/* line 122, ../sass/styles.scss */
+/* line 130, ../sass/styles.scss */
+body #header #block-locale-language ul li a.active, body #header #block-locale-language ul li a:hover {
+  color: #fff;
+  background: #000;
+}
+/* line 139, ../sass/styles.scss */
 body #header #block-superfish-1 {
   float: right;
 }
-/* line 126, ../sass/styles.scss */
+/* line 143, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li {
   background: none;
 }
-/* line 128, ../sass/styles.scss */
+/* line 145, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li > a {
   color: #807F83;
   text-decoration: none;
@@ -1943,4 +1960,14 @@ body #header #block-superfish-1 ul#superfish-1 > li > a {
   border-top: 0;
   text-transform: uppercase;
   padding: 0 1em;
+}
+/* line 154, ../sass/styles.scss */
+body #header #block-superfish-1 ul#superfish-1 > li.last > a {
+  border: 0;
+}
+/* line 158, ../sass/styles.scss */
+body #header #block-superfish-1 ul#superfish-1 > li a {
+  font-family: "Source Sans Pro", sans-serif;
+  mso-ansi-font-weight: normal;
+  font-weight: lighter;
 }

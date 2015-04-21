@@ -44,6 +44,8 @@ $legacy-support-for-ie8: true;
 // Font faces, stacks and sizes.
 //
 
+// Import Google font
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
 // Compass' vertical_rhythm extension is a powerful tool to set up a vertical
 // rhythm for your entire page. You can see some of its mixins and functions in
 // use in the normalize.scss file.
@@ -71,6 +73,7 @@ $h6-font-size: 0.67 * $base-font-size;
 // find any of the fonts in the list.
 
 // First, let's create some font stacks.
+$font-sans :'Source Sans Pro', sans-serif;
 $times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
 $times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
 $georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
@@ -85,8 +88,8 @@ $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
-$base-font-family: $verdana; // The font family set on the html element.
-$font-body:        $verdana;
+$base-font-family: $font-sans; // The font family set on the html element.
+$font-body:        $font-sans;
 $font-monospace:   $courier;
 
 

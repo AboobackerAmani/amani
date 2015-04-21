@@ -6,6 +6,7 @@
  * of these @include files will be combined into a single file.
  */
 
+
 /* Import Sass mixins, variables, Compass modules, etc. */
 @import "init";
 
@@ -25,6 +26,7 @@
 /* @import "theme-B"; */
 
 body {
+  font-family: $font-body;
   a {
 
   }
@@ -48,6 +50,9 @@ body {
       overflow: hidden;
       .site--slogan{
         float: left;
+        font-weight: normal;
+        font-weight: lighter;
+        padding-left: 20px;
 
       }/*site--slogan*/
       .top-icons {
@@ -111,10 +116,22 @@ body {
         li{
           list-style: none;
           float: left;
+
+          &.ar{
+            min-width: 55px;
+          }
           a{
             color: #000000;
-            font-size: 14px;
+            font-size: 16px;
             text-transform: uppercase;
+            padding: 2px;
+            font-family: $font-body;
+            font-weight: normal;
+            &.active,
+            &:hover{
+              color: #fff;
+              background: #000;
+            }
           }
         }
       }
@@ -132,6 +149,16 @@ body {
             border-top: 0;
             text-transform: uppercase;
             padding: 0 1em;
+          }
+          &.last{
+            & > a{
+              border: 0;
+            }
+          }
+          a{
+            font-family: $font-sans;
+            mso-ansi-font-weight: normal;
+            font-weight: lighter;
           }
         }
       }
