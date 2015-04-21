@@ -1810,19 +1810,41 @@ tr.selected td {
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
+/* line 27, ../sass/styles.scss */
+body {
+  /*header*/
+}
 /* line 31, ../sass/styles.scss */
 body #header {
   margin-top: 40px;
 }
-/* line 34, ../sass/styles.scss */
+/* line 33, ../sass/styles.scss */
+body #header #name-and-slogan {
+  float: left;
+  margin-right: 20px;
+}
+/* line 36, ../sass/styles.scss */
 body #header #name-and-slogan .header__site-name {
   display: none;
 }
-/* line 38, ../sass/styles.scss */
+/* line 40, ../sass/styles.scss */
 body #header .header__region {
   clear: none;
 }
-/* line 40, ../sass/styles.scss */
+/* line 42, ../sass/styles.scss */
 body #header .header__region #block-menu-menu-meta {
+  display: none;
+}
+/* line 48, ../sass/styles.scss */
+body #header .header_links .search_link a.link_icon {
+  font-size: 0;
+  width: 25px;
+  height: 25px;
+  display: block;
+  float: left;
+  background: url("../images/header/search-icon.png") 0 0 no-repeat;
+}
+/* line 56, ../sass/styles.scss */
+body #header .header_links .search_link form {
   display: none;
 }

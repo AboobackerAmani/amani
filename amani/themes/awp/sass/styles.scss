@@ -31,6 +31,8 @@ body {
   #header{
     margin-top: 40px;
     #name-and-slogan{
+      float: left;
+      margin-right: 20px;
       .header__site-name{
         display: none;
       }
@@ -41,5 +43,20 @@ body {
         display: none;
       }
     }
-  }
+    .header_links{
+      .search_link{
+        a.link_icon{
+          font-size: 0;
+          width: 25px;
+          height: 25px;
+          display: block;
+          float: left;
+          background: url("../images/header/search-icon.png") 0 0 no-repeat;
+        }
+        form{
+          display: none;
+        }
+      }
+    }
+  }/*header*/
 }
