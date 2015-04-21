@@ -31,8 +31,6 @@ body {
   #header{
     margin-top: 40px;
     #name-and-slogan{
-      float: left;
-      margin-right: 20px;
       .header__site-name{
         display: none;
       }
@@ -45,6 +43,10 @@ body {
     }
     .header_links{
       .search_link{
+        float: left;
+        border-right: 1px solid $awp_grey;
+        padding-right: 10px;
+        margin-right: 10px;
         a.link_icon{
           font-size: 0;
           width: 25px;
@@ -56,7 +58,35 @@ body {
         form{
           display: none;
         }
-      }
+      }/*saertch-link*/
+      .social-block{
+        float: left;
+        margin-left: 10px;
+        .menu{
+          margin: 0;
+          overflow: hidden;
+          li{
+            list-style: none;
+            float: left;
+            a{
+              display: block;
+              width: 25px;
+              height: 25px;
+              font-size: 0;
+            }
+            &.first{
+              a{
+                background: url("../images/header/facebook-icon.png") 0 0 no-repeat;
+              }
+            }
+            &.last{
+              a{
+                background: url("../images/header/twitter-icon.png") 0 0 no-repeat;
+              }
+            }
+          }
+        }
+      }/*social-block*/
     }
   }/*header*/
 }

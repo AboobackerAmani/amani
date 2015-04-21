@@ -155,7 +155,7 @@ $zen-auto-include-item-base: false;
 /**
  * Use 5 grid columns for larger screens.
  */
-@media all and (min-width: 960px) {
+@media all and (min-width: name-and-sloganpx) {
 
 
 
@@ -171,6 +171,14 @@ $zen-auto-include-item-base: false;
     }
     .header__region{
       @include zen-grid-item(9, 4, $zen-float-direction, $zen-column-count);
+      $zen-column-count: 12;{
+      #name-and-slogan #site-slogan{
+        @include zen-grid-item(1, 7, $zen-float-direction, $zen-column-count);
+      }
+      .header_links{
+        @include zen-grid-item(4, 8, $zen-float-direction, $zen-column-count);
+      }
+    }
     }
   }
   $zen-column-count: 5;
