@@ -20,7 +20,7 @@ Drupal.behaviors.my_custom_behavior = {
     // Place your code here.
 
       //Rewrite slogna into header region
-      $('.header__region .header_links .site-slogan').append($('.header__name-and-slogan'));
+      $('.header__region .header_links .site--slogan').append($('.header__name-and-slogan'));
 
   }
 };
