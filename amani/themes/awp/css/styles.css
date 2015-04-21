@@ -798,19 +798,19 @@ table {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 182, ../sass/layouts/_responsive.scss */
+  /* line 180, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 4 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 184, ../sass/layouts/_responsive.scss */
+  /* line 182, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
     width: 80%;
     margin-left: 20%;
     margin-right: -100%;
   }
-  /* line 189, ../sass/layouts/_responsive.scss */
+  /* line 187, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 20%;
@@ -821,19 +821,19 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 197, ../sass/layouts/_responsive.scss */
+  /* line 195, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 199, ../sass/layouts/_responsive.scss */
+  /* line 197, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
     width: 80%;
     margin-left: 0%;
     margin-right: -80%;
   }
-  /* line 204, ../sass/layouts/_responsive.scss */
+  /* line 202, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 20%;
@@ -844,27 +844,27 @@ table {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 212, ../sass/layouts/_responsive.scss */
+  /* line 210, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 214, ../sass/layouts/_responsive.scss */
+  /* line 212, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
     width: 60%;
     margin-left: 20%;
     margin-right: -80%;
   }
-  /* line 219, ../sass/layouts/_responsive.scss */
+  /* line 217, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 20%;
     margin-left: 0%;
     margin-right: -20%;
   }
-  /* line 224, ../sass/layouts/_responsive.scss */
+  /* line 222, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 20%;
@@ -1832,18 +1832,33 @@ body #header .header__region #block-menu-menu-meta {
 }
 /* line 44, ../sass/styles.scss */
 body #header .header_links {
+  border-bottom: 1px solid #807F83;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  /*site--slogan*/
+  /*top-icon*/
+}
+/* line 48, ../sass/styles.scss */
+body #header .header_links .site--slogan {
+  float: left;
+  width: 70%;
+}
+/* line 52, ../sass/styles.scss */
+body #header .header_links .top-icons {
+  width: 30%;
+  float: left;
   /*saertch-link*/
   /*social-block*/
 }
-/* line 45, ../sass/styles.scss */
-body #header .header_links .search_link {
+/* line 55, ../sass/styles.scss */
+body #header .header_links .top-icons .search_link {
   float: left;
   border-right: 1px solid #807F83;
   padding-right: 10px;
   margin-right: 10px;
 }
-/* line 50, ../sass/styles.scss */
-body #header .header_links .search_link a.link-icon {
+/* line 60, ../sass/styles.scss */
+body #header .header_links .top-icons .search_link a.link-icon {
   font-size: 0;
   width: 25px;
   height: 25px;
@@ -1851,37 +1866,37 @@ body #header .header_links .search_link a.link-icon {
   float: left;
   background: url("../images/header/search-icon.png") 0 0 no-repeat;
 }
-/* line 58, ../sass/styles.scss */
-body #header .header_links .search_link form {
+/* line 68, ../sass/styles.scss */
+body #header .header_links .top-icons .search_link form {
   display: none;
 }
-/* line 62, ../sass/styles.scss */
-body #header .header_links .social-block {
+/* line 73, ../sass/styles.scss */
+body #header .header_links .top-icons .social-block {
   float: left;
   margin-left: 10px;
 }
-/* line 65, ../sass/styles.scss */
-body #header .header_links .social-block .menu {
+/* line 76, ../sass/styles.scss */
+body #header .header_links .top-icons .social-block .menu {
   margin: 0;
   overflow: hidden;
 }
-/* line 68, ../sass/styles.scss */
-body #header .header_links .social-block .menu li {
+/* line 79, ../sass/styles.scss */
+body #header .header_links .top-icons .social-block .menu li {
   list-style: none;
   float: left;
 }
-/* line 71, ../sass/styles.scss */
-body #header .header_links .social-block .menu li a {
+/* line 82, ../sass/styles.scss */
+body #header .header_links .top-icons .social-block .menu li a {
   display: block;
   width: 25px;
   height: 25px;
   font-size: 0;
 }
-/* line 78, ../sass/styles.scss */
-body #header .header_links .social-block .menu li.first a {
+/* line 89, ../sass/styles.scss */
+body #header .header_links .top-icons .social-block .menu li.first a {
   background: url("../images/header/facebook-icon.png") 0 0 no-repeat;
 }
-/* line 83, ../sass/styles.scss */
-body #header .header_links .social-block .menu li.last a {
+/* line 94, ../sass/styles.scss */
+body #header .header_links .top-icons .social-block .menu li.last a {
   background: url("../images/header/twitter-icon.png") 0 0 no-repeat;
 }

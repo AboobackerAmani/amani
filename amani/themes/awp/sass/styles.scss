@@ -42,51 +42,64 @@ body {
       }
     }
     .header_links{
-      .search_link{
+      border-bottom: 1px solid $awp_grey;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      .site--slogan{
         float: left;
-        border-right: 1px solid $awp_grey;
-        padding-right: 10px;
-        margin-right: 10px;
-        a.link-icon{
-          font-size: 0;
-          width: 25px;
-          height: 25px;
-          display: block;
+        width: 70%;
+      }/*site--slogan*/
+      .top-icons {
+        width: 30%;
+        float: left;
+        .search_link {
           float: left;
-          background: url("../images/header/search-icon.png") 0 0 no-repeat;
-        }
-        form{
-          display: none;
-        }
-      }/*saertch-link*/
-      .social-block{
-        float: left;
-        margin-left: 10px;
-        .menu{
-          margin: 0;
-          overflow: hidden;
-          li{
-            list-style: none;
+          border-right: 1px solid $awp_grey;
+          padding-right: 10px;
+          margin-right: 10px;
+          a.link-icon {
+            font-size: 0;
+            width: 25px;
+            height: 25px;
+            display: block;
             float: left;
-            a{
-              display: block;
-              width: 25px;
-              height: 25px;
-              font-size: 0;
-            }
-            &.first{
-              a{
-                background: url("../images/header/facebook-icon.png") 0 0 no-repeat;
+            background: url("../images/header/search-icon.png") 0 0 no-repeat;
+          }
+          form {
+            display: none;
+          }
+        }
+        /*saertch-link*/
+        .social-block {
+          float: left;
+          margin-left: 10px;
+          .menu {
+            margin: 0;
+            overflow: hidden;
+            li {
+              list-style: none;
+              float: left;
+              a {
+                display: block;
+                width: 25px;
+                height: 25px;
+                font-size: 0;
               }
-            }
-            &.last{
-              a{
-                background: url("../images/header/twitter-icon.png") 0 0 no-repeat;
+              &.first {
+                a {
+                  background: url("../images/header/facebook-icon.png") 0 0 no-repeat;
+                }
+              }
+              &.last {
+                a {
+                  background: url("../images/header/twitter-icon.png") 0 0 no-repeat;
+                }
               }
             }
           }
         }
-      }/*social-block*/
+        /*social-block*/
+      }/*top-icon*/
     }
   }/*header*/
 }

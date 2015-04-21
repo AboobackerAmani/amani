@@ -29,9 +29,11 @@ $social_block='<div class="sub-head">' . render($block). '</div>';
 ?>
 <div class="header_links">
     <div class="block-wrappers">
-        <div class="site-slogan"><php print $site_slogan;?></div>
-        <div class="link search_link"><a class="search link-icon" href="#">search</a><?php print $search_block;?></div>
-        <div class="social-block"><?php print $social_block;?></div>
+        <div class="site--slogan"></div>
+        <div class="social-wrapper">
+            <div class="link search_link"><a class="search link-icon" href="#">search</a><?php print $search_block;?></div>
+            <div class="social-block"><?php print $social_block;?></div>
+        </div>
     </div>
 
 </div>
