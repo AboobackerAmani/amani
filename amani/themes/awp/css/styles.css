@@ -1909,7 +1909,6 @@ body #header .header_links .top-icons .social-block .menu li.last a {
 /* line 104, ../sass/styles.scss */
 body #header #block-locale-language {
   float: left;
-  width: 15%;
 }
 /* line 107, ../sass/styles.scss */
 body #header #block-locale-language ul {
@@ -1930,7 +1929,6 @@ body #header #block-locale-language ul li a {
 }
 /* line 122, ../sass/styles.scss */
 body #header #block-superfish-1 {
-  width: 80%;
   float: right;
 }
 /* line 126, ../sass/styles.scss */
@@ -1942,6 +1940,7 @@ body #header #block-superfish-1 ul#superfish-1 > li > a {
   color: #807F83;
   text-decoration: none;
   border-right: 1px solid #807F83;
+  border-top: 0;
   text-transform: uppercase;
   padding: 0 1em;
 }

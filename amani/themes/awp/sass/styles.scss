@@ -48,7 +48,7 @@ body {
       overflow: hidden;
       .site--slogan{
         float: left;
-        
+
       }/*site--slogan*/
       .top-icons {
         float: right;
@@ -103,7 +103,7 @@ body {
     }/*header-links*/
     #block-locale-language{
       float: left;
-      width: 15%;
+
       ul{
         padding: 0;
         margin: 0;
@@ -120,7 +120,7 @@ body {
       }
     }/*#block-locale-language*/
     #block-superfish-1{
-      width: 80%;
+
       float:right;
       ul#superfish-1{
         & > li{
@@ -129,6 +129,7 @@ body {
             color: $awp_grey;
             text-decoration: none;
             border-right: 1px solid $awp_grey;
+            border-top: 0;
             text-transform: uppercase;
             padding: 0 1em;
           }
