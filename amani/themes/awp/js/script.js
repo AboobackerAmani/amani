@@ -19,6 +19,9 @@ Drupal.behaviors.my_custom_behavior = {
 
     // Place your code here.
 
+      //Rewrite slogna into header region
+      $('.header__region').prepend($('.header__name-and-slogan'));
+
   }
 };
 

@@ -28,4 +28,18 @@ body {
   a {
     color: yellow;
   }
+  #header{
+    margin-top: 40px;
+    #name-and-slogan{
+      .header__site-name{
+        display: none;
+      }
+    }
+    .header__region{
+      clear: none;
+      #block-menu-menu-meta{
+        display: none;
+      }
+    }
+  }
 }

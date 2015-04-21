@@ -130,3 +130,10 @@ function awp_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+function awp_preprocess_page(&$vars, $hook) {
+    if (true) {
+        drupal_add_js(drupal_get_path('theme', 'awp') . '/js/script.js');
+        $vars['scripts'] = drupal_get_js(); // necessary in D7?
+    }
+}
