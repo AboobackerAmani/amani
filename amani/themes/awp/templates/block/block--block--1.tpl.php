@@ -10,6 +10,7 @@
 //this block is for the top right menu in the website
 
 global $language;
+global $site_slogan;
 global $base_url;
 if($language->language=='en') {
     $link=$base_url.'/ar';
