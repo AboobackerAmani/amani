@@ -6,7 +6,7 @@
  * of these @include files will be combined into a single file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
 /* HTML element (SMACSS base) rules */
 /**
  * @file
@@ -1940,21 +1940,22 @@ body #header #block-locale-language ul li a {
   padding: 2px;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
+  text-decoration: none;
 }
-/* line 132, ../sass/styles.scss */
+/* line 133, ../sass/styles.scss */
 body #header #block-locale-language ul li a.active, body #header #block-locale-language ul li a:hover {
   color: #fff;
   background: #000;
 }
-/* line 141, ../sass/styles.scss */
+/* line 142, ../sass/styles.scss */
 body #header #block-superfish-1 {
   float: right;
 }
-/* line 145, ../sass/styles.scss */
+/* line 146, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li {
   background: none;
 }
-/* line 147, ../sass/styles.scss */
+/* line 148, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li > a {
   color: #807F83;
   text-decoration: none;
@@ -1963,11 +1964,11 @@ body #header #block-superfish-1 ul#superfish-1 > li > a {
   text-transform: uppercase;
   padding: 0 1em;
 }
-/* line 156, ../sass/styles.scss */
+/* line 157, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li.last > a {
   border: 0;
 }
-/* line 160, ../sass/styles.scss */
+/* line 161, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li a {
   font-family: "Source Sans Pro", sans-serif;
   mso-ansi-font-weight: normal;
