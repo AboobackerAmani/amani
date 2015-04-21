@@ -164,6 +164,9 @@ $zen-auto-include-item-base: false;
     .header__logo{
       @include zen-grid-item(3, 1, $zen-float-direction, $zen-column-count);
     }
+    .header__secondary-menu{
+      display: none;
+    }
     #name-and-slogan{
     }
     .header__region{
