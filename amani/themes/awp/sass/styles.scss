@@ -43,15 +43,15 @@ body {
     }
     .header_links{
       border-bottom: 1px solid $awp_grey;
-      padding-bottom: 5px;
-      margin-bottom: 5px;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      overflow: hidden;
       .site--slogan{
         float: left;
-        width: 70%;
+        
       }/*site--slogan*/
       .top-icons {
-        width: 30%;
-        float: left;
+        float: right;
         .search_link {
           float: left;
           border-right: 1px solid $awp_grey;
@@ -72,10 +72,10 @@ body {
         /*saertch-link*/
         .social-block {
           float: left;
-          margin-left: 10px;
           .menu {
             margin: 0;
             overflow: hidden;
+            padding: 0;
             li {
               list-style: none;
               float: left;
@@ -100,6 +100,40 @@ body {
         }
         /*social-block*/
       }/*top-icon*/
-    }
+    }/*header-links*/
+    #block-locale-language{
+      float: left;
+      width: 15%;
+      ul{
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        li{
+          list-style: none;
+          float: left;
+          a{
+            color: #000000;
+            font-size: 14px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }/*#block-locale-language*/
+    #block-superfish-1{
+      width: 80%;
+      float:right;
+      ul#superfish-1{
+        & > li{
+          background: none;
+          & > a{
+            color: $awp_grey;
+            text-decoration: none;
+            border-right: 1px solid $awp_grey;
+            text-transform: uppercase;
+            padding: 0 1em;
+          }
+        }
+      }
+    }/*block-superfish-1*/
   }/*header*/
 }

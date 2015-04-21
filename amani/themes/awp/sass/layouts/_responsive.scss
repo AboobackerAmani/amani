@@ -172,6 +172,11 @@ $zen-auto-include-item-base: false;
     .header__region{
       @include zen-grid-item(9, 4, $zen-float-direction, $zen-column-count);
     }
+    #block-superfish-1{
+      .mobile-menu-link {
+        display: none;
+      }
+    }
   }
   $zen-column-count: 5;
   /**
