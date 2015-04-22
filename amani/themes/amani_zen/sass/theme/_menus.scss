@@ -1,0 +1,26 @@
+/**
+ * @file
+ * Style for menus.
+ */
+
+// Main Navigation
+#navigation {
+
+  li {
+    background-color: transparent;
+    border-color: $grey-darker;
+  }
+
+  a {
+    padding: 0 16px;
+    @include font-size(11px);
+    font-weight: $fw-light;
+    text-transform: uppercase;
+    color: $grey-darker;
+    border: none;
+    &:hover, &.active {
+      background-color: transparent;
+      text-shadow: 0 0 $grey-darker; // emulate bold font to avoid bumping
+    }
+  }
+}

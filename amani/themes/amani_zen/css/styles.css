@@ -951,6 +951,39 @@ body {
  */
 /**
  * @file
+ * Style for menus.
+ */
+/* line 7, ../sass/components/_menus.scss */
+#navigation {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+/* line 15, ../sass/components/_menus.scss */
+#navigation .mobile-menu-link {
+  display: none;
+}
+/* line 19, ../sass/components/_menus.scss */
+#navigation ul {
+  margin-left: 0;
+}
+/* line 24, ../sass/components/_menus.scss */
+#navigation li {
+  border-right: 1px solid;
+  font-size: 14px;
+  font-size: 1.07692rem;
+}
+/* line 28, ../sass/components/_menus.scss */
+#navigation li:last-child {
+  border-right: 0 none;
+}
+
+/**
+ * @file
  * RTL companion for the modular-styles.css file.
  */
 /**
@@ -2064,7 +2097,7 @@ tr.selected td {
   font-weight: 300;
   padding: 5px 10px;
 }
-/* line 50, ../sass/_mixins.scss */
+/* line 56, ../sass/_mixins.scss */
 .form-submit:hover, .form-submit:focus {
   background-color: #5a595c;
 }
@@ -2100,9 +2133,34 @@ tr.selected td {
 #footer a {
   color: #fdfeff;
 }
-/* line 59, ../sass/_mixins.scss */
+/* line 65, ../sass/_mixins.scss */
 #footer a:focus, #footer a:hover, #footer a:active {
   color: #1696ca;
+}
+
+/**
+ * @file
+ * Style for menus.
+ */
+/* line 9, ../sass/theme/_menus.scss */
+#navigation li {
+  background-color: transparent;
+  border-color: #282828;
+}
+/* line 14, ../sass/theme/_menus.scss */
+#navigation a {
+  padding: 0 16px;
+  font-size: 11px;
+  font-size: 0.84615rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #282828;
+  border: none;
+}
+/* line 21, ../sass/theme/_menus.scss */
+#navigation a:hover, #navigation a.active {
+  background-color: transparent;
+  text-shadow: 0 0 #282828;
 }
 
 /* @import "theme-B"; */
