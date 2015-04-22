@@ -6,10 +6,26 @@
 /* Style by region */
 
 // Footer
-.region-footer .block {
-  float: left;
+.region-footer {
 
-  .block-title { @include element-invisible(); }
+  .block {
+    float: left;
+
+    .block-title { @include element-invisible(); }
+  }
+
+  // Blocks menu in footer
+  .block-menu {
+
+    ul {
+      margin: 0 0 rhythm(1) 0;
+    }
+
+    li {
+      list-style: none outside none;
+      margin-bottom: .3em;
+    }
+  }
 }
 
 /* Style by type */

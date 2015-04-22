@@ -908,17 +908,26 @@ body {
  * Style for drupal blocks.
  */
 /* Style by region */
-/* line 9, ../sass/components/_blocks.scss */
+/* line 11, ../sass/components/_blocks.scss */
 .region-footer .block {
   float: left;
 }
-/* line 12, ../sass/components/_blocks.scss */
+/* line 14, ../sass/components/_blocks.scss */
 .region-footer .block .block-title {
   position: absolute !important;
   height: 1px;
   width: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
+}
+/* line 20, ../sass/components/_blocks.scss */
+.region-footer .block-menu ul {
+  margin: 0 0 1.53846em 0;
+}
+/* line 24, ../sass/components/_blocks.scss */
+.region-footer .block-menu li {
+  list-style: none outside none;
+  margin-bottom: .3em;
 }
 
 /* Style by type */
