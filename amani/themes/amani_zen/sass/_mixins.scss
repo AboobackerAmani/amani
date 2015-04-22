@@ -51,3 +51,12 @@
     background-color: lighten($bg-color, 10%);
   }
 }
+
+// Hover state for link
+@mixin link-hover-color($color: $link-color-hover) {
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color;
+  }
+}

@@ -1,0 +1,20 @@
+/**
+ * @file
+ * Style for drupal blocks.
+ */
+
+/* Style by region */
+
+// Footer
+.region-footer .block {
+  float: left;
+
+  .block-title { @include element-invisible(); }
+}
+
+/* Style by type */
+
+
+/* Unique blocks */
+
+// Search form
