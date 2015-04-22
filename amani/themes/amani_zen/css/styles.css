@@ -910,11 +910,20 @@ body {
 /**
  * Style by region
  */
-/* line 13, ../sass/components/_blocks.scss */
+/* line 15, ../sass/components/_blocks.scss */
+.region-header .block .block-title {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* line 22, ../sass/components/_blocks.scss */
 .region-footer .block {
   float: left;
 }
-/* line 16, ../sass/components/_blocks.scss */
+/* line 25, ../sass/components/_blocks.scss */
 .region-footer .block .block-title {
   position: absolute !important;
   height: 1px;
@@ -926,12 +935,12 @@ body {
 /**
  * Style by type
  */
-/* line 28, ../sass/components/_blocks.scss */
+/* line 36, ../sass/components/_blocks.scss */
 .block-menu ul.menu {
   margin: 0 0 1.53846em 0;
   padding: 0;
 }
-/* line 32, ../sass/components/_blocks.scss */
+/* line 40, ../sass/components/_blocks.scss */
 .block-menu ul.menu li {
   list-style: none outside none;
   margin-bottom: .3em;

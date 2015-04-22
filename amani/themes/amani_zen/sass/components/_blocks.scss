@@ -7,6 +7,15 @@
  * Style by region
  */
 
+// Header
+.region-header {
+
+  .block {
+
+    .block-title { @include element-invisible(); }
+  }
+}
+
 // Footer
 .region-footer {
 
@@ -15,7 +24,6 @@
 
     .block-title { @include element-invisible(); }
   }
-
 }
 
 /**
