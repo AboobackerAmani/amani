@@ -949,6 +949,29 @@ body {
 /**
  * Unique blocks
  */
+/* line 53, ../sass/components/_blocks.scss */
+#block-search-form {
+  position: absolute;
+  top: 30px;
+  right: 60px;
+}
+/* line 72, ../sass/_mixins.scss */
+#block-search-form:hover .contextual-links-wrapper {
+  display: none;
+}
+/* line 60, ../sass/components/_blocks.scss */
+#block-search-form .form-text {
+  font-size: 0.846rem;
+  font-weight: normal;
+  height: 16px;
+  padding: 2px 5px;
+  width: 76px;
+}
+/* line 68, ../sass/components/_blocks.scss */
+#block-search-form .form-actions {
+  display: none;
+}
+
 /**
  * @file
  * Style for menus.

@@ -50,3 +50,22 @@
  */
 
 // Search form
+#block-search-form {
+  position: absolute;
+  top: 30px;
+  right: 60px;
+
+  @include hide-contextual-links();
+
+  .form-text {
+    font-size: 0.846rem; // 11px
+    font-weight: normal;
+    height: 16px;
+    padding: 2px 5px;
+    width: 76px;
+  }
+
+  .form-actions {
+    display: none;
+  }
+}
