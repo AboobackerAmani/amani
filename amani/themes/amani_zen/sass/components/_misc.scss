@@ -96,8 +96,9 @@
 
 /* The name of the website. */
 .header__site-name {
-  margin: 0;
-  @include adjust-font-size-to( $h1-font-size );
+  @include element-invisible();
+  // margin: 0;
+  // @include adjust-font-size-to( $h1-font-size );
 }
 
 /* The link around the name of the website. */
@@ -116,7 +117,7 @@
 
 /* The slogan (or tagline) of a website. */
 .header__site-slogan {
-  margin: 0;
+  @include element-invisible();
 }
 
 /* The secondary menu (login, etc.) */

@@ -35,3 +35,19 @@
     @include element-invisible-off;
   }
 }
+
+// Style for a button
+@mixin button-style($color: $white, $bg-color: $grey-dark) {
+  background-color: $bg-color;
+  border: 0 none;
+  border-radius: 0;
+  color: $color;
+  display: inline-block;
+  font-weight: $fw-light;
+  padding: 5px 10px;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($bg-color, 10%);
+  }
+}
