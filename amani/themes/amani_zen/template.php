@@ -59,7 +59,7 @@ function amani_zen_preprocess_html(&$variables, $hook) {
     array('rel' => 'icon', 'href' => $theme_path . 'favicon-32x32.png', 'sizes' => '32x32', 'type' => 'image/png'),
     array('rel' => 'icon', 'href' => $theme_path . 'favicon-96x96.png', 'sizes' => '96x96', 'type' => 'image/png'),
   );
-var_dump($icons[0]);
+
   foreach ($icons as $icon) {
     drupal_add_html_head_link($icon);
   }
