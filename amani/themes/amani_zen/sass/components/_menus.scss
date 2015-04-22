@@ -28,3 +28,24 @@
     &:last-child { border-right: 0 none; }
   }
 }
+
+// Social Media
+#block-menu-menu-social-media {
+  position: absolute;
+  right: 150px;
+  top: 33px;
+
+  @include hide-contextual-links();
+
+  .block-title { display: none; }
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    display: inline-block;
+    list-style: none outside none;
+    margin-left: 0.3em;
+  }
+}

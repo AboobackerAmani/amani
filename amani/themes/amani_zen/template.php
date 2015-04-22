@@ -42,8 +42,8 @@ function amani_zen_preprocess_html(&$variables, $hook) {
 
   // Adding favicons and app icons
   // $theme_path = $base_url . '/' . drupal_get_path('theme', 'amani_zen');
-  $theme_path = $base_url . '/' . drupal_get_path('theme',$GLOBALS['theme']);
-  $app_icons_path = $theme_path . '/app-icons/';
+  $theme_path = drupal_get_path('theme',$GLOBALS['theme']);
+  $app_icons_path = $base_url . '/' . $theme_path . '/app-icons/';
 
   $icons = array(
     array('rel' => 'apple-touch-icon', 'href' => $app_icons_path . 'apple-icon-57x57.png', 'sizes' => '57x57'),
@@ -70,8 +70,15 @@ function amani_zen_preprocess_html(&$variables, $hook) {
     'href' => $app_icons_path . 'manifest.json',
   ));
 
-  // Adding Google fonts
-  drupal_add_css('//fonts.googleapis.com/css?family=Open+Sans:300italic,700,300,600,800,400', array('group' => CSS_THEME));
+  //
+  // Adding Fonts
+  //
+
+  // Google fonts
+  drupal_add_css('//fonts.googleapis.com/css?family=Open+Sans:300italic,700,300,600,800,400', array('group' => CSS_THEME, 'every_page' => TRUE));
+  // SS Social
+  drupal_add_css($theme_path . '/fonts/ss-social/ss-social.css', array('group' => CSS_THEME, 'every_page' => TRUE));
+  drupal_add_js($theme_path . '/fonts/ss-social/ss-social.js', array('type' => 'file', 'scope' => 'footer'));
 }
 
 /**

@@ -982,6 +982,31 @@ body {
   border-right: 0 none;
 }
 
+/* line 33, ../sass/components/_menus.scss */
+#block-menu-menu-social-media {
+  position: absolute;
+  right: 150px;
+  top: 33px;
+}
+/* line 72, ../sass/_mixins.scss */
+#block-menu-menu-social-media:hover .contextual-links-wrapper {
+  display: none;
+}
+/* line 40, ../sass/components/_menus.scss */
+#block-menu-menu-social-media .block-title {
+  display: none;
+}
+/* line 42, ../sass/components/_menus.scss */
+#block-menu-menu-social-media ul {
+  margin: 0;
+}
+/* line 46, ../sass/components/_menus.scss */
+#block-menu-menu-social-media li {
+  display: inline-block;
+  list-style: none outside none;
+  margin-left: 0.3em;
+}
+
 /**
  * @file
  * RTL companion for the modular-styles.css file.
@@ -2161,6 +2186,28 @@ tr.selected td {
 #navigation a:hover, #navigation a.active {
   background-color: transparent;
   text-shadow: 0 0 #282828;
+}
+
+/* line 30, ../sass/theme/_menus.scss */
+#block-menu-menu-social-media a {
+  color: #414042;
+  font-family: "SSSocial";
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  /*-webkit-font-feature-settings: "liga"; Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+/* line 65, ../sass/_mixins.scss */
+#block-menu-menu-social-media a:focus, #block-menu-menu-social-media a:hover, #block-menu-menu-social-media a:active {
+  color: #ace0f6;
 }
 
 /* @import "theme-B"; */

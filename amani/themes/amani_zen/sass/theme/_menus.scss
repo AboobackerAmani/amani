@@ -24,3 +24,12 @@
     }
   }
 }
+
+// Social Media
+#block-menu-menu-social-media {
+  a {
+    color: $font-color;
+    @include ss-icon('circle');
+    @include link-hover-color(tint($primary-color, 50%));
+  }
+}
