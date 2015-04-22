@@ -3,7 +3,9 @@
  * Style for drupal blocks.
  */
 
-/* Style by region */
+/**
+ * Style by region
+ */
 
 // Footer
 .region-footer {
@@ -14,12 +16,18 @@
     .block-title { @include element-invisible(); }
   }
 
-  // Blocks menu in footer
-  .block-menu {
+}
 
-    ul {
-      margin: 0 0 rhythm(1) 0;
-    }
+/**
+ * Style by type
+ */
+
+// Blocks menu
+.block-menu {
+
+  ul.menu {
+    margin: 0 0 rhythm(1) 0;
+    padding: 0;
 
     li {
       list-style: none outside none;
@@ -28,9 +36,9 @@
   }
 }
 
-/* Style by type */
 
-
-/* Unique blocks */
+/**
+ * Unique blocks
+ */
 
 // Search form
