@@ -35,3 +35,60 @@
     @include element-invisible-off;
   }
 }
+
+// Use REMs with a pixel fallback for font sizing.
+@mixin font-size($font-size) {
+  font-size: $font-size;
+  font-size: ($font-size / $base-font-size) * 1rem;
+}
+
+// Style for a button
+@mixin button-style($color: $white, $bg-color: $grey-dark) {
+  background-color: $bg-color;
+  border: 0 none;
+  border-radius: 0;
+  color: $color;
+  display: inline-block;
+  font-weight: $fw-light;
+  padding: 5px 10px;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($bg-color, 10%);
+  }
+}
+
+// Hover state for link
+@mixin link-hover-color($color: $link-color-hover) {
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color;
+  }
+}
+
+// Hide contextual links
+@mixin hide-contextual-links {
+  &:hover .contextual-links-wrapper { display: none; }
+}
+
+// Symbol set icon social
+@mixin ss-icon($type: 'regular') {
+  font-family: "SSSocial";
+  font-style: normal;
+  @if $type == circle {
+    font-weight: bold;
+  } @else {
+    font-weight: normal;
+  }
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  /*-webkit-font-feature-settings: "liga"; Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}

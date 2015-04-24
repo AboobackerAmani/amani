@@ -90,7 +90,14 @@ $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 $base-font-family: $open-sans; // The font family set on the html element.
 $font-body:        $open-sans;
 $font-monospace:   $courier;
+$icon-font: 'SSSocial';
 
+// font weights
+$fw-light: 300;
+$fw-normal: 400;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
 
 //
 // Colors, etc.
@@ -102,11 +109,19 @@ $orange: #f09416;
 $grey-clear: #e6e7e8;
 $grey-medium: #474f5e;
 $grey-dark: #414042;
+$grey-darker: #282828;
 
 $white: #fff;
 $almost-white: #fdfeff;
 
+// Primary Color for the site.
+$primary-color: $blue;
+$secondary-color: $orange;
+
+// base color scheme
 $font-color: $grey-dark;
+$error-text-color: #db2c2c;
+
 $link-color: $blue;
 $link-color-hover: darken($blue, 20%);
 
