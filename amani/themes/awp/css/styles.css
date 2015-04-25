@@ -1992,6 +1992,7 @@ body #header .header_links .top-icons .social-block .menu li {
   margin-right: 10px;
   background-image: url("../images/header-s7372912646.png");
   background-repeat: no-repeat;
+  background-position: 0 0;
 }
 /* line 97, ../sass/styles.scss */
 body #header .header_links .top-icons .social-block .menu li a {
@@ -2000,56 +2001,56 @@ body #header .header_links .top-icons .social-block .menu li a {
   height: 25px;
   font-size: 0;
 }
-/* line 106, ../sass/styles.scss */
+/* line 107, ../sass/styles.scss */
 body #header .header_links .top-icons .social-block .menu li.first a {
   background-position: 0 -25px;
 }
-/* line 108, ../sass/styles.scss */
+/* line 109, ../sass/styles.scss */
 body #header .header_links .top-icons .social-block .menu li.first a:hover {
   background-position: 0 0;
 }
-/* line 113, ../sass/styles.scss */
+/* line 114, ../sass/styles.scss */
 body #header .header_links .top-icons .social-block .menu li a {
   background-position: 0 -125px;
 }
-/* line 115, ../sass/styles.scss */
+/* line 116, ../sass/styles.scss */
 body #header .header_links .top-icons .social-block .menu li a:hover {
   background-position: 0 -100px;
 }
-/* line 121, ../sass/styles.scss */
+/* line 122, ../sass/styles.scss */
 body #header .header_links .top-icons .social-block .menu li.last a {
   background-position: 0 -175px;
 }
-/* line 123, ../sass/styles.scss */
+/* line 124, ../sass/styles.scss */
 body #header .header_links .top-icons .social-block .menu li.last a:hover {
   background-position: 0 -150px;
 }
-/* line 134, ../sass/styles.scss */
+/* line 135, ../sass/styles.scss */
 body #header #block-locale-language,
 body #header .lang-block {
   float: left;
   padding-left: 20px;
   margin-top: 5px;
 }
-/* line 139, ../sass/styles.scss */
+/* line 140, ../sass/styles.scss */
 body #header #block-locale-language ul,
 body #header .lang-block ul {
   padding: 0;
   margin: 0;
   overflow: hidden;
 }
-/* line 143, ../sass/styles.scss */
+/* line 144, ../sass/styles.scss */
 body #header #block-locale-language ul li,
 body #header .lang-block ul li {
   list-style: none;
   float: left;
 }
-/* line 146, ../sass/styles.scss */
+/* line 147, ../sass/styles.scss */
 body #header #block-locale-language ul li.first,
 body #header .lang-block ul li.first {
   margin-right: 10px;
 }
-/* line 155, ../sass/styles.scss */
+/* line 156, ../sass/styles.scss */
 body #header #block-locale-language ul li a,
 body #header .lang-block ul li a {
   color: #000000;
@@ -2060,17 +2061,17 @@ body #header .lang-block ul li a {
   font-weight: normal;
   text-decoration: none;
 }
-/* line 163, ../sass/styles.scss */
+/* line 164, ../sass/styles.scss */
 body #header #block-locale-language ul li a.active, body #header #block-locale-language ul li a:hover,
 body #header .lang-block ul li a.active,
 body #header .lang-block ul li a:hover {
   color: #D31245;
 }
-/* line 175, ../sass/styles.scss */
+/* line 176, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li {
   background: none;
 }
-/* line 177, ../sass/styles.scss */
+/* line 178, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li > a {
   color: #807f83;
   text-decoration: none;
@@ -2079,22 +2080,22 @@ body #header #block-superfish-1 ul#superfish-1 > li > a {
   text-transform: uppercase;
   padding: 0 1em;
 }
-/* line 184, ../sass/styles.scss */
+/* line 185, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li > a:hover, body #header #block-superfish-1 ul#superfish-1 > li > a.active, body #header #block-superfish-1 ul#superfish-1 > li > a.active-trail {
   background: none;
   color: #D31245;
 }
-/* line 190, ../sass/styles.scss */
+/* line 191, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li.last > a {
   border: 0;
 }
-/* line 194, ../sass/styles.scss */
+/* line 195, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li a {
   font-family: "Source Sans Pro", sans-serif;
   mso-ansi-font-weight: normal;
   font-weight: lighter;
 }
-/* line 199, ../sass/styles.scss */
+/* line 200, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li ul {
   background: #ffffff;
   border-bottom: 3px solid #D31245;
@@ -2102,11 +2103,11 @@ body #header #block-superfish-1 ul#superfish-1 > li ul {
   -moz-border-radius: 0;
   border-radius: 0;
 }
-/* line 203, ../sass/styles.scss */
+/* line 204, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li ul li {
   background: none;
 }
-/* line 205, ../sass/styles.scss */
+/* line 206, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li ul li a {
   color: #3F3F3F;
   border-top: 1px solid #807f83;
@@ -2115,65 +2116,65 @@ body #header #block-superfish-1 ul#superfish-1 > li ul li a {
   margin: 0 auto;
   background: none !important;
 }
-/* line 212, ../sass/styles.scss */
+/* line 213, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li ul li a:hover {
   color: #D31245;
 }
-/* line 224, ../sass/styles.scss */
+/* line 225, ../sass/styles.scss */
 body.front {
   /*view-awp-front-page-slideshow*/
 }
-/* line 225, ../sass/styles.scss */
+/* line 226, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow {
   position: relative;
   overflow: hidden;
   /*views-row*/
   /*views-slideshow-controls-bottom*/
 }
-/* line 228, ../sass/styles.scss */
+/* line 229, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row {
   /*views-field-field-image*/
   /*views-field-title*/
 }
-/* line 230, ../sass/styles.scss */
+/* line 231, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-field-image img {
   max-width: 100%;
   height: auto;
 }
-/* line 235, ../sass/styles.scss */
+/* line 236, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-title {
   position: absolute;
 }
-/* line 237, ../sass/styles.scss */
+/* line 238, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-title .field-content {
   font-size: 60px;
   color: #3F3F3F;
 }
-/* line 240, ../sass/styles.scss */
+/* line 241, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-title .field-content a {
   font-size: 60px;
   color: #3F3F3F;
 }
-/* line 246, ../sass/styles.scss */
+/* line 247, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-field-description {
   display: none;
 }
-/* line 250, ../sass/styles.scss */
+/* line 251, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom {
   position: absolute;
   z-index: 999;
 }
-/* line 253, ../sass/styles.scss */
+/* line 254, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-pause {
   display: none;
 }
-/* line 256, ../sass/styles.scss */
+/* line 257, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-previous,
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next {
   float: left;
   margin-left: 2%;
 }
-/* line 260, ../sass/styles.scss */
+/* line 261, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-previous a,
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next a {
   display: block;
@@ -2182,12 +2183,12 @@ body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .view
   width: 25px;
   height: 27px;
 }
-/* line 268, ../sass/styles.scss */
+/* line 269, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next {
   float: right;
   margin-right: 2%;
 }
-/* line 271, ../sass/styles.scss */
+/* line 272, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next a {
   background: url("../images/right-arrow.png") center no-repeat;
 }
