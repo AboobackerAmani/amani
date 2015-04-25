@@ -93,6 +93,7 @@ body {
             li {
               list-style: none;
               float: left;
+              margin-right: 10px;
               a {
                 display: block;
                 width: 25px;
@@ -117,7 +118,7 @@ body {
               &.last {
                 a {
                   background: url("../images/header/youtube-icon.png") 0 0 no-repeat;
-                  *:hover{
+                  &:hover{
                     background: url("../images/header/youtube-icon-hover.png") 0 0 no-repeat;
                   }
                 }
@@ -132,7 +133,7 @@ body {
     .lang-block{
       float: left;
       padding-left: 20px;
-
+      margin-top: 5px;
       ul{
         padding: 0;
         margin: 0;
@@ -178,6 +179,10 @@ body {
             border-top: 0;
             text-transform: uppercase;
             padding: 0 1em;
+            &:hover,&.active, &.active-trail{
+              background: none;
+              color: $awp-red;
+            }
           }
           &.last{
             & > a{
@@ -189,7 +194,20 @@ body {
             mso-ansi-font-weight: normal;
             font-weight: lighter;
           }
+          ul{
+            background: none;
+            li{
+              background: none;
+              a{
+                color: $awp-black;
+                border-bottom: 1px solid $awp_grey;
+                
+              }
+            }
+          }
+          }
         }
+        }/*& > li *.
       }
     }/*block-superfish-1*/
   }/*header*/
