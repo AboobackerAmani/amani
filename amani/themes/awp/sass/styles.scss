@@ -297,7 +297,11 @@ body {
     }
     #block-menu-menu-awp-footer-menu{
       float: left;
-      margin-left: 310px;
+      margin-left: 210px;
+      margin-top: 20px;
+      h2.block__title{
+        display: none;
+      }
       .menu{
         li{
           list-style: none;
@@ -319,6 +323,9 @@ body {
             }
             border: 0;
             margin-right: 20px;
+          }
+          &.last{
+            border: 0;
           }
         }
       }

@@ -2211,9 +2211,14 @@ body #footer #block-bean-amani-powered-by .powered-by {
 /* line 298, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu {
   float: left;
-  margin-left: 310px;
+  margin-left: 210px;
+  margin-top: 20px;
 }
 /* line 302, ../sass/styles.scss */
+body #footer #block-menu-menu-awp-footer-menu h2.block__title {
+  display: none;
+}
+/* line 306, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li {
   list-style: none;
   float: left;
@@ -2221,21 +2226,25 @@ body #footer #block-menu-menu-awp-footer-menu .menu li {
   border-right: 1px solid #FFFFFF;
   padding-right: 10px;
 }
-/* line 308, ../sass/styles.scss */
+/* line 312, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li a {
   color: #FFFFFF;
   text-transform: uppercase;
 }
-/* line 312, ../sass/styles.scss */
+/* line 316, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li.first {
   border: 0;
   margin-right: 20px;
 }
-/* line 313, ../sass/styles.scss */
+/* line 317, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li.first a {
   font-size: 0;
   display: block;
   width: 27px;
   height: 22px;
   background: url("../images/footer/home.png") 0 0 no-repeat;
+}
+/* line 327, ../sass/styles.scss */
+body #footer #block-menu-menu-awp-footer-menu .menu li.last {
+  border: 0;
 }
