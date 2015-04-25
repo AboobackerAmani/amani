@@ -2191,3 +2191,49 @@ body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .view
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next a {
   background: url("../images/right-arrow.png") center no-repeat;
 }
+/* line 282, ../sass/styles.scss */
+body #footer {
+  background: #D31245;
+}
+/* line 284, ../sass/styles.scss */
+body #footer #block-bean-amani-powered-by {
+  float: right;
+}
+/* line 286, ../sass/styles.scss */
+body #footer #block-bean-amani-powered-by .powered-by {
+  color: #FFFFFF;
+  margin: 10%;
+  font-size: 11px;
+  margin-bottom: 0;
+  margin-left: 20%;
+}
+/* line 297, ../sass/styles.scss */
+body #footer #block-menu-menu-awp-footer-menu {
+  float: left;
+}
+/* line 300, ../sass/styles.scss */
+body #footer #block-menu-menu-awp-footer-menu .menu li {
+  list-style: none;
+  float: left;
+  margin-right: 10px;
+  border-right: 1px solid #FFFFFF;
+  padding-left: 10px;
+}
+/* line 306, ../sass/styles.scss */
+body #footer #block-menu-menu-awp-footer-menu .menu li a {
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+/* line 310, ../sass/styles.scss */
+body #footer #block-menu-menu-awp-footer-menu .menu li.first {
+  border: 0;
+  margin-right: 20px;
+}
+/* line 311, ../sass/styles.scss */
+body #footer #block-menu-menu-awp-footer-menu .menu li.first a {
+  font-size: 0;
+  display: block;
+  width: 27px;
+  height: 22px;
+  background: url("../images/footer/home.png") 0 0 no-repeat;
+}

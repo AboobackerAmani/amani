@@ -277,4 +277,49 @@ body {
       }/*views-slideshow-controls-bottom*/
     }/*view-awp-front-page-slideshow*/
   }/*front*/
+
+
+  #footer{
+    background: $awp-red;
+    #block-bean-amani-powered-by{
+        float: right;
+      .powered-by{
+        color: $awp-white;
+        margin: 10%;
+        font-size: 11px;
+        margin-bottom: 0;
+        margin-left: 20%;
+      }
+      .credits-logo{
+
+      }
+    }
+    #block-menu-menu-awp-footer-menu{
+      float: left;
+      .menu{
+        li{
+          list-style: none;
+          float: left;
+          margin-right: 10px;
+          border-right: 1px solid $awp-white;
+          padding-left: 10px;
+          a{
+            color: $awp-white;
+            text-transform: uppercase;
+          }
+          &.first{
+            a{
+              font-size: 0;
+              display: block;
+              width: 27px;
+              height: 22px;
+              background: url("../images/footer/home.png") 0 0 no-repeat;
+            }
+            border: 0;
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
 }
