@@ -100,26 +100,28 @@ body {
                 height: 25px;
                 font-size: 0;
               }
+              background-image: url("../images/header-s7372912646.png");
+              background-repeat: no-repeat;
               &.first {
                 a {
-                  background: url("../images/header/facebook-icon.png") 0 0 no-repeat;
+                  background-position: 0 -25px;
                   &:hover{
-                    background: url("../images/header/facebook-icon-hover.png") 0 0 no-repeat;
+                    background-position: 0 0;
                   }
                 }
               }
               a {
-                background: url("../images/header/twitter-icon.png") 0 0 no-repeat;
+                background-position: 0 -125px;
                 &:hover{
-                  background: url("../images/header/twitter-icon-hover.png") 0 0 no-repeat;
+                  background-position: 0 -100px;
                 }
               }
 
               &.last {
                 a {
-                  background: url("../images/header/youtube-icon.png") 0 0 no-repeat;
+                  background-position: 0 -175px;
                   &:hover{
-                    background: url("../images/header/youtube-icon-hover.png") 0 0 no-repeat;
+                    background-position: 0 -150px;
                   }
                 }
               }
@@ -222,6 +224,7 @@ body {
   &.front{
     .view-awp-front-page-slideshow{
       position: relative;
+      overflow: hidden;
       .views-row{
         .views-field-field-image{
           img{
