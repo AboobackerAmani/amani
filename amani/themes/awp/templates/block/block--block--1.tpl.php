@@ -26,7 +26,7 @@ $search_block='<div class="sub-head">' . render($block). '</div>';
 $block = module_invoke('menu', 'block_view', 'menu-social-media');
 $social_block='<div class="sub-head">' . render($block). '</div>';
 
-$block = module_invoke('local', 'block_view', 'language');
+$block = module_invoke('locale', 'block_view', 'language');
 $language_block='<div class="sub-head">' . render($block). '</div>';
 
 ?>
