@@ -1914,27 +1914,32 @@ body #header .header_links .top-icons .social-block .menu li.last a {
   background: url("../images/header/twitter-icon.png") 0 0 no-repeat;
 }
 /* line 111, ../sass/styles.scss */
-body #header #block-locale-language {
+body #header #block-locale-language,
+body #header .lang-block {
   float: left;
   padding-left: 20px;
 }
-/* line 115, ../sass/styles.scss */
-body #header #block-locale-language ul {
+/* line 116, ../sass/styles.scss */
+body #header #block-locale-language ul,
+body #header .lang-block ul {
   padding: 0;
   margin: 0;
   overflow: hidden;
 }
-/* line 119, ../sass/styles.scss */
-body #header #block-locale-language ul li {
+/* line 120, ../sass/styles.scss */
+body #header #block-locale-language ul li,
+body #header .lang-block ul li {
   list-style: none;
   float: left;
 }
-/* line 123, ../sass/styles.scss */
-body #header #block-locale-language ul li.ar {
+/* line 124, ../sass/styles.scss */
+body #header #block-locale-language ul li.ar,
+body #header .lang-block ul li.ar {
   min-width: 55px;
 }
-/* line 126, ../sass/styles.scss */
-body #header #block-locale-language ul li a {
+/* line 127, ../sass/styles.scss */
+body #header #block-locale-language ul li a,
+body #header .lang-block ul li a {
   color: #000000;
   font-size: 16px;
   text-transform: uppercase;
@@ -1943,20 +1948,21 @@ body #header #block-locale-language ul li a {
   font-weight: normal;
   text-decoration: none;
 }
-/* line 134, ../sass/styles.scss */
-body #header #block-locale-language ul li a.active, body #header #block-locale-language ul li a:hover {
-  color: #fff;
-  background: #000;
+/* line 135, ../sass/styles.scss */
+body #header #block-locale-language ul li a.active, body #header #block-locale-language ul li a:hover,
+body #header .lang-block ul li a.active,
+body #header .lang-block ul li a:hover {
+  color: #D31245;
 }
-/* line 143, ../sass/styles.scss */
+/* line 144, ../sass/styles.scss */
 body #header #block-superfish-1 {
   float: right;
 }
-/* line 147, ../sass/styles.scss */
+/* line 148, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li {
   background: none;
 }
-/* line 149, ../sass/styles.scss */
+/* line 150, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li > a {
   color: #807F83;
   text-decoration: none;
@@ -1965,11 +1971,11 @@ body #header #block-superfish-1 ul#superfish-1 > li > a {
   text-transform: uppercase;
   padding: 0 1em;
 }
-/* line 158, ../sass/styles.scss */
+/* line 159, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li.last > a {
   border: 0;
 }
-/* line 162, ../sass/styles.scss */
+/* line 163, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li a {
   font-family: "Source Sans Pro", sans-serif;
   mso-ansi-font-weight: normal;

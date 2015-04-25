@@ -108,7 +108,8 @@ body {
         /*social-block*/
       }/*top-icon*/
     }/*header-links*/
-    #block-locale-language{
+    #block-locale-language,
+    .lang-block{
       float: left;
       padding-left: 20px;
 
@@ -133,8 +134,8 @@ body {
             text-decoration: none;
             &.active,
             &:hover{
-              color: #fff;
-              background: #000;
+              color: $awp-red;
+              //background: #000;
             }
           }
         }
