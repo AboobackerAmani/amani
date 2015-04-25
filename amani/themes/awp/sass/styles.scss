@@ -283,6 +283,7 @@ body {
     background: $awp-red;
     #block-bean-amani-powered-by{
         float: right;
+      margin-right: 20px;
       .powered-by{
         color: $awp-white;
         margin: 10%;
@@ -296,13 +297,14 @@ body {
     }
     #block-menu-menu-awp-footer-menu{
       float: left;
+      margin-left: 310px;
       .menu{
         li{
           list-style: none;
           float: left;
           margin-right: 10px;
           border-right: 1px solid $awp-white;
-          padding-left: 10px;
+          padding-right: 10px;
           a{
             color: $awp-white;
             text-transform: uppercase;
