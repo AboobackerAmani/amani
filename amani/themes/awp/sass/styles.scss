@@ -123,9 +123,14 @@ body {
         li{
           list-style: none;
           float: left;
+          &.first{
+            margin-right: 10px;
+          }
+          &.en{
 
+          }
           &.ar{
-            min-width: 55px;
+
           }
           a{
             color: #000000;

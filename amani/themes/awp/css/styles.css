@@ -1966,12 +1966,12 @@ body #header .lang-block ul li {
   list-style: none;
   float: left;
 }
-/* line 127, ../sass/styles.scss */
-body #header #block-locale-language ul li.ar,
-body #header .lang-block ul li.ar {
-  min-width: 55px;
+/* line 126, ../sass/styles.scss */
+body #header #block-locale-language ul li.first,
+body #header .lang-block ul li.first {
+  margin-right: 10px;
 }
-/* line 130, ../sass/styles.scss */
+/* line 135, ../sass/styles.scss */
 body #header #block-locale-language ul li a,
 body #header .lang-block ul li a {
   color: #000000;
@@ -1982,17 +1982,17 @@ body #header .lang-block ul li a {
   font-weight: normal;
   text-decoration: none;
 }
-/* line 138, ../sass/styles.scss */
+/* line 143, ../sass/styles.scss */
 body #header #block-locale-language ul li a.active, body #header #block-locale-language ul li a:hover,
 body #header .lang-block ul li a.active,
 body #header .lang-block ul li a:hover {
   color: #D31245;
 }
-/* line 150, ../sass/styles.scss */
+/* line 155, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li {
   background: none;
 }
-/* line 152, ../sass/styles.scss */
+/* line 157, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li > a {
   color: #807F83;
   text-decoration: none;
@@ -2001,70 +2001,70 @@ body #header #block-superfish-1 ul#superfish-1 > li > a {
   text-transform: uppercase;
   padding: 0 1em;
 }
-/* line 161, ../sass/styles.scss */
+/* line 166, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li.last > a {
   border: 0;
 }
-/* line 165, ../sass/styles.scss */
+/* line 170, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li a {
   font-family: "Source Sans Pro", sans-serif;
   mso-ansi-font-weight: normal;
   font-weight: lighter;
 }
-/* line 174, ../sass/styles.scss */
+/* line 179, ../sass/styles.scss */
 body.front {
   /*view-awp-front-page-slideshow*/
 }
-/* line 175, ../sass/styles.scss */
+/* line 180, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow {
   position: relative;
   /*views-row*/
   /*views-slideshow-controls-bottom*/
 }
-/* line 177, ../sass/styles.scss */
+/* line 182, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row {
   /*views-field-field-image*/
   /*views-field-title*/
 }
-/* line 179, ../sass/styles.scss */
+/* line 184, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-field-image img {
   max-width: 100%;
   height: auto;
 }
-/* line 184, ../sass/styles.scss */
+/* line 189, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-title {
   position: absolute;
 }
-/* line 186, ../sass/styles.scss */
+/* line 191, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-title .field-content {
   font-size: 60px;
   color: #3F3F3F;
 }
-/* line 189, ../sass/styles.scss */
+/* line 194, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-title .field-content a {
   font-size: 60px;
   color: #3F3F3F;
 }
-/* line 195, ../sass/styles.scss */
+/* line 200, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-field-description {
   display: none;
 }
-/* line 199, ../sass/styles.scss */
+/* line 204, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom {
   position: absolute;
   z-index: 999;
 }
-/* line 202, ../sass/styles.scss */
+/* line 207, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-pause {
   display: none;
 }
-/* line 205, ../sass/styles.scss */
+/* line 210, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-previous,
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next {
   float: left;
   margin-left: 2%;
 }
-/* line 209, ../sass/styles.scss */
+/* line 214, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-previous a,
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next a {
   display: block;
@@ -2073,12 +2073,12 @@ body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .view
   width: 25px;
   height: 27px;
 }
-/* line 217, ../sass/styles.scss */
+/* line 222, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next {
   float: right;
   margin-right: 2%;
 }
-/* line 220, ../sass/styles.scss */
+/* line 225, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next a {
   background: url("../images/right-arrow.png") center no-repeat;
 }
