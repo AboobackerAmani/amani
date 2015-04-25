@@ -64,6 +64,8 @@ body {
       }/*site--slogan*/
       .top-icons {
         float: right;
+        @import "../images/header/*.png";
+        @include all-header-sprites;
         .search_link {
           float: left;
           border-right: 1px solid $awp_grey;
@@ -100,11 +102,24 @@ body {
               &.first {
                 a {
                   background: url("../images/header/facebook-icon.png") 0 0 no-repeat;
+                  &:hover{
+                    background: url("../images/header/facebook-icon-hover.png") 0 0 no-repeat;
+                  }
                 }
               }
+              a {
+                background: url("../images/header/twitter-icon.png") 0 0 no-repeat;
+                &:hover{
+                  background: url("../images/header/twitter-icon-hover.png") 0 0 no-repeat;
+                }
+              }
+
               &.last {
                 a {
-                  background: url("../images/header/twitter-icon.png") 0 0 no-repeat;
+                  background: url("../images/header/youtube-icon.png") 0 0 no-repeat;
+                  *:hover{
+                    background: url("../images/header/youtube-icon-hover.png") 0 0 no-repeat;
+                  }
                 }
               }
             }
