@@ -228,4 +228,18 @@ $zen-auto-include-item-base: false;
       @include zen-grid-item(1, 5, $zen-float-direction, $zen-column-count);
     }
   }
+  .front{
+    .view-awp-front-page-slideshow{
+      .views-row{
+        .views-field-title{
+          width: 900px;
+          top: 200px;
+        }/*views-field-title*/
+      }/*views-row*/
+      .views-slideshow-controls-bottom{
+        top: 280px;
+        width: 100%;
+      }/*views-slideshow-controls-bottom*/
+    }/*view-awp-front-page-slideshow*/
+  }/*front*/
 }

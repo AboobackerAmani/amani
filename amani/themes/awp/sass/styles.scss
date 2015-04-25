@@ -27,6 +27,7 @@
 
 body {
   font-family: $font-body;
+  color: $awp-black;
   a {
 
   }
@@ -168,4 +169,58 @@ body {
       }
     }/*block-superfish-1*/
   }/*header*/
+  &.front{
+    .view-awp-front-page-slideshow{
+      position: relative;
+      .views-row{
+        .views-field-field-image{
+          img{
+            max-width: 100%;
+            height: auto;
+          }
+        }/*views-field-field-image*/
+        .views-field-title{
+          position: absolute;
+          .field-content{
+            font-size: 70px;
+            color: $awp-black;
+            a{
+              font-size: 70px;
+              color: $awp-black;
+            }
+          }
+        }/*views-field-title*/
+        .views-field-field-description{
+          display: none;
+        }
+      }/*views-row*/
+      .views-slideshow-controls-bottom{
+        position: absolute;
+        z-index: 999;
+        .views-slideshow-controls-text-pause{
+          display: none;
+        }
+        .views-slideshow-controls-text-previous,
+        .views-slideshow-controls-text-next{
+          float: left;
+          margin-left: 2%;
+          a{
+            display: block;
+            font-size: 0;
+            background: url("../images/left-arrow.png") center no-repeat;
+            width: 25px;
+            height: 27px;
+          }
+        }
+        .views-slideshow-controls-text-next{
+          float: right;
+          margin-right: 2%;
+          a{
+            background: url("../images/right-arrow.png") center no-repeat;
+          }
+        }
+
+      }/*views-slideshow-controls-bottom*/
+    }/*view-awp-front-page-slideshow*/
+  }/*front*/
 }
