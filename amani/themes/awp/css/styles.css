@@ -2108,61 +2108,69 @@ body #header #block-superfish-1 ul#superfish-1 > li ul li {
 body #header #block-superfish-1 ul#superfish-1 > li ul li a {
   color: #3F3F3F;
   border-top: 1px solid #807f83;
+  display: block;
+  width: 70% !important;
+  margin: 0 auto;
+  background: none !important;
 }
-/* line 216, ../sass/styles.scss */
+/* line 210, ../sass/styles.scss */
+body #header #block-superfish-1 ul#superfish-1 > li ul li a:hover {
+  color: #D31245;
+}
+/* line 222, ../sass/styles.scss */
 body.front {
   /*view-awp-front-page-slideshow*/
 }
-/* line 217, ../sass/styles.scss */
+/* line 223, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow {
   position: relative;
   /*views-row*/
   /*views-slideshow-controls-bottom*/
 }
-/* line 219, ../sass/styles.scss */
+/* line 225, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row {
   /*views-field-field-image*/
   /*views-field-title*/
 }
-/* line 221, ../sass/styles.scss */
+/* line 227, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-field-image img {
   max-width: 100%;
   height: auto;
 }
-/* line 226, ../sass/styles.scss */
+/* line 232, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-title {
   position: absolute;
 }
-/* line 228, ../sass/styles.scss */
+/* line 234, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-title .field-content {
   font-size: 60px;
   color: #3F3F3F;
 }
-/* line 231, ../sass/styles.scss */
+/* line 237, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-title .field-content a {
   font-size: 60px;
   color: #3F3F3F;
 }
-/* line 237, ../sass/styles.scss */
+/* line 243, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-field-description {
   display: none;
 }
-/* line 241, ../sass/styles.scss */
+/* line 247, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom {
   position: absolute;
   z-index: 999;
 }
-/* line 244, ../sass/styles.scss */
+/* line 250, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-pause {
   display: none;
 }
-/* line 247, ../sass/styles.scss */
+/* line 253, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-previous,
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next {
   float: left;
   margin-left: 2%;
 }
-/* line 251, ../sass/styles.scss */
+/* line 257, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-previous a,
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next a {
   display: block;
@@ -2171,12 +2179,12 @@ body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .view
   width: 25px;
   height: 27px;
 }
-/* line 259, ../sass/styles.scss */
+/* line 265, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next {
   float: right;
   margin-right: 2%;
 }
-/* line 262, ../sass/styles.scss */
+/* line 268, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next a {
   background: url("../images/right-arrow.png") center no-repeat;
 }
