@@ -29,6 +29,7 @@ body {
   font-family: $font-body;
   color: $awp-black;
   a {
+    text-decoration: none;
 
   }
   #header{
@@ -182,10 +183,10 @@ body {
         .views-field-title{
           position: absolute;
           .field-content{
-            font-size: 70px;
+            font-size: 60px;
             color: $awp-black;
             a{
-              font-size: 70px;
+              font-size: 60px;
               color: $awp-black;
             }
           }
