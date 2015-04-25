@@ -7,6 +7,21 @@
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
+/*Scot Mixins from git hub --- https://github.com/stolinski/Scotts-Dope-Mixins/blob/master/_mixins.scss*/
+/* Scott's Dope Mixins v0.3*/
+/* A less configurable but more areodynamic transition mixin */
+/* Removes margin and padding and list style from lists */
+/* Lightens background color on hover */
+/* Darkens background color on hover */
+/* A re-useable font mixin for whatever fonts you are using, allows for an optional color argument */
+/* Cross browser opacity */
+/* REMS with a PX Fallback */
+/* REQUIRES COMPASS */
+/* Faster gradients, if a stop is not specified a -20 of the start
+is assigned for you this may be adjustable in the near future */
+/* End of Scot Mixinis **/
+/***FUnction****/
+/***box read more**/
 /* HTML element (SMACSS base) rules */
 /**
  * @file
@@ -1233,10 +1248,11 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active {
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
-  -moz-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+  -webkit-transition: all background-color 0.3s ease-in-out;
+  -moz-transition: all background-color 0.3s ease-in-out;
+  -o-transition: all background-color 0.3s ease-in-out;
+  -ms-transition: all background-color 0.3s ease-in-out;
+  transition: all background-color 0.3s ease-in-out;
   color: #333;
   background-color: #dedede;
   letter-spacing: 1px;
@@ -1283,10 +1299,11 @@ a.tabs-secondary__tab-link, a.tabs-secondary__tab-link.is-active {
   -moz-border-radius: 0.75em;
   -webkit-border-radius: 0.75em;
   border-radius: 0.75em;
-  -moz-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+  -webkit-transition: all background-color 0.3s ease-in-out;
+  -moz-transition: all background-color 0.3s ease-in-out;
+  -o-transition: all background-color 0.3s ease-in-out;
+  -ms-transition: all background-color 0.3s ease-in-out;
+  transition: all background-color 0.3s ease-in-out;
   text-shadow: 1px 1px 0 #fff;
   background-color: #f2f2f2;
   color: #666;
@@ -2079,70 +2096,73 @@ body #header #block-superfish-1 ul#superfish-1 > li a {
 body #header #block-superfish-1 ul#superfish-1 > li ul {
   background: #ffffff;
   border-bottom: 3px solid #D31245;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
-/* line 200, ../sass/styles.scss */
+/* line 201, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li ul li {
   background: none;
 }
-/* line 202, ../sass/styles.scss */
+/* line 203, ../sass/styles.scss */
 body #header #block-superfish-1 ul#superfish-1 > li ul li a {
   color: #3F3F3F;
   border-top: 1px solid #807f83;
 }
-/* line 215, ../sass/styles.scss */
+/* line 216, ../sass/styles.scss */
 body.front {
   /*view-awp-front-page-slideshow*/
 }
-/* line 216, ../sass/styles.scss */
+/* line 217, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow {
   position: relative;
   /*views-row*/
   /*views-slideshow-controls-bottom*/
 }
-/* line 218, ../sass/styles.scss */
+/* line 219, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row {
   /*views-field-field-image*/
   /*views-field-title*/
 }
-/* line 220, ../sass/styles.scss */
+/* line 221, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-field-image img {
   max-width: 100%;
   height: auto;
 }
-/* line 225, ../sass/styles.scss */
+/* line 226, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-title {
   position: absolute;
 }
-/* line 227, ../sass/styles.scss */
+/* line 228, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-title .field-content {
   font-size: 60px;
   color: #3F3F3F;
 }
-/* line 230, ../sass/styles.scss */
+/* line 231, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-title .field-content a {
   font-size: 60px;
   color: #3F3F3F;
 }
-/* line 236, ../sass/styles.scss */
+/* line 237, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-row .views-field-field-description {
   display: none;
 }
-/* line 240, ../sass/styles.scss */
+/* line 241, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom {
   position: absolute;
   z-index: 999;
 }
-/* line 243, ../sass/styles.scss */
+/* line 244, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-pause {
   display: none;
 }
-/* line 246, ../sass/styles.scss */
+/* line 247, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-previous,
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next {
   float: left;
   margin-left: 2%;
 }
-/* line 250, ../sass/styles.scss */
+/* line 251, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-previous a,
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next a {
   display: block;
@@ -2151,12 +2171,12 @@ body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .view
   width: 25px;
   height: 27px;
 }
-/* line 258, ../sass/styles.scss */
+/* line 259, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next {
   float: right;
   margin-right: 2%;
 }
-/* line 261, ../sass/styles.scss */
+/* line 262, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next a {
   background: url("../images/right-arrow.png") center no-repeat;
 }

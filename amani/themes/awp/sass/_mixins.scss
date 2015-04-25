@@ -35,3 +35,206 @@
     @include element-invisible-off;
   }
 }
+
+
+
+/*Scot Mixins from git hub --- https://github.com/stolinski/Scotts-Dope-Mixins/blob/master/_mixins.scss*/
+/* Scott's Dope Mixins v0.3*/
+
+
+/* A less configurable but more areodynamic transition mixin */
+@mixin trans($sec: 0.2s) {
+  -webkit-transition: all $sec ease-out;
+  -moz-transition: all $sec ease-out;
+  -ms-transition: all $sec ease-out;
+  -o-transition: all $sec ease-out;
+  transition: all $sec ease-out;
+}
+
+/* Removes margin and padding and list style from lists */
+@mixin noList {
+  padding: 0;
+  margin: 0;
+  li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+
+/* Lightens background color on hover */
+@mixin hovLight ($color) {
+  background: $color;
+  &:hover {
+    background: $color + 30;
+  }
+}
+
+/* Darkens background color on hover */
+@mixin hovDark ($color) {
+  background: $color;
+  &:hover {
+    background: $color - 30;
+  }
+}
+
+
+/* A re-useable font mixin for whatever fonts you are using, allows for an optional color argument */
+@mixin serif($size, $color:"") {
+  color: $color;
+  font: italic normal $size 'Droid Serif';
+}
+
+/* Cross browser opacity */
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+
+/* REMS with a PX Fallback */
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+
+
+/* REQUIRES COMPASS */
+
+/* Faster gradients, if a stop is not specified a -20 of the start
+is assigned for you this may be adjustable in the near future */
+@mixin gradient($start, $stop:false) {
+  @if $stop {
+    @include background-image(linear-gradient($start, $stop));
+  } @else {
+    @include background-image(linear-gradient($start, $start - 20));
+  }
+
+}
+/* End of Scot Mixinis **/
+
+/***FUnction****/
+@mixin bg-trans($rr: 0, $gg: 0, $bb: 0, $opacity: 0.5) {
+  background: rgb($rr, $gg, $bb);
+  background: rgba($rr, $gg, $bb, $opacity);
+}
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin text-field {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  font: 14px/100% Arial, Helvetica, sans-serif;
+  padding: .5em;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+  @include rounded();
+  @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));
+}
+
+@mixin button($color: $red, $text_color: $white) {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font: 14px/100% Arial, Helvetica, sans-serif;
+  padding: .5em 2em .55em;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+  @include rounded();
+  @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));
+
+  color: $text_color !important;
+  font-weight: bold;
+  border: solid 1px darken($color, 18%);
+  background: $color;
+  @include gradient(saturate($color, 15%), darken($color, 15%));
+
+  &:hover {
+    text-decoration: none;
+    background: saturate($color, 10%);
+    @include gradient(saturate($color, 5%), darken($color, 5%));
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+    color: saturate($color, 15%);
+    @include gradient(saturate($color, 15%), lighten($color, 15%));
+  }
+}
+
+@mixin rounded($radius: 0.5em) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin corner($top-left, $top-right, $bottom-left, $bottom-right) {
+  -webkit-border-radius: $top-left $top-right $bottom-left $bottom-right;
+  -moz-border-radius: $top-left $top-right $bottom-left $bottom-right;
+  border-radius: $top-left $top-right $bottom-left $bottom-right;
+}
+
+@mixin transition($time: 0.20s) {
+  -webkit-transition: all $time ease-in-out;
+  -moz-transition: all $time ease-in-out;
+  -o-transition: all $time ease-in-out;
+  -ms-transition: all $time ease-in-out;
+  transition: all $time ease-in-out;
+}
+
+@mixin gradient($from, $to) {
+  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+  background: -moz-linear-gradient(top,  $from, $to);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+}
+
+@mixin transparentt($amount: 0.7, $decimal: 70) {
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=$decimal)";
+  /* This works in IE 8 & 9 too */
+  /* ... but also 5, 6, 7 */
+  filter: alpha(opacity=$decimal);
+
+  /* Older than Firefox 0.9 */
+  -moz-opacity:$amount;
+
+  /* Safari 1.x (pre WebKit!) */
+  -khtml-opacity: $amount;
+
+  /* Modern!
+  /* Firefox 0.9+, Safari 2?, Chrome any?
+  /* Opera 9+, IE 9+ */
+  opacity: $amount;
+}
+
+
+/***box read more**/
+@mixin read-more-box ($box-color){
+  background: $box-color;
+  @include rounded(5px);
+}
+@mixin read-more-box-link{
+  padding: 5px 15px;
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}

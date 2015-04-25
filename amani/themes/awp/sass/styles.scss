@@ -197,6 +197,7 @@ body {
           ul{
             background: #ffffff;
             border-bottom: 3px solid $awp-red;
+            @include rounded(0);
             li{
               background: none;
               a{
