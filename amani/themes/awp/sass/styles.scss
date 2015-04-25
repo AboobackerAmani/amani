@@ -195,13 +195,14 @@ body {
             font-weight: lighter;
           }
           ul{
-            background: none;
+            background: #ffffff;
+            border-bottom: 3px solid $awp-red;
             li{
               background: none;
               a{
                 color: $awp-black;
-                border-bottom: 1px solid $awp_grey;
-                
+                border-top: 1px solid $awp_grey;
+
               }
             }
           }
