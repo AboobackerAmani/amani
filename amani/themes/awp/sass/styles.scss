@@ -286,16 +286,16 @@ body {
           a{
             display: block;
             font-size: 0;
-            background: url("../images/left-arrow.png") center no-repeat;
-            width: 25px;
-            height: 27px;
+            background: url("../images/home/slider-arrows.png") 0 0 no-repeat;
+            width: 42px;
+            height: 63px;
           }
         }
         .views-slideshow-controls-text-next{
           float: right;
           margin-right: 2%;
           a{
-            background: url("../images/right-arrow.png") center no-repeat;
+            background: url("../images/slider-arrows.png") -42px 0 no-repeat;
           }
         }
 

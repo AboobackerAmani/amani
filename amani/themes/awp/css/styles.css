@@ -895,6 +895,7 @@ table {
   /* line 231, ../sass/layouts/_responsive.scss */
   .front {
     /*view-awp-front-page-slideshow*/
+    /*view-aidwatch-front-page-blocks(*/
   }
   /* line 232, ../sass/layouts/_responsive.scss */
   .front .view-awp-front-page-slideshow {
@@ -918,6 +919,11 @@ table {
   .front .view-awp-front-page-slideshow .views-slideshow-controls-bottom {
     top: 280px;
     width: 100%;
+  }
+  /* line 248, ../sass/layouts/_responsive.scss */
+  .front .view-aidwatch-front-page-blocks {
+    width: 33%;
+    float: left;
   }
 
   /*front*/
@@ -2211,9 +2217,9 @@ body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .view
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next a {
   display: block;
   font-size: 0;
-  background: url("../images/left-arrow.png") center no-repeat;
-  width: 25px;
-  height: 27px;
+  background: url("../images/home/slider-arrows.png") 0 0 no-repeat;
+  width: 42px;
+  height: 63px;
 }
 /* line 294, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next {
@@ -2222,7 +2228,7 @@ body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .view
 }
 /* line 297, ../sass/styles.scss */
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next a {
-  background: url("../images/right-arrow.png") center no-repeat;
+  background: url("../images/slider-arrows.png") -42px 0 no-repeat;
 }
 /* line 307, ../sass/styles.scss */
 body #footer {
