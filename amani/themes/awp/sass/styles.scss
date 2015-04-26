@@ -53,6 +53,7 @@ body {
     }
     .header_links{
       margin-top: 20px;
+      padding-top: 1px;
       border-bottom: 1px solid $awp_grey;
       padding-bottom: 15px;
       margin-bottom: 15px;
@@ -74,16 +75,29 @@ body {
           border-right: 1px solid $awp_grey;
           padding-right: 10px;
           margin-right: 10px;
+          position: relative;
           a.link-icon {
             font-size: 0;
             width: 25px;
             height: 25px;
             display: block;
-            float: left;
+            float: right;
             background: url("../images/header/search-icon.png") 0 0 no-repeat;
           }
           form {
             display: none;
+            position: absolute;
+            right: 5px;
+            top: 0;
+            .form-text{
+              background: none;
+              border: 1px solid $awp-light-grey;
+              padding: 3px 25px;
+              margin-top: -1px;
+            }
+            .form-actions{
+              display: none;
+            }
           }
         }
         /*saertch-link*/
