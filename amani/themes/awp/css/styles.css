@@ -2231,25 +2231,30 @@ body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .view
 body.front .view-awp-front-page-slideshow .views-slideshow-controls-bottom .views-slideshow-controls-text-next a {
   background: url("../images/homepage/slider-arrows.png") -42px 0 no-repeat;
 }
+/* line 305, ../sass/styles.scss */
+body.front .view-aidwatch-front-page-blocks {
+  /*views-row*/
+}
 /* line 306, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks .views-row {
   padding: 20px;
   background: #FFFFFF;
+  height: 180px;
   clear: both;
   overflow: hidden;
   position: relative;
 }
-/* line 309, ../sass/styles.scss */
+/* line 310, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks .views-row:hover {
   background: #F0F0F0;
 }
-/* line 315, ../sass/styles.scss */
+/* line 316, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks .views-row .views-field-field-image {
   float: left;
   margin-right: 25px;
   margin-bottom: 30px;
 }
-/* line 320, ../sass/styles.scss */
+/* line 321, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks .views-row .views-field-title {
   position: absolute;
   bottom: 30px;
@@ -2257,18 +2262,18 @@ body.front .view-aidwatch-front-page-blocks .views-row .views-field-title {
   font-size: 18px;
   color: #807f83;
 }
-/* line 326, ../sass/styles.scss */
+/* line 327, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks .views-row .views-field-title a {
   font-size: 18px;
   color: #807f83;
 }
-/* line 331, ../sass/styles.scss */
+/* line 332, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks .views-row .views-field-field-text {
   font-size: 70px;
   font-weight: 400;
   color: #5A5A5A;
 }
-/* line 336, ../sass/styles.scss */
+/* line 337, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks .views-row .views-field-title-1 {
   display: none;
   position: absolute;
@@ -2277,58 +2282,62 @@ body.front .view-aidwatch-front-page-blocks .views-row .views-field-title-1 {
   border: 1px solid #F0F0F0;
   padding: 1px 5px;
 }
-/* line 343, ../sass/styles.scss */
+/* line 344, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks .views-row .views-field-title-1 a {
   color: #F0F0F0;
   font-size: 12px;
   line-height: 1.2;
 }
-/* line 351, ../sass/styles.scss */
+/* line 352, ../sass/styles.scss */
+body.front .view-aidwatch-front-page-blocks .views-row:hover .views-field-title-1 {
+  display: block;
+}
+/* line 357, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks.view-display-id-block_2 {
   /*left*/
 }
-/* line 353, ../sass/styles.scss */
+/* line 359, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks.view-display-id-block_2 .views-row.views-row-even {
   background: #F0F0F0;
 }
-/* line 355, ../sass/styles.scss */
+/* line 361, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks.view-display-id-block_2 .views-row.views-row-even:hover {
   background: #FFFFFF;
 }
-/* line 361, ../sass/styles.scss */
+/* line 367, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks.view-display-id-block {
   /*center*/
 }
-/* line 363, ../sass/styles.scss */
+/* line 369, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks.view-display-id-block .views-row.views-row-odd {
   background: #F0F0F0;
 }
-/* line 365, ../sass/styles.scss */
+/* line 371, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks.view-display-id-block .views-row.views-row-odd:hover {
   background: #FFFFFF;
 }
-/* line 371, ../sass/styles.scss */
+/* line 377, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks.view-display-id-block_1 {
   /*right*/
 }
-/* line 373, ../sass/styles.scss */
+/* line 379, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks.view-display-id-block_1 .views-row.views-row-even {
   background: #F0F0F0;
 }
-/* line 375, ../sass/styles.scss */
+/* line 381, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks.view-display-id-block_1 .views-row.views-row-even:hover {
   background: #FFFFFF;
 }
-/* line 385, ../sass/styles.scss */
+/* line 391, ../sass/styles.scss */
 body #footer {
   background: #D31245;
 }
-/* line 387, ../sass/styles.scss */
+/* line 393, ../sass/styles.scss */
 body #footer #block-bean-amani-powered-by {
   float: right;
   margin-right: 20px;
 }
-/* line 390, ../sass/styles.scss */
+/* line 396, ../sass/styles.scss */
 body #footer #block-bean-amani-powered-by .powered-by {
   color: #FFFFFF;
   margin: 10%;
@@ -2336,17 +2345,17 @@ body #footer #block-bean-amani-powered-by .powered-by {
   margin-bottom: 0;
   margin-left: 20%;
 }
-/* line 401, ../sass/styles.scss */
+/* line 407, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu {
   float: left;
   margin-left: 210px;
   margin-top: 20px;
 }
-/* line 405, ../sass/styles.scss */
+/* line 411, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu h2.block__title {
   display: none;
 }
-/* line 409, ../sass/styles.scss */
+/* line 415, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li {
   list-style: none;
   float: left;
@@ -2354,17 +2363,17 @@ body #footer #block-menu-menu-awp-footer-menu .menu li {
   border-right: 1px solid #FFFFFF;
   padding-right: 10px;
 }
-/* line 415, ../sass/styles.scss */
+/* line 421, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li a {
   color: #FFFFFF;
   text-transform: uppercase;
 }
-/* line 419, ../sass/styles.scss */
+/* line 425, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li.first {
   border: 0;
   margin-right: 20px;
 }
-/* line 420, ../sass/styles.scss */
+/* line 426, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li.first a {
   font-size: 0;
   display: block;
@@ -2372,7 +2381,7 @@ body #footer #block-menu-menu-awp-footer-menu .menu li.first a {
   height: 22px;
   background: url("../images/footer/home.png") 0 0 no-repeat;
 }
-/* line 430, ../sass/styles.scss */
+/* line 436, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li.last {
   border: 0;
 }

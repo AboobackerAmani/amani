@@ -306,6 +306,7 @@ body {
       .views-row{
         padding: 20px;
         background: $awp-white;
+        height: 180px;
         &:hover{
           background: $awp-light-grey;
         }
@@ -347,7 +348,12 @@ body {
 
           }
         }
-      }
+        &:hover{
+          .views-field-title-1{
+            display: block;
+          }
+        }
+      }/*views-row*/
       &.view-display-id-block_2{/*left*/
         .views-row{
           &.views-row-even{
