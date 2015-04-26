@@ -23,10 +23,10 @@ Drupal.behaviors.my_custom_behavior = {
       $('.header__region .header_links .site--slogan').append($('.header__name-and-slogan'));
 
       $('.header__region .header_links .search_link .link-icon').click(function(){
-          $('.header__region .header_links .search_link #search-block-form').show("fold", 1000);
-          $('.header__region .header_links .search_link #search-block-form').focusout(function() {
-              $('.header__region .header_links .search_link #search-block-form').hide();
-          });
+          $('.header__region .header_links .search_link #search-block-form').show();
+      });
+      $('.header__region .header_links .search_link #search-block-form .form-text').focusout(function() {
+          $('.header__region .header_links .search_link #search-block-form').hide();
       });
 
 
