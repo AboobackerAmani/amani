@@ -24,10 +24,11 @@ Drupal.behaviors.my_custom_behavior = {
 
       $('.header__region .header_links .search_link .link-icon').click(function(){
           $('.header__region .header_links .search_link #search-block-form').show("fold", 1000);
+          $('.header__region .header_links .search_link #search-block-form').focusout(function() {
+              $('.header__region .header_links .search_link #search-block-form').hide();
+          });
       });
-      $('.header__region .header_links .search_link #search-block-form').focusout(function() {
-          $(this).hide();
-      });
+
 
   }
 };
