@@ -339,10 +339,10 @@ body {
           position: absolute;
           bottom: 2px;
           left: 40%;
-          border: 1px solid $awp-light-grey;
+          border: 1px solid $awp-white;
           padding: 1px 5px;
           a{
-            color: $awp-light-grey;
+            color: $awp-white;
             font-size: 12px;
             line-height: 1.2;
 
@@ -360,6 +360,10 @@ body {
             background: $awp-light-grey;
             &:hover{
               background: $awp-white;
+              .views-field-title-1 a{
+                color: $awp-light-grey;
+                border-color: $awp-light-grey;
+              }
             }
           }
         }
@@ -370,6 +374,10 @@ body {
             background: $awp-light-grey;
             &:hover{
               background: $awp-white;
+              .views-field-title-1 a{
+                color: $awp-light-grey;
+                border-color: $awp-light-grey;
+              }
             }
           }
         }
@@ -380,6 +388,10 @@ body {
             background: $awp-light-grey;
             &:hover{
               background: $awp-white;
+              .views-field-title-1 a{
+                color: $awp-light-grey;
+                border-color: $awp-light-grey;
+              }
             }
           }
         }

@@ -2279,12 +2279,12 @@ body.front .view-aidwatch-front-page-blocks .views-row .views-field-title-1 {
   position: absolute;
   bottom: 2px;
   left: 40%;
-  border: 1px solid #F0F0F0;
+  border: 1px solid #FFFFFF;
   padding: 1px 5px;
 }
 /* line 344, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks .views-row .views-field-title-1 a {
-  color: #F0F0F0;
+  color: #FFFFFF;
   font-size: 12px;
   line-height: 1.2;
 }
@@ -2304,40 +2304,55 @@ body.front .view-aidwatch-front-page-blocks.view-display-id-block_2 .views-row.v
 body.front .view-aidwatch-front-page-blocks.view-display-id-block_2 .views-row.views-row-even:hover {
   background: #FFFFFF;
 }
-/* line 367, ../sass/styles.scss */
+/* line 363, ../sass/styles.scss */
+body.front .view-aidwatch-front-page-blocks.view-display-id-block_2 .views-row.views-row-even:hover .views-field-title-1 a {
+  color: #F0F0F0;
+  border-color: #F0F0F0;
+}
+/* line 371, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks.view-display-id-block {
   /*center*/
 }
-/* line 369, ../sass/styles.scss */
+/* line 373, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks.view-display-id-block .views-row.views-row-odd {
   background: #F0F0F0;
 }
-/* line 371, ../sass/styles.scss */
+/* line 375, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks.view-display-id-block .views-row.views-row-odd:hover {
   background: #FFFFFF;
 }
 /* line 377, ../sass/styles.scss */
+body.front .view-aidwatch-front-page-blocks.view-display-id-block .views-row.views-row-odd:hover .views-field-title-1 a {
+  color: #F0F0F0;
+  border-color: #F0F0F0;
+}
+/* line 385, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks.view-display-id-block_1 {
   /*right*/
 }
-/* line 379, ../sass/styles.scss */
+/* line 387, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks.view-display-id-block_1 .views-row.views-row-even {
   background: #F0F0F0;
 }
-/* line 381, ../sass/styles.scss */
+/* line 389, ../sass/styles.scss */
 body.front .view-aidwatch-front-page-blocks.view-display-id-block_1 .views-row.views-row-even:hover {
   background: #FFFFFF;
 }
 /* line 391, ../sass/styles.scss */
+body.front .view-aidwatch-front-page-blocks.view-display-id-block_1 .views-row.views-row-even:hover .views-field-title-1 a {
+  color: #F0F0F0;
+  border-color: #F0F0F0;
+}
+/* line 403, ../sass/styles.scss */
 body #footer {
   background: #D31245;
 }
-/* line 393, ../sass/styles.scss */
+/* line 405, ../sass/styles.scss */
 body #footer #block-bean-amani-powered-by {
   float: right;
   margin-right: 20px;
 }
-/* line 396, ../sass/styles.scss */
+/* line 408, ../sass/styles.scss */
 body #footer #block-bean-amani-powered-by .powered-by {
   color: #FFFFFF;
   margin: 10%;
@@ -2345,17 +2360,17 @@ body #footer #block-bean-amani-powered-by .powered-by {
   margin-bottom: 0;
   margin-left: 20%;
 }
-/* line 407, ../sass/styles.scss */
+/* line 419, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu {
   float: left;
   margin-left: 210px;
   margin-top: 20px;
 }
-/* line 411, ../sass/styles.scss */
+/* line 423, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu h2.block__title {
   display: none;
 }
-/* line 415, ../sass/styles.scss */
+/* line 427, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li {
   list-style: none;
   float: left;
@@ -2363,17 +2378,17 @@ body #footer #block-menu-menu-awp-footer-menu .menu li {
   border-right: 1px solid #FFFFFF;
   padding-right: 10px;
 }
-/* line 421, ../sass/styles.scss */
+/* line 433, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li a {
   color: #FFFFFF;
   text-transform: uppercase;
 }
-/* line 425, ../sass/styles.scss */
+/* line 437, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li.first {
   border: 0;
   margin-right: 20px;
 }
-/* line 426, ../sass/styles.scss */
+/* line 438, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li.first a {
   font-size: 0;
   display: block;
@@ -2381,7 +2396,7 @@ body #footer #block-menu-menu-awp-footer-menu .menu li.first a {
   height: 22px;
   background: url("../images/footer/home.png") 0 0 no-repeat;
 }
-/* line 436, ../sass/styles.scss */
+/* line 448, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li.last {
   border: 0;
 }
