@@ -256,9 +256,13 @@ body {
           position: absolute;
           background: url("../images/homepage/slider-white.png") 0 0 no-repeat;
           background-size: 100% 100%;
+          display: table;
           .field-content{
             font-size: 60px;
             color: $awp-black;
+            display: table-cell;
+            vertical-align: middle;
+            padding: 20px 0;
             a{
               font-size: 60px;
               color: $awp-black;
