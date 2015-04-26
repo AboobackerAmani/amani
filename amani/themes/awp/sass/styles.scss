@@ -304,6 +304,9 @@ body {
 
     .view-aidwatch-front-page-blocks{
       margin-bottom: 40px;
+      margin-top: 40px;
+      border-top: 1px solid $awp-grey;
+      border-bottom: 1px solid $awp-grey;
       .views-row{
         padding: 20px;
         background: $awp-white;
@@ -355,9 +358,9 @@ body {
           }
         }
       }/*views-row*/
-      &.view-display-id-block_2{/*left*/
+      &.view-display-id-block_2{/*right*/
         .views-row{
-          &.views-row-even{
+          &.views-row-odd{
             background: $awp-light-grey;
             &:hover{
               background: $awp-white;
@@ -383,7 +386,7 @@ body {
           }
         }
       }
-      &.view-display-id-block_1{/*right*/
+      &.view-display-id-block_1{/*left*/
         .views-row{
           &.views-row-even{
             background: $awp-light-grey;
