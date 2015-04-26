@@ -29,7 +29,9 @@ body {
   font-family: $font-body;
   color: $awp-black;
   line-height: 1;
-
+  :focus{
+    border: 0; /**remove browser default border*/
+  }
   a {
     text-decoration: none;
 
@@ -252,6 +254,8 @@ body {
         }/*views-field-field-image*/
         .views-field-title{
           position: absolute;
+          background: url("../images/homepage/slider-white.png") 0 0 no-repeat;
+          background-size: 100% 100%;
           .field-content{
             font-size: 60px;
             color: $awp-black;
