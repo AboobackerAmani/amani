@@ -45,7 +45,7 @@ $legacy-support-for-ie8: true;
 //
 
 // Import Google font
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,600);
 // Compass' vertical_rhythm extension is a powerful tool to set up a vertical
 // rhythm for your entire page. You can see some of its mixins and functions in
 // use in the normalize.scss file.
@@ -102,7 +102,8 @@ $awp-grey: rgb(128,127, 131);
 $awp-red: #D31245;
 $awp-black: #3F3F3F;
 $awp-white: #FFFFFF;
-$awp-light-grey: #ccc;
+$awp-light-grey: #F0F0F0;
+$awp-dark-grey: #5A5A5A;
 
 //Social Colors
 $facebook-color: #3B5998;
