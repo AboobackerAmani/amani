@@ -274,10 +274,10 @@ $zen-auto-include-item-base: false;
       }
     }
 
-    .block-views-front-page-tweets-block{
+    #block-views-front-page-tweets-block{
       @include zen-grid-item(6, 1, $zen-float-direction, $zen-column-count);
     }
-    .block-views-global-voices-blog-block{
+    #block-views-global-voices-blog-block{
       @include zen-grid-item(6, 7, $zen-float-direction, $zen-column-count);
     }
 
