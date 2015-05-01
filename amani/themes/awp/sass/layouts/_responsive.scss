@@ -249,6 +249,9 @@ $zen-auto-include-item-base: false;
       width: 33%;
       float: left;
     }/*view-aidwatch-front-page-blocks*/
+    .view-glimpses-of-daily-life-in-gaza{
+      @include zen-grid-item(5, 1, $zen-float-direction, $zen-column-count);
+    }
 
   }/*front*/
 }

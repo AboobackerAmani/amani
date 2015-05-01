@@ -401,6 +401,50 @@ body {
         }
       }
     }/*view-aidwatch-front-page-blocks(*/
+    #block-views-3035a87eee3a51153d184d85d17cc285 {
+      h2.block-title{
+        font-size: 3vw;
+        color: $awp-green;
+      }
+      .view-glimpses-of-daily-life-in-gaza {
+        .views-row{
+          overflow: hidden;
+          clear: both;
+          margin-bottom: 20px;
+          .views-field-field-image{
+            float: left;
+            margin-right: 2%;
+            width: 42%;
+          }
+          .views-field-title{
+            float: left;
+            clear: right;
+            font-size: 2vw;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-weight: 400;
+            color: $awp-black;
+            a{
+              color: $awp-black;
+            }
+          }
+          .views-field-field-article-date{
+            color: #807F83;
+            font-size: 18px;
+            font-weight: 100;
+            float: left;
+            clear: right;
+            margin-bottom: 5px;
+          }
+          .views-field-body{
+            float: left;
+            clear: right;
+          }
+        }
+      }
+      /*view-glimpses-of-daily-life-in-gaza*/
+    }
+
   }/*front*/
 
 

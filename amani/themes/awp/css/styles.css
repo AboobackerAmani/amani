@@ -925,6 +925,13 @@ table {
     width: 33%;
     float: left;
   }
+  /* line 252, ../sass/layouts/_responsive.scss */
+  .front .view-glimpses-of-daily-life-in-gaza {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+  }
 
   /*front*/
 }
@@ -2347,16 +2354,65 @@ body.front .view-aidwatch-front-page-blocks.view-display-id-block_1 .views-row.v
   color: #F0F0F0;
   border-color: #F0F0F0;
 }
-/* line 407, ../sass/styles.scss */
+/* line 404, ../sass/styles.scss */
+body.front #block-views-3035a87eee3a51153d184d85d17cc285 {
+  /*view-glimpses-of-daily-life-in-gaza*/
+}
+/* line 405, ../sass/styles.scss */
+body.front #block-views-3035a87eee3a51153d184d85d17cc285 h2.block-title {
+  font-size: 3vw;
+  color: #3FB8AE;
+}
+/* line 410, ../sass/styles.scss */
+body.front #block-views-3035a87eee3a51153d184d85d17cc285 .view-glimpses-of-daily-life-in-gaza .views-row {
+  overflow: hidden;
+  clear: both;
+  margin-bottom: 20px;
+}
+/* line 414, ../sass/styles.scss */
+body.front #block-views-3035a87eee3a51153d184d85d17cc285 .view-glimpses-of-daily-life-in-gaza .views-row .views-field-field-image {
+  float: left;
+  margin-right: 2%;
+  width: 42%;
+}
+/* line 419, ../sass/styles.scss */
+body.front #block-views-3035a87eee3a51153d184d85d17cc285 .view-glimpses-of-daily-life-in-gaza .views-row .views-field-title {
+  float: left;
+  clear: right;
+  font-size: 2vw;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: #3F3F3F;
+}
+/* line 427, ../sass/styles.scss */
+body.front #block-views-3035a87eee3a51153d184d85d17cc285 .view-glimpses-of-daily-life-in-gaza .views-row .views-field-title a {
+  color: #3F3F3F;
+}
+/* line 431, ../sass/styles.scss */
+body.front #block-views-3035a87eee3a51153d184d85d17cc285 .view-glimpses-of-daily-life-in-gaza .views-row .views-field-field-article-date {
+  color: #807F83;
+  font-size: 18px;
+  font-weight: 100;
+  float: left;
+  clear: right;
+  margin-bottom: 5px;
+}
+/* line 439, ../sass/styles.scss */
+body.front #block-views-3035a87eee3a51153d184d85d17cc285 .view-glimpses-of-daily-life-in-gaza .views-row .views-field-body {
+  float: left;
+  clear: right;
+}
+/* line 451, ../sass/styles.scss */
 body #footer {
   background: #D31245;
 }
-/* line 409, ../sass/styles.scss */
+/* line 453, ../sass/styles.scss */
 body #footer #block-bean-amani-powered-by {
   float: right;
   margin-right: 20px;
 }
-/* line 412, ../sass/styles.scss */
+/* line 456, ../sass/styles.scss */
 body #footer #block-bean-amani-powered-by .powered-by {
   color: #FFFFFF;
   margin: 10%;
@@ -2364,17 +2420,17 @@ body #footer #block-bean-amani-powered-by .powered-by {
   margin-bottom: 0;
   margin-left: 20%;
 }
-/* line 423, ../sass/styles.scss */
+/* line 467, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu {
   float: left;
   margin-left: 210px;
   margin-top: 20px;
 }
-/* line 427, ../sass/styles.scss */
+/* line 471, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu h2.block__title {
   display: none;
 }
-/* line 431, ../sass/styles.scss */
+/* line 475, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li {
   list-style: none;
   float: left;
@@ -2382,17 +2438,17 @@ body #footer #block-menu-menu-awp-footer-menu .menu li {
   border-right: 1px solid #FFFFFF;
   padding-right: 10px;
 }
-/* line 437, ../sass/styles.scss */
+/* line 481, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li a {
   color: #FFFFFF;
   text-transform: uppercase;
 }
-/* line 441, ../sass/styles.scss */
+/* line 485, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li.first {
   border: 0;
   margin-right: 20px;
 }
-/* line 442, ../sass/styles.scss */
+/* line 486, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li.first a {
   font-size: 0;
   display: block;
@@ -2400,7 +2456,7 @@ body #footer #block-menu-menu-awp-footer-menu .menu li.first a {
   height: 22px;
   background: url("../images/footer/home.png") 0 0 no-repeat;
 }
-/* line 452, ../sass/styles.scss */
+/* line 496, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li.last {
   border: 0;
 }
