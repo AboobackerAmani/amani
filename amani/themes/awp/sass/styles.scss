@@ -448,7 +448,33 @@ body {
       }
       /*view-glimpses-of-daily-life-in-gaza*/
     }
-
+    #block-views-front-page-tweets-block{
+      background: rgba(225,247,253,0.8);
+      height: 420px;
+      padding: 20px;
+      .view-header{
+        color: #807F83;
+        padding-left: 50px;
+        font-size: 2vw;
+        font-weight: normal;
+        background: url("../images/homepage/feed-icon.png") left center;
+        margin-bottom: 30px;
+      }
+      ul {
+        li {
+          margin-bottom: 5px;
+          .views-field-text {
+            color: $awp-black;
+          }
+          .views-field-created-time {
+            color: $awp-green;
+          }
+        }
+      }
+    }
+    #block-views-global-voices-blog-block{
+      height: 420px;
+    }
   }/*front*/
 
 
