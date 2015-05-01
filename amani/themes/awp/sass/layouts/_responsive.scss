@@ -229,6 +229,7 @@ $zen-auto-include-item-base: false;
     }
   }
   .front{
+    $zen-column-count: 12;
     .view-awp-front-page-slideshow{
       .views-row{
         .views-field-title{
@@ -250,7 +251,7 @@ $zen-auto-include-item-base: false;
       float: left;
     }/*view-aidwatch-front-page-blocks*/
     #block-views-3035a87eee3a51153d184d85d17cc285{
-      @include zen-grid-item(5, 1, $zen-float-direction, $zen-column-count);
+      @include zen-grid-item(12, 1, $zen-float-direction, $zen-column-count);
       clear: both;
       overflow: hidden;
       float: none;
@@ -271,6 +272,13 @@ $zen-auto-include-item-base: false;
       .views-field-body{
         width: 42%;
       }
+    }
+
+    .block-views-front-page-tweets-block{
+      @include zen-grid-item(6, 1, $zen-float-direction, $zen-column-count);
+    }
+    .block-views-global-voices-blog-block{
+      @include zen-grid-item(6, 7, $zen-float-direction, $zen-column-count);
     }
 
   }/*front*/
