@@ -474,6 +474,32 @@ body {
     }
     #block-views-global-voices-blog-block{
       height: 420px;
+      background: #F0F0F0;
+      padding: 20px;
+      h2.block-title {
+        color: #807F83;
+        font-size: 2.2vw;
+        margin-bottom: 20px;
+        .view-global-voices-blog{
+          .views-row{
+            overflow: hidden;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid $awp-white;
+            .views-field-title{
+              width: 100%;
+              a{
+                font-size: 1.5vw;
+                color: $awp-green;
+              }
+              margin-bottom: 5px;
+            }
+            .views-field-body{
+              color: $awp-grey  ;
+            }
+          }
+        }
+      }
     }
   }/*front*/
 

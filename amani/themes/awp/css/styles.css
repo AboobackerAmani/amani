@@ -2477,17 +2477,46 @@ body.front #block-views-front-page-tweets-block ul li .views-field-created-time 
 /* line 475, ../sass/styles.scss */
 body.front #block-views-global-voices-blog-block {
   height: 420px;
+  background: #F0F0F0;
+  padding: 20px;
 }
-/* line 481, ../sass/styles.scss */
+/* line 479, ../sass/styles.scss */
+body.front #block-views-global-voices-blog-block h2.block-title {
+  color: #807F83;
+  font-size: 2.2vw;
+  margin-bottom: 20px;
+}
+/* line 484, ../sass/styles.scss */
+body.front #block-views-global-voices-blog-block h2.block-title .view-global-voices-blog .views-row {
+  overflow: hidden;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #FFFFFF;
+}
+/* line 489, ../sass/styles.scss */
+body.front #block-views-global-voices-blog-block h2.block-title .view-global-voices-blog .views-row .views-field-title {
+  width: 100%;
+  margin-bottom: 5px;
+}
+/* line 491, ../sass/styles.scss */
+body.front #block-views-global-voices-blog-block h2.block-title .view-global-voices-blog .views-row .views-field-title a {
+  font-size: 1.5vw;
+  color: #3FB8AE;
+}
+/* line 497, ../sass/styles.scss */
+body.front #block-views-global-voices-blog-block h2.block-title .view-global-voices-blog .views-row .views-field-body {
+  color: #807f83;
+}
+/* line 507, ../sass/styles.scss */
 body #footer {
   background: #D31245;
 }
-/* line 483, ../sass/styles.scss */
+/* line 509, ../sass/styles.scss */
 body #footer #block-bean-amani-powered-by {
   float: right;
   margin-right: 20px;
 }
-/* line 486, ../sass/styles.scss */
+/* line 512, ../sass/styles.scss */
 body #footer #block-bean-amani-powered-by .powered-by {
   color: #FFFFFF;
   margin: 10%;
@@ -2495,17 +2524,17 @@ body #footer #block-bean-amani-powered-by .powered-by {
   margin-bottom: 0;
   margin-left: 20%;
 }
-/* line 497, ../sass/styles.scss */
+/* line 523, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu {
   float: left;
   margin-left: 210px;
   margin-top: 20px;
 }
-/* line 501, ../sass/styles.scss */
+/* line 527, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu h2.block__title {
   display: none;
 }
-/* line 505, ../sass/styles.scss */
+/* line 531, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li {
   list-style: none;
   float: left;
@@ -2513,17 +2542,17 @@ body #footer #block-menu-menu-awp-footer-menu .menu li {
   border-right: 1px solid #FFFFFF;
   padding-right: 10px;
 }
-/* line 511, ../sass/styles.scss */
+/* line 537, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li a {
   color: #FFFFFF;
   text-transform: uppercase;
 }
-/* line 515, ../sass/styles.scss */
+/* line 541, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li.first {
   border: 0;
   margin-right: 20px;
 }
-/* line 516, ../sass/styles.scss */
+/* line 542, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li.first a {
   font-size: 0;
   display: block;
@@ -2531,7 +2560,7 @@ body #footer #block-menu-menu-awp-footer-menu .menu li.first a {
   height: 22px;
   background: url("../images/footer/home.png") 0 0 no-repeat;
 }
-/* line 526, ../sass/styles.scss */
+/* line 552, ../sass/styles.scss */
 body #footer #block-menu-menu-awp-footer-menu .menu li.last {
   border: 0;
 }
