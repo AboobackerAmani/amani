@@ -249,8 +249,28 @@ $zen-auto-include-item-base: false;
       width: 33%;
       float: left;
     }/*view-aidwatch-front-page-blocks*/
-    .view-glimpses-of-daily-life-in-gaza{
+    #block-views-3035a87eee3a51153d184d85d17cc285{
       @include zen-grid-item(5, 1, $zen-float-direction, $zen-column-count);
+      .views-field-field-image{
+        margin-right: 2%;
+        width: 42%;
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+      .views-field-title{
+        width: 42%;
+        float: left;
+      }
+      .views-field-field-article-date{
+        width: 42%;
+        float: left;
+      }
+      .views-field-body{
+        width: 42%;
+        float: left;
+      }
     }
 
   }/*front*/
