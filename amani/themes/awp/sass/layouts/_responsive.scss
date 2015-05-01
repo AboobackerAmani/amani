@@ -273,7 +273,7 @@ $zen-auto-include-item-base: false;
         width: 42%;
       }
     }
-
+    $zen-gutter-width: 0;
     #block-views-front-page-tweets-block{
       @include zen-grid-item(6, 7, $zen-float-direction, $zen-column-count);
     }
