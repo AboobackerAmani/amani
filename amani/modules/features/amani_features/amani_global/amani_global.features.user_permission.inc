@@ -358,6 +358,7 @@ function amani_global_user_default_permissions() {
     'name' => 'administer BOTCHA settings',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'botcha',
   );
@@ -595,6 +596,16 @@ function amani_global_user_default_permissions() {
       1 => 'amani administrator',
     ),
     'module' => 'googleanalytics',
+  );
+
+  // Exported permission: administer honeypot.
+  $permissions['administer honeypot'] = array(
+    'name' => 'administer honeypot',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'honeypot',
   );
 
   // Exported permission: administer image styles.
@@ -967,6 +978,16 @@ function amani_global_user_default_permissions() {
       2 => 'editor',
     ),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: bypass honeypot protection.
+  $permissions['bypass honeypot protection'] = array(
+    'name' => 'bypass honeypot protection',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'honeypot',
   );
 
   // Exported permission: bypass node access.
