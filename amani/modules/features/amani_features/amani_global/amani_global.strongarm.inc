@@ -174,7 +174,7 @@ function amani_global_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'honeypot_element_name';
-  $strongarm->value = 'url';
+  $strongarm->value = 'urls';
   $export['honeypot_element_name'] = $strongarm;
 
   $strongarm = new stdClass();
