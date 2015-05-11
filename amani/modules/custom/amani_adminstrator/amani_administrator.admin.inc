@@ -575,7 +575,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       break;
     case 'Configure Honeypot':
       module_enable(array('honeypot'));
-      drupal_goto('admin/config/config/honeypot');
+      drupal_goto('admin/config/content/honeypot');
       break;
     case 'Manage Languages':
       drupal_goto('admin/config/regional/language');
