@@ -524,25 +524,47 @@ function amani_administrator_configure_amani_form() {
     '#type' => 'fieldset',
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
-    '#title' => t('Manage Additional Options'),
+    '#title' => t('View Additional Options'),
   );
 
   $form['additional_options'][] = array(
     '#type' => 'button',
     '#value' => t('View Amani Release Notes'),
     '#executes_submit_callback' => TRUE,
-    '#prefix' => $prefix,
+    '#prefix' => $prefix_3,
     '#suffix' => '<p>View your current version of Amani along with past releases.</p></div>',
+  );
+
+  $form['additional_options'][] = array(
+    '#type' => 'button',
+    '#value' => t('Configuration Documentation'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix_3,
+    '#suffix' => '</div>',
+  );
+
+  $form['additional_options'][] = array(
+    '#type' => 'button',
+    '#value' => t('Content Management Documentation'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix_3,
+    '#suffix' => '</div>',
   );
 
   return $form;
 }
 
 /**
- * submission handler for configure amani form.
+ * Submission handler for configure amani form.
  */
 function amani_administrator_configure_amani_form_submit($form, &$form_state) {
   switch ($form_state['clicked_button']['#value']) {
+    case 'Configuration Documentation':
+      drupal_goto('http://projectamani.org/content/administer-content-amani-admins-only');
+      break;
+    case 'Content Management Documentation':
+      drupal_goto('http://projectamani.org/content/manage-content-amani-admins-editors-contributors');
+      break;
     case 'Configure Botcha':
       module_enable(array('botcha'));
       drupal_goto('admin/config/people/botcha');
