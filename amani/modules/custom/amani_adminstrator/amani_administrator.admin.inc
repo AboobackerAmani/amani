@@ -466,29 +466,123 @@ function amani_administrator_configure_amani_form() {
     '#suffix' => '<p>Users can manage text and button colors, add effects (such as shadows) to set elements, and otherwise manage the visual aspects of your site by creating CSS rules that override the default CSS code. Click here for a list of frequently used overrides.</p></div>',
   );
 
+  $form['spam_control'] = array(
+    '#type' => 'fieldset',
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#title' => t('Manage Spam Control'),
+  );
+
+  $form['spam_control'][] = array(
+    '#type' => 'button',
+    '#value' => t('Configure Botcha'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix_3,
+    '#suffix' => '</div>',
+  );
+
+  $form['spam_control'][] = array(
+    '#type' => 'button',
+    '#value' => t('Configure Spambot'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix_3,
+    '#suffix' => '</div>',
+  );
+
+  $form['spam_control'][] = array(
+    '#type' => 'button',
+    '#value' => t('Configure Honeypot'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix_3,
+    '#suffix' => '</div>',
+  );
+
+  $form['localization'] = array(
+    '#type' => 'fieldset',
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#title' => t('Manage Localization'),
+  );
+
+  $form['localization'][] = array(
+    '#type' => 'button',
+    '#value' => t('Manage Languages'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix_3,
+    '#suffix' => '</div>',
+  );
+
+  $form['localization'][] = array(
+    '#type' => 'button',
+    '#value' => t('Translate Strings'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix_3,
+    '#suffix' => '</div>',
+  );
+
   $form['additional_options'] = array(
     '#type' => 'fieldset',
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
-    '#title' => t('Manage Additional Options'),
+    '#title' => t('View Additional Options'),
   );
 
   $form['additional_options'][] = array(
     '#type' => 'button',
     '#value' => t('View Amani Release Notes'),
     '#executes_submit_callback' => TRUE,
-    '#prefix' => $prefix,
+    '#prefix' => $prefix_3,
     '#suffix' => '<p>View your current version of Amani along with past releases.</p></div>',
+  );
+
+  $form['additional_options'][] = array(
+    '#type' => 'button',
+    '#value' => t('Configuration Documentation'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix_3,
+    '#suffix' => '</div>',
+  );
+
+  $form['additional_options'][] = array(
+    '#type' => 'button',
+    '#value' => t('Content Management Documentation'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix_3,
+    '#suffix' => '</div>',
   );
 
   return $form;
 }
 
 /**
- * submission handler for configure amani form.
+ * Submission handler for configure amani form.
  */
 function amani_administrator_configure_amani_form_submit($form, &$form_state) {
   switch ($form_state['clicked_button']['#value']) {
+    case 'Configuration Documentation':
+      drupal_goto('http://projectamani.org/content/administer-content-amani-admins-only');
+      break;
+    case 'Content Management Documentation':
+      drupal_goto('http://projectamani.org/content/manage-content-amani-admins-editors-contributors');
+      break;
+    case 'Configure Botcha':
+      module_enable(array('botcha'));
+      drupal_goto('admin/config/people/botcha');
+      break;
+    case 'Configure Spambot':
+      module_enable(array('spambot'));
+      drupal_goto('admin/config/system/spambot');
+      break;
+    case 'Configure Honeypot':
+      module_enable(array('honeypot'));
+      drupal_goto('admin/config/config/honeypot');
+      break;
+    case 'Manage Languages':
+      drupal_goto('admin/config/regional/language');
+      break;
+    case 'Translate Strings':
+      drupal_goto('admin/config/regional/translate/translate');
+      break;
     case 'Reset Default Links':
       amani_administrator_create_menu_links('menu-social-media');
       drupal_set_message('Menu link paths can now be configured ' . l('here', 'admin/structure/menu/manage/menu-social-media'));
