@@ -573,6 +573,18 @@ body {
 
   }
   &.page-team{
-
+.view-team{
+  .views-row{
+    . views-field-field-team-image{
+      float: left;
+      margin-right: 20px;
+    }
+    .views-field-view-node{
+      a{
+        color: #3FB8AE;
+      }
+    }
+  }
+}
   }
 }
