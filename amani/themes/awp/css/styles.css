@@ -2570,12 +2570,23 @@ body #footer #block-menu-menu-awp-footer-menu .menu li.last {
 body.not-front h1.page__title title, body.not-front h1#page-title {
   color: #3FB8AE;
 }
-/* line 578, ../sass/styles.scss */
+/* line 577, ../sass/styles.scss */
+body.page-team .view-team .views-row {
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+/* line 580, ../sass/styles.scss */
+body.page-team .view-team .views-row .views-field-title {
+  color: #3F3F3F;
+  font-size: 24px;
+}
+/* line 585, ../sass/styles.scss */
 body.page-team .view-team .views-row .views-field-field-team-image {
   float: left;
   margin-right: 20px;
+  max-width: 25%;
 }
-/* line 583, ../sass/styles.scss */
+/* line 591, ../sass/styles.scss */
 body.page-team .view-team .views-row .views-field-view-node a {
   color: #3FB8AE;
 }

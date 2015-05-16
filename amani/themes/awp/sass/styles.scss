@@ -563,7 +563,7 @@ body {
   }
   &.not-front{
     h1.page__title title, h1#page-title{
-      color: #3FB8AE;
+      color: $awp-green;
     }
     .region-sidebar-second{
       .block-menu-block{
@@ -575,13 +575,21 @@ body {
   &.page-team{
     .view-team{
       .views-row{
+        overflow: hidden;
+        padding-bottom: 20px;
+        .views-field-title{
+          color: $awp-black;
+          font-size: 24px;
+        }
+
         .views-field-field-team-image{
           float: left;
           margin-right: 20px;
+          max-width: 25%;
         }
         .views-field-view-node{
           a{
-            color: #3FB8AE;
+            color: $awp-green;
           }
         }
       }
