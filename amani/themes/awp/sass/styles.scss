@@ -578,6 +578,8 @@ ul.menu{
       &.active,
       &:hover{
         color: $awp-green;
+        border-bottom: 2px solid $awp_grey;
+        padding-bottom: 13px;
         //background: #000;
       }
   }
@@ -591,7 +593,7 @@ ul.menu{
     .view-team{
       .views-row{
         overflow: hidden;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
         .views-field-title{
           color: $awp-black;
           font-size: 24px;
