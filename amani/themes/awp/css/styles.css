@@ -2570,23 +2570,38 @@ body #footer #block-menu-menu-awp-footer-menu .menu li.last {
 body.not-front h1.page__title title, body.not-front h1#page-title {
   color: #3FB8AE;
 }
-/* line 577, ../sass/styles.scss */
+/* line 571, ../sass/styles.scss */
+body.not-front .region-sidebar-second .block-menu-block ul.menu li {
+  list-style: none;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 13px;
+  padding-top: 5px;
+}
+/* line 576, ../sass/styles.scss */
+body.not-front .region-sidebar-second .block-menu-block ul.menu li a {
+  color: #eee;
+}
+/* line 578, ../sass/styles.scss */
+body.not-front .region-sidebar-second .block-menu-block ul.menu li a.active, body.not-front .region-sidebar-second .block-menu-block ul.menu li a:hover {
+  color: #3FB8AE;
+}
+/* line 592, ../sass/styles.scss */
 body.page-team .view-team .views-row {
   overflow: hidden;
   padding-bottom: 20px;
 }
-/* line 580, ../sass/styles.scss */
+/* line 595, ../sass/styles.scss */
 body.page-team .view-team .views-row .views-field-title {
   color: #3F3F3F;
   font-size: 24px;
 }
-/* line 585, ../sass/styles.scss */
+/* line 600, ../sass/styles.scss */
 body.page-team .view-team .views-row .views-field-field-team-image {
   float: left;
   margin-right: 20px;
   width: 25%;
 }
-/* line 591, ../sass/styles.scss */
+/* line 606, ../sass/styles.scss */
 body.page-team .view-team .views-row .views-field-view-node a {
   color: #3FB8AE;
 }

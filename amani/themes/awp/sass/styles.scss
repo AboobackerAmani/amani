@@ -567,7 +567,22 @@ body {
     }
     .region-sidebar-second{
       .block-menu-block{
-
+ul.menu{
+  li{
+    list-style: none;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 13px;
+    padding-top: 5px;
+    a{
+      color: #eee;
+      &.active,
+      &:hover{
+        color: $awp-green;
+        //background: #000;
+      }
+  }
+  }
+}
       }
     }
 
