@@ -570,11 +570,11 @@ body {
 ul.menu{
   li{
     list-style: none;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid $awp_grey;
     padding-bottom: 13px;
     padding-top: 5px;
     a{
-      color: #eee;
+      color: $awp_grey;
       &.active,
       &:hover{
         color: $awp-green;
