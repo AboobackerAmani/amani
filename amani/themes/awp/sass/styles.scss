@@ -607,6 +607,7 @@ body {
         overflow: hidden;
         padding-bottom: 30px;
         .views-field-title{
+          margin-left: 25%;
           color: $awp-black;
           font-size: 24px;
           a{
@@ -622,9 +623,13 @@ body {
           width: 25%;
         }
         .views-field-view-node{
+          margin-left: 25%;
           a{
             color: $awp-green;
           }
+        }
+        .views-field-body{
+          margin-left: 25%;
         }
       }
     }
