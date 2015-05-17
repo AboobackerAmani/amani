@@ -607,7 +607,7 @@ body {
         overflow: hidden;
         padding-bottom: 30px;
         .views-field-title{
-          margin-left: 25%;
+          margin-left: 28%;
           color: $awp-black;
           font-size: 24px;
           a{
@@ -620,16 +620,17 @@ body {
         .views-field-field-image{
           float: left;
           margin-right: 20px;
-          width: 25%;
+          width: 28%;
         }
-        .views-field-view-node{
-          margin-left: 25%;
+        .views-field-view-node,
+        .views-field-title-1{
+          margin-left: 28%;
           a{
             color: $awp-green;
           }
         }
         .views-field-body{
-          margin-left: 25%;
+          margin-left: 28%;
         }
       }
     }
