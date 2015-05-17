@@ -599,8 +599,10 @@ body {
       }
     }
   }
-  &.page-team{
-    .view-team{
+  &.page-team,
+  &.page-partners{
+    .view-team,
+    .view-partners{
       .views-row{
         overflow: hidden;
         padding-bottom: 30px;
