@@ -567,28 +567,38 @@ body {
     }
     .region-sidebar-second{
       .block-menu-block{
-ul.menu{
-  li{
-    list-style: none;
-    border-bottom: 1px solid $awp_grey;
-    padding-bottom: 13px;
-    padding-top: 5px;
-    a{
-      color: $awp_grey;
-      &.active,
-      &:hover{
-        color: $awp-green;
-        border-bottom: 2px solid $awp_grey;
-        padding-bottom: 13px;
-        //background: #000;
-      }
-  }
-  }
-}
+        ul.menu{
+          li{
+            list-style: none;
+            border-bottom: 1px solid $awp_grey;
+            padding-bottom: 13px;
+            padding-top: 5px;
+            a{
+              color: $awp_grey;
+              &.active,
+              &:hover{
+                color: $awp-green;
+                border-bottom: 2px solid $awp_grey;
+                padding-bottom: 13px;
+                //background: #000;
+              }
+          }
+          }
+        }
       }
     }
-
   } /*not-front*/
+  &.page-node{
+    article{
+      li{
+        padding-bottom: 15px;
+        span.strong{
+          clear: right;
+          display: block;
+        }
+      }
+    }
+  }
   &.page-team{
     .view-team{
       .views-row{

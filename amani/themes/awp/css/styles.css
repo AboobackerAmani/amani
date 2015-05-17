@@ -2587,23 +2587,32 @@ body.not-front .region-sidebar-second .block-menu-block ul.menu li a.active, bod
   border-bottom: 2px solid #807f83;
   padding-bottom: 13px;
 }
-/* line 594, ../sass/styles.scss */
+/* line 593, ../sass/styles.scss */
+body.page-node article li {
+  padding-bottom: 15px;
+}
+/* line 596, ../sass/styles.scss */
+body.page-node article li span.strong {
+  clear: right;
+  display: block;
+}
+/* line 605, ../sass/styles.scss */
 body.page-team .view-team .views-row {
   overflow: hidden;
   padding-bottom: 30px;
 }
-/* line 597, ../sass/styles.scss */
+/* line 608, ../sass/styles.scss */
 body.page-team .view-team .views-row .views-field-title {
   color: #3F3F3F;
   font-size: 24px;
 }
-/* line 602, ../sass/styles.scss */
+/* line 613, ../sass/styles.scss */
 body.page-team .view-team .views-row .views-field-field-team-image {
   float: left;
   margin-right: 20px;
   width: 25%;
 }
-/* line 608, ../sass/styles.scss */
+/* line 619, ../sass/styles.scss */
 body.page-team .view-team .views-row .views-field-view-node a {
   color: #3FB8AE;
 }
