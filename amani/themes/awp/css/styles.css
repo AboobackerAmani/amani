@@ -2610,15 +2610,26 @@ body.page-partners .view-partners .views-row .views-field-title {
   color: #3F3F3F;
   font-size: 24px;
 }
-/* line 614, ../sass/styles.scss */
+/* line 612, ../sass/styles.scss */
+body.page-team .view-team .views-row .views-field-title a,
+body.page-team .view-partners .views-row .views-field-title a, body.page-partners .view-team .views-row .views-field-title a,
+body.page-partners .view-partners .views-row .views-field-title a {
+  color: #3F3F3F;
+  font-size: 24px;
+}
+/* line 618, ../sass/styles.scss */
 body.page-team .view-team .views-row .views-field-field-team-image,
-body.page-team .view-partners .views-row .views-field-field-team-image, body.page-partners .view-team .views-row .views-field-field-team-image,
-body.page-partners .view-partners .views-row .views-field-field-team-image {
+body.page-team .view-team .views-row .views-field-field-image,
+body.page-team .view-partners .views-row .views-field-field-team-image,
+body.page-team .view-partners .views-row .views-field-field-image, body.page-partners .view-team .views-row .views-field-field-team-image,
+body.page-partners .view-team .views-row .views-field-field-image,
+body.page-partners .view-partners .views-row .views-field-field-team-image,
+body.page-partners .view-partners .views-row .views-field-field-image {
   float: left;
   margin-right: 20px;
   width: 25%;
 }
-/* line 620, ../sass/styles.scss */
+/* line 625, ../sass/styles.scss */
 body.page-team .view-team .views-row .views-field-view-node a,
 body.page-team .view-partners .views-row .views-field-view-node a, body.page-partners .view-team .views-row .views-field-view-node a,
 body.page-partners .view-partners .views-row .views-field-view-node a {

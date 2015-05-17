@@ -609,9 +609,14 @@ body {
         .views-field-title{
           color: $awp-black;
           font-size: 24px;
+          a{
+            color: $awp-black;
+            font-size: 24px;
+          }
         }
 
-        .views-field-field-team-image{
+        .views-field-field-team-image,
+        .views-field-field-image{
           float: left;
           margin-right: 20px;
           width: 25%;
