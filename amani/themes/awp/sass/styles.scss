@@ -651,6 +651,9 @@ body {
           padding-bottom: 15px;
         }
         .view-id-news_with_featured_{
+          .views-row {
+            border-bottom: none !important;
+
           .views-field-field-image{
             width: 40%;
             float: left;
@@ -662,8 +665,6 @@ body {
             }
           }
         }
-        .views-row {
-          border-bottom: none;
         }
       }
       .view-content{
