@@ -639,9 +639,10 @@ body {
     }
   } /*page-team*/
   &.section-news{
-    .view-news-with-featured-{
+    .view-news-with-featured- .view-display-id-page{
       .view-header{
         overflow: hidden;
+        border-bottom: 1px solid #B2B2B2;
         .views-header-title{
           color: #000;
           font-size: 2vw;
@@ -661,7 +662,7 @@ body {
           }
         }
         .views-row {
-          border-bottom: 0px;
+          border-bottom: none;
         }
       }
       .view-content{
