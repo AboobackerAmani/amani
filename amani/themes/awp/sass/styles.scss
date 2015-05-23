@@ -645,6 +645,8 @@ body {
         .views-header-title{
           color: #000;
           font-size: 2vw;
+          border-bottom: 1px solid #B2B2B2;
+          padding-bottom: 15px;
         }
         .view-id-news_with_featured_{
           .views-field-field-image{
@@ -658,13 +660,19 @@ body {
             }
           }
         }
+        .views-row {
+          border-bottom: 0px;
+        }
       }
       .view-content{
         .views-row{
           margin-top: 20px;
+          border-bottom: 1px solid #B2B2B2;
+          padding-bottom: 15px;
           .views-field-title{
             a{
               color: $awp-green;
+              font-size: 1.5vw;
             }
           }
         }
