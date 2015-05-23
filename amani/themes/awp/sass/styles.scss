@@ -639,7 +639,8 @@ body {
     }
   } /*page-team*/
   &.section-news{
-    .view-news-with-featured- .view-display-id-page{
+    .view-news-with-featured- {
+      &.view-display-id-page{
       .view-header{
         overflow: hidden;
         border-bottom: 1px solid #B2B2B2;
@@ -678,6 +679,7 @@ body {
           }
         }
       }
+    }
     }
   }/*section-news*/
 }
