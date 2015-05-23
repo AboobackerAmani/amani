@@ -1919,6 +1919,7 @@ body {
   /*front*/
   /*not-front*/
   /*page-team*/
+  /*section-news*/
 }
 /* line 33, ../sass/styles.scss */
 body :focus {
@@ -2659,4 +2660,23 @@ body.page-team .view-team .views-row .views-field-body,
 body.page-team .view-partners .views-row .views-field-body, body.page-partners .view-team .views-row .views-field-body,
 body.page-partners .view-partners .views-row .views-field-body {
   margin-left: 30%;
+}
+/* line 644, ../sass/styles.scss */
+body.section-news .view-news-with-featured- .view-header .views-header-title {
+  color: #000;
+  font-size: 2vw;
+}
+/* line 649, ../sass/styles.scss */
+body.section-news .view-news-with-featured- .view-header .view-id-news_with_featured_ .views-field-field-image {
+  width: 40%;
+  float: left;
+  padding: 0px 20px 20px 0px;
+}
+/* line 655, ../sass/styles.scss */
+body.section-news .view-news-with-featured- .view-header .view-id-news_with_featured_ .views-field-title a {
+  color: #3FB8AE;
+}
+/* line 664, ../sass/styles.scss */
+body.section-news .view-news-with-featured- .view-content .views-row .views-field-title a {
+  color: #3FB8AE;
 }

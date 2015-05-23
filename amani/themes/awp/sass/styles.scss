@@ -638,4 +638,35 @@ body {
       }
     }
   } /*page-team*/
+  &.section-news{
+    .view-news-with-featured-{
+      .view-header{
+        .views-header-title{
+          color: #000;
+          font-size: 2vw;
+        }
+        .view-id-news_with_featured_{
+          .views-field-field-image{
+            width: 40%;
+            float: left;
+            padding: 0px 20px 20px 0px;
+          }
+          .views-field-title{
+            a{
+              color: $awp-green;
+            }
+          }
+        }
+      }
+      .view-content{
+        .views-row{
+          .views-field-title{
+            a{
+              color: $awp-green;
+            }
+          }
+        }
+      }
+    }
+  }/*section-news*/
 }
