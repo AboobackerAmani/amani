@@ -641,6 +641,7 @@ body {
   &.section-news{
     .view-news-with-featured-{
       .view-header{
+        overflow: hidden;
         .views-header-title{
           color: #000;
           font-size: 2vw;
@@ -660,6 +661,7 @@ body {
       }
       .view-content{
         .views-row{
+          margin-top: 20px;
           .views-field-title{
             a{
               color: $awp-green;
