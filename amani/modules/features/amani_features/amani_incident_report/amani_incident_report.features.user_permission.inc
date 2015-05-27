@@ -73,10 +73,9 @@ function amani_incident_report_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'amani administrator',
-      2 => 'anonymous user',
-      3 => 'authenticated user',
-      4 => 'contributor',
-      5 => 'editor',
+      2 => 'authenticated user',
+      3 => 'contributor',
+      4 => 'editor',
     ),
     'module' => 'node',
   );
