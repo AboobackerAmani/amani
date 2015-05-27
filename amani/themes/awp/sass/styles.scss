@@ -573,13 +573,13 @@ body {
     }
 
     #block-views-4853df8e1a361dde03121dad9c7fe95f{/*fundemintalsI*/
-      .block-title{
-        font-size: 2vw;
-        color: #B2B2B2;
+      h2.block-title {
+        font-size: 3vw;
+        color: $awp-green;
       }
       .view-content{
         .views-row{
-          padding-left: 25px;
+          padding:10px 25px;
           background: url("../images/homepage/search-icon.png") left center no-repeat;
           .views-field-title{
             .field-content{
