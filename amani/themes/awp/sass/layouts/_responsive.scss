@@ -282,6 +282,9 @@ $zen-auto-include-item-base: false;
       width: 46%;
       float: left;
     }
+    #block-block-3{
+      @include zen-grid-item(4, 9, $zen-float-direction, $zen-column-count);
+    }
 
   }/*front*/
 }
