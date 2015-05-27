@@ -579,8 +579,8 @@ body {
       }
       .view-content{
         .views-row{
-          padding:10px 25px;
-          background: url("../images/homepage/search-icon.png") left center no-repeat;
+          padding:10px 20px;
+          background: url("../images/homepage/red-circle.png") left center no-repeat;
           .views-field-title{
             .field-content{
               color: $awp-black;
@@ -599,8 +599,8 @@ body {
     }
     #block-block-3{
       background: url("../images/homepage/action-bg.png") right top no-repeat transparent;
-      height: 355px;
-      background-size: 100% auto;
+      background-size: 100% 100%;
+      padding-bottom: 30px;
       position: relative;
       .take-action-block{
         float: right;
