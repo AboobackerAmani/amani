@@ -303,9 +303,20 @@ body {
       }/*views-slideshow-controls-bottom*/
     }/*view-awp-front-page-slideshow*/
 
+    #block-block-2 {
+      width: 100%;
+      float: left;
+      clear: both;
+      margin-bottom: 0;
+      h2.block-title {
+        font-size: 3vw;
+        color: $awp-green;
+      }
+    }
+
     .view-aidwatch-front-page-blocks{
       margin-bottom: 40px;
-      margin-top: 40px;
+      margin-top: 0px;
       border-top: 1px solid $awp-grey;
       border-bottom: 1px solid $awp-grey;
       .views-row{
