@@ -412,6 +412,55 @@ body {
           }
         }
       }
+      &.f-left-block{
+        .views-row{
+          &:hover{
+            img{
+              -webkit-filter: saturate(33333333%);
+            }
+            &.views-row-first{
+              background-color: $calendar-color;
+            }
+            &.views-row-last{
+              background-color: $trucks-color;
+            }
+          }
+
+        }
+      }
+      &.f-center-block{
+        .views-row{
+          &:hover{
+            img{
+              -webkit-filter: saturate(33333333%);
+            }
+            &.views-row-first{
+              background-color: $people-color;
+            }
+            &.views-row-last{
+              background-color: $money-color;
+            }
+          }
+
+        }
+      }
+      &.f-right-block{
+        .views-row{
+          &:hover{
+            img{
+              -webkit-filter: saturate(33333333%);
+            }
+            &.views-row-first{
+              background-color: $temp-color;
+            }
+            &.views-row-last{
+              background-color: $rebuilt-color;
+            }
+          }
+
+        }
+      }
+
     }/*view-aidwatch-front-page-blocks(*/
     #block-views-3035a87eee3a51153d184d85d17cc285 {
       h2.block-title{
