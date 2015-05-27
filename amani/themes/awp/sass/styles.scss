@@ -572,6 +572,31 @@ body {
       }
     }
 
+    #block-views-4853df8e1a361dde03121dad9c7fe95f{/*fundemintalsI*/
+      .block-title{
+        font-size: 2vw;
+        color: #B2B2B2;
+      }
+      .view-content{
+        .views-row{
+          padding-left: 25px;
+          background: url("../images/homepage/search-icon.png") left center no-repeat;
+          .views-field-title{
+            .field-content{
+              color: $awp-black;
+            }
+          }
+          .views-field-body{
+            .field-content{
+              a{
+                padding:0 10px;
+                color: $awp-green;
+              }
+            }
+          }
+        }
+      }
+    }
     #block-block-3{
       background: url("../images/homepage/action-bg.png") right top no-repeat transparent;
       height: 355px;
@@ -579,26 +604,29 @@ body {
       position: relative;
       .take-action-block{
         float: right;
+        width: 70%;
         .action-image{
           position: absolute;
-          left: -10px;
+          left: -9%;
           top: 20px;
           width: 30%;
           height: 153px;
           background: url("../images/homepage/action.png") 0 0 no-repeat;
+          background-size: 100% auto;
         }
         .action-text{
-          width: 65%;
+          width: 100%;
           float: right;
           color: $awp-white;
           text-align: center;
+          margin: 10px 5%;
           .take-action-title{
-            font-size: 2.5vw;
+            font-size: 2vw;
             margin-bottom: 10px;
             font-weight: 400;
           }
           .take-action-sub-title{
-            font-size: 1.5vw;
+            font-size: 1vw;
             font-weight: 100;
           }
           .action-links{
@@ -610,7 +638,7 @@ body {
               border: 2px solid $awp-white;
               text-align: center;
               padding: 5px 0;
-              font-size: 1.5vw;
+              font-size: 1vw;
               font-weight: 400;
               text-transform: uppercase;
               color: $awp-white;
