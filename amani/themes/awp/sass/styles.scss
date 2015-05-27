@@ -341,8 +341,10 @@ body {
         }
         .views-field-title{
           position: absolute;
-          bottom: 30px;
-          left: 18%;
+          bottom: 50px;
+          width: 100%;
+          left: 0%;
+          text-align: center;
           font-size: 18px;
           color: $awp-grey;
           a{
@@ -359,12 +361,12 @@ body {
           display: none;
           position: absolute;
           bottom: 5px;
-          left: 40%;
+          left: 35%;
           border: 1px solid $awp-white;
-          padding: 1px 5px;
+          padding: 2px 25px;
           a{
             color: $awp-white;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 1.2;
 
           }
@@ -396,8 +398,8 @@ body {
             &:hover{
               background: $awp-white;
               .views-field-title-1 a{
-                color: $awp-light-grey;
-                border-color: $awp-light-grey;
+                color: $awp-white;
+                border-color: $awp-white;
               }
             }
           }
@@ -635,6 +637,7 @@ body {
           .take-action-sub-title{
             font-size: 1vw;
             font-weight: 100;
+            font-style: italic;
           }
           .action-links{
             margin-top: 10px;
