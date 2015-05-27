@@ -325,6 +325,11 @@ body {
         height: 180px;
         &:hover{
           background: $awp-light-grey;
+          .views-field-title,
+          .views-field-field-text,
+          .views-field-title a{
+            color: $awp-white;
+          }
         }
         clear: both;
         overflow: hidden;
