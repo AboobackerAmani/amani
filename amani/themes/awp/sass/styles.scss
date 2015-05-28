@@ -721,6 +721,8 @@ body {
   &.not-front{
     h1.page__title title, h1#page-title{
       color: $awp-green;
+      font-size: 60px;
+      font-weight: normal;
     }
     .breadcrumb{
       display: none;
@@ -820,14 +822,14 @@ body {
       #block-block-4{/*action block*/
         background: url("../images/homepage/action-bg.png") right top no-repeat transparent;
         background-size: 100% 100%;
-        padding-bottom: 10vw;
+        height: 150px;
         position: absolute;
         right: 0;
-        bottom: -172px;
+        bottom: -170px;
+        overflow: hidden;
         .take-action-block{
           float: right;
           width: 70%;
-          position: relative;
           a.over-click{
             display: block;
             width: 100%;
