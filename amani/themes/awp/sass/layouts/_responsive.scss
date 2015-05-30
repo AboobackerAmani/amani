@@ -178,6 +178,11 @@ $zen-auto-include-item-base: false;
       }
     }
   }
+  #highlighted{
+    $zen-column-count: 12;
+    @include zen-grid-item(12, 1, $zen-float-direction, $zen-column-count);
+    margin: 20px 0;
+  }
   $zen-column-count: 5;
   /**
    * The layout when there is only one sidebar, the left one.
