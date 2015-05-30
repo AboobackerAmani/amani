@@ -664,6 +664,121 @@ body {
     }
   }/*front*/
 
+  &.node-type-take-actions{
+    #page{
+      background: none;
+    }
+    .region-highlighted {
+      position: relative;
+      #block-block-3{
+        background: url("../images/homepage/action-bg.png") right top no-repeat transparent;
+        background-size: 100% 100%;
+        padding-bottom: 30px;
+        position: relative;
+
+        height: 350px;
+        position: absolute;
+        right: 0;
+        bottom: -170px;
+        overflow: hidden;
+
+        .take-action-block{
+          float: right;
+          width: 70%;
+          .action-image{
+            position: absolute;
+            left: -9%;
+            top: 20px;
+            width: 30%;
+            height: 153px;
+            background: url("../images/homepage/action.png") 0 0 no-repeat;
+            background-size: 100% auto;
+          }
+          .action-text{
+            width: 100%;
+            float: right;
+            color: $awp-white;
+            text-align: center;
+            margin: 10px 5%;
+            .take-action-title{
+              font-size: 2vw;
+              margin-bottom: 10px;
+              font-weight: 400;
+            }
+            .take-action-sub-title{
+              font-size: 1vw;
+              font-weight: 100;
+              font-style: italic;
+            }
+            .action-links{
+              margin-top: 10px;
+              a{
+                margin-bottom: 10px;
+                display: block;
+                width: 100%;
+                border: 2px solid $awp-white;
+                text-align: center;
+                padding: 5px 0;
+                font-size: 1vw;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: $awp-white;
+                clear: both;
+                &:hover{
+                  border: 2px solid $awp-dark-grey;
+                  color: $awp-dark-grey;
+                }
+              }
+            }
+          }
+        }
+      }/*block-3*/
+    }
+    #page-title{
+      margin-bottom: 10px;
+    }
+    .field-name-field-sub-title{
+      color: $awp-dark-grey;
+      font-size: 2.5vw;
+      margin-bottom: 20px;
+    }
+    .view-take-actions{
+      background: url("../images/take-action/action-bg.jpg") center no-repeat;
+      background-size: 100% auto;
+      .views-row{
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $awp-light-grey;
+        clear: both;
+        overflow: hidden;
+        @include bg-trans(255,255,255,0.5);
+        .field-name-field-row-title{
+          margin: 10px 0;
+          font-size: 2vw;
+          font-weight: bold;
+          color: $awp_black;
+        }
+        .field-name-field-row-body{
+          font-size: 1.5vw;
+          color: $awp-dark-grey;
+          margin-bottom: 10px;
+          font-weight: normal;
+        }
+        .field-name-field-row-link{
+          font-weight: 100;
+          font-size: 1.5vw;
+          a{
+            color: $awp-green;
+          }
+        }
+        &:hover{
+          @include bg-trans(100,100,100,0.5);
+        }
+      }/*row*/
+
+    }/*view-take-actions*/
+  }/*node-type-take-action*/
+
 
   #footer{
     background: $awp-red;
