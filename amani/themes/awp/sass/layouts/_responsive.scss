@@ -182,6 +182,7 @@ $zen-auto-include-item-base: false;
     $zen-column-count: 12;
     @include zen-grid-item(12, 1, $zen-float-direction, $zen-column-count);
     margin: 20px 0;
+    clear: both;
   }
   $zen-column-count: 5;
   /**

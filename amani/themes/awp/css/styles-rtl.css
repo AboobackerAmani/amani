@@ -208,24 +208,25 @@ ul {
     margin-right: 0%;
     margin-left: -100%;
     margin: 20px 0;
+    clear: both;
   }
 
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 190, ../sass/layouts/_responsive.scss */
+  /* line 191, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 4 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 192, ../sass/layouts/_responsive.scss */
+  /* line 193, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: right;
     width: 80%;
     margin-right: 20%;
     margin-left: -100%;
   }
-  /* line 197, ../sass/layouts/_responsive.scss */
+  /* line 198, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: right;
     width: 20%;
@@ -236,19 +237,19 @@ ul {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 205, ../sass/layouts/_responsive.scss */
+  /* line 206, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 207, ../sass/layouts/_responsive.scss */
+  /* line 208, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: right;
     width: 80%;
     margin-right: 0%;
     margin-left: -80%;
   }
-  /* line 212, ../sass/layouts/_responsive.scss */
+  /* line 213, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: right;
     width: 20%;
@@ -259,27 +260,27 @@ ul {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 220, ../sass/layouts/_responsive.scss */
+  /* line 221, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 222, ../sass/layouts/_responsive.scss */
+  /* line 223, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: right;
     width: 60%;
     margin-right: 20%;
     margin-left: -80%;
   }
-  /* line 227, ../sass/layouts/_responsive.scss */
+  /* line 228, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: right;
     width: 20%;
     margin-right: 0%;
     margin-left: -20%;
   }
-  /* line 232, ../sass/layouts/_responsive.scss */
+  /* line 233, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: right;
     width: 20%;
@@ -287,21 +288,21 @@ ul {
     margin-left: -100%;
   }
 
-  /* line 236, ../sass/layouts/_responsive.scss */
+  /* line 237, ../sass/layouts/_responsive.scss */
   .front {
     /*view-awp-front-page-slideshow*/
     /*view-aidwatch-front-page-blocks*/
   }
-  /* line 238, ../sass/layouts/_responsive.scss */
+  /* line 239, ../sass/layouts/_responsive.scss */
   .front .view-awp-front-page-slideshow {
     /*views-row*/
     /*views-slideshow-controls-bottom*/
   }
-  /* line 239, ../sass/layouts/_responsive.scss */
+  /* line 240, ../sass/layouts/_responsive.scss */
   .front .view-awp-front-page-slideshow .views-row {
     /*views-field-title*/
   }
-  /* line 240, ../sass/layouts/_responsive.scss */
+  /* line 241, ../sass/layouts/_responsive.scss */
   .front .view-awp-front-page-slideshow .views-row .views-field-title {
     width: 600px;
     top: 139px;
@@ -310,17 +311,17 @@ ul {
     height: 305px;
     overflow: hidden;
   }
-  /* line 249, ../sass/layouts/_responsive.scss */
+  /* line 250, ../sass/layouts/_responsive.scss */
   .front .view-awp-front-page-slideshow .views-slideshow-controls-bottom {
     top: 280px;
     width: 100%;
   }
-  /* line 254, ../sass/layouts/_responsive.scss */
+  /* line 255, ../sass/layouts/_responsive.scss */
   .front .view-aidwatch-front-page-blocks {
     width: 33%;
     float: left;
   }
-  /* line 258, ../sass/layouts/_responsive.scss */
+  /* line 259, ../sass/layouts/_responsive.scss */
   .front #block-views-3035a87eee3a51153d184d85d17cc285 {
     float: right;
     width: 100%;
@@ -330,47 +331,47 @@ ul {
     overflow: hidden;
     float: none;
   }
-  /* line 263, ../sass/layouts/_responsive.scss */
+  /* line 264, ../sass/layouts/_responsive.scss */
   .front #block-views-3035a87eee3a51153d184d85d17cc285 .views-field-field-image {
     margin-right: 2%;
     width: 42%;
   }
-  /* line 266, ../sass/layouts/_responsive.scss */
+  /* line 267, ../sass/layouts/_responsive.scss */
   .front #block-views-3035a87eee3a51153d184d85d17cc285 .views-field-field-image img {
     width: 100%;
     height: auto;
   }
-  /* line 271, ../sass/layouts/_responsive.scss */
+  /* line 272, ../sass/layouts/_responsive.scss */
   .front #block-views-3035a87eee3a51153d184d85d17cc285 .views-field-title {
     width: 42%;
   }
-  /* line 274, ../sass/layouts/_responsive.scss */
+  /* line 275, ../sass/layouts/_responsive.scss */
   .front #block-views-3035a87eee3a51153d184d85d17cc285 .views-field-field-article-date {
     width: 42%;
   }
-  /* line 277, ../sass/layouts/_responsive.scss */
+  /* line 278, ../sass/layouts/_responsive.scss */
   .front #block-views-3035a87eee3a51153d184d85d17cc285 .views-field-body {
     width: 42%;
   }
-  /* line 282, ../sass/layouts/_responsive.scss */
+  /* line 283, ../sass/layouts/_responsive.scss */
   .front #block-views-front-page-tweets-block {
     width: 45%;
     float: left;
     margin-left: 2%;
   }
-  /* line 287, ../sass/layouts/_responsive.scss */
+  /* line 288, ../sass/layouts/_responsive.scss */
   .front #block-views-global-voices-blog-block {
     width: 45%;
     float: left;
   }
-  /* line 291, ../sass/layouts/_responsive.scss */
+  /* line 292, ../sass/layouts/_responsive.scss */
   .front #block-views-4853df8e1a361dde03121dad9c7fe95f {
     float: right;
     width: 66.66667%;
     margin-right: 0%;
     margin-left: -66.66667%;
   }
-  /* line 294, ../sass/layouts/_responsive.scss */
+  /* line 295, ../sass/layouts/_responsive.scss */
   .front #block-block-3 {
     float: right;
     width: 33.33333%;
