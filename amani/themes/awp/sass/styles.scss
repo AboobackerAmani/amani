@@ -765,6 +765,8 @@ body {
         width: 70%;
         margin-left: 5%;
         padding-left: 1%;
+        background: url("../images/take-action/row-bg-white.png") left top;
+        background-size: 100% 100%;
         .field-name-field-row-title{
           margin: 10px 0;
           font-size: 2vw;
@@ -785,7 +787,8 @@ body {
           }
         }
         &:hover{
-          @include bg-trans(180,180,180,0.5);
+          background: url("../images/take-action/row-bg-grey.png") left top;
+          background-size: 100% 100%;
         }
       }/*row*/
 
