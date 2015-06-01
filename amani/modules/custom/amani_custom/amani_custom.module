@@ -57,6 +57,10 @@ function amani_custom_form_alter(&$form, &$form_state, $form_id) {
 
 /**
  * Implementes hook_file_type().
+ *
+ * There appears to be a bug with media_youtube which stops you from uploading
+ * videos from youtube due to validation errors see
+ * https://www.drupal.org/node/1245686.
  */
 function amani_custom_file_type($file) {
   if($file->filemime == 'video/youtube') {
