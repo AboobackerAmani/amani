@@ -54,3 +54,12 @@ function amani_custom_form_alter(&$form, &$form_state, $form_id) {
       break;
   }
 }
+
+/**
+ * Implementes hook_file_type().
+ */
+function amani_custom_file_type($file) {
+  if($file->filemime == 'video/youtube') {
+    return array('video');
+  }
+}
