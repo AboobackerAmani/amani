@@ -1,22 +1,92 @@
-/**
- * @file
- * Colours and images for the general layout
- */
+//
+// @file
+// Colours and images for the general layout
+//
 
- /**
- * Footer
- */
+///////////////////////////////////////////////////////////////////////////////
+//
+// Main Body/Content Section
+//
+///////////////////////////////////////////////////////////////////////////////
+
+#main {
+  min-height: 300px;
+}
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Footer
+//
+///////////////////////////////////////////////////////////////////////////////
+
+.footer-top {
+  background-color: $purple-dark;
+  border: 1px solid #67486b;
+  border-width: 1px 0;
+  height: 11px;
+}
+
 .footer-wrapper {
   background-color: $purple;
+  border: 1px solid #84568b;
+  border-width: 1px 0;
   color: $almost-white;
   font-weight: $fw-light;
-  margin-top: 30px;
   padding: 30px 0 40px 0;
-  border-top: 12px solid $purple-dark;
-  border-bottom: 50px solid $purple-dark;
+  @include zen-grid-container;
 
   a {
     color: $almost-white;
     @include link-hover-color();
+  }
+
+  .menu {
+    a {
+      color: $almost-white;
+      @include link-hover-color();
+    }
+  }
+}
+
+#block-menu-menu-amani-main-menu {
+  @include zen-grid-item(4, 1);
+}
+
+#block-bean-amani-powered-by {
+  @include zen-grid-item(4, 9);
+  text-align: right;
+}
+
+footer {
+  .menu {
+    -moz-column-count: 3;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 20px;
+    column-count: 3;
+    column-gap: 20px;
+  }
+}
+
+.peacegeeks-logo {
+  margin: 0 0 20px 50px;
+}
+
+.footer-legal {
+  background-color: $purple-dark;
+  border-top: 1px solid #67486b;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  div {
+    margin: 0 auto;
+    width: 75%; // strange bug with text align on the parent not correctly centering the text
+
   }
 }

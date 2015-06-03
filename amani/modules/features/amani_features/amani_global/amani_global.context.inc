@@ -103,35 +103,17 @@ function amani_global_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'bean-amani-powered-by' => array(
-          'module' => 'bean',
-          'delta' => 'amani-powered-by',
-          'region' => 'footer',
-          'weight' => '-9',
-        ),
         'menu-menu-amani-main-menu' => array(
           'module' => 'menu',
           'delta' => 'menu-amani-main-menu',
           'region' => 'footer',
-          'weight' => '-8',
+          'weight' => '-40',
         ),
-        'menu-menu-meta' => array(
-          'module' => 'menu',
-          'delta' => 'menu-meta',
-          'region' => 'footer',
-          'weight' => '-7',
-        ),
-        'search-form' => array(
-          'module' => 'search',
-          'delta' => 'form',
-          'region' => 'footer',
-          'weight' => '-6',
-        ),
-        'bean-amani-special-thanks' => array(
+        'bean-amani-powered-by' => array(
           'module' => 'bean',
-          'delta' => 'amani-special-thanks',
+          'delta' => 'amani-powered-by',
           'region' => 'footer',
-          'weight' => '-4',
+          'weight' => '-37',
         ),
       ),
     ),

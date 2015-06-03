@@ -49,7 +49,7 @@ function amani_global_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => '1374817913',
     'log' => '',
-    'uid' => '0',
+    'uid' => '1',
     'default_revision' => '1',
     'revisions' => array(),
     'vuuid' => '74895912-6a98-4d34-9f5f-ebd01453fd1a',
@@ -57,8 +57,8 @@ function amani_global_uuid_features_default_beans() {
     'field_bean_body' => array(
       'und' => array(
         0 => array(
-          'value' => '<img src="<?php echo base_path();  ?>profiles/amani/themes/peace/images/amani_powered_by.png" style="width: 50%; margin-bottom: 20px;" />
-<div class="credits-logo"><img src="<?php echo base_path() . path_to_theme(); ?>/images/icons/logo_peacegeeks.png" style="width: 50%;" /></div>',
+          'value' => '<img class="powered-amani-logo" src="<?php echo base_path();  ?>profiles/amani/themes/peace/images/amani_powered_by.png" />
+<img class="peacegeeks-logo" src="<?php echo base_path() . path_to_theme(); ?>/images/icons/logo_peacegeeks.png"/>',
           'format' => 'php_code',
         ),
       ),
