@@ -97,7 +97,7 @@ body {
  */
 @media all and (min-width: 480px) and (max-width: 959px) {
 
-  $zen-column-count: 3;
+  $zen-column-count: 12;
 
   /**
    * The layout when there is only one sidebar, the left one.
@@ -175,7 +175,7 @@ body {
  */
 @media all and (min-width: 960px) {
 
-  $zen-column-count: 5;
+  $zen-column-count: 12;
 
   /**
    * The layout when there is only one sidebar, the left one.
@@ -198,12 +198,12 @@ body {
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     #content {
-      @include zen-grid-item(4, 1);
+      @include zen-grid-item(9, 1);
     }
 
     /* Span 1 column, starting in 5th column from left. */
     .region-sidebar-second {
-      @include zen-grid-item(1, 5);
+      @include zen-grid-item(3, 10);
     }
   }
 

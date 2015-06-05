@@ -33,17 +33,18 @@
     }
 
     a {
+      border-top: 5px solid #513e79;
       color: white;
+      display: block;
+      margin: 0 20px 0 0;
+      padding: 10px 0 15px 0;
+      text-transform: uppercase;
 
       &.active,
       &:hover,
       &:focus {
         border-top: 5px solid #d19fc0;
         color: #d19fc0;
-        display: block;
-        margin: 0 20px 0 0;
-        padding: 10px 0;
-        text-transform: uppercase;
       }
     }
   }

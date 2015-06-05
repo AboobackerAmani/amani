@@ -854,16 +854,16 @@ body {
   /* line 200, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
-    width: 33.33333%;
+    width: 75%;
     margin-left: 0%;
-    margin-right: -33.33333%;
+    margin-right: -75%;
   }
   /* line 205, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
-    width: 8.33333%;
-    margin-left: 33.33333%;
-    margin-right: -41.66667%;
+    width: 25%;
+    margin-left: 75%;
+    margin-right: -100%;
   }
 
   /**
@@ -998,16 +998,17 @@ body {
 }
 /* line 35, ../sass/components/_header.scss */
 .header__region .block-menu a {
+  border-top: 5px solid #513e79;
   color: white;
+  display: block;
+  margin: 0 20px 0 0;
+  padding: 10px 0 15px 0;
+  text-transform: uppercase;
 }
-/* line 38, ../sass/components/_header.scss */
+/* line 43, ../sass/components/_header.scss */
 .header__region .block-menu a.active, .header__region .block-menu a:hover, .header__region .block-menu a:focus {
   border-top: 5px solid #d19fc0;
   color: #d19fc0;
-  display: block;
-  margin: 0 20px 0 0;
-  padding: 10px 0;
-  text-transform: uppercase;
 }
 
 /**
@@ -2186,12 +2187,13 @@ tr.selected td {
   background-color: #5a595c;
 }
 
-/* line 22, ../sass/theme/_layout.scss */
+/* line 12, ../sass/theme/_layout.scss */
 #main {
   min-height: 300px;
+  padding-bottom: 20px;
 }
 
-/* line 36, ../sass/theme/_layout.scss */
+/* line 27, ../sass/theme/_layout.scss */
 .footer-top {
   background-color: #533058;
   border: 1px solid #67486b;
@@ -2199,7 +2201,7 @@ tr.selected td {
   height: 11px;
 }
 
-/* line 43, ../sass/theme/_layout.scss */
+/* line 34, ../sass/theme/_layout.scss */
 .footer-wrapper {
   background-color: #784580;
   border: 1px solid #84568b;
@@ -2217,15 +2219,16 @@ tr.selected td {
 .footer-wrapper:after {
   clear: both;
 }
-/* line 52, ../sass/theme/_layout.scss */
+/* line 43, ../sass/theme/_layout.scss */
 .footer-wrapper a {
   color: #fdfeff;
+  text-transform: uppercase;
 }
 /* line 63, ../sass/_mixins.scss */
 .footer-wrapper a:focus, .footer-wrapper a:hover, .footer-wrapper a:active {
   color: #1696ca;
 }
-/* line 58, ../sass/theme/_layout.scss */
+/* line 50, ../sass/theme/_layout.scss */
 .footer-wrapper .menu a {
   color: #fdfeff;
 }
@@ -2234,7 +2237,7 @@ tr.selected td {
   color: #1696ca;
 }
 
-/* line 66, ../sass/theme/_layout.scss */
+/* line 58, ../sass/theme/_layout.scss */
 footer > .block-menu {
   float: left;
   width: 33.33333%;
@@ -2242,7 +2245,7 @@ footer > .block-menu {
   margin-right: -33.33333%;
 }
 
-/* line 71, ../sass/theme/_layout.scss */
+/* line 63, ../sass/theme/_layout.scss */
 #block-bean-amani-powered-by {
   float: left;
   width: 33.33333%;
@@ -2251,7 +2254,7 @@ footer > .block-menu {
   text-align: right;
 }
 
-/* line 77, ../sass/theme/_layout.scss */
+/* line 69, ../sass/theme/_layout.scss */
 footer .menu {
   -moz-column-count: 3;
   -moz-column-gap: 20px;
@@ -2261,12 +2264,12 @@ footer .menu {
   column-gap: 20px;
 }
 
-/* line 87, ../sass/theme/_layout.scss */
+/* line 79, ../sass/theme/_layout.scss */
 .peacegeeks-logo {
   margin: 0 0 20px 50px;
 }
 
-/* line 91, ../sass/theme/_layout.scss */
+/* line 83, ../sass/theme/_layout.scss */
 .footer-legal {
   background-color: #533058;
   border-top: 1px solid #67486b;
@@ -2276,7 +2279,7 @@ footer .menu {
   text-transform: uppercase;
   width: 100%;
 }
-/* line 99, ../sass/theme/_layout.scss */
+/* line 91, ../sass/theme/_layout.scss */
 .footer-legal div {
   margin: 0 auto;
   width: 75%;
