@@ -205,35 +205,23 @@ function amani_global_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'search-form' => array(
-          'module' => 'search',
-          'delta' => 'form',
-          'region' => 'header',
-          'weight' => '-41',
-        ),
-        'menu-menu-meta' => array(
+        'menu-menu-amani-main-menu' => array(
           'module' => 'menu',
-          'delta' => 'menu-meta',
+          'delta' => 'menu-amani-main-menu',
           'region' => 'header',
-          'weight' => '-40',
+          'weight' => '-10',
         ),
         'locale-language' => array(
           'module' => 'locale',
           'delta' => 'language',
           'region' => 'header',
-          'weight' => '-39',
+          'weight' => '-9',
         ),
         'menu-menu-social-media' => array(
           'module' => 'menu',
           'delta' => 'menu-social-media',
           'region' => 'header',
-          'weight' => '-38',
-        ),
-        'superfish-1' => array(
-          'module' => 'superfish',
-          'delta' => '1',
-          'region' => 'navigation_region',
-          'weight' => '-10',
+          'weight' => '-8',
         ),
       ),
     ),
