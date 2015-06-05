@@ -1,0 +1,50 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Header: Logo
+//
+///////////////////////////////////////////////////////////////////////////////
+
+.header-logo {
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.header__region {
+  margin-top: 20px;
+
+  .block {
+    margin-bottom: 0;
+  }
+
+  .block-menu {
+    background-color: #513e79;
+
+    ul {
+      &.menu {
+        margin: 0 auto;
+        max-width: $max-width;
+
+        li {
+          display: inline-block;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    a {
+      color: white;
+
+      &.active,
+      &:hover,
+      &:focus {
+        border-top: 5px solid #d19fc0;
+        color: #d19fc0;
+        display: block;
+        margin: 0 20px 0 0;
+        padding: 10px 0;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
