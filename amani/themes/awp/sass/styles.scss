@@ -1128,6 +1128,40 @@ body {
     }
     }
   }/*section-news*/
+  &.section-resources{
+    .view-resources-categories{
+      .view-content {
+        .views-row {
+          background: $awp-white;
+          padding: 20px 0;
+          text-align: center;
+          .views-field-field-image{
+            img{
+              max-width: 100%;
+              height: auto;
+            }
+          }
+          .views-field-name{
+            a{
+
+            }
+          }
+          .views-field-description{
+
+          }
+          .views-field-tid{
+            .field-content{
+              a{
+                
+              }
+
+            }
+          }
+
+        }
+      }
+    }
+  }/*section-resources*/
   &.page-media{
     #block-views-awp-media-block,
     #block-views-awp-media-block-1{
