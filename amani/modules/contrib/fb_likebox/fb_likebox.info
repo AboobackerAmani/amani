@@ -1,11 +1,12 @@
-name = Facebook Likebox
-description = Simple module that provides a configurable block with Facebook Likebox's plugin.
+name = Page Plugin
+description = Simple module that provides a configurable block with Facebook's Page Plugin
 core = 7.x
 files[] = fb_likebox.module
-package = FB Likebox
-; Information added by drupal.org packaging script on 2013-03-26
-version = "7.x-1.7"
+scripts[] = fb_likebox.js
+package = Page Plugin
+; Information added by Drupal.org packaging script on 2015-05-25
+version = "7.x-2.0"
 core = "7.x"
 project = "fb_likebox"
-datestamp = "1364307312"
+datestamp = "1432556583"
 
