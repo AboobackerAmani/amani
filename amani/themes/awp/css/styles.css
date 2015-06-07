@@ -995,6 +995,12 @@ table {
   }
 
   /*front*/
+  /* line 306, ../sass/layouts/_responsive.scss */
+  .not-front.section-resources .view-resources-categories .view-content .views-row {
+    width: 33.3333%;
+    float: left;
+    margin-right: 0;
+  }
 }
 /* Component (SMACSS module) rules */
 /**
@@ -1947,6 +1953,7 @@ body {
   /*not-front*/
   /*page-team*/
   /*section-news*/
+  /*section-resources*/
   /*page-media*/
 }
 /* line 33, ../sass/styles.scss */
@@ -3219,37 +3226,48 @@ body.section-news .view-news-with-featured-.view-display-id-page .view-content .
   float: left;
   padding-right: 5px;
 }
-/* line 1132, ../sass/styles.scss */
+/* line 1134, ../sass/styles.scss */
+body.section-resources .view-resources-categories .view-content .views-row {
+  background: #FFFFFF;
+  padding: 20px 0;
+  text-align: center;
+}
+/* line 1139, ../sass/styles.scss */
+body.section-resources .view-resources-categories .view-content .views-row .views-field-field-image img {
+  max-width: 100%;
+  height: auto;
+}
+/* line 1165, ../sass/styles.scss */
 body.page-media #block-views-awp-media-block,
 body.page-media #block-views-awp-media-block-1 {
   margin-bottom: 30px;
 }
-/* line 1135, ../sass/styles.scss */
+/* line 1168, ../sass/styles.scss */
 body.page-media #block-views-awp-media-block .block-title,
 body.page-media #block-views-awp-media-block-1 .block-title {
   font-size: 2vw;
   color: #B2B2B2;
 }
-/* line 1144, ../sass/styles.scss */
+/* line 1177, ../sass/styles.scss */
 body.page-media #block-views-awp-media-block .view-content .views-row .views-field-title,
 body.page-media #block-views-awp-media-block-1 .view-content .views-row .views-field-title {
   color: #B2B2B2;
 }
-/* line 1146, ../sass/styles.scss */
+/* line 1179, ../sass/styles.scss */
 body.page-media #block-views-awp-media-block .view-content .views-row .views-field-title a,
 body.page-media #block-views-awp-media-block-1 .view-content .views-row .views-field-title a {
   color: #B2B2B2;
 }
-/* line 1162, ../sass/styles.scss */
+/* line 1195, ../sass/styles.scss */
 body.page-media .view-awp-media.view-display-id-page .view-content .views-row {
   margin-bottom: 30px;
 }
-/* line 1165, ../sass/styles.scss */
+/* line 1198, ../sass/styles.scss */
 body.page-media .view-awp-media.view-display-id-page .view-content .views-row .views-field-title {
   font-size: 2vw;
   color: #B2B2B2;
 }
-/* line 1168, ../sass/styles.scss */
+/* line 1201, ../sass/styles.scss */
 body.page-media .view-awp-media.view-display-id-page .view-content .views-row .views-field-title a {
   color: #B2B2B2;
 }
