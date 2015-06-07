@@ -1135,25 +1135,93 @@ body {
           background: $awp-white;
           padding: 20px 0;
           text-align: center;
+          position: relative;
+          color: $awp-dark-grey;
+          a{
+            color: $awp-dark-grey;
+          }
           .views-field-field-image{
+            height: 200px;
+            display: block;
+            position: relative;
+            text-align: center;
+            .field-content{
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              text-align:center; /* Align center inline elements */
+              font: 0/0 a;
+              &:before{
+                content: ' ';
+                display: inline-block;
+                vertical-align: middle;
+                height: 100%;
+              }
+            }
             img{
               max-width: 100%;
               height: auto;
             }
           }
           .views-field-name{
+            margin-bottom: 10px;
             a{
-
+              font-size: 40px;
+              text-transform: uppercase;
+              font-weight: bold;
             }
           }
           .views-field-description{
-
+            font-size: 22px;
+            font-weight: normal;
           }
           .views-field-tid{
             .field-content{
               a{
-
+                font-size: 22px;
+                border: 1px solid $awp_dark-grey;
+                padding: 10px 0;
+                display: block;
+                width: 70%;
+                margin: 10px auto;
+                position: absolute;
+                left: 15%;
               }
+            }
+          }
+          &:hover{
+            img{
+              -webkit-filter: saturate(33333333%);
+            }
+            color: $awp-white;
+            a{
+              color: $awp-white;
+            }
+            &.views-row-1{
+              background: $color1;
+            }
+            &.views-row-2{
+              background: $color2;
+            }
+            &.views-row-3{
+              background: $color3;
+            }
+            &.views-row-4{
+              background: $color4;
+            }
+            &.views-row-5{
+              background: $color5;
+            }
+            &.views-row-6{
+              background: $color6;
+            }
+            &.views-row-7{
+              background: $color7;
+            }
+            &.views-row-8{
+              background: $color8;
             }
           }
 
