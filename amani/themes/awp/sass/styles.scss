@@ -1308,10 +1308,9 @@ body {
       overflow: hidden;
       .view-header{
         .views-row{
-          overflow: hidden;
-          margin-bottom: 0px;
-          padding-bottom: 0px;
-          border-bottom: none;
+          margin-bottom: 0px !important;
+          padding-bottom: 0px !important;
+          border-bottom: none !important;
         }
         .views-field-name{
           color: $awp-green;
