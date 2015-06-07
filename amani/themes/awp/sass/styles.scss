@@ -1188,12 +1188,16 @@ body {
                 margin: 10px auto;
                 position: absolute;
                 left: 15%;
+                bottom: 10px;
               }
             }
           }
           &:hover{
             img{
               -webkit-filter: saturate(33333333%);
+            }
+            .views-field-tid a{
+              border-color: $awp-white;
             }
             color: $awp-white;
             a{

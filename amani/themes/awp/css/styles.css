@@ -1000,6 +1000,7 @@ table {
     width: 50%;
     float: left;
     margin-right: 0;
+    height: 450px;
   }
 }
 /* Component (SMACSS module) rules */
@@ -3293,82 +3294,87 @@ body.section-resources .view-resources-categories .view-content .views-row .view
   margin: 10px auto;
   position: absolute;
   left: 15%;
+  bottom: 10px;
 }
-/* line 1194, ../sass/styles.scss */
+/* line 1195, ../sass/styles.scss */
 body.section-resources .view-resources-categories .view-content .views-row:hover {
   color: #FFFFFF;
 }
-/* line 1195, ../sass/styles.scss */
+/* line 1196, ../sass/styles.scss */
 body.section-resources .view-resources-categories .view-content .views-row:hover img {
   -webkit-filter: saturate(33333333%);
 }
 /* line 1199, ../sass/styles.scss */
+body.section-resources .view-resources-categories .view-content .views-row:hover .views-field-tid a {
+  border-color: #FFFFFF;
+}
+/* line 1203, ../sass/styles.scss */
 body.section-resources .view-resources-categories .view-content .views-row:hover a {
   color: #FFFFFF;
 }
-/* line 1202, ../sass/styles.scss */
+/* line 1206, ../sass/styles.scss */
 body.section-resources .view-resources-categories .view-content .views-row:hover.views-row-1 {
   background: #D20044;
 }
-/* line 1205, ../sass/styles.scss */
+/* line 1209, ../sass/styles.scss */
 body.section-resources .view-resources-categories .view-content .views-row:hover.views-row-2 {
   background: #FDD82C;
 }
-/* line 1208, ../sass/styles.scss */
+/* line 1212, ../sass/styles.scss */
 body.section-resources .view-resources-categories .view-content .views-row:hover.views-row-3 {
   background: #43B9AE;
 }
-/* line 1211, ../sass/styles.scss */
+/* line 1215, ../sass/styles.scss */
 body.section-resources .view-resources-categories .view-content .views-row:hover.views-row-4 {
   background: #767575;
 }
-/* line 1214, ../sass/styles.scss */
+/* line 1218, ../sass/styles.scss */
 body.section-resources .view-resources-categories .view-content .views-row:hover.views-row-5 {
   background: #871B73;
 }
-/* line 1217, ../sass/styles.scss */
+/* line 1221, ../sass/styles.scss */
 body.section-resources .view-resources-categories .view-content .views-row:hover.views-row-6 {
   background: #1772AB;
 }
-/* line 1220, ../sass/styles.scss */
+/* line 1224, ../sass/styles.scss */
 body.section-resources .view-resources-categories .view-content .views-row:hover.views-row-7 {
   background: #D20044;
 }
-/* line 1223, ../sass/styles.scss */
+/* line 1227, ../sass/styles.scss */
 body.section-resources .view-resources-categories .view-content .views-row:hover.views-row-8 {
   background: #FDD82C;
 }
-/* line 1233, ../sass/styles.scss */
+/* line 1237, ../sass/styles.scss */
 body.page-media #block-views-awp-media-block,
 body.page-media #block-views-awp-media-block-1 {
   margin-bottom: 30px;
 }
-/* line 1236, ../sass/styles.scss */
+/* line 1240, ../sass/styles.scss */
 body.page-media #block-views-awp-media-block .block-title,
 body.page-media #block-views-awp-media-block-1 .block-title {
   font-size: 2vw;
   color: #B2B2B2;
 }
-/* line 1245, ../sass/styles.scss */
+/* line 1249, ../sass/styles.scss */
 body.page-media #block-views-awp-media-block .view-content .views-row .views-field-title,
 body.page-media #block-views-awp-media-block-1 .view-content .views-row .views-field-title {
   color: #B2B2B2;
 }
-/* line 1247, ../sass/styles.scss */
+/* line 1251, ../sass/styles.scss */
 body.page-media #block-views-awp-media-block .view-content .views-row .views-field-title a,
 body.page-media #block-views-awp-media-block-1 .view-content .views-row .views-field-title a {
   color: #B2B2B2;
 }
-/* line 1263, ../sass/styles.scss */
+/* line 1267, ../sass/styles.scss */
 body.page-media .view-awp-media.view-display-id-page .view-content .views-row {
   margin-bottom: 30px;
 }
-/* line 1266, ../sass/styles.scss */
+/* line 1270, ../sass/styles.scss */
 body.page-media .view-awp-media.view-display-id-page .view-content .views-row .views-field-title {
   font-size: 2vw;
   color: #B2B2B2;
 }
-/* line 1269, ../sass/styles.scss */
+/* line 1273, ../sass/styles.scss */
 body.page-media .view-awp-media.view-display-id-page .view-content .views-row .views-field-title a {
   color: #B2B2B2;
 }
