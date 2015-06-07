@@ -29,6 +29,8 @@ Drupal.behaviors.my_custom_behavior = {
           $('.header__region .header_links .search_link #search-block-form').hide();
       });
 
+      $('.section-resources .sidebars .region-sidebar-second').height($('.section-resources .view-resources-categories').height());
+
 
   }
 };
