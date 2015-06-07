@@ -1301,9 +1301,18 @@ body {
     h1#page-title{
       margin: 0;
       margin-bottom: -20px;
+      padding: 0 20px;
     }
     .view-resource-inner{
+      padding: 0 20px;
+      overflow: hidden;
       .view-header{
+        .views-row{
+          overflow: hidden;
+          margin-bottom: 0px;
+          padding-bottom: 0px;
+          border-bottom: none;
+        }
         .views-field-name{
           color: $awp-green;
           font-size: 60px;
@@ -1315,7 +1324,6 @@ body {
         .views-row{
           overflow: hidden;
           margin-bottom: 20px;
-          padding: 0 20px;
           padding-bottom: 5px;
           border-bottom: 1px solid $awp_grey;
           .views-field-title{
@@ -1338,6 +1346,12 @@ body {
           .views-field-field-amani-tags{
             margin-top: 20px;
             color: $awp_grey;
+            font-weight: 100;
+            .views-label,
+            .field-content{
+              float: left;
+              margin-right: 5px;
+            }
           }
         }
       }
