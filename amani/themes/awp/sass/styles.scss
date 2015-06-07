@@ -1287,7 +1287,7 @@ body {
           }
           .views-field-field-link{
             a{
-              font-size: 17px;
+              font-size: 14px;
               color: #4BB9A5;
               font-weight: normal;
             }
@@ -1296,6 +1296,54 @@ body {
       }
     }
   }/*section-resources*/
+
+  &.page-resources-list{
+    h1#page-title{
+      margin: 0;
+      margin-bottom: -20px;
+    }
+    .view-resource-inner{
+      .view-header{
+        .views-field-name{
+          color: $awp-green;
+          font-size: 60px;
+          font-weight: normal;
+          margin-bottom: 5%;
+        }
+      }
+      .view-content{
+        .views-row{
+          overflow: hidden;
+          margin-bottom: 20px;
+          padding-bottom: 5px;
+          border-bottom: 1px solid $awp-light-grey;;
+          .views-field-title{
+            font-size: 35px;
+            font-weight: bold;
+            color: #3F3F3F;
+            margin-bottom: 15px;
+          }
+          .views-field-field-link{
+            a{
+              font-size: 20px;
+              color: $awp-green;
+              font-weight: normal;
+              margin-bottom: 15px;
+            }
+          }
+          .views-field-body{
+            font-weight: lighter;
+            color: $awp-light-grey;
+          }
+          .views-field-field-amani-tags{
+            margin-top: 20px;
+            color: $awp-light-grey;
+          }
+        }
+      }
+    }
+  }
+
   &.page-media{
     #block-views-awp-media-block,
     #block-views-awp-media-block-1{
