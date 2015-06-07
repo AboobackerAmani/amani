@@ -1132,8 +1132,17 @@ body {
     #main{
       margin-top: 0;
     }
+    h1#page-title{
+      margin-bottom: 10px;
+    }
     .view-resources-categories{
       overflow: hidden;
+      .view-header{
+        font-size: 35px;
+        p{
+          margin: 0;
+        }
+      }
       .view-content {
         .views-row {
           background: $awp-white;
