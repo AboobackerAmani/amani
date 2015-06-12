@@ -4,6 +4,10 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
+.region-header {
+  background-color: #513e79;
+}
+
 .header-logo {
   margin-top: 10px;
   text-align: center;
@@ -17,21 +21,7 @@
     margin-bottom: 0;
   }
 
-  .block-menu {
-    background-color: #513e79;
-
-    ul {
-      &.menu {
-        margin: 0 auto;
-        max-width: $max-width;
-
-        li {
-          display: inline-block;
-          margin-bottom: 0;
-        }
-      }
-    }
-
+  .menu {
     a {
       border-top: 5px solid #513e79;
       color: white;
@@ -45,6 +35,21 @@
       &:focus {
         border-top: 5px solid #d19fc0;
         color: #d19fc0;
+      }
+    }
+  }
+
+  .block-menu {
+
+    ul {
+      &.menu {
+        margin: 0 auto;
+        max-width: $max-width;
+
+        li {
+          display: inline-block;
+          margin-bottom: 0;
+        }
       }
     }
   }

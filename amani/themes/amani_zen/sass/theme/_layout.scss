@@ -73,40 +73,23 @@ footer {
     margin: 0 50px 0 0;
     li {
       position:relative;
-      text-indent: 15px;
+      text-indent: 20px;
       margin-bottom: 15px;
       &:last-child {
         margin-bottom: 0;
       }
     }
     a {
-      text-indent: -15px;
       transition: all 0.3s;
       font-size: 12px;
       &:before {
         position: absolute;
         content: '';
-        top: 6px;
+        top: 3px;
         left:0;
-        @include icons-sprite(footer-arrow-link);
+        @include icons-sprite(grey-right-arrow);
       }
     }
-  }
-  #logo-peacegeeks, #logo-amani-powered-by {
-    float: left;
-  }
-  #logo-peacegeeks {
-    @include icons-sprite(logo-peacegeeks-footer);
-    margin: 30px 30px 0 50px;
-    &:before {
-      content: 'a project by';
-      top: -20px;
-      position: relative;
-      white-space: nowrap;
-    }
-  }
-  #logo-amani-powered-by {
-    @include icons-sprite(logo-amani-footer);
   }
 }
 
