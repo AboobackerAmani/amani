@@ -76,5 +76,14 @@
   </div>
 
 </div>
-<?php print render($page['footer']); ?>
+
+<div class="footer-top"></div>
+
+<div class="footer-wrapper">
+  <?php print render($page['footer']); ?>
+</div>
+
+<div class="footer-legal">
+  <div>&copy; <?php echo date("Y"); ?> <?php print $site_name; ?></div>
+</div>
 
