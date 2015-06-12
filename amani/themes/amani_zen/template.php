@@ -81,6 +81,8 @@ function amani_zen_preprocess_html(&$variables, $hook) {
   drupal_add_js($theme_path . '/fonts/ss-social/ss-social.js', array('type' => 'file', 'scope' => 'footer'));
 }
 
+
+
 /**
  * Override or insert variables into the page templates.
  *
@@ -89,9 +91,10 @@ function amani_zen_preprocess_html(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function amani_zen_preprocess_page(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+  $variables['page']['footer']['site_name'] = $variables['site_name'];
+    // die(var_dump($variables['page']['footer']['amani_site_name']));
+
 }
 // */
 

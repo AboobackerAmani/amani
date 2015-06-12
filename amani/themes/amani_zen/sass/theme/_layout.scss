@@ -37,7 +37,7 @@
   border-width: 1px 0;
   color: $almost-white;
   font-weight: $fw-light;
-  padding: 30px 0 40px 0;
+  padding: 30px 0 30px 0;
   @include zen-grid-container;
 
   a {
@@ -57,22 +57,56 @@
 footer {
   > .block-menu {
     @include zen-grid-item(4, 1); // main menu in footer
+    margin-bottom: 0;
   }
 }
 
-#block-bean-amani-powered-by {
+#wrapper-powered-by {
   @include zen-grid-item(4, 9); // amani and peace geeks logos
   text-align: right;
 }
 
 footer {
   .menu {
-    -moz-column-count: 3;
-    -moz-column-gap: 20px;
-    -webkit-column-count: 3;
-    -webkit-column-gap: 20px;
-    column-count: 3;
-    column-gap: 20px;
+    float: left;
+    position: relative;
+    margin: 0 50px 0 0;
+    li {
+      position:relative;
+      text-indent: 15px;
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      text-indent: -15px;
+      transition: all 0.3s;
+      font-size: 12px;
+      &:before {
+        position: absolute;
+        content: '';
+        top: 6px;
+        left:0;
+        @include icons-sprite(footer-arrow-link);
+      }
+    }
+  }
+  #logo-peacegeeks, #logo-amani-powered-by {
+    float: left;
+  }
+  #logo-peacegeeks {
+    @include icons-sprite(logo-peacegeeks-footer);
+    margin: 30px 30px 0 50px;
+    &:before {
+      content: 'a project by';
+      top: -20px;
+      position: relative;
+      white-space: nowrap;
+    }
+  }
+  #logo-amani-powered-by {
+    @include icons-sprite(logo-amani-footer);
   }
 }
 

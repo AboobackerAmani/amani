@@ -932,19 +932,17 @@ body {
  */
 /* line 36, ../sass/components/_blocks.scss */
 .block-menu ul.menu {
-  margin: 0 0 1.53846em 0;
   padding: 0;
 }
-/* line 40, ../sass/components/_blocks.scss */
+/* line 39, ../sass/components/_blocks.scss */
 .block-menu ul.menu li {
   list-style: none outside none;
-  margin-bottom: .3em;
 }
 
 /**
  * Unique blocks
  */
-/* line 53, ../sass/components/_blocks.scss */
+/* line 51, ../sass/components/_blocks.scss */
 #block-search-form {
   position: absolute;
   top: 30px;
@@ -954,7 +952,7 @@ body {
 #block-search-form:hover .contextual-links-wrapper {
   display: none;
 }
-/* line 60, ../sass/components/_blocks.scss */
+/* line 58, ../sass/components/_blocks.scss */
 #block-search-form .form-text {
   font-size: 0.846rem;
   font-weight: normal;
@@ -962,7 +960,7 @@ body {
   padding: 2px 5px;
   width: 76px;
 }
-/* line 68, ../sass/components/_blocks.scss */
+/* line 66, ../sass/components/_blocks.scss */
 #block-search-form .form-actions {
   display: none;
 }
@@ -2072,7 +2070,7 @@ tr.selected td {
 /* line 805, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1433349335');
+  background-image: url('../images/progress.gif?1433171981');
 }
 
 /**
@@ -2161,6 +2159,16 @@ tr.selected td {
     display: none;
   }
 }
+/**
+ * @file
+ * Generate a sprite from icons folder.
+ */
+/* line 176, icons/*.png */
+.icons-sprite, footer .menu a:before, footer #logo-peacegeeks, footer #logo-amani-powered-by {
+  background-image: url('../images/icons-sbe9e75772f.png');
+  background-repeat: no-repeat;
+}
+
 /* SMACSS theme rules */
 /* line 1, ../sass/theme/_forms.scss */
 .form-textarea,
@@ -2208,7 +2216,7 @@ tr.selected td {
   border-width: 1px 0;
   color: #fdfeff;
   font-weight: 300;
-  padding: 30px 0 40px 0;
+  padding: 30px 0 30px 0;
 }
 /* line 45, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 .footer-wrapper:before, .footer-wrapper:after {
@@ -2243,10 +2251,11 @@ footer > .block-menu {
   width: 33.33333%;
   margin-left: 0%;
   margin-right: -33.33333%;
+  margin-bottom: 0;
 }
 
-/* line 63, ../sass/theme/_layout.scss */
-#block-bean-amani-powered-by {
+/* line 64, ../sass/theme/_layout.scss */
+#wrapper-powered-by {
   float: left;
   width: 33.33333%;
   margin-left: 66.66667%;
@@ -2254,22 +2263,69 @@ footer > .block-menu {
   text-align: right;
 }
 
-/* line 69, ../sass/theme/_layout.scss */
+/* line 70, ../sass/theme/_layout.scss */
 footer .menu {
-  -moz-column-count: 3;
-  -moz-column-gap: 20px;
-  -webkit-column-count: 3;
-  -webkit-column-gap: 20px;
-  column-count: 3;
-  column-gap: 20px;
+  float: left;
+  position: relative;
+  margin: 0 50px 0 0;
+}
+/* line 74, ../sass/theme/_layout.scss */
+footer .menu li {
+  position: relative;
+  text-indent: 15px;
+  margin-bottom: 15px;
+}
+/* line 78, ../sass/theme/_layout.scss */
+footer .menu li:last-child {
+  margin-bottom: 0;
+}
+/* line 82, ../sass/theme/_layout.scss */
+footer .menu a {
+  text-indent: -15px;
+  transition: all 0.3s;
+  font-size: 12px;
+}
+/* line 86, ../sass/theme/_layout.scss */
+footer .menu a:before {
+  position: absolute;
+  content: '';
+  top: 6px;
+  left: 0;
+  background-position: -102px 0;
+  height: 7px;
+  width: 6px;
+}
+/* line 95, ../sass/theme/_layout.scss */
+footer #logo-peacegeeks, footer #logo-amani-powered-by {
+  float: left;
+}
+/* line 98, ../sass/theme/_layout.scss */
+footer #logo-peacegeeks {
+  background-position: -366px 0;
+  height: 32px;
+  width: 64px;
+  margin: 30px 30px 0 50px;
+}
+/* line 101, ../sass/theme/_layout.scss */
+footer #logo-peacegeeks:before {
+  content: 'a project by';
+  top: -20px;
+  position: relative;
+  white-space: nowrap;
+}
+/* line 108, ../sass/theme/_layout.scss */
+footer #logo-amani-powered-by {
+  background-position: -160px 0;
+  height: 63px;
+  width: 68px;
 }
 
-/* line 79, ../sass/theme/_layout.scss */
+/* line 113, ../sass/theme/_layout.scss */
 .peacegeeks-logo {
   margin: 0 0 20px 50px;
 }
 
-/* line 83, ../sass/theme/_layout.scss */
+/* line 117, ../sass/theme/_layout.scss */
 .footer-legal {
   background-color: #533058;
   border-top: 1px solid #67486b;
@@ -2279,7 +2335,7 @@ footer .menu {
   text-transform: uppercase;
   width: 100%;
 }
-/* line 91, ../sass/theme/_layout.scss */
+/* line 125, ../sass/theme/_layout.scss */
 .footer-legal div {
   margin: 0 auto;
   width: 75%;

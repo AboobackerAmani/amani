@@ -24,3 +24,48 @@ Drupal.behaviors.my_custom_behavior = {
 
 
 })(jQuery, Drupal, this, this.document);
+
+
+/**
+*
+* Jquery footer unordered list in 3 columns
+*/
+
+(function ($) {
+  Drupal.behaviors.footerThreeColumns = {
+    attach: function(context, settings) {
+      $('footer .menu').once('footerThreeColumns', function() {
+        var initialContainer = $('footer .menu'),
+        columnItems = $('footer .menu li'),
+        columns = null,
+        column = 1; // account for initial column
+        function updateColumns(){
+          column = 0;
+          columnItems.each(function(idx, el){
+            if (idx !== 0 && idx > (columnItems.length / columns.length) + (column * idx)){
+                column += 1;
+                console.log(el);
+            }
+            $(columns.get(column)).append(el);
+          });
+        }
+        function setupColumns(){
+          columnItems.detach();
+          while (column++ <= 3){
+            initialContainer.clone().insertBefore(initialContainer);
+            console.log(initialContainer);
+            column++;
+          }
+          columns = $('footer .menu');
+        }
+
+        $(function(){
+          setupColumns();
+          updateColumns();
+        });
+
+      });
+    }
+  }
+})(jQuery);
+

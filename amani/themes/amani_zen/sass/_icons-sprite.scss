@@ -1,0 +1,9 @@
+/**
+ * @file
+ * Generate a sprite from icons folder.
+ */
+$icons-spacing: 10px;
+$icons-layout: 'horizontal';
+$icons-sprite-dimensions: true;
+@import "icons/*.png";
+
