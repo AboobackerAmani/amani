@@ -323,6 +323,14 @@ Title Desc|Z -> A</pre> Leave the replacement value blank to remove an option al
         '#collapsible' => TRUE,
         '#collapsed' => TRUE,
       );
+              // Build a placeholder option form element -- available to all exposed
+              // filters.
+              $bef_options[$label]['more_options']['bef_placeholder'] = array(
+                    '#type' => 'textfield',
+                    '#title' => t('Placeholder'),
+                    '#default_value' => $existing[$label]['more_options']['bef_placeholder'],
+                    '#description' => t('Adds placeholder HTML5 attribute for input element.'),
+                  );
 
       // Collect a list of token types that make sense for this filter
       $available = array('global_types');
@@ -600,6 +608,26 @@ Title Desc|Z -> A</pre> Leave the replacement value blank to remove an option al
         );
         $form[$field_id]['#bef_description'] = $options['more_options']['bef_filter_description'];
       }
+
+              // Token replacement on BEF placeholder.
+              if (!empty($options['more_options']['bef_placeholder'])) {
+                    // Collect replacement data.
+                    $data = array();
+                    $available = $options['more_options']['tokens']['available'];
+                    if (in_array('vocabulary', $available)) {
+                          $vocabs = taxonomy_get_vocabularies();
+                          $data['vocabulary'] = $vocabs[$filters[$label]->options['vid']];
+                        }
+        /* Others? */
+
+        // Replace tokens.
+        $options['more_options']['bef_placeholder'] = token_replace(
+              $options['more_options']['bef_placeholder'], $data
+                    );
+        $form[$field_id]['#placeholder'] = $options['more_options']['bef_placeholder'];
+      }
+
+
 
       if (!isset($options['bef_format'])) {
         $options['bef_format'] = '';
