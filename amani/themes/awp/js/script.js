@@ -33,7 +33,8 @@ Drupal.behaviors.my_custom_behavior = {
 
 
       var ourLabel = $('#views-exposed-form-resource-inner-page .views-widget-filter-keys label').text();
-      $('#views-exposed-form-resource-inner-page .views-widget-filter-keys .form-text').attr("placeholder", ourLabel);
+      $('#views-exposed-form-resource-inner-page .views-widget-filter-keys label').hide();
+      $('#views-exposed-form-resource-inner-page .views-widget-filter-keys .form-text').attr("placeholder", $.trim(ourLabel));
 
 
   }
