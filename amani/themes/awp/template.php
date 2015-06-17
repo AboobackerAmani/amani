@@ -137,3 +137,13 @@ function awp_preprocess_page(&$vars, $hook) {
         $vars['scripts'] = drupal_get_js(); // necessary in D7?
     }
 }
+
+
+function awp_form_alter(&$form, &$form_state, $form_id){
+    if($form_id == "views_exposed_form"){
+        dsm($form); // print $form array on the top of the page
+        if (isset($form['views-widget-filter-keys'])) {
+            $form['views-widget-filter-keys'][] = array('#placeholder' => t('Search Resources'));
+        }
+    }
+}
