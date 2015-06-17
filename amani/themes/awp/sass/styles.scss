@@ -1135,7 +1135,6 @@ body {
   &.section-resources,
   &.section-resources-list{
     #views-exposed-form-resource-inner-page{
-      background-color: #fff;
       margin-bottom: 20px;
       margin-top: 20px;
       overflow: hidden;
@@ -1148,6 +1147,7 @@ body {
               width: 100%;
               padding: 10px 5px;
               border: 1px solid #ccc;
+              background: none;
             }
           }
           .views-submit-button{
@@ -1170,13 +1170,15 @@ body {
       }
     }
   }
+  &.section-resources{
+    #views-exposed-form-resource-inner-page {
+      margin:0
+    }
+  }
 
 
 
   &.section-resources{
-
-
-
     #main{
       margin-top: 0;
     }
@@ -1299,7 +1301,7 @@ body {
       }
     }
     .sidebars .region-sidebar-second{
-      background: #FFD800;
+      background: #FFF1B7;
       padding: 0;
       margin-top: 15%;
       .block__title{
