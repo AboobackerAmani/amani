@@ -353,16 +353,6 @@ function amani_global_user_default_permissions() {
     'module' => 'twitter',
   );
 
-  // Exported permission: administer BOTCHA settings.
-  $permissions['administer BOTCHA settings'] = array(
-    'name' => 'administer BOTCHA settings',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'amani administrator',
-    ),
-    'module' => 'botcha',
-  );
-
   // Exported permission: administer CAPTCHA settings.
   $permissions['administer CAPTCHA settings'] = array(
     'name' => 'administer CAPTCHA settings',
@@ -1961,15 +1951,6 @@ function amani_global_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'better_formats',
-  );
-
-  // Exported permission: skip BOTCHA.
-  $permissions['skip BOTCHA'] = array(
-    'name' => 'skip BOTCHA',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'botcha',
   );
 
   // Exported permission: skip CAPTCHA.
