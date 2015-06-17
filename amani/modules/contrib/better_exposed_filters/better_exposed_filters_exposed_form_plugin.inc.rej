@@ -1,0 +1,57 @@
+***************
+*** 500,505 ****
+          '#description' => t('Adds descriptive text to the exposed filter.  This is usually rendered in smaller print under the label or the options.'),
+        );
+  
+        // Add token support to the description field.
+        $bef_options[$label]['more_options']['tokens'] = array(
+          '#title' => t('Replacement patterns'),
+--- 500,514 ----
+          '#description' => t('Adds descriptive text to the exposed filter.  This is usually rendered in smaller print under the label or the options.'),
+        );
+  
++       // Build a placeholder option form element -- available to all exposed
++       // filters.
++       $bef_options[$label]['more_options']['bef_placeholder'] = array(
++         '#type' => 'textfield',
++         '#title' => t('Placeholder'),
++         '#default_value' => $existing[$label]['more_options']['bef_placeholder'],
++         '#description' => t('Adds placeholder HTML5 attribute for input element.'),
++       );
++ 
+        // Add token support to the description field.
+        $bef_options[$label]['more_options']['tokens'] = array(
+          '#title' => t('Replacement patterns'),
+***************
+*** 913,918 ****
+          $form[$field_id]['#bef_description'] = $options['more_options']['bef_filter_description'];
+        }
+  
+        // Handle filter value rewrites.
+        if (!empty($options['more_options']['rewrite']['filter_rewrite_values'])) {
+          $lines = explode("\n", trim($options['more_options']['rewrite']['filter_rewrite_values']));
+--- 922,945 ----
+          $form[$field_id]['#bef_description'] = $options['more_options']['bef_filter_description'];
+        }
+  
++       // Token replacement on BEF placeholder.
++       if (!empty($options['more_options']['bef_placeholder'])) {
++         // Collect replacement data.
++         $data = array();
++         $available = $options['more_options']['tokens']['available'];
++         if (in_array('vocabulary', $available)) {
++           $vocabs = taxonomy_get_vocabularies();
++           $data['vocabulary'] = $vocabs[$filters[$label]->options['vid']];
++         }
++         /* Others? */
++ 
++         // Replace tokens.
++         $options['more_options']['bef_placeholder'] = token_replace(
++           $options['more_options']['bef_placeholder'], $data
++         );
++         $form[$field_id]['#placeholder'] = $options['more_options']['bef_placeholder'];
++       }
++ 
+        // Handle filter value rewrites.
+        if (!empty($options['more_options']['rewrite']['filter_rewrite_values'])) {
+          $lines = explode("\n", trim($options['more_options']['rewrite']['filter_rewrite_values']));
