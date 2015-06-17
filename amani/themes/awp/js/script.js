@@ -32,6 +32,10 @@ Drupal.behaviors.my_custom_behavior = {
       $('.section-resources .sidebars .region-sidebar-second').height($('.section-resources .view-resources-categories').height());
 
 
+      var ourLabel = $('#views-exposed-form-resource-inner-page .views-widget-filter-keys label').text();
+      $('#views-exposed-form-resource-inner-page .views-widget-filter-keys .form-text').attr("placeholder", ourLabel);
+
+
   }
 };
 
