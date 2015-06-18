@@ -223,6 +223,12 @@ function amani_global_context_default_contexts() {
           'region' => 'header',
           'weight' => '-8',
         ),
+        'search-form' => array(
+          'module' => 'search',
+          'delta' => 'form',
+          'region' => 'header',
+          'weight' => '-7',
+        ),
       ),
     ),
   );
