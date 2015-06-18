@@ -1,0 +1,37 @@
+@font-face {
+	font-family: 'amani-icons';
+	src:url('fonts/amani-icons.eot?-z3dk91');
+	src:url('fonts/amani-icons.eot?#iefix-z3dk91') format('embedded-opentype'),
+		url('fonts/amani-icons.ttf?-z3dk91') format('truetype'),
+		url('fonts/amani-icons.woff?-z3dk91') format('woff'),
+		url('fonts/amani-icons.svg?-z3dk91#amani-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="amani-icon-"], [class*=" amani-icon-"] {
+	font-family: 'amani-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.amani-icon-chevron-right:before {
+	content: "\f078";
+}
+.amani-icon-search:before {
+	content: "\e986";
+}
+.amani-icon-facebook2:before {
+	content: "\ea8d";
+}
+.amani-icon-twitter2:before {
+	content: "\ea92";
+}

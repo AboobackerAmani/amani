@@ -33,7 +33,9 @@
 
   </div>
 
-  <?php print render($page['header']); ?>
+  <div class="primary-nav-wrapper">
+    <?php print render($page['header']); ?>
+  </div>
 
 </header>
 

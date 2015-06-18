@@ -32,6 +32,7 @@ Drupal.behaviors.my_custom_behavior = {
 */
 
 (function ($) {
+
   Drupal.behaviors.footerThreeColumns = {
     attach: function(context, settings) {
       $('footer .menu').once('footerThreeColumns', function() {
@@ -67,5 +68,16 @@ Drupal.behaviors.my_custom_behavior = {
       });
     }
   }
+
+  Drupal.behaviors.headerSearch = {
+    attach: function(context, settings) {
+      // when the search input is clicked, set its inline width so that it
+      // does not shrink again unless the page is reloaded
+      $('.block-search .form-text').click(function() {
+        $(this).closest('.block-search').css({'width': '136px'});
+      });
+    }
+  }
+
 })(jQuery);
 

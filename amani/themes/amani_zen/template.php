@@ -170,3 +170,13 @@ function amani_zen_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+function amani_zen_form_alter(&$form, &$form_state, $form_id) {
+
+  if ($form_id == 'search_block_form') {
+    // add the magnifying glass icon
+    $form['search_block_form']['#suffix'] = '<div class="search-icon amani-icon-search"></div>';
+  }
+
+}
+

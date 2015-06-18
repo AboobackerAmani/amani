@@ -905,7 +905,7 @@ body {
 /**
  * Style by region
  */
-/* line 15, ../sass/components/_blocks.scss */
+/* line 13, ../sass/components/_blocks.scss */
 .region-header .block .block-title {
   position: absolute !important;
   height: 1px;
@@ -914,11 +914,11 @@ body {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* line 22, ../sass/components/_blocks.scss */
+/* line 19, ../sass/components/_blocks.scss */
 .region-footer .block {
   float: left;
 }
-/* line 25, ../sass/components/_blocks.scss */
+/* line 21, ../sass/components/_blocks.scss */
 .region-footer .block .block-title {
   position: absolute !important;
   height: 1px;
@@ -930,62 +930,35 @@ body {
 /**
  * Style by type
  */
-/* line 36, ../sass/components/_blocks.scss */
+/* line 31, ../sass/components/_blocks.scss */
 .block-menu ul.menu {
   padding: 0;
 }
-/* line 39, ../sass/components/_blocks.scss */
+/* line 34, ../sass/components/_blocks.scss */
 .block-menu ul.menu li {
   list-style: none outside none;
 }
 
-/**
- * Unique blocks
- */
-/* line 51, ../sass/components/_blocks.scss */
-#block-search-form {
-  position: absolute;
-  top: 30px;
-  right: 60px;
-}
-/* line 72, ../sass/_mixins.scss */
-#block-search-form:hover .contextual-links-wrapper {
-  display: none;
-}
-/* line 58, ../sass/components/_blocks.scss */
-#block-search-form .form-text {
-  font-size: 0.846rem;
-  font-weight: normal;
-  height: 16px;
-  padding: 2px 5px;
-  width: 76px;
-}
-/* line 66, ../sass/components/_blocks.scss */
-#block-search-form .form-actions {
-  display: none;
-}
-
 /* line 7, ../sass/components/_header.scss */
 .region-header {
-  background-color: #513e79;
+  margin: 20px auto 0;
+  max-width: 1280px;
+  padding: 0 10px;
+  position: relative;
 }
 
-/* line 11, ../sass/components/_header.scss */
+/* line 14, ../sass/components/_header.scss */
 .header-logo {
   margin-top: 10px;
   text-align: center;
   width: 100%;
 }
 
-/* line 17, ../sass/components/_header.scss */
-.header__region {
-  margin-top: 20px;
-}
-/* line 20, ../sass/components/_header.scss */
+/* line 22, ../sass/components/_header.scss */
 .header__region .block {
   margin-bottom: 0;
 }
-/* line 25, ../sass/components/_header.scss */
+/* line 27, ../sass/components/_header.scss */
 .header__region .menu a {
   border-top: 5px solid #513e79;
   color: white;
@@ -994,20 +967,71 @@ body {
   padding: 10px 0 15px 0;
   text-transform: uppercase;
 }
-/* line 33, ../sass/components/_header.scss */
+/* line 35, ../sass/components/_header.scss */
 .header__region .menu a.active, .header__region .menu a:hover, .header__region .menu a:focus {
   border-top: 5px solid #d19fc0;
   color: #d19fc0;
-}
-/* line 45, ../sass/components/_header.scss */
-.header__region .block-menu ul.menu {
-  margin: 0 auto;
-  max-width: 1280px;
 }
 /* line 49, ../sass/components/_header.scss */
 .header__region .block-menu ul.menu li {
   display: inline-block;
   margin-bottom: 0;
+}
+
+/* line 58, ../sass/components/_header.scss */
+.primary-nav-wrapper {
+  background-color: #513e79;
+}
+
+/* line 71, ../sass/components/_header.scss */
+.block-search {
+  border: 2px solid white;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 36px;
+  -webkit-transition: width 0.4s ease-in-out;
+  -moz-transition: width 0.4s ease-in-out;
+  -o-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+/* line 82, ../sass/components/_header.scss */
+.block-search:hover {
+  width: 136px;
+}
+/* line 86, ../sass/components/_header.scss */
+.block-search .form-text {
+  background-color: transparent;
+}
+/* line 91, ../sass/components/_header.scss */
+.block-search .form-actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 98, ../sass/components/_header.scss */
+.block-search input[type="text"] {
+  color: white;
+  padding-right: 25px;
+}
+/* line 102, ../sass/components/_header.scss */
+.block-search input[type="text"]::-webkit-input-placeholder,
+.block-search input[type="text"] #placeholder {
+  color: white;
+}
+/* line 108, ../sass/components/_header.scss */
+.block-search input[type="submit"] {
+  background-color: transparent;
+  text-indent: -9999px;
+  padding: 6px 15px;
+}
+/* line 114, ../sass/components/_header.scss */
+.block-search .search-icon {
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  color: #FFF;
+  font-size: 18px;
 }
 
 /**
@@ -2160,16 +2184,6 @@ tr.selected td {
     display: none;
   }
 }
-/**
- * @file
- * Generate a sprite from icons folder.
- */
-/* line 128, icons/*.png */
-.icons-sprite, footer .menu a:before {
-  background-image: url('../images/icons-s3e388309f2.png');
-  background-repeat: no-repeat;
-}
-
 /* SMACSS theme rules */
 /* line 1, ../sass/theme/_forms.scss */
 .form-textarea,
@@ -2270,38 +2284,35 @@ footer .menu {
   position: relative;
   margin: 0 50px 0 0;
 }
-/* line 74, ../sass/theme/_layout.scss */
+/* line 75, ../sass/theme/_layout.scss */
 footer .menu li {
   position: relative;
   text-indent: 20px;
   margin-bottom: 15px;
 }
-/* line 78, ../sass/theme/_layout.scss */
+/* line 80, ../sass/theme/_layout.scss */
 footer .menu li:last-child {
   margin-bottom: 0;
 }
-/* line 82, ../sass/theme/_layout.scss */
+/* line 84, ../sass/theme/_layout.scss */
 footer .menu a {
   transition: all 0.3s;
   font-size: 12px;
 }
-/* line 85, ../sass/theme/_layout.scss */
+/* line 88, ../sass/theme/_layout.scss */
 footer .menu a:before {
   position: absolute;
   content: '';
   top: 3px;
   left: 0;
-  background-position: -123px 0;
-  height: 12px;
-  width: 11px;
 }
 
-/* line 96, ../sass/theme/_layout.scss */
+/* line 99, ../sass/theme/_layout.scss */
 .peacegeeks-logo {
   margin: 0 0 20px 50px;
 }
 
-/* line 100, ../sass/theme/_layout.scss */
+/* line 103, ../sass/theme/_layout.scss */
 .footer-legal {
   background-color: #533058;
   border-top: 1px solid #67486b;
@@ -2311,7 +2322,7 @@ footer .menu a:before {
   text-transform: uppercase;
   width: 100%;
 }
-/* line 108, ../sass/theme/_layout.scss */
+/* line 112, ../sass/theme/_layout.scss */
 .footer-legal div {
   margin: 0 auto;
   width: 75%;

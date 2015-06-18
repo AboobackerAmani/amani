@@ -9,19 +9,15 @@
 
 // Header
 .region-header {
-
   .block {
-
     .block-title { @include element-invisible(); }
   }
 }
 
 // Footer
 .region-footer {
-
   .block {
     float: left;
-
     .block-title { @include element-invisible(); }
   }
 }
@@ -32,38 +28,11 @@
 
 // Blocks menu
 .block-menu {
-
   ul.menu {
     padding: 0;
 
     li {
       list-style: none outside none;
     }
-  }
-}
-
-
-/**
- * Unique blocks
- */
-
-// Search form
-#block-search-form {
-  position: absolute;
-  top: 30px;
-  right: 60px;
-
-  @include hide-contextual-links();
-
-  .form-text {
-    font-size: 0.846rem; // 11px
-    font-weight: normal;
-    height: 16px;
-    padding: 2px 5px;
-    width: 76px;
-  }
-
-  .form-actions {
-    display: none;
   }
 }
