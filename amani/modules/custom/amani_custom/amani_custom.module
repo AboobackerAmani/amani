@@ -50,6 +50,7 @@ function amani_custom_form_alter(&$form, &$form_state, $form_id) {
     case 'incident_report_node_form':
       $form['field_incident_report_type'][LANGUAGE_NONE]['#title'] = variable_get('incident-map-filter-field_incident_report_type-category-title', 'Filter 1 title');
       $form['field_incident_severity'][LANGUAGE_NONE]['#title'] = variable_get('incident-map-filter-field_incident_severity-category-title', 'Filter 2 title');
+      break;
     default:
       break;
   }

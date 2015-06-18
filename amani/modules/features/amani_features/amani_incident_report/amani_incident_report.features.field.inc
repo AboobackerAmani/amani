@@ -415,7 +415,7 @@ function amani_incident_report_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_incident_date',
       'label' => 'Date of report',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'default_value' => 'now',
         'default_value2' => 'same',
