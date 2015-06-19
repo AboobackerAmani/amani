@@ -58,12 +58,26 @@ footer {
   > .block-menu {
     @include zen-grid-item(4, 1); // main menu in footer
     margin-bottom: 0;
+
+    @media screen and (max-width: 570px) {
+      float: none;
+      margin: 0;
+      width: 100%;
+    }
   }
 }
 
 #block-bean-amani-powered-by {
   @include zen-grid-item(4, 9); // amani and peace geeks logos
   text-align: right;
+
+  @media screen and (max-width: 570px) {
+    clear: both;
+    float: none;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 footer {
@@ -72,10 +86,25 @@ footer {
     position: relative;
     margin: 0 50px 0 0;
 
+    @media screen and (max-width: 939px) {
+      margin-bottom: 15px;
+    }
+
+    @media screen and (max-width: 570px) {
+      float: none;
+      width: 100%;
+      margin: 0 0 15px 0;
+      text-align: center;
+    }
+
     li {
       position:relative;
       text-indent: 20px;
       margin-bottom: 15px;
+
+      @media screen and (max-width: 570px) {
+        text-indent: 0;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -98,6 +127,10 @@ footer {
 
 .peacegeeks-logo {
   margin: 0 0 20px 50px;
+
+  @media screen and (max-width: 570px) {
+    margin-left: 0;
+  }
 }
 
 .footer-legal {
