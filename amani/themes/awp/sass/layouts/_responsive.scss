@@ -228,13 +228,13 @@ $zen-auto-include-item-base: false;
   }
   .section-resources,
   .page-resources-list{
-    $zen-column-count: 5;
+    $zen-column-count: 12;
     #content {
-      @include zen-grid-item(3, 1, $zen-float-direction, $zen-column-count);
+      @include zen-grid-item(8, 1, $zen-float-direction, $zen-column-count);
     }
 
     .region-sidebar-second {
-      @include zen-grid-item(2, 4, $zen-float-direction, $zen-column-count);
+      @include zen-grid-item(4, 9, $zen-float-direction, $zen-column-count);
     }
   }
 
