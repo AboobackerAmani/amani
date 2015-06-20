@@ -226,6 +226,17 @@ $zen-auto-include-item-base: false;
       @include zen-grid-item(1, 5, $zen-float-direction, $zen-column-count);
     }
   }
+  .section-resources,
+  .page-resources-list{
+    $zen-column-count: 5;
+    #content {
+      @include zen-grid-item(3, 1, $zen-float-direction, $zen-column-count);
+    }
+
+    .region-sidebar-second {
+      @include zen-grid-item(2, 4, $zen-float-direction, $zen-column-count);
+    }
+  }
 
   /**
    * The layout when there are two sidebars.
