@@ -799,6 +799,66 @@ body {
     }/*view-take-actions*/
   }/*node-type-take-action*/
 
+  &.node-type-project{
+    #main{
+      background: $awp-white;
+    }
+
+    #page-title{
+      display: none;
+    }
+    .node-title{
+      color: $awp-green;
+      font-size: 60px;
+      font-weight: normal;
+      margin-bottom: 5%;
+    }
+    .real-node-title{
+      color: $awp_grey;
+      font-size: 42px;
+      font-weight: normal;
+      margin-bottom: 5%;
+    }
+    .body{
+      color: $awp-grey;
+    }
+    #comments{
+      .title{
+        color: $awp_grey;
+        font-size: 32px;
+        font-weight: normal;
+        margin-bottom: 5%;
+      }
+    }
+    .sidebars{
+      .region-sidebar-second{
+        margin-top: 15%;
+        .view-programs-campaigns{
+          .views-row{
+            a{
+              font-size: 22px;
+              color: $awp_light-grey;
+              font-weight: lighter;
+              font-weight: 100;
+              padding-bottom: 20px;
+              display: block;
+              margin-bottom: 20px;
+              border-bottom: 1px solid #ccc;
+              &.active{
+                color: $awp_green;
+              }
+            }
+            &.views-row-last{
+              a{
+                border: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }/*node-type-project*/
+
 
   #footer{
     background: $awp-red;
