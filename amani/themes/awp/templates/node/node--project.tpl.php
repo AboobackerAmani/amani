@@ -80,6 +80,17 @@
  * @ingroup themeable
  */
 ?>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=251571348195922";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
     <?php print $user_picture; ?>
@@ -104,11 +115,15 @@
     <div class="news-header">
 
             <?php if(!empty($node->field_image)): ?>
-               <!-- <div class="field-img"><?php print render($content['field_image']);?></div>-->
+               <!-- <div class="field-img"><?php /*print render($content['field_image']);*/?></div>-->
             <?php endif;?>
 
 
-            <h1 class="real-node-title"><span><?php print $title;?></span></h1>
+            <h1 class="real-node-title"><?php print $title;?>
+                <span class="fb-share-button"  data-layout="button_count"></span>
+                <span class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+            </h1>
             <?php if(!empty($node->body)): ?>
                 <div class="field-item body"><?php print render($content['body']);?></div>
             <?php endif;?>
