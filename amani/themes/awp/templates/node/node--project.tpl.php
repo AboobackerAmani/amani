@@ -102,18 +102,17 @@
 
 
     <div class="news-header">
-        <div class="left-div">
+
             <?php if(!empty($node->field_image)): ?>
-                <div class="field-img"><?php print render($content['field_image']);?></div>
+               <!-- <div class="field-img"><?php print render($content['field_image']);?></div>-->
             <?php endif;?>
-        </div>
-        <div class="right-div">
+
+
             <h1 class="real-node-title"><span><?php print $title;?></span></h1>
             <?php if(!empty($node->body)): ?>
                 <div class="field-item body"><?php print render($content['body']);?></div>
             <?php endif;?>
 
-        </div>
     </div>
 
     <div class="content"<?php print $content_attributes; ?>>
