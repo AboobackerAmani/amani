@@ -84,7 +84,6 @@
 
 <?php if (!$page){print "";}
 else{ ?>
-
     <div id="left-wrapper" class="block block-views contextual-links-region even left-wrapper">
 
 
@@ -92,21 +91,43 @@ else{ ?>
 
 
 
+            <div class="view-content">
+                <div class="views-row views-row-1 views-row-odd views-row-first row-days">
                     <?php
                     $now = time(); // or your date as well
                     $your_date = strtotime("2014-08-26");
                     $datediff = $now - $your_date;
                     $number_days = ($datediff/(60*60*24));
                     ?>
+                    <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_days_link)){ print ($node->field_days_link[und][0][url]);}?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/calendar.png" width="104" height="91" alt=""></a></div>  </div>
+                    <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_days_link)){print ($node->field_days_link[und][0][url]);}?>"><?php print ('Days Since Ceasfire');?></a></span>  </div>
                     <div class="views-field views-field-field-text">        <div class="field-content"><?php print floor($number_days);?></div>  </div>
+                    <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_days_link)){ print ($node->field_days_link[und][0][url]);}?>"><?php print t('Read More');?></a></span>  </div>  </div>
 
+                <div class="views-row views-row-2 views-row-even views-row-last row-trucks">
 
-            <div>
-                <?php print render($content['field_days_link']); ?>
-                <div><?php print_r($node->field_days_link); ?></div>
-                <div class="ss"><?php print($node->field_days_link[und][0][url]); ?></div>
+                    <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_trucks_link)) {
+                                print ($node->field_trucks_link[und][0][url]);
+                            }?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/truck_0.png" width="116" height="77" alt=""></a></div>  </div>
+                    <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_trucks_link)){
+                                print ($node->field_trucks_link[und][0][url]);
+                            }?>"><?php printt('Trucks Delivered vs. Needed');?></a></span>  </div>
+                    <div class="views-field views-field-field-text">        <div class="field-content">    <?php if(!empty($node->field_trucks_needed)){
+                                print render($content['field_trucks_needed']);
+                            }?> /      <?php if(!empty($node->field_trucks_needed)){
+                                print render($content['field_trucks_needed']);
+                            }?> </div>  </div>
+                    <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_trucks_link)){
+                                print ($node->field_trucks_link[und][0][url]);
+                            }?>"><?php print t('Read More');?></a></span>  </div>  </div>
             </div>
 
+
+
+
+
+
+        </div>
     </div>
 
 
