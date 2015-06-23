@@ -5,7 +5,7 @@
 
     <?php /*if(!empty($node->field_trucks_delivered)):
         print render($content['field_trucks_delivered']);
-    endif;*/?><!--
+    endif;*/?>
 
     <?php /*if(!empty($node->field_trucks_needed)):
         print render($content['field_trucks_needed']);
