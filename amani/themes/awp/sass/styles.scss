@@ -494,6 +494,8 @@ body {
           }
           .action-links{
             margin-top: 10px;
+            width: 115%;
+            margin-left: -10%;
             a{
               margin-bottom: 10px;
               display: block;
@@ -506,8 +508,10 @@ body {
               text-transform: uppercase;
               color: $awp-white;
               clear: both;
+              border: 0;
+              border-bottom: 1px solid #F05155;
               &:hover{
-                border: 2px solid $awp-dark-grey;
+                background: #DF6988;
                 color: $awp-dark-grey;
               }
             }
@@ -1061,6 +1065,8 @@ body {
             }
             .action-links{
               margin-top: 10px;
+              width: 115%;
+              margin-left: -10%;
               a{
                 margin-bottom: 10px;
                 display: block;
@@ -1073,8 +1079,10 @@ body {
                 text-transform: uppercase;
                 color: $awp-white;
                 clear: both;
+                border: 0;
+                border-bottom: 1px solid #F05155;
                 &:hover{
-                  border: 2px solid $awp-dark-grey;
+                  background: #DF6988;
                   color: $awp-dark-grey;
                 }
               }
@@ -1136,6 +1144,8 @@ body {
             }
             .action-links{
               margin-top: 10px;
+              width: 115%;
+              margin-left: -10%;
               a{
                 margin-bottom: 10px;
                 display: block;
@@ -1148,8 +1158,10 @@ body {
                 text-transform: uppercase;
                 color: $awp-white;
                 clear: both;
+                border: 0;
+                border-bottom: 1px solid #F05155;
                 &:hover{
-                  border: 2px solid $awp-dark-grey;
+                  background: #DF6988;
                   color: $awp-dark-grey;
                 }
               }
