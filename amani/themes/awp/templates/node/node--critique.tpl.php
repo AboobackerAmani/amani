@@ -82,7 +82,7 @@
 ?>
 
 
-<?php if (!$page){print "";}
+<?php if ($page){print "";}
 else{ ?>
     <?php $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
     $theme_path = '/'.$theme_path.'/images/indicators/';?>
