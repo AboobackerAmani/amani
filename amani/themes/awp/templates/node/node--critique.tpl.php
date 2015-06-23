@@ -84,6 +84,8 @@
 
 <?php if (!$page){print "";}
 else{ ?>
+    <?php $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
+    $theme_path = $theme_path.'/images/indicators/';?>
     <div id="left-wrapper" class="block block-views contextual-links-region even left-wrapper">
 
 
@@ -99,7 +101,7 @@ else{ ?>
                     $datediff = $now - $your_date;
                     $number_days = ($datediff/(60*60*24));
                     ?>
-                    <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_days_link)){ print ($node->field_days_link[und][0][url]);}?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/calendar.png" width="104" height="91" alt=""></a></div>  </div>
+                    <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_days_link)){ print ($node->field_days_link[und][0][url]);}?>"><img typeof="foaf:Image" src="<?php print $theme_path.'calendar.png';?>" width="104" height="91" alt=""></a></div>  </div>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_days_link)){print ($node->field_days_link[und][0][url]);}?>"><?php print ('Days Since Ceasfire');?></a></span>  </div>
                     <div class="views-field views-field-field-text">        <div class="field-content"><?php print floor($number_days);?></div>  </div>
                     <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_days_link)){ print ($node->field_days_link[und][0][url]);}?>"><?php print t('Read More');?></a></span>  </div>  </div>
@@ -108,7 +110,7 @@ else{ ?>
 
                     <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_trucks_link)) {
                                 print ($node->field_trucks_link[und][0][url]);
-                            }?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/truck_0.png" width="116" height="77" alt=""></a></div>  </div>
+                            }?>"><img typeof="foaf:Image" src="<?php print $theme_path.'truck.png';?>" width="116" height="77" alt=""></a></div>  </div>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_trucks_link)){
                                 print ($node->field_trucks_link[und][0][url]);
                             }?>"><?php print t('Trucks Delivered vs. Needed');?></a></span>  </div>
@@ -136,7 +138,7 @@ else{ ?>
 
                     <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_people_link)):
                                 print ($node->field_people_link[und][0][url]);
-                            endif;?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/displace.png" width="138" height="111" alt=""></a></div>  </div>
+                            endif;?>"><img typeof="foaf:Image" src="<?php print $theme_path.'displace.png'?>" width="138" height="111" alt=""></a></div>  </div>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_people_link)):
                                 print ($node->field_people_link[und][0][url]);
                             endif;?>">People Still Displaced</a></span>  </div>
@@ -159,7 +161,7 @@ else{ ?>
 
                     <div class="views-field views-field-field-image">        <div class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
                                 print ($node->field_pledged_link[und][0][url]);
-                            endif;?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/dollar.png" width="69" height="103" alt=""></a></div>  </div>
+                            endif;?>"><img typeof="foaf:Image" src="<?php print $theme_path.'dollar.png'?>" width="69" height="103" alt=""></a></div>  </div>
                     <div class="views-field views-field-title">        <span class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
                                 print ($node->field_pledged_link[und][0][url]);
                             endif;?>">Amount pledged and paid </a></span>  </div>
@@ -187,7 +189,7 @@ else{ ?>
 
                     <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_temperature_link)):
                                 print ($node->field_temperature_link[und][0][url]);
-                            endif;?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/temp.png" width="84" height="130" alt=""></a></div>  </div>
+                            endif;?>"><img typeof="foaf:Image" src="<?php print $theme_path.'temp.png';?>" width="84" height="130" alt=""></a></div>  </div>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_temperature_link)):
                                 print ($node->field_temperature_link[und][0][url]);
                             endif;?>">Average Temperature</a></span>  </div>
@@ -205,7 +207,7 @@ else{ ?>
 
                     <div class="views-field views-field-field-image">        <div class="field-content"><a href="    <?php if(!empty($node->field_home_link)):
                                 print ($node->field_home_link[und][0][url]);
-                            endif;?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/hummer.png" width="84" height="112" alt=""></a></div>  </div>
+                            endif;?>"><img typeof="foaf:Image" src="<?php print $theme_path.'hummer.png';?>" width="84" height="112" alt=""></a></div>  </div>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="    <?php if(!empty($node->field_home_link)):
                                 print ($node->field_home_link[und][0][url]);
                             endif;?>">Homes repaired and rebuilt </a></span>  </div>
@@ -223,10 +225,6 @@ else{ ?>
         </div>
     </div>
 
-    <?php
-    $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
-    print $theme_path;
-    ?>
 
 <?php }?>
 
