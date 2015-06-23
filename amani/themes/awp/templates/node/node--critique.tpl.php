@@ -60,7 +60,7 @@
     <?php /*if(!empty($node->field_home_link)):
         print render($content['field_home_link']);
     endif;*/?>
-
+   <?php if (!$page): ?>
 
     <div id="left-wrapper" class="block block-views contextual-links-region even left-wrapper">
 
@@ -216,7 +216,8 @@
 
         </div>
     </div>
-
+<?php endif;?>
+   <?php print "rimawi 123";?>
 
 
 
