@@ -176,9 +176,52 @@ else{ ?>
     </div>
 
 
+    <div id="right-wrapper" class="block block-views  even right-wrapper">
+
+        <div class=" view-aidwatch-front-page-blocks ">
 
 
-    <?php print " rimawi 123";?>
+
+            <div class="view-content">
+                <div class="views-row views-row-1 views-row-odd views-row-first row-temperature">
+
+                    <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_temperature_link)):
+                                print ($node->field_temperature_link[und][0][url]);
+                            endif;?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/temp.png" width="84" height="130" alt=""></a></div>  </div>
+                    <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_temperature_link)):
+                                print ($node->field_temperature_link[und][0][url]);
+                            endif;?>">Average Temperature</a></span>  </div>
+                    <div class="views-field views-field-field-text">
+                        <div class="field-content"><?php if(!empty($node->field_temperature_min)):
+                                print render($content['field_temperature_min']);
+                            endif;?>-<?php if(!empty($node->field_temperature_max)):
+                                print render($content['field_temperature_max']);
+                            endif;?></div>  </div>
+
+                    <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_temperature_link)):
+                                print ($node->field_temperature_link[und][0][url]);
+                            endif;?>"><?php print t('Read More');?></a></span>  </div>  </div>
+                <div class="views-row views-row-2 views-row-even views-row-last row-home">
+
+                    <div class="views-field views-field-field-image">        <div class="field-content"><a href="    <?php if(!empty($node->field_home_link)):
+                                print ($node->field_home_link[und][0][url]);
+                            endif;?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/hummer.png" width="84" height="112" alt=""></a></div>  </div>
+                    <div class="views-field views-field-title">        <span class="field-content"><a href="    <?php if(!empty($node->field_home_link)):
+                                print ($node->field_home_link[und][0][url]);
+                            endif;?>">Homes repaired and rebuilt </a></span>  </div>
+                    <div class="views-field views-field-field-text">
+                        <div class="field-content">  <?php if(!empty($node->field_home_rebuilt)):
+                                print render($content['field_home_rebuilt']);
+                            endif;?> /       <?php if(!empty($node->field_home_destroyed)):
+                                print render($content['field_home_destroyed']);
+                            endif;?> </div>  </div>
+                    <div class="views-field views-field-title-1">        <span class="field-content"><a href="    <?php if(!empty($node->field_home_link)):
+                                print ($node->field_home_link[und][0][url]);
+                            endif;?>"><?php print t('Read More');?></a></span>  </div>  </div>
+            </div>
+
+        </div>
+    </div>
 <?php }?>
 
 
