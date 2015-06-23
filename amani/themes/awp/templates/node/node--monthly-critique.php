@@ -1,5 +1,5 @@
 
-<?php  if ($teaser):  ?>
+<?php  if ($page):  ?>
 
 <!--    --><?php //if(!empty($node->field_days_link)){ print render($content['field_days_link']);}?>
 
@@ -218,7 +218,7 @@
 </div>
 
 
-
+    <?php print t('Rimawi 333');?>
 <?php endif; ?>
 
 
