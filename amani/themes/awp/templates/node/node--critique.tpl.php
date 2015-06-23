@@ -111,7 +111,7 @@ else{ ?>
                             }?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/truck_0.png" width="116" height="77" alt=""></a></div>  </div>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_trucks_link)){
                                 print ($node->field_trucks_link[und][0][url]);
-                            }?>"><?php printt('Trucks Delivered vs. Needed');?></a></span>  </div>
+                            }?>"><?php print t('Trucks Delivered vs. Needed');?></a></span>  </div>
                     <div class="views-field views-field-field-text">        <div class="field-content">    <?php if(!empty($node->field_trucks_needed)){
                                 print render($content['field_trucks_needed']);
                             }?> /      <?php if(!empty($node->field_trucks_needed)){
