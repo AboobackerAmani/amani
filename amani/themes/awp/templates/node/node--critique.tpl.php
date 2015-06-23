@@ -98,7 +98,7 @@ else{ ?>
                     $datediff = $now - $your_date;
                     $number_days = ($datediff/(60*60*24));
                     ?>
-                    <div class="views-field views-field-field-text">        <div class="field-content"><?php print $number_days;?></div>  </div>
+                    <div class="views-field views-field-field-text">        <div class="field-content"><?php print $datediff;?></div>  </div>
 
     </div>
 
