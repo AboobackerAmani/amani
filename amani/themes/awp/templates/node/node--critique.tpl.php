@@ -103,7 +103,7 @@ else{ ?>
 
             <div>
                 <?php print render($content['field_days_link']); ?>
-                <div><?php print_r($content['field_days_link']); ?></div>
+                <div><?php print_r(['field_days_link']); ?></div>
             </div>
 
     </div>
