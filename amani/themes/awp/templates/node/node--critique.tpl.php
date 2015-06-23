@@ -103,7 +103,7 @@ else{ ?>
                     ?>
                     <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_days_link)){ print ($node->field_days_link[und][0][url]);}?>"><img typeof="foaf:Image" src="<?php print $theme_path.'calendar.png';?>" width="104" height="91" alt=""></a></div>  </div>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_days_link)){print ($node->field_days_link[und][0][url]);}?>"><?php print ('Days Since Ceasfire');?></a></span>  </div>
-                    <div class="views-field views-field-field-text">        <div class="field-content"><?php print floor($number_days);?></div>  </div>
+                    <div class="views-field views-field-field-text big">        <div class="field-content"><?php print floor($number_days);?></div>  </div>
                     <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_days_link)){ print ($node->field_days_link[und][0][url]);}?>"><?php print t('Read More');?></a></span>  </div>  </div>
 
                 <div class="views-row views-row-2 views-row-even views-row-last row-trucks">
@@ -193,7 +193,7 @@ else{ ?>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_temperature_link)):
                                 print ($node->field_temperature_link[und][0][url]);
                             endif;?>">Average Temperature</a></span>  </div>
-                    <div class="views-field views-field-field-text">
+                    <div class="views-field views-field-field-text big">
                         <div class="field-content"><?php if(!empty($node->field_temperature_min)):
                                 print $node->field_temperature_min[und][0][value];
                             endif;?>-<?php if(!empty($node->field_temperature_max)):
