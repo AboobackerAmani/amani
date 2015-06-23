@@ -199,6 +199,7 @@ else{ ?>
                             endif;?>-<?php if(!empty($node->field_temperature_max)):
                                 print render($content['field_temperature_max']);
                             endif;?></div>  </div>
+                    <?php print_r($node->field_temperature_max);?>
 
                     <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_temperature_link)):
                                 print ($node->field_temperature_link[und][0][url]);
