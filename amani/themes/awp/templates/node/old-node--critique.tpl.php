@@ -82,7 +82,8 @@
 ?>
 
 
-   <?php if ($page): ?>
+   <?php if (!$page){print "rrr";}
+   else{ ?>
 
     <div id="left-wrapper" class="block block-views contextual-links-region even left-wrapper">
 
@@ -130,65 +131,11 @@
         </div>
     </div>
 
-    <div id="center-wrapper" class="block block-views  odd center-wrapper">
 
-        <div class=" view-aidwatch-front-page-blocks ">
-
-
-
-            <div class="view-content">
-                <div class="views-row views-row-1 views-row-odd views-row-first row-people">
-
-                    <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php
-                                print render($content['field_people_link']);
-                           ?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/displace.png" width="138" height="111" alt=""></a></div>  </div>
-                    <div class="views-field views-field-title">        <span class="field-content"><a href="<?php
-                                print render($content['field_people_link']);
-                           ?>">People Still Displaced</a></span>  </div>
-                    <div class="views-field views-field-field-text">        <div class="field-content">    <?php
-                                print render($content['field_people_displaced']);
-                           ?>
-                            <div class="comments">
-                                <?php if(!empty($node->field_people_comment)):
-                                    print render($content['field_people_comment']);
-                                ?>
-                            </div>
-                        </div>  </div>
-                    <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php
-                                print render($content['field_people_link']);
-                            ?>"><?php print t('Read More');?></a></span>  </div>  </div>
-
-
-
-                <div class="views-row views-row-2 views-row-even views-row-last row-pledged">
-
-                    <div class="views-field views-field-field-image">        <div class="field-content"><a href=" <?php
-                                print render($content['field_pledged_link']);
-                            ?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/dollar.png" width="69" height="103" alt=""></a></div>  </div>
-                    <div class="views-field views-field-title">        <span class="field-content"><a href=" <?php
-                                print render($content['field_pledged_link']);
-                           ?>">Amount pledged and paid </a></span>  </div>
-                    <div class="views-field views-field-field-text">        <div class="field-content">   <?php
-                                print render($content['field_pledged_amount']);
-                            ?> /               <?php
-                                print render($content['field_paid_amount']);
-                             ?></div>  </div>
-                    <div class="views-field views-field-title-1">        <span class="field-content"><a href=" <?php
-                                print render($content['field_pledged_link']);
-                            ?>"><?php print t('Read More');?></a></span>  </div>  </div>
-            </div>
-
-
-
-
-
-
-        </div>
-    </div>
 
 
        <?php print " rimawi 123";?>
-<?php endif;?>
+<?php }?>
 <?php print " rimawi 1234";?>
 
 
