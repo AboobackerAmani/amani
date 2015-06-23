@@ -121,12 +121,57 @@ else{ ?>
                                 print ($node->field_trucks_link[und][0][url]);
                             }?>"><?php print t('Read More');?></a></span>  </div>  </div>
             </div>
+        </div>
+    </div>
+
+
+    <div id="center-wrapper" class="block block-views  odd center-wrapper">
+
+        <div class=" view-aidwatch-front-page-blocks ">
 
 
 
+            <div class="view-content">
+                <div class="views-row views-row-1 views-row-odd views-row-first row-people">
+
+                    <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_people_link)):
+                                print ($node->field_people_link[und][0][url]);
+                            endif;?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/displace.png" width="138" height="111" alt=""></a></div>  </div>
+                    <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_people_link)):
+                                print ($node->field_people_link[und][0][url]);
+                            endif;?>">People Still Displaced</a></span>  </div>
+                    <div class="views-field views-field-field-text">        <div class="field-content">    <?php if(!empty($node->field_people_displaced)):
+                                print render($content['field_people_displaced']);
+                            endif;?>
+                            <div class="comments">
+                                <?php if(!empty($node->field_people_comment)):
+                                    print render($content['field_people_comment']);
+                                endif;?>
+                            </div>
+                        </div>  </div>
+                    <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_people_link)):
+                                print ($node->field_people_link[und][0][url]);
+                            endif;?>"><?php print t('Read More');?></a></span>  </div>  </div>
 
 
 
+                <div class="views-row views-row-2 views-row-even views-row-last row-pledged">
+
+                    <div class="views-field views-field-field-image">        <div class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
+                                print ($node->field_pledged_link[und][0][url]);
+                            endif;?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/dollar.png" width="69" height="103" alt=""></a></div>  </div>
+                    <div class="views-field views-field-title">        <span class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
+                                print ($node->field_pledged_link[und][0][url]);
+                            endif;?>">Amount pledged and paid </a></span>  </div>
+                    <div class="views-field views-field-field-text">        <div class="field-content">   <?php if(!empty($node->field_pledged_amount)):
+                                print render($content['field_pledged_amount']);
+                            endif;?> /               <?php if(!empty($node->field_paid_amount)):
+                                print render($content['field_paid_amount']);
+                            endif;?></div>  </div>
+                    <div class="views-field views-field-title-1">        <span class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
+                                print ($node->field_pledged_link[und][0][url]);
+                            endif;?>"><?php print t('Read More');?></a></span>  </div>  </div>
+            </div>
         </div>
     </div>
 
