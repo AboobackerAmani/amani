@@ -89,7 +89,7 @@ else{ ?>
     <div id="left-wrapper" class="block block-views contextual-links-region even left-wrapper">
 
 
-        <div class=" view-aidwatch-front-page-blocks view-display-id-block">
+        <div class=" view-aidwatch-front-page-blocks view-display-id-block f-left-block ">
 
 
 
@@ -129,7 +129,7 @@ else{ ?>
 
     <div id="center-wrapper" class="block block-views  odd center-wrapper">
 
-        <div class=" view-aidwatch-front-page-blocks view-display-id-block_1">
+        <div class=" view-aidwatch-front-page-blocks view-display-id-block_1 f-center-block">
 
 
 
@@ -180,7 +180,7 @@ else{ ?>
 
     <div id="right-wrapper" class="block block-views  even right-wrapper">
 
-        <div class=" view-aidwatch-front-page-blocks view-display-id-block_2">
+        <div class=" view-aidwatch-front-page-blocks view-display-id-block_2 f-right-block">
 
 
 
