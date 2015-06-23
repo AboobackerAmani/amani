@@ -1,4 +1,3 @@
-
 <?php
 
 /**
@@ -81,172 +80,72 @@
  * @ingroup themeable
  */
 ?>
-samer123
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=251571348195922";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
 
-<div id="left-wrapper" class="block block-views contextual-links-region even left-wrapper">
+<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+
+    <?php print $user_picture; ?>
+
+    <?php print render($title_prefix); ?>
+    <?php if (!$page): ?>
+        <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+    <?php endif; ?>
+    <?php print render($title_suffix); ?>
+
+    <?php if ($display_submitted): ?>
+        <div class="submitted">
+            <?php print $submitted; ?>
+        </div>
+    <?php endif; ?>
 
 
-    <div class=" view-aidwatch-front-page-blocks ">
+
+    <h2<?php print $title_attributes; ?>><span><?php print t('Fundamental Questions'); ?></span></h2>
 
 
+    <div class="news-header">
 
-        <div class="view-content">
-            <div class="views-row views-row-1 views-row-odd views-row-first row-days">
-                <?php
-                $now = time(); // or your date as well
-                $your_date = strtotime("2014-08-26");
-                $datediff = $now - $your_date;
-                $number_days = ($datediff/(60*60*24));
-                ?>
-                <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_days_link)){ print render($content['field_days_link']);}?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/calendar.png" width="104" height="91" alt=""></a></div>  </div>
-                <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_days_link)){ print render($content['field_days_link']);}?>"><?php print ('Days Since Ceasfire');?></a></span>  </div>
-                <div class="views-field views-field-field-text">        <div class="field-content"><?php print $number_days;?></div>  </div>
-                <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_days_link)){ print render($content['field_days_link']);}?>"><?php print t('Read More');?></a></span>  </div>  </div>
+        <?php if(!empty($node->field_image)): ?>
+            <!-- <div class="field-img"><?php /*print render($content['field_image']);*/?></div>-->
+        <?php endif;?>
 
-            <div class="views-row views-row-2 views-row-even views-row-last row-trucks">
 
-                <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_trucks_link)):
-                            print render($content['field_trucks_link']);
-                        endif;?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/truck_0.png" width="116" height="77" alt=""></a></div>  </div>
-                <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_trucks_link)):
-                            print render($content['field_trucks_link']);
-                        endif;?>"><?php printt('Trucks Delivered vs. Needed');?></a></span>  </div>
-                <div class="views-field views-field-field-text">        <div class="field-content">    <?php if(!empty($node->field_trucks_needed)):
-                            print render($content['field_trucks_needed']);
-                        endif;?> /      <?php if(!empty($node->field_trucks_needed)):
-                            print render($content['field_trucks_needed']);
-                        endif;?> </div>  </div>
-                <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_trucks_link)):
-                            print render($content['field_trucks_link']);
-                        endif;?>"><?php print t('Read More');?></a></span>  </div>  </div>
+        <h1 class="real-node-title"><span class="title-s"><?php print $title;?></span>
+            <span class="fb-share-button"  data-layout="button_count"></span>
+                <span class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+        </h1>
+        <?php if(!empty($node->body)): ?>
+            <div class="field-item body"><?php print render($content['body']);?></div>
+        <?php endif;?>
+
+    </div>
+
+    <div class="content"<?php print $content_attributes; ?>>
+        <?php
+        // We hide the comments and links now so that we can render them later.
+        hide($content['comments']);
+        hide($content['links']);
+        /*print render($content);*/
+        ?>
+        <div class="share-block">
+            <?php $block = module_invoke('sharethis', 'block_view', 'sharethis_block', 0);  print $block['content'];  ?>
         </div>
 
 
-
-
-
-
     </div>
+
+    <?php /*print render($content['links']); */?>
+
+    <?php print render($content['comments']); ?>
+
 </div>
-
-<div id="center-wrapper" class="block block-views  odd center-wrapper">
-
-    <div class=" view-aidwatch-front-page-blocks ">
-
-
-
-        <div class="view-content">
-            <div class="views-row views-row-1 views-row-odd views-row-first row-people">
-
-                <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_people_link)):
-                            print render($content['field_people_link']);
-                        endif;?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/displace.png" width="138" height="111" alt=""></a></div>  </div>
-                <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_people_link)):
-                            print render($content['field_people_link']);
-                        endif;?>">People Still Displaced</a></span>  </div>
-                <div class="views-field views-field-field-text">        <div class="field-content">    <?php if(!empty($node->field_people_displaced)):
-                            print render($content['field_people_displaced']);
-                        endif;?>
-                    <div class="comments">
-                        <?php if(!empty($node->field_people_comment)):
-                            print render($content['field_people_comment']);
-                        endif;?>
-                    </div>
-                    </div>  </div>
-                <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_people_link)):
-                            print render($content['field_people_link']);
-                        endif;?>"><?php print t('Read More');?></a></span>  </div>  </div>
-
-
-
-            <div class="views-row views-row-2 views-row-even views-row-last row-pledged">
-
-                <div class="views-field views-field-field-image">        <div class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
-                            print render($content['field_pledged_link']);
-                        endif;?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/dollar.png" width="69" height="103" alt=""></a></div>  </div>
-                <div class="views-field views-field-title">        <span class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
-                            print render($content['field_pledged_link']);
-                        endif;?>">Amount pledged and paid </a></span>  </div>
-                <div class="views-field views-field-field-text">        <div class="field-content">   <?php if(!empty($node->field_pledged_amount)):
-                            print render($content['field_pledged_amount']);
-                        endif;?> /               <?php if(!empty($node->field_paid_amount)):
-                            print render($content['field_paid_amount']);
-                        endif;?></div>  </div>
-                <div class="views-field views-field-title-1">        <span class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
-                            print render($content['field_pledged_link']);
-                        endif;?>"><?php print t('Read More');?></a></span>  </div>  </div>
-        </div>
-
-
-
-
-
-
-    </div>
-</div>
-
-
-<div id="right-wrapper" class="block block-views  even right-wrapper">
-
-    <div class=" view-aidwatch-front-page-blocks ">
-
-
-
-        <div class="view-content">
-            <div class="views-row views-row-1 views-row-odd views-row-first row-temperature">
-
-                <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_temperature_link)):
-                            print render($content['field_temperature_link']);
-                        endif;?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/temp.png" width="84" height="130" alt=""></a></div>  </div>
-                <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_temperature_link)):
-                            print render($content['field_temperature_link']);
-                        endif;?>">Average Temperature</a></span>  </div>
-                <div class="views-field views-field-field-text">
-                    <div class="field-content"><?php if(!empty($node->field_temperature_min)):
-                            print render($content['field_temperature_min']);
-                        endif;?>-<?php if(!empty($node->field_temperature_max)):
-                            print render($content['field_temperature_max']);
-                        endif;?></div>  </div>
-
-                <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_temperature_link)):
-                            print render($content['field_temperature_link']);
-                        endif;?>"><?php print t('Read More');?></a></span>  </div>  </div>
-            <div class="views-row views-row-2 views-row-even views-row-last row-home">
-
-                <div class="views-field views-field-field-image">        <div class="field-content"><a href="    <?php if(!empty($node->field_home_link)):
-                            print render($content['field_home_link']);
-                        endif;?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/hummer.png" width="84" height="112" alt=""></a></div>  </div>
-                <div class="views-field views-field-title">        <span class="field-content"><a href="    <?php if(!empty($node->field_home_link)):
-                            print render($content['field_home_link']);
-                        endif;?>">Homes repaired and rebuilt </a></span>  </div>
-                <div class="views-field views-field-field-text">
-                    <div class="field-content">  <?php if(!empty($node->field_home_rebuilt)):
-                            print render($content['field_home_rebuilt']);
-                        endif;?> /       <?php if(!empty($node->field_home_destroyed)):
-                            print render($content['field_home_destroyed']);
-                        endif;?> </div>  </div>
-                <div class="views-field views-field-title-1">        <span class="field-content"><a href="    <?php if(!empty($node->field_home_link)):
-                            print render($content['field_home_link']);
-                        endif;?>"><?php print t('Read More');?></a></span>  </div>  </div>
-        </div>
-
-
-
-
-
-
-    </div>
-</div>
-
-
-    <?php print t('Rimawi 333');?>
-
-
-
-
-
-
-
-
-
