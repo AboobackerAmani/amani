@@ -147,8 +147,7 @@ else{ ?>
                             endif;?>
                             <div class="comments">
                                 <?php if(!empty($node->field_people_comment)):
-                                    print render($content['field_people_comment']);
-                                    print_r($node->field_people_comment);
+                                    print $node->field_people_comment[und][0][value];
                                 endif;?>
                             </div>
                         </div>  </div>
