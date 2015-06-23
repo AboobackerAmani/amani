@@ -222,6 +222,12 @@ else{ ?>
 
         </div>
     </div>
+
+    <?php
+    $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
+    print $theme_path;
+    ?>
+
 <?php }?>
 
 
