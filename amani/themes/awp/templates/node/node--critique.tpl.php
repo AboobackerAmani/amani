@@ -92,43 +92,14 @@ else{ ?>
 
 
 
-            <div class="view-content">
-                <div class="views-row views-row-1 views-row-odd views-row-first row-days">
                     <?php
                     $now = time(); // or your date as well
                     $your_date = strtotime("2014-08-26");
                     $datediff = $now - $your_date;
                     $number_days = ($datediff/(60*60*24));
                     ?>
-                    <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php  print render($content['field_days_link']);?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/calendar.png" width="104" height="91" alt=""></a></div>  </div>
-                    <div class="views-field views-field-title">        <span class="field-content"><a href="<?php  print render($content['field_days_link']);?>"><?php print ('Days Since Ceasfire');?></a></span>  </div>
                     <div class="views-field views-field-field-text">        <div class="field-content"><?php print $number_days;?></div>  </div>
-                    <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php  print render($content['field_days_link']);?>"><?php print t('Read More');?></a></span>  </div>  </div>
 
-                <div class="views-row views-row-2 views-row-even views-row-last row-trucks">
-
-                    <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php
-                            print render($content['field_trucks_link']);
-                            ?>"><img typeof="foaf:Image" src="http://dev.awptheme.peacegeeks.org/sites/default/files/front-pages-images/truck_0.png" width="116" height="77" alt=""></a></div>  </div>
-                    <div class="views-field views-field-title">        <span class="field-content"><a href="<?php
-                            print render($content['field_trucks_link']);
-                            ?>"><?php printt('Trucks Delivered vs. Needed');?></a></span>  </div>
-                    <div class="views-field views-field-field-text">        <div class="field-content">    <?php
-                            print render($content['field_trucks_needed']);
-                            ?> /      <?php
-                            print render($content['field_trucks_needed']);
-                            ?> </div>  </div>
-                    <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php
-                            print render($content['field_trucks_link']);
-                            ?>"><?php print t('Read More');?></a></span>  </div>  </div>
-            </div>
-
-
-
-
-
-
-        </div>
     </div>
 
 
