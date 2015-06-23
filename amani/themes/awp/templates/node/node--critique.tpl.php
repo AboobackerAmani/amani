@@ -100,6 +100,12 @@ else{ ?>
                     ?>
                     <div class="views-field views-field-field-text">        <div class="field-content"><?php print floor($number_days);?></div>  </div>
 
+
+            <div>
+                <?php print render($content['field_days_link']); ?>
+                <div><?php print_r($content['field_days_link']); ?></div>
+            </div>
+
     </div>
 
 
