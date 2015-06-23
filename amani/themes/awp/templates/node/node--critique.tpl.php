@@ -148,6 +148,7 @@ else{ ?>
                             <div class="comments">
                                 <?php if(!empty($node->field_people_comment)):
                                     print render($content['field_people_comment']);
+                                print_r($node->field_people_comment);
                                 endif;?>
                             </div>
                         </div>  </div>
