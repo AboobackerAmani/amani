@@ -1,5 +1,5 @@
 
-<?php  if ($page):  ?>
+<?php  if ($teaser):  ?>
 
 <!--    --><?php //if(!empty($node->field_days_link)){ print render($content['field_days_link']);}?>
 
