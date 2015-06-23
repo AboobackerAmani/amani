@@ -93,10 +93,10 @@ else{ ?>
 
 
                     <?php
-                    $now = time(); // or your date as well
+                    $now = now(); // or your date as well
                     $your_date = strtotime("2014-08-26");
                     $datediff = $now - $your_date;
-                    $number_days = ($datediff/(60*60*24));
+                    $number_days = intval($datediff/(60*60*24));
                     ?>
                     <div class="views-field views-field-field-text">        <div class="field-content"><?php print $datediff;?></div>  </div>
 
