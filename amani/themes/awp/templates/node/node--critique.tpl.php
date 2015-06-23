@@ -82,7 +82,7 @@
 ?>
 
 
-<?php if (!$page){print "rrr";}
+<?php if (!$page){print "";}
 else{ ?>
 
     <div id="left-wrapper" class="block block-views contextual-links-region even left-wrapper">
@@ -107,7 +107,6 @@ else{ ?>
 
     <?php print " rimawi 123";?>
 <?php }?>
-<?php print " rimawi 1234";?>
 
 
 
