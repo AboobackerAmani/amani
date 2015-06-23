@@ -114,10 +114,10 @@ else{ ?>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_trucks_link)){
                                 print ($node->field_trucks_link[und][0][url]);
                             }?>"><?php print t('Trucks Delivered vs. Needed');?></a></span>  </div>
-                    <div class="views-field views-field-field-text">        <div class="field-content">    <?php if(!empty($node->field_trucks_needed)){
-                                print render($content['field_trucks_needed']);
+                    <div class="views-field views-field-field-text">        <div class="field-content">    <?php if(!empty($node->field_trucks_delivered)){
+                                print $node->field_trucks_delivered[und][0][value];
                             }?> /      <?php if(!empty($node->field_trucks_needed)){
-                                print render($content['field_trucks_needed']);
+                                print $node->field_trucks_needed[und][0][value];
                             }?> </div>  </div>
                     <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_trucks_link)){
                                 print ($node->field_trucks_link[und][0][url]);
@@ -143,7 +143,7 @@ else{ ?>
                                 print ($node->field_people_link[und][0][url]);
                             endif;?>">People Still Displaced</a></span>  </div>
                     <div class="views-field views-field-field-text">        <div class="field-content">    <?php if(!empty($node->field_people_displaced)):
-                                print render($content['field_people_displaced']);
+                                print $node->field_people_displaced[und][0][value];
                             endif;?>
                             <div class="comments">
                                 <?php if(!empty($node->field_people_comment)):
@@ -166,9 +166,9 @@ else{ ?>
                                 print ($node->field_pledged_link[und][0][url]);
                             endif;?>">Amount pledged and paid </a></span>  </div>
                     <div class="views-field views-field-field-text">        <div class="field-content">   <?php if(!empty($node->field_pledged_amount)):
-                                print render($content['field_pledged_amount']);
+                                print $node->field_pledged_amount[und][0][value];
                             endif;?> /               <?php if(!empty($node->field_paid_amount)):
-                                print render($content['field_paid_amount']);
+                                print $node->field_paid_amount[und][0][value];
                             endif;?></div>  </div>
                     <div class="views-field views-field-title-1">        <span class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
                                 print ($node->field_pledged_link[und][0][url]);
@@ -195,7 +195,7 @@ else{ ?>
                             endif;?>">Average Temperature</a></span>  </div>
                     <div class="views-field views-field-field-text">
                         <div class="field-content"><?php if(!empty($node->field_temperature_min)):
-                                print render($content['field_temperature_min']);
+                                print $node->field_temperature_min[und][0][value];
                             endif;?>-<?php if(!empty($node->field_temperature_max)):
                                 print $node->field_temperature_max[und][0][value];
                             endif;?></div>  </div>
@@ -214,9 +214,9 @@ else{ ?>
                             endif;?>">Homes repaired and rebuilt </a></span>  </div>
                     <div class="views-field views-field-field-text">
                         <div class="field-content">  <?php if(!empty($node->field_home_rebuilt)):
-                                print render($content['field_home_rebuilt']);
+                                print $node->field_home_rebuilt[und][0][value];
                             endif;?> /       <?php if(!empty($node->field_home_destroyed)):
-                                print render($content['field_home_destroyed']);
+                                print $node->field_home_destroyed[und][0][value];
                             endif;?> </div>  </div>
                     <div class="views-field views-field-title-1">        <span class="field-content"><a href="    <?php if(!empty($node->field_home_link)):
                                 print ($node->field_home_link[und][0][url]);
