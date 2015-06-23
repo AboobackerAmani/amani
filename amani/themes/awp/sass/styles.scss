@@ -882,6 +882,35 @@ body {
       }
     }
   }/*node-type-project*/
+  &.page-comment-reply{
+    .sidebars{
+      .region-sidebar-second{
+        margin-top: 15%;
+        .view-programs-campaigns{
+          .views-row{
+            a{
+              font-size: 22px;
+              color: $awp_grey;
+              font-weight: lighter;
+              font-weight: 100;
+              padding-bottom: 20px;
+              display: block;
+              margin-bottom: 20px;
+              border-bottom: 1px solid #ccc;
+              &.active{
+                color: $awp_green;
+              }
+            }
+            &.views-row-last{
+              a{
+                border: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
 
   #footer{
