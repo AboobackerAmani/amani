@@ -803,6 +803,12 @@ body {
           font-weight: bold;
           color: $awp_black;
         }
+        &.views-row-first{
+          .field-name-field-row-title{
+            padding: 20px 80px;
+            background: url("../images/run-icon.png") 0 0 no-repeat;
+          }
+        }
         .field-name-field-row-body{
           font-size: 1.5vw;
           color: $awp-dark-grey;
