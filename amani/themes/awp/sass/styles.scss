@@ -1589,6 +1589,16 @@ body {
       }
     }
     .view-awp-media{
+      header{
+        .node__title{
+          display: none;
+        }
+      }
+      h3{
+        font-size: 2vw;
+        color: #B2B2B2;
+        margin: 0;
+      }
       &.view-display-id-page{
         .view-content{
           .views-row{

@@ -2554,13 +2554,13 @@ body.front #block-block-3 .take-action-block .action-text {
 }
 /* line 485, ../sass/styles.scss */
 body.front #block-block-3 .take-action-block .action-text .take-action-title {
-  font-size: 2vw;
+  font-size: 35px;
   margin-bottom: 10px;
   font-weight: 400;
 }
 /* line 490, ../sass/styles.scss */
 body.front #block-block-3 .take-action-block .action-text .take-action-sub-title {
-  font-size: 1vw;
+  font-size: 22px;
   font-weight: 100;
   font-style: italic;
 }
@@ -3155,13 +3155,13 @@ body.not-front .region-sidebar-second #block-block-4 .take-action-block .action-
 }
 /* line 1056, ../sass/styles.scss */
 body.not-front .region-sidebar-second #block-block-4 .take-action-block .action-text .take-action-title {
-  font-size: 2vw;
+  font-size: 35px;
   margin-bottom: 10px;
   font-weight: 400;
 }
 /* line 1061, ../sass/styles.scss */
 body.not-front .region-sidebar-second #block-block-4 .take-action-block .action-text .take-action-sub-title {
-  font-size: 1vw;
+  font-size: 22px;
   font-weight: 100;
   font-style: italic;
 }
@@ -3246,13 +3246,13 @@ body.not-front .region-highlighted #block-block-4 .take-action-block .action-tex
 }
 /* line 1135, ../sass/styles.scss */
 body.not-front .region-highlighted #block-block-4 .take-action-block .action-text .take-action-title {
-  font-size: 2vw;
+  font-size: 35px;
   margin-bottom: 10px;
   font-weight: 400;
 }
 /* line 1140, ../sass/styles.scss */
 body.not-front .region-highlighted #block-block-4 .take-action-block .action-text .take-action-sub-title {
-  font-size: 1vw;
+  font-size: 22px;
   font-weight: 100;
   font-style: italic;
 }
@@ -3726,16 +3726,26 @@ body.page-media #block-views-awp-media-block .view-content .views-row .views-fie
 body.page-media #block-views-awp-media-block-1 .view-content .views-row .views-field-title a {
   color: #B2B2B2;
 }
-/* line 1594, ../sass/styles.scss */
+/* line 1593, ../sass/styles.scss */
+body.page-media .view-awp-media header .node__title {
+  display: none;
+}
+/* line 1597, ../sass/styles.scss */
+body.page-media .view-awp-media h3 {
+  font-size: 2vw;
+  color: #B2B2B2;
+  margin: 0;
+}
+/* line 1604, ../sass/styles.scss */
 body.page-media .view-awp-media.view-display-id-page .view-content .views-row {
   margin-bottom: 30px;
 }
-/* line 1597, ../sass/styles.scss */
+/* line 1607, ../sass/styles.scss */
 body.page-media .view-awp-media.view-display-id-page .view-content .views-row .views-field-title {
   font-size: 2vw;
   color: #B2B2B2;
 }
-/* line 1600, ../sass/styles.scss */
+/* line 1610, ../sass/styles.scss */
 body.page-media .view-awp-media.view-display-id-page .view-content .views-row .views-field-title a {
   color: #B2B2B2;
 }
