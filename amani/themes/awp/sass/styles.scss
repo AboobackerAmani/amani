@@ -375,6 +375,20 @@ body {
             clear: right;
             font-size: 27px;
             font-weight: 100;
+            .field-content{
+              .views-more-link{
+                color: $awp-green;
+                font-weight: 100;
+                font-size: 20px;
+                .fb-share-button{
+                  margin: 0 5px;
+                  span{
+                    vertical-align: middle !important;
+                    height: 25px !important;
+                  }
+                }
+              }
+            }
           }
         }
       }
