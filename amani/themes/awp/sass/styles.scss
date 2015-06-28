@@ -247,6 +247,11 @@ body {
     }/*block-superfish-1*/
   }/*header*/
   &.front{
+    #content{
+      width: 1080px;
+      position: relative;
+      margin: 0 auto;
+    }
     #main{
       padding-top: 5px;
     }
@@ -1120,9 +1125,6 @@ body {
     }
     #content{
       padding-bottom: 200px;
-      width: 1080px;
-      position: relative;
-      margin: 0 auto;
     }
 
     .region-highlighted{
