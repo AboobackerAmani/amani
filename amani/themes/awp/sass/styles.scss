@@ -1013,6 +1013,11 @@ body {
             text-transform: uppercase;
             font-weight: 300;
             font-size: 17px;
+            &.top-link{
+              margin-left: 60px;
+              padding-left: 26px;
+              background: url("../images/footer/top-arrow.png") left center no-repeat transparent;
+            }
           }
           &.first{
             a{
