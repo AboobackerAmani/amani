@@ -264,15 +264,23 @@ body {
           position: absolute;
           background: url("../images/homepage/slider-white.png") 0 0 no-repeat;
           background-size: 100% 100%;
-          display: table;
+          display: block;
+          width: 490px;
+          top: 170px;
+          left: 0;
+          padding: 0px 150px;
+          height: 320px;
+          overflow: hidden;
           .field-content{
-            font-size: 60px;
+            font-size: 70px;
+            font-weight: 600;
             color: $awp-black;
             display: table-cell;
             vertical-align: middle;
             padding: 20px 0;
             a{
-              font-size: 60px;
+              font-size: 70px;
+              font-weight: 600;
               color: $awp-black;
             }
           }
@@ -436,13 +444,18 @@ body {
 
     #block-views-4853df8e1a361dde03121dad9c7fe95f{/*fundemintalsI*/
       h2.block-title {
-        font-size: 3vw;
+        font-size: 60px;
+        font-weight: normal;
         color: $awp-green;
       }
       .view-content{
         .views-row{
           padding:10px 25px;
-          background: url("../images/homepage/red-circle.png") left center no-repeat;
+          background: url("../images/homepage/red-circle.png") left 20px no-repeat;
+          font-size: 30px;
+          padding: 0 25px;
+          margin: 20px 0;
+          overflow: hidden;
           .views-field-title{
             .field-content{
               color: $awp-black;
@@ -466,6 +479,8 @@ body {
       position: relative;
       @include corner(0px ,0px ,0px ,210px);
       overflow: hidden;
+      position: absolute;
+      right: 1030px;
       .take-action-block{
         float: right;
         width: 70%;
@@ -499,11 +514,11 @@ body {
 
           }
           .action-links{
-            margin-top: 10px;
+            margin-top: 50px;
             width: 145%;
             margin-left: -40%;
             a{
-              margin-bottom: 10px;
+              margin-bottom: 0px;
               display: block;
               width: 100%;
               border: 2px solid $awp-white;
@@ -1105,6 +1120,9 @@ body {
     }
     #content{
       padding-bottom: 200px;
+      width: 1080px;
+      position: relative;
+      margin: 0 auto;
     }
 
     .region-highlighted{
@@ -1577,7 +1595,8 @@ body {
     #block-views-awp-media-block-1{
       margin-bottom: 30px;
       .block-title{
-        font-size: 2vw;
+        font-size: 60px;
+        font-weight: normal;
         color: #B2B2B2;
 
       }
