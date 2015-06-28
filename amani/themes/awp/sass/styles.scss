@@ -328,18 +328,12 @@ body {
       float: left;
       clear: both;
       margin-bottom: 0;
-      h2.block-title {
-        font-size: 3vw;
-        color: $awp-green;
-      }
+
     }
 
 
     #block-views-3035a87eee3a51153d184d85d17cc285 {
-      h2.block-title{
-        font-size: 3vw;
-        color: $awp-green;
-      }
+
       .view-glimpses-of-daily-life-in-gaza {
         .views-row{
           overflow: hidden;
@@ -446,13 +440,13 @@ body {
         }
       }
     }
-
+    h2.block-title {
+      font-size: 60px;
+      font-weight: normal;
+      color: $awp-green;
+    }
     #block-views-4853df8e1a361dde03121dad9c7fe95f{/*fundemintalsI*/
-      h2.block-title {
-        font-size: 60px;
-        font-weight: normal;
-        color: $awp-green;
-      }
+
       .view-content{
         .views-row{
           padding:10px 25px;
