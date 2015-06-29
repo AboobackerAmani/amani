@@ -171,12 +171,23 @@ function amani_zen_preprocess_block(&$variables, $hook) {
 }
 // */
 
+/**
+ * Implements hook_form_alter().
+ */
 function amani_zen_form_alter(&$form, &$form_state, $form_id) {
-
   if ($form_id == 'search_block_form') {
-    // add the magnifying glass icon
+    // Add the magnifying glass icon.
     $form['search_block_form']['#suffix'] = '<div class="search-icon amani-icon-search"></div>';
   }
-
 }
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function amani_zen_preprocess_field(&$variables) {
+  $type = $variables['element']['#object']->type;
+  $variables['theme_hook_suggestions'][] = 'field__' . $type;
+}
+
+
 

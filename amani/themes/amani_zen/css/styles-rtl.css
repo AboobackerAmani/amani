@@ -3,6 +3,17 @@
  * RTL companion for the styles.scss file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
+/*
+ * Mobile First approach to break points
+ *
+ * http://responsivedesign.is/strategy/page-layout/defining-breakpoints
+ * TL;DR
+ * Instead of being concerned with device breakpoints the best practice is to
+ * design for your smallest viewport first.  As you expand that view there will
+ * come a point at which the design looks shit terrible.
+ *
+ * This is where you add a break point.
+ */
 /* HTML element (SMACSS base) rules */
 /**
  * @file

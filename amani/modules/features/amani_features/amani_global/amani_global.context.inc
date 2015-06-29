@@ -166,6 +166,12 @@ function amani_global_context_default_contexts() {
           'region' => 'home_content_top_static_region',
           'weight' => '-8',
         ),
+        'bean-volunteers-help-women' => array(
+          'module' => 'bean',
+          'delta' => 'volunteers-help-women',
+          'region' => 'header',
+          'weight' => '0',
+        ),
         'views-news_and_events-block_1' => array(
           'module' => 'views',
           'delta' => 'news_and_events-block_1',
