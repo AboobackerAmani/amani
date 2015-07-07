@@ -1296,6 +1296,10 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
 * Footer
 */
 #header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  width: 100%;
   height: 93px;
 }
 #header h1.header__site-name {
