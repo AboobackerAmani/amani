@@ -8,28 +8,43 @@
 
   li {
     background-color: transparent;
-    border-color: $grey-darker;
+    border-color: $grey;
   }
 
   a {
     padding: 0 16px;
-    @include font-size(11px);
+    @include font-size(16px);
     font-weight: $fw-light;
+    line-height: 16px;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    color: $grey-darker;
+    color: $grey;
     border: none;
     &:hover, &.active {
       background-color: transparent;
-      text-shadow: 0 0 $grey-darker; // emulate bold font to avoid bumping
+      text-shadow: 0 0 $grey; // emulate bold font to avoid bumping
     }
   }
 }
 
 // Social Media
-#block-menu-menu-social-media {
+div[id*="block-menu-menu-social-media"] {
   a {
     color: $font-color;
     @include ss-icon('circle');
     @include link-hover-color(tint($primary-color, 50%));
+    @include font-size(20px); 
+  }
+}
+
+#footer {
+  div[id*="block-menu-menu-social-media"] {
+    margin-top: 20px;
+    margin-left: -3px;
+    position: relative;
+    right: auto;
+    left: 0;
+    top: 0;
+    a {color: $white;}
   }
 }

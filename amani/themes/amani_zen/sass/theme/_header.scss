@@ -1,0 +1,26 @@
+/**
+* Footer
+*/
+#header {
+  height: 93px;
+  
+  h1.header__site-name {
+    display: inline-block;
+    text-indent: -9999em;
+    float: left;
+  }
+  
+  .header__secondary-menu,
+  #block-menu-menu-meta {
+    @include element-invisible;
+  }
+}
+
+#navigation {
+  ul {
+    list-style-type: none;
+  } 
+  li {
+    float: left;
+  }
+}

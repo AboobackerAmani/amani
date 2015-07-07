@@ -52,17 +52,19 @@
 // Search form
 #block-search-form {
   position: absolute;
-  top: 30px;
-  right: 60px;
+  top: 24px;
+  right: 0;
 
   @include hide-contextual-links();
 
   .form-text {
-    font-size: 0.846rem; // 11px
+    background-color: $soft-grey;
+    @include font-size(12px);
     font-weight: normal;
-    height: 16px;
-    padding: 2px 5px;
-    width: 76px;
+    line-height: 12px;
+    height: 24px;
+    padding: 6px 10px;
+    width: 170px;
   }
 
   .form-actions {

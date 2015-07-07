@@ -3,8 +3,51 @@
  * Style for menus.
  */
 
+//Main menu in header
+#header {
+  #block-system-main-menu {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    position: relative;
+    left: 0; top: 0;
+
+    .mobile-menu-link {
+      display: none;
+    }
+
+    ul {
+      margin-left: 0;
+    }
+
+
+    li {
+      border-right: 1px solid;
+      @include font-size(14px);
+      float: left;
+
+      &:last-child { border-right: 0 none; }
+    }
+    
+    a {
+        border: medium none;
+        color: #474f5e;
+        font-size: 1.23077rem;
+        font-weight: 200;
+        letter-spacing: 1px;
+        line-height: 16px;
+        padding: 0 16px;
+        text-transform: uppercase;
+    }
+  }
+}
 // Main navigation
 #navigation {
+  @include element-invisible;
+  
+  
+  
   display: table;
   margin-left: auto;
   margin-right: auto;
@@ -30,10 +73,10 @@
 }
 
 // Social Media
-#block-menu-menu-social-media {
+div[id*="block-menu-menu-social-media"] {
   position: absolute;
-  right: 150px;
-  top: 33px;
+  right: 185px;
+  top: 28px;
 
   @include hide-contextual-links();
 
