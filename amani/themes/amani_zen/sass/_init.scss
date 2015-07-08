@@ -141,7 +141,7 @@ $h6-font-size: 0.67 * $base-font-size;
 }
 
 $minion:     "MinionPro", serif;
-$open-sans:     "Open Sans", sans-serif;
+$open-sans:  "Open Sans", sans-serif;
 
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
@@ -195,9 +195,12 @@ $tabs-border: $soft-grey;
  * Use 10 grid columns for larger screens.
 */
 
-$zen-column-count: 10;
-$zen-gutter-width: 10px;
+//$zen-column-count: 10;
+//$zen-gutter-width: 10px;
 
+
+//break points
+$breakpoint: 768px;
 
 // =============================================================================
 // Partials to be shared with all .scss files.

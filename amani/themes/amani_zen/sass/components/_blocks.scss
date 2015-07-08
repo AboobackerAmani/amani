@@ -51,9 +51,19 @@
 
 // Search form
 #block-search-form {
-  position: absolute;
-  top: 24px;
-  right: 0;
+  display: inline-block;
+  float: right;
+  text-align: right;
+  margin-top: -4px;
+  
+  //screen bigger than 768px
+  @media all and (min-width: $breakpoint) {
+    margin-top: 0;
+    width: auto;
+    position: absolute;
+    top: 24px;
+    right: 0;
+  }
 
   @include hide-contextual-links();
 

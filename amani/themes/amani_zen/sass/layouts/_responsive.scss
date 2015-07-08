@@ -39,6 +39,16 @@ body {
   position: relative;
 }
 
+body.not-logged-in  {
+  #page {
+    margin-top: 0;
+    //screen bigger than 768px
+    @media all and (min-width: $breakpoint) {
+      margin-top: 3em;
+    }
+  }
+}
+
 #footer {
   bottom: 0;
   height: 180px;

@@ -7,11 +7,15 @@
   color: $white;
   font-weight: $fw-light;
   margin-top: 30px;
-  padding: 40px 0 40px 0;
+  padding: 20px 10px 40px;
   position:absolute;
 	bottom:0;
 	left:0;
 	right: 0;
+	//screen bigger than 768px
+	@media all and (min-width: $breakpoint) {
+	  padding-top: 40px;
+	}
 
   &:before {
     content: "";

@@ -653,6 +653,15 @@ body {
   position: relative;
 }
 
+body.not-logged-in #page {
+  margin-top: 0;
+}
+@media all and (min-width: 768px) {
+  body.not-logged-in #page {
+    margin-top: 3em;
+  }
+}
+
 #footer {
   bottom: 0;
   height: 180px;
@@ -902,41 +911,91 @@ body {
  * @file
  * Style for menus.
  */
-#header #block-system-main-menu {
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
-  position: relative;
-  left: 0;
-  top: 0;
+#mobile-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 25px;
+  height: 30px;
+  background: url('../images/../images/mobile-menu-toggle.png?1436386872') no-repeat center center;
+  display: block;
+  z-index: 999;
 }
-#header #block-system-main-menu .mobile-menu-link {
+
+#header #block-system-main-menu {
   display: none;
 }
-#header #block-system-main-menu ul {
-  margin-left: 0;
+#header #block-system-main-menu ul.menu {
+  margin-top: 5px;
+  margin-bottom: 0;
+  border-top: 2px solid #474F5E;
 }
 #header #block-system-main-menu li {
-  border-right: 1px solid;
-  font-size: 14px;
-  font-size: 1.07692rem;
-  float: left;
-}
-#header #block-system-main-menu li:last-child {
-  border-right: 0 none;
+  border-bottom: 1px solid #CFEDFA;
+  background-color: #fff;
+  padding: 8px 0 5px;
+  margin: 0;
+  text-align: center;
 }
 #header #block-system-main-menu a {
-  border: medium none;
-  color: #474f5e;
-  font-size: 1.23077rem;
+  font-size: 14px;
+  font-size: 1.07692rem;
   font-weight: 200;
   letter-spacing: 1px;
-  line-height: 16px;
-  padding: 0 16px;
+  line-height: 14px;
   text-transform: uppercase;
 }
 
+@media all and (min-width: 768px) {
+  #mobile-toggle {
+    display: none;
+  }
+}
+@media all and (min-width: 768px) {
+  #header #block-system-main-menu {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  #header #block-system-main-menu .mobile-menu-link {
+    display: none;
+  }
+  #header #block-system-main-menu ul.menu {
+    margin: 0 auto;
+    border: 0;
+  }
+  #header #block-system-main-menu li {
+    border: 0;
+    padding: 0;
+    border-right: 1px solid;
+    font-size: 14px;
+    font-size: 1.07692rem;
+    float: left;
+  }
+  #header #block-system-main-menu li:last-child {
+    border-right: 0 none;
+  }
+  #header #block-system-main-menu a {
+    border: medium none;
+    color: #474f5e;
+    font-size: 16px;
+    font-size: 1.23077rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+    line-height: 16px;
+    padding: 0 16px;
+    float: left;
+    text-transform: uppercase;
+  }
+}
 #navigation {
   position: absolute !important;
   height: 1px;
@@ -967,9 +1026,16 @@ body {
 }
 
 div[id*="block-menu-menu-social-media"] {
-  position: absolute;
-  right: 185px;
-  top: 28px;
+  display: inline-block;
+  margin-left: 40px;
+}
+@media all and (min-width: 768px) {
+  div[id*="block-menu-menu-social-media"] {
+    width: auto;
+    position: absolute;
+    right: 185px;
+    top: 28px;
+  }
 }
 div[id*="block-menu-menu-social-media"]:hover .contextual-links-wrapper {
   display: none;
@@ -977,7 +1043,7 @@ div[id*="block-menu-menu-social-media"]:hover .contextual-links-wrapper {
 div[id*="block-menu-menu-social-media"] .block-title {
   display: none;
 }
-div[id*="block-menu-menu-social-media"] ul {
+div[id*="block-menu-menu-social-media"] ul.menu {
   margin: 0;
 }
 div[id*="block-menu-menu-social-media"] li {
@@ -1028,9 +1094,19 @@ div[id*="block-menu-menu-social-media"] li {
  * Unique blocks
  */
 #block-search-form {
-  position: absolute;
-  top: 24px;
-  right: 0;
+  display: inline-block;
+  float: right;
+  text-align: right;
+  margin-top: -4px;
+}
+@media all and (min-width: 768px) {
+  #block-search-form {
+    margin-top: 0;
+    width: auto;
+    position: absolute;
+    top: 24px;
+    right: 0;
+  }
 }
 #block-search-form:hover .contextual-links-wrapper {
   display: none;
@@ -1165,60 +1241,6 @@ div[id*="block-menu-menu-social-media"] li {
  * @file
  * Style for menus.
  */
-#navigation li {
-  background-color: transparent;
-  border-color: #474F5E;
-}
-#navigation a {
-  padding: 0 16px;
-  font-size: 16px;
-  font-size: 1.23077rem;
-  font-weight: 200;
-  line-height: 16px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #474F5E;
-  border: none;
-}
-#navigation a:hover, #navigation a.active {
-  background-color: transparent;
-  text-shadow: 0 0 #474F5E;
-}
-
-div[id*="block-menu-menu-social-media"] a {
-  color: #414042;
-  font-family: "SSSocial";
-  font-style: normal;
-  font-weight: bold;
-  text-decoration: none;
-  text-rendering: optimizeLegibility;
-  white-space: nowrap;
-  /*-webkit-font-feature-settings: "liga"; Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
-  -moz-font-feature-settings: "liga=1";
-  -moz-font-feature-settings: "liga";
-  -ms-font-feature-settings: "liga" 1;
-  -o-font-feature-settings: "liga";
-  font-feature-settings: "liga";
-  -webkit-font-smoothing: antialiased;
-  font-size: 20px;
-  font-size: 1.53846rem;
-}
-div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social-media"] a:hover, div[id*="block-menu-menu-social-media"] a:active {
-  color: #ace0f6;
-}
-
-#footer div[id*="block-menu-menu-social-media"] {
-  margin-top: 20px;
-  margin-left: -3px;
-  position: relative;
-  right: auto;
-  left: 0;
-  top: 0;
-}
-#footer div[id*="block-menu-menu-social-media"] a {
-  color: #fff;
-}
-
 /**
 * Footer
 */
@@ -1227,7 +1249,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   color: #fff;
   font-weight: 200;
   margin-top: 30px;
-  padding: 40px 0 40px 0;
+  padding: 20px 10px 40px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1239,6 +1261,11 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
 }
 #footer:after {
   clear: both;
+}
+@media all and (min-width: 768px) {
+  #footer {
+    padding-top: 40px;
+  }
 }
 #footer:before {
   content: "";
@@ -1293,14 +1320,40 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
 }
 
 /**
-* Footer
+* Header
 */
+#header #logo img {
+  width: 120px;
+}
+@media all and (min-width: 768px) {
+  #header #logo img {
+    width: auto;
+  }
+}
+
+.region-header {
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  padding: 0 10px;
+}
+@media all and (min-width: 768px) {
+  .region-header {
+    position: initial;
+    top: auto;
+    left: auto;
+    padding: 0;
+  }
+}
+
 #header {
   position: fixed;
   right: 0;
   left: 0;
   width: 100%;
   height: 93px;
+  z-index: 9;
 }
 #header h1.header__site-name {
   display: inline-block;
@@ -1323,6 +1376,63 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   float: left;
 }
 
+#navigation li {
+  background-color: transparent;
+  border-color: #474F5E;
+}
+#navigation a {
+  padding: 0 16px;
+  font-size: 16px;
+  font-size: 1.23077rem;
+  font-weight: 200;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #474F5E;
+  border: none;
+}
+#navigation a:hover, #navigation a.active {
+  background-color: transparent;
+  text-shadow: 0 0 #474F5E;
+}
+
+div[id*="block-menu-menu-social-media"] a {
+  color: #414042;
+  font-family: "SSSocial";
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  /*-webkit-font-feature-settings: "liga"; Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  font-size: 20px;
+  font-size: 1.53846rem;
+}
+div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social-media"] a:hover, div[id*="block-menu-menu-social-media"] a:active {
+  color: #ace0f6;
+}
+
+#footer div[id*="block-menu-menu-social-media"] {
+  width: 70%;
+  float: right;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 0;
+  position: relative;
+  right: auto;
+  left: -3px;
+  top: 0;
+}
+#footer div[id*="block-menu-menu-social-media"] a {
+  color: #fff;
+}
+
 /**
  * @file
  * Donation button
@@ -1337,6 +1447,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   position: fixed;
   right: 0;
   top: 50%;
+  z-index: 99;
 }
 #block-bean-donate .field-item > a {
   background-color: #F09416;
