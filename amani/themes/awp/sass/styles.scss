@@ -707,7 +707,7 @@ body {
     }
     &.view-display-id-block_1{/*left*/
       .views-row{
-        &.views-row-even{
+        &.views-row-odd{
           background: $awp-light-grey;
           &:hover{
             background: $awp-white;
@@ -1201,7 +1201,7 @@ body {
         height: 150px;
         position: absolute;
         right: 0;
-        bottom: -170px;
+        bottom: -175px;
         overflow: hidden;
         .take-action-block{
           float: right;
@@ -1693,8 +1693,8 @@ body {
         }
       }
       h3{
-        font-size: 2vw;
-        color: #B2B2B2;
+        font-size: 40px;
+        color: $awp-dark-grey;
         margin: 0;
       }
       &.view-display-id-page{
@@ -1703,10 +1703,11 @@ body {
             margin-bottom: 30px;
 
             .views-field-title{
-              font-size: 2vw;
-              color: #B2B2B2;
+              font-size: 30px;
+              color: $awp_grey;
+              margin-top: 5px;
               a{
-                color: #B2B2B2;
+                color: $awp_grey;
               }
 
             }
