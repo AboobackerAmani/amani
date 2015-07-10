@@ -410,7 +410,7 @@ function media_gallery_media_page_multiedit($node) {
   module_load_include('inc', 'media', 'includes/media.pages');
 
   // Build and process the form.
-  $form = media_bulk_upload_file_operation_edit_multiple($files);
+  $form = media_file_operation_edit_multiple($files);
 
   // Override the page title set by media_file_page_edit_multiple() and return the form.
   drupal_set_title(t('<em>Edit media for</em> @title', array('@type' => $node->type, '@title' => $node->title)), PASS_THROUGH);
