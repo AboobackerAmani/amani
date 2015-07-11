@@ -1331,6 +1331,8 @@ body {
         .views-header-title{
           color: #000;
           font-size: 2vw;
+          font-weight: bold;
+          font-size: 40px;
           border-bottom: 1px solid #B2B2B2;
           padding-bottom: 15px;
         }
@@ -1339,9 +1341,9 @@ body {
             border-bottom: none !important;
 
           .views-field-field-image{
-            width: 40%;
+            width: auto;
             float: left;
-            padding: 0px 20px 20px 0px;
+            padding: 10px;
           }
           .views-field-title{
             a{
