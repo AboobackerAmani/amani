@@ -443,8 +443,10 @@ body {
 
 
       }
-      ul {
-        li {
+      ul,
+      .views-slideshow-cycle-main-frame{
+        li,
+        .views-slideshow-cycle-main-frame-row{
           margin-bottom: 25px;
           border-bottom: 1px solid $awp-white;
           padding-bottom: 10px;
@@ -457,6 +459,24 @@ body {
           .views-field-created-time {
             color: $awp-green;
           }
+        }
+      }
+      .views-slideshow-controls-bottom {
+        .views-slideshow-controls-text-pause{
+          display: none;
+        }
+        .views-slideshow-controls-text-previous,
+        .views-slideshow-controls-text-next{
+          a{
+            font-size: 0;
+            display: block;
+            width: 37px;
+            height: 37px;
+            background: url("../images/d-arrow.png") center no-repeat transparent;
+          }
+        }
+        .views-slideshow-controls-text-previous{
+          display: none;
         }
       }
     }
