@@ -1322,68 +1322,78 @@ body {
       }
     }
   } /*page-team*/
-  &.section-news{
-    .view-news-with-featured- {
+  &.section-news,
+  &.section-blog{
+    .view-news-with-featured-,
+    .view-news-and-events-blog{
       &.view-display-id-page{
-      .view-header{
-        overflow: hidden;
-        border-bottom: 1px solid #B2B2B2;
-        .views-header-title{
-          color: #000;
-          font-size: 2vw;
-          font-weight: bold;
-          font-size: 40px;
+        .view-header{
+          overflow: hidden;
           border-bottom: 1px solid #B2B2B2;
-          padding-bottom: 15px;
-        }
-        .view-id-news_with_featured_{
-          .views-row {
-            border-bottom: none !important;
+          .views-header-title{
+            color: #000;
+            font-size: 2vw;
+            font-weight: bold;
+            font-size: 40px;
+            border-bottom: 1px solid #B2B2B2;
+            padding-bottom: 15px;
+          }
+          .view-id-news_with_featured_{
+            .views-row {
+              border-bottom: none !important;
 
-          .views-field-field-image{
-            width: auto;
-            float: left;
-            padding: 10px;
-          }
-          .views-field-title{
-            a{
-              color: $awp-green;
-            }
-          }
-        }
-        }
-      }
-      .view-content{
-        .views-row{
-          margin-top: 40px;
-          border-bottom: 1px solid #B2B2B2;
-          padding-bottom: 10px;
-          .views-field-title{
-            a{
-              color: $awp-green;
-              font-size: 1.5vw;
-            }
-          }
-          .views-field-field-article-date{
-            color: #b2b2b2;
-            padding: 6px 0px;
-            overflow: hidden;
-            .views-label-field-article-date{
+            .views-field-field-image{
+              width: auto;
               float: left;
-              padding-right: 5px;
+              padding: 10px;
+            }
+            .views-field-title{
+              a{
+                color: $awp-green;
+              }
             }
           }
-          .views-field-nothing{
-            margin-top: 30px;
-            .fb-share-button{
-              span{
-                height: 25px !important;
+          }
+        }
+        .view-content{
+          .views-row{
+            margin-top: 40px;
+            border-bottom: 1px solid #B2B2B2;
+            padding-bottom: 10px;
+            .views-field-title{
+              a{
+                color: $awp-green;
+                font-size: 1.5vw;
+              }
+            }
+            .views-field-field-image{
+              width: auto;
+              float: left;
+              padding: 10px;
+            }
+            .views-field-field-article-date{
+              color: #b2b2b2;
+              padding: 6px 0px;
+              overflow: hidden;
+              .views-label-field-article-date{
+                float: left;
+                padding-right: 5px;
+              }
+            }
+            .views-field-nothing{
+              margin-top: 30px;
+              .fb-share-button{
+                span{
+                  height: 25px !important;
+                }
               }
             }
           }
         }
       }
     }
+    .view-news-and-events-blog{
+
     }
   }/*section-news*/
   &.section-resources,
