@@ -7,7 +7,7 @@
  * @param $form_state
  *   A keyed array containing the current state of the form.
  */
-function amani_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL)  {
+function peace_geeks_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL)  {
   // Work-around for a core bug affecting admin themes. See issue #943212.
   if (isset($form_id)) {
     return;
@@ -16,10 +16,10 @@ function amani_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_
   // Create the form using Forms API: http://api.drupal.org/api/7
 
   /* -- Delete this line if you want to use this setting
-  $form['amani_zen_example'] = array(
+  $form['peace_geeks_example'] = array(
     '#type'          => 'checkbox',
-    '#title'         => t('amani_zen sample setting'),
-    '#default_value' => theme_get_setting('amani_zen_example'),
+    '#title'         => t('peace_geeks sample setting'),
+    '#default_value' => theme_get_setting('peace_geeks_example'),
     '#description'   => t("This option doesn't do anything; it's just an example."),
   );
   // */
