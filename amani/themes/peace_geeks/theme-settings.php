@@ -1,33 +1,99 @@
 <?php
 /**
- * Implements hook_form_system_theme_settings_alter().
+ * Implements hook_form_FORM_ID_alter().
  *
  * @param $form
- *   Nested array of form elements that comprise the form.
+ *   The form.
  * @param $form_state
- *   A keyed array containing the current state of the form.
+ *   The form state.
  */
-function peace_geeks_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL)  {
-  // Work-around for a core bug affecting admin themes. See issue #943212.
-  if (isset($form_id)) {
-    return;
-  }
+function peace_geeks_form_system_theme_settings_alter(&$form, &$form_state) {
 
-  // Create the form using Forms API: http://api.drupal.org/api/7
-
-  /* -- Delete this line if you want to use this setting
-  $form['peace_geeks_example'] = array(
-    '#type'          => 'checkbox',
-    '#title'         => t('peace_geeks sample setting'),
-    '#default_value' => theme_get_setting('peace_geeks_example'),
-    '#description'   => t("This option doesn't do anything; it's just an example."),
+  $form['peace_geeks_settings'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Venture Theme Settings'),
+    '#collapsible' => FALSE,
+    '#collapsed' => FALSE,
   );
-  // */
-
-  // Remove some of the base theme's settings.
-  /* -- Delete this line if you want to turn off this setting.
-  unset($form['themedev']['zen_wireframes']); // We don't need to toggle wireframes on this site.
-  // */
-
-  // We are editing the $form in place, so we don't need to return anything.
+  $form['peace_geeks_settings']['slideshow'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Front Page Slideshow'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['peace_geeks_settings']['slideshow']['slideshow_display'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show slideshow'),
+    '#default_value' => theme_get_setting('slideshow_display','peace_geeks'),
+    '#description'   => t("Check this option to show Slideshow in front page. Uncheck to hide."),
+  );
+  $form['peace_geeks_settings']['slideshow']['slide'] = array(
+    '#markup' => t('You can change the description and URL of each slide in the following Slide Setting fieldsets.'),
+  );
+  $form['peace_geeks_settings']['slideshow']['slide1'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Slide 1'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['peace_geeks_settings']['slideshow']['slide1']['slide1_head'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Slide Headline'),
+    '#default_value' => theme_get_setting('slide1_head','peace_geeks'),
+  );
+  $form['peace_geeks_settings']['slideshow']['slide1']['slide1_desc'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Slide Description'),
+    '#default_value' => theme_get_setting('slide1_desc','peace_geeks'),
+  );
+  $form['peace_geeks_settings']['slideshow']['slide1']['slide1_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Slide URL'),
+    '#default_value' => theme_get_setting('slide1_url','peace_geeks'),
+  );
+  $form['peace_geeks_settings']['slideshow']['slide2'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Slide 2'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['peace_geeks_settings']['slideshow']['slide2']['slide2_head'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Slide Headline'),
+    '#default_value' => theme_get_setting('slide2_head','peace_geeks'),
+  );
+  $form['peace_geeks_settings']['slideshow']['slide2']['slide2_desc'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Slide Description'),
+    '#default_value' => theme_get_setting('slide2_desc','peace_geeks'),
+  );
+  $form['peace_geeks_settings']['slideshow']['slide2']['slide2_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Slide URL'),
+    '#default_value' => theme_get_setting('slide2_url','peace_geeks'),
+  );
+  $form['peace_geeks_settings']['slideshow']['slide3'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Slide 3'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['peace_geeks_settings']['slideshow']['slide3']['slide3_head'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Slide Headline'),
+    '#default_value' => theme_get_setting('slide3_head','peace_geeks'),
+  );
+  $form['peace_geeks_settings']['slideshow']['slide3']['slide3_desc'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Slide Description'),
+    '#default_value' => theme_get_setting('slide3_desc','peace_geeks'),
+  );
+  $form['peace_geeks_settings']['slideshow']['slide3']['slide3_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Slide URL'),
+    '#default_value' => theme_get_setting('slide3_url','peace_geeks'),
+  );
+  $form['peace_geeks_settings']['slideshow']['slideimage'] = array(
+    '#markup' => t('To change the Slide Images, Replace the slide-image-1.jpg, slide-image-2.jpg and slide-image-3.jpg in the images folder of the theme folder.'),
+  );
 }

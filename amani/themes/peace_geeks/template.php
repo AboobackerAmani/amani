@@ -79,6 +79,12 @@ function peace_geeks_preprocess_html(&$variables, $hook) {
   // SS Social
   drupal_add_css($theme_path . '/fonts/ss-social/ss-social.css', array('group' => CSS_THEME, 'every_page' => TRUE));
   drupal_add_js($theme_path . '/fonts/ss-social/ss-social.js', array('type' => 'file', 'scope' => 'footer'));
+
+  drupal_add_css(base_path() . drupal_get_path('theme', 'peace_geeks') . '/css/responsive.css', 'file');
+  drupal_add_js(base_path() . drupal_get_path('theme', 'peace_geeks') . '/js/global.js', 'file');
+  drupal_add_js(base_path() . drupal_get_path('theme', 'peace_geeks') . '/js/html5.js', 'file');
+  drupal_add_js(base_path() . drupal_get_path('theme', 'peace_geeks') . '/js/plugins.js', 'file');
+  drupal_add_js(base_path() . drupal_get_path('theme', 'peace_geeks') . '/js/retina.js', 'file');
 }
 
 /**
