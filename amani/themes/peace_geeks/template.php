@@ -17,12 +17,12 @@
  *   The name of the template being rendered ("maintenance_page" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function amani_zen_preprocess_maintenance_page(&$variables, $hook) {
+function peace_geeks_preprocess_maintenance_page(&$variables, $hook) {
   // When a variable is manipulated or added in preprocess_html or
   // preprocess_page, that same work is probably needed for the maintenance page
   // as well, so we can just re-use those functions to do that work here.
-  amani_zen_preprocess_html($variables, $hook);
-  amani_zen_preprocess_page($variables, $hook);
+  peace_geeks_preprocess_html($variables, $hook);
+  peace_geeks_preprocess_page($variables, $hook);
 }
 // */
 
@@ -34,14 +34,14 @@ function amani_zen_preprocess_maintenance_page(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("html" in this case.)
  */
-function amani_zen_preprocess_html(&$variables, $hook) {
+function peace_geeks_preprocess_html(&$variables, $hook) {
   // The body tag's classes are controlled by the $classes_array variable. To
   // remove a class from $classes_array, use array_diff().
   //$variables['classes_array'] = array_diff($variables['classes_array'], array('class-to-remove'));
   global $base_url;
 
   // Adding favicons and app icons
-  // $theme_path = $base_url . '/' . drupal_get_path('theme', 'amani_zen');
+  // $theme_path = $base_url . '/' . drupal_get_path('theme', 'peace_geeks');
   $theme_path = drupal_get_path('theme',$GLOBALS['theme']);
   $app_icons_path = $base_url . '/' . $theme_path . '/app-icons/';
 
@@ -81,6 +81,19 @@ function amani_zen_preprocess_html(&$variables, $hook) {
   drupal_add_js($theme_path . '/fonts/ss-social/ss-social.js', array('type' => 'file', 'scope' => 'footer'));
 }
 
+function peace_geeks_theme_page_alter($page) {
+  // <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  $viewport = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+    'name' =>  'viewport',
+    'content' =>  'width=device-width, initial-scale=1, maximum-scale=1'
+    )
+  );
+  drupal_add_html_head($viewport, 'viewport');
+}
+
 /**
  * Override or insert variables into the page templates.
  *
@@ -90,7 +103,7 @@ function amani_zen_preprocess_html(&$variables, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function amani_zen_preprocess_page(&$variables, $hook) {
+function peace_geeks_preprocess_page(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 }
 // */
@@ -104,11 +117,11 @@ function amani_zen_preprocess_page(&$variables, $hook) {
  *   The name of the template being rendered ("node" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function amani_zen_preprocess_node(&$variables, $hook) {
+function peace_geeks_preprocess_node(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 
   // Optionally, run node-type-specific preprocess functions, like
-  // amani_zen_preprocess_node_page() or amani_zen_preprocess_node_story().
+  // peace_geeks_preprocess_node_page() or peace_geeks_preprocess_node_story().
   $function = __FUNCTION__ . '_' . $variables['node']->type;
   if (function_exists($function)) {
     $function($variables, $hook);
@@ -125,7 +138,7 @@ function amani_zen_preprocess_node(&$variables, $hook) {
  *   The name of the template being rendered ("comment" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function amani_zen_preprocess_comment(&$variables, $hook) {
+function peace_geeks_preprocess_comment(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 }
 // */
@@ -139,7 +152,7 @@ function amani_zen_preprocess_comment(&$variables, $hook) {
  *   The name of the template being rendered ("region" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function amani_zen_preprocess_region(&$variables, $hook) {
+function peace_geeks_preprocess_region(&$variables, $hook) {
   // Don't use Zen's region--sidebar.tpl.php template for sidebars.
   //if (strpos($variables['region'], 'sidebar_') === 0) {
   //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('region__sidebar'));
@@ -156,7 +169,7 @@ function amani_zen_preprocess_region(&$variables, $hook) {
  *   The name of the template being rendered ("block" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function amani_zen_preprocess_block(&$variables, $hook) {
+function peace_geeks_preprocess_block(&$variables, $hook) {
   // Add a count to all the blocks in the region.
   // $variables['classes_array'][] = 'count-' . $variables['block_id'];
 
@@ -167,3 +180,47 @@ function amani_zen_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+/**
+ * Implements hook_html_head_alter().
+ * This will overwrite the default meta character type tag with HTML5 version.
+ */
+function peace_geeks_html_head_alter(&$head_elements) {
+  $head_elements['system_meta_content_type']['#attributes'] = array(
+    'charset' => 'utf-8'
+  );
+}
+
+/**
+ * Override or insert variables into the node template.
+ */
+function peace_geeks_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  if ($variables['view_mode'] == 'full' && node_is_page($variables['node'])) {
+    $variables['classes_array'][] = 'node-full';
+  }
+  $variables['date'] = t('!datetime', array('!datetime' =>  date('j F Y', $variables['created'])));
+}
+
+function peace_geeks_page_alter($page) {
+  // <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  $viewport = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+    'name' =>  'viewport',
+    'content' =>  'width=device-width, initial-scale=1, maximum-scale=1'
+    )
+  );
+  drupal_add_html_head($viewport, 'viewport');
+}
+
+
+/**
+ * Add javascript files for front-page jquery slideshow.
+ */
+if (drupal_is_front_page()) {
+  drupal_add_js(drupal_get_path('theme', 'peace_geeks') . '/js/cycle2.js');
+  drupal_add_js(drupal_get_path('theme', 'peace_geeks') . '/js/center2.js');
+  drupal_add_js(drupal_get_path('theme', 'peace_geeks') . '/js/slide.js');
+}
