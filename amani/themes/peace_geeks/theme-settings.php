@@ -11,9 +11,15 @@ function peace_geeks_form_system_theme_settings_alter(&$form, &$form_state) {
 
   $form['peace_geeks_settings'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Venture Theme Settings'),
+    '#title' => t('Corporate Agency Settings'),
     '#collapsible' => FALSE,
     '#collapsed' => FALSE,
+  );
+  $form['peace_geeks_settings']['breadcrumbs'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show breadcrumbs in a page'),
+    '#default_value' => theme_get_setting('breadcrumbs','peace_geeks'),
+    '#description'   => t("Check this option to show breadcrumbs in page. Uncheck to hide."),
   );
   $form['peace_geeks_settings']['slideshow'] = array(
     '#type' => 'fieldset',

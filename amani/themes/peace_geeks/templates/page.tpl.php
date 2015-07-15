@@ -115,63 +115,58 @@
 
 
       <!-- Beginning of slider code -->
-      <?php if (drupal_is_front_page()): ?>
-        <?php if (theme_get_setting('slideshow_display','peace_geeks')): ?>
+
+        <?php if (drupal_is_front_page() && theme_get_setting('slideshow_display','peace_geeks')): ?>
         <?php
           $slide1_head = check_plain(theme_get_setting('slide1_head','peace_geeks'));   $slide1_desc = check_plain(theme_get_setting('slide1_desc','peace_geeks')); $slide1_url = check_plain(theme_get_setting('slide1_url','peace_geeks'));
           $slide2_head = check_plain(theme_get_setting('slide2_head','peace_geeks'));   $slide2_desc = check_plain(theme_get_setting('slide2_desc','peace_geeks')); $slide2_url = check_plain(theme_get_setting('slide2_url','peace_geeks'));
           $slide3_head = check_plain(theme_get_setting('slide3_head','peace_geeks'));   $slide3_desc = check_plain(theme_get_setting('slide3_desc','peace_geeks')); $slide3_url = check_plain(theme_get_setting('slide3_url','peace_geeks'));
         ?>
-        <div id="homepage-slider-wrap" class="clr flexslider-container">
-          <div id="homepage-slider" class="flexslider">
-            <ul class="slides clr">
-              <li class="homepage-slider-slide">
-                <a href="<?php print url($slide1_url); ?>">
-                  <div class="homepage-slide-inner container">
-                    <?php if($slide1_head || $slide1_desc) : ?>
-                    <div class="homepage-slide-content">
-                      <div class="homepage-slide-title"><?php print $slide1_head; ?></div>
-                      <div class="clr"></div>
-                      <div class="homepage-slide-caption"><?php print $slide1_desc; ?></div>
-                    </div>
-                    <?php endif; ?>
-                  </div>
-                  <img src="<?php print base_path() . drupal_get_path('theme', 'peace_geeks') . '/images/slide-image-1.jpg'; ?>">
-                </a>
+        <div class="home-slider">
+          <div class="cycle-slideshow"
+            data-cycle-caption-plugin='caption2'
+            data-cycle-slides="li"
+            data-cycle-fx='scrollHorz'
+            data-cycle-speed='700'
+            data-cycle-timeout='8000'
+            data-cycle-center-horz=true
+            data-cycle-center-vert=true
+            data-cycle-prev=".prev"
+            data-cycle-next=".next"
+            data-cycle-caption-template="<span class=stitle>{{ptitle}}</span><br><span class=stext>{{ptext}}</span> "
+            data-cycle-pause-on-hover="true" >
+            <div class="cycle-caption custom"></div>
+            <ul>
+
+              <li <?php if($slide1_head): ?> data-cycle-ptitle="<?php print $slide1_head; ?>" <?php endif; ?>
+                  <?php if($slide1_desc): ?> data-cycle-ptext="<?php print $slide1_desc; ?>" <?php endif; ?>
+                  data-cycle-pmore="Read More" data-cycle-plink="<?php print url($slide1_url); ?>">
+                <a class="frmore" href="<?php print url($slide1_url); ?>"> <img src="<?php print base_path() . drupal_get_path('theme', 'peace_geeks') . '/images/slide-image-1.jpg'; ?>"/> </a>
               </li>
-              <li class="homepage-slider-slide">
-                <a href="<?php print url($slide2_url); ?>">
-                  <div class="homepage-slide-inner container">
-                    <?php if($slide2_head || $slide2_desc) : ?>
-                    <div class="homepage-slide-content">
-                      <div class="homepage-slide-title"><?php print $slide2_head; ?></div>
-                      <div class="clr"></div>
-                      <div class="homepage-slide-caption"><?php print $slide2_desc; ?></div>
-                    </div>
-                    <?php endif; ?>
-                  </div>
-                  <img src="<?php print base_path() . drupal_get_path('theme', 'peace_geeks') . '/images/slide-image-2.jpg'; ?>">
-                </a>
+
+              <li <?php if($slide2_head): ?> data-cycle-ptitle="<?php print $slide2_head; ?>" <?php endif; ?>
+                  <?php if($slide2_desc): ?> data-cycle-ptext="<?php print $slide2_desc; ?>" <?php endif; ?>
+                  data-cycle-pmore="Read More" data-cycle-plink="<?php print url($slide2_url); ?>">
+                <a class="frmore" href="<?php print url($slide2_url); ?>"> <img src="<?php print base_path() . drupal_get_path('theme', 'peace_geeks') . '/images/slide-image-2.jpg'; ?>"/> </a>
               </li>
-              <li class="homepage-slider-slide">
-                <a href="<?php print url($slide3_url); ?>">
-                  <div class="homepage-slide-inner container">
-                    <?php if($slide3_head || $slide3_desc) : ?>
-                    <div class="homepage-slide-content">
-                      <div class="homepage-slide-title"><?php print $slide3_head; ?></div>
-                      <div class="clr"></div>
-                      <div class="homepage-slide-caption"><?php print $slide3_desc; ?></div>
-                    </div>
-                    <?php endif; ?>
-                  </div>
-                  <img src="<?php print base_path() . drupal_get_path('theme', 'peace_geeks') . '/images/slide-image-3.jpg'; ?>">
-                </a>
+
+              <li <?php if($slide3_head): ?> data-cycle-ptitle="<?php print $slide3_head; ?>" <?php endif; ?>
+                  <?php if($slide3_desc): ?> data-cycle-ptext="<?php print $slide3_desc; ?>" <?php endif; ?>
+                  data-cycle-pmore="Read More" data-cycle-plink="<?php print url($slide3_url); ?>">
+                <a class="frmore" href="<?php print url($slide3_url); ?>"> <img src="<?php print base_path() . drupal_get_path('theme', 'peace_geeks') . '/images/slide-image-3.jpg'; ?>"/> </a>
               </li>
+
             </ul>
+
+            <div class="prev"></div>
+            <div class="next"></div>
+
           </div>
         </div>
+        <?php else: ?>
+          <div class="headboz"></div>
         <?php endif; ?>
-      <?php endif; ?>
+
       <!-- End of slideshow code. -->
 
 

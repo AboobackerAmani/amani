@@ -79,12 +79,19 @@ function peace_geeks_preprocess_html(&$variables, $hook) {
   // SS Social
   drupal_add_css($theme_path . '/fonts/ss-social/ss-social.css', array('group' => CSS_THEME, 'every_page' => TRUE));
   drupal_add_js($theme_path . '/fonts/ss-social/ss-social.js', array('type' => 'file', 'scope' => 'footer'));
+}
 
-  drupal_add_css(base_path() . drupal_get_path('theme', 'peace_geeks') . '/css/responsive.css', 'file');
-  drupal_add_js(base_path() . drupal_get_path('theme', 'peace_geeks') . '/js/global.js', 'file');
-  drupal_add_js(base_path() . drupal_get_path('theme', 'peace_geeks') . '/js/html5.js', 'file');
-  drupal_add_js(base_path() . drupal_get_path('theme', 'peace_geeks') . '/js/plugins.js', 'file');
-  drupal_add_js(base_path() . drupal_get_path('theme', 'peace_geeks') . '/js/retina.js', 'file');
+function peace_geeks_theme_page_alter($page) {
+  // <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  $viewport = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+    'name' =>  'viewport',
+    'content' =>  'width=device-width, initial-scale=1, maximum-scale=1'
+    )
+  );
+  drupal_add_html_head($viewport, 'viewport');
 }
 
 /**
@@ -173,3 +180,47 @@ function peace_geeks_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+/**
+ * Implements hook_html_head_alter().
+ * This will overwrite the default meta character type tag with HTML5 version.
+ */
+function peace_geeks_html_head_alter(&$head_elements) {
+  $head_elements['system_meta_content_type']['#attributes'] = array(
+    'charset' => 'utf-8'
+  );
+}
+
+/**
+ * Override or insert variables into the node template.
+ */
+function peace_geeks_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  if ($variables['view_mode'] == 'full' && node_is_page($variables['node'])) {
+    $variables['classes_array'][] = 'node-full';
+  }
+  $variables['date'] = t('!datetime', array('!datetime' =>  date('j F Y', $variables['created'])));
+}
+
+function peace_geeks_page_alter($page) {
+  // <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  $viewport = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+    'name' =>  'viewport',
+    'content' =>  'width=device-width, initial-scale=1, maximum-scale=1'
+    )
+  );
+  drupal_add_html_head($viewport, 'viewport');
+}
+
+
+/**
+ * Add javascript files for front-page jquery slideshow.
+ */
+if (drupal_is_front_page()) {
+  drupal_add_js(drupal_get_path('theme', 'peace_geeks') . '/js/cycle2.js');
+  drupal_add_js(drupal_get_path('theme', 'peace_geeks') . '/js/center2.js');
+  drupal_add_js(drupal_get_path('theme', 'peace_geeks') . '/js/slide.js');
+}
