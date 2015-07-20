@@ -7,6 +7,7 @@
   color: $white;
   font-weight: $fw-light;
   margin-top: 30px;
+  width: 960px;
   padding: 20px 10px 40px;
   position:absolute;
 	bottom:0;
@@ -33,41 +34,41 @@
     color: $white;
     @include link-hover-color();
   }
-  
+
   div[id*="block-menu-menu-meta"],
   div[id*="block-search-form"] {
     @include element-invisible;
   }
-  
+
   //Logo in footer
-  #block-bean-amani-powered-by { 
+  #block-bean-amani-powered-by {
     //@include zen-grid-item(3,1);
     width: 30%;
-    
+
     .field-item > img {
        @include element-invisible;
     }
   }
-  
+
   //Footer menu
   #block-menu-menu-amani-main-menu {
     //@include zen-grid-item(7,4);
     width: 70%;
-    
+
     li {
       width: 10em;
       display: inline-block;
       float: left;
-      
+
       a {
         @include font-size(14px);
         letter-spacing: 0.5px;
       }
-      
+
       &:nth-child(2n+1) {
         clear: left;
       }
     }
   }
-  
+
 }

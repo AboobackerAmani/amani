@@ -11,14 +11,13 @@
       width: auto;
     }
   }
-  
+
 }
 
 .region-header {
   width: 100%;
   position: absolute;
   top: 70px;
-  left: 0;
   padding: 0 10px;
   @media all and (min-width: $breakpoint) {
     position: initial;
@@ -32,16 +31,17 @@
   position: fixed;
   right: 0;
   left: 0;
-  width: 100%;
+  width: 960px;
   height: 93px;
   z-index: 9;
+  background-color: #fff;
   
   h1.header__site-name {
     display: inline-block;
     text-indent: -9999em;
     float: left;
   }
-  
+
   .header__secondary-menu,
   #block-menu-menu-meta {
     @include element-invisible;
@@ -51,7 +51,7 @@
 #navigation {
   ul {
     list-style-type: none;
-  } 
+  }
   li {
     float: left;
   }
@@ -88,7 +88,7 @@ div[id*="block-menu-menu-social-media"] {
     color: $font-color;
     @include ss-icon('circle');
     @include link-hover-color(tint($primary-color, 50%));
-    @include font-size(20px); 
+    @include font-size(20px);
   }
 }
 

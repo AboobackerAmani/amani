@@ -5,7 +5,7 @@
 
 //Main menu in header
 
-// Mobile version first 
+// Mobile version first
 #mobile-toggle {
   position: absolute;
   top: 10px;
@@ -24,7 +24,7 @@
 #header {
   #block-system-main-menu {
     display: none;
-    
+
     ul.menu {
       margin-top: 5px;
       margin-bottom: 0;
@@ -55,7 +55,7 @@
     display: none;
   }
 }
-  
+
 //screen bigger than 768px
 @media all and (min-width: $breakpoint) {
   #header {
@@ -65,7 +65,7 @@
       margin-right: auto;
       width: auto;
       position: relative;
-      left: 0; 
+      left: -43px; 
       top: 0;
 
       .mobile-menu-link {
@@ -87,7 +87,7 @@
 
         &:last-child { border-right: 0 none; }
       }
-    
+
       a {
           border: medium none;
           color: #474f5e;
@@ -104,13 +104,13 @@
 
 }
 
-//desktop menu 
+//desktop menu
 // Main navigation
 #navigation {
   @include element-invisible;
-  
-  
-  
+
+
+
   display: table;
   margin-left: auto;
   margin-right: auto;

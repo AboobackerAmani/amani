@@ -52,6 +52,9 @@ stylesheets[all][] = system.theme.css
 ; Then we add our own stylesheet.
 stylesheets[all][] = css/styles.css
 
+stylesheets[all][] = css/slider/slide_style.css
+stylesheets[all][] = css/slider/responsive.css
+
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html
 ; element, such as .lt-ie9, .lt-ie8, .lt-ie7. More information on this
@@ -69,6 +72,11 @@ stylesheets[all][] = css/styles.css
 scripts[] = js/jquery.uniform.min.js
 scripts[] = js/script.js
 
+scripts[] = js/slider/global.js
+scripts[] = js/slider/html5.js
+scripts[] = js/slider/plugins.js
+scripts[] = js/slider/retina.js
+scripts[] = js/header.js
 
 
 ; This section lists the regions defined in Zen's default page.tpl.php and
