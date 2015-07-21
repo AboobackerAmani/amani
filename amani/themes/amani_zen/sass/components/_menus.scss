@@ -16,7 +16,7 @@
   overflow: hidden;
   width: 25px;
   height: 30px;
-  background: image-url('../images/mobile-menu-toggle.png') no-repeat center center;
+  background-image: url('../images/mobile-menu-toggle.png') no-repeat center center;
   display: block;
   z-index: 999;
 }
@@ -65,7 +65,7 @@
       margin-right: auto;
       width: auto;
       position: relative;
-      left: -43px; 
+      left: -43px;
       top: 0;
 
       .mobile-menu-link {
@@ -89,7 +89,6 @@
       }
 
       a {
-          border: medium none;
           color: #474f5e;
           @include font-size(16px);
           font-weight: 200;
@@ -98,6 +97,8 @@
           padding: 0 16px;
           float: left;
           text-transform: uppercase;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
       }
     }
   }

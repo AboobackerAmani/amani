@@ -921,7 +921,7 @@ body.not-logged-in #page {
   overflow: hidden;
   width: 25px;
   height: 30px;
-  background: url('../images/../images/mobile-menu-toggle.png?1437164626') no-repeat center center;
+  background-image: url("../images/mobile-menu-toggle.png") no-repeat center center;
   display: block;
   z-index: 999;
 }
@@ -985,7 +985,6 @@ body.not-logged-in #page {
     border-right: 0 none;
   }
   #header #block-system-main-menu a {
-    border: medium none;
     color: #474f5e;
     font-size: 16px;
     font-size: 1.23077rem;
@@ -995,6 +994,8 @@ body.not-logged-in #page {
     padding: 0 16px;
     float: left;
     text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 #navigation {
@@ -1211,9 +1212,16 @@ div[id*="block-menu-menu-social-media"] li {
 #header,
 #main,
 #footer {
-  max-width: 100%;
+  max-width: 960px;
   margin: 0 auto;
   position: relative;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
 }
 
 .homepage-slide-inner.container {
@@ -1383,10 +1391,7 @@ div[id*="block-menu-menu-social-media"] li {
 }
 
 #header {
-  position: fixed;
-  right: 0;
-  left: 0;
-  width: 960px;
+  width: 970px;
   height: 93px;
   z-index: 9;
   background-color: #fff;
@@ -1451,7 +1456,7 @@ div[id*="block-menu-menu-social-media"] a {
   font-size: 1.53846rem;
 }
 div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social-media"] a:hover, div[id*="block-menu-menu-social-media"] a:active {
-  color: #ace1f6;
+  color: #ace0f6;
 }
 
 #footer div[id*="block-menu-menu-social-media"] {
@@ -1499,4 +1504,30 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   text-transform: uppercase;
   letter-spacing: 2px;
   float: right;
+}
+
+/**
+ * @file
+ * Front Page Special Event block
+ */
+#block-amani-front-page-special-event {
+  background-color: #474F5E;
+  color: #fff;
+  padding: 30px;
+  margin: 40px 0 0 0;
+}
+#block-amani-front-page-special-event h2 {
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#block-amani-front-page-special-event p {
+  font-size: 35px;
+  line-height: 40px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
