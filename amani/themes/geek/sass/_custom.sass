@@ -1,0 +1,648 @@
+// Custom
+// ------
+// This file is used to define custom overrides and
+// style changes to be used for building your theme.
+// Documentation: http://sass-lang.com/docs/yardoc/_index.html
+
+// Import variables and mixins to be used.
+@import _config.sass
+
+body
+  background: $grey_dark
+  font-family: "bariol_regularregular"
+  &.page-file-edit.section-file
+    background: #fff
+
+.cke_show_borders
+  background: white
+
+#main,
+#content-top
+  background: $blue_light
+
+a
+  outline: 0
+  border: 0
+  @include transition(color 0.4s ease, background-color 0.4s ease)
+  &:link, &:visited
+    color: $orange
+  &:hover, &:active
+    color: lighten($orange, 10%)
+    text-decoration: none
+
+// Logo
+#name-and-slogan
+  float: left
+  display: block
+  margin-right: $margin
+  margin-top: $margin
+  @include media($motab)
+    width: 100% !important
+    text-align: center
+    float: left
+    #site-logo
+      display: block
+      img
+        max-height: 90px
+  a
+    display: inline-block
+
+.site-slogan
+  display: inline-block
+  font-style: oblique
+  font-size: 14px
+  color: #999
+  font-family: Georgia
+  text-align: left
+  width: 370px
+  margin-top: 70px
+  margin-bottom: $margin/4
+  @include breakpoint($motab)
+    margin-top: 20px
+    width: 100%
+    text-align: center
+    max-width: 100%
+
+#site-name
+  display: none
+
+// header
+#header
+  background: #fff
+  box-shadow: 0 8px 8px #c8c8c8
+  @include breakpoint($motab)
+    margin-bottom: $margin*1.5
+  .container-inner
+    position: relative
+    @include breakpoint($motab)
+      padding: $gutter 0
+
+// Page
+#page
+  @include breakpoint($motab)
+    overflow: hidden
+
+// Yellow button plus.
+a.button:not(.launcher):not(.remove):not(.edit)
+  background: $orange url('../images/icons/yellow_button_plus.png') 100% 50% no-repeat
+  padding: $padding - 10px
+  padding-right: $padding*3
+  color: #fff
+  font-family: "bariol_regularregular"
+  font-style: oblique
+  display: inline-block
+  font-size: 25px
+  font-weight: normal
+  box-shadow: 3px 3px 8px #999
+  &:after
+    content: "" !important
+
+// Content header
+#content-header
+  h2
+    margin: 0
+  h1
+    margin: 0
+
+// Header region
+#header-region
+  .form-submit
+    display: none
+  float: right
+  width: 61%
+  padding-bottom: 10px
+  position: absolute
+  right: $gutter
+  //@include span-columns(9)
+  @include omega
+  @include media($motab)
+    float: none
+    width: 100%
+    margin: 0
+    #block-locale-language,
+    #block-menu-menu-meta,
+    #block-search-form,
+    #block-menu-menu-social-media
+      display: none !important
+
+// remove ajax throbber
+.page-team .ajax-progress-throbber
+  display: none
+
+// Gallery styles
+.meta-wrapper
+  .media-title
+    font-family: "bariol_regularregular"
+    text-transform: uppercase
+    font-weight: normal
+    font-size: 16px
+    color: $orange
+    a
+      color: $orange
+  .media-description
+    font-size: 13px
+    font-family: "Georgia"
+    color: #444
+
+// Region top
+.region-home-content-top-rotator
+  @include fill-parent
+  @include omega
+  margin-bottom: $margin
+  background: #fff
+  .left-col
+    @include span-columns(8)
+    @include media($tablet)
+      @include fill-parent
+    .field-content
+      display: block
+      line-height: 0
+    a
+      display: block
+      line-height: 0
+  .right-col
+    @include span-columns(4)
+    @include omega
+    padding: $padding
+    @include media($tablet)
+      @include fill-parent
+    h2
+      font-size: 24px
+      line-height: 1.24
+
+.region-home-content-top-callout-right
+  @include span-columns(3)
+  @include omega
+  @include media($motab)
+    @include fill-parent
+    #block-bean-become-a-pilot-project
+      margin-bottom: 0
+  .block
+    @include fill-parent
+    @include omega
+    padding: $padding
+    background: #fff
+    margin-bottom: $margin
+
+.region-home-content-top-static-region
+  @include fill-parent
+  @include omega
+  .block
+    @include span-columns(4)
+    @include omega(3n)
+    padding: $padding
+    background: #fff
+    @include media($motab)
+      @include fill-parent()
+      @include omega()
+    .views-field-field-image img
+      width: 100%
+      height: auto
+    .views-field-title
+      text-transform: uppercase
+      margin: 5px 0
+      font-size: 16px
+      color: $orange
+
+// Menu
+.sf-menu.sf-horizontal.sf-shadow ul,
+.sf-menu.sf-vertical.sf-shadow ul,
+.sf-menu.sf-navbar.sf-shadow ul ul
+  background: #fff
+  padding: $padding/2 !important
+  box-shadow: 0 0 20px #ccc
+  @include border-radius(0, 0, 5px, 5px)
+
+// Programs page with get-involved block enabled.
+.amani-admin-get-involved-activated
+  &.page-programs
+    .views-row
+      @include span-columns(4 of 8)
+      @include omega(2n)
+      background: #fff
+      padding: $padding
+      margin-bottom: $margin
+      @include media($motab)
+        @include fill-parent
+      .views-field-title
+        text-transform: uppercase
+        font-size: 16px
+        margin-bottom: 5px
+      .views-field-body
+        font-family: "Georgia"
+      .views-field-field-image,
+      .views-field-field-media
+        img
+          width: 100%
+          height: auto
+// Programs page with get-involved block disabled.
+.page-programs
+  .views-row
+    // We need slightly less than 4 of 12 columns
+    // there is probably a better way to do this.
+    display: block
+    float: left
+    margin-right: 2%
+    width: 31%
+    background: #fff
+    padding: $padding
+    margin-bottom: $margin
+    @include media($motab)
+      @include fill-parent
+    .views-field-title
+      text-transform: uppercase
+      font-size: 16px
+      margin-bottom: 5px
+    .views-field-body
+      font-family: "Georgia"
+    .views-field-field-image,
+    .views-field-field-media
+      img
+        width: 100%
+        height: auto
+
+// Navigation
+#navigation
+  &.without-slogan
+    margin-top: 95px
+
+#navigation,
+#block-superfish-superfish_1,
+#block-superfish-1,
+#block-menu-menu-amani-main-menu
+  #header-region &,
+  #navigation &
+    .content
+      font-size: 16px
+      li
+        margin-right: $margin/4
+        //background: url('../images/icons/bullet.png') 100% 50% no-repeat
+        padding-left: 0
+        margin-left: 0
+        display: inline-block
+        padding-top: 0
+        li
+          margin: $margin/3 0
+          &:first-child
+            margin-top: 0
+          &:last-child
+            margin-bottom: 0
+        &:last-child
+          background: none
+          padding-right: 0
+          margin-right: 0
+        a
+          &:link, &:visited,
+          &.active
+            color: $orange
+          &:hover, &:active
+            color: lighten($orange, 10%)
+        &.sf-depth-1
+          padding-right: $padding/2
+          position: relative
+          &:after
+            content: '•'
+            color: $orange
+            display: inline-block
+            position: absolute
+            right: 0
+            top: 0
+          &:last-child
+            padding-right: 0
+            &:after
+              content: ''
+              display: none
+
+// Mobile menu
+.mobile-menu-link
+  display: none
+  text-align: center
+  @include media($motab)
+    display: block
+    background: #fff
+    padding: $padding/2 0
+    border-top: 1px solid #ccc
+    border-bottom: 1px solid #ccc
+    text-transform: uppercase
+#header-region,
+#navigation
+  .container-inner
+    padding: 0
+  #block-superfish-1
+    display: block !important
+    @include media($bt_motab)
+      #superfish-1
+        display: block !important
+    @include media($motab)
+      position: absolute
+      top: $gutter
+      display: block !important
+      left: 0
+      background: #fff
+      z-index: 9999
+      width: 100%
+      &.fixed
+        position: fixed
+        top: 0
+        height: 50px
+      //padding: $padding
+      #superfish-1
+        background: #fff
+        display: none
+        box-shadow: 0 10px 10px #999
+        li
+          display: block
+          text-align: center
+          float: none
+          padding: $padding/2 0
+          margin: 0
+          background: none
+          @include media($motab)
+            ul
+              width: 100% !important
+          &.last
+            margin-bottom: $margin/2
+          a
+            border-bottom: 1px solid $orange
+            display: inline
+            padding: $padding/3 0
+            color: #333
+
+// Sidebar
+#sidebar-second
+  .block
+    background: #fff
+    padding: $padding/2 $padding/3 $padding
+    box-shadow: 2px 3px 4px #c8c8c8
+    margin: $margin 0
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+    h2.block-title
+      font-family: "bariol_regularregular"
+      font-size: 20px
+      border-bottom: 2px solid $orange
+      text-align: left
+      color: $grey_dark
+      padding-bottom: $padding/4
+      margin-bottom: $margin/2
+    ul.menu
+      li
+        list-style-type: none
+        list-style-image: none
+    a
+      &:after
+        content: " \bb"
+    .block
+      padding: 0
+      box-shadow: none
+
+// Resource,blog,news and events views
+.view-news-and-events,
+.view-news-and-events-blog,
+.view-resources,
+.view-legislation,
+.view-activities
+  .views-row
+    overflow: hidden
+    border-bottom: 1px solid $grey
+    &.views-row-last
+      border-bottom: 0
+      margin-bottom: 0
+    .views-field-title
+      font-size: 16px
+      margin-bottom: $margin/2
+    .views-field-field-image,
+    .views-field-field-media
+      @include span-columns(2 of 5)
+      img
+        width: 100%
+        height: auto
+
+// pager styles
+.item-list
+  ul.pager
+    margin-top: $margin
+    padding-top: $padding
+    border-top: 1px solid $grey
+
+.node-article,
+.node-resource,
+.node-get-involved,
+.node-event,
+.node-blog,
+.node-project,
+.node-activity
+  .field-name-field-media
+    @include clearfix
+    background: #eee
+    padding: $padding
+    margin-bottom: $margin
+    .field-item
+      @include span-columns(12/3)
+      @include omega(3n)
+      > div
+        margin: 10px 5px
+      img:not(.file-icon),
+      iframe
+        width: 100%
+        height: auto
+
+// All incidents page
+
+#block-views-incident_reports-block_1 .views_row
+  padding: 10px 0
+
+#sidebar-second form#views-exposed-form-incident-reports-page-1 .views-exposed-widget 
+  float: none 
+label
+  font-size: 130%
+  padding-bottom: 20px
+  
+#sidebar-second form#views-exposed-form-incident-reports-page-1 .views-exposed-form .views-widget label
+  font-weight: normal
+  font-size: 100%
+
+// Footer
+#footer
+  background: $grey_dark
+  color: #fff
+  font-family: "georgia"
+  .container-inner
+    position: relative
+  .content
+    font-size: 14px
+  a
+    &:link, &:visited
+      color: #fff
+    &:hover, &:active
+      color: lighten($orange, 10%)
+      text-decoration: none
+  #block-bean-amani-powered-by
+    @include span-columns(2 of 12)
+    .credits-text
+      font-size: 12px
+    @include media($motab)
+      @include fill-parent
+      @include omega
+      margin-bottom: $margin
+      border: 0
+      text-align: center
+  #block-system-main-menu,
+  #block-menu-menu-amani-main-menu,
+  #block-menu-menu-meta
+    @include span-columns(2 of 12)
+    margin-bottom: $margin
+    @include media($motab)
+      @include fill-parent
+      @include omega
+      margin-bottom: $margin
+      border: 0
+      ul.menu
+        li
+          text-align: center
+    ul.menu
+      li
+        list-style-type: none
+        list-style-image: none
+  #block-bean-amani-special-thanks
+    @include span-columns(5 of 12)
+    @include shift()
+    margin-bottom: $margin
+    margin-right: 0
+    @include media($motab)
+      @include fill-parent
+      @include omega
+      text-align: center
+      position: static
+  #block-search-form
+    @include span-columns(2 of 12)
+    @include shift(-2)
+    margin-top: $margin*3
+    @include media($motab)
+      @include fill-parent
+      @include omega
+      @include shift(0)
+      margin-top: 0
+      margin-bottom: $margin/3
+
+// accordian styling
+.ui-accordion .ui-accordion-header
+  margin-top: 5px
+.field-group-accordion-wrapper
+  .field-group-accordion-item
+    border: 0
+    background: none
+    padding: 0
+  h3.ui-accordion-header
+    border: 1px solid #ccc
+    background: #fff
+    padding: 10px 10px 10px 2em
+    font-size: 22px
+
+// breadcrumb
+.breadcrumb
+  background: $blue_light
+  @include fill-parent
+  font-style: oblique
+  font-size: 11px
+  color: #999
+  font-family: Georgia
+  position: relative
+  //top: -$margin/2
+  @include media($motab)
+    @include fill-parent
+    @include outer-container
+  a
+    color: #999
+    margin: 0 $margin/6
+    &:first-child
+      margin-left: 0
+    &:last-child
+      color: $orange
+      font-style: normal
+  @include media($mobile)
+    top: 0px
+
+// Home page
+.front
+  #main
+    .container-inner
+      margin-top: 0
+      padding-top: 0
+
+// partners carousel
+#block-views-partners_carousel-block
+  a
+    &.jcarousel-next
+      display: inline-block
+      background: url('../images/icons/rotator_arrows.png') no-repeat -19px 0
+      height: 22px
+      width: 11px
+      text-indent: -999px
+      overflow: hidden
+      position: absolute
+      right: 20px
+      bottom: 20px
+      z-index: 99
+    &.jcarousel-prev
+      display: inline-block
+      background: url('../images/icons/rotator_arrows.png') no-repeat 0 0
+      height: 22px
+      width: 11px
+      text-indent: -999px
+      overflow: hidden
+      position: absolute
+      right: 50px
+      bottom: 20px
+      z-index: 99
+  .view-content
+    ul
+      &.jcarousel
+        width: 10000px !important
+      li.jcarousel-item
+        height: 100px
+        position: relative
+        display: table
+        .views-field
+          display: table-cell
+          vertical-align: middle
+        img
+          //width: 100%
+          max-width: 155px
+          max-height: 100px
+          width: auto
+          height: auto
+          display: block
+
+// Partners carousel
+.view-partners-carousel
+  .jcarousel-container-horizontal
+    width: 100%
+    height: 120px
+    padding: 20px 5px
+    margin: auto
+    .jcarousel-clip-horizontal
+      width: 80%
+      overflow: hidden
+      margin: auto
+      .jcarousel-item-horizontal,
+      .jcarousel-item
+        margin: 0 10px
+        padding: 0
+        width: auto
+        height: auto
+        border: none
+        background: none
+    .jcarousel-prev-horizontal
+      top: 55px
+      left: 0px
+    .jcarousel-next-horizontal
+      top: 55px
+      right: 0px
+
+// Hide description lable on media fields
+.field-name-media-description
+  .field-label
+    display: none

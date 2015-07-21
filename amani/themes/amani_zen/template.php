@@ -79,13 +79,6 @@ function amani_zen_preprocess_html(&$variables, $hook) {
   // SS Social
   drupal_add_css($theme_path . '/fonts/ss-social/ss-social.css', array('group' => CSS_THEME, 'every_page' => TRUE));
   drupal_add_js($theme_path . '/fonts/ss-social/ss-social.js', array('type' => 'file', 'scope' => 'footer'));
-
-  drupal_add_css($theme_path . 'css/slider/responsive.css');
-  drupal_add_css($theme_path . 'css/slider/slide_style.css');
-  drupal_add_js($theme_path . '/js/slider/global.js', 'file');
-  drupal_add_js($theme_path . '/js/slider/html5.js', 'file');
-  drupal_add_js($theme_path . '/js/slider/plugins.js', 'file');
-  drupal_add_js($theme_path . '/js/slider/retina.js', 'file');
 }
 
 /**
