@@ -6,7 +6,14 @@
 #header,
 #main,
 #footer {
-  max-width: 100%;
+  max-width: 960px;
   margin: 0 auto;
   position: relative;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
 }
