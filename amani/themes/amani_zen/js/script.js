@@ -12,15 +12,40 @@
 // - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
 (function ($, Drupal, window, document, undefined) {
 
-
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
-Drupal.behaviors.my_custom_behavior = {
-  attach: function(context, settings) {
+  
+  //Mobile nav
+  Drupal.behaviors.mobileNav = {
+    attach: function(context, settings) {
 
-    // Place your code here.
+      var nb = $('#mobile-toggle');
+      var n = $('#block-system-main-menu');
 
+        $(window).on('resize', function(){
+    
+        if($(this).width() < 768 && n.hasClass('keep-nav-closed')) {
+          // if the nav menu and nav button are both visible,
+          // then the responsive nav transitioned from open to non-responsive, then back again.
+          // re-hide the nav menu and remove the hidden class
+          $('#block-system-main-menu').hide().removeAttr('class');
+        }
+        if(nb.is(':hidden') && n.is(':hidden') && $(window).width() > 767) {
+          // if the navigation menu and nav button are both hidden,
+          // then the responsive nav is closed and the window resized larger than 767.
+          // just display the nav menu which will auto-hide at <768 width.
+          $('#block-system-main-menu').show().addClass('keep-nav-closed');
+        }
+      }); 
+
+        //slide toggle for mobile menu
+      $("#block-system-main-menu").once('mobileNav', function() {
+        $("#mobile-toggle").on('click', function() {
+          $(this).toggleClass('expand');
+          $("#block-system-main-menu").slideToggle('slow');
+        });
+      })
+    }
   }
-};
-
+  
 
 })(jQuery, Drupal, this, this.document);
