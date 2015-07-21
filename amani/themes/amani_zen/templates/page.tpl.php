@@ -81,6 +81,7 @@
 
     </div>
 
+
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
       <?php print $breadcrumb; ?>
