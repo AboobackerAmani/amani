@@ -8,7 +8,7 @@
  */
 ?>
 
-<div id="page">
+<div id="page" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
   <header class="header" id="header" role="banner">
 
@@ -52,7 +52,28 @@
 
   </header>
 
-  <div id="main">
+  <?php if($page['home_content_top_rotator'] || $page['home_content_top_callout_right'] || $page['home_content_top_static_region']): ?>
+  <section id="content-top" class="clearfix" class="container">
+    <div class="container-inner">
+      <?php if ($page['home_content_top_rotator']): ?>
+        <?php if ($breadcrumb): ?>
+          <?php print $breadcrumb; ?>
+        <?php endif; ?>
+        <?php print render($page['home_content_top_rotator']); ?>
+      <?php endif; ?>
+
+      <?php if ($page['home_content_top_callout_right']): ?>
+        <?php print render($page['home_content_top_callout_right']); ?>
+      <?php endif; ?>
+
+      <?php if ($page['home_content_top_static_region']): ?>
+        <?php print render($page['home_content_top_static_region']); ?>
+      <?php endif; ?>
+    </div>
+  </section>
+  <?php endif; ?>
+
+  <div id="main" class="clearfix" class="container">
 
     <div id="navigation">
 
@@ -76,48 +97,89 @@
           )); ?>
         </nav>
       <?php endif; ?>
-
-      <?php print render($page['navigation']); ?>
-
     </div>
 
 
-    <div id="content" class="column" role="main">
-      <?php print render($page['highlighted']); ?>
-      <?php print $breadcrumb; ?>
-      <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-        <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+    <div class="container-inner">
+
+      <?php if ($breadcrumb || $title|| $messages || $tabs || $action_links): ?>
+        <div id="content-header">
+
+          <?php if ($breadcrumb && !$page['home_content_top_rotator']): ?>
+            <?php print $breadcrumb; ?>
+         <?php endif; ?>
+
+          <?php if ($page['highlighted']): ?>
+            <div id="highlighted"><?php print render($page['highlighted']) ?></div>
+          <?php endif; ?>
+
+          <?php print render($title_prefix); ?>
+
+          <?php if ($title): ?>
+            <h1 class="title"><?php print $title; ?></h1>
+          <?php endif; ?>
+
+          <?php print render($title_suffix); ?>
+          <?php print $messages; ?>
+          <?php print render($page['help']); ?>
+
+          <?php if ($tabs): ?>
+            <div class="tabs"><?php print render($tabs); ?></div>
+          <?php endif; ?>
+
+          <?php if ($action_links): ?>
+            <ul class="action-links"><?php print render($action_links); ?></ul>
+          <?php endif; ?>
+
+        </div> <!-- /#content-header -->
       <?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
-      <?php print render($tabs); ?>
-      <?php print render($page['help']); ?>
-      <?php if ($action_links): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-      <?php print render($page['content']); ?>
-      <?php print $feed_icons; ?>
+
+      <section id="content">
+
+          <div id="content-area">
+            <?php print render($page['content']) ?>
+          </div>
+
+          <?php if(!empty($page['map_region_2x'])): ?>
+            <?php print render($page['map_region_2x']) ?>
+          <?php endif; ?>
+
+          <?php if(!empty($page['map_region_3x'])): ?>
+            <?php print render($page['map_region_3x']) ?>
+          <?php endif; ?>
+
+          <?php print $feed_icons; ?>
+
+      </section> <!-- /content-inner /content -->
+
+      <?php if ($page['sidebar_first']): ?>
+        <aside id="sidebar-first" class="column sidebar first">
+          <?php print render($page['sidebar_first']); ?>
+        </aside>
+      <?php endif; ?> <!-- /sidebar-first -->
+
+      <?php if ($page['sidebar_second']): ?>
+        <aside id="sidebar-second" class="column sidebar second">
+          <?php print render($page['sidebar_second']); ?>
+        </aside>
+      <?php endif; ?> <!-- /sidebar-second -->
     </div>
 
-
-    <?php
-      // Render the sidebars to see if there's anything in them.
-      $sidebar_first  = render($page['sidebar_first']);
-      $sidebar_second = render($page['sidebar_second']);
-    ?>
-
-    <?php if ($sidebar_first || $sidebar_second): ?>
-      <aside class="sidebars">
-        <?php print $sidebar_first; ?>
-        <?php print $sidebar_second; ?>
-      </aside>
+    <?php if(!empty($page['content_bottom'])): ?>
+      <div class="container-inner">
+        <?php print render($page['content_bottom']) ?>
+      </div>
     <?php endif; ?>
 
   </div>
 
-  <?php print render($page['footer']); ?>
+  <?php if ($page['footer']): ?>
+    <footer id="footer" class="container">
+      <div class="container-inner">
+        <?php print render($page['footer']); ?>
+      </div>
+    </footer> <!-- /footer -->
+  <?php endif; ?>
 
 </div>
 
