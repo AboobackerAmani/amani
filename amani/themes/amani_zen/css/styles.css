@@ -14,24 +14,24 @@
 }
 /* Regular */
 @font-face {
-  font-family: 'Open Sans';
-  src: url("fonts/OpenSans-Regular.ttf");
+  font-family: 'Open Sans Regular';
+  src: url("../fonts/OpenSans-Regular.ttf");
   font-weight: normal;
   font-weight: 400;
   font-style: normal;
 }
 /* Italic */
 @font-face {
-  font-family: 'Open Sans';
-  src: url("fonts/OpenSans-Italic.ttf");
+  font-family: 'Open Sans Italic';
+  src: url("../fonts/OpenSans-Italic.ttf");
   font-weight: normal;
   font-weight: 400;
   font-style: italic;
 }
 /* Light */
 @font-face {
-  font-family: 'Open Sans';
-  src: url("fonts/OpenSans-Light.ttf");
+  font-family: 'Open Sans Light';
+  src: url("../fonts/OpenSans-Light.ttf");
   font-weight: 200;
   font-style: normal;
 }
@@ -44,45 +44,45 @@
 }
 /* Semibold */
 @font-face {
-  font-family: 'Open Sans';
-  src: url("fonts/OpenSans-Semibold.ttf");
+  font-family: 'Open Sans Semi Bold';
+  src: url("../fonts/OpenSans-Semibold.ttf");
   font-weight: 500;
   font-style: normal;
 }
 /* Semibold Italic */
 @font-face {
-  font-family: 'Open Sans';
-  src: url("fonts/OpenSans-SemiboldItalic.ttf");
+  font-family: 'Open Sans Semi Bold';
+  src: url("../fonts/OpenSans-SemiboldItalic.ttf");
   font-weight: 500;
   font-style: italic;
 }
 /* Bold */
 @font-face {
-  font-family: 'Open Sans';
-  src: url("fonts/OpenSans-Bold.ttf");
+  font-family: 'Open Sans Bold';
+  src: url("../fonts/OpenSans-Bold.ttf");
   font-weight: bold;
   font-weight: 700;
   font-style: normal;
 }
 /* Bold Italic */
 @font-face {
-  font-family: 'Open Sans';
-  src: url("fonts/OpenSans-BoldItalic.ttf");
+  font-family: 'Open Sans Bold Italic';
+  src: url("../fonts/OpenSans-BoldItalic.ttf");
   font-weight: bold;
   font-weight: 700;
   font-style: italic;
 }
 /* Extra Bold */
 @font-face {
-  font-family: 'Open Sans';
-  src: url("fonts/OpenSans-ExtraBold.ttf");
+  font-family: 'Open Sans Extra Bold';
+  src: url("../fonts/OpenSans-ExtraBold.ttf");
   font-weight: 900;
   font-style: normal;
 }
 /* Extra Bold Italic */
 @font-face {
-  font-family: 'Open Sans';
-  src: url("fonts/OpenSans-ExtraBoldItalic.ttf");
+  font-family: 'Open Sans Extra Bold Italic';
+  src: url("../fonts/OpenSans-ExtraBoldItalic.ttf");
   font-weight: 900;
   font-style: italic;
 }
@@ -1226,11 +1226,11 @@ button:focus {
 
 .right-col {
   position: absolute;
-  top: 87px;
+  top: 100px;
   left: 75px;
   background-color: orange;
   width: 400px;
-  height: 363px;
+  height: 400px;
   font-size: 20px;
   padding: 20px 20px 20px 20px;
 }
@@ -1242,13 +1242,17 @@ button:focus {
 .field-content.slide_title {
   font-family: 'Open Sans Light Italic', sans-serif;
   font-style: italic;
+  font-size: 32px;
+  line-height: 125%;
+  color: #FFF;
   position: absolute;
   top: 4px;
 }
 
 .field-content.slide_body {
-  font-family: sans-serif;
+  font-family: 'Open Sans Semi Bold', sans-serif;
   font-weight: bold;
+  color: #FFF;
   position: absolute;
   top: 65px;
 }

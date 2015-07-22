@@ -1,10 +1,10 @@
 .right-col {
   position: absolute;
-  top: 87px;
+  top: 100px;
   left: 75px;
   background-color: orange;
   width: 400px;
-  height: 363px;
+  height: 400px;
   font-size: 20px;
   padding: 20px 20px 20px 20px;
 }
@@ -17,13 +17,17 @@
 .field-content.slide_title {
   font-family: 'Open Sans Light Italic', sans-serif;
   font-style: italic;
+  font-size: 32px;
+  line-height: 125%;
+  color: #FFF;
   position: absolute;
   top: 4px;
 }
 
 .field-content.slide_body {
-  font-family: sans-serif;
+  font-family: 'Open Sans Semi Bold', sans-serif;
   font-weight: bold;
+  color: #FFF;
   position:  absolute;
   top: 65px;
 }
