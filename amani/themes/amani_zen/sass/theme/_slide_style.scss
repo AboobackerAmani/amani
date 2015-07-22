@@ -1,33 +1,29 @@
-.homepage-slide-inner.container {
-  margin-top: 132px;
-  width: 100%;
-  position: relative;
-}
-
-.homepage-slide-content {
-  width: 25%;
-  height: 375px;
+.right-col {
   position: absolute;
-  top: 75px;
-  left: 100px;
-  background-color: rgb(240, 148, 22);
+  top: 87px;
+  left: 75px;
+  background-color: orange;
+  width: 400px;
+  height: 363px;
+  font-size: 20px;
+  padding: 20px 20px 20px 20px;
 }
 
-.homepage-slide-title {
-  font-size: 150%;
-  color: #fff;
-  font-family: 'Open Sans' sans-serif;
-  font-weight: lighter;
+.region.region-home-content-top-rotator {
+  margin-top: 35px;
+}
+
+// custom font wont read from file for som reason.
+.field-content.slide_title {
+  font-family: 'Open Sans Light Italic', sans-serif;
   font-style: italic;
-  padding: 15px 0px 15px 15px;
+  position: absolute;
+  top: 4px;
 }
 
-.homepage-slide-caption {
-  font-size: 250%;
-  color: #fff;
-  font-family: 'Open Sans' sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 140%;
-  padding: 0px 15px 15px 15px;
+.field-content.slide_body {
+  font-family: sans-serif;
+  font-weight: bold;
+  position:  absolute;
+  top: 65px;
 }

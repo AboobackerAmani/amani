@@ -8,7 +8,7 @@
 /* Import Sass mixins, variables, Compass modules, etc. */
 @font-face {
   font-family: 'MinionPro';
-  src: url("../fonts/Minion-Regular.otf");
+  src: url("fonts/Minion-Regular.otf");
   font-weight: normal;
   font-style: normal;
 }
@@ -37,8 +37,8 @@
 }
 /* Light Italic */
 @font-face {
-  font-family: 'Open Sans';
-  src: url("fonts/OpenSans-LightItalic.ttf");
+  font-family: 'Open Sans Light Italic';
+  src: url("../fonts/OpenSans-LightItalic.ttf") format("truetype");
   font-weight: 200;
   font-style: italic;
 }
@@ -1224,38 +1224,33 @@ button:focus {
   outline: none;
 }
 
-.homepage-slide-inner.container {
-  margin-top: 132px;
-  width: 100%;
-  position: relative;
-}
-
-.homepage-slide-content {
-  width: 25%;
-  height: 375px;
+.right-col {
   position: absolute;
-  top: 75px;
-  left: 100px;
-  background-color: #f09416;
+  top: 87px;
+  left: 75px;
+  background-color: orange;
+  width: 400px;
+  height: 363px;
+  font-size: 20px;
+  padding: 20px 20px 20px 20px;
 }
 
-.homepage-slide-title {
-  font-size: 150%;
-  color: #fff;
-  font-family: 'Open Sans' sans-serif;
-  font-weight: lighter;
+.region.region-home-content-top-rotator {
+  margin-top: 35px;
+}
+
+.field-content.slide_title {
+  font-family: 'Open Sans Light Italic', sans-serif;
   font-style: italic;
-  padding: 15px 0px 15px 15px;
+  position: absolute;
+  top: 4px;
 }
 
-.homepage-slide-caption {
-  font-size: 250%;
-  color: #fff;
-  font-family: 'Open Sans' sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 140%;
-  padding: 0px 15px 15px 15px;
+.field-content.slide_body {
+  font-family: sans-serif;
+  font-weight: bold;
+  position: absolute;
+  top: 65px;
 }
 
 .form-textarea,
@@ -1456,7 +1451,7 @@ div[id*="block-menu-menu-social-media"] a {
   font-size: 1.53846rem;
 }
 div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social-media"] a:hover, div[id*="block-menu-menu-social-media"] a:active {
-  color: #ace0f6;
+  color: #ace1f6;
 }
 
 #footer div[id*="block-menu-menu-social-media"] {

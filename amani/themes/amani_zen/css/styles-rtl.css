@@ -5,7 +5,7 @@
 /* Import Sass mixins, variables, Compass modules, etc. */
 @font-face {
   font-family: 'MinionPro';
-  src: url("../fonts/Minion-Regular.otf");
+  src: url("fonts/Minion-Regular.otf");
   font-weight: normal;
   font-style: normal;
 }
@@ -34,8 +34,8 @@
 }
 /* Light Italic */
 @font-face {
-  font-family: 'Open Sans';
-  src: url("fonts/OpenSans-LightItalic.ttf");
+  font-family: 'Open Sans Light Italic';
+  src: url("../fonts/OpenSans-LightItalic.ttf") format("truetype");
   font-weight: 200;
   font-style: italic;
 }

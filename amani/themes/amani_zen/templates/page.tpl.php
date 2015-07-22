@@ -52,6 +52,7 @@
 
   </header>
 
+
   <?php if($page['home_content_top_rotator'] || $page['home_content_top_callout_right'] || $page['home_content_top_static_region']): ?>
   <section id="content-top" class="clearfix" class="container">
     <div class="container-inner">
