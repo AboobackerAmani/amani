@@ -423,7 +423,6 @@ img {
   /* vertical-align: bottom; */
   /* Responsive images */
   max-width: 100%;
-  height: auto;
 }
 
 /* Correct overflow displayed oddly in IE 9. */
@@ -1226,13 +1225,17 @@ button:focus {
 
 .right-col {
   position: absolute;
-  top: 100px;
-  left: 75px;
+  top: 70px;
+  left: 100px;
   background-color: orange;
   width: 400px;
-  height: 400px;
+  height: 380px;
   font-size: 20px;
   padding: 20px 20px 20px 20px;
+}
+
+.block-views-front_page_slideshow-block {
+  position: relative;
 }
 
 .region.region-home-content-top-rotator {
@@ -1242,19 +1245,21 @@ button:focus {
 .field-content.slide_title {
   font-family: 'Open Sans Light Italic', sans-serif;
   font-style: italic;
-  font-size: 32px;
+  font-size: 65%;
   line-height: 125%;
   color: #FFF;
   position: absolute;
-  top: 4px;
+  top: 20px;
 }
 
 .field-content.slide_body {
   font-family: 'Open Sans Semi Bold', sans-serif;
   font-weight: bold;
+  font-size: 135%;
   color: #FFF;
   position: absolute;
-  top: 65px;
+  top: 50px;
+  line-height: 175%;
 }
 
 .form-textarea,
