@@ -52,27 +52,22 @@
 
   </header>
 
+  <section id="content-top" class="clearfix">
 
-  <?php if($page['home_content_top_rotator'] || $page['home_content_top_callout_right'] || $page['home_content_top_static_region']): ?>
-  <section id="content-top" class="clearfix" class="container">
-    <div class="container-inner">
-      <?php if ($page['home_content_top_rotator']): ?>
-        <?php if ($breadcrumb): ?>
-          <?php print $breadcrumb; ?>
+    <?php if($page['home_content_top_rotator'] || $page['home_content_top_callout_right'] || $page['home_content_top_static_region']): ?>
+    <section id="content-top" class="clearfix" class="container">
+      <div class="container-inner">
+        <?php if ($page['home_content_top_rotator']): ?>
+          <?php if ($breadcrumb): ?>
+            <?php print $breadcrumb; ?>
+          <?php endif; ?>
+          <?php print render($page['home_content_top_rotator']); ?>
         <?php endif; ?>
-        <?php print render($page['home_content_top_rotator']); ?>
-      <?php endif; ?>
+      </div>
+    </section>
+    <?php endif; ?>
 
-      <?php if ($page['home_content_top_callout_right']): ?>
-        <?php print render($page['home_content_top_callout_right']); ?>
-      <?php endif; ?>
-
-      <?php if ($page['home_content_top_static_region']): ?>
-        <?php print render($page['home_content_top_static_region']); ?>
-      <?php endif; ?>
-    </div>
   </section>
-  <?php endif; ?>
 
   <div id="main" class="clearfix" class="container">
 
@@ -108,12 +103,20 @@
 
           <?php if ($breadcrumb && !$page['home_content_top_rotator']): ?>
             <?php print $breadcrumb; ?>
-         <?php endif; ?>
-
-          <?php if ($page['highlighted']): ?>
-            <div id="highlighted"><?php print render($page['highlighted']) ?></div>
           <?php endif; ?>
 
+          <section id="twitter">
+            <div id="twitter_block">
+              <?php print render($page['twitter']) ?>
+            </div>
+          </section>
+
+          <?php if ($page['current_projects']): ?>
+            <aside id="current_projects" class="current_projects">
+              <?php print render($page['current_projects']); ?>
+            </aside>
+          <?php endif; ?>
+          
           <?php print render($title_prefix); ?>
 
           <?php if ($title): ?>
@@ -122,7 +125,6 @@
 
           <?php print render($title_suffix); ?>
           <?php print $messages; ?>
-          <?php print render($page['help']); ?>
 
           <?php if ($tabs): ?>
             <div class="tabs"><?php print render($tabs); ?></div>
@@ -140,14 +142,6 @@
           <div id="content-area">
             <?php print render($page['content']) ?>
           </div>
-
-          <?php if(!empty($page['map_region_2x'])): ?>
-            <?php print render($page['map_region_2x']) ?>
-          <?php endif; ?>
-
-          <?php if(!empty($page['map_region_3x'])): ?>
-            <?php print render($page['map_region_3x']) ?>
-          <?php endif; ?>
 
           <?php print $feed_icons; ?>
 

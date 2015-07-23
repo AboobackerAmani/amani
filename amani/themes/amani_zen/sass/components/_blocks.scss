@@ -44,7 +44,6 @@
   }
 }
 
-
 /**
  * Unique blocks
  */
@@ -55,7 +54,7 @@
   float: right;
   text-align: right;
   margin-top: -4px;
-  
+
   //screen bigger than 768px
   @media all and (min-width: $breakpoint) {
     margin-top: 0;
@@ -80,4 +79,13 @@
   .form-actions {
     display: none;
   }
+}
+
+#current_projects {
+  width: 600px;
+  height: 100px;
+}
+
+#twitter {
+  max-width: 250px;
 }

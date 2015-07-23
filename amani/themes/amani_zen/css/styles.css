@@ -1126,6 +1126,15 @@ div[id*="block-menu-menu-social-media"] li {
   display: none;
 }
 
+#current_projects {
+  width: 600px;
+  height: 100px;
+}
+
+#twitter {
+  max-width: 250px;
+}
+
 /**
  * @file
  * Print styling
@@ -1260,6 +1269,10 @@ button:focus {
   position: absolute;
   top: 50px;
   line-height: 175%;
+}
+
+.region.region-home-content-top-callout-right {
+  color: blue;
 }
 
 .form-textarea,
