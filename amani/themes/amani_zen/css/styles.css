@@ -1126,13 +1126,61 @@ div[id*="block-menu-menu-social-media"] li {
   display: none;
 }
 
+#content-header {
+  padding: 20px 0px 20px 0px;
+}
+
 #current_projects {
-  width: 600px;
-  height: 100px;
+  position: relative;
+  display: inline-block;
+  width: 630px;
+  height: 350px;
+  margin-right: 20px;
 }
 
 #twitter {
-  max-width: 250px;
+  position: relative;
+  display: inline-block;
+  width: 285px;
+  height: 350px;
+}
+
+#meet_volunteer {
+  position: relative;
+  display: inline-block;
+  width: 257px;
+  height: 350px;
+  margin-right: 20px;
+}
+
+#latest_blog_post {
+  position: relative;
+  display: inline-block;
+  width: 350px;
+  height: 350px;
+  margin-right: 20px;
+}
+
+#peace_talks {
+  position: relative;
+  display: inline-block;
+  width: 285px;
+  height: 350px;
+}
+
+#area_of_focus {
+  position: relative;
+  display: inline-block;
+  width: 257px;
+  height: 350px;
+  margin-right: 20px;
+}
+
+#get_involved {
+  position: relative;
+  display: inline-block;
+  width: 679px;
+  height: 350px;
 }
 
 /**

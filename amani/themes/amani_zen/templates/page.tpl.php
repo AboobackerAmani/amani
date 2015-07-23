@@ -70,112 +70,77 @@
   </section>
 
   <div id="main" class="clearfix" class="container">
+    <?php if ($breadcrumb || $title|| $messages || $tabs || $action_links): ?>
+      <div id="content-header">
 
-    <div id="navigation">
+        <?php if ($breadcrumb && !$page['home_content_top_rotator']): ?>
+          <?php print $breadcrumb; ?>
+        <?php endif; ?>
+        <!-- Twitter Block & Current project Block -->
+        <div id="current_projects" class="current_projects">
+          <?php print render($page['current_projects']); ?>
+        </div>
 
-      <?php if ($main_menu): ?>
-        <nav id="main-menu" role="navigation" tabindex="-1">
-          <?php
-          // This code snippet is hard to modify. We recommend turning off the
-          // "Main menu" on your sub-theme's settings form, deleting this PHP
-          // code block, and, instead, using the "Menu block" module.
-          // @see https://drupal.org/project/menu_block
-          print theme('links__system_main_menu', array(
-            'links' => $main_menu,
-            'attributes' => array(
-              'class' => array('links', 'inline', 'clearfix'),
-            ),
-            'heading' => array(
-              'text' => t('Main menu'),
-              'level' => 'h2',
-              'class' => array('element-invisible'),
-            ),
-          )); ?>
-        </nav>
-      <?php endif; ?>
-    </div>
+        <div id="twitter">
+          <div id="twitter_block">
+            <?php print render($page['twitter']) ?>
+          </div>
+        </div>
+
+        <?php print render($title_prefix); ?>
+        <!-- /Twitter Block & Current project Block -->
 
 
-    <div class="container-inner">
+        <!-- meet_volunteer -->
+        <div id="meet_volunteer" class="column meet_volunteer">
+          <?php print render($page['meet_volunteer']); ?>
+        </div>
+        <!-- /meet_volunteer -->
 
-      <?php if ($breadcrumb || $title|| $messages || $tabs || $action_links): ?>
-        <div id="content-header">
+        <!-- Latest Blog Post to Peace talks row -->
+        <div id="latest_blog_post">
+          <?php print render($page['latest_blog_post']) ?>
+        </div>
+        <?php print $feed_icons; ?>
+        <!-- /latest_blog_post -->
 
-          <?php if ($breadcrumb && !$page['home_content_top_rotator']): ?>
-            <?php print $breadcrumb; ?>
-          <?php endif; ?>
-
-          <!-- Twitter Block & Current project Block -->
-          <section id="twitter">
-            <div id="twitter_block">
-              <?php print render($page['twitter']) ?>
-            </div>
-          </section>
-
-          <?php if ($page['current_projects']): ?>
-            <aside id="current_projects" class="current_projects">
-              <?php print render($page['current_projects']); ?>
-            </aside>
-          <?php endif; ?>
-
-          <?php print render($title_prefix); ?>
-          <!-- /Twitter Block & Current project Block -->
+        <!-- peace_talks -->
+        <div id="peace_talks" class="column peace talks">
+          <?php print render($page['peace_talks']); ?>
+        </div>
+        <!-- /peace_talks -->
+        <!-- /Latest Blog Post to Peace talks row -->
 
 
-          <!-- Latest Blog Post to Peace talks row -->
-          <section id="latest_blog_post">
-            <div id="latest_blog_post_area">
-              <?php print render($page['latest_blog_post']) ?>
-            </div>
-            <?php print $feed_icons; ?>
-          </section> <!-- latest_blog_post -->
+        <!-- Area of focus & Get Involved -->
+          <div id="area_of_focus" class="area_of_focus">
+            <?php print render($page['area_of_focus']) ?>
+          </div>
 
-          <?php if ($page['meet_volunteer']): ?>
-            <aside id="meet_volunteer" class="column meet volunteer">
-              <?php print render($page['sidebar_first']); ?>
-            </aside>
-          <?php endif; ?> <!-- /meet_volunteer -->
+          <div id="get_involved" class="get_involved">
+            <?php print render($page['get_involved']) ?>
+          </div>
+        <!-- /Area of focus & Get Involved -->
 
-          <?php if ($page['peace_talks']): ?>
-            <aside id="peace_talks" class="column peace talks">
-              <?php print render($page['peace_talks']); ?>
-            </aside>
-          <?php endif; ?> <!-- /peace_talks -->
-          <!-- /Latest Blog Post to Peace talks row -->
+        <!-- Useless stuff (might need it) -->
+        <?php if ($title): ?>
+          <h1 class="title"><?php print $title; ?></h1>
+        <?php endif; ?>
 
-          <?php if(!empty($page['area_of_focus'])): ?>
-            <div class="container-inner">
-              <?php print render($page['area_of_focus']) ?>
-            </div>
-          <?php endif; ?>
+        <?php print render($title_suffix); ?>
+        <?php print $messages; ?>
 
-          <?php if(!empty($page['get_involved'])): ?>
-            <div class="container-inner">
-              <?php print render($page['get_involved']) ?>
-            </div>
-          <?php endif; ?>
+        <?php if ($tabs): ?>
+          <div class="tabs"><?php print render($tabs); ?></div>
+        <?php endif; ?>
 
+        <?php if ($action_links): ?>
+          <ul class="action-links"><?php print render($action_links); ?></ul>
+        <?php endif; ?>
+        <!-- /Useless stuff (might need it) -->
 
-          <!-- Useless stuff (might need it) -->
-          <?php if ($title): ?>
-            <h1 class="title"><?php print $title; ?></h1>
-          <?php endif; ?>
-
-          <?php print render($title_suffix); ?>
-          <?php print $messages; ?>
-
-          <?php if ($tabs): ?>
-            <div class="tabs"><?php print render($tabs); ?></div>
-          <?php endif; ?>
-
-          <?php if ($action_links): ?>
-            <ul class="action-links"><?php print render($action_links); ?></ul>
-          <?php endif; ?>
-          <!-- /Useless stuff (might need it) -->
-
-        </div> <!-- /#content-header -->
-      <?php endif; ?>
-    </div>
+      </div> <!-- /#content-header -->
+    <?php endif; ?>
   </div>
 
 
