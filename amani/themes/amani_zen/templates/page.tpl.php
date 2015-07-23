@@ -81,11 +81,9 @@
           <?php print render($page['current_projects']); ?>
         </div>
 
-        <div id="twitter">
-          <div id="twitter_block">
-            <?php print render($page['twitter']) ?>
-          </div>
-        </div>
+
+        <?php print render($page['twitter']) ?>
+
 
         <?php print render($title_prefix); ?>
         <!-- /Twitter Block & Current project Block -->
@@ -113,13 +111,13 @@
 
 
         <!-- Area of focus & Get Involved -->
-          <div id="area_of_focus" class="area_of_focus">
-            <?php print render($page['area_of_focus']) ?>
-          </div>
+        <div id="area_of_focus" class="area_of_focus">
+          <?php print render($page['area_of_focus']) ?>
+        </div>
 
-          <div id="get_involved" class="get_involved">
-            <?php print render($page['get_involved']) ?>
-          </div>
+        <div id="get_involved" class="get_involved">
+          <?php print render($page['get_involved']) ?>
+        </div>
         <!-- /Area of focus & Get Involved -->
 
         <!-- Useless stuff (might need it) -->

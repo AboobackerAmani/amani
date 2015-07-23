@@ -1138,12 +1138,34 @@ div[id*="block-menu-menu-social-media"] li {
   margin: 0px 20px 10px 0px;
 }
 
-#twitter {
+#block-views-front_page_tweets-block {
   position: relative;
   display: inline-block;
   width: 285px;
   height: 350px;
   margin-bottom: 10px;
+  background-color: #e6e6e6;
+}
+#block-views-front_page_tweets-block .view-header {
+  display: none;
+}
+#block-views-front_page_tweets-block li.views-row {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+  border-bottom: 2px solid;
+}
+#block-views-front_page_tweets-block li.views-row-1 {
+  padding-top: 0;
+}
+
+.region.region-twitter {
+  position: relative;
+  display: inline-block;
+  width: 285px;
+  height: 350px;
+  margin-bottom: 10px;
+  background-color: #e6e6e6;
 }
 
 #meet_volunteer {
