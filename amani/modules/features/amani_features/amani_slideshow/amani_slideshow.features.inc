@@ -32,7 +32,7 @@ function amani_slideshow_image_default_styles() {
     'name' => 'front_page_slideshow',
     'label' => 'front_page_slideshow',
     'effects' => array(
-      3 => array(
+      1 => array(
         'label' => 'Scale',
         'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
         'effect callback' => 'image_scale_effect',
@@ -42,13 +42,13 @@ function amani_slideshow_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
-          'width' => '500',
+          'width' => '1440',
           'height' => '',
-          'upscale' => 1,
+          'upscale' => 0,
         ),
         'weight' => '1',
       ),
-      4 => array(
+      2 => array(
         'label' => 'Crop',
         'help' => 'Cropping will remove portions of an image to make it the specified dimensions.',
         'effect callback' => 'image_crop_effect',
@@ -58,8 +58,8 @@ function amani_slideshow_image_default_styles() {
         'module' => 'image',
         'name' => 'image_crop',
         'data' => array(
-          'width' => '500',
-          'height' => '250',
+          'width' => '1440',
+          'height' => '450',
           'anchor' => 'center-center',
         ),
         'weight' => '2',
