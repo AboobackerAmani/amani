@@ -76,49 +76,64 @@
         <?php if ($breadcrumb && !$page['home_content_top_rotator']): ?>
           <?php print $breadcrumb; ?>
         <?php endif; ?>
-        <!-- Twitter Block & Current project Block -->
-        <div id="current_projects" class="current_projects">
-          <?php print render($page['current_projects']); ?>
-        </div>
+
+        <?php  if ($is_front) : ?>
+            <!-- Twitter Block & Current project Block -->
+            <div id="current_projects" class="current_projects">
+              <?php print render($page['current_projects']); ?>
+            </div>
+
+            <?php if (!empty($page['twitter'])) : ?>
+              <?php print render($page['twitter']); ?>
+            <?php endif ?>
 
 
-        <?php print render($page['twitter']) ?>
+            <?php print render($title_prefix); ?>
+            <!-- /Twitter Block & Current project Block -->
 
 
-        <?php print render($title_prefix); ?>
-        <!-- /Twitter Block & Current project Block -->
+            <!-- meet_volunteer -->
+            <?php if (!empty($page['meet_volunteer'])) : ?>
+              <div id="meet_volunteer" class="column meet_volunteer">
+                <?php print render($page['meet_volunteer']); ?>
+              </div>
+            <?php endif; ?>
+            <!-- /meet_volunteer -->
+
+            <!-- Latest Blog Post to Peace talks row -->
+            <?php if (!empty($page['latest_blog_post'])) : ?>
+              <div id="latest_blog_post">
+                <?php print render($page['latest_blog_post']); ?>
+              </div>
+              <?php print $feed_icons; ?>
+            <?php endif; ?>
+            <!-- /latest_blog_post -->
+
+            <!-- peace_talks -->
+            <?php if (!empty($page['peace_talks'])) : ?>
+              <div id="peace_talks" class="column peace talks">
+                <?php print render($page['peace_talks']); ?>
+              </div>
+            <?php endif; ?>
+            <!-- /peace_talks -->
+            <!-- /Latest Blog Post to Peace talks row -->
 
 
-        <!-- meet_volunteer -->
-        <div id="meet_volunteer" class="column meet_volunteer">
-          <?php print render($page['meet_volunteer']); ?>
-        </div>
-        <!-- /meet_volunteer -->
+            <!-- Area of focus & Get Involved -->
+            <?php if (!empty($page['area_of_focus'])) : ?>
+              <div id="area_of_focus" class="area_of_focus">
+                <?php print render($page['area_of_focus']); ?>
+              </div>
+            <?php endif; ?>
 
-        <!-- Latest Blog Post to Peace talks row -->
-        <div id="latest_blog_post">
-          <?php print render($page['latest_blog_post']) ?>
-        </div>
-        <?php print $feed_icons; ?>
-        <!-- /latest_blog_post -->
+            <?php if (!empty($page['get_involved'])) : ?>
+              <div id="get_involved" class="get_involved">
+                <?php print render($page['get_involved']); ?>
+              </div>
+            <?php endif; ?>
+            <!-- /Area of focus & Get Involved -->
+        <?php endif; ?>
 
-        <!-- peace_talks -->
-        <div id="peace_talks" class="column peace talks">
-          <?php print render($page['peace_talks']); ?>
-        </div>
-        <!-- /peace_talks -->
-        <!-- /Latest Blog Post to Peace talks row -->
-
-
-        <!-- Area of focus & Get Involved -->
-        <div id="area_of_focus" class="area_of_focus">
-          <?php print render($page['area_of_focus']) ?>
-        </div>
-
-        <div id="get_involved" class="get_involved">
-          <?php print render($page['get_involved']) ?>
-        </div>
-        <!-- /Area of focus & Get Involved -->
 
         <!-- Useless stuff (might need it) -->
         <?php if ($title): ?>
@@ -151,5 +166,3 @@
   <?php endif; ?>
 
 </div>
-
-<?php print render($page['bottom']); ?>
