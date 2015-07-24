@@ -15,14 +15,14 @@ function amani_programs_campaigns_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Programs/Campaigns';
+  $view->human_name = 'Latest Project';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Programs';
+  $handler->display->display_options['title'] = 'Latest Project';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -128,7 +128,7 @@ function amani_programs_campaigns_views_default_views() {
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Other news';
+  $handler->display->display_options['title'] = 'Latest Project';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
@@ -168,7 +168,7 @@ function amani_programs_campaigns_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['block_description'] = 'Other News';
+  $handler->display->display_options['block_description'] = 'Latest Projects';
 
   /* Display: Other projects */
   $handler = $view->new_display('block', 'Other projects', 'block_1');
@@ -226,7 +226,7 @@ function amani_programs_campaigns_views_default_views() {
   $handler->display->display_options['arguments']['nid']['not'] = TRUE;
   $translatables['programs_campaigns'] = array(
     t('Master'),
-    t('Programs'),
+    t('Latest Project'),
     t('more'),
     t('Apply'),
     t('Reset'),
@@ -245,8 +245,7 @@ function amani_programs_campaigns_views_default_views() {
     t('next ›'),
     t('last »'),
     t('Block'),
-    t('Other news'),
-    t('Other News'),
+    t('Latest Projects'),
     t('Other projects'),
     t('Other Projects and Campaigns'),
   );

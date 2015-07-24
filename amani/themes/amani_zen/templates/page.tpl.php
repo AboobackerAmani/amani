@@ -79,8 +79,8 @@
 
         <?php  if ($is_front) : ?>
             <!-- Twitter Block & Current project Block -->
-            <div id="current_projects" class="current_projects">
-              <?php print render($page['current_projects']); ?>
+            <div id="latest_project" class="latest_project">
+              <?php print render($page['latest_project']); ?>
             </div>
 
             <?php if (!empty($page['twitter'])) : ?>
