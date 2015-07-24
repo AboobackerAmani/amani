@@ -81,6 +81,7 @@
   }
 }
 
+/* Front Page Blocks */
 #content-header {
   padding: 20px 0px 20px 0px;
 }
@@ -100,9 +101,18 @@
   height: 350px;
   margin-bottom: 10px;
   background-color: rgb(230, 230, 230);
+  padding: 20px;
 
   .view-header {
     display: none;
+  }
+
+  .field-content.message_text {
+    font-family: 'Open Sans Semi Bold';
+  }
+
+  .field-content.twitter_date{
+    font-family: 'Open Sans Light Italic';
   }
 
   li.views-row {
@@ -110,9 +120,6 @@
     list-style-type: none;
     padding: 0;
     border-bottom: 2px solid;
-  }
-  li.views-row-1 {
-    padding-top: 0;
   }
 }
 

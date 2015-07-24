@@ -8,14 +8,14 @@
 /* Import Sass mixins, variables, Compass modules, etc. */
 @font-face {
   font-family: 'MinionPro';
-  src: url("fonts/Minion-Regular.otf");
+  src: url("../fonts/Minion-Regular.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 /* Regular */
 @font-face {
   font-family: 'Open Sans Regular';
-  src: url("../fonts/OpenSans-Regular.ttf");
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
   font-weight: normal;
   font-weight: 400;
   font-style: normal;
@@ -23,7 +23,7 @@
 /* Italic */
 @font-face {
   font-family: 'Open Sans Italic';
-  src: url("../fonts/OpenSans-Italic.ttf");
+  src: url("../fonts/OpenSans-Italic.ttf") format("truetype");
   font-weight: normal;
   font-weight: 400;
   font-style: italic;
@@ -31,7 +31,7 @@
 /* Light */
 @font-face {
   font-family: 'Open Sans Light';
-  src: url("../fonts/OpenSans-Light.ttf");
+  src: url("../fonts/OpenSans-Light.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
 }
@@ -45,21 +45,21 @@
 /* Semibold */
 @font-face {
   font-family: 'Open Sans Semi Bold';
-  src: url("../fonts/OpenSans-Semibold.ttf");
+  src: url("../fonts/OpenSans-Semibold.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 /* Semibold Italic */
 @font-face {
   font-family: 'Open Sans Semi Bold';
-  src: url("../fonts/OpenSans-SemiboldItalic.ttf");
+  src: url("../fonts/OpenSans-SemiboldItalic.ttf") format("truetype");
   font-weight: 500;
   font-style: italic;
 }
 /* Bold */
 @font-face {
   font-family: 'Open Sans Bold';
-  src: url("../fonts/OpenSans-Bold.ttf");
+  src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
   font-weight: bold;
   font-weight: 700;
   font-style: normal;
@@ -67,7 +67,7 @@
 /* Bold Italic */
 @font-face {
   font-family: 'Open Sans Bold Italic';
-  src: url("../fonts/OpenSans-BoldItalic.ttf");
+  src: url("../fonts/OpenSans-BoldItalic.ttf") format("truetype");
   font-weight: bold;
   font-weight: 700;
   font-style: italic;
@@ -75,14 +75,14 @@
 /* Extra Bold */
 @font-face {
   font-family: 'Open Sans Extra Bold';
-  src: url("../fonts/OpenSans-ExtraBold.ttf");
+  src: url("../fonts/OpenSans-ExtraBold.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 /* Extra Bold Italic */
 @font-face {
   font-family: 'Open Sans Extra Bold Italic';
-  src: url("../fonts/OpenSans-ExtraBoldItalic.ttf");
+  src: url("../fonts/OpenSans-ExtraBoldItalic.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
 }
@@ -1126,6 +1126,7 @@ div[id*="block-menu-menu-social-media"] li {
   display: none;
 }
 
+/* Front Page Blocks */
 #content-header {
   padding: 20px 0px 20px 0px;
 }
@@ -1145,18 +1146,22 @@ div[id*="block-menu-menu-social-media"] li {
   height: 350px;
   margin-bottom: 10px;
   background-color: #e6e6e6;
+  padding: 20px;
 }
 #block-views-front_page_tweets-block .view-header {
   display: none;
+}
+#block-views-front_page_tweets-block .field-content.message_text {
+  font-family: 'Open Sans Semi Bold';
+}
+#block-views-front_page_tweets-block .field-content.twitter_date {
+  font-family: 'Open Sans Light Italic';
 }
 #block-views-front_page_tweets-block li.views-row {
   margin: 0;
   list-style-type: none;
   padding: 0;
   border-bottom: 2px solid;
-}
-#block-views-front_page_tweets-block li.views-row-1 {
-  padding-top: 0;
 }
 
 .region.region-twitter {
