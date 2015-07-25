@@ -3888,77 +3888,90 @@ body.page-resources-list .view-resource-inner .view-content .views-row .views-fi
   font-weight: bold;
   color: #3F3F3F;
 }
-/* line 1678, ../sass/styles.scss */
-body.page-resources-list .view-resource-inner .view-content .views-row .views-field-field-link a {
+/* line 1677, ../sass/styles.scss */
+body.page-resources-list .view-resource-inner .view-content .views-row .views-field-field-link,
+body.page-resources-list .view-resource-inner .view-content .views-row .views-field-field-media {
+  margin-bottom: 5px;
+}
+/* line 1680, ../sass/styles.scss */
+body.page-resources-list .view-resource-inner .view-content .views-row .views-field-field-link .file,
+body.page-resources-list .view-resource-inner .view-content .views-row .views-field-field-media .file {
+  display: block;
+  clear: both;
+  margin-bottom: 3px;
+}
+/* line 1685, ../sass/styles.scss */
+body.page-resources-list .view-resource-inner .view-content .views-row .views-field-field-link a,
+body.page-resources-list .view-resource-inner .view-content .views-row .views-field-field-media a {
   font-size: 20px;
   color: #00B7AE;
   font-weight: normal;
   margin-bottom: 15px;
 }
-/* line 1685, ../sass/styles.scss */
+/* line 1692, ../sass/styles.scss */
 body.page-resources-list .view-resource-inner .view-content .views-row .views-field-body {
   font-weight: lighter;
   color: #807f83;
 }
-/* line 1689, ../sass/styles.scss */
+/* line 1696, ../sass/styles.scss */
 body.page-resources-list .view-resource-inner .view-content .views-row .views-field-field-amani-tags {
   margin-top: 20px;
   color: #807f83;
   font-weight: 100;
 }
-/* line 1693, ../sass/styles.scss */
+/* line 1700, ../sass/styles.scss */
 body.page-resources-list .view-resource-inner .view-content .views-row .views-field-field-amani-tags .views-label,
 body.page-resources-list .view-resource-inner .view-content .views-row .views-field-field-amani-tags .field-content {
   float: left;
   margin-right: 5px;
 }
-/* line 1703, ../sass/styles.scss */
+/* line 1710, ../sass/styles.scss */
 body.page-resources-list .sidebars .block-menu-block .menu {
   padding: 0;
 }
-/* line 1710, ../sass/styles.scss */
+/* line 1717, ../sass/styles.scss */
 body.page-media #block-views-awp-media-block,
 body.page-media #block-views-awp-media-block-1 {
   margin-bottom: 30px;
 }
-/* line 1713, ../sass/styles.scss */
+/* line 1720, ../sass/styles.scss */
 body.page-media #block-views-awp-media-block .block-title,
 body.page-media #block-views-awp-media-block-1 .block-title {
   font-size: 60px;
   font-weight: normal;
   color: #B2B2B2;
 }
-/* line 1723, ../sass/styles.scss */
+/* line 1730, ../sass/styles.scss */
 body.page-media #block-views-awp-media-block .view-content .views-row .views-field-title,
 body.page-media #block-views-awp-media-block-1 .view-content .views-row .views-field-title {
   color: #B2B2B2;
 }
-/* line 1725, ../sass/styles.scss */
+/* line 1732, ../sass/styles.scss */
 body.page-media #block-views-awp-media-block .view-content .views-row .views-field-title a,
 body.page-media #block-views-awp-media-block-1 .view-content .views-row .views-field-title a {
   color: #B2B2B2;
 }
-/* line 1740, ../sass/styles.scss */
+/* line 1747, ../sass/styles.scss */
 body.page-media .view-awp-media header .node__title {
   display: none;
 }
-/* line 1744, ../sass/styles.scss */
+/* line 1751, ../sass/styles.scss */
 body.page-media .view-awp-media h3 {
   font-size: 40px;
   color: #415968;
   margin: 0;
 }
-/* line 1751, ../sass/styles.scss */
+/* line 1758, ../sass/styles.scss */
 body.page-media .view-awp-media.view-display-id-page .view-content .views-row {
   margin-bottom: 30px;
 }
-/* line 1754, ../sass/styles.scss */
+/* line 1761, ../sass/styles.scss */
 body.page-media .view-awp-media.view-display-id-page .view-content .views-row .views-field-title {
   font-size: 30px;
   color: #807f83;
   margin-top: 5px;
 }
-/* line 1758, ../sass/styles.scss */
+/* line 1765, ../sass/styles.scss */
 body.page-media .view-awp-media.view-display-id-page .view-content .views-row .views-field-title a {
   color: #807f83;
 }

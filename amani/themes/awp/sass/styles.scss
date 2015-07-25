@@ -1674,7 +1674,14 @@ body {
             font-weight: bold;
             color: #3F3F3F;
           }
-          .views-field-field-link{
+          .views-field-field-link,
+          .views-field-field-media{
+            margin-bottom: 5px;
+            .file{
+              display: block;
+              clear: both;
+              margin-bottom: 3px;
+            }
             a{
               font-size: 20px;
               color: $awp-green;
