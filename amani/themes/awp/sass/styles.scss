@@ -1124,8 +1124,9 @@ body {
     }
     .region-sidebar-second{
       margin-top: 10%;
-      .block-menu-block{
-        ul.menu{
+      .block-menu-block,
+      .view-news-and-events-blog{
+        ul{
           li{
             list-style: none;
             border-bottom: 1px solid $awp_grey;
