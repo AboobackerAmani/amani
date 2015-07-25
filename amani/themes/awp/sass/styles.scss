@@ -1138,11 +1138,22 @@ body {
               &.active,
               &:hover{
                 color: $awp-green;
-                border-bottom: 2px solid $awp_grey;
                 padding-bottom: 13px;
                 //background: #000;
               }
           }
+          }
+        }
+      }
+      .block-menu-block{
+        ul {
+          li {
+            a{
+              &.active,
+              &:hover{
+                border-bottom: 2px solid $awp_grey;
+              }
+            }
           }
         }
       }
