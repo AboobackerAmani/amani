@@ -1779,4 +1779,16 @@ body {
     }
   }/*page-media*/
 
+  #block-views-awpresources-block-1{
+    .views-row{
+      clear: both;
+      overflow: hidden;
+      margin-bottom: 10px;
+      a{
+        color: $awp-green;
+        padding: 0 5px;
+      }
+    }
+  }
+
 }
