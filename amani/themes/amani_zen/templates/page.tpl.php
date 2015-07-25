@@ -52,22 +52,17 @@
 
   </header>
 
-  <section id="content-top" class="clearfix">
-
-    <?php if($page['home_content_top_rotator'] || $page['home_content_top_callout_right'] || $page['home_content_top_static_region']): ?>
-    <section id="content-top" class="clearfix" class="container">
-      <div class="container-inner">
-        <?php if ($page['home_content_top_rotator']): ?>
-          <?php if ($breadcrumb): ?>
-            <?php print $breadcrumb; ?>
-          <?php endif; ?>
-          <?php print render($page['home_content_top_rotator']); ?>
+  <section id="content-top" class="clearfix" class="container">
+    <div class="container-inner">
+      <?php if ($page['home_content_top_rotator']): ?>
+        <?php if ($breadcrumb): ?>
+          <?php print $breadcrumb; ?>
         <?php endif; ?>
-      </div>
-    </section>
-    <?php endif; ?>
-
+        <?php print render($page['home_content_top_rotator']); ?>
+      <?php endif; ?>
+    </div>
   </section>
+
 
   <div id="main" class="clearfix" class="container">
     <?php if ($breadcrumb || $title|| $messages || $tabs || $action_links): ?>
@@ -86,37 +81,28 @@
             <?php if (!empty($page['twitter'])) : ?>
               <?php print render($page['twitter']); ?>
             <?php endif ?>
-
-
-            <?php print render($title_prefix); ?>
             <!-- /Twitter Block & Current project Block -->
 
 
-            <!-- meet_volunteer -->
+            <!-- Meet Volunteer, Latest Blog & Peace Talks -->
             <?php if (!empty($page['meet_volunteer'])) : ?>
               <div id="meet_volunteer" class="column meet_volunteer">
                 <?php print render($page['meet_volunteer']); ?>
               </div>
             <?php endif; ?>
-            <!-- /meet_volunteer -->
 
-            <!-- Latest Blog Post to Peace talks row -->
             <?php if (!empty($page['latest_blog_post'])) : ?>
               <div id="latest_blog_post">
                 <?php print render($page['latest_blog_post']); ?>
               </div>
-              <?php print $feed_icons; ?>
             <?php endif; ?>
-            <!-- /latest_blog_post -->
 
-            <!-- peace_talks -->
             <?php if (!empty($page['peace_talks'])) : ?>
               <div id="peace_talks" class="column peace talks">
                 <?php print render($page['peace_talks']); ?>
               </div>
             <?php endif; ?>
-            <!-- /peace_talks -->
-            <!-- /Latest Blog Post to Peace talks row -->
+            <!-- / Meet Volunteer, Latest Blog & Peace Talks-->
 
 
             <!-- Area of focus & Get Involved -->
@@ -135,13 +121,14 @@
         <?php endif; ?>
 
 
-        <!-- Useless stuff (might need it) -->
+        <!-- From Zen -->
+        <?php print $messages; ?>
+
+        <?php print render($title_prefix); ?>
         <?php if ($title): ?>
           <h1 class="title"><?php print $title; ?></h1>
         <?php endif; ?>
-
         <?php print render($title_suffix); ?>
-        <?php print $messages; ?>
 
         <?php if ($tabs): ?>
           <div class="tabs"><?php print render($tabs); ?></div>
@@ -150,10 +137,11 @@
         <?php if ($action_links): ?>
           <ul class="action-links"><?php print render($action_links); ?></ul>
         <?php endif; ?>
-        <!-- /Useless stuff (might need it) -->
+        <!-- /From Zen -->
 
       </div> <!-- /#content-header -->
     <?php endif; ?>
+    <?php print $feed_icons; ?>
   </div>
 
 
