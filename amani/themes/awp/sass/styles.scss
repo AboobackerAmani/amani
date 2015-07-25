@@ -810,7 +810,7 @@ body {
         background-size: 100% 100%;
         padding-bottom: 30px;
         position: relative;
-
+        @include corner(0px ,0px ,0px ,210px);
         height: 46%;
         position: absolute;
         right: 0;
