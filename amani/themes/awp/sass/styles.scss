@@ -580,7 +580,7 @@ body {
           background: url("../images/homepage/action.png") 0 0 no-repeat;
           background-size: 100% auto;
         }
-        /*.action-text{
+        .action-text{
           width: 100%;
           float: right;
           color: $awp-white;
@@ -623,31 +623,6 @@ body {
                 background: #DF6988;
                 color: $awp-dark-grey;
               }
-            }
-          }
-        }action-text*/
-        .action-links{
-          margin-top: 30px;
-          width: 145%;
-          margin-left: -40%;
-          a{
-            margin-bottom: 0px;
-            display: block;
-            width: 100%;
-            border: 2px solid $awp-white;
-            text-align: center;
-            padding: 5px 0;
-            font-size: 20px;
-            font-weight: 400;
-            text-transform: uppercase;
-            color: $awp-white;
-            clear: both;
-            border: 0;
-            border-bottom: 1px solid #F05155;
-            padding-left: 10%;
-            &:hover{
-              background: #DF6988;
-              color: $awp-dark-grey;
             }
           }
         }
