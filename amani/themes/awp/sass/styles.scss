@@ -810,15 +810,10 @@ body {
         background-size: 100% 100%;
         padding-bottom: 30px;
         position: relative;
-
-        height: 46%;
-        position: absolute;
-        right: 0;
-        bottom: -56%;
+        @include corner(0px ,0px ,0px ,210px);
         overflow: hidden;
-        width: 400px;
-        z-index: 9;
-
+        position: absolute;
+        right: 1030px;
         .take-action-block{
           float: right;
           width: 70%;
@@ -839,32 +834,37 @@ body {
             margin: 10px 5%;
             .take-action-title{
               font-size: 35px;
-              margin-bottom: 10px;
+              margin-bottom: 0px;
               font-weight: 400;
+              text-align: left;
             }
             .take-action-sub-title{
-              font-size: 20px;
+              font-size: 22px;
               font-weight: 100;
               font-style: italic;
+              text-align: left;
+              font-weight: 300;
+
             }
             .action-links{
               margin-top: 30px;
-              width: 115%;
-              margin-left: -10%;
+              width: 145%;
+              margin-left: -40%;
               a{
-                margin-bottom: 10px;
+                margin-bottom: 0px;
                 display: block;
                 width: 100%;
                 border: 2px solid $awp-white;
                 text-align: center;
                 padding: 5px 0;
-                font-size: 1vw;
+                font-size: 20px;
                 font-weight: 400;
                 text-transform: uppercase;
                 color: $awp-white;
                 clear: both;
                 border: 0;
                 border-bottom: 1px solid #F05155;
+                padding-left: 10%;
                 &:hover{
                   background: #DF6988;
                   color: $awp-dark-grey;
@@ -873,7 +873,7 @@ body {
             }
           }
         }
-      }/*block-3*/
+      }
     }
     #page-title.page__title{
       margin-bottom: 10px;

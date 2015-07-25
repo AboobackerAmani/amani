@@ -2880,7 +2880,6 @@ body.node-type-take-actions #page {
 /* line 806, ../sass/styles.scss */
 body.node-type-take-actions .region-highlighted {
   position: relative;
-  /*block-3*/
 }
 /* line 808, ../sass/styles.scss */
 body.node-type-take-actions .region-highlighted #block-block-3 {
@@ -2888,20 +2887,19 @@ body.node-type-take-actions .region-highlighted #block-block-3 {
   background-size: 100% 100%;
   padding-bottom: 30px;
   position: relative;
-  height: 46%;
-  position: absolute;
-  right: 0;
-  bottom: -56%;
+  -webkit-border-radius: 0px 0px 0px 210px;
+  -moz-border-radius: 0px 0px 0px 210px;
+  border-radius: 0px 0px 0px 210px;
   overflow: hidden;
-  width: 400px;
-  z-index: 9;
+  position: absolute;
+  right: 1030px;
 }
-/* line 822, ../sass/styles.scss */
+/* line 817, ../sass/styles.scss */
 body.node-type-take-actions .region-highlighted #block-block-3 .take-action-block {
   float: right;
   width: 70%;
 }
-/* line 825, ../sass/styles.scss */
+/* line 820, ../sass/styles.scss */
 body.node-type-take-actions .region-highlighted #block-block-3 .take-action-block .action-image {
   position: absolute;
   left: -9%;
@@ -2911,7 +2909,7 @@ body.node-type-take-actions .region-highlighted #block-block-3 .take-action-bloc
   background: url("../images/homepage/action.png") 0 0 no-repeat;
   background-size: 100% auto;
 }
-/* line 834, ../sass/styles.scss */
+/* line 829, ../sass/styles.scss */
 body.node-type-take-actions .region-highlighted #block-block-3 .take-action-block .action-text {
   width: 100%;
   float: right;
@@ -2919,39 +2917,43 @@ body.node-type-take-actions .region-highlighted #block-block-3 .take-action-bloc
   text-align: center;
   margin: 10px 5%;
 }
-/* line 840, ../sass/styles.scss */
+/* line 835, ../sass/styles.scss */
 body.node-type-take-actions .region-highlighted #block-block-3 .take-action-block .action-text .take-action-title {
   font-size: 35px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   font-weight: 400;
+  text-align: left;
 }
-/* line 845, ../sass/styles.scss */
+/* line 841, ../sass/styles.scss */
 body.node-type-take-actions .region-highlighted #block-block-3 .take-action-block .action-text .take-action-sub-title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 100;
   font-style: italic;
+  text-align: left;
+  font-weight: 300;
 }
-/* line 850, ../sass/styles.scss */
+/* line 849, ../sass/styles.scss */
 body.node-type-take-actions .region-highlighted #block-block-3 .take-action-block .action-text .action-links {
   margin-top: 30px;
-  width: 115%;
-  margin-left: -10%;
+  width: 145%;
+  margin-left: -40%;
 }
-/* line 854, ../sass/styles.scss */
+/* line 853, ../sass/styles.scss */
 body.node-type-take-actions .region-highlighted #block-block-3 .take-action-block .action-text .action-links a {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   display: block;
   width: 100%;
   border: 2px solid #FFFFFF;
   text-align: center;
   padding: 5px 0;
-  font-size: 1vw;
+  font-size: 20px;
   font-weight: 400;
   text-transform: uppercase;
   color: #FFFFFF;
   clear: both;
   border: 0;
   border-bottom: 1px solid #F05155;
+  padding-left: 10%;
 }
 /* line 868, ../sass/styles.scss */
 body.node-type-take-actions .region-highlighted #block-block-3 .take-action-block .action-text .action-links a:hover {
