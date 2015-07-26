@@ -1811,4 +1811,77 @@ body {
       margin: 10px;
     }
   }
+  &.node-type-webform{
+    article{
+      .field-item{
+        h2{
+          font-size: 40px;
+          color: #666666;
+          margin: 0;
+        }
+        p.small-txt{
+          font-size: 16px;
+          color: #3F3F3F;
+          font-weight: 100;
+        }
+      }
+      .webform-client-form{
+        margin-top: 30px;
+        max-width: 800px;
+        .form-item{
+          label{
+            font-size: 0;
+            .form-required{
+              font-size: 14px;
+            }
+          }
+          .form-text,
+          .form-textarea,
+          .form-select{
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 90%;
+            float: right;
+
+          }
+          &.webform-component-checkboxes{
+            label{
+              font-size: 20px;
+              color: #3f3f3f;
+              font-weight: 100;
+            }
+            .form-checkboxes{
+              .form-item{
+                margin-top: 10px;
+                label{
+                  padding: 0 10px;
+                }
+              }
+            }
+          }
+          &.webform-component-markup{
+            p{
+              font-size: 20px;
+              color: #3f3f3f;
+              font-weight: 100;
+              a{
+                color: $awp-green;
+              }
+            }
+          }
+        }
+        .form-actions{
+          float: right;
+          .webform-submit{
+            font-size: 20px;
+            color: #3f3f3f;
+            font-weight: 100;
+            background:none;
+            border: 1px solid #ccc;
+            padding: 10px 40px;
+          }
+        }
+      }
+    }
+  }
 }
