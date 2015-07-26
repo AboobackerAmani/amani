@@ -4011,64 +4011,72 @@ body.node-type-webform article .field-item h2 {
   font-size: 40px;
   color: #666666;
   margin: 0;
+  line-height: 1.1;
 }
-/* line 1822, ../sass/styles.scss */
+/* line 1823, ../sass/styles.scss */
 body.node-type-webform article .field-item p.small-txt {
   font-size: 16px;
   color: #3F3F3F;
   font-weight: 100;
 }
-/* line 1828, ../sass/styles.scss */
+/* line 1829, ../sass/styles.scss */
 body.node-type-webform article .webform-client-form {
   margin-top: 30px;
-  max-width: 800px;
+  max-width: 700px;
+  margin: 30px auto;
 }
-/* line 1832, ../sass/styles.scss */
+/* line 1833, ../sass/styles.scss */
+body.node-type-webform article .webform-client-form .form-item {
+  clear: both;
+  margin: 20px 0;
+  overflow: hidden;
+}
+/* line 1837, ../sass/styles.scss */
 body.node-type-webform article .webform-client-form .form-item label {
   font-size: 0;
 }
-/* line 1834, ../sass/styles.scss */
+/* line 1839, ../sass/styles.scss */
 body.node-type-webform article .webform-client-form .form-item label .form-required {
   font-size: 14px;
 }
-/* line 1838, ../sass/styles.scss */
+/* line 1843, ../sass/styles.scss */
 body.node-type-webform article .webform-client-form .form-item .form-text,
 body.node-type-webform article .webform-client-form .form-item .form-textarea,
 body.node-type-webform article .webform-client-form .form-item .form-select {
   border: 1px solid #ccc;
   padding: 10px;
-  width: 90%;
+  width: 98%;
   float: right;
 }
-/* line 1848, ../sass/styles.scss */
+/* line 1853, ../sass/styles.scss */
 body.node-type-webform article .webform-client-form .form-item.webform-component-checkboxes label {
   font-size: 20px;
   color: #3f3f3f;
   font-weight: 100;
 }
-/* line 1854, ../sass/styles.scss */
+/* line 1859, ../sass/styles.scss */
 body.node-type-webform article .webform-client-form .form-item.webform-component-checkboxes .form-checkboxes .form-item {
   margin-top: 10px;
 }
-/* line 1856, ../sass/styles.scss */
+/* line 1861, ../sass/styles.scss */
 body.node-type-webform article .webform-client-form .form-item.webform-component-checkboxes .form-checkboxes .form-item label {
   padding: 0 10px;
 }
-/* line 1863, ../sass/styles.scss */
+/* line 1868, ../sass/styles.scss */
 body.node-type-webform article .webform-client-form .form-item.webform-component-markup p {
   font-size: 20px;
   color: #3f3f3f;
   font-weight: 100;
 }
-/* line 1867, ../sass/styles.scss */
+/* line 1872, ../sass/styles.scss */
 body.node-type-webform article .webform-client-form .form-item.webform-component-markup p a {
   color: #00B7AE;
 }
-/* line 1873, ../sass/styles.scss */
+/* line 1878, ../sass/styles.scss */
 body.node-type-webform article .webform-client-form .form-actions {
   float: right;
 }
-/* line 1875, ../sass/styles.scss */
+/* line 1880, ../sass/styles.scss */
 body.node-type-webform article .webform-client-form .form-actions .webform-submit {
   font-size: 20px;
   color: #3f3f3f;
