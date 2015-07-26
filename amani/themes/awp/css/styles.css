@@ -4107,19 +4107,25 @@ body.node-type-webform .region-sidebar-second #block-block-7 .con-links div {
 }
 /* line 1910, ../sass/styles.scss */
 body.node-type-webform .region-sidebar-second #block-block-7 .con-links div a {
+  display: block;
   color: #666;
   font-size: 16px;
   font-weight: 100;
+  padding-top: 10px;
 }
-/* line 1915, ../sass/styles.scss */
+/* line 1917, ../sass/styles.scss */
 body.node-type-webform .region-sidebar-second #block-block-7 .con-links div.email-link {
   background: url("../images/icons/m-icon.png") left center no-repeat;
 }
-/* line 1918, ../sass/styles.scss */
+/* line 1919, ../sass/styles.scss */
+body.node-type-webform .region-sidebar-second #block-block-7 .con-links div.email-link a {
+  padding-top: 10px;
+}
+/* line 1923, ../sass/styles.scss */
 body.node-type-webform .region-sidebar-second #block-block-7 .con-links div.twitter-link {
   background: url("../images/icons/t-icon.png") left center no-repeat;
 }
-/* line 1921, ../sass/styles.scss */
+/* line 1926, ../sass/styles.scss */
 body.node-type-webform .region-sidebar-second #block-block-7 .con-links div.facebook-link {
   background: url("../images/icons/f-icon.png") left center no-repeat;
 }
