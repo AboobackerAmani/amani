@@ -1893,10 +1893,12 @@ body {
         h2.city{
           font-size: 26px;
           font-weight: normal;
+          margin: 0;
         }
         .tel{
           font-size: 26px;
           font-weight: 100;
+          margin: 0;
         }
         .con-links{
           div{
@@ -1908,7 +1910,6 @@ body {
               color: #666;
               font-size: 26px;
               font-weight: 100;
-              padding: 0 40px;
             }
             &.email-link{
               background: url("../images/icons/m-icon.png") left center no-repeat;
