@@ -1888,5 +1888,40 @@ body {
         }
       }
     }
+    .region-sidebar-second{
+      #block-block-7{
+        h2.city{
+          font-size: 26px;
+          font-weight: normal;
+        }
+        .tel{
+          font-size: 26px;
+          font-weight: 100;
+        }
+        .con-links{
+          div{
+            font-size: 26px;
+            font-weight: 100;
+            padding: 0 40px;
+            margin-bottom: 5px;
+            a{
+              color: #666;
+              font-size: 26px;
+              font-weight: 100;
+              padding: 0 40px;
+            }
+            &.email-link{
+              background: url("../images/icons/m-icon.png") left center no-repeat;
+            }
+            &.twitter-link{
+              background: url("../images/icons/t-icon.png") left center no-repeat;
+            }
+            &.facebook-link{
+              background: url("../images/icons/f-icon.png") left center no-repeat;
+            }
+          }
+        }
+      }
+    }
   }
 }
