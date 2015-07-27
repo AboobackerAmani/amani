@@ -1723,9 +1723,12 @@ body {
         .views-field{
           font-weight: lighter;
           color: $awp_grey;
+          margin-bottom: 5px;
           .views-label{
             font-weight: bold;
-            color: $awp-dark-grey;
+            color: $awp-black;
+            float: left;
+            margin-right: 10px;
           }
         }
       }
