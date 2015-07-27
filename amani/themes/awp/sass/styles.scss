@@ -1719,6 +1719,16 @@ body {
           }
         }
       }
+      &.view-display-id-page_1{
+        .views-field{
+          font-weight: lighter;
+          color: $awp_grey;
+          .views-label{
+            font-weight: bold;
+            color: $awp-dark-grey;
+          }
+        }
+      }
     }
     .sidebars .block-menu-block{
       .menu{
