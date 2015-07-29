@@ -141,7 +141,7 @@ else{ ?>
                             endif;?>"><img typeof="foaf:Image" src="<?php print $theme_path.'dollar.png'?>" width="69" height="103" alt=""></a></div>  </div>
                     <div class="views-field views-field-title">        <span class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
                                 print ($node->field_pledged_link[und][0][url]);
-                            endif;?>">Amount pledged and paid </a></span>  </div>
+                            endif;?>"><?php print t('Amount pledged and paid');?> </a></span>  </div>
                     <div class="views-field views-field-field-text">        <div class="field-content">   <?php if(!empty($node->field_pledged_amount)):
                                 print $node->field_pledged_amount[und][0][value];
                             endif;?> /               <?php if(!empty($node->field_paid_amount)):
@@ -158,7 +158,7 @@ else{ ?>
                             endif;?>"><img typeof="foaf:Image" src="<?php print $theme_path.'displace.png'?>" width="138" height="111" alt=""></a></div>  </div>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_people_link)):
                                 print ($node->field_people_link[und][0][url]);
-                            endif;?>">People Still Displaced</a></span>  </div>
+                            endif;?>"><?php print t('People Still Displaced');?></a></span>  </div>
                     <div class="views-field views-field-field-text">        <div class="field-content">    <?php if(!empty($node->field_people_displaced)):
                                 print $node->field_people_displaced[und][0][value];
                             endif;?>
@@ -195,7 +195,7 @@ else{ ?>
                             endif;?>"><img typeof="foaf:Image" src="<?php print $theme_path.'temp.png';?>" width="84" height="130" alt=""></a></div>  </div>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_temperature_link)):
                                 print ($node->field_temperature_link[und][0][url]);
-                            endif;?>">Average Temperature</a></span>  </div>
+                            endif;?>"><?php print t('Average Temperature');?></a></span>  </div>
                     <div class="views-field views-field-field-text big">
                         <div class="field-content"><?php if(!empty($node->field_temperature_min)):
                                 print $node->field_temperature_min[und][0][value];
@@ -214,7 +214,7 @@ else{ ?>
                             endif;?>"><img typeof="foaf:Image" src="<?php print $theme_path.'hummer.png';?>" width="84" height="112" alt=""></a></div>  </div>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="    <?php if(!empty($node->field_home_link)):
                                 print ($node->field_home_link[und][0][url]);
-                            endif;?>">Homes repaired and rebuilt </a></span>  </div>
+                            endif;?>"><?php print t('Homes repaired and rebuilt');?> </a></span>  </div>
                     <div class="views-field views-field-field-text">
                         <div class="field-content">  <?php if(!empty($node->field_home_rebuilt)):
                                 print $node->field_home_rebuilt[und][0][value];
