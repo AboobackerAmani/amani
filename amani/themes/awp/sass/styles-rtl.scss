@@ -29,6 +29,9 @@
   #page{
   }
   #header{
+    .sf-menu.sf-style-default{
+      float: right;
+    }
     #name-and-slogan{
       .header__site-name{
       }
@@ -137,6 +140,8 @@
       ul#superfish-1{
         & > li{
           & > a{
+            border-left: 1px solid #807f83;
+            border-right: 0;
             &:hover,&.active, &.active-trail{
             }
           }
@@ -347,7 +352,7 @@
       }
     }
     #block-block-3{
-      background: url("../images/homepage/action-bg.png") left top no-repeat transparent;
+      background: url("../images/homepage/action-bg-ar.png") left top no-repeat transparent;
       @include corner(0px ,210px ,0px ,0px);
       left: 1030px;
       right: auto;
@@ -535,7 +540,7 @@
     .region-highlighted {
 
       #block-block-3{
-        background: url("../images/homepage/action-bg.png") left top no-repeat transparent;
+        background: url("../images/homepage/action-bg-ar.png") left top no-repeat transparent;
         @include corner(0px ,210px ,0px ,0px);
         right: auto;
         left: 0;
