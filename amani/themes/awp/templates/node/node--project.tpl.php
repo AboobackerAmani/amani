@@ -123,6 +123,8 @@
                 <span class="fb-share-button"  data-layout="button_count"></span>
                 <span class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+
+            <div class="go-comments"><a href="#comments"><?php print t('– A discussion starter –');?></a></div>
             </h1>
             <?php if(!empty($node->body)): ?>
                 <div class="field-item body"><?php print render($content['body']);?></div>
