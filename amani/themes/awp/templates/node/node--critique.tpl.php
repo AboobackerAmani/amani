@@ -102,7 +102,7 @@ else{ ?>
                     $number_days = ($datediff/(60*60*24));
                     ?>
                     <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_days_link)){ print ($node->field_days_link[und][0][url]);}?>"><img typeof="foaf:Image" src="<?php print $theme_path.'calendar.png';?>" width="104" height="91" alt=""></a></div>  </div>
-                    <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_days_link)){print ($node->field_days_link[und][0][url]);}?>"><?php print ('Days Since Ceasfire');?></a></span>  </div>
+                    <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_days_link)){print ($node->field_days_link[und][0][url]);}?>"><?php print t('Days Since Ceasfire');?></a></span>  </div>
                     <div class="views-field views-field-field-text big">        <div class="field-content"><?php print floor($number_days);?></div>  </div>
                     <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_days_link)){ print ($node->field_days_link[und][0][url]);}?>"><?php print t('Read More');?></a></span>  </div>  </div>
 
