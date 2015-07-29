@@ -74,6 +74,7 @@ $h6-font-size: 0.67 * $base-font-size;
 
 // First, let's create some font stacks.
 $font-sans :'Source Sans Pro', sans-serif;
+$font-sans-ar :'Source Sans Pro', sans-serif;
 $times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
 $times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
 $georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
@@ -91,6 +92,8 @@ $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 $base-font-family: $font-sans; // The font family set on the html element.
 $font-body:        $font-sans;
 $font-monospace:   $courier;
+
+$font-body-ar:        $font-sans;
 
 
 //
