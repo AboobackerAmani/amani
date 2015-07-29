@@ -36,7 +36,8 @@ Drupal.behaviors.my_custom_behavior = {
       $('#views-exposed-form-resource-inner-page .views-widget-filter-keys label').hide();
       $('#views-exposed-form-resource-inner-page .views-widget-filter-keys .form-text').attr("placeholder", $.trim(ourLabel));
 
-      $('#block-menu-menu-awp-footer-menu .menu').append('<li class="menu__item is-leaf last leaf top-menu"><a href="#"" title="Top" class="menu__link top-link">Top</a></li>');
+      $('[dir="ltr"] #block-menu-menu-awp-footer-menu .menu').append('<li class="menu__item is-leaf last leaf top-menu"><a href="#"" title="Top" class="menu__link top-link">Top</a></li>');
+      $('[dir="rtl"] #block-menu-menu-awp-footer-menu .menu').append('<li class="menu__item is-leaf last leaf top-menu"><a href="#"" title="Top" class="menu__link top-link">الأعلى</a></li>');
 
 
   }

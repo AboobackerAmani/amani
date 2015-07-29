@@ -353,7 +353,8 @@
     }
     #block-block-3{
       background: url("../images/homepage/action-bg-ar.png") left top no-repeat transparent;
-      @include corner(0px ,210px ,0px ,0px);
+      background-size: 100% 100%;
+      @include corner(0px ,0px ,210px ,0px);
       left: 1030px;
       right: auto;
       .take-action-block{
@@ -541,7 +542,8 @@
 
       #block-block-3{
         background: url("../images/homepage/action-bg-ar.png") left top no-repeat transparent;
-        @include corner(0px ,210px ,0px ,0px);
+        background-size: 100% 100%;
+        @include corner(0px ,0px ,210px ,0px);
         right: auto;
         left: 0;
 
@@ -744,17 +746,17 @@
           border-left: 1px solid $awp-white;
           padding-left: 10px;
           margin-right: 0px;
-          border-right: px solid $awp-white;
+          border-right: 0px solid $awp-white;
           padding-right: 0px;
 
 
           a{
-
+            word-wrap: normal;
             &.top-link{
-              margin-right: 0px;
-              padding-right: 0px;
-              margin-left: 40px;
-              padding-left: 26px;
+              margin-right: 40px;
+              padding-right: 26px;
+              margin-left: 0px;
+              padding-left: 0px;
               background: url("../images/footer/top-arrow.png") right center no-repeat transparent;
             }
           }
@@ -767,7 +769,7 @@
             margin-left: 20px;
           }
           &.last{
-
+            border: 0;
           }
         }
       }
