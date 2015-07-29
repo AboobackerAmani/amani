@@ -1995,6 +1995,9 @@ body {
       }
       .form-actions{
         float: right;
+        [dir="rtl"] & {
+          float: left;
+        }
         .form-submit{
           font-size: 20px;
           color: #3f3f3f;

@@ -4204,6 +4204,10 @@ body #comments form .form-actions {
   float: right;
 }
 /* line 1998, ../sass/styles.scss */
+[dir="rtl"] body #comments form .form-actions {
+  float: left;
+}
+/* line 2001, ../sass/styles.scss */
 body #comments form .form-actions .form-submit {
   font-size: 20px;
   color: #3f3f3f;
@@ -4212,7 +4216,7 @@ body #comments form .form-actions .form-submit {
   border: 1px solid #ccc;
   padding: 10px 40px;
 }
-/* line 2005, ../sass/styles.scss */
+/* line 2008, ../sass/styles.scss */
 body #comments form .form-actions .form-submit:hover {
   background: #F0F0F0;
   color: #D21145;
