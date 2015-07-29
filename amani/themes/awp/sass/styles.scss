@@ -990,6 +990,7 @@ body {
         float: right;
         a{
           color: $awp-green;
+          font-size: 26px;
         }
       }
     }
@@ -1914,6 +1915,10 @@ body {
             background:none;
             border: 1px solid #ccc;
             padding: 10px 40px;
+            &:hover{
+              background: $awp-light-grey;
+              color: $awp-red;
+            }
           }
         }
       }
@@ -1959,6 +1964,51 @@ body {
           }
         }
       }
+    }
+  }
+  #comments{
+    h2.comments__title,
+    h2.comments__form-title{
+      color: $awp-green;
+      border-top: 1px solid #ccc;
+      margin-top: 50px;
+    }
+    & > .comment{
+      padding: 10px;
+      overflow: hidden;
+      border-top: 1px solid #ccc;
+      &.first{
+        border: 0;
+      }
+      header{
+        font-weight: bold;
+      }
+    }
+    .indented{
+      margin: 5px 70px;
+    }
+
+    form{
+      .form-text,
+      .form-textarea{
+        border: 1px solid #ccc;
+      }
+      .form-actions{
+        float: right;
+        .form-submit{
+          font-size: 20px;
+          color: #3f3f3f;
+          font-weight: 100;
+          background:none;
+          border: 1px solid #ccc;
+          padding: 10px 40px;
+          &:hover{
+            background: $awp-light-grey;
+            color: $awp-red;
+          }
+        }
+      }
+
     }
   }
 }
