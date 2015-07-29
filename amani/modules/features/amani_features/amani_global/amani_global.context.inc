@@ -145,32 +145,26 @@ function amani_global_context_default_contexts() {
         'views-front_page_slideshow-block' => array(
           'module' => 'views',
           'delta' => 'front_page_slideshow-block',
-          'region' => 'home_content_top_rotator',
+          'region' => 'header',
           'weight' => '-10',
-        ),
-        'views-front_page_blocks-block' => array(
-          'module' => 'views',
-          'delta' => 'front_page_blocks-block',
-          'region' => 'home_content_top_static_region',
-          'weight' => '-10',
-        ),
-        'views-front_page_blocks-block_1' => array(
-          'module' => 'views',
-          'delta' => 'front_page_blocks-block_1',
-          'region' => 'home_content_top_static_region',
-          'weight' => '-9',
-        ),
-        'views-front_page_blocks-block_2' => array(
-          'module' => 'views',
-          'delta' => 'front_page_blocks-block_2',
-          'region' => 'home_content_top_static_region',
-          'weight' => '-8',
         ),
         'views-news_and_events-block_1' => array(
           'module' => 'views',
           'delta' => 'news_and_events-block_1',
           'region' => 'content',
           'weight' => '-10',
+        ),
+        'views-front_page_tweets-block' => array(
+          'module' => 'views',
+          'delta' => 'front_page_tweets-block',
+          'region' => 'content',
+          'weight' => '-9',
+        ),
+        'views-72a1db79709d2921e03b4173ca67a118' => array(
+          'module' => 'views',
+          'delta' => '72a1db79709d2921e03b4173ca67a118',
+          'region' => 'content',
+          'weight' => '-8',
         ),
         'views-calendar_of_events-list' => array(
           'module' => 'views',
