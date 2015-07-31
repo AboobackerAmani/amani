@@ -13,11 +13,11 @@ function amani_event_taxonomy_default_vocabularies() {
       'name' => 'Event type',
       'machine_name' => 'event_type',
       'description' => 'For use in classifying events.',
-      'hierarchy' => '0',
+      'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => 0,
       'language' => 'und',
-      'i18n_mode' => '1',
+      'i18n_mode' => 1,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',

@@ -106,7 +106,7 @@ function amani_administrator_configure_amani_form() {
     '#attributes' => array('onclick' => 'if(!confirm("Are you sure?")){return false;}'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
-    '#suffix' => '<p>This action builds the<a href="http://projectamani.org/content/edit-main-menu-links">default main menu</a>. 
+    '#suffix' => '<p>This action builds the<a href="http://projectamani.org/content/edit-main-menu-links">default main menu</a>.
       It will not enable or remove any existing links.</p></div>',
   );
 
@@ -224,7 +224,7 @@ function amani_administrator_configure_amani_form() {
     '#value' => t('Enable \'Partners Carousel\''),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
-    '#suffix' => '<p>This action enables a ‘Partners Carousel’ to appear on your site, as a scrolling bar at the bottom of 
+    '#suffix' => '<p>This action enables a ‘Partners Carousel’ to appear on your site, as a scrolling bar at the bottom of
       your page. Please note without partner content you will not see this block.</p></div>',
   );
 
@@ -343,9 +343,9 @@ function amani_administrator_configure_amani_form() {
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
     '#suffix' =>
-    '<p>This option allows you to add new categories for the ‘Contact Form’ (e.g. General Inquiries, Donation Inquiries, Volunteer with Us, 
-      Website Feedback, etc.) and customize the set of recipients for each category type on your site’s default Contact page. 
-      Please note that your site comes with one default category ‘General Inquiries.’ When there is only one ‘Category’, there is no ‘Category’ 
+    '<p>This option allows you to add new categories for the ‘Contact Form’ (e.g. General Inquiries, Donation Inquiries, Volunteer with Us,
+      Website Feedback, etc.) and customize the set of recipients for each category type on your site’s default Contact page.
+      Please note that your site comes with one default category ‘General Inquiries.’ When there is only one ‘Category’, there is no ‘Category’
       dropdown list. This dropdown option will appear as soon as you add a second ‘Category’ option.</p></div>'
   );
 
@@ -446,8 +446,8 @@ function amani_administrator_configure_amani_form() {
     '#value' => t('Configure Redhen'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
-    '#suffix' => '<p><a href="https://www.drupal.org/project/redhen">RedHen CRM</a> is an open source CRM framework built in <a href="https://www.drupal.org/">Drupal</a>. 
-      RedHen CRM is packed with <a href="http://en.wikipedia.org/wiki/Association_management_system">association management</a> (AMS) features for managing detailed information on Contacts and Organizations, Membership services, Event registrations, and 
+    '#suffix' => '<p><a href="https://www.drupal.org/project/redhen">RedHen CRM</a> is an open source CRM framework built in <a href="https://www.drupal.org/">Drupal</a>.
+      RedHen CRM is packed with <a href="http://en.wikipedia.org/wiki/Association_management_system">association management</a> (AMS) features for managing detailed information on Contacts and Organizations, Membership services, Event registrations, and
       Constituent engagement.</p></div>',
   );
 
@@ -541,6 +541,23 @@ function amani_administrator_configure_amani_form() {
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix_3,
     '#suffix' => '</div>',
+  );
+
+  $form['Image_behind_twitter_facebook_calender_blocks'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Change image, behind twitter, facebook & calender blocks'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['Image_behind_twitter_facebook_calender_blocks'][] = array(
+    '#type' => 'button',
+    '#value' => t('Change Image'),
+    '#attributes' => array('onclick' => 'if(!confirm("Are you sure?")){return false;}'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action edits the content <a href="content">
+     Image Behind (twitter, fb & calender) blocks</a>.</p></div>',
   );
 
   return $form;

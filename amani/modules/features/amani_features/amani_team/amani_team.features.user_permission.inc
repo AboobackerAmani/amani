@@ -10,56 +10,56 @@
 function amani_team_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: create team content.
+  // Exported permission: 'create team content'.
   $permissions['create team content'] = array(
     'name' => 'create team content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'amani administrator',
-      2 => 'editor',
+      'administrator' => 'administrator',
+      'amani administrator' => 'amani administrator',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: delete any team content.
+  // Exported permission: 'delete any team content'.
   $permissions['delete any team content'] = array(
     'name' => 'delete any team content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'amani administrator',
+      'administrator' => 'administrator',
+      'amani administrator' => 'amani administrator',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: delete own team content.
+  // Exported permission: 'delete own team content'.
   $permissions['delete own team content'] = array(
     'name' => 'delete own team content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'amani administrator',
-      2 => 'editor',
+      'administrator' => 'administrator',
+      'amani administrator' => 'amani administrator',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: edit any team content.
+  // Exported permission: 'edit any team content'.
   $permissions['edit any team content'] = array(
     'name' => 'edit any team content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'amani administrator',
-      2 => 'editor',
+      'administrator' => 'administrator',
+      'amani administrator' => 'amani administrator',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: edit own team content.
+  // Exported permission: 'edit own team content'.
   $permissions['edit own team content'] = array(
     'name' => 'edit own team content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'amani administrator',
-      2 => 'editor',
+      'administrator' => 'administrator',
+      'amani administrator' => 'amani administrator',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );

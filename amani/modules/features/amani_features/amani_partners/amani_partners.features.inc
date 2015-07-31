@@ -7,12 +7,10 @@
 /**
  * Implements hook_ctools_plugin_api().
  */
-function amani_partners_ctools_plugin_api() {
-  list($module, $api) = func_get_args();
+function amani_partners_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "file_entity" && $api == "file_default_displays") {
     return array("version" => "1");
   }
-  list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -21,8 +19,8 @@ function amani_partners_ctools_plugin_api() {
 /**
  * Implements hook_views_api().
  */
-function amani_partners_views_api() {
-  return array("version" => "3.0");
+function amani_partners_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
 }
 
 /**
@@ -33,64 +31,41 @@ function amani_partners_image_default_styles() {
 
   // Exported image style: 250x100.
   $styles['250x100'] = array(
-    'name' => '250x100',
     'label' => '250x100',
     'effects' => array(
       5 => array(
-        'label' => 'Scale',
-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'image_scale_form',
-        'summary theme' => 'image_scale_summary',
-        'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
-          'width' => '250',
+          'width' => 250,
           'height' => '',
           'upscale' => 0,
         ),
-        'weight' => '1',
+        'weight' => 1,
       ),
       6 => array(
-        'label' => 'Scale',
-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'image_scale_form',
-        'summary theme' => 'image_scale_summary',
-        'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
           'width' => '',
-          'height' => '100',
+          'height' => 100,
           'upscale' => 0,
         ),
-        'weight' => '2',
+        'weight' => 2,
       ),
     ),
   );
 
   // Exported image style: partner_480.
   $styles['partner_480'] = array(
-    'name' => 'partner_480',
     'label' => 'Partner Logo (480x wide)',
     'effects' => array(
       5 => array(
-        'label' => 'Scale',
-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'image_scale_form',
-        'summary theme' => 'image_scale_summary',
-        'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
-          'width' => '480',
+          'width' => 480,
           'height' => '',
           'upscale' => 0,
         ),
-        'weight' => '1',
+        'weight' => 1,
       ),
     ),
   );
@@ -112,5 +87,6 @@ function amani_partners_node_info() {
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }
