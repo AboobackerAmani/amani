@@ -109,11 +109,23 @@ function amani_global_context_default_contexts() {
           'region' => 'footer',
           'weight' => '-40',
         ),
-        'bean-amani-powered-by' => array(
+        'bean-powered-by' => array(
           'module' => 'bean',
-          'delta' => 'amani-powered-by',
+          'delta' => 'powered-by',
           'region' => 'footer',
-          'weight' => '-37',
+          'weight' => '-10',
+        ),
+        'bean-project-by' => array(
+          'module' => 'bean',
+          'delta' => 'project-by',
+          'region' => 'footer',
+          'weight' => '-9',
+        ),
+        'bean-amani-special-thanks' => array(
+          'module' => 'bean',
+          'delta' => 'amani-special-thanks',
+          'region' => 'footer',
+          'weight' => '-8',
         ),
       ),
     ),

@@ -13,7 +13,7 @@ function amani_global_uuid_features_default_beans() {
   $beans[] = array(
     'label' => 'Amani: Special Thanks',
     'description' => NULL,
-    'title' => '',
+    'title' => 'Special test',
     'type' => 'static_content',
     'data' => array(
       'view_mode' => 'default',
@@ -22,7 +22,7 @@ function amani_global_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => '1374818202',
     'log' => '',
-    'uid' => '0',
+    'uid' => '1',
     'default_revision' => '1',
     'revisions' => array(),
     'vuuid' => '7ea64c8e-3953-4284-9751-74f2cdbcb001',
@@ -30,7 +30,8 @@ function amani_global_uuid_features_default_beans() {
     'field_bean_body' => array(
       'und' => array(
         0 => array(
-          'value' => '<div class="sponsor-logos"></div>',
+          'value' => '<div class="sponsor-logos"></div>
+<img src ="amani_zen/amani/amani/themes/amani_zen/favicon-source.png">',
           'format' => 'php_code',
         ),
       ),
