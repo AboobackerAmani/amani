@@ -15,13 +15,13 @@ function amani_global_locale_default_languages() {
     'language' => 'en',
     'name' => 'English',
     'native' => 'EN',
-    'direction' => '0',
-    'enabled' => '1',
-    'plurals' => '0',
+    'direction' => 0,
+    'enabled' => 1,
+    'plurals' => 0,
     'formula' => '',
     'domain' => '',
     'prefix' => '',
-    'weight' => '0',
+    'weight' => 0,
   );
   return $languages;
 }
