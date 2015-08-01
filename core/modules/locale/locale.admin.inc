@@ -1175,12 +1175,12 @@ function locale_translate_edit_form($form, &$form_state, $lid) {
 function locale_translate_edit_form_validate($form, &$form_state) {
   // Locale string check is needed for default textgroup only.
   $safe_check_needed = $form_state['values']['textgroup'] == 'default';
-  foreach ($form_state['values']['translations'] as $key => $value) {
+ /* foreach ($form_state['values']['translations'] as $key => $value) {
     if ($safe_check_needed && !locale_string_is_safe($value)) {
       form_set_error('translations', t('The submitted string contains disallowed HTML: %string', array('%string' => $value)));
       watchdog('locale', 'Attempted submission of a translation string with disallowed HTML: %string', array('%string' => $value), WATCHDOG_WARNING);
     }
-  }
+  }*/
 }
 
 /**
