@@ -1,0 +1,112 @@
+//
+// @slideshow.scss
+// Css style for frontpage slideshow
+//
+
+// .views-slideshow-cycle-main-frame,
+// .views-slideshow-cycle-main-frame-row,
+// .views-slideshow-cycle-main-frame-row img {
+//   width: 100% !important;
+// }
+
+.views-slideshow-cycle-main-frame-row, .views-slideshow-cycle-main-frame {
+  width: 100% !important;
+}
+
+.views-slideshow-cycle-main-frame-row img,
+.views-slideshow-cycle-main-frame-row, {
+  height: auto !important;
+}
+
+.slideshow {
+  position: relative;
+  img {
+    display: table;
+    margin: 0 auto;
+  }
+  .views-field-field-description,
+  .views-field-field-button a,
+  .views-slideshow-controls-bottom,
+  .views-field-title a {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: rgb(255, 255, 255);
+  }
+  .views-field-title a {
+    top: 20%;
+    -webkit-transform: translateY(-20%);
+    -ms-transform: translateY(-20%);
+    transform: translateY(-20%);
+    @include font-size(20px);
+    line-height: 20px;
+    text-transform: uppercase;
+    @include breakpoint($desktop) {
+      @include font-size(50px);
+      line-height: 50px;
+    }
+  }
+  .views-field-field-description {
+    display: none;
+    top: 45%;
+    -webkit-transform: translateY(-45%);
+    -ms-transform: translateY(-45%);
+    transform: translateY(-45%);
+    @include font-size(20px);
+    max-width: 410px;
+    line-height: 29px;
+    @include breakpoint($desktop) {
+      display: block;
+    }
+  }
+  .views-field-field-button a {
+    border: 1px solid $white;
+    padding: 5px 5px;
+    top: 75%;
+    -webkit-transform: translateY(-75%);
+    -ms-transform: translateY(-75%);
+    transform: translateY(-75%);
+    @include font-size(13px);
+    text-transform: uppercase;
+    max-width: 150px;
+    background-color: rgba(81,62,121,0.8);
+    @include breakpoint($desktop) {
+      @include font-size(18px);
+      padding: 15px 30px;
+      background-color: rgba(81,62,121,0.23);
+    }
+  }
+
+  .views-field-title a,
+  .views-field-field-description,
+  .views-field-field-button a {
+    text-shadow: -1px 0px 6px rgba(0, 0, 0, 0.59);
+  }
+
+  .views-slideshow-controls-bottom {
+    display: none;
+    bottom: 5px;
+    z-index: 100;
+    @include breakpoint($desktop) {
+      display: block;
+    }
+    span {
+      display: inline-block;
+      background-image: url('../images/arrows-slideshow.png');
+      width: 41px;
+      height: 41px;
+      @include hide-text;
+      &:nth-child(2) {
+        display: none;
+      }
+      &:nth-child(3) {
+        background-position: -41px 0;
+        margin: 0 0 0 40px;
+      }
+    }
+  }
+}

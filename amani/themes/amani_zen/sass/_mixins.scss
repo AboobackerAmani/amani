@@ -17,6 +17,12 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+@mixin hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 // Turns off the element-invisible effect.
 @mixin element-invisible-off {
   position: static !important;
@@ -92,3 +98,23 @@
   font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
 }
+
+
+/*
+ * Mobile First approach to break points
+ *
+ * http://responsivedesign.is/strategy/page-layout/defining-breakpoints
+ * TL;DR
+ * Instead of being concerned with device breakpoints the best practice is to
+ * design for your smallest viewport first.  As you expand that view there will
+ * come a point at which the design looks terrible.
+ *
+ * This is where you add a break point.
+ */
+
+@mixin breakpoint($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+

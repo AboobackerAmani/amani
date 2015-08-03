@@ -37,6 +37,10 @@
     <?php print render($page['header']); ?>
   </div>
 
+  <div class="slideshow">
+    <?php print render($page['subheader']); ?>
+  </div>
+
 </header>
 
 <div id="page">
