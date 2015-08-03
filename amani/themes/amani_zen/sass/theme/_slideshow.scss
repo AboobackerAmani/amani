@@ -3,12 +3,6 @@
 // Css style for frontpage slideshow
 //
 
-// .views-slideshow-cycle-main-frame,
-// .views-slideshow-cycle-main-frame-row,
-// .views-slideshow-cycle-main-frame-row img {
-//   width: 100% !important;
-// }
-
 .views-slideshow-cycle-main-frame-row, .views-slideshow-cycle-main-frame {
   width: 100% !important;
 }
@@ -24,10 +18,10 @@
     display: table;
     margin: 0 auto;
   }
-  .views-field-field-description,
-  .views-field-field-button a,
+  .description,
+  .button a,
   .views-slideshow-controls-bottom,
-  .views-field-title a {
+  .title a {
     position: absolute;
     text-align: center;
     width: auto;
@@ -37,7 +31,7 @@
     text-align: center;
     color: rgb(255, 255, 255);
   }
-  .views-field-title a {
+  .title a {
     top: 20%;
     -webkit-transform: translateY(-20%);
     -ms-transform: translateY(-20%);
@@ -50,7 +44,7 @@
       line-height: 50px;
     }
   }
-  .views-field-field-description {
+  .description {
     display: none;
     top: 45%;
     -webkit-transform: translateY(-45%);
@@ -63,7 +57,7 @@
       display: block;
     }
   }
-  .views-field-field-button a {
+  .button a {
     border: 1px solid $white;
     padding: 5px 5px;
     top: 75%;
@@ -81,9 +75,9 @@
     }
   }
 
-  .views-field-title a,
-  .views-field-field-description,
-  .views-field-field-button a {
+  .title a,
+  .description,
+  .button a {
     text-shadow: -1px 0px 6px rgba(0, 0, 0, 0.59);
   }
 

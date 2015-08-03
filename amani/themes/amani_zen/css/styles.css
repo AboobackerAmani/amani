@@ -2389,31 +2389,31 @@ footer .menu a:before {
   width: 75%;
 }
 
-/* line 12, ../sass/theme/_slideshow.scss */
+/* line 6, ../sass/theme/_slideshow.scss */
 .views-slideshow-cycle-main-frame-row, .views-slideshow-cycle-main-frame {
   width: 100% !important;
 }
 
-/* line 16, ../sass/theme/_slideshow.scss */
+/* line 10, ../sass/theme/_slideshow.scss */
 .views-slideshow-cycle-main-frame-row img,
 .views-slideshow-cycle-main-frame-row {
   height: auto !important;
 }
 
-/* line 21, ../sass/theme/_slideshow.scss */
+/* line 15, ../sass/theme/_slideshow.scss */
 .slideshow {
   position: relative;
 }
-/* line 23, ../sass/theme/_slideshow.scss */
+/* line 17, ../sass/theme/_slideshow.scss */
 .slideshow img {
   display: table;
   margin: 0 auto;
 }
-/* line 27, ../sass/theme/_slideshow.scss */
-.slideshow .views-field-field-description,
-.slideshow .views-field-field-button a,
+/* line 21, ../sass/theme/_slideshow.scss */
+.slideshow .description,
+.slideshow .button a,
 .slideshow .views-slideshow-controls-bottom,
-.slideshow .views-field-title a {
+.slideshow .title a {
   position: absolute;
   text-align: center;
   width: auto;
@@ -2423,8 +2423,8 @@ footer .menu a:before {
   text-align: center;
   color: white;
 }
-/* line 40, ../sass/theme/_slideshow.scss */
-.slideshow .views-field-title a {
+/* line 34, ../sass/theme/_slideshow.scss */
+.slideshow .title a {
   top: 20%;
   -webkit-transform: translateY(-20%);
   -ms-transform: translateY(-20%);
@@ -2435,15 +2435,15 @@ footer .menu a:before {
   text-transform: uppercase;
 }
 @media (min-width: 960px) {
-  /* line 40, ../sass/theme/_slideshow.scss */
-  .slideshow .views-field-title a {
+  /* line 34, ../sass/theme/_slideshow.scss */
+  .slideshow .title a {
     font-size: 50px;
     font-size: 3.84615rem;
     line-height: 50px;
   }
 }
-/* line 53, ../sass/theme/_slideshow.scss */
-.slideshow .views-field-field-description {
+/* line 47, ../sass/theme/_slideshow.scss */
+.slideshow .description {
   display: none;
   top: 45%;
   -webkit-transform: translateY(-45%);
@@ -2455,13 +2455,13 @@ footer .menu a:before {
   line-height: 29px;
 }
 @media (min-width: 960px) {
-  /* line 53, ../sass/theme/_slideshow.scss */
-  .slideshow .views-field-field-description {
+  /* line 47, ../sass/theme/_slideshow.scss */
+  .slideshow .description {
     display: block;
   }
 }
-/* line 66, ../sass/theme/_slideshow.scss */
-.slideshow .views-field-field-button a {
+/* line 60, ../sass/theme/_slideshow.scss */
+.slideshow .button a {
   border: 1px solid #fff;
   padding: 5px 5px;
   top: 75%;
@@ -2475,33 +2475,33 @@ footer .menu a:before {
   background-color: rgba(81, 62, 121, 0.8);
 }
 @media (min-width: 960px) {
-  /* line 66, ../sass/theme/_slideshow.scss */
-  .slideshow .views-field-field-button a {
+  /* line 60, ../sass/theme/_slideshow.scss */
+  .slideshow .button a {
     font-size: 18px;
     font-size: 1.38462rem;
     padding: 15px 30px;
     background-color: rgba(81, 62, 121, 0.23);
   }
 }
-/* line 84, ../sass/theme/_slideshow.scss */
-.slideshow .views-field-title a,
-.slideshow .views-field-field-description,
-.slideshow .views-field-field-button a {
+/* line 78, ../sass/theme/_slideshow.scss */
+.slideshow .title a,
+.slideshow .description,
+.slideshow .button a {
   text-shadow: -1px 0px 6px rgba(0, 0, 0, 0.59);
 }
-/* line 90, ../sass/theme/_slideshow.scss */
+/* line 84, ../sass/theme/_slideshow.scss */
 .slideshow .views-slideshow-controls-bottom {
   display: none;
   bottom: 5px;
   z-index: 100;
 }
 @media (min-width: 960px) {
-  /* line 90, ../sass/theme/_slideshow.scss */
+  /* line 84, ../sass/theme/_slideshow.scss */
   .slideshow .views-slideshow-controls-bottom {
     display: block;
   }
 }
-/* line 97, ../sass/theme/_slideshow.scss */
+/* line 91, ../sass/theme/_slideshow.scss */
 .slideshow .views-slideshow-controls-bottom span {
   display: inline-block;
   background-image: url("../images/arrows-slideshow.png");
@@ -2511,11 +2511,11 @@ footer .menu a:before {
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 103, ../sass/theme/_slideshow.scss */
+/* line 97, ../sass/theme/_slideshow.scss */
 .slideshow .views-slideshow-controls-bottom span:nth-child(2) {
   display: none;
 }
-/* line 106, ../sass/theme/_slideshow.scss */
+/* line 100, ../sass/theme/_slideshow.scss */
 .slideshow .views-slideshow-controls-bottom span:nth-child(3) {
   background-position: -41px 0;
   margin: 0 0 0 40px;
