@@ -91,6 +91,7 @@ function amani_slideshow_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['path'] = '[field_link]';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
@@ -100,6 +101,7 @@ function amani_slideshow_views_default_views() {
   $handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
   $handler->display->display_options['fields']['field_description']['field'] = 'field_description';
   $handler->display->display_options['fields']['field_description']['label'] = '';
+  $handler->display->display_options['fields']['field_description']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_description']['type'] = 'text_trimmed';
   $handler->display->display_options['fields']['field_description']['settings'] = array(
@@ -110,8 +112,16 @@ function amani_slideshow_views_default_views() {
   $handler->display->display_options['fields']['field_button']['table'] = 'field_data_field_button';
   $handler->display->display_options['fields']['field_button']['field'] = 'field_button';
   $handler->display->display_options['fields']['field_button']['label'] = '';
+  $handler->display->display_options['fields']['field_button']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_button']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_button']['click_sort_column'] = 'url';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="title_body_button">[title][field_description][field_button]</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Display ranking (field_display_ranking) */
   $handler->display->display_options['sorts']['field_display_ranking_value']['id'] = 'field_display_ranking_value';
   $handler->display->display_options['sorts']['field_display_ranking_value']['table'] = 'field_data_field_display_ranking';
@@ -155,6 +165,7 @@ function amani_slideshow_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('<div class="title_body_button">[title][field_description][field_button]</div>'),
     t('Block'),
   );
   $export['front_page_slideshow'] = $view;

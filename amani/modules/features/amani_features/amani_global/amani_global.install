@@ -1,0 +1,10 @@
+  <?php
+
+  /**
+   * Reverted the context home page "front page".
+   */
+  function amani_global_update_7000() {
+    features_revert_module('amani_global');
+  }
+
+  ?>
