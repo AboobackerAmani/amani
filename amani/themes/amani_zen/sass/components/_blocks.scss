@@ -44,136 +44,28 @@
   }
 }
 
+
 /**
  * Unique blocks
  */
 
 // Search form
 #block-search-form {
-  display: inline-block;
-  float: right;
-  text-align: right;
-  margin-top: -4px;
-
-  //screen bigger than 768px
-  @media all and (min-width: $breakpoint) {
-    margin-top: 0;
-    width: auto;
-    position: absolute;
-    top: 24px;
-    right: 0;
-  }
+  position: absolute;
+  top: 30px;
+  right: 60px;
 
   @include hide-contextual-links();
 
   .form-text {
-    background-color: $soft-grey;
-    @include font-size(12px);
+    font-size: 0.846rem; // 11px
     font-weight: normal;
-    line-height: 12px;
-    height: 24px;
-    padding: 6px 10px;
-    width: 170px;
+    height: 16px;
+    padding: 2px 5px;
+    width: 76px;
   }
 
   .form-actions {
     display: none;
   }
-}
-
-/* Front Page Blocks */
-#content-header {
-  padding: 20px 0px 20px 0px;
-}
-
-/* Current Projects */
-#latest_project {
-  position:relative;
-  display: inline-block;
-  width: 630px;
-  height: 350px;
-  margin: 0px 20px 10px 0px;
-}
-
-/* Twitter Block */
-#block-views-front_page_tweets-block  {
-  .view-header {
-    display: none;
-  }
-
-  .field-content.message_text {
-    font-family: 'Open Sans Semi Bold';
-  }
-
-  .field-content.twitter_date {
-    font-family: 'Open Sans Light Italic';
-  }
-
-  li.views-row {
-    margin: 0;
-    list-style-type: none;
-    padding: 0;
-    border-bottom: 2px solid;
-  }
-
-  .block-title {
-    font-size: 18px;
-    color: #5B616F;
-  }
-}
-
-.region.region-twitter {
-  position: relative;
-  display: inline-block;
-  width: 285px;
-  height: 350px;
-  margin-bottom: 10px;
-  background-color: rgb(230, 230, 230);
-  padding: 20px;
-}
-
-
-/* Meet our volunteer block */
-#meet_volunteer {
-  position: relative;
-  display: inline-block;
-  width: 257px;
-  height: 350px;
-  margin: 0px 20px 10px 0px;
-}
-
-/* Latest Blog Post */
-#latest_blog_post {
-  position:relative;
-  display: inline-block;
-  width: 350px;
-  height: 350px;
-  margin: 0px 20px 10px 0px;
-}
-
-/* Peace Talks */
-#peace_talks {
-  position:relative;
-  display: inline-block;
-  width: 285px;
-  height: 350px;
-  margin-bottom: 10px;
-}
-
-/* Area of Focus */
-#area_of_focus {
-  position:relative;
-  display: inline-block;
-  width: 257px;
-  height: 350px;
-  margin: 0px 20px 10px 0px;
-}
-
-/* Get Invlolved */
-#get_involved {
-  position:relative;
-  display: inline-block;
-  width: 679px;
-  height: 350px;
-  margin-bottom: 10px;
 }

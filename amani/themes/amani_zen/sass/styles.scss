@@ -16,19 +16,10 @@
 @import "layouts/responsive";
 
 /* Component (SMACSS module) rules */
-@import "components/menus";
-@import "components/blocks";
-
-
+@import "components/*";
 // Optionally, add your own components here.
 @import "print";
 
 /* SMACSS theme rules */
-@import "theme/layout";
-@import "theme/slide_style";
-@import "theme/forms";
-@import "theme/menus";
-@import "theme/footer";
-@import "theme/header";
-@import "theme/donate";
-@import "theme/special-event";
+@import "theme/*";
+/* @import "theme-B"; */

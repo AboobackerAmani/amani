@@ -22,7 +22,6 @@ function amani_social_media_views_default_views() {
 
   /* Display: Tweets */
   $handler = $view->new_display('default', 'Tweets', 'default');
-  $handler->display->display_options['title'] = '@PeaceGeeks';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -216,7 +215,6 @@ function amani_social_media_views_default_views() {
   $handler->display->display_options['fields']['text']['link_urls'] = 1;
   $handler->display->display_options['fields']['text']['link_usernames'] = 1;
   $handler->display->display_options['fields']['text']['link_hashtags'] = 1;
-  $handler->display->display_options['fields']['text']['link_attributes'] = 1;
   /* Field: Twitter: Created time */
   $handler->display->display_options['fields']['created_time']['id'] = 'created_time';
   $handler->display->display_options['fields']['created_time']['table'] = 'twitter';
@@ -245,8 +243,6 @@ function amani_social_media_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = '@PeaceGeeks';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -285,9 +281,6 @@ function amani_social_media_views_default_views() {
   $handler->display->display_options['fields']['text']['table'] = 'twitter';
   $handler->display->display_options['fields']['text']['field'] = 'text';
   $handler->display->display_options['fields']['text']['label'] = '';
-  $handler->display->display_options['fields']['text']['element_type'] = 'div';
-  $handler->display->display_options['fields']['text']['element_class'] = 'message_text';
-  $handler->display->display_options['fields']['text']['element_label_class'] = 'message_text';
   $handler->display->display_options['fields']['text']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['text']['link_urls'] = 1;
   $handler->display->display_options['fields']['text']['link_usernames'] = 1;
@@ -298,11 +291,9 @@ function amani_social_media_views_default_views() {
   $handler->display->display_options['fields']['created_time']['table'] = 'twitter';
   $handler->display->display_options['fields']['created_time']['field'] = 'created_time';
   $handler->display->display_options['fields']['created_time']['label'] = '';
-  $handler->display->display_options['fields']['created_time']['element_class'] = 'twitter_date';
-  $handler->display->display_options['fields']['created_time']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['created_time']['date_format'] = 'time ago';
-  $handler->display->display_options['fields']['created_time']['second_date_format'] = 'long';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['block_description'] = 'Twitter feed';
 
   /* Display: Tweets */
   $handler = $view->new_display('page', 'Tweets', 'page_2');
@@ -351,7 +342,6 @@ function amani_social_media_views_default_views() {
   $handler->display->display_options['path'] = 'tweets';
   $translatables['front_page_tweets'] = array(
     t('Tweets'),
-    t('@PeaceGeeks'),
     t('more'),
     t('Apply'),
     t('Reset'),
@@ -373,6 +363,7 @@ function amani_social_media_views_default_views() {
     t('Block'),
     t('<?php print(variable_get(\'amani_admin_twitter_block_title\', \'Twitter\')) ?>'),
     t('<p align = "right"><a href = "http://twitter.com/hivevancouver" target = "_blank">more</a>'),
+    t('Twitter feed'),
     t('Displays a formatted list of tweets'),
   );
   $export['front_page_tweets'] = $view;

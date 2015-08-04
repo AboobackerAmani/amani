@@ -17,6 +17,30 @@
 // =============================================================================
 
 //
+// Legacy IE support
+//
+// These variables are used by many mixins to add additional CSS to support
+// specific versions of IE or specific vendor prefixes.
+//
+// IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 3 ways:
+// - Drop support for IE 6/7. :-) Set $legacy-support-for-ie6
+//   and $legacy-support-for-ie7 to false.
+// - (Preferred) Install the box-sizing polyfill and set the variable below to
+//   the absolute path URL to the boxsizing.htc file.
+//   @see https://github.com/Schepp/box-sizing-polyfill
+//   $box-sizing-polyfill-path: "/path/to/boxsizing.htc";
+// - Use the same CSS unit for grid and gutter width in resonsive-sidebars.scss
+//   (use px for both or use % for both) and set the box-sizing variable to content-box.
+//
+// Zen does not require special handling for IE8 or later. But Compass uses that
+// variable for a couple edge cases. We include it for completeness sake. See
+// the documentation at http://compass-style.org/reference/compass/support/
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$legacy-support-for-ie8: true;
+
+
+//
 // Font faces, stacks and sizes.
 //
 
@@ -47,135 +71,55 @@ $h6-font-size: 0.67 * $base-font-size;
 // find any of the fonts in the list.
 
 // First, let's create some font stacks.
-@font-face {
-  font-family: 'MinionPro';
-  src: url('../fonts/Minion-Regular.otf') format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+$times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
+$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
 
-//Open Sans package
+$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
+$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
+$helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
+$arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 
-/* Regular */
-@font-face {
-    font-family: 'Open Sans Regular';
-    src: url('../fonts/OpenSans-Regular.ttf') format("truetype");
-    font-weight: normal;
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* Italic */
-@font-face {
-    font-family: 'Open Sans Italic';
-    src: url('../fonts/OpenSans-Italic.ttf') format("truetype");
-    font-weight: normal;
-    font-weight: 400;
-    font-style: italic;
-}
-
-/* Light */
-@font-face {
-    font-family: 'Open Sans Light';
-    src: url('../fonts/OpenSans-Light.ttf') format("truetype");
-    font-weight: 200;
-    font-style: normal;
-}
-
-/* Light Italic */
-@font-face {
-    font-family: 'Open Sans Light Italic';
-    src: url('../fonts/OpenSans-LightItalic.ttf') format("truetype");
-    font-weight: 200;
-    font-style: italic;
-}
-
-/* Semibold */
-@font-face {
-    font-family: 'Open Sans Semi Bold';
-    src: url('../fonts/OpenSans-Semibold.ttf') format("truetype");
-    font-weight: 500;
-    font-style: normal;
-}
-
-/* Semibold Italic */
-@font-face {
-    font-family: 'Open Sans Semi Bold';
-    src: url('../fonts/OpenSans-SemiboldItalic.ttf') format("truetype");
-    font-weight: 500;
-    font-style: italic;
-}
-
-/* Bold */
-@font-face {
-    font-family: 'Open Sans Bold';
-    src: url('../fonts/OpenSans-Bold.ttf') format("truetype");
-    font-weight: bold;
-    font-weight: 700;
-    font-style: normal;
-}
-
-/* Bold Italic */
-@font-face {
-    font-family: 'Open Sans Bold Italic';
-    src: url('../fonts/OpenSans-BoldItalic.ttf') format("truetype");
-    font-weight: bold;
-    font-weight: 700;
-    font-style: italic;
-}
-
-/* Extra Bold */
-@font-face {
-    font-family: 'Open Sans Extra Bold';
-    src: url('../fonts/OpenSans-ExtraBold.ttf') format("truetype");
-    font-weight: 900;
-    font-style: normal;
-}
-
-/* Extra Bold Italic */
-@font-face {
-    font-family: 'Open Sans Extra Bold Italic';
-    src: url('../fonts/OpenSans-ExtraBoldItalic.ttf') format("truetype");
-    font-weight: 900;
-    font-style: italic;
-}
-
-$minion:     "MinionPro", serif;
-$open-sans:  "Open Sans", sans-serif;
+$open-sans:       "Open Sans", sans-serif;
 
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
+$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
 $base-font-family: $open-sans; // The font family set on the html element.
 $font-body:        $open-sans;
-$font-minion:      $minion;
+$font-monospace:   $courier;
 $icon-font: 'SSSocial';
 
 // font weights
-$fw-light:      200;
-$fw-normal:     400;
-$fw-semi-bold:  500;
-$fw-bold:       700;
-$fw-extra-bold: 900;
+$fw-light: 300;
+$fw-normal: 400;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
 
 //
 // Colors, etc.
 //
-$blue:          #59C2ED;
-$orange:        #F09416;
-$grey:          #474F5E;
-$text-black:    #414042;
-$soft-grey:     #E6E6E6;
-$soft-blue:     #CFEDFA;
-$white:         #fff;
+$blue: #59c2ed;
+
+$orange: #f09416;
+
+$grey-clear: #e6e7e8;
+$grey-medium: #474f5e;
+$grey-dark: #414042;
+$grey-darker: #282828;
+
+$white: #fff;
+$almost-white: #fdfeff;
 
 // Primary Color for the site.
 $primary-color: $blue;
 $secondary-color: $orange;
 
 // base color scheme
-$font-color:    $text-black;
+$font-color: $grey-dark;
 $error-text-color: #db2c2c;
 
 $link-color: $blue;
@@ -185,22 +129,12 @@ $link-color-hover: darken($blue, 20%);
 $indent-amount: 20px;
 
 // The height of the navigation container.
-$nav-height: 1em;
+$nav-height: 3em;
 
 // Tab styling.
 $tabs-container-bg: $white;
-$tabs-border: $soft-grey;
+$tabs-border: $grey-clear;
 
-/**
- * Use 10 grid columns for larger screens.
-*/
-
-//$zen-column-count: 10;
-//$zen-gutter-width: 10px;
-
-
-//break points
-$breakpoint: 768px;
 
 // =============================================================================
 // Partials to be shared with all .scss files.
