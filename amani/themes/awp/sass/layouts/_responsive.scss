@@ -230,6 +230,7 @@ $zen-auto-include-item-base: false;
         .views-row{
           height: 100px;
           margin-bottom: 20px;
+          background: #F0F0F0;
           .views-field-field-image{
             margin-right: 50px;
             background: $awp-red;
@@ -254,12 +255,31 @@ $zen-auto-include-item-base: false;
           }
           .views-field-field-text{
             color: $awp-dark-grey;
+            float: left;
+            position: relative;
+            clear: none;
+            left: -200px;
+            width: 200px;
           }
           .views-field-title-1{/*more*/
-            display: block;
-            a{
+            float: right;
+            position: relative;
+            height: 130px;
+            left: auto;
+            right: auto;
+            display: table;
+            background: #D7D7D7;
+            .field-content{
+              display: table-cell;
+              vertical-align: middle;
+              width: 100px;
+              text-align: center;
 
+              a{
+
+              }
             }
+
 
           }
         }
