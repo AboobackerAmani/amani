@@ -373,7 +373,7 @@ $zen-auto-include-item-base: false;
             height: 100%;
             .field-content,
             a{
-              font-size: 6vw;
+              font-size: 6vw !important;
 
             }
           }
@@ -382,19 +382,33 @@ $zen-auto-include-item-base: false;
       #block-views-awp-front-page-slideshow-block{
         margin: 0;
       }
+      #block-views-global-voices-blog-block .view-global-voices-blog .views-row .views-field-title a{
+        font-size: 5vw;
+      }
     }/*front*/
     #footer{
+      position: relative;
+      padding-bottom: 200px;
       #block-menu-menu-awp-footer-menu{
         margin: 0;
+        margin-bottom: -5px;
         a{
-          font-size: 2vw;
+          font-size: 2vw !important;
         }
         .menu li.first a{
-          font-size: 0;
+          font-size: 0 !important;
         }
         .menu li a.top-link{
           margin: 0;
         }
+      }
+      #block-bean-amani-powered-by{
+        width: 50%;
+        float: none;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0;
+        left: 25%;
       }
     }/*footer*/
   }/*body*/
