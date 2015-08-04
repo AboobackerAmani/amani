@@ -182,16 +182,49 @@ $zen-auto-include-item-base: false;
       width: 100% !important;
     }
     #mobile-menu-wrapper{
+      display: block;
+      width: 100%;
+      position: relative;
+      position: absolute;
+      top: 110px;
+      left: auto;
+      right: 0;
       #menu-attached-button{
         display: block;
         position: absolute;
         right: 30px;
         left: auto;
-        top: 30px;
+        top: -70px;
         font-size: 0;
         width: 47px;
         height: 40px;
         background: url("../images/mobile/menu-icon.png") center no-repeat;
+      }
+      #mobile-menu{
+        background: #000;
+        background: rgba(0,0,0,0.7);
+        & > li{
+          border: 0 !important;
+          border-bottom: 1px solid #ccc;
+          li{
+            border: 0 !important; ;
+          }
+          a{
+            color: $awp-white !important;
+            font-weight: bold;
+            font-size: 8vw;
+            text-align: center;
+          }
+          li{
+            text-align: left;
+          }
+          &.active {
+            & > a{
+              background: $awp-green;
+            }
+
+          }
+        }
       }
     }
     #header{
