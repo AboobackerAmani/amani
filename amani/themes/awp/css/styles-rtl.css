@@ -193,6 +193,10 @@ ul {
 }
 /***Mobile CSS*/
 @media all and (max-width: 780px) {
+  /* line 179, ../sass/layouts/_responsive.scss */
+  body.html {
+    /*front*/
+  }
   /* line 180, ../sass/layouts/_responsive.scss */
   body.html #page, body.html .region-bottom,
   body.html #content {
@@ -215,69 +219,70 @@ ul {
     margin-top: 0;
     background: #D21145;
     width: 100% !important;
+    padding: 0;
   }
-  /* line 201, ../sass/layouts/_responsive.scss */
+  /* line 202, ../sass/layouts/_responsive.scss */
   body.html #header .header__logo-image {
     -webkit-filter: saturate(33333333%);
   }
-  /* line 204, ../sass/layouts/_responsive.scss */
+  /* line 205, ../sass/layouts/_responsive.scss */
   body.html #header #collapsed-menu-button,
   body.html #header #block-superfish-1,
   body.html #header .header_links {
     display: none !important;
   }
-  /* line 209, ../sass/layouts/_responsive.scss */
+  /* line 210, ../sass/layouts/_responsive.scss */
   body.html #header .logo-region {
     width: 100%;
     clear: both;
     height: 110px;
     text-align: center;
   }
-  /* line 214, ../sass/layouts/_responsive.scss */
+  /* line 215, ../sass/layouts/_responsive.scss */
   body.html #header .logo-region a {
     float: none;
   }
-  /* line 219, ../sass/layouts/_responsive.scss */
+  /* line 220, ../sass/layouts/_responsive.scss */
   body.html #block-block-3 {
     display: none;
   }
-  /* line 223, ../sass/layouts/_responsive.scss */
+  /* line 224, ../sass/layouts/_responsive.scss */
   body.html #block-views-4853df8e1a361dde03121dad9c7fe95f,
   body.html #block-views-global-voices-blog-block,
   body.html #block-views-front-page-tweets-block {
     width: 100%;
     clear: both;
   }
-  /* line 230, ../sass/layouts/_responsive.scss */
+  /* line 231, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .view-aidwatch-front-page-blocks {
     border: 0;
     margin: 0;
   }
-  /* line 237, ../sass/layouts/_responsive.scss */
+  /* line 238, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .view-aidwatch-front-page-blocks.f-left-block .views-row.views-row-first .views-field-field-image {
     background-color: #D21145;
   }
-  /* line 240, ../sass/layouts/_responsive.scss */
+  /* line 241, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .view-aidwatch-front-page-blocks.f-left-block .views-row.views-row-last .views-field-field-image {
     background-color: #767575;
   }
-  /* line 249, ../sass/layouts/_responsive.scss */
+  /* line 250, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .view-aidwatch-front-page-blocks.f-center-block .views-row.views-row-first .views-field-field-image {
     background-color: #872175;
   }
-  /* line 252, ../sass/layouts/_responsive.scss */
+  /* line 253, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .view-aidwatch-front-page-blocks.f-center-block .views-row.views-row-last .views-field-field-image {
     background-color: #FFD800;
   }
-  /* line 261, ../sass/layouts/_responsive.scss */
+  /* line 262, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .view-aidwatch-front-page-blocks.f-right-block .views-row.views-row-first .views-field-field-image {
     background-color: #007CC2;
   }
-  /* line 264, ../sass/layouts/_responsive.scss */
+  /* line 265, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .view-aidwatch-front-page-blocks.f-right-block .views-row.views-row-last .views-field-field-image {
     background-color: #43B9AE;
   }
-  /* line 276, ../sass/layouts/_responsive.scss */
+  /* line 277, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .views-row .views-row,
   body.html .view-monthly-critique-boxes .views-row .views-row:hover {
     height: 150px;
@@ -285,7 +290,7 @@ ul {
     background: #F0F0F0 !important;
     padding: 0;
   }
-  /* line 282, ../sass/layouts/_responsive.scss */
+  /* line 283, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .views-row .views-row .views-field-field-image,
   body.html .view-monthly-critique-boxes .views-row .views-row:hover .views-field-field-image {
     margin-right: 10%;
@@ -294,12 +299,12 @@ ul {
     height: 100%;
     width: 20%;
   }
-  /* line 288, ../sass/layouts/_responsive.scss */
+  /* line 289, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .views-row .views-row .views-field-field-image img,
   body.html .view-monthly-critique-boxes .views-row .views-row:hover .views-field-field-image img {
     -webkit-filter: saturate(33333333%);
   }
-  /* line 292, ../sass/layouts/_responsive.scss */
+  /* line 293, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .views-row .views-row .views-field-title,
   body.html .view-monthly-critique-boxes .views-row .views-row:hover .views-field-title {
     float: left;
@@ -310,13 +315,13 @@ ul {
     display: block;
     width: 30%;
   }
-  /* line 300, ../sass/layouts/_responsive.scss */
+  /* line 301, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .views-row .views-row .views-field-title a,
   body.html .view-monthly-critique-boxes .views-row .views-row:hover .views-field-title a {
     font-size: 25px;
     font-weight: bold;
   }
-  /* line 306, ../sass/layouts/_responsive.scss */
+  /* line 307, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .views-row .views-row .views-field-field-text,
   body.html .view-monthly-critique-boxes .views-row .views-row:hover .views-field-field-text {
     color: #415968;
@@ -328,7 +333,7 @@ ul {
     top: 45px;
     font-size: 35px;
   }
-  /* line 316, ../sass/layouts/_responsive.scss */
+  /* line 317, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .views-row .views-row .views-field-title-1,
   body.html .view-monthly-critique-boxes .views-row .views-row:hover .views-field-title-1 {
     /*more*/
@@ -343,7 +348,7 @@ ul {
     bottom: auto;
     width: 60px;
   }
-  /* line 327, ../sass/layouts/_responsive.scss */
+  /* line 328, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .views-row .views-row .views-field-title-1 .field-content,
   body.html .view-monthly-critique-boxes .views-row .views-row:hover .views-field-title-1 .field-content {
     display: table-cell;
@@ -351,7 +356,7 @@ ul {
     width: 100px;
     text-align: center;
   }
-  /* line 332, ../sass/layouts/_responsive.scss */
+  /* line 333, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .views-row .views-row .views-field-title-1 .field-content a,
   body.html .view-monthly-critique-boxes .views-row .views-row:hover .views-field-title-1 .field-content a {
     border: 0;
@@ -359,9 +364,40 @@ ul {
     font-size: 15px;
     padding: 0;
   }
-  /* line 346, ../sass/layouts/_responsive.scss */
+  /* line 348, ../sass/layouts/_responsive.scss */
   body.html.front h2.block-title {
-    font-size: 10vw;
+    font-size: 8vw;
+  }
+  /* line 352, ../sass/layouts/_responsive.scss */
+  body.html.front .view-awp-fundamental-questions- .views-row {
+    display: none;
+  }
+  /* line 354, ../sass/layouts/_responsive.scss */
+  body.html.front .view-awp-fundamental-questions- .views-row.views-row-1 {
+    display: block;
+  }
+  /* line 359, ../sass/layouts/_responsive.scss */
+  body.html.front .views-slideshow-cycle-main-frame,
+  body.html.front .views-slideshow-cycle-main-frame-row,
+  body.html.front .views-slideshow-cycle-main-frame-row-item {
+    width: 100% !important;
+  }
+  /* line 368, ../sass/layouts/_responsive.scss */
+  body.html.front .view-awp-front-page-slideshow .views-row .views-field-title {
+    width: 50%;
+    top: 5%;
+    left: 0;
+    padding: 0px 10%;
+    height: 100%;
+  }
+  /* line 374, ../sass/layouts/_responsive.scss */
+  body.html.front .view-awp-front-page-slideshow .views-row .views-field-title .field-content,
+  body.html.front .view-awp-front-page-slideshow .views-row .views-field-title a {
+    font-size: 6vw;
+  }
+  /* line 382, ../sass/layouts/_responsive.scss */
+  body.html.front #block-views-awp-front-page-slideshow-block {
+    margin: 0;
   }
 
   /*body*/
@@ -370,30 +406,30 @@ ul {
  * Use 5 grid columns for larger screens.
  */
 @media all and (min-width: 960px) {
-  /* line 367, ../sass/layouts/_responsive.scss */
+  /* line 404, ../sass/layouts/_responsive.scss */
   #header .header__logo {
     float: right;
     width: 25%;
     margin-right: 0%;
     margin-left: -25%;
   }
-  /* line 370, ../sass/layouts/_responsive.scss */
+  /* line 407, ../sass/layouts/_responsive.scss */
   #header .header__secondary-menu {
     display: none;
   }
-  /* line 375, ../sass/layouts/_responsive.scss */
+  /* line 412, ../sass/layouts/_responsive.scss */
   #header .header__region {
     float: right;
     width: 75%;
     margin-right: 25%;
     margin-left: -100%;
   }
-  /* line 379, ../sass/layouts/_responsive.scss */
+  /* line 416, ../sass/layouts/_responsive.scss */
   #header #block-superfish-1 .mobile-menu-link {
     display: none;
   }
 
-  /* line 384, ../sass/layouts/_responsive.scss */
+  /* line 421, ../sass/layouts/_responsive.scss */
   #highlighted {
     float: right;
     width: 100%;
@@ -407,19 +443,19 @@ ul {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 395, ../sass/layouts/_responsive.scss */
+  /* line 432, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 4 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 397, ../sass/layouts/_responsive.scss */
+  /* line 434, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: right;
     width: 80%;
     margin-right: 20%;
     margin-left: -100%;
   }
-  /* line 402, ../sass/layouts/_responsive.scss */
+  /* line 439, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: right;
     width: 20%;
@@ -430,19 +466,19 @@ ul {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 410, ../sass/layouts/_responsive.scss */
+  /* line 447, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 412, ../sass/layouts/_responsive.scss */
+  /* line 449, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: right;
     width: 80%;
     margin-right: 0%;
     margin-left: -80%;
   }
-  /* line 417, ../sass/layouts/_responsive.scss */
+  /* line 454, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: right;
     width: 20%;
@@ -450,7 +486,7 @@ ul {
     margin-left: -100%;
   }
 
-  /* line 424, ../sass/layouts/_responsive.scss */
+  /* line 461, ../sass/layouts/_responsive.scss */
   .section-resources #content,
   .page-resources-list #content {
     float: right;
@@ -458,7 +494,7 @@ ul {
     margin-right: 0%;
     margin-left: -66.66667%;
   }
-  /* line 428, ../sass/layouts/_responsive.scss */
+  /* line 465, ../sass/layouts/_responsive.scss */
   .section-resources .region-sidebar-second,
   .page-resources-list .region-sidebar-second {
     float: right;
@@ -470,27 +506,27 @@ ul {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 436, ../sass/layouts/_responsive.scss */
+  /* line 473, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 438, ../sass/layouts/_responsive.scss */
+  /* line 475, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: right;
     width: 25%;
     margin-right: 8.33333%;
     margin-left: -33.33333%;
   }
-  /* line 443, ../sass/layouts/_responsive.scss */
+  /* line 480, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: right;
     width: 8.33333%;
     margin-right: 0%;
     margin-left: -8.33333%;
   }
-  /* line 448, ../sass/layouts/_responsive.scss */
+  /* line 485, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: right;
     width: 8.33333%;
@@ -498,32 +534,32 @@ ul {
     margin-left: -41.66667%;
   }
 
-  /* line 452, ../sass/layouts/_responsive.scss */
+  /* line 489, ../sass/layouts/_responsive.scss */
   .view-aidwatch-front-page-blocks {
     width: 33%;
     float: left;
   }
 
   /*view-aidwatch-front-page-blocks*/
-  /* line 456, ../sass/layouts/_responsive.scss */
+  /* line 493, ../sass/layouts/_responsive.scss */
   .front {
     /*view-awp-front-page-slideshow*/
   }
-  /* line 458, ../sass/layouts/_responsive.scss */
+  /* line 495, ../sass/layouts/_responsive.scss */
   .front .view-awp-front-page-slideshow {
     /*views-row*/
     /*views-slideshow-controls-bottom*/
   }
-  /* line 459, ../sass/layouts/_responsive.scss */
+  /* line 496, ../sass/layouts/_responsive.scss */
   .front .view-awp-front-page-slideshow .views-row {
     /*views-field-title*/
   }
-  /* line 464, ../sass/layouts/_responsive.scss */
+  /* line 501, ../sass/layouts/_responsive.scss */
   .front .view-awp-front-page-slideshow .views-slideshow-controls-bottom {
     top: 280px;
     width: 100%;
   }
-  /* line 470, ../sass/layouts/_responsive.scss */
+  /* line 507, ../sass/layouts/_responsive.scss */
   .front #block-views-3035a87eee3a51153d184d85d17cc285 {
     float: right;
     width: 100%;
@@ -533,47 +569,47 @@ ul {
     overflow: hidden;
     float: none;
   }
-  /* line 475, ../sass/layouts/_responsive.scss */
+  /* line 512, ../sass/layouts/_responsive.scss */
   .front #block-views-3035a87eee3a51153d184d85d17cc285 .views-field-field-image {
     margin-right: 2%;
     width: 42%;
   }
-  /* line 478, ../sass/layouts/_responsive.scss */
+  /* line 515, ../sass/layouts/_responsive.scss */
   .front #block-views-3035a87eee3a51153d184d85d17cc285 .views-field-field-image img {
     width: 100%;
     height: auto;
   }
-  /* line 483, ../sass/layouts/_responsive.scss */
+  /* line 520, ../sass/layouts/_responsive.scss */
   .front #block-views-3035a87eee3a51153d184d85d17cc285 .views-field-title {
     width: 42%;
   }
-  /* line 486, ../sass/layouts/_responsive.scss */
+  /* line 523, ../sass/layouts/_responsive.scss */
   .front #block-views-3035a87eee3a51153d184d85d17cc285 .views-field-field-article-date {
     width: 42%;
   }
-  /* line 489, ../sass/layouts/_responsive.scss */
+  /* line 526, ../sass/layouts/_responsive.scss */
   .front #block-views-3035a87eee3a51153d184d85d17cc285 .views-field-body {
     width: 42%;
   }
-  /* line 494, ../sass/layouts/_responsive.scss */
+  /* line 531, ../sass/layouts/_responsive.scss */
   .front #block-views-front-page-tweets-block {
     width: 45%;
     float: left;
     margin-left: 2%;
   }
-  /* line 499, ../sass/layouts/_responsive.scss */
+  /* line 536, ../sass/layouts/_responsive.scss */
   .front #block-views-global-voices-blog-block {
     width: 45%;
     float: left;
   }
-  /* line 503, ../sass/layouts/_responsive.scss */
+  /* line 540, ../sass/layouts/_responsive.scss */
   .front #block-views-4853df8e1a361dde03121dad9c7fe95f {
     float: right;
     width: 66.66667%;
     margin-right: 0%;
     margin-left: -66.66667%;
   }
-  /* line 506, ../sass/layouts/_responsive.scss */
+  /* line 543, ../sass/layouts/_responsive.scss */
   .front #block-block-3 {
     float: right;
     width: 33.33333%;
@@ -582,7 +618,7 @@ ul {
   }
 
   /*front*/
-  /* line 516, ../sass/layouts/_responsive.scss */
+  /* line 553, ../sass/layouts/_responsive.scss */
   .not-front.section-resources .view-resources-categories .view-content .views-row {
     width: 50%;
     float: left;

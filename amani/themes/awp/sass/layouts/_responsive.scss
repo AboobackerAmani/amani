@@ -198,6 +198,7 @@ $zen-auto-include-item-base: false;
       margin-top: 0;
       background: $awp-red;
       width: 100% !important;
+      padding: 0;
       .header__logo-image{
         -webkit-filter: saturate(33333333%);
       }
@@ -343,9 +344,45 @@ $zen-auto-include-item-base: false;
         }
       }
     }
-    &.front h2.block-title{
-      font-size: 10vw;
-    }
+    &.front {
+      h2.block-title{
+        font-size: 8vw;
+      }
+      .view-awp-fundamental-questions-{
+        .views-row{
+          display: none;
+          &.views-row-1{
+            display: block;
+          }
+        }
+      }
+      .views-slideshow-cycle-main-frame,
+      .views-slideshow-cycle-main-frame-row,
+      .views-slideshow-cycle-main-frame-row-item{
+        width: 100% !important;
+      }
+      .view-awp-front-page-slideshow{
+
+        .views-row{
+
+          .views-field-title{
+            width: 50%;
+            top: 5%;
+            left: 0;
+            padding: 0px 10%;
+            height: 100%;
+            .field-content,
+            a{
+              font-size: 6vw;
+
+            }
+          }
+        }
+      }
+      #block-views-awp-front-page-slideshow-block{
+        margin: 0;
+      }
+    }/*front*/
   }/*body*/
 
 
