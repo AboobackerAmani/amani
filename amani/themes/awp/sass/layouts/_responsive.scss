@@ -230,6 +230,47 @@ $zen-auto-include-item-base: false;
       .view-aidwatch-front-page-blocks{
         border: 0;
         margin: 0;
+
+        &.f-left-block{
+          .views-row{
+
+              &.views-row-first  .views-field-field-image{
+                background-color: $calendar-color;
+              }
+              &.views-row-last  .views-field-field-image{
+                background-color: $trucks-color;
+              }
+
+          }
+        }
+        &.f-center-block{
+          .views-row{
+
+              &.views-row-first  .views-field-field-image{
+                background-color: $people-color;
+              }
+              &.views-row-last  .views-field-field-image{
+                background-color: $money-color;
+              }
+
+          }
+        }
+        &.f-right-block{
+          .views-row{
+
+              &.views-row-first .views-field-field-image{
+                background-color: $temp-color;
+              }
+              &.views-row-last  .views-field-field-image{
+                background-color: $rebuilt-color;
+              }
+
+
+          }
+        }
+
+
+
       }
       .views-row{
         .views-row,
@@ -239,10 +280,11 @@ $zen-auto-include-item-base: false;
           background: #F0F0F0;
           padding: 0;
           .views-field-field-image{
-            margin-right: 50px;
-            padding: 30px;
+            margin-right: 10%;
+            padding: 5%;
             background: $awp-red;
             height: 100%;
+            width: 20%;
             img{
               -webkit-filter: saturate(33333333%);
             }
@@ -251,10 +293,10 @@ $zen-auto-include-item-base: false;
             float: left;
             clear: none;
             position: relative;
-            left: 150px;
+            left: 16%;
             top: 40px;
             display: block;
-            width: 170px;
+            width: 30%;
             a{
               font-size: 25px;
               font-weight: bold;
@@ -266,8 +308,8 @@ $zen-auto-include-item-base: false;
             float: left;
             position: relative;
             clear: none;
-            left: -200px;
-            width: 120px;
+            left: -35%;
+            width: 20%;
             top: 45px;
             font-size: 35px;
           }
@@ -291,11 +333,8 @@ $zen-auto-include-item-base: false;
                 border: 0;
                 color: #415968;
                 font-size: 15px;
-                text-align: center;
                 padding: 0;
-                display: block;
-                width: 100%;
-                height: 100%;
+
               }
             }
 
