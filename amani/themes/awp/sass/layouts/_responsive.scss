@@ -222,10 +222,15 @@ $zen-auto-include-item-base: false;
             font-weight: bold;
             font-size: 8vw;
             text-align: center;
-            padding: 10px 0;
+            padding: 10px 0 !important;
+            width: 100% !important;
           }
           li{
             text-align: left;
+            a{
+              padding: 5px 0 !important;
+              font-size: 6vw;
+            }
           }
           &.active {
             & > a{
