@@ -74,6 +74,13 @@ $zen-auto-include-item-base: false;
 
 } // End of @if $zen-reverse-all-floats == true
 
+
+
+
+
+
+
+
 /**
  * Use 3 grid columns for smaller screens.
  */
@@ -162,6 +169,23 @@ $zen-auto-include-item-base: false;
     }
   }
 }
+
+
+
+/***Mobile CSS*/
+
+@media all and (min-width: 480px) and (max-width: 959px) {
+  $zen-column-count: 12;
+  #header{
+    margin: 0;
+    background: $awp-red;
+  }
+
+}
+
+
+
+
 
 /**
  * Use 5 grid columns for larger screens.
