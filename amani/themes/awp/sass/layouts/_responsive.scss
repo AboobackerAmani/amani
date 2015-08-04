@@ -225,7 +225,47 @@ $zen-auto-include-item-base: false;
       width: 100%;
       clear: both;
     }
-  }
+    .view-monthly-critique-boxes{
+      .views-row{
+        .views-row{
+          height: 100px;
+          margin-bottom: 20px;
+          .views-field-field-image{
+            margin-right: 50px;
+            background: $awp-red;
+            height: 100%;
+            img{
+
+            }
+          }
+          .views-field-title{
+            float: left;
+            clear: none;
+            position: relative;
+            left: 230px;
+            top: 10px;
+            display: block;
+            width: 170px;
+            a{
+              font-size: 30px;
+              column-rule: $awp-light-grey;
+
+            }
+          }
+          .views-field-field-text{
+            color: $awp-dark-grey;
+          }
+          .views-field-title-1{/*more*/
+            display: block;
+            a{
+
+            }
+
+          }
+        }
+      }
+    }
+  }/*body*/
 
 
 }
