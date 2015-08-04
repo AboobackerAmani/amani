@@ -176,10 +176,13 @@ $zen-auto-include-item-base: false;
 
 @media all and (min-width: 480px) and (max-width: 959px) {
   $zen-column-count: 12;
-  #header{
-    margin: 0;
-    background: $awp-red;
+  body.html{
+    #header{
+      margin-top: 0;
+      background: $awp-red;
+    }
   }
+
 
 }
 
