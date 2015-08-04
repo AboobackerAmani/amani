@@ -177,7 +177,8 @@ $zen-auto-include-item-base: false;
 @media all and (min-width: 480px) and (max-width: 959px) {
   $zen-column-count: 12;
   body.html{
-    #page, .region-bottom{
+    #page, .region-bottom,
+    #content{
       width: 100% !important;
     }
     #mobile-menu-wrapper{
@@ -226,30 +227,35 @@ $zen-auto-include-item-base: false;
       clear: both;
     }
     .view-monthly-critique-boxes{
+      .view-aidwatch-front-page-blocks{
+        border: 0;
+        margin: 0;
+      }
       .views-row{
         .views-row{
-          height: 100px;
+          height: 150px;
           margin-bottom: 20px;
           background: #F0F0F0;
           .views-field-field-image{
             margin-right: 50px;
+            padding: 30px;
             background: $awp-red;
             height: 100%;
             img{
-
+              -webkit-filter: saturate(33333333%);
             }
           }
           .views-field-title{
             float: left;
             clear: none;
             position: relative;
-            left: 230px;
-            top: 10px;
+            left: 150px;
+            top: 30px;
             display: block;
             width: 170px;
             a{
               font-size: 30px;
-              column-rule: $awp-light-grey;
+              font-weight: bold;
 
             }
           }
@@ -260,6 +266,7 @@ $zen-auto-include-item-base: false;
             clear: none;
             left: -200px;
             width: 200px;
+            top: 20px;
           }
           .views-field-title-1{/*more*/
             float: right;

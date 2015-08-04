@@ -194,10 +194,11 @@ ul {
 /***Mobile CSS*/
 @media all and (min-width: 480px) and (max-width: 959px) {
   /* line 180, ../sass/layouts/_responsive.scss */
-  body.html #page, body.html .region-bottom {
+  body.html #page, body.html .region-bottom,
+  body.html #content {
     width: 100% !important;
   }
-  /* line 184, ../sass/layouts/_responsive.scss */
+  /* line 185, ../sass/layouts/_responsive.scss */
   body.html #mobile-menu-wrapper #menu-attached-button {
     display: block;
     position: fixed;
@@ -209,38 +210,38 @@ ul {
     height: 40px;
     background: url("../images/mobile/menu-icon.png") center no-repeat;
   }
-  /* line 196, ../sass/layouts/_responsive.scss */
+  /* line 197, ../sass/layouts/_responsive.scss */
   body.html #header {
     margin-top: 0;
     background: #D21145;
     width: 100% !important;
   }
-  /* line 200, ../sass/layouts/_responsive.scss */
+  /* line 201, ../sass/layouts/_responsive.scss */
   body.html #header .header__logo-image {
     -webkit-filter: saturate(33333333%);
   }
-  /* line 203, ../sass/layouts/_responsive.scss */
+  /* line 204, ../sass/layouts/_responsive.scss */
   body.html #header #collapsed-menu-button,
   body.html #header #block-superfish-1,
   body.html #header .header_links {
     display: none !important;
   }
-  /* line 208, ../sass/layouts/_responsive.scss */
+  /* line 209, ../sass/layouts/_responsive.scss */
   body.html #header .logo-region {
     width: 100%;
     clear: both;
     height: 110px;
     text-align: center;
   }
-  /* line 213, ../sass/layouts/_responsive.scss */
+  /* line 214, ../sass/layouts/_responsive.scss */
   body.html #header .logo-region a {
     float: none;
   }
-  /* line 218, ../sass/layouts/_responsive.scss */
+  /* line 219, ../sass/layouts/_responsive.scss */
   body.html #block-block-3 {
     display: none;
   }
-  /* line 222, ../sass/layouts/_responsive.scss */
+  /* line 223, ../sass/layouts/_responsive.scss */
   body.html #block-views-4853df8e1a361dde03121dad9c7fe95f,
   body.html #block-views-global-voices-blog-block,
   body.html #block-views-front-page-tweets-block {
@@ -248,33 +249,43 @@ ul {
     clear: both;
   }
   /* line 230, ../sass/layouts/_responsive.scss */
+  body.html .view-monthly-critique-boxes .view-aidwatch-front-page-blocks {
+    border: 0;
+    margin: 0;
+  }
+  /* line 235, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .views-row .views-row {
-    height: 100px;
+    height: 150px;
     margin-bottom: 20px;
     background: #F0F0F0;
   }
-  /* line 234, ../sass/layouts/_responsive.scss */
+  /* line 239, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .views-row .views-row .views-field-field-image {
     margin-right: 50px;
+    padding: 30px;
     background: #D21145;
     height: 100%;
   }
-  /* line 242, ../sass/layouts/_responsive.scss */
+  /* line 244, ../sass/layouts/_responsive.scss */
+  body.html .view-monthly-critique-boxes .views-row .views-row .views-field-field-image img {
+    -webkit-filter: saturate(33333333%);
+  }
+  /* line 248, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .views-row .views-row .views-field-title {
     float: left;
     clear: none;
     position: relative;
-    left: 230px;
-    top: 10px;
+    left: 150px;
+    top: 30px;
     display: block;
     width: 170px;
   }
-  /* line 250, ../sass/layouts/_responsive.scss */
+  /* line 256, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .views-row .views-row .views-field-title a {
     font-size: 30px;
-    column-rule: #F0F0F0;
+    font-weight: bold;
   }
-  /* line 256, ../sass/layouts/_responsive.scss */
+  /* line 262, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .views-row .views-row .views-field-field-text {
     color: #415968;
     float: left;
@@ -282,8 +293,9 @@ ul {
     clear: none;
     left: -200px;
     width: 200px;
+    top: 20px;
   }
-  /* line 264, ../sass/layouts/_responsive.scss */
+  /* line 271, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .views-row .views-row .views-field-title-1 {
     /*more*/
     float: right;
@@ -294,7 +306,7 @@ ul {
     display: table;
     background: #D7D7D7;
   }
-  /* line 272, ../sass/layouts/_responsive.scss */
+  /* line 279, ../sass/layouts/_responsive.scss */
   body.html .view-monthly-critique-boxes .views-row .views-row .views-field-title-1 .field-content {
     display: table-cell;
     vertical-align: middle;
@@ -308,30 +320,30 @@ ul {
  * Use 5 grid columns for larger screens.
  */
 @media all and (min-width: 960px) {
-  /* line 306, ../sass/layouts/_responsive.scss */
+  /* line 313, ../sass/layouts/_responsive.scss */
   #header .header__logo {
     float: right;
     width: 25%;
     margin-right: 0%;
     margin-left: -25%;
   }
-  /* line 309, ../sass/layouts/_responsive.scss */
+  /* line 316, ../sass/layouts/_responsive.scss */
   #header .header__secondary-menu {
     display: none;
   }
-  /* line 314, ../sass/layouts/_responsive.scss */
+  /* line 321, ../sass/layouts/_responsive.scss */
   #header .header__region {
     float: right;
     width: 75%;
     margin-right: 25%;
     margin-left: -100%;
   }
-  /* line 318, ../sass/layouts/_responsive.scss */
+  /* line 325, ../sass/layouts/_responsive.scss */
   #header #block-superfish-1 .mobile-menu-link {
     display: none;
   }
 
-  /* line 323, ../sass/layouts/_responsive.scss */
+  /* line 330, ../sass/layouts/_responsive.scss */
   #highlighted {
     float: right;
     width: 100%;
@@ -345,19 +357,19 @@ ul {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 334, ../sass/layouts/_responsive.scss */
+  /* line 341, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 4 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 336, ../sass/layouts/_responsive.scss */
+  /* line 343, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: right;
     width: 80%;
     margin-right: 20%;
     margin-left: -100%;
   }
-  /* line 341, ../sass/layouts/_responsive.scss */
+  /* line 348, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: right;
     width: 20%;
@@ -368,19 +380,19 @@ ul {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 349, ../sass/layouts/_responsive.scss */
+  /* line 356, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 351, ../sass/layouts/_responsive.scss */
+  /* line 358, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: right;
     width: 80%;
     margin-right: 0%;
     margin-left: -80%;
   }
-  /* line 356, ../sass/layouts/_responsive.scss */
+  /* line 363, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: right;
     width: 20%;
@@ -388,7 +400,7 @@ ul {
     margin-left: -100%;
   }
 
-  /* line 363, ../sass/layouts/_responsive.scss */
+  /* line 370, ../sass/layouts/_responsive.scss */
   .section-resources #content,
   .page-resources-list #content {
     float: right;
@@ -396,7 +408,7 @@ ul {
     margin-right: 0%;
     margin-left: -66.66667%;
   }
-  /* line 367, ../sass/layouts/_responsive.scss */
+  /* line 374, ../sass/layouts/_responsive.scss */
   .section-resources .region-sidebar-second,
   .page-resources-list .region-sidebar-second {
     float: right;
@@ -408,27 +420,27 @@ ul {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 375, ../sass/layouts/_responsive.scss */
+  /* line 382, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 377, ../sass/layouts/_responsive.scss */
+  /* line 384, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: right;
     width: 25%;
     margin-right: 8.33333%;
     margin-left: -33.33333%;
   }
-  /* line 382, ../sass/layouts/_responsive.scss */
+  /* line 389, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: right;
     width: 8.33333%;
     margin-right: 0%;
     margin-left: -8.33333%;
   }
-  /* line 387, ../sass/layouts/_responsive.scss */
+  /* line 394, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: right;
     width: 8.33333%;
@@ -436,32 +448,32 @@ ul {
     margin-left: -41.66667%;
   }
 
-  /* line 391, ../sass/layouts/_responsive.scss */
+  /* line 398, ../sass/layouts/_responsive.scss */
   .view-aidwatch-front-page-blocks {
     width: 33%;
     float: left;
   }
 
   /*view-aidwatch-front-page-blocks*/
-  /* line 395, ../sass/layouts/_responsive.scss */
+  /* line 402, ../sass/layouts/_responsive.scss */
   .front {
     /*view-awp-front-page-slideshow*/
   }
-  /* line 397, ../sass/layouts/_responsive.scss */
+  /* line 404, ../sass/layouts/_responsive.scss */
   .front .view-awp-front-page-slideshow {
     /*views-row*/
     /*views-slideshow-controls-bottom*/
   }
-  /* line 398, ../sass/layouts/_responsive.scss */
+  /* line 405, ../sass/layouts/_responsive.scss */
   .front .view-awp-front-page-slideshow .views-row {
     /*views-field-title*/
   }
-  /* line 403, ../sass/layouts/_responsive.scss */
+  /* line 410, ../sass/layouts/_responsive.scss */
   .front .view-awp-front-page-slideshow .views-slideshow-controls-bottom {
     top: 280px;
     width: 100%;
   }
-  /* line 409, ../sass/layouts/_responsive.scss */
+  /* line 416, ../sass/layouts/_responsive.scss */
   .front #block-views-3035a87eee3a51153d184d85d17cc285 {
     float: right;
     width: 100%;
@@ -471,47 +483,47 @@ ul {
     overflow: hidden;
     float: none;
   }
-  /* line 414, ../sass/layouts/_responsive.scss */
+  /* line 421, ../sass/layouts/_responsive.scss */
   .front #block-views-3035a87eee3a51153d184d85d17cc285 .views-field-field-image {
     margin-right: 2%;
     width: 42%;
   }
-  /* line 417, ../sass/layouts/_responsive.scss */
+  /* line 424, ../sass/layouts/_responsive.scss */
   .front #block-views-3035a87eee3a51153d184d85d17cc285 .views-field-field-image img {
     width: 100%;
     height: auto;
   }
-  /* line 422, ../sass/layouts/_responsive.scss */
+  /* line 429, ../sass/layouts/_responsive.scss */
   .front #block-views-3035a87eee3a51153d184d85d17cc285 .views-field-title {
     width: 42%;
   }
-  /* line 425, ../sass/layouts/_responsive.scss */
+  /* line 432, ../sass/layouts/_responsive.scss */
   .front #block-views-3035a87eee3a51153d184d85d17cc285 .views-field-field-article-date {
     width: 42%;
   }
-  /* line 428, ../sass/layouts/_responsive.scss */
+  /* line 435, ../sass/layouts/_responsive.scss */
   .front #block-views-3035a87eee3a51153d184d85d17cc285 .views-field-body {
     width: 42%;
   }
-  /* line 433, ../sass/layouts/_responsive.scss */
+  /* line 440, ../sass/layouts/_responsive.scss */
   .front #block-views-front-page-tweets-block {
     width: 45%;
     float: left;
     margin-left: 2%;
   }
-  /* line 438, ../sass/layouts/_responsive.scss */
+  /* line 445, ../sass/layouts/_responsive.scss */
   .front #block-views-global-voices-blog-block {
     width: 45%;
     float: left;
   }
-  /* line 442, ../sass/layouts/_responsive.scss */
+  /* line 449, ../sass/layouts/_responsive.scss */
   .front #block-views-4853df8e1a361dde03121dad9c7fe95f {
     float: right;
     width: 66.66667%;
     margin-right: 0%;
     margin-left: -66.66667%;
   }
-  /* line 445, ../sass/layouts/_responsive.scss */
+  /* line 452, ../sass/layouts/_responsive.scss */
   .front #block-block-3 {
     float: right;
     width: 33.33333%;
@@ -520,7 +532,7 @@ ul {
   }
 
   /*front*/
-  /* line 455, ../sass/layouts/_responsive.scss */
+  /* line 462, ../sass/layouts/_responsive.scss */
   .not-front.section-resources .view-resources-categories .view-content .views-row {
     width: 50%;
     float: left;
