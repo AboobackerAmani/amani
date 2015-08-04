@@ -177,9 +177,42 @@ $zen-auto-include-item-base: false;
 @media all and (min-width: 480px) and (max-width: 959px) {
   $zen-column-count: 12;
   body.html{
+    #mobile-menu-wrapper{
+      #menu-attached-button{
+        display: block;
+        position: fixed;
+        right: 30px;
+        left: auto;
+        top: 30px;
+        font-size: 0;
+        width: 47px;
+        height: 40px;
+        background: url("../images/mobile/menu-icon.png") center no-repeat;
+      }
+    }
     #header{
       margin-top: 0;
       background: $awp-red;
+      .header__logo-image{
+        -webkit-filter: saturate(33333333%);
+      }
+      #collapsed-menu-button,
+      #block-superfish-1,
+      .header_links{
+        display: none !important
+      }
+      .logo-region{
+        width: 100%;
+        clear: both;
+        height: 110px;
+        text-align: center;
+        a{
+          float: none;
+        }
+      }
+    }
+    #block-block-3{
+      display: none;
     }
   }
 
