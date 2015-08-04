@@ -346,7 +346,7 @@ $zen-auto-include-item-base: false;
     }
     &.front {
       h2.block-title{
-        font-size: 8vw;
+        font-size: 7vw;
       }
       .view-awp-fundamental-questions-{
         .views-row{
@@ -383,6 +383,20 @@ $zen-auto-include-item-base: false;
         margin: 0;
       }
     }/*front*/
+    #footer{
+      #block-menu-menu-awp-footer-menu{
+        margin: 0;
+        a{
+          font-size: 2vw;
+        }
+        .menu li.first a{
+          font-size: 0;
+        }
+        .menu li a.top-link{
+          margin: 0;
+        }
+      }
+    }/*footer*/
   }/*body*/
 
 
