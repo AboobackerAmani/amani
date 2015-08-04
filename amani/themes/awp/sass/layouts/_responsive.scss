@@ -277,7 +277,7 @@ $zen-auto-include-item-base: false;
         .views-row:hover{
           height: 150px;
           margin-bottom: 20px;
-          background: #F0F0F0;
+          background: #F0F0F0 !important;
           padding: 0;
           .views-field-field-image{
             margin-right: 10%;
@@ -342,6 +342,9 @@ $zen-auto-include-item-base: false;
           }
         }
       }
+    }
+    &.front h2.block-title{
+      font-size: 10vw;
     }
   }/*body*/
 
