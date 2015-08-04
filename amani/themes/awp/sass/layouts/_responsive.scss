@@ -180,7 +180,6 @@ $zen-auto-include-item-base: false;
     #page, .region-bottom{
       width: 100% !important;
     }
-    max-width: 500px;
     #mobile-menu-wrapper{
       #menu-attached-button{
         display: block;
@@ -197,6 +196,7 @@ $zen-auto-include-item-base: false;
     #header{
       margin-top: 0;
       background: $awp-red;
+      width: 100% !important;
       .header__logo-image{
         -webkit-filter: saturate(33333333%);
       }

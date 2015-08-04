@@ -193,15 +193,11 @@ ul {
 }
 /***Mobile CSS*/
 @media all and (min-width: 480px) and (max-width: 959px) {
-  /* line 179, ../sass/layouts/_responsive.scss */
-  body.html {
-    max-width: 500px;
-  }
   /* line 180, ../sass/layouts/_responsive.scss */
   body.html #page, body.html .region-bottom {
     width: 100% !important;
   }
-  /* line 185, ../sass/layouts/_responsive.scss */
+  /* line 184, ../sass/layouts/_responsive.scss */
   body.html #mobile-menu-wrapper #menu-attached-button {
     display: block;
     position: fixed;
@@ -213,10 +209,11 @@ ul {
     height: 40px;
     background: url("../images/mobile/menu-icon.png") center no-repeat;
   }
-  /* line 197, ../sass/layouts/_responsive.scss */
+  /* line 196, ../sass/layouts/_responsive.scss */
   body.html #header {
     margin-top: 0;
     background: #D21145;
+    width: 100% !important;
   }
   /* line 200, ../sass/layouts/_responsive.scss */
   body.html #header .header__logo-image {
