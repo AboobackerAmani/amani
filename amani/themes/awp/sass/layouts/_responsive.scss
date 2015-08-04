@@ -177,6 +177,9 @@ $zen-auto-include-item-base: false;
 @media all and (min-width: 480px) and (max-width: 959px) {
   $zen-column-count: 12;
   body.html{
+    #page, .region-bottom{
+      width: 100% !important;
+    }
     max-width: 500px;
     #mobile-menu-wrapper{
       #menu-attached-button{
