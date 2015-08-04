@@ -210,12 +210,18 @@ $zen-auto-include-item-base: false;
         }
         li.item-with-ul > *:first-child{
           background: none;
+          border: 0;
         }
         & > li{
           border: 0 !important;
           border-bottom: 1px solid #ccc;
           li{
             border: 0 !important; ;
+          }
+          &.active{
+            .submenu-title{
+              background: $awp-green;
+            }
           }
           a{
             color: $awp-white !important;
@@ -224,12 +230,14 @@ $zen-auto-include-item-base: false;
             text-align: center;
             padding: 10px 0 !important;
             width: 100% !important;
+            border-bottom: 1px solid #FFF;
           }
           li{
             text-align: left;
             a{
-              padding: 5px 0 !important;
-              font-size: 6vw;
+              padding: 5px 5px !important;
+              font-size: 5vw;
+              font-weight: normal;
             }
           }
           &.active {
