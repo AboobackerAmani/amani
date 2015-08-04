@@ -1,27 +1,15 @@
-; Drupal's .info files allow themers to easily specify some of the static
-; properties of your theme. Properties such as its name, stylesheets,
-; javascripts, and block regions.
-;
-; Drupal 7 stores a cache of the data in this .info files. If you modify any
-; lines in this file, you MUST refresh Drupal 7's cache by simply visiting the
-; Appearance page at admin/appearance.
-
-
-
 ; The name, description and screenshot used for this theme on the Appearance
 ; page at admin/appearance.
 
 screenshot  = screenshot.png
-name        = Amani Zen
+name        = Peace Geeks (built from amani zen)
 description = Read the <a href="https://drupal.org/node/873778">online docs</a> or the included README.txt on how to create a theme with Zen.
-
 
 
 ; This theme is compatible with Drupal 7 core. And it is a sub-theme of Zen.
 
 core        = 7.x
 base theme  = zen
-
 
 
 ; This section controls the CSS files for your theme. There are 3 different
@@ -44,6 +32,8 @@ base theme  = zen
 ; CSS2.1 media types: http://www.w3.org/TR/CSS21/media.html#media-types
 ; CSS3 media queries: http://www.w3.org/TR/css3-mediaqueries/
 
+
+
 ; First we remove the system's menu and message styling since Zen has its own.
 stylesheets[all][] = system.menus.css
 stylesheets[all][] = system.messages.css
@@ -51,6 +41,7 @@ stylesheets[all][] = system.theme.css
 
 ; Then we add our own stylesheet.
 stylesheets[all][] = css/styles.css
+
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html
@@ -66,8 +57,12 @@ stylesheets[all][] = css/styles.css
 
 ; Optionally add some JavaScripts to your theme.
 
-;scripts[] = js/script.js
+scripts[] = js/jquery.uniform.min.js
+scripts[] = js/script.js
 
+; Scripts from PeaceDesign theme.
+scripts[] = js/PeaceDesign/modernizr.js
+;scripts[] = js/PeaceDesign/amani.js
 
 
 ; This section lists the regions defined in Zen's default page.tpl.php and
@@ -85,24 +80,44 @@ stylesheets[all][] = css/styles.css
 ; And you'll use this variable in maintenance-page.tpl.php:
 ;   <?php print $header_top; ?>
 
-regions[header]         = Header
-regions[navigation]     = Navigation bar
-regions[highlighted]    = Highlighted
-regions[help]           = Help
-regions[content]        = Content
-regions[sidebar_first]  = First sidebar
-regions[sidebar_second] = Second sidebar
-regions[footer]         = Footer
-regions[bottom]         = Page bottom
+
+; Regions from Zen.
+;regions[header]         = Header
+;regions[navigation]     = Navigation bar
+;regions[highlighted]    = Highlighted
+;regions[help]           = Help
+;regions[content]        = Content
+;regions[sidebar_first]  = First sidebar
+;regions[sidebar_second] = Second sidebar
+;regions[footer]         = Footer
+;regions[bottom]         = Page bottom
+
+; Regions from PeaceDesign theme.
+regions[page_top]                 = Page top
+regions[header]                   = Header
+regions[home_content_top_rotator] = Home: Content top rotator
+regions[navigation_region]        = Navigation region
+regions[donation_region]          = Donation region
+
+regions[content]                  = 'content'
+
+regions[latest_project]           = Latest Project
+regions[twitter]                  = Twitter
+
+regions[latest_blog_post]         = Latest Blog Post
+regions[meet_volunteer]           = Meet Volunteer
+regions[peace_talks]              = Peace Talks
+
+regions[area_of_focus]            = Featured Area of Focus
+regions[get_involved]             = Get Involved
+
+regions[footer]                   = Footer
+regions[page_bottom]              = Page bottom
+
 
 ; The page_top and page_bottom regions are hidden, which means they will not
 ; show up on the blocks administration page. But they are required in order for
 ; the html.tpl.php to work properly, so do not delete them.
-
-regions[page_top]       = Page top
-regions[page_bottom]    = Page bottom
-
-
 
 ; Various page elements output by the theme can be toggled on and off. The
 ; "features" control which of these check boxes display on the
@@ -144,4 +159,4 @@ settings[zen_wireframes]           = 0
 
 ; To add a Panels layout (which can also be used by Display Suite), uncomment
 ; the line below and see the documentation at: https://drupal.org/node/495654
-;plugins[panels][layouts] = panels-layouts
+;plugins[panels][layouts] = panels-layouts]

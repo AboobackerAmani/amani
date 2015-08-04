@@ -1,0 +1,28 @@
+/**
+ * @file
+ * Front Page Special Event block
+ */
+
+.block-amani-front-page {
+  background-color: $grey;
+  color: $white;
+  padding: 30px;
+  margin: 40px 0 0 0;
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  p {
+    font-size: 35px;
+    line-height: 40px;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

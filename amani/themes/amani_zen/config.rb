@@ -11,20 +11,7 @@
 environment = :development
 #environment = :production
 
-# If in development (set above), we can turn on the sourcemap file generation.
-# Requires sass 3.3+ and compass 1.0.1+
-# Determine version from command line: sass --version && compass --version
-#sourcemap = false
-sourcemap = true
-
-# Alternative development debugging methods
-# If in development (above), we can enable line_comments for FireCompass plugin.
-# Requires Firebug plugin and FireCompass plugin
-firecompass = false
-#firecompass = true
-
-# If in development (above), we can enable debug_info for the FireSass plugin.
-# Requires Firebug plugin and Firesass plugin
+# In development, we can turn on the FireSass-compatible debug_info.
 firesass = false
 #firesass = true
 
@@ -39,9 +26,7 @@ javascripts_dir = "js"
 
 # Require any additional compass plugins installed on your system.
 #require 'ninesixty'
-# require 'zen-grids'
-require 'sass-globbing'
-# require 'breakpoint'
+#require 'zen-grids'
 
 # Assuming this theme is in sites/*/themes/THEMENAME, you can add the partials
 # included with a module by uncommenting and modifying one of the lines below:
@@ -70,10 +55,4 @@ relative_assets = true
 # debug_info if the firesass config variable above is true.
 sass_options = (environment == :development && firesass == true) ? {:debug_info => true} : {}
 
-# Pass options to sass. For development, we turn on the FireCompass-compatible
-# line_comments if the firecompass config variable above is true.
-sass_options = (environment == :development && firecompass == true) ? {:line_comments => true} : sass_options
-
-# Pass options to sass. For development and sourcemap variable is true (above),
-# then pass the "--sourcemap" option flag to compass/sass.
-sass_options = (environment == :development && sourcemap == true) ? {:sourcemap => true} : sass_options
+line_comments = false

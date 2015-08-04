@@ -254,10 +254,10 @@ pre,
 samp,
 tt,
 var {
-  font-family: $font-monospace; // The value of $font-monospace ends with ", serif".
-  @if $legacy-support-for-ie6 {
-    _font-family: 'courier new', monospace;
-  }
+  //font-family: $font-monospace; // The value of $font-monospace ends with ", serif".
+  // @if $legacy-support-for-ie6 {
+  //     _font-family: 'courier new', monospace;
+  //   }
   @include adjust-font-size-to( $base-font-size );
 }
 
@@ -324,7 +324,7 @@ dd {
 menu,
 ol,
 ul {
-  padding: 0 0 0 $indent-amount; /* LTR */
+  padding: 0 0 0 0; /* LTR  Left value used to be $indent-amount */
 }
 
 @if $legacy-support-for-ie7 {
@@ -354,11 +354,11 @@ img {
 
   /* Responsive images */
   max-width: 100%;
-  height: auto;
-  @if $legacy-support-for-ie8 {
-    /* Correct IE 8 not scaling image height when resized. */
-    width: auto;
-  }
+  // height: auto;
+  // @if $legacy-support-for-ie8 {
+  //    /* Correct IE 8 not scaling image height when resized. */
+  //    width: auto;
+  //  }
 }
 
 /* Correct overflow displayed oddly in IE 9. */
