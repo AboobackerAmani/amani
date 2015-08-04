@@ -203,6 +203,14 @@ $zen-auto-include-item-base: false;
       #mobile-menu{
         background: #000;
         background: rgba(0,0,0,0.7);
+        li.item-with-ul > * > a{
+          border: 0;
+          padding: 0;
+          width: 100%;
+        }
+        li.item-with-ul > *:first-child{
+          background: none;
+        }
         & > li{
           border: 0 !important;
           border-bottom: 1px solid #ccc;
@@ -214,6 +222,7 @@ $zen-auto-include-item-base: false;
             font-weight: bold;
             font-size: 8vw;
             text-align: center;
+            padding: 10px 0;
           }
           li{
             text-align: left;
@@ -225,6 +234,7 @@ $zen-auto-include-item-base: false;
 
           }
         }
+
       }
     }
     #header{
