@@ -177,6 +177,7 @@ $zen-auto-include-item-base: false;
 @media all and (min-width: 480px) and (max-width: 959px) {
   $zen-column-count: 12;
   body.html{
+    max-width: 500px;
     #mobile-menu-wrapper{
       #menu-attached-button{
         display: block;
@@ -213,6 +214,13 @@ $zen-auto-include-item-base: false;
     }
     #block-block-3{
       display: none;
+    }
+
+    #block-views-4853df8e1a361dde03121dad9c7fe95f,
+    #block-views-global-voices-blog-block,
+    #block-views-front-page-tweets-block{
+      width: 100%;
+      clear: both;
     }
   }
 
