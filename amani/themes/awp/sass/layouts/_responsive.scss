@@ -524,6 +524,33 @@ $zen-auto-include-item-base: false;
         }
 
       }
+      #block-views-4853df8e1a361dde03121dad9c7fe95f{
+        .block-title{
+          margin: 10px 0;
+          padding-bottom: 5px;
+          border-bottom: 1px solid #ccc;
+        }
+        .view-awp-fundamental-questions-{
+          .view-content{
+            .views-row{
+              background: none;
+              .views-field-title{
+                font-size: 5vw;
+              }
+              .views-field-body{
+                .fb-share-button,
+                iframe{
+                  display: none;
+                }
+                .field-content a{
+                  float: right;
+                  font-size: 3vw;
+                }
+              }
+            }
+          }
+        }
+      }
     }/*front*/
     #footer{
       position: relative;
