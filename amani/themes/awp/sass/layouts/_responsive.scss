@@ -255,7 +255,8 @@ $zen-auto-include-item-base: false;
       background: $awp-red;
       width: 100% !important;
       padding: 0;
-      .site--slogan{
+      .site--slogan,
+      #site-slogan{
         display: none;
       }
       a.header__logo{
