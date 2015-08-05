@@ -33,7 +33,7 @@ Drupal.behaviors.my_custom_behavior = {
           $('.section-resources .sidebars .region-sidebar-second').height($('.section-resources .view-resources-categories').height());
       }
       else{
-        $('#header').append($('#header .top-icons'));
+        $('#header').append($('#header .lang-block'));
     }
 
 
