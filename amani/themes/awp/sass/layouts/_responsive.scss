@@ -613,7 +613,11 @@ $zen-auto-include-item-base: false;
       .view-header-photos
       #block-block-4,
       #block-block-3{
-        display: none;
+        display: none !important;
+      }
+      h1#page-title{
+        width: 100%;
+        font-size: 9vw;
       }
     }
 
