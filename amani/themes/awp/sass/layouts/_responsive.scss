@@ -222,7 +222,10 @@ $zen-auto-include-item-base: false;
           border: 0 !important;
           border-bottom: 1px solid #ccc;
           li{
-            border: 0 !important; ;
+            border: 0 !important;
+            a{
+              border: 0 !important;
+            }
           }
           &.active{
             .submenu-title{
