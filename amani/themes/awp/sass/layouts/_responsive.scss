@@ -239,6 +239,7 @@ $zen-auto-include-item-base: false;
           }
           &.active{
             .submenu-title{
+              background-image: url("../images/mobile/up.png");
               background-color: $awp-green;
             }
           }
@@ -249,7 +250,7 @@ $zen-auto-include-item-base: false;
             text-align: center;
             padding: 10px 0 !important;
             width: 80% !important;
-            border-bottom: 1px solid #FFF;
+            border-bottom: 0px solid #FFF;
           }
           li{
             text-align: left;
