@@ -449,6 +449,9 @@ $zen-auto-include-item-base: false;
         height: auto !important;
       }
       #block-block-8{
+        width: 100%;
+        overflow: hidden;
+        clear: both;
         .header-btn{
           float: left;
           width: 26%;
@@ -468,6 +471,17 @@ $zen-auto-include-item-base: false;
           overflow: hidden;
           a{
             display: block;
+            width: 57px;
+            height: 40px;
+            &.twitter{
+              background: url("../images/mobile/twitter.png") no-repeat center;
+            }
+            &.facebook{
+              background: url("../images/mobile/facebook.png") no-repeat center;
+            }
+            &.youtube{
+              background: url("../images/mobile/youtube.png") no-repeat center;
+            }
           }
         }
       }
