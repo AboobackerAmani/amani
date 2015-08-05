@@ -258,9 +258,14 @@ $zen-auto-include-item-base: false;
       .site--slogan{
         display: none;
       }
+      a.header__logo{
+        display: block;
+        width: 180px;
+        height: 81px;
+        background: url("../images/mobile/logo.png");
+      }
       .header__logo-image{
-        -webkit-filter: saturate(33333333%);
-        width: 50%;
+        display: none !important;
       }
       #collapsed-menu-button,
       #block-superfish-1,
@@ -297,9 +302,11 @@ $zen-auto-include-item-base: false;
 
               &.views-row-first  .views-field-field-image{
                 background-color: $calendar-color;
+                background: url("../images/mobile/calendar.png") $calendar-color;
               }
               &.views-row-last  .views-field-field-image{
                 background-color: $trucks-color;
+                background: url("../images/mobile/truck.png") $trucks-color;
               }
 
           }
@@ -309,9 +316,11 @@ $zen-auto-include-item-base: false;
 
               &.views-row-first  .views-field-field-image{
                 background-color: $people-color;
+                background: url("../images/mobile/displace.png") $people-color;
               }
               &.views-row-last  .views-field-field-image{
                 background-color: $money-color;
+                background: url("../images/mobile/dollar.png") $money-color;
               }
 
           }
@@ -321,9 +330,11 @@ $zen-auto-include-item-base: false;
 
               &.views-row-first .views-field-field-image{
                 background-color: $temp-color;
+                background: url("../images/mobile/temp.png") $temp-color;
               }
               &.views-row-last  .views-field-field-image{
                 background-color: $rebuilt-color;
+                background: url("../images/mobile/hummer.png") $rebuilt-color;
               }
 
 
@@ -347,7 +358,8 @@ $zen-auto-include-item-base: false;
             height: 100%;
             width: 20%;
             img{
-              -webkit-filter: saturate(33333333%);
+              /*-webkit-filter: saturate(33333333%);*/
+              display: none; !important;
             }
           }
           .views-field-title{
@@ -443,6 +455,7 @@ $zen-auto-include-item-base: false;
       }
       #block-views-awp-front-page-slideshow-block{
         margin: 0;
+        margin-bottom: -5px;
       }
       #block-views-global-voices-blog-block .view-global-voices-blog .views-row .views-field-title a{
         font-size: 5vw;
