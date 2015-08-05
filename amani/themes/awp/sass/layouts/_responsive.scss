@@ -215,11 +215,12 @@ $zen-auto-include-item-base: false;
           }
         }
         li.item-with-ul > *:first-child{
-          background: none;
+
           border: 0;
         }
         & > li{
-          border: 0 !important;
+          border-right: 0 !important;
+          border-left: 0 !important;
           border-bottom: 1px solid #ccc;
           li{
             border: 0 !important;
@@ -227,9 +228,18 @@ $zen-auto-include-item-base: false;
               border: 0 !important;
             }
           }
+          .submenu-title{
+            background-image: url("../images/mobile/down.png");
+            background-position: 92% center;
+            background-repeat: no-repeat;
+            border-bottom: 0;
+            float: left;
+            margin: 0;
+            width: 100%;
+          }
           &.active{
             .submenu-title{
-              background: $awp-green;
+              background-color: $awp-green;
             }
           }
           a{
@@ -238,7 +248,7 @@ $zen-auto-include-item-base: false;
             font-size: 8vw;
             text-align: center;
             padding: 10px 0 !important;
-            width: 100% !important;
+            width: 80% !important;
             border-bottom: 1px solid #FFF;
           }
           li{
