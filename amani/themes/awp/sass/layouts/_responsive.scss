@@ -259,6 +259,24 @@ $zen-auto-include-item-base: false;
       #site-slogan{
         display: none;
       }
+      .lang-block{
+        position: absolute;
+        top: 30px;
+        left: 25px;
+        float: none;
+        padding: 0;
+        margin: 0;
+        ul{
+          li{
+            &.active{
+              display: none;
+            }
+            a{
+              color: #fff;
+            }
+          }
+        }
+      }
       a.header__logo{
         display: block;
         width: 180px;
