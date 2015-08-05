@@ -444,6 +444,10 @@ $zen-auto-include-item-base: false;
       #block-views-global-voices-blog-block .view-global-voices-blog .views-row .views-field-title a{
         font-size: 5vw;
       }
+      #block-views-global-voices-blog-block,
+      #block-views-front-page-tweets-block{
+        height: auto !important;
+      }
     }/*front*/
     #footer{
       position: relative;
