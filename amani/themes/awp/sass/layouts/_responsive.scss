@@ -451,6 +451,10 @@ $zen-auto-include-item-base: false;
       #block-views-front-page-tweets-block{
         height: auto !important;
       }
+      #block-views-global-voices-blog-block h2.block-title{
+        font-size: 7vw;
+        margin: 10px 0;
+      }
       #block-block-8{
         width: 100%;
         overflow: hidden;
@@ -520,6 +524,7 @@ $zen-auto-include-item-base: false;
           .views-field-body{
             float: none;
             font-size: 3vw;
+            line-height: 1.7;
             .field-content .views-more-link{
               font-size: 3vw;
             }
@@ -537,10 +542,11 @@ $zen-auto-include-item-base: false;
           .view-content{
             .views-row{
               padding-bottom: 20px;
-              box-shadow: 0px 5px 3px #ccc;
+              box-shadow: 0px 5px 2px #eee;
               background: none;
               .views-field-title{
                 font-size: 5vw;
+                font-weight: 600;
               }
               .views-field-body{
                 .fb-share-button,
@@ -549,7 +555,7 @@ $zen-auto-include-item-base: false;
                 }
                 .field-content a{
                   float: right;
-                  font-size: 3vw;
+                  font-size: 5vw;
                 }
               }
             }
