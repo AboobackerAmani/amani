@@ -454,6 +454,8 @@ $zen-auto-include-item-base: false;
         clear: both;
         display: block;
         background: #FFF;
+        padding: 40px 0;
+        margin-bottom: 0;
         .header-btn{
           overflow: hidden;
           float: left;
@@ -469,6 +471,7 @@ $zen-auto-include-item-base: false;
             text-align: center;
             padding: 10px 0;
             font-size: 3vw;
+            margin-top: 5px;
           }
         }
         .social-icons{
@@ -491,9 +494,13 @@ $zen-auto-include-item-base: false;
             &.youtube{
               background: url("../images/mobile/youtube.png") no-repeat center;
             }
-            background-size: 100%;
+            background-size: 100% !important;
+            margin: 0 2%;
           }
         }
+      }
+      #block-views-3035a87eee3a51153d184d85d17cc285{/*dialu life*/
+
       }
     }/*front*/
     #footer{
