@@ -452,7 +452,9 @@ $zen-auto-include-item-base: false;
         width: 100%;
         overflow: hidden;
         clear: both;
+        display: block;
         .header-btn{
+          overflow: hidden;
           float: left;
           width: 26%;
           margin: 0 2%;
@@ -464,10 +466,13 @@ $zen-auto-include-item-base: false;
             color: #fff;
             text-align: center;
             padding: 10px 0;
+            font-size: 0;
           }
         }
         .social-icons{
           width: 40%;
+          overflow: hidden;
+          float: left;
           overflow: hidden;
           a{
             display: block;
