@@ -599,6 +599,14 @@ $zen-auto-include-item-base: false;
         }
       }
     }/*front*/
+    &.not-front{
+      #block-views-header-photos-block,
+      #block-block-4,
+      #block-block-3{
+        display: none;
+      }
+    }
+
     #footer{
       position: relative;
       padding-bottom: 200px;
