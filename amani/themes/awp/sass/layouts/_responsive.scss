@@ -262,7 +262,9 @@ $zen-auto-include-item-base: false;
         display: block;
         width: 180px;
         height: 81px;
-        background: url("../images/mobile/logo.png");
+        background: url("../images/mobile/logo.png") center no-repeat;
+        background-size: 100% !important;
+        margin: 0 auto;
       }
       .header__logo-image{
         display: none !important;
@@ -340,8 +342,9 @@ $zen-auto-include-item-base: false;
 
           }
         }
-
-
+        .views-row{
+          background-size: 50% auto !important;
+        }
 
       }
       .views-row{
