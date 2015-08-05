@@ -302,11 +302,11 @@ $zen-auto-include-item-base: false;
 
               &.views-row-first  .views-field-field-image{
                 background-color: $calendar-color;
-                background: url("../images/mobile/calendar.png") $calendar-color;
+                background: url("../images/mobile/calendar.png") $calendar-color center no-repeat;
               }
               &.views-row-last  .views-field-field-image{
                 background-color: $trucks-color;
-                background: url("../images/mobile/truck.png") $trucks-color;
+                background: url("../images/mobile/truck.png") $trucks-color center no-repeat;
               }
 
           }
@@ -316,11 +316,11 @@ $zen-auto-include-item-base: false;
 
               &.views-row-first  .views-field-field-image{
                 background-color: $people-color;
-                background: url("../images/mobile/displace.png") $people-color;
+                background: url("../images/mobile/displace.png") $people-color center no-repeat;
               }
               &.views-row-last  .views-field-field-image{
                 background-color: $money-color;
-                background: url("../images/mobile/dollar.png") $money-color;
+                background: url("../images/mobile/dollar.png") $money-color center no-repeat;
               }
 
           }
@@ -330,11 +330,11 @@ $zen-auto-include-item-base: false;
 
               &.views-row-first .views-field-field-image{
                 background-color: $temp-color;
-                background: url("../images/mobile/temp.png") $temp-color;
+                background: url("../images/mobile/temp.png") $temp-color center no-repeat;
               }
               &.views-row-last  .views-field-field-image{
                 background-color: $rebuilt-color;
-                background: url("../images/mobile/hummer.png") $rebuilt-color;
+                background: url("../images/mobile/hummer.png") $rebuilt-color center no-repeat;
               }
 
 
@@ -359,7 +359,7 @@ $zen-auto-include-item-base: false;
             width: 20%;
             img{
               /*-webkit-filter: saturate(33333333%);*/
-              display: none; !important;
+              display: none !important;
             }
           }
           .views-field-title{
