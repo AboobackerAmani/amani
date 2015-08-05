@@ -453,6 +453,7 @@ $zen-auto-include-item-base: false;
         overflow: hidden;
         clear: both;
         display: block;
+        background: #FFF;
         .header-btn{
           overflow: hidden;
           float: left;
@@ -464,9 +465,10 @@ $zen-auto-include-item-base: false;
             height: 100%;
             font-weight: bold;
             color: #fff;
+            background: #D31245;
             text-align: center;
             padding: 10px 0;
-            font-size: 0;
+            font-size: 3vw;
           }
         }
         .social-icons{
@@ -476,8 +478,10 @@ $zen-auto-include-item-base: false;
           overflow: hidden;
           a{
             display: block;
-            width: 57px;
+            width: 26%;
             height: 40px;
+            font-size: 0;
+            float: left;
             &.twitter{
               background: url("../images/mobile/twitter.png") no-repeat center;
             }
@@ -487,6 +491,7 @@ $zen-auto-include-item-base: false;
             &.youtube{
               background: url("../images/mobile/youtube.png") no-repeat center;
             }
+            background-size: 100%;
           }
         }
       }
