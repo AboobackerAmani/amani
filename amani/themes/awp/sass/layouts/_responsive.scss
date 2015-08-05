@@ -451,7 +451,8 @@ $zen-auto-include-item-base: false;
       #block-views-front-page-tweets-block{
         height: auto !important;
       }
-      #block-views-global-voices-blog-block h2.block-title{
+      #block-views-global-voices-blog-block h2.block-title,
+      #block-views-front-page-tweets-block .view-header{
         font-size: 7vw;
         margin: 10px 0;
       }
