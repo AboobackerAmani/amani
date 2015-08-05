@@ -204,9 +204,15 @@ $zen-auto-include-item-base: false;
         background: #000;
         background: rgba(0,0,0,0.7);
         li.item-with-ul > * > a{
-          border: 0;
+          border-right: 0;
+          border-left: 0;
           padding: 0;
           width: 100%;
+          li{
+            a{
+              border: 0;
+            }
+          }
         }
         li.item-with-ul > *:first-child{
           background: none;
