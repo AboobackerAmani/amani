@@ -257,6 +257,7 @@ $zen-auto-include-item-base: false;
       padding: 0;
       .header__logo-image{
         -webkit-filter: saturate(33333333%);
+        width: 50%;
       }
       #collapsed-menu-button,
       #block-superfish-1,
@@ -353,10 +354,12 @@ $zen-auto-include-item-base: false;
             left: 16%;
             top: 40px;
             display: block;
-            width: 30%;
+            width: 25%;
             a{
-              font-size: 25px;
+              font-size: 5vw;
               font-weight: bold;
+              color: #807f83;
+
 
             }
           }
@@ -365,10 +368,10 @@ $zen-auto-include-item-base: false;
             float: left;
             position: relative;
             clear: none;
-            left: -35%;
+            left: -32%;
             width: 20%;
             top: 45px;
-            font-size: 35px;
+            font-size: 9vw;
           }
           .views-field-title-1{/*more*/
             position: absolute;

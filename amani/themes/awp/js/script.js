@@ -28,8 +28,10 @@ Drupal.behaviors.my_custom_behavior = {
       $('.header__region .header_links .search_link #search-block-form .form-text').focusout(function() {
           $('.header__region .header_links .search_link #search-block-form').hide();
       });
-
-      $('.section-resources .sidebars .region-sidebar-second').height($('.section-resources .view-resources-categories').height());
+    if ($( document ).width()>480)
+      {
+          $('.section-resources .sidebars .region-sidebar-second').height($('.section-resources .view-resources-categories').height());
+      }
 
 
       var ourLabel = $('#views-exposed-form-resource-inner-page .views-widget-filter-keys label').text();
