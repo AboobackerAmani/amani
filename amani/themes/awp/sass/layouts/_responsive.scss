@@ -500,6 +500,28 @@ $zen-auto-include-item-base: false;
         }
       }
       #block-views-3035a87eee3a51153d184d85d17cc285{/*dialu life*/
+        .views-row{
+          background: none;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #ccc;
+          .views-field-field-image{
+            width: 100%;
+          }
+          .views-field-title{
+            float: none;
+            a{
+              font-size: 5vw;
+            }
+          }
+          .views-field-field-article-date,
+          .views-field-body{
+            float: none;
+            font-size: 3vw;
+            .views-more-link{
+              font-size: 3vw;
+            }
+          }
+        }
 
       }
     }/*front*/
