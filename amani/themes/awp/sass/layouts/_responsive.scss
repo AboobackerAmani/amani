@@ -530,6 +530,8 @@ $zen-auto-include-item-base: false;
           float: left;
           width: 18%;
           margin: 13px 0%;
+          border-left: 2px solid #D31245;
+          padding: 0 2%;
           a{
             display: block;
             width: 100%;
@@ -540,13 +542,13 @@ $zen-auto-include-item-base: false;
             text-align: center;
             font-size: 3vw;
             padding: 0;
-            border-left: 2px solid #D31245;
+
 
           }
         }
 
         .social-icons{
-          width: 55%;
+          width: 48%;
           overflow: hidden;
           float: left;
           overflow: hidden;
@@ -555,7 +557,7 @@ $zen-auto-include-item-base: false;
             float: left;
             font-size: 3vw;
             font-weight: bold;
-            padding: 0 6%;
+            padding: 0 8%;
             margin-top: 13px;
             text-align: center;
           }
