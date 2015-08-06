@@ -1,0 +1,9 @@
+<?php
+/*
+* Implements hook_update()
+*/
+function amani_front_page_update_7000() {
+  features_revert('amani_front_page');
+}
+
+?>

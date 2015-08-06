@@ -109,15 +109,15 @@ function amani_global_context_default_contexts() {
           'region' => 'footer',
           'weight' => '-40',
         ),
-        'bean-powered-by' => array(
+        'bean-img1' => array(
           'module' => 'bean',
-          'delta' => 'powered-by',
+          'delta' => 'img1',
           'region' => 'footer',
           'weight' => '-10',
         ),
-        'bean-project-by' => array(
+        'bean-img2' => array(
           'module' => 'bean',
-          'delta' => 'project-by',
+          'delta' => 'img2',
           'region' => 'footer',
           'weight' => '-9',
         ),
