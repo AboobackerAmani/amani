@@ -535,12 +535,13 @@ $zen-auto-include-item-base: false;
             width: 100%;
             height: 100%;
             font-weight: bold;
-            color: #fff;
-            background: #D31245;
+            color: #D31245;
+            background: none;
             text-align: center;
             padding: 10px 0;
             font-size: 3vw;
             margin-top: 5px;
+            border-left: 2px solid #D31245;
           }
         }
         .social-icons{
