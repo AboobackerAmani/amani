@@ -69,6 +69,24 @@ function amani_incident_report_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '41',
         ),
+        'bean-incidents-this-month' => array(
+          'module' => 'bean',
+          'delta' => 'incidents-this-month',
+          'region' => 'map_region_3x',
+          'weight' => '-10',
+        ),
+        'bean-incidents-last-3-months' => array(
+          'module' => 'bean',
+          'delta' => 'incidents-last-3-months',
+          'region' => 'map_region_3x',
+          'weight' => '-9',
+        ),
+        'bean-total-incidents-reported' => array(
+          'module' => 'bean',
+          'delta' => 'total-incidents-reported',
+          'region' => 'map_region_3x',
+          'weight' => '-8',
+        ),
       ),
     ),
     'breadcrumb' => array(

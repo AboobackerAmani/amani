@@ -3,7 +3,7 @@
 /**
  * clean up fields: delete field instance incident_report-field_media
  */
-function amani_incident_report_update_7000() {
+function amani_incident_report_update_7001() {
   $instance = field_info_instance('node', 'field_media', 'incident_report');
   field_delete_instance($instance, FALSE);
 }
@@ -11,7 +11,7 @@ function amani_incident_report_update_7000() {
 /**
  * clean up fields: delete field instance incident_report-field_images
  */
-function amani_incident_report_update_7001() {
+function amani_incident_report_update_7002() {
   $instance = field_info_instance('node', 'field_images', 'incident_report');
   field_delete_instance($instance, FALSE);
 
@@ -25,7 +25,7 @@ function amani_incident_report_update_7001() {
 /**
  * clean up fields: delete field instance incident_report-field_images
  */
-function amani_incident_report_update_7002() {
+function amani_incident_report_update_7003() {
   $instance = field_info_instance('node', 'field_incident_videos', 'incident_report');
   field_delete_instance($instance, FALSE);
 

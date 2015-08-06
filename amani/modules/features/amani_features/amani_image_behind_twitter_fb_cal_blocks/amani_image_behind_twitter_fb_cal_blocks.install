@@ -1,0 +1,7 @@
+<?php
+/*
+*Implements hook_update()
+*/
+function amani_image_behind_twitter_fb_cal_blocks_update_7001() {
+  module_enable('amani_image_behind_twitter_fb_cal_blocks');
+}
