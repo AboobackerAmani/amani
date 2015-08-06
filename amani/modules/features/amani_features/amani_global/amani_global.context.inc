@@ -154,12 +154,6 @@ function amani_global_context_default_contexts() {
           'region' => 'header',
           'weight' => '-10',
         ),
-        'views-front_page_blocks-block_2' => array(
-          'module' => 'views',
-          'delta' => 'front_page_blocks-block_2',
-          'region' => 'content',
-          'weight' => '-44',
-        ),
         'views-front_page_blocks-block_1' => array(
           'module' => 'views',
           'delta' => 'front_page_blocks-block_1',
@@ -169,6 +163,12 @@ function amani_global_context_default_contexts() {
         'views-front_page_blocks-block' => array(
           'module' => 'views',
           'delta' => 'front_page_blocks-block',
+          'region' => 'content',
+          'weight' => '-44',
+        ),
+        'views-front_page_blocks-block_2' => array(
+          'module' => 'views',
+          'delta' => 'front_page_blocks-block_2',
           'region' => 'content',
           'weight' => '-44',
         ),
@@ -190,9 +190,9 @@ function amani_global_context_default_contexts() {
           'region' => 'content',
           'weight' => '-9',
         ),
-        'views-72a1db79709d2921e03b4173ca67a118' => array(
+        'views-calendar_of_events-block_3' => array(
           'module' => 'views',
-          'delta' => '72a1db79709d2921e03b4173ca67a118',
+          'delta' => 'calendar_of_events-block_3',
           'region' => 'content',
           'weight' => '-8',
         ),
