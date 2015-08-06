@@ -2,8 +2,8 @@
 /*
 *Implements hook_update()
 */
-function amani_image_behind_twitter_fb_cal_blocks_update_7001() {
-  features_revert_module('amani_image_behind_twitter_fb_cal_blocks');
+function amani_image_behind_twitter_fb_cal_blocks_update_7002() {
+  features_revert('amani_image_behind_twitter_fb_cal_blocks');
 }
 
 ?>
