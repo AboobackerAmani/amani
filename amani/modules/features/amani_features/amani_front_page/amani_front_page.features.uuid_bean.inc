@@ -22,7 +22,7 @@ function amani_front_page_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => '1374820014',
     'log' => '',
-    'uid' => '1',
+    'uid' => '0',
     'default_revision' => '1',
     'revisions' => array(),
     'vuuid' => '62a67080-249f-421b-887c-f28aa34c2d11',
