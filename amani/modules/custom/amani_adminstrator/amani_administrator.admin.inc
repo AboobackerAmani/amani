@@ -543,6 +543,21 @@ function amani_administrator_configure_amani_form() {
     '#suffix' => '</div>',
   );
 
+  $form['img_behind_blocks'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Manage Image Behind Homepage Blocks'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['img_behind_blocks'][] = array(
+    '#type' => 'button',
+    '#value' => t('Change Image'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>Change image behind homepage twitter, faceboook & calender blocks.</p>',
+  );
+
   return $form;
 }
 
@@ -670,6 +685,9 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       break;
     case 'View Amani Release Notes':
       drupal_goto('admin/configure-amani/release-notes');
+      break;
+    case 'Change Image':
+      drupal_goto('node/add/image-behind-twitter-fb-cal-bloc');
       break;
   }
 }
