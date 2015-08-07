@@ -128,14 +128,14 @@ function amani_administrator_configure_amani_form() {
 
   $form['meta_menu'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Manage Meta Menu'),
+    '#title' => t('Secondary Menu'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
 
   $form['meta_menu'][] = array(
     '#type' => 'button',
-    '#value' => t('Reset Default Meta Menu Links'),
+    '#value' => t('Reset Default Secondary Menu Links'),
     '#attributes' => array('onclick' => 'if(!confirm("Are you sure?")){return false;}'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
@@ -145,7 +145,7 @@ function amani_administrator_configure_amani_form() {
 
   $form['meta_menu'][] = array(
     '#type' => 'button',
-    '#value' => t('Configure Meta Menu Links'),
+    '#value' => t('Configure Secondary Menu Links'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
     '#suffix' =>
