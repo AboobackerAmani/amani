@@ -1,5 +1,5 @@
 <?php
 
-print_r($row->$field->tid);
+print_r($row->$tid);
 
 ?>
