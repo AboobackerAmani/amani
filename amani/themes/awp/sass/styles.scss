@@ -260,6 +260,9 @@ body {
                 width: 70% !important;
                 margin: 0 auto;
                 background: none !important;
+                &.not-on-menu{
+                  display:none;
+                }
                 &:hover{
                   color: $awp-red;
                 }
