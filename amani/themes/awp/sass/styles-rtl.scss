@@ -983,7 +983,23 @@
     }
   } /*page-team*/
   &.node-type-team{
-    
+    .image-area-div{
+      .field-type-image{
+        width: 20%;
+        padding: 0 1%;
+        float: right;
+      }
+      .field-name-field-name,
+      .field-name-field-team-member-type{
+        float: right;
+      }
+
+    }
+    .content-area-div{
+      width:100%;
+      clear: both;
+      overflow:hidden;
+    }
 
   }
   &.section-news,

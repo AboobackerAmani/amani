@@ -1376,16 +1376,18 @@ body {
       overflow:hidden;
       margin-bottom: 20px;
       position: relative;
-      display: table;
       .field-type-image{
-        display: table-cell;
         width: 20%;
-        padding: 1%;
+        padding: 0 1%;
+        float: left;
       }
       .field-name-field-name,
       .field-name-field-team-member-type{
-        display: table-cell;
-        vertical-align: bottom;
+
+        width: 100%;
+        margin: 10px 20px;
+        font-weight: bold;
+        float: left;
       }
 
     }
