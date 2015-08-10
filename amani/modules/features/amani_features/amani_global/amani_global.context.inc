@@ -109,15 +109,15 @@ function amani_global_context_default_contexts() {
           'region' => 'footer',
           'weight' => '-40',
         ),
-        'bean-powered-by' => array(
+        'bean-img1' => array(
           'module' => 'bean',
-          'delta' => 'powered-by',
+          'delta' => 'img1',
           'region' => 'footer',
           'weight' => '-10',
         ),
-        'bean-project-by' => array(
+        'bean-img2' => array(
           'module' => 'bean',
-          'delta' => 'project-by',
+          'delta' => 'img2',
           'region' => 'footer',
           'weight' => '-9',
         ),
@@ -154,53 +154,53 @@ function amani_global_context_default_contexts() {
           'region' => 'header',
           'weight' => '-10',
         ),
-        'views-front_page_blocks-block_2' => array(
+        'views-front_page_blocks-block' => array(
           'module' => 'views',
-          'delta' => 'front_page_blocks-block_2',
+          'delta' => 'front_page_blocks-block',
           'region' => 'content',
-          'weight' => '-44',
+          'weight' => '-10',
         ),
         'views-front_page_blocks-block_1' => array(
           'module' => 'views',
           'delta' => 'front_page_blocks-block_1',
           'region' => 'content',
-          'weight' => '-44',
+          'weight' => '-9',
         ),
-        'views-front_page_blocks-block' => array(
+        'views-front_page_blocks-block_2' => array(
           'module' => 'views',
-          'delta' => 'front_page_blocks-block',
+          'delta' => 'front_page_blocks-block_2',
           'region' => 'content',
-          'weight' => '-44',
-        ),
-        'views-news_and_events-block_1' => array(
-          'module' => 'views',
-          'delta' => 'news_and_events-block_1',
-          'region' => 'content',
-          'weight' => '-40',
-        ),
-        'fb_likebox-0' => array(
-          'module' => 'fb_likebox',
-          'delta' => '0',
-          'region' => 'content',
-          'weight' => '-10',
+          'weight' => '-8',
         ),
         'views-front_page_tweets-block' => array(
           'module' => 'views',
           'delta' => 'front_page_tweets-block',
           'region' => 'content',
-          'weight' => '-9',
+          'weight' => '-7',
+        ),
+        'fb_likebox-0' => array(
+          'module' => 'fb_likebox',
+          'delta' => '0',
+          'region' => 'content',
+          'weight' => '-6',
+        ),
+        'views-calendar_of_events-block_3' => array(
+          'module' => 'views',
+          'delta' => 'calendar_of_events-block_3',
+          'region' => 'content',
+          'weight' => '-5',
         ),
         'views-72a1db79709d2921e03b4173ca67a118' => array(
           'module' => 'views',
           'delta' => '72a1db79709d2921e03b4173ca67a118',
           'region' => 'content',
-          'weight' => '-8',
+          'weight' => '-4',
         ),
-        'views-calendar_of_events-list' => array(
+        'views-news_and_events-block_1' => array(
           'module' => 'views',
-          'delta' => 'calendar_of_events-list',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
+          'delta' => 'news_and_events-block_1',
+          'region' => 'content',
+          'weight' => '-3',
         ),
       ),
     ),
