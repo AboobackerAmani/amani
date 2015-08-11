@@ -1,7 +1,8 @@
 <?php
+
 /*
 * Implements hook_update()
 */
-function amani_front_page_update_7002() {
-  features_revert('amani_front_page');
+function amani_front_page_update_7003() {
+  features_revert_module('amani_front_page');
 }
