@@ -558,6 +558,21 @@ function amani_administrator_configure_amani_form() {
     '#suffix' => '<p>Change image behind homepage twitter, faceboook & calender blocks.</p>',
   );
 
+  $form['login_items'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Manage Third-party Logins'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['login_items'][] = array(
+    '#type' => 'button',
+    '#value' => t('Edit Third-party Logins'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>Select which login methods users can use, eg: Facebook, Twitter or Yahoo.</p>',
+  );
+
   return $form;
 }
 
@@ -688,6 +703,9 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       break;
     case 'Change Image':
       drupal_goto('node/add/image-behind-twitter-fb-cal-bloc');
+      break;
+    case 'Edit Third-party Logins':
+      drupal_goto('admin/config/people/hybridauth');
       break;
   }
 }
