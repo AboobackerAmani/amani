@@ -6,4 +6,12 @@ function amani_front_page_update_7001() {
   features_revert('amani_front_page');
 }
 
+/*
+* Enable hook_update()
+*/
+function amani_front_page_update_7002() {
+  module_enable(array(
+    'jquery_update'
+  ));
+}
 ?>
