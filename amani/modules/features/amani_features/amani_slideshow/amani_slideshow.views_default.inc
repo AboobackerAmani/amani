@@ -120,7 +120,7 @@ function amani_slideshow_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="title_body_button">[title][field_description][field_button]</div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="title_body_button"><div class="title">[title]</div><div class="description">[field_description]</div><div class="button">[field_button]</div></div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Display ranking (field_display_ranking) */
   $handler->display->display_options['sorts']['field_display_ranking_value']['id'] = 'field_display_ranking_value';

@@ -10,6 +10,7 @@
 // Header
 .region-header {
   .block {
+    margin-bottom: 0;
     .block-title { @include element-invisible(); }
   }
 }
@@ -30,6 +31,7 @@
 .block-menu {
   ul.menu {
     padding: 0;
+    margin: 0;
 
     li {
       list-style: none outside none;

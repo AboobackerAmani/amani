@@ -6,6 +6,17 @@
  * of these @include files will be combined into a single file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
+/*
+ * Mobile First approach to break points
+ *
+ * http://responsivedesign.is/strategy/page-layout/defining-breakpoints
+ * TL;DR
+ * Instead of being concerned with device breakpoints the best practice is to
+ * design for your smallest viewport first.  As you expand that view there will
+ * come a point at which the design looks terrible.
+ *
+ * This is where you add a break point.
+ */
 /* HTML element (SMACSS base) rules */
 /**
  * @file
@@ -905,7 +916,11 @@ body {
 /**
  * Style by region
  */
-/* line 13, ../sass/components/_blocks.scss */
+/* line 12, ../sass/components/_blocks.scss */
+.region-header .block {
+  margin-bottom: 0;
+}
+/* line 14, ../sass/components/_blocks.scss */
 .region-header .block .block-title {
   position: absolute !important;
   height: 1px;
@@ -914,11 +929,11 @@ body {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* line 19, ../sass/components/_blocks.scss */
+/* line 20, ../sass/components/_blocks.scss */
 .region-footer .block {
   float: left;
 }
-/* line 21, ../sass/components/_blocks.scss */
+/* line 22, ../sass/components/_blocks.scss */
 .region-footer .block .block-title {
   position: absolute !important;
   height: 1px;
@@ -930,11 +945,12 @@ body {
 /**
  * Style by type
  */
-/* line 31, ../sass/components/_blocks.scss */
+/* line 32, ../sass/components/_blocks.scss */
 .block-menu ul.menu {
   padding: 0;
+  margin: 0;
 }
-/* line 34, ../sass/components/_blocks.scss */
+/* line 36, ../sass/components/_blocks.scss */
 .block-menu ul.menu li {
   list-style: none outside none;
 }
@@ -1073,7 +1089,7 @@ body {
   right: 150px;
   top: 33px;
 }
-/* line 72, ../sass/_mixins.scss */
+/* line 78, ../sass/_mixins.scss */
 #block-menu-menu-social-media:hover .contextual-links-wrapper {
   display: none;
 }
@@ -2095,7 +2111,7 @@ tr.selected td {
 /* line 805, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1433349335');
+  background-image: url('../images/progress.gif?1433171981');
 }
 
 /**
@@ -2205,7 +2221,7 @@ tr.selected td {
   font-weight: 300;
   padding: 5px 10px;
 }
-/* line 55, ../sass/_mixins.scss */
+/* line 61, ../sass/_mixins.scss */
 .form-submit:hover, .form-submit:focus {
   background-color: #5a595c;
 }
@@ -2247,7 +2263,7 @@ tr.selected td {
   color: #fdfeff;
   text-transform: uppercase;
 }
-/* line 63, ../sass/_mixins.scss */
+/* line 69, ../sass/_mixins.scss */
 .footer-wrapper a:focus, .footer-wrapper a:hover, .footer-wrapper a:active {
   color: #1696ca;
 }
@@ -2255,7 +2271,7 @@ tr.selected td {
 .footer-wrapper .menu a {
   color: #fdfeff;
 }
-/* line 63, ../sass/_mixins.scss */
+/* line 69, ../sass/_mixins.scss */
 .footer-wrapper .menu a:focus, .footer-wrapper .menu a:hover, .footer-wrapper .menu a:active {
   color: #1696ca;
 }
@@ -2371,6 +2387,138 @@ footer .menu a:before {
 .footer-legal div {
   margin: 0 auto;
   width: 75%;
+}
+
+/* line 6, ../sass/theme/_slideshow.scss */
+.views-slideshow-cycle-main-frame-row, .views-slideshow-cycle-main-frame {
+  width: 100% !important;
+}
+
+/* line 10, ../sass/theme/_slideshow.scss */
+.views-slideshow-cycle-main-frame-row img,
+.views-slideshow-cycle-main-frame-row {
+  height: auto !important;
+}
+
+/* line 15, ../sass/theme/_slideshow.scss */
+.slideshow {
+  position: relative;
+}
+/* line 17, ../sass/theme/_slideshow.scss */
+.slideshow img {
+  display: table;
+  margin: 0 auto;
+}
+/* line 21, ../sass/theme/_slideshow.scss */
+.slideshow .description,
+.slideshow .button a,
+.slideshow .views-slideshow-controls-bottom,
+.slideshow .title a {
+  position: absolute;
+  text-align: center;
+  width: auto;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+}
+/* line 34, ../sass/theme/_slideshow.scss */
+.slideshow .title a {
+  top: 20%;
+  -webkit-transform: translateY(-20%);
+  -ms-transform: translateY(-20%);
+  transform: translateY(-20%);
+  font-size: 20px;
+  font-size: 1.53846rem;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+@media (min-width: 960px) {
+  /* line 34, ../sass/theme/_slideshow.scss */
+  .slideshow .title a {
+    font-size: 50px;
+    font-size: 3.84615rem;
+    line-height: 50px;
+  }
+}
+/* line 47, ../sass/theme/_slideshow.scss */
+.slideshow .description {
+  display: none;
+  top: 45%;
+  -webkit-transform: translateY(-45%);
+  -ms-transform: translateY(-45%);
+  transform: translateY(-45%);
+  font-size: 20px;
+  font-size: 1.53846rem;
+  max-width: 410px;
+  line-height: 29px;
+}
+@media (min-width: 960px) {
+  /* line 47, ../sass/theme/_slideshow.scss */
+  .slideshow .description {
+    display: block;
+  }
+}
+/* line 60, ../sass/theme/_slideshow.scss */
+.slideshow .button a {
+  border: 1px solid #fff;
+  padding: 5px 5px;
+  top: 75%;
+  -webkit-transform: translateY(-75%);
+  -ms-transform: translateY(-75%);
+  transform: translateY(-75%);
+  font-size: 13px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  max-width: 150px;
+  background-color: rgba(81, 62, 121, 0.8);
+}
+@media (min-width: 960px) {
+  /* line 60, ../sass/theme/_slideshow.scss */
+  .slideshow .button a {
+    font-size: 18px;
+    font-size: 1.38462rem;
+    padding: 15px 30px;
+    background-color: rgba(81, 62, 121, 0.23);
+  }
+}
+/* line 78, ../sass/theme/_slideshow.scss */
+.slideshow .title a,
+.slideshow .description,
+.slideshow .button a {
+  text-shadow: -1px 0px 6px rgba(0, 0, 0, 0.59);
+}
+/* line 84, ../sass/theme/_slideshow.scss */
+.slideshow .views-slideshow-controls-bottom {
+  display: none;
+  bottom: 5px;
+  z-index: 100;
+}
+@media (min-width: 960px) {
+  /* line 84, ../sass/theme/_slideshow.scss */
+  .slideshow .views-slideshow-controls-bottom {
+    display: block;
+  }
+}
+/* line 91, ../sass/theme/_slideshow.scss */
+.slideshow .views-slideshow-controls-bottom span {
+  display: inline-block;
+  background-image: url("../images/arrows-slideshow.png");
+  width: 41px;
+  height: 41px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* line 97, ../sass/theme/_slideshow.scss */
+.slideshow .views-slideshow-controls-bottom span:nth-child(2) {
+  display: none;
+}
+/* line 100, ../sass/theme/_slideshow.scss */
+.slideshow .views-slideshow-controls-bottom span:nth-child(3) {
+  background-position: -41px 0;
+  margin: 0 0 0 40px;
 }
 
 /* @import "theme-B"; */
