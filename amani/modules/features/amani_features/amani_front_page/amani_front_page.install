@@ -3,7 +3,7 @@
 * Implements hook_update()
 */
 function amani_front_page_update_7001() {
-  features_revert('amani_front_page');
+  features_revert(array('amani_front_page' => $components));
 }
 
 /*
@@ -14,4 +14,4 @@ function amani_front_page_update_7002() {
     'jquery_update'
   ));
 }
-?>
+ 
