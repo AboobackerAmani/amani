@@ -128,7 +128,7 @@ function amani_administrator_configure_amani_form() {
 
   $form['meta_menu'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Secondary Menu'),
+    '#title' => t('Manage Secondary Menu'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
@@ -168,10 +168,10 @@ function amani_administrator_configure_amani_form() {
 
   $form['donate_menu'][] = array(
     '#type' => 'button',
-    '#value' => t('Configure \'Donate\' Button'),
+    '#value' => t('Configure Floating Button'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
-    '#suffix' => '<p>This action allows users to enable, disable, edit or delete your \'Donate\' button and set your \'Donate\' button link. The \'Donate\' button will appear as a dynamically scrolling button on the right side of your page.</p></div>',
+    '#suffix' => '<p>This action allows users to enable, disable, edit or delete your floating button and set your floating button link. The floating button will appear as a dynamically scrolling button on the right side of your page. Example uses: A \'Donate\' button.</p></div>',
   );
 
   $form['blocks'] = array(
@@ -560,17 +560,21 @@ function amani_administrator_configure_amani_form() {
 
   $form['login_items'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Manage Third-party Logins'),
+    '#title' => t('Manage Third-Party Logins'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
 
   $form['login_items'][] = array(
     '#type' => 'button',
-    '#value' => t('Edit Third-party Logins'),
+    '#value' => t('Edit Third-Party Logins'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
-    '#suffix' => '<p>Select which login methods users can use, eg: Facebook, Twitter or Yahoo.</p>',
+    '#suffix' => '<p>Select which login methods users can use, eg: Facebook, Twitter, Google or Yahoo.
+                  Click <a href="https://www.prophoto.com/support/twitter-api-credentials/">here</a> for an instructional to setup a Twitter application.
+                  Click <a href="https://developers.facebook.com/docs/apps/register">here</a> for an instructional to setup a Facebook application.
+                  Click <a href="https://developers.google.com/identity/protocols/OpenIDConnect?hl=en#appsetup">here</a> for an instructional on setting up a Google application.
+                  Click <a href="https://developer.yahoo.com/oauth/guide/oauth-auth-flow.html">here</a> for instructions on creating a Yahoo application.</p>',
   );
 
   return $form;
@@ -622,7 +626,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
     case 'Configure Meta Menu Links':
       drupal_goto('admin/structure/menu/manage/menu-meta');
       break;
-    case 'Configure \'Donate\' Button':
+    case 'Configure Floating Button':
       drupal_goto('admin/structure/menu/manage/menu-donate');
       break;
     case 'Enable \'Partners Carousel\'':
@@ -704,7 +708,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
     case 'Change Image':
       drupal_goto('node/add/image-behind-twitter-fb-cal-bloc');
       break;
-    case 'Edit Third-party Logins':
+    case 'Edit Third-Party Logins':
       drupal_goto('admin/config/people/hybridauth');
       break;
   }
