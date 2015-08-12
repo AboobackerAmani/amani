@@ -8,14 +8,14 @@
 /* Import Sass mixins, variables, Compass modules, etc. */
 @font-face {
   font-family: 'MinionPro';
-  src: url("../fonts/Minion-Regular.otf") format("truetype");
+  src: url("../fonts/MinionPro/Minion-Regular.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 /* Regular */
 @font-face {
   font-family: 'Open Sans Regular';
-  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  src: url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
   font-weight: normal;
   font-weight: 400;
   font-style: normal;
@@ -23,7 +23,7 @@
 /* Italic */
 @font-face {
   font-family: 'Open Sans Italic';
-  src: url("../fonts/OpenSans-Italic.ttf") format("truetype");
+  src: url("../fonts/OpenSans/OpenSans-Italic.ttf") format("truetype");
   font-weight: normal;
   font-weight: 400;
   font-style: italic;
@@ -31,35 +31,35 @@
 /* Light */
 @font-face {
   font-family: 'Open Sans Light';
-  src: url("../fonts/OpenSans-Light.ttf") format("truetype");
+  src: url("../fonts/OpenSans/OpenSans-Light.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
 }
 /* Light Italic */
 @font-face {
   font-family: 'Open Sans Light Italic';
-  src: url("../fonts/OpenSans-LightItalic.ttf") format("truetype");
+  src: url("../fonts/OpenSans/OpenSans-LightItalic.ttf") format("truetype");
   font-weight: 200;
   font-style: italic;
 }
 /* Semibold */
 @font-face {
   font-family: 'Open Sans Semi Bold';
-  src: url("../fonts/OpenSans-Semibold.ttf") format("truetype");
+  src: url("../fonts/OpenSans/OpenSans-Semibold.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 /* Semibold Italic */
 @font-face {
   font-family: 'Open Sans Semi Bold';
-  src: url("../fonts/OpenSans-SemiboldItalic.ttf") format("truetype");
+  src: url("../fonts/OpenSans/OpenSans-SemiboldItalic.ttf") format("truetype");
   font-weight: 500;
   font-style: italic;
 }
 /* Bold */
 @font-face {
   font-family: 'Open Sans Bold';
-  src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
+  src: url("../fonts/OpenSans/OpenSans-Bold.ttf") format("truetype");
   font-weight: bold;
   font-weight: 700;
   font-style: normal;
@@ -67,7 +67,7 @@
 /* Bold Italic */
 @font-face {
   font-family: 'Open Sans Bold Italic';
-  src: url("../fonts/OpenSans-BoldItalic.ttf") format("truetype");
+  src: url("../fonts/OpenSans/OpenSans-BoldItalic.ttf") format("truetype");
   font-weight: bold;
   font-weight: 700;
   font-style: italic;
@@ -75,14 +75,14 @@
 /* Extra Bold */
 @font-face {
   font-family: 'Open Sans Extra Bold';
-  src: url("../fonts/OpenSans-ExtraBold.ttf") format("truetype");
+  src: url("../fonts/OpenSans/OpenSans-ExtraBold.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 /* Extra Bold Italic */
 @font-face {
   font-family: 'Open Sans Extra Bold Italic';
-  src: url("../fonts/OpenSans-ExtraBoldItalic.ttf") format("truetype");
+  src: url("../fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
 }
@@ -1013,90 +1013,148 @@ body.not-logged-in #page {
   z-index: 999;
 }
 
-/* line 25, ../sass/components/_menus.scss */
-#header #block-system-main-menu {
-  display: none;
-}
-/* line 28, ../sass/components/_menus.scss */
-#header #block-system-main-menu ul.menu {
-  margin-top: 5px;
-  margin-bottom: 0;
-  border-top: 2px solid #474F5E;
-}
-/* line 33, ../sass/components/_menus.scss */
-#header #block-system-main-menu li {
-  border-bottom: 1px solid #CFEDFA;
-  background-color: #fff;
-  padding: 8px 0 5px;
-  margin: 0;
-  text-align: center;
-}
-/* line 40, ../sass/components/_menus.scss */
-#header #block-system-main-menu a {
-  font-size: 14px;
-  font-size: 1.07692rem;
-  font-weight: 200;
-  letter-spacing: 1px;
-  line-height: 14px;
-  color: #474F5E;
-  text-transform: uppercase;
-}
+/*#header {
+  #block-system-main-menu {
+    display: none;
 
+    ul.menu {
+      margin-top: 5px;
+      margin-bottom: 0;
+      border-top: 2px solid $grey;
+      
+      li {
+		  border-bottom: 1px solid $soft-blue;
+		  background-color: $white;
+		  padding: 8px 0 5px;
+		  margin: 0;
+		  text-align: center;
+		}
+		a {
+		  @include font-size(14px);
+		  font-weight: 200;
+		  letter-spacing: 1px;
+		  line-height: 14px;
+		  color: $grey;
+		  text-transform: uppercase;
+		}
+    }
+    
+  }
+}*/
 @media all and (min-width: 768px) {
-  /* line 54, ../sass/components/_menus.scss */
+  /* line 56, ../sass/components/_menus.scss */
   #mobile-toggle {
     display: none;
   }
 }
 @media all and (min-width: 768px) {
-  /* line 62, ../sass/components/_menus.scss */
+  /* line 66, ../sass/components/_menus.scss */
+  body.not-front #main-submenu-backline {
+    height: 47px;
+    position: absolute;
+    width: 100%;
+    background: #474F5E;
+    top: 133px;
+  }
+
+  /* line 77, ../sass/components/_menus.scss */
+  body.not-front.section-home #main-submenu-backline {
+    display: none;
+  }
+
+  /* line 83, ../sass/components/_menus.scss */
   #header #block-system-main-menu {
-    display: table;
+    display: inline;
     margin-left: auto;
     margin-right: auto;
     width: auto;
     position: relative;
-    left: -43px;
-    top: 0;
+    float: left;
+    width: 100%;
   }
-  /* line 71, ../sass/components/_menus.scss */
+  /* line 93, ../sass/components/_menus.scss */
   #header #block-system-main-menu .mobile-menu-link {
     display: none;
   }
-  /* line 75, ../sass/components/_menus.scss */
+  /* line 97, ../sass/components/_menus.scss */
   #header #block-system-main-menu ul.menu {
     margin: 0 auto;
     border: 0;
+    display: block;
+    float: none;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    text-align: center;
   }
-  /* line 81, ../sass/components/_menus.scss */
-  #header #block-system-main-menu li {
+  /* line 108, ../sass/components/_menus.scss */
+  #header #block-system-main-menu ul.menu li {
     border: 0;
     padding: 0;
-    border-right: 1px solid;
     font-size: 14px;
     font-size: 1.07692rem;
-    float: left;
+    float: none;
+    display: inline;
   }
-  /* line 88, ../sass/components/_menus.scss */
-  #header #block-system-main-menu li:last-child {
+  /* line 117, ../sass/components/_menus.scss */
+  #header #block-system-main-menu ul.menu li:last-child a {
     border-right: 0 none;
   }
-  /* line 91, ../sass/components/_menus.scss */
-  #header #block-system-main-menu a {
+  /* line 123, ../sass/components/_menus.scss */
+  #header #block-system-main-menu ul.menu a {
     color: #474f5e;
     font-size: 16px;
     font-size: 1.23077rem;
-    font-weight: 200;
+    font-weight: 400;
     letter-spacing: 1px;
     line-height: 16px;
     padding: 0 16px;
-    float: left;
+    float: none;
     text-transform: uppercase;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    border-right: 1px solid #414042;
+  }
+  /* line 135, ../sass/components/_menus.scss */
+  #header #block-system-main-menu ul.menu a.active-trail {
+    font-weight: bold;
+  }
+  /* line 141, ../sass/components/_menus.scss */
+  #header #block-system-main-menu ul.menu ul.menu {
+    background: #474F5E;
+    display: block;
+    position: absolute;
+    top: 34px;
+    width: 932px;
+    text-align: center;
+    padding: 1em;
+  }
+  /* line 151, ../sass/components/_menus.scss */
+  #header #block-system-main-menu ul.menu ul.menu li {
+    display: inline;
+    background: #474F5E;
+    float: none;
+  }
+  /* line 157, ../sass/components/_menus.scss */
+  #header #block-system-main-menu ul.menu ul.menu li.last a {
+    border-right: 0;
+  }
+  /* line 163, ../sass/components/_menus.scss */
+  #header #block-system-main-menu ul.menu ul.menu a {
+    color: #E6E6E6;
+    text-transform: none;
+    float: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    border-right: 1px solid #E6E6E6;
+  }
+  /* line 170, ../sass/components/_menus.scss */
+  #header #block-system-main-menu ul.menu ul.menu a.active-trail {
+    font-weight: bold;
+    color: #fff;
   }
 }
-/* line 110, ../sass/components/_menus.scss */
+/* line 184, ../sass/components/_menus.scss */
 #navigation {
   position: absolute !important;
   height: 1px;
@@ -1111,32 +1169,32 @@ body.not-logged-in #page {
   left: 0;
   top: 0;
 }
-/* line 122, ../sass/components/_menus.scss */
+/* line 196, ../sass/components/_menus.scss */
 #navigation .mobile-menu-link {
   display: none;
 }
-/* line 126, ../sass/components/_menus.scss */
+/* line 200, ../sass/components/_menus.scss */
 #navigation ul {
   margin-left: 0;
 }
-/* line 131, ../sass/components/_menus.scss */
+/* line 205, ../sass/components/_menus.scss */
 #navigation li {
   border-right: 1px solid;
   font-size: 14px;
   font-size: 1.07692rem;
 }
-/* line 135, ../sass/components/_menus.scss */
+/* line 209, ../sass/components/_menus.scss */
 #navigation li:last-child {
   border-right: 0 none;
 }
 
-/* line 140, ../sass/components/_menus.scss */
+/* line 214, ../sass/components/_menus.scss */
 div[id*="block-menu-menu-social-media"] {
   display: inline-block;
   margin-left: 40px;
 }
 @media all and (min-width: 768px) {
-  /* line 140, ../sass/components/_menus.scss */
+  /* line 214, ../sass/components/_menus.scss */
   div[id*="block-menu-menu-social-media"] {
     width: auto;
     position: absolute;
@@ -1148,15 +1206,15 @@ div[id*="block-menu-menu-social-media"] {
 div[id*="block-menu-menu-social-media"]:hover .contextual-links-wrapper {
   display: none;
 }
-/* line 152, ../sass/components/_menus.scss */
+/* line 226, ../sass/components/_menus.scss */
 div[id*="block-menu-menu-social-media"] .block-title {
   display: none;
 }
-/* line 154, ../sass/components/_menus.scss */
+/* line 228, ../sass/components/_menus.scss */
 div[id*="block-menu-menu-social-media"] ul.menu {
   margin: 0;
 }
-/* line 158, ../sass/components/_menus.scss */
+/* line 232, ../sass/components/_menus.scss */
 div[id*="block-menu-menu-social-media"] li {
   display: inline-block;
   list-style: none outside none;
@@ -1457,6 +1515,22 @@ button:focus {
   outline: none;
 }
 
+/* line 21, ../sass/theme/_layout.scss */
+#content {
+  float: left;
+}
+
+/* line 25, ../sass/theme/_layout.scss */
+div.breadcrumb {
+  display: none;
+}
+
+@media all and (min-width: 768px) {
+  /* line 32, ../sass/theme/_layout.scss */
+  body.not-front #main {
+    padding-top: 7em;
+  }
+}
 /* line 1, ../sass/theme/_slide_style.scss */
 .right-col {
   position: absolute;
@@ -1662,17 +1736,14 @@ button:focus {
 /* line 30, ../sass/theme/_header.scss */
 #header {
   width: 970px;
-  height: 93px;
   z-index: 9;
   background-color: #fff;
 }
-/* line 36, ../sass/theme/_header.scss */
-#header h1.header__site-name {
-  display: inline-block;
-  text-indent: -9999em;
-  float: left;
+/* line 35, ../sass/theme/_header.scss */
+#header #name-and-slogan {
+  display: none;
 }
-/* line 42, ../sass/theme/_header.scss */
+/* line 37, ../sass/theme/_header.scss */
 #header .header__secondary-menu,
 #header #block-menu-menu-meta {
   position: absolute !important;
@@ -1682,21 +1753,21 @@ button:focus {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* line 49, ../sass/theme/_header.scss */
+/* line 44, ../sass/theme/_header.scss */
 #navigation ul {
   list-style-type: none;
 }
-/* line 52, ../sass/theme/_header.scss */
+/* line 47, ../sass/theme/_header.scss */
 #navigation li {
   float: left;
 }
 
-/* line 61, ../sass/theme/_header.scss */
+/* line 56, ../sass/theme/_header.scss */
 #navigation li {
   background-color: transparent;
   border-color: #474F5E;
 }
-/* line 66, ../sass/theme/_header.scss */
+/* line 61, ../sass/theme/_header.scss */
 #navigation a {
   padding: 0 16px;
   font-size: 16px;
@@ -1708,13 +1779,13 @@ button:focus {
   color: #474F5E;
   border: none;
 }
-/* line 75, ../sass/theme/_header.scss */
+/* line 70, ../sass/theme/_header.scss */
 #navigation a:hover, #navigation a.active {
   background-color: transparent;
   text-shadow: 0 0 #474F5E;
 }
 
-/* line 84, ../sass/theme/_header.scss */
+/* line 79, ../sass/theme/_header.scss */
 div[id*="block-menu-menu-social-media"] a {
   color: #414042;
   font-family: "SSSocial";
@@ -1738,7 +1809,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   color: #ace1f6;
 }
 
-/* line 93, ../sass/theme/_header.scss */
+/* line 88, ../sass/theme/_header.scss */
 #footer div[id*="block-menu-menu-social-media"] {
   width: 70%;
   float: right;
@@ -1750,7 +1821,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   left: -3px;
   top: 0;
 }
-/* line 103, ../sass/theme/_header.scss */
+/* line 98, ../sass/theme/_header.scss */
 #footer div[id*="block-menu-menu-social-media"] a {
   color: #fff;
 }

@@ -20,7 +20,7 @@
 // Font faces, stacks and sizes.
 //
 
-// Compass' vertical_rhythm extension is a powerful tool to set up a vertical
+// Compass vertical_rhythm extension is a powerful tool to set up a vertical
 // rhythm for your entire page. You can see some of its mixins and functions in
 // use in the normalize.scss file.
 // @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
@@ -40,16 +40,16 @@ $h6-font-size: 0.67 * $base-font-size;
 // and Nimbus Sans fonts are commonly available on Linux systems where the MS
 // fonts are less common. Tahoma and Helvetica are also widely available.
 //
-// A user's web browser will look at the comma-separated list and will
+// A user web browser will look at the comma-separated list and will
 // attempt to use each font in turn until it finds one that is available
-// on the user's computer. The final "generic" font (sans-serif, serif or
-// monospace) hints at what type of font to use if the web browser doesn't
+// on the users computer. The final "generic" font (sans-serif, serif or
+// monospace) hints at what type of font to use if the web browser doesnt
 // find any of the fonts in the list.
 
-// First, let's create some font stacks.
+// First, let us create some font stacks.
 @font-face {
   font-family: 'MinionPro';
-  src: url('../fonts/Minion-Regular.otf') format("truetype");
+  src: url('../fonts/MinionPro/Minion-Regular.otf') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -59,7 +59,7 @@ $h6-font-size: 0.67 * $base-font-size;
 /* Regular */
 @font-face {
     font-family: 'Open Sans Regular';
-    src: url('../fonts/OpenSans-Regular.ttf') format("truetype");
+    src: url('../fonts/OpenSans/OpenSans-Regular.ttf') format("truetype");
     font-weight: normal;
     font-weight: 400;
     font-style: normal;
@@ -68,7 +68,7 @@ $h6-font-size: 0.67 * $base-font-size;
 /* Italic */
 @font-face {
     font-family: 'Open Sans Italic';
-    src: url('../fonts/OpenSans-Italic.ttf') format("truetype");
+    src: url('../fonts/OpenSans/OpenSans-Italic.ttf') format("truetype");
     font-weight: normal;
     font-weight: 400;
     font-style: italic;
@@ -77,7 +77,7 @@ $h6-font-size: 0.67 * $base-font-size;
 /* Light */
 @font-face {
     font-family: 'Open Sans Light';
-    src: url('../fonts/OpenSans-Light.ttf') format("truetype");
+    src: url('../fonts/OpenSans/OpenSans-Light.ttf') format("truetype");
     font-weight: 200;
     font-style: normal;
 }
@@ -85,7 +85,7 @@ $h6-font-size: 0.67 * $base-font-size;
 /* Light Italic */
 @font-face {
     font-family: 'Open Sans Light Italic';
-    src: url('../fonts/OpenSans-LightItalic.ttf') format("truetype");
+    src: url('../fonts/OpenSans/OpenSans-LightItalic.ttf') format("truetype");
     font-weight: 200;
     font-style: italic;
 }
@@ -93,7 +93,7 @@ $h6-font-size: 0.67 * $base-font-size;
 /* Semibold */
 @font-face {
     font-family: 'Open Sans Semi Bold';
-    src: url('../fonts/OpenSans-Semibold.ttf') format("truetype");
+    src: url('../fonts/OpenSans/OpenSans-Semibold.ttf') format("truetype");
     font-weight: 500;
     font-style: normal;
 }
@@ -101,7 +101,7 @@ $h6-font-size: 0.67 * $base-font-size;
 /* Semibold Italic */
 @font-face {
     font-family: 'Open Sans Semi Bold';
-    src: url('../fonts/OpenSans-SemiboldItalic.ttf') format("truetype");
+    src: url('../fonts/OpenSans/OpenSans-SemiboldItalic.ttf') format("truetype");
     font-weight: 500;
     font-style: italic;
 }
@@ -109,7 +109,7 @@ $h6-font-size: 0.67 * $base-font-size;
 /* Bold */
 @font-face {
     font-family: 'Open Sans Bold';
-    src: url('../fonts/OpenSans-Bold.ttf') format("truetype");
+    src: url('../fonts/OpenSans/OpenSans-Bold.ttf') format("truetype");
     font-weight: bold;
     font-weight: 700;
     font-style: normal;
@@ -118,7 +118,7 @@ $h6-font-size: 0.67 * $base-font-size;
 /* Bold Italic */
 @font-face {
     font-family: 'Open Sans Bold Italic';
-    src: url('../fonts/OpenSans-BoldItalic.ttf') format("truetype");
+    src: url('../fonts/OpenSans/OpenSans-BoldItalic.ttf') format("truetype");
     font-weight: bold;
     font-weight: 700;
     font-style: italic;
@@ -127,7 +127,7 @@ $h6-font-size: 0.67 * $base-font-size;
 /* Extra Bold */
 @font-face {
     font-family: 'Open Sans Extra Bold';
-    src: url('../fonts/OpenSans-ExtraBold.ttf') format("truetype");
+    src: url('../fonts/OpenSans/OpenSans-ExtraBold.ttf') format("truetype");
     font-weight: 900;
     font-style: normal;
 }
@@ -135,7 +135,7 @@ $h6-font-size: 0.67 * $base-font-size;
 /* Extra Bold Italic */
 @font-face {
     font-family: 'Open Sans Extra Bold Italic';
-    src: url('../fonts/OpenSans-ExtraBoldItalic.ttf') format("truetype");
+    src: url('../fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf') format("truetype");
     font-weight: 900;
     font-style: italic;
 }
@@ -206,9 +206,9 @@ $breakpoint: 768px;
 // Partials to be shared with all .scss files.
 // =============================================================================
 
-// Add Compass' IE and vendor prefix support variables.
+// Add Compass IE and vendor prefix support variables.
 @import "compass/support";
-// Better than Drupal's clearfix.
+// Better than Drupals clearfix.
 @import "compass/utilities/general/clearfix";
 // See http://compass-style.org/help/tutorials/spriting/
 @import "compass/utilities/sprites";

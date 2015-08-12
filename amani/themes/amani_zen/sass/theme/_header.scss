@@ -29,15 +29,10 @@
 
 #header {
   width: 970px;
-  height: 93px;
   z-index: 9;
   background-color: #fff;
 
-  h1.header__site-name {
-    display: inline-block;
-    text-indent: -9999em;
-    float: left;
-  }
+  #name-and-slogan {display:none;}
 
   .header__secondary-menu,
   #block-menu-menu-meta {

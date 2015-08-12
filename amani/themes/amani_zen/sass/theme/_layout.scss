@@ -17,3 +17,22 @@ textarea:focus,
 button:focus {
   outline: none;
 }
+
+#content {
+	float:left;
+}
+
+div.breadcrumb {
+	display:none;
+}
+
+@media all and (min-width: $breakpoint) {
+
+	body.not-front {
+		#main {
+			padding-top:7em;
+		}
+	}
+	
+	
+}
