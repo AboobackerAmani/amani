@@ -172,7 +172,7 @@ function amani_administrator_configure_amani_form() {
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
     '#suffix' => '<p>This action allows users to enable, disable, edit or delete your floating button and set your floating button link. The floating button will appear as a dynamically scrolling button on the right side of your page.
-                  Example uses: A \'Donate\' or \'Contact Us\' button.</p></div>',
+                  Example use: A \'Donate\' button.</p></div>',
   );
 
   $form['blocks'] = array(
