@@ -305,6 +305,21 @@ function amani_administrator_configure_amani_form() {
     '#suffix' => '<p>This action disables the \'Get Involved Block\' to appear on your site\'s /programs page.</p></div>'
   );
 
+  $form['blocks']['img_behind_blocks'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Manage Image Behind Homepage Block (Home Page)'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['blocks']['img_behind_blocks'][] = array(
+    '#type' => 'button',
+    '#value' => t('Change Image'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>Change image behind homepage twitter, faceboook & calender blocks.</p>',
+  );
+
   $form['site-info'] = array(
     '#type' => 'fieldset',
     '#title' => t('Manage Site Info and Logo'),
@@ -541,21 +556,6 @@ function amani_administrator_configure_amani_form() {
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix_3,
     '#suffix' => '</div>',
-  );
-
-  $form['img_behind_blocks'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Manage Image Behind Homepage Blocks'),
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-
-  $form['img_behind_blocks'][] = array(
-    '#type' => 'button',
-    '#value' => t('Change Image'),
-    '#executes_submit_callback' => TRUE,
-    '#prefix' => $prefix,
-    '#suffix' => '<p>Change image behind homepage twitter, faceboook & calender blocks.</p>',
   );
 
   $form['login_items'] = array(
