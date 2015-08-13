@@ -12,7 +12,7 @@
 ; page at admin/appearance.
 
 screenshot  = screenshot.png
-name        = Amani Zen
+name        = Peace Geeks
 description = Read the <a href="https://drupal.org/node/873778">online docs</a> or the included README.txt on how to create a theme with Zen.
 
 
@@ -66,7 +66,7 @@ stylesheets[all][] = css/styles.css
 
 ; Optionally add some JavaScripts to your theme.
 
-;scripts[] = js/script.js
+scripts[] = js/script.js
 
 
 
@@ -86,6 +86,7 @@ stylesheets[all][] = css/styles.css
 ;   <?php print $header_top; ?>
 
 regions[header]         = Header
+regions[banner]			= Banner
 regions[navigation]     = Navigation bar
 regions[highlighted]    = Highlighted
 regions[help]           = Help

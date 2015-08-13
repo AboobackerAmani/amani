@@ -1,0 +1,57 @@
+/* Styling for banner region */
+
+
+@media all and (min-width: $breakpoint) {
+
+	#banner {
+
+		display:block;
+		width:100%;
+		padding-top:81px;
+		
+		.block-bean {
+			width:1200px;
+			display:block;
+			margin:0 auto;
+			position: relative;
+			
+			.field-name-field-banner-image {
+				display:block;
+				z-index:10;
+				position: relative;
+			}
+			
+			.field-name-field-banner-text {
+				display:block;
+				background:$blue;
+				color: white;
+				  font-weight: 600;
+				  font-size: 2em;
+				  position: relative;
+				  float: left;
+				  margin-top:-352px;
+				  margin-left: 120px;
+				  width: 350px;
+				  height: 347px;
+				  padding: 1.8em 1em 1em 1em;
+				  line-height: 1.2em;
+				  z-index:20
+			}
+			
+			.field-name-field-header-text {
+				  display: block;
+				  float: left;
+				  margin-top: -330px;
+				  z-index: 30;
+				  position: relative;
+				  color: white;
+				  font-style: italic;
+				  font-size: 1.2em;
+				  margin-left: 146px;
+			}
+		}
+	
+	}
+
+
+}

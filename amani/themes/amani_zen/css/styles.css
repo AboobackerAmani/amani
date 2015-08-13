@@ -1713,10 +1713,11 @@ div.breadcrumb {
   /* line 7, ../sass/theme/_header.scss */
   #header #logo img {
     width: auto;
+    margin-left: -10px;
   }
 }
 
-/* line 17, ../sass/theme/_header.scss */
+/* line 18, ../sass/theme/_header.scss */
 .region-header {
   width: 100%;
   position: absolute;
@@ -1724,7 +1725,7 @@ div.breadcrumb {
   padding: 0 10px;
 }
 @media all and (min-width: 768px) {
-  /* line 17, ../sass/theme/_header.scss */
+  /* line 18, ../sass/theme/_header.scss */
   .region-header {
     position: initial;
     top: auto;
@@ -1733,17 +1734,17 @@ div.breadcrumb {
   }
 }
 
-/* line 30, ../sass/theme/_header.scss */
+/* line 31, ../sass/theme/_header.scss */
 #header {
   width: 970px;
   z-index: 9;
   background-color: #fff;
 }
-/* line 35, ../sass/theme/_header.scss */
+/* line 36, ../sass/theme/_header.scss */
 #header #name-and-slogan {
   display: none;
 }
-/* line 37, ../sass/theme/_header.scss */
+/* line 38, ../sass/theme/_header.scss */
 #header .header__secondary-menu,
 #header #block-menu-menu-meta {
   position: absolute !important;
@@ -1753,21 +1754,21 @@ div.breadcrumb {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* line 44, ../sass/theme/_header.scss */
+/* line 45, ../sass/theme/_header.scss */
 #navigation ul {
   list-style-type: none;
 }
-/* line 47, ../sass/theme/_header.scss */
+/* line 48, ../sass/theme/_header.scss */
 #navigation li {
   float: left;
 }
 
-/* line 56, ../sass/theme/_header.scss */
+/* line 57, ../sass/theme/_header.scss */
 #navigation li {
   background-color: transparent;
   border-color: #474F5E;
 }
-/* line 61, ../sass/theme/_header.scss */
+/* line 62, ../sass/theme/_header.scss */
 #navigation a {
   padding: 0 16px;
   font-size: 16px;
@@ -1779,13 +1780,13 @@ div.breadcrumb {
   color: #474F5E;
   border: none;
 }
-/* line 70, ../sass/theme/_header.scss */
+/* line 71, ../sass/theme/_header.scss */
 #navigation a:hover, #navigation a.active {
   background-color: transparent;
   text-shadow: 0 0 #474F5E;
 }
 
-/* line 79, ../sass/theme/_header.scss */
+/* line 80, ../sass/theme/_header.scss */
 div[id*="block-menu-menu-social-media"] a {
   color: #414042;
   font-family: "SSSocial";
@@ -1809,7 +1810,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   color: #ace1f6;
 }
 
-/* line 88, ../sass/theme/_header.scss */
+/* line 89, ../sass/theme/_header.scss */
 #footer div[id*="block-menu-menu-social-media"] {
   width: 70%;
   float: right;
@@ -1821,7 +1822,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   left: -3px;
   top: 0;
 }
-/* line 98, ../sass/theme/_header.scss */
+/* line 99, ../sass/theme/_header.scss */
 #footer div[id*="block-menu-menu-social-media"] a {
   color: #fff;
 }
@@ -1888,6 +1889,58 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Styling for banner region */
+@media all and (min-width: 768px) {
+  /* line 6, ../sass/theme/_banner.scss */
+  #banner {
+    display: block;
+    width: 100%;
+    padding-top: 81px;
+  }
+  /* line 12, ../sass/theme/_banner.scss */
+  #banner .block-bean {
+    width: 1200px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+  }
+  /* line 18, ../sass/theme/_banner.scss */
+  #banner .block-bean .field-name-field-banner-image {
+    display: block;
+    z-index: 10;
+    position: relative;
+  }
+  /* line 24, ../sass/theme/_banner.scss */
+  #banner .block-bean .field-name-field-banner-text {
+    display: block;
+    background: #59C2ED;
+    color: white;
+    font-weight: 600;
+    font-size: 2em;
+    position: relative;
+    float: left;
+    margin-top: -352px;
+    margin-left: 120px;
+    width: 350px;
+    height: 347px;
+    padding: 1.8em 1em 1em 1em;
+    line-height: 1.2em;
+    z-index: 20;
+  }
+  /* line 41, ../sass/theme/_banner.scss */
+  #banner .block-bean .field-name-field-header-text {
+    display: block;
+    float: left;
+    margin-top: -330px;
+    z-index: 30;
+    position: relative;
+    color: white;
+    font-style: italic;
+    font-size: 1.2em;
+    margin-left: 146px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

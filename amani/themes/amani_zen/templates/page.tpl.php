@@ -51,6 +51,10 @@
   </header>
   
   <div id="main-submenu-backline"></div>
+  
+  <div id="banner">
+  	<?php print render($page['banner']); ?>
+  </div>
 
   <div id="main">
 

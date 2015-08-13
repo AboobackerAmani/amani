@@ -14,10 +14,14 @@
 
 
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
-Drupal.behaviors.my_custom_behavior = {
+Drupal.behaviors.banner_adjustments = {
   attach: function(context, settings) {
 
-    // Place your code here.
+    if (!$('.field-name-field-header-text .field-item').length) {
+    	
+    	$('.field-name-field-banner-text').css('padding-top','1em');
+    	
+    }
 
   }
 };
