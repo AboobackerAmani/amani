@@ -135,6 +135,9 @@
 			  &.active-trail {
 			  	font-weight:bold;
 			  }
+			  &:hover {
+			  	color:$blue;
+			  }
 		  }
       }
 
@@ -170,6 +173,9 @@
 				&.active-trail {
 					font-weight:bold;
 					color:#fff;
+				}
+				&:hover {
+					color:$blue;
 				}
 			}
 		}

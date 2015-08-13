@@ -12,6 +12,14 @@
   font-weight: normal;
   font-style: normal;
 }
+/* FontAwesome icons */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?v=4.4.0");
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?#iefix&v=4.4.0") format("embedded-opentype"), url("../fonts/FontAwesome/fontawesome-webfont.woff2?v=4.4.0") format("woff2"), url("../fonts/FontAwesome/fontawesome-webfont.woff?v=4.4.0") format("woff"), url("../fonts/FontAwesome/fontawesome-webfont.ttf?v=4.4.0") format("truetype"), url("../fonts/FontAwesome/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 /* Regular */
 @font-face {
   font-family: 'Open Sans Regular';
@@ -1119,7 +1127,11 @@ body.not-logged-in #page {
   #header #block-system-main-menu ul.menu a.active-trail {
     font-weight: bold;
   }
-  /* line 141, ../sass/components/_menus.scss */
+  /* line 138, ../sass/components/_menus.scss */
+  #header #block-system-main-menu ul.menu a:hover {
+    color: #59C2ED;
+  }
+  /* line 144, ../sass/components/_menus.scss */
   #header #block-system-main-menu ul.menu ul.menu {
     background: #474F5E;
     display: block;
@@ -1129,17 +1141,17 @@ body.not-logged-in #page {
     text-align: center;
     padding: 1em;
   }
-  /* line 151, ../sass/components/_menus.scss */
+  /* line 154, ../sass/components/_menus.scss */
   #header #block-system-main-menu ul.menu ul.menu li {
     display: inline;
     background: #474F5E;
     float: none;
   }
-  /* line 157, ../sass/components/_menus.scss */
+  /* line 160, ../sass/components/_menus.scss */
   #header #block-system-main-menu ul.menu ul.menu li.last a {
     border-right: 0;
   }
-  /* line 163, ../sass/components/_menus.scss */
+  /* line 166, ../sass/components/_menus.scss */
   #header #block-system-main-menu ul.menu ul.menu a {
     color: #E6E6E6;
     text-transform: none;
@@ -1148,13 +1160,17 @@ body.not-logged-in #page {
     font-weight: 400;
     border-right: 1px solid #E6E6E6;
   }
-  /* line 170, ../sass/components/_menus.scss */
+  /* line 173, ../sass/components/_menus.scss */
   #header #block-system-main-menu ul.menu ul.menu a.active-trail {
     font-weight: bold;
     color: #fff;
   }
+  /* line 177, ../sass/components/_menus.scss */
+  #header #block-system-main-menu ul.menu ul.menu a:hover {
+    color: #59C2ED;
+  }
 }
-/* line 184, ../sass/components/_menus.scss */
+/* line 190, ../sass/components/_menus.scss */
 #navigation {
   position: absolute !important;
   height: 1px;
@@ -1169,32 +1185,32 @@ body.not-logged-in #page {
   left: 0;
   top: 0;
 }
-/* line 196, ../sass/components/_menus.scss */
+/* line 202, ../sass/components/_menus.scss */
 #navigation .mobile-menu-link {
   display: none;
 }
-/* line 200, ../sass/components/_menus.scss */
+/* line 206, ../sass/components/_menus.scss */
 #navigation ul {
   margin-left: 0;
 }
-/* line 205, ../sass/components/_menus.scss */
+/* line 211, ../sass/components/_menus.scss */
 #navigation li {
   border-right: 1px solid;
   font-size: 14px;
   font-size: 1.07692rem;
 }
-/* line 209, ../sass/components/_menus.scss */
+/* line 215, ../sass/components/_menus.scss */
 #navigation li:last-child {
   border-right: 0 none;
 }
 
-/* line 214, ../sass/components/_menus.scss */
+/* line 220, ../sass/components/_menus.scss */
 div[id*="block-menu-menu-social-media"] {
   display: inline-block;
   margin-left: 40px;
 }
 @media all and (min-width: 768px) {
-  /* line 214, ../sass/components/_menus.scss */
+  /* line 220, ../sass/components/_menus.scss */
   div[id*="block-menu-menu-social-media"] {
     width: auto;
     position: absolute;
@@ -1206,15 +1222,15 @@ div[id*="block-menu-menu-social-media"] {
 div[id*="block-menu-menu-social-media"]:hover .contextual-links-wrapper {
   display: none;
 }
-/* line 226, ../sass/components/_menus.scss */
+/* line 232, ../sass/components/_menus.scss */
 div[id*="block-menu-menu-social-media"] .block-title {
   display: none;
 }
-/* line 228, ../sass/components/_menus.scss */
+/* line 234, ../sass/components/_menus.scss */
 div[id*="block-menu-menu-social-media"] ul.menu {
   margin: 0;
 }
-/* line 232, ../sass/components/_menus.scss */
+/* line 238, ../sass/components/_menus.scss */
 div[id*="block-menu-menu-social-media"] li {
   display: inline-block;
   list-style: none outside none;
@@ -1515,20 +1531,135 @@ button:focus {
   outline: none;
 }
 
-/* line 21, ../sass/theme/_layout.scss */
-#content {
-  float: left;
-}
-
-/* line 25, ../sass/theme/_layout.scss */
+/* line 23, ../sass/theme/_layout.scss */
 div.breadcrumb {
   display: none;
 }
 
 @media all and (min-width: 768px) {
-  /* line 32, ../sass/theme/_layout.scss */
+  /* line 30, ../sass/theme/_layout.scss */
   body.not-front #main {
     padding-top: 7em;
+  }
+
+  /* line 35, ../sass/theme/_layout.scss */
+  #content {
+    margin: 0 auto;
+    width: 726px;
+  }
+  /* line 45, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  #content:before, #content:after {
+    content: "";
+    display: table;
+  }
+  /* line 50, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  #content:after {
+    clear: both;
+  }
+
+  /* line 41, ../sass/theme/_layout.scss */
+  a.bluebox-link {
+    color: white;
+    background: #59C2ED;
+    width: 354px;
+    padding: 1em;
+    display: block;
+    font-size: 1.4em;
+    height: 144px;
+  }
+  /* line 50, ../sass/theme/_layout.scss */
+  a.bluebox-link:after {
+    content: "\f107";
+    color: white;
+    font-family: "FontAwesome";
+    display: block;
+    float: right;
+    position: relative;
+    margin-top: 126px;
+    font-size: 2em;
+    padding-right: .2em;
+  }
+
+  /* line 63, ../sass/theme/_layout.scss */
+  a.greybox-link {
+    color: white;
+    background: #474F5E;
+    width: 354px;
+    padding: 1em;
+    display: block;
+    font-size: 1.4em;
+    height: 144px;
+  }
+  /* line 72, ../sass/theme/_layout.scss */
+  a.greybox-link:after {
+    content: "\f107";
+    color: white;
+    font-family: "FontAwesome";
+    display: block;
+    float: right;
+    position: relative;
+    margin-top: 126px;
+    font-size: 2em;
+    padding-right: .2em;
+  }
+
+  /* Paragraphs module styling */
+  /* line 90, ../sass/theme/_layout.scss */
+  body.node-type-structure #main {
+    padding-top: 5em;
+    padding-bottom: 6em;
+  }
+  /* line 93, ../sass/theme/_layout.scss */
+  body.node-type-structure h1#page-title {
+    display: none;
+  }
+  /* line 95, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-structure-header-text {
+    font-size: 3em;
+    line-height: 1.4em;
+    color: #59C2ED;
+    font-weight: 300;
+    margin-bottom: 2em;
+  }
+  /* line 103, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-paragraph-text-with-header-text {
+    margin-bottom: 6em;
+  }
+  /* line 106, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-paragraph-text-with-header-text .field-name-field-header-text {
+    font-size: 1.4em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  /* line 113, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-paragraph-text-with-header-text .field-name-field-paragraph-text {
+    font-size: 1.3em;
+    line-height: 1.7em;
+    font-weight: 300;
+  }
+  /* line 120, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-light-grey-text-box {
+    display: block;
+    width: 330px;
+    background: #E6E6E6;
+    padding: 3em 2em;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  /* line 130, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-light-grey-text-box .field-name-field-box-title {
+    color: #59C2ED;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  /* line 137, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-light-grey-text-box .field-name-field-box-copy {
+    font-size: 1.3em;
+    line-height: 1.7em;
+    font-weight: 300;
   }
 }
 /* line 1, ../sass/theme/_slide_style.scss */
@@ -1918,14 +2049,14 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     background: #59C2ED;
     color: white;
     font-weight: 600;
-    font-size: 2em;
+    font-size: 2.2em;
     position: relative;
     float: left;
     margin-top: -352px;
     margin-left: 120px;
     width: 350px;
     height: 347px;
-    padding: 1.8em 1em 1em 1em;
+    padding: 1.6em 1em 1em 1em;
     line-height: 1.2em;
     z-index: 20;
   }

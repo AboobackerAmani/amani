@@ -18,9 +18,7 @@ button:focus {
   outline: none;
 }
 
-#content {
-	float:left;
-}
+
 
 div.breadcrumb {
 	display:none;
@@ -34,5 +32,114 @@ div.breadcrumb {
 		}
 	}
 	
+	#content {
+		@include zen-grid-container;
+		margin:0 auto;
+		width:726px;
+	}
+
+	a.bluebox-link {
+		
+			color:white;
+			background:$blue;
+			width:354px;
+			padding:1em;
+			display:block;
+			font-size:1.4em;
+			height:144px;
+			&:after {
+				content:"\f107";
+				color:white;
+				font-family:$fontawesome;
+				display:block;
+				float:right;
+				position:relative;
+				margin-top:126px;
+				font-size:2em;
+				padding-right:.2em;
+			}
+	}
 	
+	a.greybox-link {
+		
+			color:white;
+			background:$grey;
+			width:354px;
+			padding:1em;
+			display:block;
+			font-size:1.4em;
+			height:144px;
+			&:after {
+				content:"\f107";
+				color:white;
+				font-family:$fontawesome;
+				display:block;
+				float:right;
+				position:relative;
+				margin-top:126px;
+				font-size:2em;
+				padding-right:.2em;
+			}
+	}
+	
+	
+	/* Paragraphs module styling */
+	
+	body.node-type-structure {
+	
+		#main {padding-top:5em;padding-bottom:6em;}
+		
+
+		h1#page-title {display:none;}
+		
+		.paragraphs-item-structure-header-text {
+			font-size:3em;
+			line-height:1.4em;
+			color:$blue;
+			font-weight:300;
+			margin-bottom:2em;
+		}
+		
+		.paragraphs-item-paragraph-text-with-header-text {
+			margin-bottom:6em;
+			
+			.field-name-field-header-text {
+				font-size:1.4em;
+				font-weight:600;
+				text-transform:uppercase;
+				margin-bottom:16px;
+			}
+			
+			.field-name-field-paragraph-text {
+				font-size:1.3em;
+				line-height:1.7em;
+				font-weight:300;
+			}
+		}
+		
+		.paragraphs-item-light-grey-text-box {
+		
+			display:block;
+			width:330px;
+			background:$soft-grey;
+			padding:3em 2em;
+			float:left;
+			margin-right:20px;
+			margin-bottom:20px;
+			
+			.field-name-field-box-title {
+				color:$blue;
+				font-size:2.2em;
+				margin-bottom:20px;
+				font-weight:400;
+			}
+			
+			.field-name-field-box-copy {
+				font-size:1.3em;
+				line-height:1.7em;
+				font-weight:300;
+			}
+		}
+	
+	}
 }
