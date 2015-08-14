@@ -22,6 +22,7 @@ function amani_slideshow_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'slideshow';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -165,7 +166,7 @@ function amani_slideshow_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('<div class="title_body_button">[title][field_description][field_button]</div>'),
+    t('<div class="title_body_button"><div class="title">[title]</div><div class="description">[field_description]</div><div class="button">[field_button]</div></div>'),
     t('Block'),
   );
   $export['front_page_slideshow'] = $view;
