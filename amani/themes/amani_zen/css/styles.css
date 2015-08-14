@@ -955,6 +955,51 @@ body {
   list-style: none outside none;
 }
 
+/**
+ * @file
+ * Style for front page blocks.
+ */
+/* line 7, ../sass/components/_front-page-blocks.scss */
+.front-page-blocks {
+  text-align: center;
+}
+/* line 11, ../sass/components/_front-page-blocks.scss */
+.front-page-blocks .views-row {
+  display: inline-block;
+  text-align: center;
+  width: 31%;
+  vertical-align: top;
+}
+/* line 17, ../sass/components/_front-page-blocks.scss */
+.front-page-blocks .views-row .views-field-title {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5em;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+/* line 26, ../sass/components/_front-page-blocks.scss */
+.front-page-blocks .views-row .read_more_link {
+  margin-top: 20px;
+}
+/* line 29, ../sass/components/_front-page-blocks.scss */
+.front-page-blocks .views-row .read_more_link span {
+  text-transform: uppercase;
+  border: 1px solid #333;
+  border-radius: 1px;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+/* line 36, ../sass/components/_front-page-blocks.scss */
+.front-page-blocks .views-row .read_more_link span a {
+  color: #333;
+}
+/* line 40, ../sass/components/_front-page-blocks.scss */
+.front-page-blocks .views-row .read_more_link span:hover {
+  background: #eee;
+}
+
 /* line 7, ../sass/components/_header.scss */
 .region-header {
   margin: 20px auto 0;
@@ -2111,7 +2156,7 @@ tr.selected td {
 /* line 805, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1433171981');
+  background-image: url('../images/progress.gif?1439328429');
 }
 
 /**
@@ -2223,7 +2268,7 @@ tr.selected td {
 }
 /* line 61, ../sass/_mixins.scss */
 .form-submit:hover, .form-submit:focus {
-  background-color: #5a595c;
+  background-color: #5b595c;
 }
 
 /* line 12, ../sass/theme/_layout.scss */

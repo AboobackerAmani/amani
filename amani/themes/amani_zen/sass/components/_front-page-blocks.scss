@@ -1,0 +1,46 @@
+/**
+ * @file
+ * Style for front page blocks.
+ */
+
+// Main
+.front-page-blocks {
+
+  text-align: center;
+
+  .views-row {
+    display: inline-block;
+    text-align: center;
+    width: 31%;
+    vertical-align: top;
+
+    .views-field-title {
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 1.5em;
+      font-family: $base-font-family;
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+
+    .read_more_link {
+      margin-top: 20px;
+
+      span {
+        text-transform: uppercase;
+        border: 1px solid #333;
+        border-radius: 1px;
+        padding: 10px 25px;
+        cursor: pointer;
+
+        a {
+          color: #333;
+        }
+
+        &:hover {
+          background: #eee;
+        }
+      }
+    }
+  }
+}
