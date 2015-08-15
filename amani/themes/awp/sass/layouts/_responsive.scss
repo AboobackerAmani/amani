@@ -712,23 +712,32 @@ $zen-auto-include-item-base: false;
                 [dire="rtl"] & {
                   float: right;
                 }
-                font-size: 3vw;
+                font-size: 4vw;
               }
               .views-field-name{
-                font-weight: 3.5vw;
+                font-size: 4.5vw;
               }
-              .views-field-tid .field-content a{
-                font-size: 3vw;
-                position: relative;
+              .views-field-tid {
+                width: 70%;
+                overflow: hidden;
                 float: left;
-                width: 100%;
-                font-weight: bold;
-                clear: both;
-                margin: 10px 0;
                 [dire="rtl"] & {
                   float: right;
                 }
+                .field-content a{
+                  font-size: 3vw;
+                  position: relative;
+                  float: none;
+                  width: auto;
+                  font-weight: bold;
+                  clear: none;
+                  margin: 10px 0;
+                  left: 0;
+                  right: 0;
+                  
+                }
               }
+
             }
           }
         }
