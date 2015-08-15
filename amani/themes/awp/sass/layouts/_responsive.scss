@@ -709,15 +709,21 @@ $zen-auto-include-item-base: false;
               .views-field-description{
                 width: 70%;
                 float: left;
+                text-align: left;
                 [dire="rtl"] & {
                   float: right;
+                  text-align: right;
                 }
                 font-size: 4vw;
               }
               .views-field-name{
                 font-size: 4.5vw;
+                a{
+                  color: #415968;
+                }
               }
               .views-field-tid {
+                display: none;
                 width: 70%;
                 overflow: hidden;
                 float: left;
@@ -734,7 +740,7 @@ $zen-auto-include-item-base: false;
                   margin: 10px 0;
                   left: 0;
                   right: 0;
-                  
+
                 }
               }
 
