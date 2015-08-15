@@ -690,7 +690,9 @@ $zen-auto-include-item-base: false;
 
     &.not-front{
       &.section-resources{
-        /*test*/
+        .region-sidebar-second{
+          display: none;
+        }
         .view-resources-categories{
           .view-content{
             .views-row{
