@@ -988,25 +988,4 @@ function i18n_menu_init() {
     }
   }
 }
-/**
-+ * Implements hook_query_TAG_alter()
-+ *
-+ * Using tag 'preferred_menu_links' added in menu_link_get_preferred()
-+ * see http://drupal.org/node/1854134
-+ */
-function i18n_menu_query_preferred_menu_links_alter(QueryAlterableInterface $query) {
-
-    // Get queried tables
-    $tables =& $query->getTables();
-
-    foreach ($tables as $alias => $table) {
-        if ($table['table'] == 'menu_links') {
-            // Add language filter
-            global $language;
-            if($language)
-                $query->condition('language', array($language->language, LANGUAGE_NONE), 'IN');
-            break;
-        }
-    }
-}
 
