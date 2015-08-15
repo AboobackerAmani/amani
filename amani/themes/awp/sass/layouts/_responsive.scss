@@ -687,6 +687,53 @@ $zen-auto-include-item-base: false;
         left: 25%;
       }
     }/*footer*/
+
+    &.not-front{
+      &.section-resources{
+        .view-resources-categories{
+          .view-content{
+            .views-row{
+              width: 100%;
+              float: left;
+              overflow: hidden;
+              clear: both;
+              .views-field-field-image{
+                width: 30%;
+                float: left;
+                [dire="rtl"] & {
+                  float: right;
+                }
+              }
+              .views-field-name,
+              .views-field-description{
+                width: 70%;
+                float: left;
+                [dire="rtl"] & {
+                  float: right;
+                }
+                font-size: 3vw;
+              }
+              .views-field-name{
+                font-weight: 3.5vw;
+              }
+              .views-field-tid .field-content a{
+                font-size: 3vw;
+                position: relative;
+                float: left;
+                width: 100%;
+                font-weight: bold;
+                clear: both;
+                margin: 10px 0;
+                [dire="rtl"] & {
+                  float: right;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
   }/*body*/
 
 
