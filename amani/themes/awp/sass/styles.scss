@@ -2038,4 +2038,17 @@ body {
 
     }
   }
+
+  &.page-taxonomy-term{
+    #content{
+      article{
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $awp-red;
+      }
+      .feed-icon, .comment-add{
+        display: none !important;
+      }
+    }
+  }
 }

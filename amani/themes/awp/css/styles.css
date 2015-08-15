@@ -4793,3 +4793,13 @@ body #comments form .form-actions .form-submit:hover {
   background: #F0F0F0;
   color: #D21145;
 }
+/* line 2044, ../sass/styles.scss */
+body.page-taxonomy-term #content article {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #D21145;
+}
+/* line 2049, ../sass/styles.scss */
+body.page-taxonomy-term #content .feed-icon, body.page-taxonomy-term #content .comment-add {
+  display: none !important;
+}
