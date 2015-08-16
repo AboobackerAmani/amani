@@ -89,6 +89,11 @@ function peace_geeks_paragraphs_and_structure_paragraphs_info() {
       'bundle' => 'light_grey_text_box_narrower',
       'locked' => '1',
     ),
+    'light_grey_text_box_with_link_to' => array(
+      'name' => 'Light Grey Text Box With Link To Anchor',
+      'bundle' => 'light_grey_text_box_with_link_to',
+      'locked' => '1',
+    ),
     'link_block_blue' => array(
       'name' => 'Link Block - Blue',
       'bundle' => 'link_block_blue',
@@ -102,6 +107,11 @@ function peace_geeks_paragraphs_and_structure_paragraphs_info() {
     'link_box_adjustable' => array(
       'name' => 'Link Box - Adjustable',
       'bundle' => 'link_box_adjustable',
+      'locked' => '1',
+    ),
+    'paragraph_text_with_anchor' => array(
+      'name' => 'Paragraph Text With Anchor',
+      'bundle' => 'paragraph_text_with_anchor',
       'locked' => '1',
     ),
     'paragraph_text_with_header_text' => array(

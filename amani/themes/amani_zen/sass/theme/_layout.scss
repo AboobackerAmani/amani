@@ -201,6 +201,40 @@ div.breadcrumb {
 			}
 		}
 		
+		.paragraphs-item-paragraph-text-with-anchor {
+		
+			display: block;
+			  float: left;
+			  border-top: 1px solid $grey;
+			  padding-top: 4em;
+			
+			.field-name-field-header-text {
+				font-size:1.4em;
+				font-weight:600;
+				text-transform:uppercase;
+				margin-bottom:16px;
+			}
+			
+			.field-name-field-paragraph-text {
+				font-size:1.3em;
+				line-height:1.7em;
+				font-weight:300;
+			}
+			
+			.field-name-field-header-text-large {
+				font-size:3em;
+				line-height:1.4em;
+				margin-top:1.2em;
+				font-weight:300;
+				margin-bottom:.6em;
+			}
+			
+			
+			.field-name-field-anchor-name {
+				display:none;
+			}
+		}
+		
 		.paragraphs-item-simple-text-with-right-side-imag {
 			display:block;
 			float:left;
@@ -273,6 +307,39 @@ div.breadcrumb {
 					font-size:2em;
 					padding-right:.2em;
 				}
+				&.shorterlinkbox {
+					&:after {
+						content:"\f178";
+						color:white;
+						font-family:$fontawesome;
+						display:block;
+						float:right;
+						position:relative;
+						margin-top:50px;
+						font-size:2em;
+						padding-right:.2em;
+					}
+				}
+			}
+		}
+		
+		.paragraphs-item-light-grey-text-box-with-link-to {
+			a {
+				color:$text-grey;
+				background:$soft-grey;
+				width:255px;
+				padding:1.5em 2em;
+				display:block;
+				font-size:1.5em;
+				float:left;
+				line-height:1.4em;	
+				text-align:center;	
+				margin-bottom:1em;
+				margin-right:1em;		
+			}
+			
+			.field-name-field-anchor-to-link-to {
+				display:none;
 			}
 		}
 		

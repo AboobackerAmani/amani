@@ -30,6 +30,8 @@ Drupal.behaviors.banner_adjustments = {
 Drupal.behaviors.paragraphs_adjustments = {
   attach: function(context, settings) {
 
+// Bold the first word for text with class action-link
+
 	$('a.action-link').each(function() {
 		var word = $(this).html();
 		var index = word.indexOf(' ');
@@ -39,6 +41,9 @@ Drupal.behaviors.paragraphs_adjustments = {
 		$(this).html('<span class="first-word">' + word.substring(0, index) + '</span>' + word.substring(index, word.length));
 	});
 	
+
+// Code controlling the scroll to top button
+
 	$('#top-scroll').click(function() {
 		
 		$('html, body').animate({
@@ -47,6 +52,15 @@ Drupal.behaviors.paragraphs_adjustments = {
 		
 	});
 	
+
+// Set anchor links for anchor text boxes
+
+	$('.field-name-field-anchor-to-link-to').each(function() {
+	
+		var theanchor = $(this).find('.field-item').html();
+		$(this).prev().find('a').attr('href', '#' + theanchor);
+		
+	});
 	
 	
 // Set proper alignment for callout block on Structure pages if it's last callout block on the page
@@ -63,6 +77,16 @@ Drupal.behaviors.paragraphs_adjustments = {
 		var isdivider = $(this).find('div.paragraphs-item-divider-line').size();
 		
 		if (isdivider != 0) {
+			$(this).css({
+				'float':'none',
+				'margin-top':'0',
+				'margin-bottom':'0'
+			});
+		}
+		
+		var isanchorlink = $(this).find('div.paragraphs-item-light-grey-text-box-with-link-to').size();
+		
+		if (isanchorlink != 0) {
 			$(this).css({
 				'float':'none',
 				'margin-top':'0',
@@ -90,7 +114,51 @@ Drupal.behaviors.paragraphs_adjustments = {
 		}
 	});
 	
+
+// Set anchorlink boxes to same height
+
+	  if ($('body.node-type-structure').length) {
+  
+		var divHeights = $('a.anchorlink').map(function() {
 	
+			return $(this).height();
+		
+		}).get();
+	
+		var maxHeight = Math.max.apply(null, divHeights);
+	
+		$('a.anchorlink').height(maxHeight);
+		
+		$('a.action-link').height(maxHeight + 15).css({
+		
+			'margin-top':'-38px',
+			'margin-bottom':'0'
+		}).addClass('shorterlinkbox').find('span').removeClass('first-word');
+	
+	  }	
+	  
+
+// Set anchor names on anchor text boxes 
+
+	if ($('body.node-type-structure').length) {
+	
+		$('.paragraphs-item-paragraph-text-with-anchor').each(function() {
+		
+			var anchorname = $(this).find('.field-name-field-anchor-name .field-item').html();
+			$(this).attr('id', anchorname);
+		});
+	
+	}
+	
+	
+// Smooth scroll for anchor links 
+
+	$('a.anchorlink').click(function(event) {
+	
+		event.preventDefault();
+		 $('html,body').animate( { scrollTop:$(this.hash).offset().top } , 1000);
+	
+	});
 	
 // Faux quicktabs functionality for Values block	
 	

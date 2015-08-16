@@ -1484,6 +1484,384 @@ function peace_geeks_paragraphs_and_structure_field_default_fields() {
     ),
   );
 
+  // Exported field: 'paragraphs_item-paragraph_text_with_anchor-field_anchor_name'.
+  $fields['paragraphs_item-paragraph_text_with_anchor-field_anchor_name'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_anchor_name',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'paragraph_text_with_anchor',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '0',
+        ),
+        'paragraphs_editor_preview' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'paragraphs_item',
+      'field_name' => 'field_anchor_name',
+      'label' => 'Anchor Name',
+      'required' => 0,
+      'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'php_code' => 'php_code',
+            'plain_text' => 'plain_text',
+            'wysiwyg_advanced' => 'wysiwyg_advanced',
+            'wysiwyg_public' => 'wysiwyg_public',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'php_code' => array(
+                'weight' => '11',
+              ),
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+              'wysiwyg_advanced' => array(
+                'weight' => '-10',
+              ),
+              'wysiwyg_public' => array(
+                'weight' => '-9',
+              ),
+            ),
+          ),
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '4',
+      ),
+    ),
+  );
+
+  // Exported field: 'paragraphs_item-paragraph_text_with_anchor-field_header_text'.
+  $fields['paragraphs_item-paragraph_text_with_anchor-field_header_text'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_header_text',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'paragraph_text_with_anchor',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '1',
+        ),
+        'paragraphs_editor_preview' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'paragraphs_item',
+      'field_name' => 'field_header_text',
+      'label' => 'Header Text',
+      'required' => 0,
+      'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'php_code' => 'php_code',
+            'plain_text' => 'plain_text',
+            'wysiwyg_advanced' => 'wysiwyg_advanced',
+            'wysiwyg_public' => 'wysiwyg_public',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'php_code' => array(
+                'weight' => '11',
+              ),
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+              'wysiwyg_advanced' => array(
+                'weight' => '-10',
+              ),
+              'wysiwyg_public' => array(
+                'weight' => '-9',
+              ),
+            ),
+          ),
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported field: 'paragraphs_item-paragraph_text_with_anchor-field_header_text_large'.
+  $fields['paragraphs_item-paragraph_text_with_anchor-field_header_text_large'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_header_text_large',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'paragraph_text_with_anchor',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '2',
+        ),
+        'paragraphs_editor_preview' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'paragraphs_item',
+      'field_name' => 'field_header_text_large',
+      'label' => 'Header Text Large',
+      'required' => 0,
+      'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'php_code' => 'php_code',
+            'plain_text' => 'plain_text',
+            'wysiwyg_advanced' => 'wysiwyg_advanced',
+            'wysiwyg_public' => 'wysiwyg_public',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'php_code' => array(
+                'weight' => '11',
+              ),
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+              'wysiwyg_advanced' => array(
+                'weight' => '-10',
+              ),
+              'wysiwyg_public' => array(
+                'weight' => '-9',
+              ),
+            ),
+          ),
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '2',
+      ),
+    ),
+  );
+
+  // Exported field: 'paragraphs_item-paragraph_text_with_anchor-field_paragraph_text'.
+  $fields['paragraphs_item-paragraph_text_with_anchor-field_paragraph_text'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_paragraph_text',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'text_long',
+    ),
+    'field_instance' => array(
+      'bundle' => 'paragraph_text_with_anchor',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '3',
+        ),
+        'paragraphs_editor_preview' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'paragraphs_item',
+      'field_name' => 'field_paragraph_text',
+      'label' => 'Paragraph Text',
+      'required' => 0,
+      'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'php_code' => 'php_code',
+            'plain_text' => 'plain_text',
+            'wysiwyg_advanced' => 'wysiwyg_advanced',
+            'wysiwyg_public' => 'wysiwyg_public',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'php_code' => array(
+                'weight' => '11',
+              ),
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+              'wysiwyg_advanced' => array(
+                'weight' => '-10',
+              ),
+              'wysiwyg_public' => array(
+                'weight' => '-9',
+              ),
+            ),
+          ),
+        ),
+        'text_processing' => '1',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'rows' => '5',
+        ),
+        'type' => 'text_textarea',
+        'weight' => '3',
+      ),
+    ),
+  );
+
   // Exported field: 'paragraphs_item-paragraph_text_with_header_text-field_header_text'.
   $fields['paragraphs_item-paragraph_text_with_header_text-field_header_text'] = array(
     'field_config' => array(
@@ -2145,6 +2523,7 @@ function peace_geeks_paragraphs_and_structure_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Anchor Name');
   t('Background Colour');
   t('Box Copy');
   t('Box Height');

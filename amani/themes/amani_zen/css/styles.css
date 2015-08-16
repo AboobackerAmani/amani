@@ -1721,30 +1721,62 @@ div.breadcrumb {
     font-weight: 300;
   }
   /* line 204, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-paragraph-text-with-anchor {
+    display: block;
+    float: left;
+    border-top: 1px solid #474F5E;
+    padding-top: 4em;
+  }
+  /* line 211, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-paragraph-text-with-anchor .field-name-field-header-text {
+    font-size: 1.4em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  /* line 218, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-paragraph-text-with-anchor .field-name-field-paragraph-text {
+    font-size: 1.3em;
+    line-height: 1.7em;
+    font-weight: 300;
+  }
+  /* line 224, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-paragraph-text-with-anchor .field-name-field-header-text-large {
+    font-size: 3em;
+    line-height: 1.4em;
+    margin-top: 1.2em;
+    font-weight: 300;
+    margin-bottom: .6em;
+  }
+  /* line 233, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-paragraph-text-with-anchor .field-name-field-anchor-name {
+    display: none;
+  }
+  /* line 238, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-simple-text-with-right-side-imag {
     display: block;
     float: left;
   }
-  /* line 210, ../sass/theme/_layout.scss */
+  /* line 244, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-simple-text-with-right-side-imag .field-name-field-paragraph-text {
     font-size: 1.3em;
     line-height: 1.7em;
     font-weight: 300;
   }
-  /* line 216, ../sass/theme/_layout.scss */
+  /* line 250, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-simple-text-with-right-side-imag .field-name-field-images {
     display: block;
     float: right;
     padding-left: 2em;
     padding-bottom: 1em;
   }
-  /* line 224, ../sass/theme/_layout.scss */
+  /* line 258, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-link-block-blue {
     display: block;
     float: left;
     margin-top: 1em;
   }
-  /* line 228, ../sass/theme/_layout.scss */
+  /* line 262, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-link-block-blue a {
     color: white;
     background: #59C2ED;
@@ -1756,7 +1788,7 @@ div.breadcrumb {
     margin-right: 20px;
     float: left;
   }
-  /* line 238, ../sass/theme/_layout.scss */
+  /* line 272, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-link-block-blue a:after {
     content: "\f178";
     color: white;
@@ -1768,13 +1800,13 @@ div.breadcrumb {
     font-size: 2em;
     padding-right: .2em;
   }
-  /* line 252, ../sass/theme/_layout.scss */
+  /* line 286, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-link-block-grey {
     margin-top: 1em;
     display: block;
     float: left;
   }
-  /* line 256, ../sass/theme/_layout.scss */
+  /* line 290, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-link-block-grey a {
     color: white;
     background: #474F5E;
@@ -1785,7 +1817,7 @@ div.breadcrumb {
     height: 144px;
     float: left;
   }
-  /* line 265, ../sass/theme/_layout.scss */
+  /* line 299, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-link-block-grey a:after {
     content: "\f178";
     color: white;
@@ -1797,20 +1829,50 @@ div.breadcrumb {
     font-size: 2em;
     padding-right: .2em;
   }
-  /* line 279, ../sass/theme/_layout.scss */
+  /* line 311, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-link-block-grey a.shorterlinkbox:after {
+    content: "\f178";
+    color: white;
+    font-family: "FontAwesome";
+    display: block;
+    float: right;
+    position: relative;
+    margin-top: 50px;
+    font-size: 2em;
+    padding-right: .2em;
+  }
+  /* line 327, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-light-grey-text-box-with-link-to a {
+    color: #9a9a9a;
+    background: #E6E6E6;
+    width: 255px;
+    padding: 1.5em 2em;
+    display: block;
+    font-size: 1.5em;
+    float: left;
+    line-height: 1.4em;
+    text-align: center;
+    margin-bottom: 1em;
+    margin-right: 1em;
+  }
+  /* line 341, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-light-grey-text-box-with-link-to .field-name-field-anchor-to-link-to {
+    display: none;
+  }
+  /* line 346, ../sass/theme/_layout.scss */
   body.node-type-structure #values-wrapper {
     display: block;
     width: 100%;
     float: left;
   }
-  /* line 284, ../sass/theme/_layout.scss */
+  /* line 351, ../sass/theme/_layout.scss */
   body.node-type-structure #values-wrapper #values-line {
     display: block;
     width: 110%;
     float: left;
     margin-left: -20px;
   }
-  /* line 290, ../sass/theme/_layout.scss */
+  /* line 357, ../sass/theme/_layout.scss */
   body.node-type-structure #values-wrapper #values-line span {
     display: block;
     border: 1px solid #E6E6E6;
@@ -1820,29 +1882,29 @@ div.breadcrumb {
     font-size: .8em;
     cursor: pointer;
   }
-  /* line 298, ../sass/theme/_layout.scss */
+  /* line 365, ../sass/theme/_layout.scss */
   body.node-type-structure #values-wrapper #values-line span.value-active {
     background: #59C2ED;
   }
-  /* line 304, ../sass/theme/_layout.scss */
+  /* line 371, ../sass/theme/_layout.scss */
   body.node-type-structure #values-wrapper .value-content-block {
     display: none;
     float: left;
     width: 100%;
     margin-top: 2em;
   }
-  /* line 309, ../sass/theme/_layout.scss */
+  /* line 376, ../sass/theme/_layout.scss */
   body.node-type-structure #values-wrapper .value-content-block.value-content-active {
     display: block;
   }
-  /* line 312, ../sass/theme/_layout.scss */
+  /* line 379, ../sass/theme/_layout.scss */
   body.node-type-structure #values-wrapper .value-content-block .value-header {
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 10px;
   }
-  /* line 318, ../sass/theme/_layout.scss */
+  /* line 385, ../sass/theme/_layout.scss */
   body.node-type-structure #values-wrapper .value-content-block .value-body {
     font-size: 36px;
     line-height: 1.4em;
