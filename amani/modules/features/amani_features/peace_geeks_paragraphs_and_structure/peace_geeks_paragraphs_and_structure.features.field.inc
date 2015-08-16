@@ -55,12 +55,16 @@ function peace_geeks_paragraphs_and_structure_field_default_fields() {
       'settings' => array(
         'add_mode' => 'select',
         'allowed_bundles' => array(
-          'light_grey_text_box' => 'light_grey_text_box',
-          'paragraph_text_with_header_text' => 'paragraph_text_with_header_text',
-          'structure_header_text' => 'structure_header_text',
+          'light_grey_text_box' => -1,
+          'link_block_blue' => -1,
+          'link_block_grey' => -1,
+          'paragraph_text_with_header_text' => -1,
+          'structure_header_text' => -1,
         ),
         'bundle_weights' => array(
           'light_grey_text_box' => '2',
+          'link_block_blue' => '-10',
+          'link_block_grey' => '-10',
           'paragraph_text_with_header_text' => '8',
           'structure_header_text' => '5',
         ),
@@ -400,7 +404,7 @@ function peace_geeks_paragraphs_and_structure_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '1',
+          'weight' => '3',
         ),
         'paragraphs_editor_preview' => array(
           'label' => 'above',
@@ -450,7 +454,7 @@ function peace_geeks_paragraphs_and_structure_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '2',
+        'weight' => '3',
       ),
     ),
   );
