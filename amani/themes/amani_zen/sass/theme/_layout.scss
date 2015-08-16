@@ -36,60 +36,40 @@ div.breadcrumb {
 		@include zen-grid-container;
 		margin:0 auto;
 		width:726px;
+		min-height:0 !important;
 	}
 
-	a.bluebox-link {
+	hr {
 		
-			color:white;
-			background:$blue;
-			width:354px;
-			padding:1em;
-			display:block;
-			font-size:1.4em;
-			height:144px;
-			&:after {
-				content:"\f107";
-				color:white;
-				font-family:$fontawesome;
-				display:block;
-				float:right;
-				position:relative;
-				margin-top:126px;
-				font-size:2em;
-				padding-right:.2em;
-			}
+		width:100%;
+		border:1px solid $blue;
 	}
 	
-	a.greybox-link {
-		
-			color:white;
-			background:$grey;
-			width:354px;
-			padding:1em;
-			display:block;
-			font-size:1.4em;
-			height:144px;
-			&:after {
-				content:"\f107";
-				color:white;
-				font-family:$fontawesome;
-				display:block;
-				float:right;
-				position:relative;
-				margin-top:126px;
-				font-size:2em;
-				padding-right:.2em;
-			}
+	span.first-word {
+		font-weight:700;
 	}
 	
 	
-	/* Paragraphs module styling */
+	/* Paragraphs module - bundle styling */
 	
 	body.node-type-structure {
 	
-		#main {padding-top:5em;padding-bottom:6em;}
+		overflow-x:hidden;
+	
+		#main {padding-top:0;padding-bottom:10em;}
 		
-
+		.paragraphs-item-divider-line {
+			display:block;
+			float:left;
+			width:100%;
+			hr {
+				width:100%;
+				border:1px solid $blue;
+				margin:0;
+			}
+			
+		}
+		
 		h1#page-title {display:none;}
 		
 		.paragraphs-item-structure-header-text {
@@ -99,9 +79,31 @@ div.breadcrumb {
 			font-weight:300;
 			margin-bottom:2em;
 		}
+
+		.paragraphs-items-field-paragraphs {
+			display:block;
+			float:left;
+			margin-top:1em;
+			.field-name-field-paragraphs {
+				display:block;
+			
+				.field-item {
+					display:block;
+				}
+			}
+		}
+		
+		.entity-paragraphs-item .field-items h3 {
+				font-size: 1em;
+			  font-weight: 600;
+			  text-transform: uppercase;
+			  margin-bottom: 16px;
+			}
 		
 		.paragraphs-item-paragraph-text-with-header-text {
-			margin-bottom:6em;
+			
+			display:block;
+			float:left;
 			
 			.field-name-field-header-text {
 				font-size:1.4em;
@@ -115,6 +117,64 @@ div.breadcrumb {
 				line-height:1.7em;
 				font-weight:300;
 			}
+			
+			.field-name-field-large-header-text {
+				font-size:3em;
+				line-height:1.4em;
+				color:$blue;
+				font-weight:300;
+				margin-bottom:1em;
+			}
+			
+			.field-name-field-images {
+				display:block;
+				float:left;
+				padding-right:2em;
+				padding-bottom:1em;
+			}
+		}
+		
+		.paragraphs-item-callout-box-full-width-grey {
+			padding-right:3000px;
+			margin-right:-3000px;
+			background:$soft-grey;
+			padding-left:3000px;
+			margin-left:-3000px;
+			padding-top:3em;
+			padding-bottom:3em;
+			clear:both;
+			display:block;
+			float:left;
+			
+			.field-name-field-header-text {
+				font-size:1.4em;
+				font-weight:600;
+				text-transform:uppercase;
+				margin-bottom:16px;
+			}
+			
+			.field-name-field-paragraph-text {
+				font-size:1.3em;
+				line-height:1.7em;
+				font-weight:300;
+			}
+			
+			.field-name-field-header-text-large {
+				font-size:3em;
+				line-height:1.4em;
+				color:$blue;
+				font-weight:300;
+				margin-bottom:.4em;
+			}
+			
+			.field-name-field-images {
+				display:block;
+				float:left;
+				padding-right:2em;
+				padding-bottom:1em;
+			}
+			
+			
 		}
 		
 		.paragraphs-item-light-grey-text-box {
@@ -126,6 +186,7 @@ div.breadcrumb {
 			float:left;
 			margin-right:20px;
 			margin-bottom:20px;
+			
 			
 			.field-name-field-box-title {
 				color:$blue;
@@ -139,6 +200,131 @@ div.breadcrumb {
 				line-height:1.7em;
 				font-weight:300;
 			}
+		}
+		
+		.paragraphs-item-simple-text-with-right-side-imag {
+			display:block;
+			float:left;
+			
+			
+			
+			.field-name-field-paragraph-text {
+				font-size:1.3em;
+				line-height:1.7em;
+				font-weight:300;
+			}
+			
+			.field-name-field-images {
+				display:block;
+				float:right;
+				padding-left:2em;
+				padding-bottom:1em;
+			}
+		}
+		
+		.paragraphs-item-link-block-blue {
+			margin-top:3em;
+			display:block;
+			float:left;
+			a {
+				color:white;
+				background:$blue;
+				width:294px;
+				padding:1em;
+				display:block;
+				font-size:1.6em;
+				height:144px;
+				margin-right:20px;
+				float:left;
+				&:after {
+					content:"\f178";
+					color:white;
+					font-family:$fontawesome;
+					display:block;
+					float:right;
+					position:relative;
+					margin-top:126px;
+					font-size:2em;
+					padding-right:.2em;
+				}
+			}
+		}
+		
+		.paragraphs-item-link-block-grey {
+			margin-top:3em;
+			display:block;
+			float:left;
+			a {
+				color:white;
+				background:$grey;
+				width:294px;
+				padding:1em;
+				display:block;
+				font-size:1.6em;
+				height:144px;
+				float:left;
+				&:after {
+					content:"\f178";
+					color:white;
+					font-family:$fontawesome;
+					display:block;
+					float:right;
+					position:relative;
+					margin-top:126px;
+					font-size:2em;
+					padding-right:.2em;
+				}
+			}
+		}
+		
+		#values-wrapper {
+			display:block;
+			width:100%;
+			float:left;
+		
+			#values-line {
+				display:block;
+				width:110%;
+				float:left;
+				margin-left:-20px;
+				
+				span {
+					display:block;
+					border:1px solid $soft-grey;
+					padding:.6em 2em;
+					background:white;
+					float:left;
+					font-size:.8em;
+					cursor:pointer;
+					&.value-active {
+						background:$blue;
+					}
+				}
+			}
+			
+			.value-content-block {
+				display:none;
+				float:left;
+				width:100%;
+				margin-top:2em;
+				&.value-content-active {
+					display:block;
+				}
+				.value-header {
+					font-size:16px;
+					  font-weight: 600;
+					  text-transform: uppercase;
+					  margin-bottom: 10px;
+				}
+				.value-body {
+					font-size: 36px;
+					  line-height: 1.4em;
+					  color: $blue;
+					  font-weight: 300;
+					  margin-bottom: 1em;
+				}
+			}
+		
 		}
 	
 	}

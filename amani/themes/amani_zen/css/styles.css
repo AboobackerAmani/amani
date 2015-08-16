@@ -1546,6 +1546,7 @@ div.breadcrumb {
   #content {
     margin: 0 auto;
     width: 726px;
+    min-height: 0 !important;
   }
   /* line 45, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
   #content:before, #content:after {
@@ -1557,63 +1558,44 @@ div.breadcrumb {
     clear: both;
   }
 
-  /* line 41, ../sass/theme/_layout.scss */
-  a.bluebox-link {
-    color: white;
-    background: #59C2ED;
-    width: 354px;
-    padding: 1em;
-    display: block;
-    font-size: 1.4em;
-    height: 144px;
-  }
-  /* line 50, ../sass/theme/_layout.scss */
-  a.bluebox-link:after {
-    content: "\f107";
-    color: white;
-    font-family: "FontAwesome";
-    display: block;
-    float: right;
-    position: relative;
-    margin-top: 126px;
-    font-size: 2em;
-    padding-right: .2em;
+  /* line 42, ../sass/theme/_layout.scss */
+  hr {
+    width: 100%;
+    border: 1px solid #59C2ED;
   }
 
-  /* line 63, ../sass/theme/_layout.scss */
-  a.greybox-link {
-    color: white;
-    background: #474F5E;
-    width: 354px;
-    padding: 1em;
-    display: block;
-    font-size: 1.4em;
-    height: 144px;
-  }
-  /* line 72, ../sass/theme/_layout.scss */
-  a.greybox-link:after {
-    content: "\f107";
-    color: white;
-    font-family: "FontAwesome";
-    display: block;
-    float: right;
-    position: relative;
-    margin-top: 126px;
-    font-size: 2em;
-    padding-right: .2em;
+  /* line 48, ../sass/theme/_layout.scss */
+  span.first-word {
+    font-weight: 700;
   }
 
-  /* Paragraphs module styling */
-  /* line 90, ../sass/theme/_layout.scss */
+  /* Paragraphs module - bundle styling */
+  /* line 55, ../sass/theme/_layout.scss */
+  body.node-type-structure {
+    overflow-x: hidden;
+  }
+  /* line 59, ../sass/theme/_layout.scss */
   body.node-type-structure #main {
-    padding-top: 5em;
-    padding-bottom: 6em;
+    padding-top: 0;
+    padding-bottom: 10em;
   }
-  /* line 93, ../sass/theme/_layout.scss */
+  /* line 61, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-divider-line {
+    display: block;
+    float: left;
+    width: 100%;
+  }
+  /* line 65, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-divider-line hr {
+    width: 100%;
+    border: 1px solid #59C2ED;
+    margin: 0;
+  }
+  /* line 73, ../sass/theme/_layout.scss */
   body.node-type-structure h1#page-title {
     display: none;
   }
-  /* line 95, ../sass/theme/_layout.scss */
+  /* line 75, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-structure-header-text {
     font-size: 3em;
     line-height: 1.4em;
@@ -1621,24 +1603,102 @@ div.breadcrumb {
     font-weight: 300;
     margin-bottom: 2em;
   }
+  /* line 83, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-items-field-paragraphs {
+    display: block;
+    float: left;
+    margin-top: 1em;
+  }
+  /* line 87, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-items-field-paragraphs .field-name-field-paragraphs {
+    display: block;
+  }
+  /* line 90, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-items-field-paragraphs .field-name-field-paragraphs .field-item {
+    display: block;
+  }
+  /* line 96, ../sass/theme/_layout.scss */
+  body.node-type-structure .entity-paragraphs-item .field-items h3 {
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
   /* line 103, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-paragraph-text-with-header-text {
-    margin-bottom: 6em;
+    display: block;
+    float: left;
   }
-  /* line 106, ../sass/theme/_layout.scss */
+  /* line 108, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-paragraph-text-with-header-text .field-name-field-header-text {
     font-size: 1.4em;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 16px;
   }
-  /* line 113, ../sass/theme/_layout.scss */
+  /* line 115, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-paragraph-text-with-header-text .field-name-field-paragraph-text {
     font-size: 1.3em;
     line-height: 1.7em;
     font-weight: 300;
   }
-  /* line 120, ../sass/theme/_layout.scss */
+  /* line 121, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-paragraph-text-with-header-text .field-name-field-large-header-text {
+    font-size: 3em;
+    line-height: 1.4em;
+    color: #59C2ED;
+    font-weight: 300;
+    margin-bottom: 1em;
+  }
+  /* line 129, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-paragraph-text-with-header-text .field-name-field-images {
+    display: block;
+    float: left;
+    padding-right: 2em;
+    padding-bottom: 1em;
+  }
+  /* line 137, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-callout-box-full-width-grey {
+    padding-right: 3000px;
+    margin-right: -3000px;
+    background: #E6E6E6;
+    padding-left: 3000px;
+    margin-left: -3000px;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    clear: both;
+    display: block;
+    float: left;
+  }
+  /* line 149, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-callout-box-full-width-grey .field-name-field-header-text {
+    font-size: 1.4em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  /* line 156, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-callout-box-full-width-grey .field-name-field-paragraph-text {
+    font-size: 1.3em;
+    line-height: 1.7em;
+    font-weight: 300;
+  }
+  /* line 162, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-callout-box-full-width-grey .field-name-field-header-text-large {
+    font-size: 3em;
+    line-height: 1.4em;
+    color: #59C2ED;
+    font-weight: 300;
+    margin-bottom: .4em;
+  }
+  /* line 170, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-callout-box-full-width-grey .field-name-field-images {
+    display: block;
+    float: left;
+    padding-right: 2em;
+    padding-bottom: 1em;
+  }
+  /* line 180, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-light-grey-text-box {
     display: block;
     width: 330px;
@@ -1648,18 +1708,148 @@ div.breadcrumb {
     margin-right: 20px;
     margin-bottom: 20px;
   }
-  /* line 130, ../sass/theme/_layout.scss */
+  /* line 191, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-light-grey-text-box .field-name-field-box-title {
     color: #59C2ED;
     font-size: 2.2em;
     margin-bottom: 20px;
     font-weight: 400;
   }
-  /* line 137, ../sass/theme/_layout.scss */
+  /* line 198, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-light-grey-text-box .field-name-field-box-copy {
     font-size: 1.3em;
     line-height: 1.7em;
     font-weight: 300;
+  }
+  /* line 205, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-simple-text-with-right-side-imag {
+    display: block;
+    float: left;
+  }
+  /* line 211, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-simple-text-with-right-side-imag .field-name-field-paragraph-text {
+    font-size: 1.3em;
+    line-height: 1.7em;
+    font-weight: 300;
+  }
+  /* line 217, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-simple-text-with-right-side-imag .field-name-field-images {
+    display: block;
+    float: right;
+    padding-left: 2em;
+    padding-bottom: 1em;
+  }
+  /* line 225, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-link-block-blue {
+    margin-top: 3em;
+    display: block;
+    float: left;
+  }
+  /* line 229, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-link-block-blue a {
+    color: white;
+    background: #59C2ED;
+    width: 294px;
+    padding: 1em;
+    display: block;
+    font-size: 1.6em;
+    height: 144px;
+    margin-right: 20px;
+    float: left;
+  }
+  /* line 239, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-link-block-blue a:after {
+    content: "\f178";
+    color: white;
+    font-family: "FontAwesome";
+    display: block;
+    float: right;
+    position: relative;
+    margin-top: 126px;
+    font-size: 2em;
+    padding-right: .2em;
+  }
+  /* line 253, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-link-block-grey {
+    margin-top: 3em;
+    display: block;
+    float: left;
+  }
+  /* line 257, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-link-block-grey a {
+    color: white;
+    background: #474F5E;
+    width: 294px;
+    padding: 1em;
+    display: block;
+    font-size: 1.6em;
+    height: 144px;
+    float: left;
+  }
+  /* line 266, ../sass/theme/_layout.scss */
+  body.node-type-structure .paragraphs-item-link-block-grey a:after {
+    content: "\f178";
+    color: white;
+    font-family: "FontAwesome";
+    display: block;
+    float: right;
+    position: relative;
+    margin-top: 126px;
+    font-size: 2em;
+    padding-right: .2em;
+  }
+  /* line 280, ../sass/theme/_layout.scss */
+  body.node-type-structure #values-wrapper {
+    display: block;
+    width: 100%;
+    float: left;
+  }
+  /* line 285, ../sass/theme/_layout.scss */
+  body.node-type-structure #values-wrapper #values-line {
+    display: block;
+    width: 110%;
+    float: left;
+    margin-left: -20px;
+  }
+  /* line 291, ../sass/theme/_layout.scss */
+  body.node-type-structure #values-wrapper #values-line span {
+    display: block;
+    border: 1px solid #E6E6E6;
+    padding: .6em 2em;
+    background: white;
+    float: left;
+    font-size: .8em;
+    cursor: pointer;
+  }
+  /* line 299, ../sass/theme/_layout.scss */
+  body.node-type-structure #values-wrapper #values-line span.value-active {
+    background: #59C2ED;
+  }
+  /* line 305, ../sass/theme/_layout.scss */
+  body.node-type-structure #values-wrapper .value-content-block {
+    display: none;
+    float: left;
+    width: 100%;
+    margin-top: 2em;
+  }
+  /* line 310, ../sass/theme/_layout.scss */
+  body.node-type-structure #values-wrapper .value-content-block.value-content-active {
+    display: block;
+  }
+  /* line 313, ../sass/theme/_layout.scss */
+  body.node-type-structure #values-wrapper .value-content-block .value-header {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  /* line 319, ../sass/theme/_layout.scss */
+  body.node-type-structure #values-wrapper .value-content-block .value-body {
+    font-size: 36px;
+    line-height: 1.4em;
+    color: #59C2ED;
+    font-weight: 300;
+    margin-bottom: 1em;
   }
 }
 /* line 1, ../sass/theme/_slide_style.scss */
@@ -1743,7 +1933,42 @@ div.breadcrumb {
 /**
 * Footer
 */
-/* line 4, ../sass/theme/_footer.scss */
+/* line 5, ../sass/theme/_footer.scss */
+#footer-wrapper {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 11, ../sass/theme/_footer.scss */
+#top-scroll {
+  height: 45px;
+  width: 90px;
+  border-radius: 90px 90px 0 0;
+  -moz-border-radius: 90px 90px 0 0;
+  -webkit-border-radius: 90px 90px 0 0;
+  background: #474F5E;
+  margin: 0 auto;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 10px;
+  letter-spacing: 2px;
+  display: block;
+  position: relative;
+  z-index: 2000;
+}
+
+/* line 31, ../sass/theme/_footer.scss */
+#scroll-icon:before {
+  content: "\f106";
+  font-family: "FontAwesome";
+  display: block;
+  font-size: 2em;
+}
+
+/* line 39, ../sass/theme/_footer.scss */
 #footer {
   background-color: #474F5E;
   color: #fff;
@@ -1766,12 +1991,12 @@ div.breadcrumb {
   clear: both;
 }
 @media all and (min-width: 768px) {
-  /* line 4, ../sass/theme/_footer.scss */
+  /* line 39, ../sass/theme/_footer.scss */
   #footer {
     padding-top: 40px;
   }
 }
-/* line 21, ../sass/theme/_footer.scss */
+/* line 56, ../sass/theme/_footer.scss */
 #footer:before {
   content: "";
   position: absolute;
@@ -1783,7 +2008,7 @@ div.breadcrumb {
   border-right: 9999px solid #474F5E;
   box-shadow: 9999px 0px 0px 0px #474F5E;
 }
-/* line 33, ../sass/theme/_footer.scss */
+/* line 68, ../sass/theme/_footer.scss */
 #footer a {
   color: #fff;
 }
@@ -1791,7 +2016,7 @@ div.breadcrumb {
 #footer a:focus, #footer a:hover, #footer a:active {
   color: #1696ca;
 }
-/* line 38, ../sass/theme/_footer.scss */
+/* line 73, ../sass/theme/_footer.scss */
 #footer div[id*="block-menu-menu-meta"],
 #footer div[id*="block-search-form"] {
   position: absolute !important;
@@ -1800,11 +2025,11 @@ div.breadcrumb {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
-/* line 44, ../sass/theme/_footer.scss */
+/* line 79, ../sass/theme/_footer.scss */
 #footer #block-bean-amani-powered-by {
   width: 30%;
 }
-/* line 48, ../sass/theme/_footer.scss */
+/* line 83, ../sass/theme/_footer.scss */
 #footer #block-bean-amani-powered-by .field-item > img {
   position: absolute !important;
   height: 1px;
@@ -1812,23 +2037,23 @@ div.breadcrumb {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
-/* line 54, ../sass/theme/_footer.scss */
+/* line 89, ../sass/theme/_footer.scss */
 #footer #block-menu-menu-amani-main-menu {
   width: 70%;
 }
-/* line 58, ../sass/theme/_footer.scss */
+/* line 93, ../sass/theme/_footer.scss */
 #footer #block-menu-menu-amani-main-menu li {
   width: 10em;
   display: inline-block;
   float: left;
 }
-/* line 63, ../sass/theme/_footer.scss */
+/* line 98, ../sass/theme/_footer.scss */
 #footer #block-menu-menu-amani-main-menu li a {
   font-size: 14px;
   font-size: 1.07692rem;
   letter-spacing: 0.5px;
 }
-/* line 68, ../sass/theme/_footer.scss */
+/* line 103, ../sass/theme/_footer.scss */
 #footer #block-menu-menu-amani-main-menu li:nth-child(2n+1) {
   clear: left;
 }
