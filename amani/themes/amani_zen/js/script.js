@@ -69,6 +69,16 @@ Drupal.behaviors.paragraphs_adjustments = {
 				'margin-bottom':'0'
 			});
 		}
+		
+		var islightgreytextbox = $(this).find('div.paragraphs-item-light-grey-text-box').size();
+		
+		if (islightgreytextbox != 0) {
+			$(this).css({
+				'float':'none',
+				'margin-top':'0',
+				'margin-bottom':'0'
+			});
+		}
 	
 		var iscallout = $(this).find('div.paragraphs-item-callout-box-full-width-grey').size();
 		var islastblock = $(this).next().size();
