@@ -806,8 +806,12 @@ $zen-auto-include-item-base: false;
       }
     }
   }
+  #block-block-9{/*take action inner mobile block*/
+    display: block;
+    
+  }
 
-}
+}/*max-width : 780px*/
 
 
 
@@ -818,7 +822,8 @@ $zen-auto-include-item-base: false;
  */
 @media all and (min-width: 960px) {
 
-#block-block-8{
+#block-block-8,
+#block-block-9{
   display: none;
 }
 
