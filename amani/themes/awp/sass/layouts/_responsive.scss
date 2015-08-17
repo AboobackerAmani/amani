@@ -593,6 +593,11 @@ $zen-auto-include-item-base: false;
         margin: 13px 0%;
         border-left: 2px solid #D31245;
         padding: 0 2%;
+        [dir="rtl"] &{
+          float: right;
+          border: 0;
+          border-right: 2px solid #D31245;
+        }
         a{
           display: block;
           width: 100%;
@@ -614,6 +619,9 @@ $zen-auto-include-item-base: false;
         float: left;
         overflow: hidden;
         margin-right: 5%;
+        [dir="rtl"] &{
+          float: right;
+        }
         .followus{
           float: left;
           font-size: 3vw;
@@ -621,6 +629,9 @@ $zen-auto-include-item-base: false;
           padding: 0 8%;
           margin-top: 13px;
           text-align: center;
+          [dir="rtl"] &{
+            float: right;
+          }
         }
         a{
           display: block;
@@ -628,6 +639,9 @@ $zen-auto-include-item-base: false;
           height: 40px;
           font-size: 0;
           float: left;
+          [dir="rtl"] &{
+            float: right;
+          }
           &.twitter{
             background: url("../images/mobile/twitter.png") no-repeat center;
           }
@@ -649,6 +663,9 @@ $zen-auto-include-item-base: false;
         font-weight: bold;
         float: left;
         text-align: center;
+        [dir="rtl"] &{
+          float: right;
+        }
       }
 
     }/*block-8*/
