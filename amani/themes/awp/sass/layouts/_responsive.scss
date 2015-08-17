@@ -787,29 +787,35 @@ $zen-auto-include-item-base: false;
       font-size: 4.5vw;
       font-weight: bold;
     }
-    .view-take-actions .views-row{
-      width: 100%;
-      margin-left: 0;
-      margin-right: 0;
-      background: none;
-      &.views-row-first .field-name-field-row-title{
-        padding: 0;
-        background: none;
-      }
-      .field-name-field-row-title{
-        font-size: 4.5vw;
-        font-weight: bold;
-      }
-      .field-name-field-row-body,
-      .field-name-field-row-li{
-        font-size: 3.5vw;
-      }
+
+
+  }
+  body.html.node-type-take-actions .view-take-actions .views-row{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    background: none;
+    .field-name-field-row-title{
+      font-size: 4.5vw;
+      font-weight: bold;
+    }
+    .field-name-field-row-body,
+    .field-name-field-row-li{
+      font-size: 3.5vw;
     }
   }
+  body.html.node-type-take-actions .view-take-actions .views-row.views-row-first .field-name-field-row-title{
+    padding: 0;
+    background: none;
+  }
+
+
+
   #block-block-9{/*take action inner mobile block*/
     display: block;
-    
+
   }
+
 
 }/*max-width : 780px*/
 
