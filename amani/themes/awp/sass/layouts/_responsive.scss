@@ -660,11 +660,13 @@ $zen-auto-include-item-base: false;
       }
     }
     &.not-front{
-      #block-views-header-photos-block,
-      .view-header-photos,
+
       #block-block-4,
       #block-block-3{
         display: none !important;
+      }
+      .view-header-photos{
+        margin-bottom: -40px;
       }
       h1#page-title{
         width: 100%;
