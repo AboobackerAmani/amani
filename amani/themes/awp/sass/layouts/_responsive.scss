@@ -848,11 +848,13 @@ $zen-auto-include-item-base: false;
         height: 198px;
         background: url(../images/homepage/action.png) no-repeat 90% 90% $awp-red;
         float: left;
+        background-size: 40% auto;
         [dir="rtl"] & {
           float: right;
           background: url(../images/homepage/action-ar.png) no-repeat 10% 90% $awp-red;
+          background-size: 40% auto;
         }
-        background-size: 40% auto;
+
         .big-title{
           font-size: 7vw;
           color: $awp-white;
