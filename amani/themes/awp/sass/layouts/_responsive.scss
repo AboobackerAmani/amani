@@ -841,6 +841,7 @@ $zen-auto-include-item-base: false;
     background-color: #Fff;
     margin-top: -40px;
     margin-bottom: -40px;
+    overflow: hidden;
     .take-action-mobile-block{
       .first-div{
         width: 48%;
@@ -852,13 +853,13 @@ $zen-auto-include-item-base: false;
           float: right;
         }
         .big-title{
-          font-size: 5vw;
+          font-size: 7vw;
           color: $awp-white;
           font-weight: bold;
           margin: 20px;
         }
         .sub-title{
-          font-size: 3vw;
+          font-size: 5vw;
           color: $awp-white;
           font-weight: 100;
           margin: 20px;
@@ -876,18 +877,18 @@ $zen-auto-include-item-base: false;
           height: 64px;
           background: $awp-red;
           overflow: hidden;
-          margin-bottom: 2px;
+          border-bottom: 2px solid $awp-white;
           display: table;
           width: 100%;
           &.last{
-            margin-bottom: 0;
+            border-bottom: 0;
           }
           a{
             color: white;
             display: table-cell;
             vertical-align: middle;
             padding-left: 20px;
-            font-size: 4vw;
+            font-size: 5.5vw;
             font-weight: normal;
           }
 
