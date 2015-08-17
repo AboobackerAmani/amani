@@ -151,7 +151,7 @@ function amani_global_context_default_contexts() {
         'views-front_page_slideshow-block' => array(
           'module' => 'views',
           'delta' => 'front_page_slideshow-block',
-          'region' => 'header',
+          'region' => 'subheader',
           'weight' => '-10',
         ),
         'views-front_page_blocks-block' => array(
