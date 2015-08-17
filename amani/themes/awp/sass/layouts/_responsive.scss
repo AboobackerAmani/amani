@@ -769,6 +769,54 @@ $zen-auto-include-item-base: false;
       }
     }
 
+
+    /*Take action*/
+
+    &.node-type-take-actions #page-title.page__title{
+      margin: 10px 0;
+      padding: 0;
+    }
+    &.node-type-take-actions .view-take-actions{
+      background: none !important;
+    }
+    &.node-type-take-actions .node-take-actions {
+      width: 100%;
+      margin: 0;
+      .field-name-field-sub-title{
+        font-size: 4.5vw;
+        font-weight: bold;
+      }
+
+
+    }
+    &.node-type-take-actions .view-take-actions .views-row{
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      background: none;
+      .field-name-field-row-title{
+        font-size: 4.5vw;
+        font-weight: bold;
+      }
+      .field-name-field-row-body,
+      .field-name-field-row-link{
+        font-size: 3.5vw;
+      }
+    }
+    &.node-type-take-actions .view-take-actions .views-row.views-row-first .field-name-field-row-title{
+      padding: 0;
+      background: none;
+    }
+
+
+    &.node-type-take-actions{
+      .view-header-photos{
+        display: none;
+      }
+    }
+
+
+
   }/*body*/
 
 
@@ -786,47 +834,66 @@ $zen-auto-include-item-base: false;
 
 
 
-  body.html.node-type-take-actions #page-title.page__title{
-    margin: 10px 0;
-    padding: 0;
-  }
-  body.html.node-type-take-actions .view-take-actions{
-    background: none !important;
-  }
-  body.html.node-type-take-actions .node-take-actions {
-    width: 100%;
-    margin: 0;
-    .field-name-field-sub-title{
-      font-size: 4.5vw;
-      font-weight: bold;
-    }
-
-
-  }
-  body.html.node-type-take-actions .view-take-actions .views-row{
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    background: none;
-    .field-name-field-row-title{
-      font-size: 4.5vw;
-      font-weight: bold;
-    }
-    .field-name-field-row-body,
-    .field-name-field-row-link{
-      font-size: 3.5vw;
-    }
-  }
-  body.html.node-type-take-actions .view-take-actions .views-row.views-row-first .field-name-field-row-title{
-    padding: 0;
-    background: none;
-  }
-
 
 
   #block-block-9{/*take action inner mobile block*/
     display: block;
+    background-color: #Fff;
+    margin-top: -40px;
+    margin-bottom: -40px;
+    .take-action-mobile-block{
+      .first-div{
+        width: 48%;
+        height: 198px;
+        background: url(../images/homepage/action.png) no-repeat 90% 90% $awp-red;
+        background-size: 40% auto;
+        float: left;
+        [dir="rtl"] & {
+          float: right;
+        }
+        .big-title{
+          font-size: 5vw;
+          color: $awp-white;
+          font-weight: bold;
+          margin: 20px;
+        }
+        .sub-title{
+          font-size: 3vw;
+          color: $awp-white;
+          font-weight: 100;
+          margin: 20px;
+        }
+      }
+      .second-div{
+        width: 48%;
+        height: 200px;
+        background: $awp-red;
+        float: right;
+        [dir="rtl"] & {
+          float: left;
+        }
+        .sub-block{
+          height: 64px;
+          background: $awp-red;
+          overflow: hidden;
+          margin-bottom: 2px;
+          display: table;
+          width: 100%;
+          &.last{
+            margin-bottom: 0;
+          }
+          a{
+            color: white;
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 20px;
+            font-size: 4vw;
+            font-weight: normal;
+          }
 
+        }
+      }
+    }
   }
 
 
