@@ -961,6 +961,7 @@ body {
  */
 /* line 7, ../sass/components/_front-page-blocks.scss */
 .front-page-blocks {
+  margin-bottom: 50px;
   text-align: center;
 }
 /* line 11, ../sass/components/_front-page-blocks.scss */
@@ -998,6 +999,106 @@ body {
 /* line 40, ../sass/components/_front-page-blocks.scss */
 .front-page-blocks .views-row .read_more_link span:hover {
   background: #eee;
+}
+
+/* line 50, ../sass/components/_front-page-blocks.scss */
+#block-views-front-page-tweets-block,
+#block-fb-likebox-0.block-fb-likebox,
+#block-views-calendar-of-events-block-3 {
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px 30px;
+  width: 23%;
+  height: 370px;
+  padding-top: 37px;
+}
+
+/* line 64, ../sass/components/_front-page-blocks.scss */
+#block-fb-likebox-0.block-fb-likebox iframe {
+  height: 397px !important;
+}
+
+/* line 70, ../sass/components/_front-page-blocks.scss */
+.fb-twit-cal-bgimage {
+  position: absolute;
+  top: -400px;
+  z-index: -10;
+  margin-bottom: 100px;
+}
+/* line 76, ../sass/components/_front-page-blocks.scss */
+.fb-twit-cal-bgimage img {
+  height: 500px;
+}
+
+/* line 82, ../sass/components/_front-page-blocks.scss */
+#block-views-front-page-tweets-block {
+  margin-left: 30px;
+}
+/* line 85, ../sass/components/_front-page-blocks.scss */
+#block-views-front-page-tweets-block .home-page-twitter-block {
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* line 89, ../sass/components/_front-page-blocks.scss */
+#block-views-front-page-tweets-block .home-page-twitter-block .view-header {
+  margin-bottom: 30px;
+  color: white;
+  font-size: 1.5em;
+}
+/* line 97, ../sass/components/_front-page-blocks.scss */
+#block-views-front-page-tweets-block .home-page-twitter-block .view-content .views-row {
+  color: white;
+  margin-bottom: 20px;
+}
+/* line 101, ../sass/components/_front-page-blocks.scss */
+#block-views-front-page-tweets-block .home-page-twitter-block .view-content .views-row .views-field-text {
+  display: block;
+}
+/* line 104, ../sass/components/_front-page-blocks.scss */
+#block-views-front-page-tweets-block .home-page-twitter-block .view-content .views-row .views-field-text a {
+  color: #ce9bc0;
+}
+/* line 109, ../sass/components/_front-page-blocks.scss */
+#block-views-front-page-tweets-block .home-page-twitter-block .view-content .views-row .views-field-created-time {
+  font-size: 0.5em;
+}
+
+/* line 119, ../sass/components/_front-page-blocks.scss */
+#block-views-calendar-of-events-block-3 .view-calendar-of-events {
+  background: rgba(0, 0, 0, 0.5);
+}
+/* line 122, ../sass/components/_front-page-blocks.scss */
+#block-views-calendar-of-events-block-3 .view-calendar-of-events .view-header {
+  color: white;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+/* line 134, ../sass/components/_front-page-blocks.scss */
+#block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .month-view .full td .inner div.day {
+  width: 30px;
+}
+/* line 137, ../sass/components/_front-page-blocks.scss */
+#block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .month-view .full tr.single-day .no-entry,
+#block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .month-view .full tr.single-day .no-entry .inner {
+  height: 20px !important;
+}
+/* line 143, ../sass/components/_front-page-blocks.scss */
+#block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar * {
+  background: transparent;
+  color: white;
+}
+/* line 148, ../sass/components/_front-page-blocks.scss */
+#block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar th {
+  background: rgba(255, 255, 255, 0.3);
+}
+/* line 153, ../sass/components/_front-page-blocks.scss */
+#block-views-calendar-of-events-block-3 .view-calendar-of-events .date-nav-wrapper .date-nav {
+  margin-bottom: -38px;
+}
+
+/* line 159, ../sass/components/_front-page-blocks.scss */
+#block-views-news-and-events-block-1 {
+  margin-top: 120px;
 }
 
 /* line 7, ../sass/components/_header.scss */
@@ -2277,7 +2378,18 @@ tr.selected td {
   padding-bottom: 20px;
 }
 
-/* line 27, ../sass/theme/_layout.scss */
+/* line 17, ../sass/theme/_layout.scss */
+#page {
+  max-width: 100%;
+}
+
+/* line 20, ../sass/theme/_layout.scss */
+#content {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* line 33, ../sass/theme/_layout.scss */
 .footer-top {
   background-color: #533058;
   border: 1px solid #67486b;
@@ -2285,7 +2397,7 @@ tr.selected td {
   height: 11px;
 }
 
-/* line 34, ../sass/theme/_layout.scss */
+/* line 40, ../sass/theme/_layout.scss */
 .footer-wrapper {
   background-color: #784580;
   border: 1px solid #84568b;
@@ -2303,7 +2415,7 @@ tr.selected td {
 .footer-wrapper:after {
   clear: both;
 }
-/* line 43, ../sass/theme/_layout.scss */
+/* line 49, ../sass/theme/_layout.scss */
 .footer-wrapper a {
   color: #fdfeff;
   text-transform: uppercase;
@@ -2312,7 +2424,7 @@ tr.selected td {
 .footer-wrapper a:focus, .footer-wrapper a:hover, .footer-wrapper a:active {
   color: #1696ca;
 }
-/* line 50, ../sass/theme/_layout.scss */
+/* line 56, ../sass/theme/_layout.scss */
 .footer-wrapper .menu a {
   color: #fdfeff;
 }
@@ -2321,7 +2433,7 @@ tr.selected td {
   color: #1696ca;
 }
 
-/* line 58, ../sass/theme/_layout.scss */
+/* line 64, ../sass/theme/_layout.scss */
 footer > .block-menu {
   float: left;
   width: 33.33333%;
@@ -2330,7 +2442,7 @@ footer > .block-menu {
   margin-bottom: 0;
 }
 @media screen and (max-width: 570px) {
-  /* line 58, ../sass/theme/_layout.scss */
+  /* line 64, ../sass/theme/_layout.scss */
   footer > .block-menu {
     float: none;
     margin: 0;
@@ -2338,7 +2450,7 @@ footer > .block-menu {
   }
 }
 
-/* line 70, ../sass/theme/_layout.scss */
+/* line 76, ../sass/theme/_layout.scss */
 #block-bean-amani-powered-by {
   float: left;
   width: 33.33333%;
@@ -2347,7 +2459,7 @@ footer > .block-menu {
   text-align: right;
 }
 @media screen and (max-width: 570px) {
-  /* line 70, ../sass/theme/_layout.scss */
+  /* line 76, ../sass/theme/_layout.scss */
   #block-bean-amani-powered-by {
     clear: both;
     float: none;
@@ -2357,20 +2469,20 @@ footer > .block-menu {
   }
 }
 
-/* line 84, ../sass/theme/_layout.scss */
+/* line 90, ../sass/theme/_layout.scss */
 footer .menu {
   float: left;
   position: relative;
   margin: 0 50px 0 0;
 }
 @media screen and (max-width: 939px) {
-  /* line 84, ../sass/theme/_layout.scss */
+  /* line 90, ../sass/theme/_layout.scss */
   footer .menu {
     margin-bottom: 15px;
   }
 }
 @media screen and (max-width: 570px) {
-  /* line 84, ../sass/theme/_layout.scss */
+  /* line 90, ../sass/theme/_layout.scss */
   footer .menu {
     float: none;
     width: 100%;
@@ -2378,28 +2490,28 @@ footer .menu {
     text-align: center;
   }
 }
-/* line 100, ../sass/theme/_layout.scss */
+/* line 106, ../sass/theme/_layout.scss */
 footer .menu li {
   position: relative;
   text-indent: 20px;
   margin-bottom: 15px;
 }
 @media screen and (max-width: 570px) {
-  /* line 100, ../sass/theme/_layout.scss */
+  /* line 106, ../sass/theme/_layout.scss */
   footer .menu li {
     text-indent: 0;
   }
 }
-/* line 109, ../sass/theme/_layout.scss */
+/* line 115, ../sass/theme/_layout.scss */
 footer .menu li:last-child {
   margin-bottom: 0;
 }
-/* line 113, ../sass/theme/_layout.scss */
+/* line 119, ../sass/theme/_layout.scss */
 footer .menu a {
   transition: all 0.3s;
   font-size: 12px;
 }
-/* line 117, ../sass/theme/_layout.scss */
+/* line 123, ../sass/theme/_layout.scss */
 footer .menu a:before {
   position: absolute;
   content: '';
@@ -2407,18 +2519,18 @@ footer .menu a:before {
   left: 0;
 }
 
-/* line 128, ../sass/theme/_layout.scss */
+/* line 134, ../sass/theme/_layout.scss */
 .peacegeeks-logo {
   margin: 0 0 20px 50px;
 }
 @media screen and (max-width: 570px) {
-  /* line 128, ../sass/theme/_layout.scss */
+  /* line 134, ../sass/theme/_layout.scss */
   .peacegeeks-logo {
     margin-left: 0;
   }
 }
 
-/* line 136, ../sass/theme/_layout.scss */
+/* line 142, ../sass/theme/_layout.scss */
 .footer-legal {
   background-color: #533058;
   border-top: 1px solid #67486b;
@@ -2428,7 +2540,7 @@ footer .menu a:before {
   text-transform: uppercase;
   width: 100%;
 }
-/* line 145, ../sass/theme/_layout.scss */
+/* line 151, ../sass/theme/_layout.scss */
 .footer-legal div {
   margin: 0 auto;
   width: 75%;
