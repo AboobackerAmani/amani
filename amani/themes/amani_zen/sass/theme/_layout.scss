@@ -84,6 +84,7 @@ div.breadcrumb {
 			line-height:1.4em;
 			color:$blue;
 			font-weight:300;
+			letter-spacing:-1px;
 		}
 
 		.paragraphs-items-field-paragraphs {
@@ -399,6 +400,203 @@ div.breadcrumb {
 			}
 		
 		}
+		
+		/* Supporters/Sponsors page */
+		
+		.paragraphs-item-add-a-view {
+			display:block;
+			float:left;
+			.view-id-sponsors.view-display-id-block_1 {
+				 display:block;
+				 margin-top:-3em;
+				.views-row {
+					display:block;
+					float:left;
+					width:100%;
+				}
+				
+				.views-column {
+					display:block;
+					float:left;
+					width:222px;
+					margin-right:1em;
+					background:$soft-grey;
+					padding:2em .2em;
+					margin-bottom:2em;
+					&.views-column-last {
+						margin-right:0;
+					}
+				}
+				
+				.views-field-field-sponsor-logo {
+					img {
+						height:auto;
+						max-width:190px;
+						margin:0 auto;
+						display:block;
+					}
+				}
+				
+				.views-field-title {
+					display:none;
+					text-align:center;
+					text-transform:uppercase;
+					font-weight:400;
+					font-size:1em;
+				}
+				
+				.views-field-field-short-sponsor-info {
+					display:none;
+					text-align:center;
+					text-transform:lowercase;
+					font-weight:400;
+					font-size:1em;
+				}
+				
+				
+			}
+			
+			.view-id-sponsors.view-display-id-page {
+				display:block;
+				width:100%;
+				float:left;
+				
+				h3 {
+					font-size: 1.4em;
+					  font-weight: 600;
+					  text-transform: uppercase;
+					  margin-bottom: 16px;
+				}
+				
+				.views-row {
+					display:block;
+					float:left;
+					width:100%;
+				}
+				
+				.views-column {
+					display:block;
+					float:left;
+					width:226px;
+					margin-right:1em;
+					background:$soft-grey;
+					padding:2em .2em;
+					margin-bottom:2em;
+					&.views-column-last {
+						margin-right:0;
+					}
+				}
+				
+				.views-field-field-sponsor-logo {
+					img {
+						height:auto;
+						max-width:190px;
+						margin:0 auto;
+						display:block;
+					}
+				}
+				
+				.views-field-title {
+					display:none;
+					text-align:center;
+					text-transform:uppercase;
+					font-weight:400;
+					font-size:1em;
+				}
+				
+				.views-field-field-short-sponsor-info {
+					display:none;
+					text-align:center;
+					text-transform:lowercase;
+					font-weight:400;
+					font-size:1em;
+				}
+				.views-exposed-form {
+					display:block;
+					width:100%;
+					padding:1em 2em;
+					background:$soft-grey;
+					margin-bottom:2em;
+					#edit-field-sponsor-group-tid-wrapper > label {
+			
+							text-transform:uppercase;
+							display:block;
+							width:100%;
+							margin-bottom:1em;
+				
+					}
+					.form-item {
+						display:inline-block;
+						background:white;
+						font-weight:300;
+						font-style:italic;
+						padding:.2em .6em;
+				
+						input[type="radio"] {
+							display:none;
+						}
+				
+						label {
+							cursor:pointer;
+						}
+					}
+					
+					
+				}
+			
+			
+			}
+			
+			/* Highlighted sponsor */
+			
+			.view-id-sponsors.view-display-id-block_3 {
+			
+				padding-right: 3000px;
+				  margin-right: -3000px;
+				  background: #E6E6E6;
+				  padding-left: 3000px;
+				  margin-left: -3000px;
+				  padding-top: 1em;
+				  padding-bottom: 7em;
+				  clear: both;
+				  display: block;
+				  float: left;
+				  margin-bottom:-201px;
+			
+				h3 {
+					font-size: 1.4em;
+					font-weight: 600;
+					text-transform: uppercase;
+					margin-bottom: 20px;
+				}
+				
+				.views-field-field-sponsor-logo {
+					display:block;
+					float:left;
+				}
+				
+				.views-field-title {
+					font-size: 3em;
+					  line-height: 1.4em;
+					  color: $blue;
+					  font-weight: 300;
+					  letter-spacing: -1px;
+					  display:block;
+					  float:left;
+					  margin-left:30px;
+				}
+				
+				.views-field-body {
+					display:block;
+					margin-left:250px;
+					float:left;
+					margin-top:-30px;
+					font-size:1.1em;
+					line-height:1.6em;
+				}
+			
+			}
+		}
 	
 	}
 	
@@ -513,6 +711,9 @@ div.breadcrumb {
 	}
 
 
+	
+	
+	
 
 
 

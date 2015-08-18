@@ -115,7 +115,7 @@ Drupal.behaviors.paragraphs_adjustments = {
 	});
 	
 
-// Set anchorlink boxes to same height
+// Set anchorlink and other boxes to same height
 
 	  if ($('body.node-type-structure').length) {
   
@@ -134,7 +134,21 @@ Drupal.behaviors.paragraphs_adjustments = {
 			'margin-top':'-38px',
 			'margin-bottom':'0'
 		}).addClass('shorterlinkbox').find('span').removeClass('first-word');
+		
+		
+		// Sponsor logo boxes
+		
+		/*var divSponsorHeights = $('.view-sponsors.view-display-id-block_1 .views-column').map(function() {
 	
+			return $(this).height();
+		
+		}).get();
+	
+		var maxSponsorHeight = Math.max.apply(null, divSponsorHeights);
+	
+		$('.view-sponsors.view-display-id-block_1 .views-column').height(maxSponsorHeight);*/
+		
+			
 	  }	
 	  
 
