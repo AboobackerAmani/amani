@@ -3,9 +3,9 @@
  * Style for front page blocks.
  */
 
-// Main
+// three content blocks
 .front-page-blocks {
-
+  margin-bottom: 50px;
   text-align: center;
 
   .views-row {
@@ -43,4 +43,119 @@
       }
     }
   }
+}
+
+// Twitter, Facebook, calendar blocks
+
+#block-views-front-page-tweets-block,
+#block-fb-likebox-0.block-fb-likebox,
+#block-views-calendar-of-events-block-3 {
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px 30px;
+  width: 23%;
+  height: 370px;
+  padding-top: 37px;
+}
+
+
+// facebook block
+#block-fb-likebox-0.block-fb-likebox {
+  iframe {
+    height: 397px !important;
+  }
+}
+
+// background image block
+.fb-twit-cal-bgimage {
+  position: absolute;
+  top: -400px;
+  z-index: -10;
+  margin-bottom: 100px;
+
+  img {
+    height: 500px;
+  }
+}
+
+// Twitter block
+#block-views-front-page-tweets-block {
+  margin-left: 30px;
+
+  .home-page-twitter-block {
+    text-transform: uppercase;
+    background: rgba(0,0,0, 0.5);
+
+    .view-header {
+      margin-bottom: 30px;
+      color: white;
+      font-size: 1.5em;
+    }
+
+    .view-content {
+
+      .views-row {
+        color: white;
+        margin-bottom: 20px;
+
+        .views-field-text{
+          display: block;
+
+          a {
+            color: #ce9bc0;
+          }
+        }
+
+        .views-field-created-time {
+          font-size: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+// calendar block
+#block-views-calendar-of-events-block-3 {
+  .view-calendar-of-events {
+    background: rgba(0,0,0, 0.5);
+
+    .view-header {
+      color: white;
+      font-size: 1.5em;
+      text-transform: uppercase;
+
+      &::before {
+        // TODO: icon here
+      }
+    }
+
+    .calendar-calendar {
+      // calendar date cell size
+      .month-view .full td .inner div.day {
+        width: 30px;
+      }
+      .month-view .full tr.single-day .no-entry,
+      .month-view .full tr.single-day .no-entry .inner {
+        height: 20px !important;
+      }
+
+      // remove background colors
+      * {
+        background: transparent;
+        color: white;
+      }
+
+      th {
+        background: rgba(255,255,255,0.3);
+      }
+    }
+
+    .date-nav-wrapper .date-nav {
+      margin-bottom: -38px;
+    }
+  }
+}
+
+#block-views-news-and-events-block-1 {
+  margin-top: 120px;
 }

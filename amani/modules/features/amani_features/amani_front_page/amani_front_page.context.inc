@@ -65,18 +65,7 @@ function amani_front_page_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'quicktabs-social_media_feeds' => array(
-          'module' => 'quicktabs',
-          'delta' => 'social_media_feeds',
-          'region' => 'sidebar_second',
-          'weight' => '2',
-        ),
-      ),
-    ),
-  );
+  $context->reactions = array();
   $context->condition_mode = 1;
 
   // Translatables
