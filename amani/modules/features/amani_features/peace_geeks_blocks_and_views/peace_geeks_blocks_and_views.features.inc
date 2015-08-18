@@ -15,6 +15,13 @@ function peace_geeks_blocks_and_views_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function peace_geeks_blocks_and_views_views_api() {
+  return array("version" => "3.0");
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function peace_geeks_blocks_and_views_image_default_styles() {
@@ -56,6 +63,52 @@ function peace_geeks_blocks_and_views_image_default_styles() {
           'anchor' => 'center-center',
         ),
         'weight' => '2',
+      ),
+    ),
+  );
+
+  // Exported image style: team_profile_photo.
+  $styles['team_profile_photo'] = array(
+    'name' => 'team_profile_photo',
+    'label' => 'Team Profile Photo',
+    'effects' => array(
+      4 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '230',
+          'height' => '306',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: team_solo_page_profile.
+  $styles['team_solo_page_profile'] = array(
+    'name' => 'team_solo_page_profile',
+    'label' => 'Team Solo Page Profile',
+    'effects' => array(
+      5 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '270',
+          'height' => '330',
+        ),
+        'weight' => '1',
       ),
     ),
   );

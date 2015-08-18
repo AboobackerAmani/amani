@@ -160,6 +160,43 @@ Drupal.behaviors.paragraphs_adjustments = {
 	
 	});
 	
+	
+// Dynamically resize banner images when browser width is greater than 1200px
+
+	var $window = $(window);
+    
+
+    function checkWidth() {
+        var windowsize = $window.width();
+        if (windowsize > 1200) {
+           /*$('.field-name-field-banner-image img').css({
+           		'max-width':windowsize + (windowsize/4),
+           		'width':windowsize + (windowsize/4),
+           		'height':'auto',
+           		'margin-left':'-25%'
+           	
+           });
+           var imgsrc = $('.field-name-field-banner-image img').attr('src');
+           $('.field-name-field-banner-image').css({
+           		'background':'url(' + imgsrc + ')',
+           		'background-size':'cover',
+           		'background-repeat':'no-repeat'
+           	});*/
+         
+        }
+    }
+    // Execute on load
+    checkWidth();
+    // Bind event listener
+    $(window).resize(checkWidth);
+
+
+
+
+// Team page adjustments, hover effects, etc
+
+
+	
 // Faux quicktabs functionality for Values block	
 	
 	$('#value-a').click(function() {

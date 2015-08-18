@@ -11,6 +11,10 @@
   position: relative;
 }
 
+body {
+	overflow-x:hidden;
+}
+
 input:focus,
 select:focus,
 textarea:focus,
@@ -18,6 +22,9 @@ button:focus {
   outline: none;
 }
 
+/* Hide stupid email this page links */
+
+ul.links.inline {display:none;}
 
 
 div.breadcrumb {
@@ -394,4 +401,119 @@ div.breadcrumb {
 		}
 	
 	}
+	
+	
+	/* Team Pages */
+	
+	body.page-team {
+	
+		#main {padding-top:3em;padding-bottom:8em;}
+	
+		h1#page-title {display:none;}
+		
+		h2 {
+			font-size:3em;
+			line-height:1.4em;
+			color:$blue;
+			font-weight:300;
+			letter-spacing:-1px;
+		}
+	
+		.views-exposed-form {
+			display:block;
+			width:100%;
+			padding:1em 2em;
+			background:$soft-grey;
+			margin-bottom:2em;
+			#edit-field-team-member-type-tid-wrapper > label {
+			
+					text-transform:uppercase;
+					display:block;
+					width:100%;
+					margin-bottom:1em;
+				
+			}
+			.form-item {
+				display:inline-block;
+				background:white;
+				font-weight:300;
+				font-style:italic;
+				padding:.2em .6em;
+				
+				input[type="radio"] {
+					display:none;
+				}
+				
+				label {
+					cursor:pointer;
+				}
+			}
+		}
+		
+		.views-responsive-grid {
+		
+			.views-row {
+				display:block;
+				float:left;
+				width:100%;
+			}
+			
+			.views-column {
+				display:block;
+				width:226px;
+				margin-right:14px;
+				float:left;
+				background:$soft-grey;
+				margin-bottom:2em;
+				padding-bottom:1em;
+				&.views-column-last {
+					margin-right:0;
+				}
+			}
+			
+			.views-field-title {
+				padding:.4em 1em;
+				text-transform:uppercase;
+				letter-spacing:.5px;
+			}
+			
+			.views-field-field-team-image {
+				
+			}
+			
+			.views-field-field-team-title {
+				padding:.4em 1em;
+			}
+			
+			.views-field-field-team-bio {
+				padding:.4em 1em;
+			}
+		
+		}
+	
+	}
+
+	body.node-type-team {
+	
+		#main {padding-top:5em;padding-bottom:5em;min-height:700px;}
+		
+		h1#page-title {display:none;}
+		
+		.field-name-field-team-image {
+			display:block;
+			float:left;
+		}
+		.group-right {
+			display:block;
+			float:right;
+			width:414px;
+		}
+		
+		
+	}
+
+
+
+
+
 }
