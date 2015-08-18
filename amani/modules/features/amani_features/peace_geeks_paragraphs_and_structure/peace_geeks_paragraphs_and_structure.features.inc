@@ -69,6 +69,11 @@ function peace_geeks_paragraphs_and_structure_node_info() {
  */
 function peace_geeks_paragraphs_and_structure_paragraphs_info() {
   $items = array(
+    'add_a_view' => array(
+      'name' => 'Add a View',
+      'bundle' => 'add_a_view',
+      'locked' => '1',
+    ),
     'callout_box_full_width_grey' => array(
       'name' => 'Callout Box - Full Width - Grey',
       'bundle' => 'callout_box_full_width_grey',

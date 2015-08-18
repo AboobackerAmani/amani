@@ -83,6 +83,95 @@ function peace_geeks_paragraphs_and_structure_field_default_fields() {
     ),
   );
 
+  // Exported field: 'paragraphs_item-add_a_view-field_add_view'.
+  $fields['paragraphs_item-add_a_view-field_add_view'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_add_view',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'viewfield',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'viewfield',
+    ),
+    'field_instance' => array(
+      'bundle' => 'add_a_view',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'viewfield',
+          'settings' => array(),
+          'type' => 'viewfield_default',
+          'weight' => '0',
+        ),
+        'paragraphs_editor_preview' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'paragraphs_item',
+      'field_name' => 'field_add_view',
+      'label' => 'Add View',
+      'required' => 0,
+      'settings' => array(
+        'allowed_views' => array(
+          'about_page' => 0,
+          'activities' => 'activities',
+          'admin_views_comment' => 0,
+          'admin_views_node' => 0,
+          'admin_views_user' => 0,
+          'advanced_forum_active_topics' => 0,
+          'advanced_forum_new_topics' => 0,
+          'advanced_forum_search' => 0,
+          'advanced_forum_topic_list' => 0,
+          'advanced_forum_unanswered_topics' => 0,
+          'article_rss_feed_' => 0,
+          'calendar_of_events' => 0,
+          'content_admin' => 0,
+          'front_page_blocks' => 0,
+          'front_page_slideshow' => 0,
+          'front_page_tweets' => 0,
+          'get_involved' => 0,
+          'incident_reports' => 0,
+          'media_default' => 0,
+          'news_and_events' => 'news_and_events',
+          'news_and_events_blog' => 0,
+          'partners' => 0,
+          'partners_carousel' => 0,
+          'peace_geeks_team' => 'peace_geeks_team',
+          'programs_campaigns' => 0,
+          'resources' => 0,
+          'sponsors' => 'sponsors',
+          'testimonials' => 'testimonials',
+          'tweets' => 0,
+          'webform_analysis' => 0,
+          'webform_results' => 0,
+          'webform_submissions' => 0,
+          'webform_webforms' => 0,
+        ),
+        'force_default' => 0,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'viewfield',
+        'settings' => array(),
+        'type' => 'viewfield_select',
+        'weight' => '41',
+      ),
+    ),
+  );
+
   // Exported field: 'paragraphs_item-callout_box_full_width_grey-field_header_text'.
   $fields['paragraphs_item-callout_box_full_width_grey-field_header_text'] = array(
     'field_config' => array(
@@ -2702,6 +2791,7 @@ function peace_geeks_paragraphs_and_structure_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Add View');
   t('Anchor Name');
   t('Anchor to Link To');
   t('Background Colour');
