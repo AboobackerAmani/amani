@@ -2192,31 +2192,72 @@ div.breadcrumb {
     text-transform: uppercase;
     letter-spacing: .5px;
   }
-  /* line 688, ../sass/theme/_layout.scss */
+  /* line 682, ../sass/theme/_layout.scss */
+  body.page-team .views-responsive-grid .views-field-title a {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+  }
+  /* line 691, ../sass/theme/_layout.scss */
+  body.page-team .views-responsive-grid .views-field-field-team-image {
+    display: block;
+    position: relative;
+    z-index: 10;
+  }
+  /* line 695, ../sass/theme/_layout.scss */
+  body.page-team .views-responsive-grid .views-field-field-team-image:hover {
+    background: #59C2ED;
+    z-index: 10;
+  }
+  /* line 700, ../sass/theme/_layout.scss */
+  body.page-team .views-responsive-grid .views-field-field-team-image img:hover {
+    opacity: 0;
+  }
+  /* line 706, ../sass/theme/_layout.scss */
   body.page-team .views-responsive-grid .views-field-field-team-title {
     padding: .4em 1em;
+    text-transform: uppercase;
+    display: block;
+    float: left;
+    margin-top: -16em;
+    position: relative;
+    z-index: 200;
+    font-weight: 600;
+    width: 88%;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    text-align: center;
   }
-  /* line 692, ../sass/theme/_layout.scss */
+  /* line 720, ../sass/theme/_layout.scss */
+  body.page-team .views-responsive-grid .views-field-field-team-title span.field-content {
+    margin-left: -9999px;
+  }
+  /* line 722, ../sass/theme/_layout.scss */
+  body.page-team .views-responsive-grid .views-field-field-team-title span.field-content:hover {
+    margin-left: 0;
+  }
+  /* line 729, ../sass/theme/_layout.scss */
   body.page-team .views-responsive-grid .views-field-field-team-bio {
-    padding: .4em 1em;
+    padding: .2em 1em .4em 1em;
   }
 
-  /* line 702, ../sass/theme/_layout.scss */
+  /* line 739, ../sass/theme/_layout.scss */
   body.node-type-team #main {
     padding-top: 5em;
     padding-bottom: 5em;
     min-height: 700px;
   }
-  /* line 704, ../sass/theme/_layout.scss */
+  /* line 741, ../sass/theme/_layout.scss */
   body.node-type-team h1#page-title {
     display: none;
   }
-  /* line 706, ../sass/theme/_layout.scss */
+  /* line 743, ../sass/theme/_layout.scss */
   body.node-type-team .field-name-field-team-image {
     display: block;
     float: left;
   }
-  /* line 710, ../sass/theme/_layout.scss */
+  /* line 747, ../sass/theme/_layout.scss */
   body.node-type-team .group-right {
     display: block;
     float: right;

@@ -679,18 +679,55 @@ div.breadcrumb {
 				padding:.4em 1em;
 				text-transform:uppercase;
 				letter-spacing:.5px;
+				a {
+					text-transform:uppercase;
+					font-weight:600;
+					font-size:1.1em;
+					letter-spacing:1px;
+				}
+				
 			}
 			
 			.views-field-field-team-image {
-				
+				display:block;
+				position:relative;
+				z-index:10;
+				&:hover {
+					background:$blue;
+					z-index:10;
+				}
+				img {
+					&:hover {
+						opacity:0;
+					}
+				}
 			}
 			
 			.views-field-field-team-title {
 				padding:.4em 1em;
+				text-transform:uppercase;
+				display:block;
+				float:left;
+				margin-top:-16em;
+				position:relative;
+				z-index:200;
+				font-weight:600;
+				width:88%;
+				font-size:1.1em;
+				letter-spacing:1px;
+				
+				text-align:center;
+				span.field-content {
+					margin-left:-9999px;
+						&:hover {
+						margin-left:0;
+					}
+				}
+				
 			}
 			
 			.views-field-field-team-bio {
-				padding:.4em 1em;
+				padding:.2em 1em .4em 1em;
 			}
 		
 		}
