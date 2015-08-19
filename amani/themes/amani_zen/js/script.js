@@ -27,6 +27,23 @@ Drupal.behaviors.banner_adjustments = {
 };
 
 
+Drupal.behaviors.misc_adjustments = {
+  attach: function(context, settings) {
+
+    $('body.page-team .views-field-field-team-image').hover(
+    	function() {
+    		$(this).next().next().find('span').css('opacity','1');
+    	}, function() {
+    		$(this).next().next().find('span').css('opacity','0')
+    	}
+    	
+    );
+    
+
+  }
+};
+
+
 Drupal.behaviors.paragraphs_adjustments = {
   attach: function(context, settings) {
 

@@ -718,10 +718,9 @@ div.breadcrumb {
 				
 				text-align:center;
 				span.field-content {
-					margin-left:-9999px;
-						&:hover {
-						margin-left:0;
-					}
+					opacity:0;
+					display:block;
+
 				}
 				
 			}
