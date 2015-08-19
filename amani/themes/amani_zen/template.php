@@ -180,3 +180,14 @@ function amani_zen_form_alter(&$form, &$form_state, $form_id) {
 
 }
 
+/**
+ * Customize the calendar pager
+ */
+function amani_zen_preprocess_date_views_pager(&$vars) {
+  $datetime = DateTime::createFromFormat('l, F d, Y', $vars['nav_title']);
+  $month = $datetime->format('F');
+  $year = $datetime->format('Y');
+  $vars['nav_title'] = "<span class='month'>$month</span> - $year";
+
+  $vars['mini'] = TRUE;
+}

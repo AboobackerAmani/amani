@@ -45,6 +45,11 @@
   }
 }
 
+//
+.page-home .contextual-links-region {
+  position: initial;
+}
+
 // Twitter, Facebook, calendar blocks
 
 #block-views-front-page-tweets-block,
@@ -53,25 +58,34 @@
   display: inline-block;
   vertical-align: top;
   margin: 20px 30px;
-  width: 23%;
+  width: 290px;
   height: 370px;
   padding-top: 37px;
+  text-align: left;
+
+  .view {
+    padding: 10px;
+  }
 }
 
 
 // facebook block
 #block-fb-likebox-0.block-fb-likebox {
   iframe {
-    height: 397px !important;
+    height: 386.5px !important;
+    min-height: 386.5px !important;
   }
 }
 
 // background image block
 .fb-twit-cal-bgimage {
   position: absolute;
-  top: -400px;
+  top: 340px;
   z-index: -10;
   margin-bottom: 100px;
+  margin-right: -10%;
+  margin-left: -10%;
+  overflow: hidden;
 
   img {
     height: 500px;
@@ -81,15 +95,34 @@
 // Twitter block
 #block-views-front-page-tweets-block {
   margin-left: 30px;
+  font-family: $avenir-condensed;
+  min-height: 387px;
 
   .home-page-twitter-block {
     text-transform: uppercase;
     background: rgba(0,0,0, 0.5);
+    padding: 16px;
 
     .view-header {
-      margin-bottom: 30px;
+      margin-bottom: 16.5px;
       color: white;
       font-size: 1.5em;
+      letter-spacing: 2px;
+
+      * {
+        display: inline-block;
+      }
+
+      &::before {
+        content: "";
+        background: url("../images/icon-twitter.png") 100%;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        margin-bottom: 5px;
+      }
     }
 
     .view-content {
@@ -100,6 +133,7 @@
 
         .views-field-text{
           display: block;
+          letter-spacing: 1.2px;
 
           a {
             color: #ce9bc0;
@@ -116,6 +150,9 @@
 
 // calendar block
 #block-views-calendar-of-events-block-3 {
+
+  font-family: $avenir;
+
   .view-calendar-of-events {
     background: rgba(0,0,0, 0.5);
 
@@ -123,39 +160,124 @@
       color: white;
       font-size: 1.5em;
       text-transform: uppercase;
+      font-family: $avenir-condensed;
+      letter-spacing: 2px;
+      padding: 6px;
+
+      * {
+        display: inline-block;
+      }
 
       &::before {
-        // TODO: icon here
+        content: "";
+        background: url("../images/icon-cal.png") 100%;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        margin-bottom: 5px;
+      }
+
+      p {
+        margin: 0;
       }
     }
 
     .calendar-calendar {
-      // calendar date cell size
-      .month-view .full td .inner div.day {
-        width: 30px;
+      table {
+        border-collapse: separate;
+        border-spacing: 5px 7px;
+        min-height: 290px;
       }
+
+      .month-view .full td .inner div.day {
+        width: 28px;
+        margin-top: auto;
+      }
+
+      tr, td {
+        vertical-align: bottom;
+      }
+
       .month-view .full tr.single-day .no-entry,
       .month-view .full tr.single-day .no-entry .inner {
         height: 20px !important;
       }
 
-      // remove background colors
+      // set background colors
       * {
         background: transparent;
         color: white;
       }
-
       th {
         background: rgba(255,255,255,0.3);
       }
+      th.days {
+        border: none;
+        font-weight: 300;
+      }
+
+      tr.single-day {
+        display: none;
+      }
+
+      .date-box {
+        td {
+          border: 0;
+          background: rgba(0,0,0,0.7);
+          padding: 0;
+
+          .day {
+            text-align: right;
+          }
+        }
+      }
     }
 
-    .date-nav-wrapper .date-nav {
-      margin-bottom: -38px;
+    .date-nav-wrapper {
+
+      .date-nav {
+        margin-bottom: -38px;
+      }
+
+      .date-heading {
+        color: white;
+        font-size: 0.7em;
+
+        h3 {
+          font-family: $avenir-condensed;
+          text-transform: uppercase;;
+          font-weight: 400;
+
+          .month {
+            color: #ce9bc0;
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+
+    .pager {
+      list-style-type: none;
+      color: white;
+
+      li {
+        background: none;
+
+        a {
+          font-weight: 100;
+          font-size: 3em;
+          outline: none;
+          font-family: $avenir;
+        }
+      }
+
     }
   }
 }
 
 #block-views-news-and-events-block-1 {
   margin-top: 120px;
+  text-align: left;
 }
