@@ -9,19 +9,19 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
+body {
+  overflow-x: hidden;
+}
+
 #main {
   min-height: 300px;
   padding-bottom: 20px;
 }
 
-#page {
-  max-width: 100%;
-}
 #content {
-  padding-left: 0px;
-  padding-right: 0px;
+  position: relative;
+  text-align: center;;
 }
-
 
 
 ///////////////////////////////////////////////////////////////////////////////

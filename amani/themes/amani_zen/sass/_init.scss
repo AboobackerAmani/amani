@@ -160,3 +160,21 @@ $desktop: 960px;
 
 // Now we add our custom helper mixins.
 @import "mixins";
+
+
+// include custom fonts
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/Avenir/Avenir Next/Avenir Next.ttc');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next Condensed';
+  src: url('../fonts/Avenir/Avenir Next Condensed/Avenir Next Condensed.ttc');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$avenir:       "Avenir", sans-serif;
+$avenir-condensed: "Avenir Next Condensed", sans-serif;
