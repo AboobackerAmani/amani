@@ -39,6 +39,8 @@ Drupal.behaviors.misc_adjustments = {
     	
     );
     
+    
+    
 
   }
 };

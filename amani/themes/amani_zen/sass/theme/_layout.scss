@@ -401,6 +401,75 @@ div.breadcrumb {
 		
 		}
 		
+		
+		/* Media kit page */
+		
+		.view-peace-geeks-resources {
+			
+			.view-header h3 {
+				font-size:1.4em;
+				font-weight:600;
+				text-transform:uppercase;
+				margin-bottom:16px;
+			}
+			
+			.views-row {
+				background:$soft-grey;
+				display:block;
+				width:100%;
+				float:left;
+				margin-bottom:2em;
+				height:194px;
+				
+				.views-field-field-image {
+					display:block;
+					float:left;
+					margin-right:2em;
+				}	
+				.views-field-title {
+					font-size:1.2em;
+					font-weight:600;
+					color:$blue;
+					margin-top:1.8em;
+					margin-bottom:.4em;
+					text-transform:uppercase;
+				}
+				
+				.views-field-field-date {
+					font-style:italic;
+					margin-bottom:.4em;
+				}
+				
+				.views-field-body {
+					width:90%;
+					display:block;
+				}
+				
+				.views-field-nothing {
+					a {
+						color:$text-black;
+						text-transform:uppercase;
+					}
+				}
+			}
+			
+			&.view-display-id-block {
+			
+				.view-content {
+					display:block;
+					width:100%;
+					float:left;
+					margin-top:2em;
+				}
+				
+				
+			
+			
+			}
+		
+		
+		}
+		
 		/* Supporters/Sponsors page */
 		
 		.paragraphs-item-add-a-view {
