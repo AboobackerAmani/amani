@@ -191,3 +191,25 @@ function amani_zen_preprocess_date_views_pager(&$vars) {
 
   $vars['mini'] = TRUE;
 }
+
+/**
+* Implements theme_menu_link().
+* Adds menu description under main menu
+*/
+function amani_zen_menu_link(array $variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+  $element['#localized_options']['html'] = TRUE;
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+
+  if ($element['#original_link']['menu_name'] == "menu-social-media" && isset($element['#localized_options']['attributes']['title'])){
+    $social_media_name = strtolower($element['#title']);
+    $element['#attributes']['class'][] = 'social-media-' . $social_media_name;
+  }
+
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}

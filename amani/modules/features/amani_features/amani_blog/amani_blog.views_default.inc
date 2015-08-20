@@ -129,7 +129,7 @@ function amani_blog_views_default_views() {
   $handler->display->display_options['fields']['title_1']['field'] = 'title';
   $handler->display->display_options['fields']['title_1']['label'] = '';
   $handler->display->display_options['fields']['title_1']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title_1']['alter']['text'] = '(more)';
+  $handler->display->display_options['fields']['title_1']['alter']['text'] = 'Read More';
   $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['path'] = 'blog';
   $handler->display->display_options['menu']['title'] = 'Blog';
@@ -267,8 +267,9 @@ function amani_blog_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
-    t('(more)'),
+    t('Read More'),
     t('Block'),
+    t('(more)'),
     t('Other News'),
     t('Front Page'),
     t('Latest News'),
