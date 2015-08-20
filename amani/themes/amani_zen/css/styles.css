@@ -204,13 +204,13 @@ audio:not([controls]) {
 html {
   font-family: "Open Sans", sans-serif;
   /* 1 */
-  font-size: 81.25%;
+  font-size: 100%;
   /* 3 */
   -ms-text-size-adjust: 100%;
   /* 2 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
-  line-height: 1.53846em;
+  line-height: 1.25em;
 }
 
 /* Remove default margin. */
@@ -266,13 +266,13 @@ a:hover {
 /* line 172, ../sass/_normalize.scss */
 p,
 pre {
-  margin: 0 0 1.53846em 0;
+  margin: 0 0 1.25em 0;
 }
 
 /* line 176, ../sass/_normalize.scss */
 blockquote {
   /* Also indent the quote on both sides. */
-  margin: 0 0 1.53846em 20px;
+  margin: 0 0 1.25em 20px;
 }
 
 /**
@@ -283,50 +283,50 @@ blockquote {
 h1 {
   /* Set the font-size and line-height while keeping a proper vertical rhythm. */
   font-size: 2.15em;
-  line-height: 1.43113em;
+  line-height: 1.16279em;
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
-  margin-top: 0.71556em;
-  margin-bottom: 0.71556em;
+  margin-top: 0.5814em;
+  margin-bottom: 0.5814em;
 }
 
 /* line 193, ../sass/_normalize.scss */
 h2 {
   font-size: 1.61em;
-  line-height: 1.91113em;
-  margin-top: 0.95557em;
-  margin-bottom: 0.95557em;
+  line-height: 1.5528em;
+  margin-top: 0.7764em;
+  margin-bottom: 0.7764em;
 }
 
 /* line 198, ../sass/_normalize.scss */
 h3 {
   font-size: 1.23em;
-  line-height: 1.25078em;
-  margin-top: 1.25078em;
-  margin-bottom: 1.25078em;
+  line-height: 2.03252em;
+  margin-top: 1.01626em;
+  margin-bottom: 1.01626em;
 }
 
 /* line 203, ../sass/_normalize.scss */
 h4 {
   font-size: 1em;
-  line-height: 1.53846em;
-  margin-top: 1.53846em;
-  margin-bottom: 1.53846em;
+  line-height: 1.25em;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
 }
 
 /* line 208, ../sass/_normalize.scss */
 h5 {
   font-size: 0.83em;
-  line-height: 1.85357em;
-  margin-top: 1.85357em;
-  margin-bottom: 1.85357em;
+  line-height: 1.50602em;
+  margin-top: 1.50602em;
+  margin-bottom: 1.50602em;
 }
 
 /* line 213, ../sass/_normalize.scss */
 h6 {
   font-size: 0.67em;
-  line-height: 2.29621em;
-  margin-top: 2.29621em;
-  margin-bottom: 2.29621em;
+  line-height: 1.86567em;
+  margin-top: 1.86567em;
+  margin-bottom: 1.86567em;
 }
 
 /* Address styling not present in IE 8/9, Safari 5, and Chrome. */
@@ -357,7 +357,7 @@ hr {
   height: 0;
   border: 1px solid #666;
   padding-bottom: -1px;
-  margin: 1.53846em 0;
+  margin: 1.25em 0;
 }
 
 /* Address styling not present in IE 8/9. */
@@ -376,7 +376,7 @@ samp,
 tt,
 var {
   font-size: 1em;
-  line-height: 1.53846em;
+  line-height: 1.25em;
 }
 
 /* Improve readability of pre-formatted text in all browsers. */
@@ -426,7 +426,7 @@ menu,
 ol,
 ul {
   /* Address margins set differently in IE 6/7. */
-  margin: 0 0 1.53846em 0;
+  margin: 0 0 1.25em 0;
 }
 
 /* line 313, ../sass/_normalize.scss */
@@ -489,18 +489,18 @@ fieldset {
   margin: 0 2px;
   /* Apply borders and padding that keep the vertical rhythm. */
   border-color: #c0c0c0;
-  border-top-width: 0.07692em;
+  border-top-width: 0.0625em;
   border-top-style: solid;
-  padding-top: 0.46154em;
-  border-bottom-width: 0.07692em;
+  padding-top: 0.375em;
+  border-bottom-width: 0.0625em;
   border-bottom-style: solid;
-  padding-bottom: 0.92308em;
-  border-left-width: 0.07692em;
+  padding-bottom: 0.75em;
+  border-left-width: 0.0625em;
   border-left-style: solid;
-  padding-left: 0.92308em;
-  border-right-width: 0.07692em;
+  padding-left: 0.75em;
+  border-right-width: 0.0625em;
   border-right-style: solid;
-  padding-right: 0.92308em;
+  padding-right: 0.75em;
 }
 
 /**
@@ -673,8 +673,8 @@ table {
   /* Prevent cramped-looking tables */
   /* width: 100%; */
   /* Add vertical rhythm margins. */
-  margin-top: 1.53846em;
-  margin-bottom: 1.53846em;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
 }
 
 /**
@@ -1100,7 +1100,7 @@ body.not-logged-in #page {
     border: 0;
     padding: 0;
     font-size: 14px;
-    font-size: 1.07692rem;
+    font-size: 0.875rem;
     float: none;
     display: inline;
   }
@@ -1112,7 +1112,7 @@ body.not-logged-in #page {
   #header #block-system-main-menu ul.menu a {
     color: #474f5e;
     font-size: 16px;
-    font-size: 1.23077rem;
+    font-size: 1rem;
     font-weight: 400;
     letter-spacing: 1px;
     line-height: 16px;
@@ -1136,8 +1136,8 @@ body.not-logged-in #page {
     background: #474F5E;
     display: block;
     position: absolute;
-    top: 34px;
-    width: 932px;
+    top: 35px;
+    width: 100%;
     text-align: center;
     padding: 1em;
   }
@@ -1197,7 +1197,7 @@ body.not-logged-in #page {
 #navigation li {
   border-right: 1px solid;
   font-size: 14px;
-  font-size: 1.07692rem;
+  font-size: 0.875rem;
 }
 /* line 215, ../sass/components/_menus.scss */
 #navigation li:last-child {
@@ -1271,7 +1271,7 @@ div[id*="block-menu-menu-social-media"] li {
  */
 /* line 36, ../sass/components/_blocks.scss */
 .block-menu ul.menu {
-  margin: 0 0 1.53846em 0;
+  margin: 0 0 1.25em 0;
   padding: 0;
 }
 /* line 40, ../sass/components/_blocks.scss */
@@ -1308,7 +1308,7 @@ div[id*="block-menu-menu-social-media"] li {
 #block-search-form .form-text {
   background-color: #E6E6E6;
   font-size: 12px;
-  font-size: 0.92308rem;
+  font-size: 0.75rem;
   font-weight: normal;
   line-height: 12px;
   height: 24px;
@@ -1457,7 +1457,7 @@ div[id*="block-menu-menu-social-media"] li {
   #content a[href]:after {
     content: " (" attr(href) ")";
     font-weight: normal;
-    font-size: 13px;
+    font-size: 16px;
   }
   /* line 34, ../sass/_print.scss */
   #content a[href^="javascript:"]:after,
@@ -1518,7 +1518,7 @@ div[id*="block-menu-menu-social-media"] li {
 #header,
 #main,
 #footer {
-  max-width: 960px;
+  max-width: 1280px;
   margin: 0 auto;
   position: relative;
 }
@@ -1556,7 +1556,7 @@ div.breadcrumb {
   /* line 42, ../sass/theme/_layout.scss */
   #content {
     margin: 0 auto;
-    width: 726px;
+    width: 980px;
     min-height: 0 !important;
   }
   /* line 45, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
@@ -2517,7 +2517,7 @@ div.breadcrumb {
 /* line 98, ../sass/theme/_footer.scss */
 #footer #block-menu-menu-amani-main-menu li a {
   font-size: 14px;
-  font-size: 1.07692rem;
+  font-size: 0.875rem;
   letter-spacing: 0.5px;
 }
 /* line 103, ../sass/theme/_footer.scss */
@@ -2559,7 +2559,7 @@ div.breadcrumb {
 
 /* line 31, ../sass/theme/_header.scss */
 #header {
-  width: 970px;
+  width: 1280px;
   z-index: 9;
   background-color: #fff;
 }
@@ -2595,7 +2595,7 @@ div.breadcrumb {
 #navigation a {
   padding: 0 16px;
   font-size: 16px;
-  font-size: 1.23077rem;
+  font-size: 1rem;
   font-weight: 200;
   line-height: 16px;
   letter-spacing: 1px;
@@ -2626,7 +2626,7 @@ div[id*="block-menu-menu-social-media"] a {
   font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
   font-size: 20px;
-  font-size: 1.53846rem;
+  font-size: 1.25rem;
 }
 /* line 63, ../sass/_mixins.scss */
 div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social-media"] a:hover, div[id*="block-menu-menu-social-media"] a:active {
@@ -2675,7 +2675,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   -moz-box-shadow: 3px 8px 5px 0px #e0dde0;
   box-shadow: 3px 8px 5px 0px #e0dde0;
   font-size: 17px;
-  font-size: 1.30769rem;
+  font-size: 1.0625rem;
   line-height: 1;
   font-wight: 200;
   padding: 15px 30px 12px;
@@ -2724,7 +2724,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   }
   /* line 12, ../sass/theme/_banner.scss */
   #banner .block-bean {
-    width: 1200px;
+    width: 1440px;
     display: block;
     margin: 0 auto;
     position: relative;
@@ -2742,7 +2742,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     background: #E6E6E6;
     overflow: hidden;
   }
-  /* line 31, ../sass/theme/_banner.scss */
+  /* line 29, ../sass/theme/_banner.scss */
+  #banner .block-bean .field-name-field-banner-image img {
+    width: 1440px;
+    height: auto;
+  }
+  /* line 35, ../sass/theme/_banner.scss */
   #banner .block-bean .field-name-field-banner-text {
     display: block;
     background: #59C2ED;
@@ -2759,7 +2764,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     line-height: 1.2em;
     z-index: 20;
   }
-  /* line 48, ../sass/theme/_banner.scss */
+  /* line 52, ../sass/theme/_banner.scss */
   #banner .block-bean .field-name-field-header-text {
     display: block;
     float: left;
