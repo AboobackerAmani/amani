@@ -2814,6 +2814,10 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
 }
 /* Overrides for pages based on body classes */
 @media all and (min-width: 768px) {
+  /* line 6, ../sass/theme/_page_specific.scss */
+  body.programspage {
+    /* News card */
+  }
   /* line 8, ../sass/theme/_page_specific.scss */
   body.programspage .paragraphs-item-paragraph-text-with-anchor {
     border-top: 0;
@@ -2859,7 +2863,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   /* line 43, ../sass/theme/_page_specific.scss */
   body.programspage .linkboxtall .paragraphs-item-link-block-grey a {
     width: 186px;
-    height: 310px !important;
+    height: 342px !important;
     margin-top: 0 !important;
     line-height: 1.4em;
   }
@@ -2877,7 +2881,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-left: -5%;
     margin-top: 1em;
   }
-  /* line 64, ../sass/theme/_page_specific.scss */
+  /* line 66, ../sass/theme/_page_specific.scss */
   body.programspage .view-peace-geeks-news-and-events.view-display-id-block_2 {
     display: block;
     float: left;
@@ -2885,24 +2889,25 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     background: #F09416;
     color: white;
     padding-bottom: 2em;
-    height: 354px;
+    height: 384px;
     margin-left: 5em;
+    width: 340px;
   }
-  /* line 73, ../sass/theme/_page_specific.scss */
+  /* line 76, ../sass/theme/_page_specific.scss */
   body.programspage .view-peace-geeks-news-and-events.view-display-id-block_2 a {
     color: white;
   }
-  /* line 77, ../sass/theme/_page_specific.scss */
+  /* line 80, ../sass/theme/_page_specific.scss */
   body.programspage .view-peace-geeks-news-and-events.view-display-id-block_2 .views-field-title {
     font-size: 1.8em;
-    line-height: 2.3em;
-    padding: 0 1em .2em 1em;
+    line-height: 1.4em;
+    padding: .4em 1em 1em 1em;
     font-weight: 600;
     letter-spacing: 1px;
     display: block;
     width: 100%;
   }
-  /* line 87, ../sass/theme/_page_specific.scss */
+  /* line 90, ../sass/theme/_page_specific.scss */
   body.programspage .view-peace-geeks-news-and-events.view-display-id-block_2 .views-field-created {
     display: block;
     float: left;
@@ -2910,7 +2915,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 1.2em;
     font-weight: 300;
   }
-  /* line 95, ../sass/theme/_page_specific.scss */
+  /* line 98, ../sass/theme/_page_specific.scss */
   body.programspage .view-peace-geeks-news-and-events.view-display-id-block_2 .views-field-comment-count {
     display: block;
     float: right;
@@ -2918,7 +2923,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 1.2em;
     font-weight: 300;
   }
-  /* line 108, ../sass/theme/_page_specific.scss */
+  /* line 111, ../sass/theme/_page_specific.scss */
   body.programspage div.paragraphs-item-light-grey-text-box-with-link-to a.anchorlink {
     color: white;
     text-align: left;
@@ -2929,7 +2934,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     width: 296px;
     margin-bottom: 1.8em;
   }
-  /* line 117, ../sass/theme/_page_specific.scss */
+  /* line 120, ../sass/theme/_page_specific.scss */
   body.programspage div.paragraphs-item-light-grey-text-box-with-link-to a.anchorlink.darkbackground {
     background: #474F5E;
     margin-right: 0;
