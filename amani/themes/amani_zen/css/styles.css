@@ -1050,29 +1050,28 @@ body {
 #block-views-calendar-of-events-block-3 {
   display: inline-block;
   vertical-align: top;
-  margin: 20px 30px;
+  margin: 50px 30px;
   width: 290px;
   height: 370px;
-  padding-top: 37px;
   text-align: left;
 }
-/* line 82, ../sass/components/_front-page-blocks.scss */
+/* line 81, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .view,
 #block-fb-likebox-0.block-fb-likebox .view,
 #block-views-calendar-of-events-block-3 .view {
   padding: 10px;
 }
 
-/* line 90, ../sass/components/_front-page-blocks.scss */
+/* line 89, ../sass/components/_front-page-blocks.scss */
 #block-fb-likebox-0.block-fb-likebox iframe {
   height: 386.5px !important;
   min-height: 386.5px !important;
 }
 
-/* line 97, ../sass/components/_front-page-blocks.scss */
+/* line 96, ../sass/components/_front-page-blocks.scss */
 .fb-twit-cal-bgimage {
   position: absolute;
-  top: 475px;
+  top: 415px;
   z-index: -10;
   margin-bottom: 100px;
   margin-right: -50%;
@@ -1081,36 +1080,36 @@ body {
   height: 500px;
   overflow: hidden;
 }
-/* line 108, ../sass/components/_front-page-blocks.scss */
+/* line 107, ../sass/components/_front-page-blocks.scss */
 .fb-twit-cal-bgimage img {
   height: auto !important;
   width: 100% !important;
 }
 
-/* line 115, ../sass/components/_front-page-blocks.scss */
+/* line 114, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block {
   margin-left: 30px;
   font-family: "Avenir Next Condensed", sans-serif;
   min-height: 387px;
 }
-/* line 120, ../sass/components/_front-page-blocks.scss */
+/* line 119, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block {
   text-transform: uppercase;
   background: rgba(0, 0, 0, 0.5);
   padding: 16px;
 }
-/* line 125, ../sass/components/_front-page-blocks.scss */
+/* line 124, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-header {
   margin-bottom: 16.5px;
   color: white;
   font-size: 1.5em;
   letter-spacing: 2px;
 }
-/* line 131, ../sass/components/_front-page-blocks.scss */
+/* line 130, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-header * {
   display: inline-block;
 }
-/* line 135, ../sass/components/_front-page-blocks.scss */
+/* line 134, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-header::before {
   content: "";
   background: url("../images/icon-twitter.png") 100%;
@@ -1121,35 +1120,35 @@ body {
   margin-right: 10px;
   margin-bottom: 5px;
 }
-/* line 149, ../sass/components/_front-page-blocks.scss */
+/* line 148, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-content .views-row {
   color: white;
   margin-bottom: 20px;
 }
-/* line 153, ../sass/components/_front-page-blocks.scss */
+/* line 152, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-content .views-row .views-field-text {
   display: block;
   letter-spacing: 1.2px;
 }
-/* line 157, ../sass/components/_front-page-blocks.scss */
+/* line 156, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-content .views-row .views-field-text a {
   color: #ce9bc0;
 }
-/* line 162, ../sass/components/_front-page-blocks.scss */
+/* line 161, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-content .views-row .views-field-created-time {
   font-size: 0.5em;
 }
 
-/* line 171, ../sass/components/_front-page-blocks.scss */
+/* line 170, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 {
   font-family: "Avenir", sans-serif;
 }
-/* line 175, ../sass/components/_front-page-blocks.scss */
+/* line 174, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events {
   background: rgba(0, 0, 0, 0.5);
   height: 370px;
 }
-/* line 179, ../sass/components/_front-page-blocks.scss */
+/* line 178, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .view-header {
   color: white;
   font-size: 1.5em;
@@ -1158,11 +1157,11 @@ body {
   letter-spacing: 2px;
   padding: 6px;
 }
-/* line 187, ../sass/components/_front-page-blocks.scss */
+/* line 186, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .view-header * {
   display: inline-block;
 }
-/* line 191, ../sass/components/_front-page-blocks.scss */
+/* line 190, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .view-header::before {
   content: "";
   background: url("../images/icon-cal.png") 100%;
@@ -1173,89 +1172,89 @@ body {
   margin-right: 10px;
   margin-bottom: 5px;
 }
-/* line 202, ../sass/components/_front-page-blocks.scss */
+/* line 201, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .view-header p {
   margin: 0;
 }
-/* line 208, ../sass/components/_front-page-blocks.scss */
+/* line 207, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar table {
   border-collapse: separate;
   border-spacing: 5px 7px;
   min-height: 290px;
 }
-/* line 214, ../sass/components/_front-page-blocks.scss */
+/* line 213, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .month-view .full td .inner div.day {
   width: 28px;
   margin-top: auto;
 }
-/* line 219, ../sass/components/_front-page-blocks.scss */
+/* line 218, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar tr, #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar td {
   vertical-align: bottom;
 }
-/* line 223, ../sass/components/_front-page-blocks.scss */
+/* line 222, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .month-view .full tr.single-day .no-entry,
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .month-view .full tr.single-day .no-entry .inner {
   height: 20px !important;
 }
-/* line 229, ../sass/components/_front-page-blocks.scss */
+/* line 228, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar * {
   background: transparent;
   color: white;
 }
-/* line 233, ../sass/components/_front-page-blocks.scss */
+/* line 232, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar th {
   background: rgba(255, 255, 255, 0.3);
 }
-/* line 236, ../sass/components/_front-page-blocks.scss */
+/* line 235, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar th.days {
   border: none;
   font-weight: 300;
 }
-/* line 241, ../sass/components/_front-page-blocks.scss */
+/* line 240, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar tr.single-day {
   display: none;
 }
-/* line 246, ../sass/components/_front-page-blocks.scss */
+/* line 245, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .date-box td {
   border: 0;
   background: rgba(0, 0, 0, 0.7);
   padding: 0;
 }
-/* line 251, ../sass/components/_front-page-blocks.scss */
+/* line 250, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .date-box td .day {
   text-align: right;
 }
-/* line 260, ../sass/components/_front-page-blocks.scss */
+/* line 259, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .date-nav-wrapper .date-nav {
   margin-bottom: -38px;
 }
-/* line 264, ../sass/components/_front-page-blocks.scss */
+/* line 263, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .date-nav-wrapper .date-heading {
   color: white;
   font-size: 0.7em;
 }
-/* line 268, ../sass/components/_front-page-blocks.scss */
+/* line 267, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .date-nav-wrapper .date-heading h3 {
   font-family: "Avenir Next Condensed", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
 }
-/* line 273, ../sass/components/_front-page-blocks.scss */
+/* line 272, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .date-nav-wrapper .date-heading h3 .month {
   color: #ce9bc0;
   font-size: 1.5em;
   line-height: 40px;
 }
-/* line 282, ../sass/components/_front-page-blocks.scss */
+/* line 281, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .pager {
   list-style-type: none;
   color: white;
 }
-/* line 286, ../sass/components/_front-page-blocks.scss */
+/* line 285, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .pager li {
   background: none;
 }
-/* line 289, ../sass/components/_front-page-blocks.scss */
+/* line 288, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .pager li a {
   font-weight: 100;
   font-size: 3em;
@@ -1263,12 +1262,12 @@ body {
   font-family: "Avenir", sans-serif;
 }
 
-/* line 302, ../sass/components/_front-page-blocks.scss */
+/* line 301, ../sass/components/_front-page-blocks.scss */
 #block-views-news-and-events-block-1 {
-  margin-top: 100px;
+  margin-top: 80px;
   float: left;
 }
-/* line 307, ../sass/components/_front-page-blocks.scss */
+/* line 306, ../sass/components/_front-page-blocks.scss */
 #block-views-news-and-events-block-1 h2 {
   font-size: 28px;
   font-family: "Avenir Next Condensed", sans-serif;
@@ -1276,18 +1275,18 @@ body {
   text-transform: uppercase;
 }
 
-/* line 315, ../sass/components/_front-page-blocks.scss */
+/* line 314, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events {
   text-align: left;
 }
-/* line 317, ../sass/components/_front-page-blocks.scss */
+/* line 316, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row {
   width: 45%;
   margin: 0 2% 20px;
   display: inline-block;
   vertical-align: top;
 }
-/* line 323, ../sass/components/_front-page-blocks.scss */
+/* line 322, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-field-image {
   float: left;
   margin-right: 15px;
@@ -1296,12 +1295,12 @@ body {
   width: 210px;
   position: relative;
 }
-/* line 331, ../sass/components/_front-page-blocks.scss */
+/* line 330, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-field-image img {
   border: #fdfeff solid 5px;
   box-shadow: 1px 1px 1px #e6e7e8;
 }
-/* line 336, ../sass/components/_front-page-blocks.scss */
+/* line 335, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-field-image:before {
   content: "";
   background: url(../images/photo-shadow-left.png) no-repeat 0 0;
@@ -1312,7 +1311,7 @@ body {
   bottom: -6px;
   left: 0;
 }
-/* line 346, ../sass/components/_front-page-blocks.scss */
+/* line 345, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-field-image:after {
   content: "";
   background: url(../images/photo-shadow-right.png) no-repeat 0 0;
@@ -1323,21 +1322,21 @@ body {
   bottom: -6px;
   right: 0;
 }
-/* line 358, ../sass/components/_front-page-blocks.scss */
+/* line 357, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-body {
   display: table;
 }
-/* line 362, ../sass/components/_front-page-blocks.scss */
+/* line 361, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-title {
   margin-bottom: 5px;
 }
-/* line 366, ../sass/components/_front-page-blocks.scss */
+/* line 365, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-title a {
   font-family: "Avenir Next Condensed", sans-serif;
   color: #ce9bc0;
   font-size: 16px;
 }
-/* line 372, ../sass/components/_front-page-blocks.scss */
+/* line 371, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-title-1 a {
   font-family: "Avenir Next Condensed", sans-serif;
   display: block;
@@ -1345,7 +1344,7 @@ body {
   margin-left: 220px;
   margin-top: 5px;
 }
-/* line 379, ../sass/components/_front-page-blocks.scss */
+/* line 378, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-title-1 a:before {
   content: ">>";
   font-family: "Avenir", sans-serif;
@@ -2824,7 +2823,7 @@ footer .field-label {
 
 /* line 160, ../sass/theme/_layout.scss */
 footer #block-bean-img1,
-footer .bean-a-project-by- {
+footer .bean-a-project-by- a {
   margin-top: 15px;
 }
 
