@@ -1,43 +1,67 @@
-.right-col {
-  position: absolute;
-  top: 70px;
-  left: 100px;
-  background-color: orange;
-  width: 400px;
-  height: 380px;
-  font-size: 20px;
-  padding: 20px 20px 20px 20px;
-}
+@media all and (min-width: $breakpoint) {
 
-.block-views-front_page_slideshow-block {
-  position: relative;
-}
+	body.front #banner {
+		padding-top:40px;
+	}
+		
+		.view-peace-geeks-front-page-slideshow {
+			width:1200px;
+			display:block;
+			margin:0 auto;
+			position: relative;
+			
+			.views-field-field-image {
+				display:block;
+				z-index:10;
+				position: relative;
+				padding-left:3000px;
+				margin-left:-3000px;
+				padding-right:3000px;
+				margin-right:-3000px;
+				height:400px;
+				background:$soft-grey;
+				overflow:hidden;
+				img {
+					
+				}
+			}
+			
+			.views-field-field-description {
+				display:block;
+				background:$orange;
+				color: white;
+				  font-weight: 600;
+				  font-size: 2.2em;
+				  position: relative;
+				  float: left;
+				  margin-top:-328px;
+				  margin-left: 120px;
+				  width: 350px;
+				  height: 328px;
+				  padding: 1.6em 1em 1em 1em;
+				  line-height: 1.2em;
+				  z-index:20
+			}
+			
+			.views-field-title {
+				  display: block;
+				  float: left;
+				  margin-top: -310px;
+				  z-index: 30;
+				  position: relative;
+				  color: white;
+				  font-style: italic;
+				  font-size: 1.2em;
+				  margin-left: 146px;
+				  
+			}
+			
+			#views_slideshow_controls_text_peace_geeks_front_page_slideshow-block {
+				display:none;
+			}
+		}
+	
 
-.region.region-home-content-top-rotator {
-  margin-top: 35px;
-}
 
-// custom font wont read from file for som reason.
-.field-content.slide_title {
-  font-family: 'Open Sans Light Italic', sans-serif;
-  font-style: italic;
-  font-size: 65%;
-  line-height: 125%;
-  color: #FFF;
-  position: absolute;
-  top: 20px;
-}
 
-.field-content.slide_body {
-  font-family: 'Open Sans Semi Bold', sans-serif;
-  font-weight: bold;
-  font-size: 135%;
-  color: #FFF;
-  position:  absolute;
-  top: 50px;
-  line-height: 175%;
-}
-
-.region.region-home-content-top-callout-right {
-  color: blue;
 }
