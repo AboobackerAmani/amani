@@ -540,11 +540,16 @@ div.breadcrumb {
 				}
 				
 				.views-field-field-image {
+					display:table-cell;
+					vertical-align:middle;
+					width:235px;
+					height:160px;
+					text-align:center;
 					img {
 						height:auto;
 						max-width:190px;
 						margin:0 auto;
-						display:block;
+						display:inline-block;
 					}
 				}
 				
@@ -603,11 +608,16 @@ div.breadcrumb {
 				}
 				
 				.views-field-field-image {
+					display:table-cell;
+					vertical-align:middle;
+					width:235px;
+					height:160px;
+					text-align:center;
 					img {
 						height:auto;
 						max-width:190px;
 						margin:0 auto;
-						display:block;
+						display:inline-block;
 					}
 				}
 				
