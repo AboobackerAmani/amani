@@ -517,7 +517,7 @@ div.breadcrumb {
 		.paragraphs-item-add-a-view {
 			display:block;
 			float:left;
-			.view-id-sponsors.view-display-id-block_1 {
+			.view-id-supporters.view-display-id-block_1 {
 				 display:block;
 				 margin-top:-3em;
 				.views-row {
@@ -529,7 +529,7 @@ div.breadcrumb {
 				.views-column {
 					display:block;
 					float:left;
-					width:222px;
+					width:235px;
 					margin-right:1em;
 					background:$soft-grey;
 					padding:2em .2em;
@@ -539,7 +539,7 @@ div.breadcrumb {
 					}
 				}
 				
-				.views-field-field-sponsor-logo {
+				.views-field-field-image {
 					img {
 						height:auto;
 						max-width:190px;
@@ -570,7 +570,7 @@ div.breadcrumb {
 			
 			/* Main list of sponsors */ 
 			
-			.view-id-sponsors.view-display-id-page {
+			.view-id-supporters.view-display-id-page {
 				display:block;
 				width:100%;
 				float:left;
@@ -592,7 +592,7 @@ div.breadcrumb {
 				.views-column {
 					display:block;
 					float:left;
-					width:226px;
+					width:235px;
 					margin-right:1em;
 					background:$soft-grey;
 					padding:2em .2em;
@@ -602,7 +602,7 @@ div.breadcrumb {
 					}
 				}
 				
-				.views-field-field-sponsor-logo {
+				.views-field-field-image {
 					img {
 						height:auto;
 						max-width:190px;
@@ -632,7 +632,7 @@ div.breadcrumb {
 					padding:1em 2em;
 					background:$soft-grey;
 					margin-bottom:2em;
-					#edit-field-sponsor-group-tid-wrapper > label {
+					#edit-field-partner-type-tid-wrapper > label {
 			
 							text-transform:uppercase;
 							display:block;
@@ -646,6 +646,10 @@ div.breadcrumb {
 						font-weight:300;
 						font-style:italic;
 						padding:.2em .6em;
+						&:hover {
+							background:$blue;
+							
+						}
 				
 						input[type="radio"] {
 							display:none;
@@ -664,7 +668,7 @@ div.breadcrumb {
 			
 			/* Highlighted sponsor */
 			
-			.view-id-sponsors.view-display-id-block_3 {
+			.view-id-supporters.view-display-id-block_3 {
 			
 				padding-right: 3000px;
 				  margin-right: -3000px;
@@ -685,7 +689,7 @@ div.breadcrumb {
 					margin-bottom: 20px;
 				}
 				
-				.views-field-field-sponsor-logo {
+				.views-field-field-image {
 					display:block;
 					float:left;
 				}
@@ -703,7 +707,7 @@ div.breadcrumb {
 				
 				.views-field-body {
 					display:block;
-					margin-right:6px;
+					margin-right:32px;
 					float:right;
 					margin-top:10px;
 					font-size:1.1em;

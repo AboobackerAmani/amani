@@ -107,6 +107,9 @@ function amani_partners_strongarm() {
         'redirect' => array(
           'weight' => '19',
         ),
+        'language' => array(
+          'weight' => '0',
+        ),
       ),
       'display' => array(
         'language' => array(
