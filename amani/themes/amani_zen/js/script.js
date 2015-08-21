@@ -81,6 +81,8 @@ Drupal.behaviors.paragraphs_adjustments = {
 		
 	});
 	
+
+
 	
 // Set proper alignment for callout block on Structure pages if it's last callout block on the page
 
@@ -113,6 +115,16 @@ Drupal.behaviors.paragraphs_adjustments = {
 			});
 		}
 		
+		var isnarrowgreybox = $(this).find('div.paragraphs-item-light-grey-text-box-narrower').size();
+		
+		if (isnarrowgreybox != 0) {
+			$(this).css({
+				'float':'none',
+				'margin-top':'0',
+				'margin-bottom':'0'
+			});
+		}
+		
 		var islightgreytextbox = $(this).find('div.paragraphs-item-light-grey-text-box').size();
 		
 		if (islightgreytextbox != 0) {
@@ -133,6 +145,45 @@ Drupal.behaviors.paragraphs_adjustments = {
 		}
 	});
 	
+
+
+// Add body class if present 
+
+	if ($('.paragraphs-item-add-body-class').length) {
+	
+		var bodyclass = $('.paragraphs-item-add-body-class .field-item').html();
+		$('body').addClass(bodyclass);
+		$('.paragraphs-item-add-body-class').parent().hide();
+	}
+
+// Add link box classes if present 
+
+	var anchorlinkbox = $('.paragraphs-item-light-grey-text-box-with-link-to .field-name-field-class-for-this-box .field-item');
+	
+	if (anchorlinkbox.length) {
+	
+		var boxclass = anchorlinkbox.html();
+		anchorlinkbox.parent().parent().prev().prev().find('a').addClass(boxclass);
+		anchorlinkbox.hide();
+	}
+	
+	var narrowgreybox = $('.paragraphs-item-light-grey-text-box-narrower .field-name-field-class-for-this-box .field-item');
+	
+	if (narrowgreybox.length) {
+	
+		var narrowboxclass = narrowgreybox.html();
+		narrowgreybox.parent().parent().parent().parent().addClass(narrowboxclass);
+		narrowgreybox.hide();
+	}
+	
+		
+	$('.paragraphs-item-link-block-grey').each(function() {
+		var linkblockbox = $(this).find('.field-name-field-class-for-this-box .field-item');
+		var linkblockclass = linkblockbox.html();
+		$(this).parent().addClass(linkblockclass);
+		linkblockbox.hide();
+	
+	});
 
 // Set anchorlink and other boxes to same height
 

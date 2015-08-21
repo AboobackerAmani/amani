@@ -90,6 +90,29 @@ function peace_geeks_blocks_and_views_image_default_styles() {
     ),
   );
 
+  // Exported image style: news_card.
+  $styles['news_card'] = array(
+    'name' => 'news_card',
+    'label' => 'News Card',
+    'effects' => array(
+      8 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '346',
+          'height' => '240',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
   // Exported image style: team_profile_photo.
   $styles['team_profile_photo'] = array(
     'name' => 'team_profile_photo',

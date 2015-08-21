@@ -1,0 +1,136 @@
+/* Overrides for pages based on body classes */
+
+
+@media all and (min-width: $breakpoint) {
+
+	body.programspage {
+
+		.paragraphs-item-paragraph-text-with-anchor {
+			border-top:0;
+			padding-top:2em;
+		}
+		
+		.programsorangeblock {
+			display:block;
+			width:231px;
+			float:right !important;
+			margin-top:0 !important;
+			margin-bottom:0 !important;
+			.paragraphs-item-link-block-grey {
+				margin-top:0 !important;
+				a {
+					width:186px;
+					background:$orange;
+					height:310px !important;
+					margin-top:0 !important;
+					line-height:1.4em;
+				}
+				&.shorterlinkbox:after {
+					margin-top:240px !important;
+				}
+			}
+		}
+		
+		.linkboxtall {
+			display:block;
+			width:231px;
+			float:right !important;
+			margin-top:0 !important;
+			margin-bottom:0 !important;
+			margin-right:5em;
+			.paragraphs-item-link-block-grey {
+				margin-top:0 !important;
+				a {
+					width:186px;
+					height:310px !important;
+					margin-top:0 !important;
+					line-height:1.4em;
+				}
+				&.shorterlinkbox:after {
+					margin-top:240px !important;
+				}
+			}
+		}
+		
+		.paragraphs-item-divider-line {
+			margin-top:3em;
+			hr {
+				width:110%;
+				margin-left:-5%;
+				margin-top:1em;
+			}
+		}
+		
+		.view-peace-geeks-news-and-events.view-display-id-block_2 {
+			display:block;
+			float:left;
+			margin-top:-2em;
+			background:$orange;
+			color:white;
+			padding-bottom:2em;
+			height:354px;
+			margin-left:5em;
+			a {
+				color:white;
+			}
+			
+			.views-field-title {
+				font-size:1.8em;
+				line-height:2.3em;
+				padding:0 1em .2em 1em;
+				font-weight:600;
+				letter-spacing:1px;
+				display:block;
+				width:100%;
+			}
+			
+			.views-field-created {
+				display:block;
+				float:left;
+				padding-left:1.4em;
+				font-size:1.2em;
+				font-weight:300;
+			}
+			
+			.views-field-comment-count {
+				display:block;
+				float:right;
+				padding-right:1.4em;
+				font-size:1.2em;
+				font-weight:300;
+			}
+			
+		}
+		
+		
+		div.paragraphs-item-light-grey-text-box-with-link-to {
+			
+			a.anchorlink {
+				color:white;
+				text-align:left;
+				padding-top:.8em;
+				padding-left:1em;
+				background:$blue;
+				height:100px !important;
+				width:296px;
+				margin-bottom:1.8em;
+				&.darkbackground {
+					background:$grey;
+					margin-right:0;
+				}
+			}
+			
+		}
+	
+	}
+
+
+
+
+
+
+
+
+
+
+}

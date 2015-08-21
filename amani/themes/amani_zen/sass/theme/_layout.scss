@@ -22,6 +22,10 @@ button:focus {
   outline: none;
 }
 
+.norightmargin {
+	margin-right:0 !important;
+}
+
 /* Hide stupid email this page links */
 
 ul.links.inline {display:none;}
@@ -331,11 +335,46 @@ div.breadcrumb {
 			}
 		}
 		
+		.paragraphs-item-light-grey-text-box-narrower {
+		
+			display:block;
+			float:left;
+			background:$soft-grey;
+			padding: 2.6em 1.2em 1.4em 1.2em;
+			width: 231px;
+			margin-right: 1.4em;
+			font-size: 100%;
+			height:350px;
+			margin-bottom:1.4em;
+			
+			.field-name-field-box-pre-title {
+				color:$text-grey;
+				font-size:1.4em;
+				text-transform:uppercase;
+				margin-bottom:.9em;
+				display:block;
+				letter-spacing:1px;
+			}
+			.field-name-field-box-title {
+				color:$blue;
+				font-size:2.2em;
+				display:block;
+				margin-bottom:1em;
+				letter-spacing:1px;
+			}
+			.field-name-field-box-copy {
+				font-size:1.2em;
+				line-height:1.8em;
+				font-weight:300;
+			}
+		
+		}
+		
 		.paragraphs-item-light-grey-text-box-with-link-to {
 			a {
 				color:$text-grey;
 				background:$soft-grey;
-				width:255px;
+				width:268px;
 				padding:1.5em 2em;
 				display:block;
 				font-size:1.5em;

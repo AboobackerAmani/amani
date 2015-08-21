@@ -74,6 +74,11 @@ function peace_geeks_paragraphs_and_structure_paragraphs_info() {
       'bundle' => 'add_a_view',
       'locked' => '1',
     ),
+    'add_body_class' => array(
+      'name' => 'Add Body Class',
+      'bundle' => 'add_body_class',
+      'locked' => '1',
+    ),
     'callout_box_full_width_grey' => array(
       'name' => 'Callout Box - Full Width - Grey',
       'bundle' => 'callout_box_full_width_grey',
