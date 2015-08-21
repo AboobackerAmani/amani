@@ -1283,7 +1283,111 @@ div[id*="block-menu-menu-social-media"] li {
 /**
  * Unique blocks
  */
-/* line 52, ../sass/components/_blocks.scss */
+@media all and (min-width: 768px) {
+  /* line 54, ../sass/components/_blocks.scss */
+  #faketwitterblock {
+    width: 290px;
+    height: 444px;
+    padding: .4em;
+    background: #E6E6E6;
+    font-size: 1em;
+    display: block;
+    float: left;
+  }
+
+  /* line 64, ../sass/components/_blocks.scss */
+  body.front #content .block-views {
+    color: white;
+    display: block;
+    float: left;
+  }
+  /* line 66, ../sass/components/_blocks.scss */
+  body.front #content .block-views a {
+    color: white;
+  }
+  /* line 74, ../sass/components/_blocks.scss */
+  body.front #content .block-views .front-above-titles {
+    font-weight: 300;
+    font-size: 1.1em;
+    font-style: italic;
+    display: block;
+    padding: 1em 0 .2em 1.6em;
+  }
+  /* line 84, ../sass/components/_blocks.scss */
+  body.front #content .block-views .views-field-title {
+    font-weight: 600;
+    font-size: 2em;
+    letter-spacing: 1px;
+    line-height: 1.4em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  /* line 93, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_latest_project {
+    position: relative;
+    display: inline-block;
+    width: 648px;
+    height: 444px;
+    margin-right: 22px;
+    background: #59C2ED;
+    float: left;
+  }
+  /* line 105, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_volunteer {
+    position: relative;
+    display: inline-block;
+    width: 264px;
+    height: 350px;
+    margin-top: 20px;
+    margin-right: 20px;
+    background: #474F5E;
+    float: left;
+  }
+  /* line 117, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_latest_news {
+    background: #474F5E;
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 364px;
+    margin-top: 20px;
+    margin-right: 22px;
+    height: 500px;
+  }
+  /* line 129, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_latest_event {
+    background: #474F5E;
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 290px;
+    padding-bottom: 3em;
+    margin-top: 20px;
+    height: 500px;
+  }
+  /* line 141, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_areas_of_focus {
+    background: #59C2ED;
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 264px;
+    height: 270px;
+    margin-top: -130px;
+    padding-top: .8em;
+  }
+  /* line 153, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-current_volunteer_opps {
+    background: #F09416;
+    display: inline-block;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 676px;
+    height: 120px;
+  }
+}
+/* line 170, ../sass/components/_blocks.scss */
 #block-search-form {
   display: inline-block;
   float: right;
@@ -1291,7 +1395,7 @@ div[id*="block-menu-menu-social-media"] li {
   margin-top: -4px;
 }
 @media all and (min-width: 768px) {
-  /* line 52, ../sass/components/_blocks.scss */
+  /* line 170, ../sass/components/_blocks.scss */
   #block-search-form {
     margin-top: 0;
     width: auto;
@@ -1304,7 +1408,7 @@ div[id*="block-menu-menu-social-media"] li {
 #block-search-form:hover .contextual-links-wrapper {
   display: none;
 }
-/* line 69, ../sass/components/_blocks.scss */
+/* line 187, ../sass/components/_blocks.scss */
 #block-search-form .form-text {
   background-color: #E6E6E6;
   font-size: 12px;
@@ -1315,54 +1419,38 @@ div[id*="block-menu-menu-social-media"] li {
   padding: 6px 10px;
   width: 170px;
 }
-/* line 79, ../sass/components/_blocks.scss */
+/* line 197, ../sass/components/_blocks.scss */
 #block-search-form .form-actions {
   display: none;
 }
 
-/* Front Page Blocks */
-/* line 85, ../sass/components/_blocks.scss */
-#content-header {
-  padding: 20px 0px 20px 0px;
-}
-
-/* Current Projects */
-/* line 90, ../sass/components/_blocks.scss */
-#latest_project {
-  position: relative;
-  display: inline-block;
-  width: 630px;
-  height: 350px;
-  margin: 0px 20px 10px 0px;
-}
-
 /* Twitter Block */
-/* line 100, ../sass/components/_blocks.scss */
+/* line 206, ../sass/components/_blocks.scss */
 #block-views-front_page_tweets-block .view-header {
   display: none;
 }
-/* line 104, ../sass/components/_blocks.scss */
+/* line 210, ../sass/components/_blocks.scss */
 #block-views-front_page_tweets-block .field-content.message_text {
   font-family: 'Open Sans Semi Bold';
 }
-/* line 108, ../sass/components/_blocks.scss */
+/* line 214, ../sass/components/_blocks.scss */
 #block-views-front_page_tweets-block .field-content.twitter_date {
   font-family: 'Open Sans Light Italic';
 }
-/* line 112, ../sass/components/_blocks.scss */
+/* line 218, ../sass/components/_blocks.scss */
 #block-views-front_page_tweets-block li.views-row {
   margin: 0;
   list-style-type: none;
   padding: 0;
   border-bottom: 2px solid;
 }
-/* line 119, ../sass/components/_blocks.scss */
+/* line 225, ../sass/components/_blocks.scss */
 #block-views-front_page_tweets-block .block-title {
   font-size: 18px;
   color: #5B616F;
 }
 
-/* line 125, ../sass/components/_blocks.scss */
+/* line 231, ../sass/components/_blocks.scss */
 .region.region-twitter {
   position: relative;
   display: inline-block;
@@ -1371,56 +1459,6 @@ div[id*="block-menu-menu-social-media"] li {
   margin-bottom: 10px;
   background-color: #e6e6e6;
   padding: 20px;
-}
-
-/* Meet our volunteer block */
-/* line 137, ../sass/components/_blocks.scss */
-#meet_volunteer {
-  position: relative;
-  display: inline-block;
-  width: 257px;
-  height: 350px;
-  margin: 0px 20px 10px 0px;
-}
-
-/* Latest Blog Post */
-/* line 146, ../sass/components/_blocks.scss */
-#latest_blog_post {
-  position: relative;
-  display: inline-block;
-  width: 350px;
-  height: 350px;
-  margin: 0px 20px 10px 0px;
-}
-
-/* Peace Talks */
-/* line 155, ../sass/components/_blocks.scss */
-#peace_talks {
-  position: relative;
-  display: inline-block;
-  width: 285px;
-  height: 350px;
-  margin-bottom: 10px;
-}
-
-/* Area of Focus */
-/* line 164, ../sass/components/_blocks.scss */
-#area_of_focus {
-  position: relative;
-  display: inline-block;
-  width: 257px;
-  height: 350px;
-  margin: 0px 20px 10px 0px;
-}
-
-/* Get Invlolved */
-/* line 173, ../sass/components/_blocks.scss */
-#get_involved {
-  position: relative;
-  display: inline-block;
-  width: 679px;
-  height: 350px;
-  margin-bottom: 10px;
 }
 
 /**

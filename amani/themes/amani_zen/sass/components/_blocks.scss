@@ -48,6 +48,124 @@
  * Unique blocks
  */
 
+
+@media all and (min-width: $breakpoint) {
+
+	#faketwitterblock {
+			width:290px;
+			height:444px;
+			padding:.4em;
+			background:$soft-grey;
+			font-size:1em;
+			display:block;
+			float:left;
+		}
+
+	body.front #content .block-views {
+	
+		a {
+			color:white;
+		}
+		
+		color:white;
+		display:block;
+		float:left;
+		
+		.front-above-titles {
+			font-weight:300;
+			font-size:1.1em;
+			font-style:italic;
+			display:block;
+			padding:1em 0 .2em 1.6em;
+		}
+		
+		
+		
+		.views-field-title {
+			font-weight:600;
+			font-size:2em;
+			letter-spacing:1px;
+			line-height:1.4em;
+			padding-left:1em;
+			padding-right:1em;
+		}
+	
+		.view-display-id-front_latest_project {
+			
+			position:relative;
+		  	display: inline-block;
+		  	width: 648px;
+		 	height: 444px;
+		 	margin-right:22px;
+		 	background:$blue;
+		 	float:left;
+		
+		}
+		
+		.view-display-id-front_volunteer {
+			
+			position: relative;
+		  	display: inline-block;
+		  	width: 264px;
+		  	height: 350px;
+		  	margin-top:20px;
+		  	margin-right:20px;
+		  	background:$grey;
+		  	float:left;
+		}
+	
+		.view-display-id-front_latest_news {
+		
+			background:$grey;
+			position: relative;
+		  	display: inline-block;
+		  	float:left;
+		  	width:364px;
+		  	margin-top:20px;
+		  	margin-right:22px;
+		  	height:500px;
+		}
+		
+		.view-display-id-front_latest_event {
+		
+			background:$grey;
+			position: relative;
+		  	display: inline-block;
+		  	float:left;
+		  	width:290px;
+		  	padding-bottom:3em;
+		  	margin-top:20px;
+		  	height:500px;
+		}
+		
+		.view-display-id-front_areas_of_focus {
+			
+			background:$blue;
+			position: relative;
+		  	display: inline-block;
+		  	float:left;
+		  	width:264px;
+		  	height:270px;
+		  	margin-top:-130px;
+		  	padding-top:.8em;
+		}
+		
+		.view-display-id-current_volunteer_opps {
+			
+			background:$orange;
+			display:inline-block;
+			float:left;
+			margin-top:20px;
+			margin-left:20px;
+			width:676px;
+			height:120px;
+		}
+	
+	}
+
+}
+
+
 // Search form
 #block-search-form {
   display: inline-block;
@@ -81,19 +199,7 @@
   }
 }
 
-/* Front Page Blocks */
-#content-header {
-  padding: 20px 0px 20px 0px;
-}
 
-/* Current Projects */
-#latest_project {
-  position:relative;
-  display: inline-block;
-  width: 630px;
-  height: 350px;
-  margin: 0px 20px 10px 0px;
-}
 
 /* Twitter Block */
 #block-views-front_page_tweets-block  {
@@ -133,47 +239,4 @@
 }
 
 
-/* Meet our volunteer block */
-#meet_volunteer {
-  position: relative;
-  display: inline-block;
-  width: 257px;
-  height: 350px;
-  margin: 0px 20px 10px 0px;
-}
 
-/* Latest Blog Post */
-#latest_blog_post {
-  position:relative;
-  display: inline-block;
-  width: 350px;
-  height: 350px;
-  margin: 0px 20px 10px 0px;
-}
-
-/* Peace Talks */
-#peace_talks {
-  position:relative;
-  display: inline-block;
-  width: 285px;
-  height: 350px;
-  margin-bottom: 10px;
-}
-
-/* Area of Focus */
-#area_of_focus {
-  position:relative;
-  display: inline-block;
-  width: 257px;
-  height: 350px;
-  margin: 0px 20px 10px 0px;
-}
-
-/* Get Invlolved */
-#get_involved {
-  position:relative;
-  display: inline-block;
-  width: 679px;
-  height: 350px;
-  margin-bottom: 10px;
-}
