@@ -134,6 +134,11 @@ function peace_geeks_paragraphs_and_structure_paragraphs_info() {
       'bundle' => 'simple_text_with_right_side_imag',
       'locked' => '1',
     ),
+    'special_event_callout_box' => array(
+      'name' => 'Special Event Callout Box',
+      'bundle' => 'special_event_callout_box',
+      'locked' => '1',
+    ),
     'structure_header_text' => array(
       'name' => 'Structure Header Text',
       'bundle' => 'structure_header_text',

@@ -150,7 +150,39 @@
 	}
 
 
-
+	/* Front page content */
+	
+	body.front {
+	
+		#content {
+			width:980px;
+			padding-right:10px;
+			padding-left:10px;
+		}
+		
+		.paragraphs-item-special-event-callout-box {
+			display:block;
+			width:100%;
+			padding:2em 3em;
+			color:white;
+			background:$grey;
+			.field-name-field-callout-title {
+				font-size:1.1em;
+				font-style:italic;
+			}
+			.field-name-field-callout-text {
+				font-size:1.8em;
+				line-height:1.4em;
+			}
+			.field-name-field-callout-link {
+				display:none;
+			}
+			.field-name-field-callout-active- {
+				display:none;
+			}
+		}
+	
+	}
 
 
 

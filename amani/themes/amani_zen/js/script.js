@@ -250,10 +250,10 @@ Drupal.behaviors.paragraphs_adjustments = {
 	var $window = $(window);
     
 
-    function checkWidth() {
+    /*$function checkWidth() {
         var windowsize = $window.width();
         if (windowsize > 1200) {
-           /*$('.field-name-field-banner-image img').css({
+           ('.field-name-field-banner-image img').css({
            		'max-width':windowsize + (windowsize/4),
            		'width':windowsize + (windowsize/4),
            		'height':'auto',
@@ -265,16 +265,31 @@ Drupal.behaviors.paragraphs_adjustments = {
            		'background':'url(' + imgsrc + ')',
            		'background-size':'cover',
            		'background-repeat':'no-repeat'
-           	});*/
+           	});
          
         }
     }
     // Execute on load
     checkWidth();
     // Bind event listener
-    $(window).resize(checkWidth);
+    $(window).resize(checkWidth);*/
 
 
+
+// Callout box link add 
+
+	if ($('.paragraphs-item-special-event-callout-box').length) {
+		
+		var calloutlink = $('.paragraphs-item-special-event-callout-box .field-name-field-callout-link .field-item').html();
+		$('.paragraphs-item-special-event-callout-box').wrap('<a href="' + calloutlink + '"></a>');
+		
+		var calloutactive = $('.field-name-field-callout-active- .field-item').html();
+		if (calloutactive != "Yes") {
+			$('.paragraphs-item-special-event-callout-box').parent().hide();
+		}
+	
+	}
+	
 
 
 // Team page adjustments, hover effects, etc
