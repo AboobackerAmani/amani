@@ -7,10 +7,14 @@
   width: 100% !important;
 }
 
-.views-slideshow-cycle-main-frame-row img,
-.views-slideshow-cycle-main-frame-row, {
+.views-slideshow-cycle-main-frame-row img {
   height: auto !important;
 }
+
+.views-slideshow-cycle-main-frame-row {
+  //height: auto !important;
+}
+
 
 .slideshow {
   position: relative;
@@ -40,8 +44,9 @@
     line-height: 20px;
     text-transform: uppercase;
     @include breakpoint($desktop) {
-      @include font-size(50px);
+      @include font-size(40px);
       line-height: 50px;
+      margin: 0 100px;
     }
   }
   .description {

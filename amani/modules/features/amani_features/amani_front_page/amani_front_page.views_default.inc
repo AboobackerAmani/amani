@@ -67,7 +67,7 @@ function amani_front_page_views_default_views() {
   $handler->display->display_options['fields']['title_1']['ui_name'] = 'Read More Link';
   $handler->display->display_options['fields']['title_1']['label'] = '';
   $handler->display->display_options['fields']['title_1']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title_1']['alter']['text'] = 'Read More ..';
+  $handler->display->display_options['fields']['title_1']['alter']['text'] = 'Read More <span class="more-arrow">>></span>';
   $handler->display->display_options['fields']['title_1']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['title_1']['alter']['path'] = '[field_link]';
   $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
@@ -201,7 +201,7 @@ function amani_front_page_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Read More ..'),
+    t('Read More <span class="more-arrow">>></span>'),
     t('[node:title]'),
     t('Front Page Blocks'),
     t('Front page blocks underneath the slideshow.'),

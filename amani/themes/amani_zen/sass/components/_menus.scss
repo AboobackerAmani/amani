@@ -32,8 +32,8 @@
 // Social Media
 #block-menu-menu-social-media {
   position: absolute;
-  right: 150px;
-  top: 33px;
+  right: 0;
+  top: 5px;
 
   @include hide-contextual-links();
 
@@ -47,5 +47,27 @@
     display: inline-block;
     list-style: none outside none;
     margin-left: 0.3em;
+    
+    a {
+      text-indent: -999em;
+      margin-right: 5px;
+      &:hover {
+        border-top: 0;
+      }
+    }
+    
+    &.social-media-facebook a { 
+      background: url(../images/icons/icn-facebook-30.png) no-repeat 0 0;
+      height: 30px;
+      width: 30px;
+      display: inline-block;
+    }
+    
+    &.social-media-twitter a { 
+      background: url(../images/icons/icn-twitter-30.png) no-repeat 0 0;
+      height: 30px;
+      width: 30px;
+      display: inline-block;
+    }
   }
 }

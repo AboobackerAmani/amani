@@ -108,6 +108,13 @@ footer {
       position:relative;
       text-indent: 20px;
       margin-bottom: 15px;
+      
+      &:before { 
+        content: "\f078";
+        font-family: amani-icons;
+        margin-right: 8px;
+        font-size: 11px;
+      }
 
       @media screen and (max-width: 570px) {
         text-indent: 0;
@@ -130,6 +137,28 @@ footer {
       }
     }
   }
+}
+
+footer > .block-menu {
+  margin-right: 0;
+}
+
+footer .block-menu ul.menu {
+  margin-right: 50px;
+}
+
+footer .field-label {
+  display: none;
+}
+
+.region-footer .block.block-bean {
+  display: inline-block;
+  margin: 0 20px;
+  float: right;
+}
+
+footer #block-bean-img1 {
+  margin-top: 15px;
 }
 
 .peacegeeks-logo {
