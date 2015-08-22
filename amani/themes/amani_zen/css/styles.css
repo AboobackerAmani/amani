@@ -1285,27 +1285,80 @@ div[id*="block-menu-menu-social-media"] li {
  */
 @media all and (min-width: 768px) {
   /* line 54, ../sass/components/_blocks.scss */
-  #faketwitterblock {
+  body.front #content #block-views-peace-geeks-twitter-block {
     width: 290px;
     height: 444px;
-    padding: .4em;
+    padding: 1.4em;
     background: #E6E6E6;
     font-size: 1em;
     display: block;
     float: left;
+    color: #9a9a9a;
+  }
+  /* line 63, ../sass/components/_blocks.scss */
+  body.front #content #block-views-peace-geeks-twitter-block a {
+    color: #F09416;
+  }
+  /* line 66, ../sass/components/_blocks.scss */
+  body.front #content #block-views-peace-geeks-twitter-block h2.block-title {
+    display: none;
+  }
+  /* line 69, ../sass/components/_blocks.scss */
+  body.front #content #block-views-peace-geeks-twitter-block .view-content {
+    height: 330px;
+    width: 260px;
+    overflow: scroll;
+  }
+  /* line 75, ../sass/components/_blocks.scss */
+  body.front #content #block-views-peace-geeks-twitter-block .view-header {
+    padding-bottom: 1em;
+  }
+  /* line 77, ../sass/components/_blocks.scss */
+  body.front #content #block-views-peace-geeks-twitter-block .view-header a {
+    color: #9a9a9a;
+    font-style: italic;
+    font-family: "Open Sans Italic";
+    font-weight: normal;
+    font-size: 1.1em;
+  }
+  /* line 86, ../sass/components/_blocks.scss */
+  body.front #content #block-views-peace-geeks-twitter-block .views-row {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #9a9a9a;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+  }
+  /* line 95, ../sass/components/_blocks.scss */
+  body.front #content #block-views-peace-geeks-twitter-block .views-field-created-time a {
+    color: #9a9a9a;
+  }
+  /* line 100, ../sass/components/_blocks.scss */
+  body.front #content #block-views-peace-geeks-twitter-block .view-footer {
+    display: block;
+    width: 100%;
+    height: 40px;
+  }
+  /* line 104, ../sass/components/_blocks.scss */
+  body.front #content #block-views-peace-geeks-twitter-block .view-footer #front-twitter-logo-block {
+    display: block;
+    background: url(../images/twitterbird.png) bottom right no-repeat;
+    width: 98%;
+    height: 50px;
+    background-size: 40px;
   }
 
-  /* line 64, ../sass/components/_blocks.scss */
+  /* line 114, ../sass/components/_blocks.scss */
   body.front #content .block-views {
     color: white;
     display: block;
     float: left;
   }
-  /* line 66, ../sass/components/_blocks.scss */
+  /* line 116, ../sass/components/_blocks.scss */
   body.front #content .block-views a {
     color: white;
   }
-  /* line 74, ../sass/components/_blocks.scss */
+  /* line 124, ../sass/components/_blocks.scss */
   body.front #content .block-views .front-above-titles {
     font-weight: 300;
     font-size: 1.1em;
@@ -1313,7 +1366,7 @@ div[id*="block-menu-menu-social-media"] li {
     display: block;
     padding: 1em 0 .2em 1.6em;
   }
-  /* line 84, ../sass/components/_blocks.scss */
+  /* line 134, ../sass/components/_blocks.scss */
   body.front #content .block-views .views-field-title {
     font-weight: 600;
     font-size: 2em;
@@ -1322,7 +1375,7 @@ div[id*="block-menu-menu-social-media"] li {
     padding-left: 1em;
     padding-right: 1em;
   }
-  /* line 93, ../sass/components/_blocks.scss */
+  /* line 143, ../sass/components/_blocks.scss */
   body.front #content .block-views .view-display-id-front_latest_project {
     position: relative;
     display: inline-block;
@@ -1332,7 +1385,7 @@ div[id*="block-menu-menu-social-media"] li {
     background: #59C2ED;
     float: left;
   }
-  /* line 105, ../sass/components/_blocks.scss */
+  /* line 155, ../sass/components/_blocks.scss */
   body.front #content .block-views .view-display-id-front_volunteer {
     position: relative;
     display: inline-block;
@@ -1343,7 +1396,7 @@ div[id*="block-menu-menu-social-media"] li {
     background: #474F5E;
     float: left;
   }
-  /* line 117, ../sass/components/_blocks.scss */
+  /* line 167, ../sass/components/_blocks.scss */
   body.front #content .block-views .view-display-id-front_latest_news {
     background: #474F5E;
     position: relative;
@@ -1354,7 +1407,7 @@ div[id*="block-menu-menu-social-media"] li {
     margin-right: 22px;
     height: 500px;
   }
-  /* line 129, ../sass/components/_blocks.scss */
+  /* line 179, ../sass/components/_blocks.scss */
   body.front #content .block-views .view-display-id-front_latest_event {
     background: #474F5E;
     position: relative;
@@ -1365,7 +1418,7 @@ div[id*="block-menu-menu-social-media"] li {
     margin-top: 20px;
     height: 500px;
   }
-  /* line 141, ../sass/components/_blocks.scss */
+  /* line 191, ../sass/components/_blocks.scss */
   body.front #content .block-views .view-display-id-front_areas_of_focus {
     background: #59C2ED;
     position: relative;
@@ -1376,7 +1429,7 @@ div[id*="block-menu-menu-social-media"] li {
     margin-top: -130px;
     padding-top: .8em;
   }
-  /* line 153, ../sass/components/_blocks.scss */
+  /* line 203, ../sass/components/_blocks.scss */
   body.front #content .block-views .view-display-id-current_volunteer_opps {
     background: #F09416;
     display: inline-block;
@@ -1387,7 +1440,7 @@ div[id*="block-menu-menu-social-media"] li {
     height: 120px;
   }
 }
-/* line 170, ../sass/components/_blocks.scss */
+/* line 220, ../sass/components/_blocks.scss */
 #block-search-form {
   display: inline-block;
   float: right;
@@ -1395,7 +1448,7 @@ div[id*="block-menu-menu-social-media"] li {
   margin-top: -4px;
 }
 @media all and (min-width: 768px) {
-  /* line 170, ../sass/components/_blocks.scss */
+  /* line 220, ../sass/components/_blocks.scss */
   #block-search-form {
     margin-top: 0;
     width: auto;
@@ -1408,7 +1461,7 @@ div[id*="block-menu-menu-social-media"] li {
 #block-search-form:hover .contextual-links-wrapper {
   display: none;
 }
-/* line 187, ../sass/components/_blocks.scss */
+/* line 237, ../sass/components/_blocks.scss */
 #block-search-form .form-text {
   background-color: #E6E6E6;
   font-size: 12px;
@@ -1419,38 +1472,38 @@ div[id*="block-menu-menu-social-media"] li {
   padding: 6px 10px;
   width: 170px;
 }
-/* line 197, ../sass/components/_blocks.scss */
+/* line 247, ../sass/components/_blocks.scss */
 #block-search-form .form-actions {
   display: none;
 }
 
 /* Twitter Block */
-/* line 206, ../sass/components/_blocks.scss */
+/* line 256, ../sass/components/_blocks.scss */
 #block-views-front_page_tweets-block .view-header {
   display: none;
 }
-/* line 210, ../sass/components/_blocks.scss */
+/* line 260, ../sass/components/_blocks.scss */
 #block-views-front_page_tweets-block .field-content.message_text {
   font-family: 'Open Sans Semi Bold';
 }
-/* line 214, ../sass/components/_blocks.scss */
+/* line 264, ../sass/components/_blocks.scss */
 #block-views-front_page_tweets-block .field-content.twitter_date {
   font-family: 'Open Sans Light Italic';
 }
-/* line 218, ../sass/components/_blocks.scss */
+/* line 268, ../sass/components/_blocks.scss */
 #block-views-front_page_tweets-block li.views-row {
   margin: 0;
   list-style-type: none;
   padding: 0;
   border-bottom: 2px solid;
 }
-/* line 225, ../sass/components/_blocks.scss */
+/* line 275, ../sass/components/_blocks.scss */
 #block-views-front_page_tweets-block .block-title {
   font-size: 18px;
   color: #5B616F;
 }
 
-/* line 231, ../sass/components/_blocks.scss */
+/* line 281, ../sass/components/_blocks.scss */
 .region.region-twitter {
   position: relative;
   display: inline-block;

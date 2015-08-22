@@ -260,6 +260,15 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="front-above-titles">Get Involved</div>
 <div class="views-field-title"><a href="/volunteer-opportunities">Current Volunteer Opportunities</a></div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
   $translatables['peace_geeks_front_page_blocks'] = array(
     t('Master'),
     t('more'),
@@ -1223,6 +1232,98 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('Page'),
   );
   $export['peace_geeks_team'] = $view;
+
+  $view = new view();
+  $view->name = 'peace_geeks_twitter';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'twitter';
+  $view->human_name = 'Peace Geeks Twitter';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Peace Geeks Twitter';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<a href="http://twitter.com/peacegeeks">@PeaceGeeks</a>';
+  $handler->display->display_options['header']['area']['format'] = 'php_code';
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="http://twitter.com/peacegeeks"><div id="front-twitter-logo-block"></div></a>';
+  $handler->display->display_options['footer']['area']['format'] = 'php_code';
+  /* Field: Twitter: Message text */
+  $handler->display->display_options['fields']['text']['id'] = 'text';
+  $handler->display->display_options['fields']['text']['table'] = 'twitter';
+  $handler->display->display_options['fields']['text']['field'] = 'text';
+  $handler->display->display_options['fields']['text']['label'] = '';
+  $handler->display->display_options['fields']['text']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['text']['link_urls'] = 1;
+  $handler->display->display_options['fields']['text']['link_usernames'] = 1;
+  $handler->display->display_options['fields']['text']['link_hashtags'] = 0;
+  $handler->display->display_options['fields']['text']['link_attributes'] = 1;
+  /* Field: Twitter: Twitter status message ID */
+  $handler->display->display_options['fields']['twitter_id']['id'] = 'twitter_id';
+  $handler->display->display_options['fields']['twitter_id']['table'] = 'twitter';
+  $handler->display->display_options['fields']['twitter_id']['field'] = 'twitter_id';
+  $handler->display->display_options['fields']['twitter_id']['label'] = '';
+  $handler->display->display_options['fields']['twitter_id']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['twitter_id']['element_label_colon'] = FALSE;
+  /* Field: Twitter: Created time */
+  $handler->display->display_options['fields']['created_time']['id'] = 'created_time';
+  $handler->display->display_options['fields']['created_time']['table'] = 'twitter';
+  $handler->display->display_options['fields']['created_time']['field'] = 'created_time';
+  $handler->display->display_options['fields']['created_time']['label'] = '';
+  $handler->display->display_options['fields']['created_time']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['created_time']['alter']['path'] = 'http://twitter.com/peacegeeks/status/[twitter_id]';
+  $handler->display->display_options['fields']['created_time']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created_time']['date_format'] = 'time ago';
+  $handler->display->display_options['fields']['created_time']['custom_date_format'] = '1';
+  $handler->display->display_options['fields']['created_time']['second_date_format'] = 'long';
+  /* Sort criterion: Twitter: Created time */
+  $handler->display->display_options['sorts']['created_time']['id'] = 'created_time';
+  $handler->display->display_options['sorts']['created_time']['table'] = 'twitter';
+  $handler->display->display_options['sorts']['created_time']['field'] = 'created_time';
+  $handler->display->display_options['sorts']['created_time']['order'] = 'DESC';
+  /* Filter criterion: Twitter: Login name */
+  $handler->display->display_options['filters']['screen_name']['id'] = 'screen_name';
+  $handler->display->display_options['filters']['screen_name']['table'] = 'twitter_account';
+  $handler->display->display_options['filters']['screen_name']['field'] = 'screen_name';
+  $handler->display->display_options['filters']['screen_name']['value'] = 'peacegeeks';
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['block_description'] = 'Peace Geeks Twitter Front';
+  $translatables['peace_geeks_twitter'] = array(
+    t('Master'),
+    t('Peace Geeks Twitter'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('<a href="http://twitter.com/peacegeeks">@PeaceGeeks</a>'),
+    t('<a href="http://twitter.com/peacegeeks"><div id="front-twitter-logo-block"></div></a>'),
+    t('Block'),
+    t('Peace Geeks Twitter Front'),
+  );
+  $export['peace_geeks_twitter'] = $view;
 
   $view = new view();
   $view->name = 'sponsors';

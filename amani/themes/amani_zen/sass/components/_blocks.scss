@@ -51,14 +51,64 @@
 
 @media all and (min-width: $breakpoint) {
 
-	#faketwitterblock {
+	body.front #content #block-views-peace-geeks-twitter-block {
 			width:290px;
 			height:444px;
-			padding:.4em;
+			padding:1.4em;
 			background:$soft-grey;
 			font-size:1em;
 			display:block;
 			float:left;
+			color:$text-grey;
+			a {
+				color:$orange;
+			}
+			h2.block-title {
+				display:none;
+			}
+			.view-content {
+				height:330px;
+				width:260px;
+				overflow:scroll;
+			}	
+			
+			.view-header {
+				padding-bottom:1em;
+				a {
+					color:$text-grey;
+					font-style:italic;
+					font-family:"Open Sans Italic";
+					font-weight:normal;
+					font-size:1.1em;
+				}
+			}
+			
+			.views-row {
+				display:block;
+				width:100%;
+				border-bottom:1px solid $text-grey;
+				margin-bottom:1em;
+				padding-bottom:1em;
+			}
+			
+			.views-field-created-time {
+				a {
+					color:$text-grey;
+				}
+			}
+			
+			.view-footer {
+				display:block;
+				width:100%;
+				height:40px;
+				#front-twitter-logo-block {
+					display:block;
+					background:url(../images/twitterbird.png) bottom right no-repeat;
+					width:98%;
+					height:50px;
+					background-size:40px;
+				}
+			}	
 		}
 
 	body.front #content .block-views {

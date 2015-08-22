@@ -286,6 +286,7 @@ Drupal.behaviors.paragraphs_adjustments = {
 		var calloutactive = $('.field-name-field-callout-active- .field-item').html();
 		if (calloutactive != "Yes") {
 			$('.paragraphs-item-special-event-callout-box').parent().hide();
+			$('body.front #content').css('margin-top','-20px');
 		}
 	
 	}
