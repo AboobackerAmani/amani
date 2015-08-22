@@ -533,7 +533,7 @@ function peace_geeks_project_partners_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_partner_contributions',
-      'label' => 'Partner Contributions',
+      'label' => 'Partner Contributors',
       'required' => 0,
       'settings' => array(
         'better_formats' => array(
@@ -626,7 +626,7 @@ function peace_geeks_project_partners_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_peacegeeks_contributions',
-      'label' => 'PeaceGeeks Contributions',
+      'label' => 'PeaceGeeks Contributors',
       'required' => 0,
       'settings' => array(
         'better_formats' => array(
@@ -1019,6 +1019,88 @@ function peace_geeks_project_partners_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-project_partners-field_projects_reference'.
+  $fields['node-project_partners-field_projects_reference'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_projects_reference',
+      'foreign keys' => array(
+        'node' => array(
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'entityreference',
+      'settings' => array(
+        'handler' => 'base',
+        'handler_settings' => array(
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+          'sort' => array(
+            'type' => 'none',
+          ),
+          'target_bundles' => array(
+            'projects' => 'projects',
+          ),
+        ),
+        'target_type' => 'node',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'project_partners',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'entityreference',
+          'settings' => array(
+            'link' => FALSE,
+          ),
+          'type' => 'entityreference_label',
+          'weight' => 15,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_projects_reference',
+      'label' => 'Projects Reference',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '55',
+      ),
+    ),
+  );
+
   // Exported field: 'node-project_partners-field_services_provided'.
   $fields['node-project_partners-field_services_provided'] = array(
     'field_config' => array(
@@ -1399,8 +1481,9 @@ Prof.',
   t('Image');
   t('Location');
   t('Our Impact');
-  t('Partner Contributions');
-  t('PeaceGeeks Contributions');
+  t('Partner Contributors');
+  t('PeaceGeeks Contributors');
+  t('Projects Reference');
   t('Services Provided');
   t('Testimonial');
   t('Testimonial Author');
