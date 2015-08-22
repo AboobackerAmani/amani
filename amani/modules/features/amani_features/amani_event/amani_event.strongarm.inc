@@ -117,6 +117,9 @@ function amani_event_strongarm() {
         'redirect' => array(
           'weight' => '16',
         ),
+        'language' => array(
+          'weight' => '0',
+        ),
       ),
       'display' => array(
         'language' => array(
