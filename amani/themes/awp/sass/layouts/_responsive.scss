@@ -305,7 +305,8 @@ $zen-auto-include-item-base: false;
       }
       a.header__logo{
         display: block;
-        width: 180px;
+        width: 32px;
+        max-width: 180px;
         height: 81px;
         background: url("../images/mobile/logo.png") center no-repeat;
         background-size: 100% !important;
