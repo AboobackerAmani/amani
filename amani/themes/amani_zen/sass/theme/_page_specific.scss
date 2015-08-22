@@ -284,6 +284,24 @@
 				float:left;
 				width:662px;
 			}
+			
+			ul.pager.pager-load-more {
+				display:block;
+				margin-left:380px;
+				
+				li {
+					list-style-type:none;
+					a {
+						color:$text-grey;
+						padding:14px 60px;
+						background:$soft-grey;
+						display:inline-block;
+						text-align:center;
+						margin-bottom:3em;
+						font-size:1.2em;
+					}
+				}
+			}
 		}
 	
 	
