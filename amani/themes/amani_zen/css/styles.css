@@ -3072,7 +3072,11 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding-right: 10px;
     padding-left: 10px;
   }
-  /* line 163, ../sass/theme/_page_specific.scss */
+  /* line 164, ../sass/theme/_page_specific.scss */
+  body.front .block-views .views-field-field-anchor-to-link-to {
+    display: none;
+  }
+  /* line 169, ../sass/theme/_page_specific.scss */
   body.front .paragraphs-item-special-event-callout-box {
     display: block;
     width: 100%;
@@ -3080,21 +3084,21 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     color: white;
     background: #474F5E;
   }
-  /* line 169, ../sass/theme/_page_specific.scss */
+  /* line 175, ../sass/theme/_page_specific.scss */
   body.front .paragraphs-item-special-event-callout-box .field-name-field-callout-title {
     font-size: 1.1em;
     font-style: italic;
   }
-  /* line 173, ../sass/theme/_page_specific.scss */
+  /* line 179, ../sass/theme/_page_specific.scss */
   body.front .paragraphs-item-special-event-callout-box .field-name-field-callout-text {
     font-size: 1.8em;
     line-height: 1.4em;
   }
-  /* line 177, ../sass/theme/_page_specific.scss */
+  /* line 183, ../sass/theme/_page_specific.scss */
   body.front .paragraphs-item-special-event-callout-box .field-name-field-callout-link {
     display: none;
   }
-  /* line 180, ../sass/theme/_page_specific.scss */
+  /* line 186, ../sass/theme/_page_specific.scss */
   body.front .paragraphs-item-special-event-callout-box .field-name-field-callout-active- {
     display: none;
   }

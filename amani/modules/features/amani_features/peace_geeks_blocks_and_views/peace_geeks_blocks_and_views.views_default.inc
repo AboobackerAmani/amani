@@ -142,6 +142,17 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Field: Anchor to Link To */
+  $handler->display->display_options['fields']['field_anchor_to_link_to']['id'] = 'field_anchor_to_link_to';
+  $handler->display->display_options['fields']['field_anchor_to_link_to']['table'] = 'field_data_field_anchor_to_link_to';
+  $handler->display->display_options['fields']['field_anchor_to_link_to']['field'] = 'field_anchor_to_link_to';
+  $handler->display->display_options['fields']['field_anchor_to_link_to']['label'] = '';
+  $handler->display->display_options['fields']['field_anchor_to_link_to']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Global: Random */
+  $handler->display->display_options['sorts']['random']['id'] = 'random';
+  $handler->display->display_options['sorts']['random']['table'] = 'views';
+  $handler->display->display_options['sorts']['random']['field'] = 'random';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
