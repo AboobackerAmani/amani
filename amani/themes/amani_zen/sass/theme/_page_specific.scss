@@ -190,6 +190,106 @@
 	
 	}
 
-
+	
+	
+	/* News section */
+	
+	body.page-news {
+		
+		#main {padding-top:50px;}
+		
+		#content {
+			width:980px;
+		}
+		
+		h1#page-title {
+			display:none;
+		}
+		
+		.view-peace-geeks-news-and-events {
+			
+			&.view-display-id-page {
+				
+				.view-content {
+					
+					ol {
+						
+						li {
+							list-style-type:none;
+							display:block;
+							float:left;
+							width:326px;
+							height:480px;
+							background:$soft-grey;
+							margin-right:16px;
+							margin-bottom:34px;
+							
+							&:nth-child(even) {
+								margin-right:0;
+							}
+						}
+					}
+				}
+				
+				.views-field-title {
+					display:block;
+					height:72px;
+					width:286px;
+					float:left;
+					a {
+						font-size:1.6em;
+						line-height:1.4em;
+						color:black;
+						display:block;
+						width:100%;
+						padding:10px 20px 20px 20px;
+						font-weight:600;
+					}
+				}
+				
+				.views-field-body {
+					font-size:1.2em;
+					color:$text-black;
+					line-height:1.4em;
+					display:block;
+					padding:0 20px 20px 20px;
+					width:286px;
+					margin-top:8px;
+					float:left;
+				}
+				
+				.views-field-created {
+					display:block;
+					float:left;
+					font-size:1.1em;
+					color:$text-grey;
+					padding-left:20px;
+				}
+				
+				.views-field-comment-count {
+					display:block;
+					float:left;
+					font-size:1.1em;
+					color:$text-grey;
+					padding-left:20px;
+					&:before {
+						content:"|";
+						padding-right:20px;
+					}
+				}
+			}
+			
+			ul.pager {
+				display:block;
+				float:left;
+				width:662px;
+			}
+		}
+	
+	
+	
+	
+	
+	}
 
 }

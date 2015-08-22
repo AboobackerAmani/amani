@@ -3102,6 +3102,90 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   body.front .paragraphs-item-special-event-callout-box .field-name-field-callout-active- {
     display: none;
   }
+
+  /* News section */
+  /* line 199, ../sass/theme/_page_specific.scss */
+  body.page-news #main {
+    padding-top: 50px;
+  }
+  /* line 201, ../sass/theme/_page_specific.scss */
+  body.page-news #content {
+    width: 980px;
+  }
+  /* line 205, ../sass/theme/_page_specific.scss */
+  body.page-news h1#page-title {
+    display: none;
+  }
+  /* line 217, ../sass/theme/_page_specific.scss */
+  body.page-news .view-peace-geeks-news-and-events.view-display-id-page .view-content ol li {
+    list-style-type: none;
+    display: block;
+    float: left;
+    width: 326px;
+    height: 480px;
+    background: #E6E6E6;
+    margin-right: 16px;
+    margin-bottom: 34px;
+  }
+  /* line 227, ../sass/theme/_page_specific.scss */
+  body.page-news .view-peace-geeks-news-and-events.view-display-id-page .view-content ol li:nth-child(even) {
+    margin-right: 0;
+  }
+  /* line 234, ../sass/theme/_page_specific.scss */
+  body.page-news .view-peace-geeks-news-and-events.view-display-id-page .views-field-title {
+    display: block;
+    height: 72px;
+    width: 286px;
+    float: left;
+  }
+  /* line 239, ../sass/theme/_page_specific.scss */
+  body.page-news .view-peace-geeks-news-and-events.view-display-id-page .views-field-title a {
+    font-size: 1.6em;
+    line-height: 1.4em;
+    color: black;
+    display: block;
+    width: 100%;
+    padding: 10px 20px 20px 20px;
+    font-weight: 600;
+  }
+  /* line 250, ../sass/theme/_page_specific.scss */
+  body.page-news .view-peace-geeks-news-and-events.view-display-id-page .views-field-body {
+    font-size: 1.2em;
+    color: #414042;
+    line-height: 1.4em;
+    display: block;
+    padding: 0 20px 20px 20px;
+    width: 286px;
+    margin-top: 8px;
+    float: left;
+  }
+  /* line 261, ../sass/theme/_page_specific.scss */
+  body.page-news .view-peace-geeks-news-and-events.view-display-id-page .views-field-created {
+    display: block;
+    float: left;
+    font-size: 1.1em;
+    color: #9a9a9a;
+    padding-left: 20px;
+  }
+  /* line 269, ../sass/theme/_page_specific.scss */
+  body.page-news .view-peace-geeks-news-and-events.view-display-id-page .views-field-comment-count {
+    display: block;
+    float: left;
+    font-size: 1.1em;
+    color: #9a9a9a;
+    padding-left: 20px;
+  }
+  /* line 275, ../sass/theme/_page_specific.scss */
+  body.page-news .view-peace-geeks-news-and-events.view-display-id-page .views-field-comment-count:before {
+    content: "|";
+    padding-right: 20px;
+  }
+  /* line 282, ../sass/theme/_page_specific.scss */
+  body.page-news .view-peace-geeks-news-and-events ul.pager {
+    display: block;
+    float: left;
+    width: 662px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
