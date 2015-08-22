@@ -304,8 +304,322 @@
 			}
 		}
 	
+	}
 	
+	/* Events section */
 	
+	body.page-events {
+		
+		#main {padding-top:50px;}
+		
+		#content {
+			width:686px;
+			float:left;
+		}
+		
+		h1#page-title {
+			display:none;
+		}
+		
+		
+		
+		.view-peace-geeks-news-and-events {
+		
+			/* Past events */
+			
+			&.view-display-id-page_1 {
+				
+				.view-content {
+					
+					ol {
+						
+						li {
+							list-style-type:none;
+							display:block;
+							float:left;
+							width:210px;
+							height:394px;
+							background:$soft-grey;
+							margin-right:18px;
+							margin-bottom:34px;
+							
+							&:nth-child(3n) {
+								margin-right:0;
+							}
+						}
+					}
+				}
+				
+				.views-exposed-form {
+					display:block;
+					float:left;
+					width:100%;
+					background:$soft-grey;
+					padding:1em 2em;
+					margin-bottom:2em;
+					label {
+						text-transform:uppercase;
+						display:block;
+						margin-bottom:1em;
+					}
+					.form-item {
+						display:inline-block;
+						background:white;
+						font-weight:300;
+						font-style:italic;
+						padding:.2em .6em;
+						cursor:pointer;
+						&:hover {
+							background:$blue;
+						}
+						input[type="radio"] {
+							display:none;
+						}
+						label {
+							text-transform:none;
+							margin-bottom:0;
+						}
+					}
+				}
+				
+				.views-field-title {
+					display:block;
+					height:64px;
+					width:170px;
+					float:left;
+					padding-left:20px;
+					padding-right:20px;
+					padding-top:10px;
+					a {
+						font-size:1.1em;
+						line-height:1.2em;
+						color:$blue;
+						display:block;
+						width:100%;
+						font-weight:400;
+						text-transform:uppercase;
+					}
+				}
+				
+				.views-field-field-event-date {
+					font-size:1em;
+					color:$text-grey;
+					display:block;
+					padding:0 20px 4px 20px;
+					
+					margin-top:16px;
+					float:left;
+					
+				}
+				
+				.views-field-title-1 {
+					display:block;
+					width:100%;
+					float:left;
+					padding-left:20px;
+					a {
+						font-size:1em;
+						color:$text-grey;
+						display:inline-block;
+						font-weight:400;
+						border:1px solid $text-grey;
+						padding:.2em .6em;
+						text-transform:none;
+						
+					}
+				}
+								
+				.views-field-comment-count {
+					display:block;
+					float:right;
+					font-size:1em;
+					color:$text-grey;
+					padding-right:20px;
+					margin-top:16px;
+					&:before {
+						content:"|";
+						padding-left:20px;
+					}
+				}
+			}
+			
+			/* Upcoming events */
+			
+			& .view-header .view-display-id-block_3  {
+				
+				h2 {
+					color:$blue;
+					font-weight:300;
+					font-size:2.4em;
+					margin-top:0;
+					margin-bottom:0;	
+				}
+				
+				.view-footer {
+					h2 {
+						margin-top:1em;
+						display:block;
+						float:left;
+						width:100%;
+						
+					}
+				}
+				
+				.view-content {
+					
+					ol {
+						
+						li {
+							list-style-type:none;
+							display:block;
+							float:left;
+							width:324px;
+							height:580px;
+							background:$soft-grey;
+							margin-right:18px;
+							margin-bottom:34px;
+							
+							&:nth-child(even) {
+								margin-right:0;
+							}
+						}
+					}
+				}
+				
+				.views-field-title {
+					display:block;
+					height:72px;
+					width:100%;
+					float:left;
+					padding:10px 20px 20px 20px;
+					a {
+						font-size:1.6em;
+						line-height:1.4em;
+						color:black;
+						display:block;
+						width:100%;
+						
+						font-weight:600;
+						text-transform:none;
+					}
+				}
+				
+				.views-field-field-event-date {
+					font-size:1.2em;
+					color:$text-black;
+					display:block;
+					padding:0 20px 4px 20px;
+					width:286px;
+					margin-top:16px;
+					float:left;
+					span.views-label {
+						float:left;
+						display:inline;
+						padding-right:6px;
+					}
+				}
+				
+				.views-field-field-event-date-1 {
+					font-size:1.2em;
+					color:$text-black;
+					display:block;
+					padding:0 20px 4px 20px;
+					width:286px;
+					margin-top:2px;
+					float:left;
+					span.views-label {
+						float:left;
+						display:inline;
+						padding-right:6px;
+					}
+				}
+				
+				.views-field-field-event-date-2 {
+					font-size:1.2em;
+					color:$text-black;
+					display:block;
+					padding:0 20px 4px 20px;
+					width:286px;
+					margin-top:2px;
+					float:left;
+					span.views-label {
+						float:left;
+						display:inline;
+						padding-right:6px;
+					}
+				}
+				
+				.views-field-title-1 {
+					display:block;
+					float:left;
+					padding-top:24px;
+					padding-left:20px;
+					width:auto;
+					a {
+						font-size:1.2em;
+						color:$text-grey;
+						border:1px solid $text-grey;
+						padding:.2em 1em;
+						letter-spacing:1px;
+						font-weight:600;
+					}
+				}
+				
+				.views-field-field-registration-link {
+					display:block;
+					float:right;
+					padding-top:24px;
+					padding-right:20px;
+					a {
+						font-size:1.2em;
+						color:white;
+						background:$orange;
+						padding:.2em 1em;
+						letter-spacing:1px;
+					}
+				}
+				
+				.views-field-comment-count {
+					display:block;
+					float:left;
+					font-size:1.1em;
+					color:$text-grey;
+					padding-left:20px;
+					width:100%;
+					padding-top:18px;
+					margin-top:0;
+					padding-right:0;
+					&:before {
+						content:"";
+						padding-right:0;
+					}
+				}
+			}
+			
+			ul.pager {
+				display:block;
+				float:left;
+				width:662px;
+			}
+			
+			ul.pager.pager-load-more {
+				display:block;
+				margin-left:380px;
+				
+				li {
+					list-style-type:none;
+					a {
+						color:$text-grey;
+						padding:14px 60px;
+						background:$soft-grey;
+						display:inline-block;
+						text-align:center;
+						margin-bottom:3em;
+						font-size:1.2em;
+					}
+				}
+			}
+		}
 	
 	
 	}
