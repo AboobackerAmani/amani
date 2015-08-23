@@ -2555,6 +2555,18 @@ div.breadcrumb {
   background-color: #5d677b;
 }
 
+/* line 14, ../sass/theme/_forms.scss */
+input.form-text {
+  background: white;
+  border: 4px solid #E6E6E6;
+}
+
+/* line 19, ../sass/theme/_forms.scss */
+textarea.form-textarea {
+  background: white;
+  border: 4px solid #E6E6E6;
+}
+
 /**
  * @file
  * Style for menus.
@@ -3507,6 +3519,180 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 3em;
     font-size: 1.2em;
   }
+
+  /* Article pages */
+  /* line 636, ../sass/theme/_page_specific.scss */
+  body.node-type-article h1#page-title {
+    display: none;
+  }
+  /* line 640, ../sass/theme/_page_specific.scss */
+  body.node-type-article #main {
+    padding-top: 50px;
+    padding-bottom: 90px;
+  }
+  /* line 645, ../sass/theme/_page_specific.scss */
+  body.node-type-article #content {
+    width: 686px;
+    float: left;
+    display: block;
+  }
+  /* line 651, ../sass/theme/_page_specific.scss */
+  body.node-type-article .views-field-created {
+    color: #9a9a9a;
+  }
+  /* line 655, ../sass/theme/_page_specific.scss */
+  body.node-type-article .views-field-comment-count {
+    font-size: 1.2em;
+    display: block;
+    width: 100%;
+    border-top: 2px solid #E6E6E6;
+    padding-top: 2em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+  /* line 666, ../sass/theme/_page_specific.scss */
+  body.node-type-article .views-field-title a {
+    color: black;
+    font-size: 1.8em;
+    line-height: 1.4em;
+    padding-top: 14px;
+    padding-bottom: 18px;
+    font-weight: bold;
+    display: block;
+  }
+  /* line 677, ../sass/theme/_page_specific.scss */
+  body.node-type-article .views-field-name {
+    display: block;
+    margin-bottom: 4px;
+    margin-top: 18px;
+  }
+  /* line 681, ../sass/theme/_page_specific.scss */
+  body.node-type-article .views-field-name .views-label {
+    text-transform: uppercase;
+    color: #9a9a9a;
+  }
+  /* line 687, ../sass/theme/_page_specific.scss */
+  body.node-type-article .views-field-name span.field-content a {
+    color: #9a9a9a;
+  }
+  /* line 693, ../sass/theme/_page_specific.scss */
+  body.node-type-article .views-field-field-tags {
+    display: block;
+    margin-bottom: .6em;
+  }
+  /* line 697, ../sass/theme/_page_specific.scss */
+  body.node-type-article .views-field-field-tags .views-label {
+    text-transform: uppercase;
+    color: #9a9a9a;
+    display: inline;
+  }
+  /* line 703, ../sass/theme/_page_specific.scss */
+  body.node-type-article .views-field-field-tags div.field-content {
+    display: inline;
+    color: #9a9a9a;
+  }
+  /* line 706, ../sass/theme/_page_specific.scss */
+  body.node-type-article .views-field-field-tags div.field-content a {
+    color: #9a9a9a;
+  }
+  /* line 713, ../sass/theme/_page_specific.scss */
+  body.node-type-article article.node-article .views-field-body {
+    font-size: 1.1em;
+    line-height: 1.4em;
+  }
+}
+/* Styling for administrative/editor stuff */
+/* line 3, ../sass/theme/_admin_interface.scss */
+ul.tabs-primary {
+  position: absolute;
+  top: -30px;
+}
+/* line 7, ../sass/theme/_admin_interface.scss */
+ul.tabs-primary li {
+  display: inline;
+  padding-right: 10px;
+}
+/* line 10, ../sass/theme/_admin_interface.scss */
+ul.tabs-primary li a {
+  font-weight: bold;
+}
+
+/* Comment styling */
+/* line 4, ../sass/theme/_comments.scss */
+h3.comment-title a {
+  color: #F09416;
+}
+
+/* line 9, ../sass/theme/_comments.scss */
+div.indented {
+  margin-left: 40px;
+}
+/* line 11, ../sass/theme/_comments.scss */
+div.indented article.comment {
+  width: 92%;
+}
+
+/* line 16, ../sass/theme/_comments.scss */
+article.comment {
+  display: block;
+  background: #E6E6E6;
+  padding: 2em 2em 0 2em;
+  margin-bottom: 1em;
+  float: left;
+  width: 616px;
+}
+/* line 25, ../sass/theme/_comments.scss */
+article.comment p.submitted {
+  color: #F09416;
+}
+/* line 27, ../sass/theme/_comments.scss */
+article.comment p.submitted a.permalink {
+  float: right;
+  color: #F09416;
+}
+/* line 33, ../sass/theme/_comments.scss */
+article.comment ul.links.inline {
+  display: inline-block;
+  float: right;
+  margin-bottom: 4px;
+}
+/* line 37, ../sass/theme/_comments.scss */
+article.comment ul.links.inline li {
+  display: inline;
+  padding-right: 10px;
+}
+/* line 40, ../sass/theme/_comments.scss */
+article.comment ul.links.inline li a {
+  color: white;
+  background: #F09416;
+  padding: 4px 4px;
+  margin-left: 2px;
+  text-transform: uppercase;
+}
+/* line 51, ../sass/theme/_comments.scss */
+article.comment .field-item p {
+  font-size: 1.1em;
+  line-height: 1.4em;
+}
+
+/* line 59, ../sass/theme/_comments.scss */
+section#comments h2.title {
+  display: none;
+}
+
+/* line 64, ../sass/theme/_comments.scss */
+form.comment-form {
+  display: block;
+  float: left;
+  width: 100%;
+  margin-top: 2em;
+}
+/* line 70, ../sass/theme/_comments.scss */
+form.comment-form #edit-preview {
+  border: 1px solid #474F5E;
+  color: #474F5E;
+  margin-left: 10px;
+  background: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

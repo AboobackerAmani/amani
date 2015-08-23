@@ -295,9 +295,7 @@ Drupal.behaviors.paragraphs_adjustments = {
 // Front page area of focus link anchor change
 
 	var frontareaanchor = $('body.front .view-display-id-front_areas_of_focus .views-field-field-anchor-to-link-to .field-content').html();
-	console.log(frontareaanchor);
 	var frontareanewlink = location.protocol + '//' + location.host + '/areas-of-focus#' + frontareaanchor;
-	console.log(frontareanewlink);
 	$('body.front .view-display-id-front_areas_of_focus .views-field-title a').attr('href', frontareanewlink);
 
 // Team page adjustments, hover effects, etc

@@ -627,5 +627,95 @@
 	
 	
 	}
+	
+	
+	/* Article pages */
+	
+	body.node-type-article {
+	
+		h1#page-title {
+			display:none;
+		}
+	
+		#main {
+			padding-top:50px;
+			padding-bottom:90px;
+		}
+	
+		#content {
+			width:686px;
+			float:left;
+			display:block;
+		}
+		
+		.views-field-created {
+			color:$text-grey;
+		}
+		
+		.views-field-comment-count {
+			font-size:1.2em;
+			display:block;
+			width:100%;
+			border-top:2px solid $soft-grey;
+			padding-top:2em;
+			margin-top:2em;
+			margin-bottom:1em;
+		}
+	
+		.views-field-title {
+			a {
+				color:black;
+				font-size:1.8em;
+				line-height:1.4em;
+				padding-top:14px;
+				padding-bottom:18px;
+				font-weight:bold;
+				display:block;
+			}
+		}
+		
+		.views-field-name {
+			display:block;
+			margin-bottom:4px;
+			margin-top:18px;
+			.views-label {
+				text-transform:uppercase;
+				color:$text-grey;
+				
+			}
+			span.field-content {
+				a {
+					color:$text-grey;
+				}
+			}
+		}
+		
+		.views-field-field-tags {
+			display:block;
+			
+			margin-bottom:.6em;
+			.views-label {
+				text-transform:uppercase;
+				color:$text-grey;
+				display:inline;
+
+			}
+			div.field-content {
+				display:inline;
+				color:$text-grey;
+				a {
+					color:$text-grey;
+				}
+			}
+		}
+		
+		article.node-article {
+			.views-field-body {
+				font-size:1.1em;
+				line-height:1.4em;
+			}
+		}
+	
+	}
 
 }

@@ -34,7 +34,13 @@
     // We hide the comments and links now so that we can render them later.
     hide($content['comments']);
     hide($content['links']);
-    print render($content);
+    
+    if ($node->type == 'article') {
+    		print views_embed_view('peace_geeks_news_and_events','news_item_override', $node->nid);
+    	}
+    	else {
+    		print render($content);
+    	}
   ?>
 
   <?php print render($content['links']); ?>

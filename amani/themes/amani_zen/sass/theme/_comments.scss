@@ -1,0 +1,76 @@
+/* Comment styling */
+
+h3.comment-title {
+	a {
+		color:$orange;
+	}
+}
+
+div.indented {
+	margin-left:40px;
+	article.comment {
+		width:92%;
+	}
+}
+
+article.comment {
+
+	display:block;
+	background:$soft-grey;
+	padding:2em 2em 0 2em;
+	margin-bottom:1em;
+	float:left;
+	width:616px;
+	
+	p.submitted {
+		color:$orange;
+		a.permalink {
+			float:right;
+			color:$orange;
+		}
+	}
+	
+	ul.links.inline {
+		display:inline-block;
+		float:right;
+		margin-bottom:4px;
+		li {
+			display:inline;
+			padding-right:10px;
+			a {
+				color:white;
+				background:$orange;
+				padding:4px 4px;
+				margin-left:2px;
+				text-transform:uppercase;
+			}
+		}
+	}
+	
+	.field-item {
+		p {
+			font-size:1.1em;
+			line-height:1.4em;
+		}
+	}
+}
+
+section#comments {
+	h2.title {
+		display:none;
+	}
+}
+
+form.comment-form {
+	display:block;
+	float:left;
+	width:100%;
+	margin-top:2em;
+	
+	#edit-preview {
+		border:1px solid $grey;
+		color:$grey;
+		margin-left:10px;
+		background:none;
+	}
+}

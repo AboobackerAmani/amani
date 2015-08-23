@@ -10,3 +10,13 @@
 .form-submit {
   @include button-style();
 }
+
+input.form-text {
+	background:white;
+	border:4px solid $soft-grey;
+}
+
+textarea.form-textarea {
+	background:white;
+	border:4px solid $soft-grey;
+}
