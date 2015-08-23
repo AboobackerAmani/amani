@@ -203,7 +203,9 @@
 		#main {padding-top:50px;}
 		
 		#content {
-			width:980px;
+			width:686px;
+			float:left;
+			display:block;
 		}
 		
 		h1#page-title {
@@ -222,7 +224,7 @@
 							list-style-type:none;
 							display:block;
 							float:left;
-							width:326px;
+							width:325px;
 							height:480px;
 							background:$soft-grey;
 							margin-right:16px;
@@ -713,6 +715,235 @@
 			.views-field-body {
 				font-size:1.1em;
 				line-height:1.6em;
+			}
+		}
+	
+	}
+	
+	
+	/* Event pages */
+	
+	body.node-type-event {
+	
+		h1#page-title {
+			display:none;
+		}
+	
+		#main {
+			padding-top:50px;
+			padding-bottom:90px;
+		}
+	
+		#content {
+			width:686px;
+			float:left;
+			display:block;
+		}
+		
+		.views-field-created {
+			color:$text-grey;
+			float:left;
+			width:100%;
+			display:block;
+		}
+		
+		.views-field-comment-count {
+			font-size:1.2em;
+			display:block;
+			width:100%;
+			border-top:2px solid $soft-grey;
+			padding-top:2em;
+			margin-top:2em;
+			margin-bottom:1em;
+		}
+		
+		.views-field-field-image {
+			float:left;
+			margin-right:20px;
+		}
+		
+		.views-field-name-1 {
+			a {
+				color:$blue;
+				font-size:1.8em;
+				line-height:1.4em;
+				padding-top:0;
+				padding-bottom:0;
+				font-weight:600;
+				display:block;
+			}
+		}
+		
+		.views-field-field-venue {
+			display:block;
+			margin-bottom:4px;
+			margin-top:18px;
+			font-size:1.1em;
+			width:100%;
+			.views-label {
+				display:inline;
+				font-weight:600;
+			}	
+			.field-content {
+				display:inline;
+			}
+		}
+		
+		.views-field-field-event-time {
+			display:block;
+			margin-bottom:4px;
+			margin-top:4px;
+			font-size:1.1em;
+			width:100%;
+			.views-label {
+				display:inline;
+				font-weight:600;
+			}	
+			.field-content {
+				display:inline;
+			}
+		}
+		
+		.views-field-field-event-date {
+			display:block;
+			margin-bottom:4px;
+			margin-top:18px;
+			font-size:1.1em;
+			width:100%;
+			.views-label {
+				display:inline;
+				font-weight:600;
+			}	
+			.field-content {
+				display:inline;
+			}
+		}
+		
+		.views-field-field-guest-speaker {
+			display:block;
+			margin-bottom:4px;
+			margin-top:18px;
+			font-size:1.1em;
+			width:100%;
+			.views-label {
+				display:inline;
+				font-weight:600;
+			}	
+			.field-content {
+				display:inline;
+			}
+		}
+		
+		.views-field-field-sponsor-logo {
+			display:block;
+			float:left;
+			margin-bottom:4px;
+			margin-top:18px;
+			font-size:1em;
+			width:auto;
+			padding-right:40px;
+			margin-bottom:30px;
+			.views-label {
+				display:block;
+				font-weight:600;
+				margin-bottom:14px;
+				text-transform:uppercase;
+			}	
+			.field-content {
+				display:block;
+			}
+		}
+		
+		.views-field-field-sponsor-logo-1 {
+			display:block;
+			float:left;
+			margin-bottom:4px;
+			margin-top:18px;
+			font-size:1em;
+			width:auto;
+			margin-bottom:30px;
+			.views-label {
+				display:block;
+				font-weight:600;
+				margin-bottom:14px;
+				text-transform:uppercase;
+			}	
+			.field-content {
+				display:block;
+			}
+		}
+		
+		.views-field-field-registration-link {
+			a {
+				font-size: 1.2em;
+    			color: white;
+   				background: #F09416;
+    			padding: .2em 1em;
+    			letter-spacing: 1px;
+    			display:inline-block;
+    			margin-top:30px;
+			}
+		}
+	
+		.views-field-title {
+			a {
+				color:black;
+				font-size:1.8em;
+				line-height:1.4em;
+				padding-top:2px;
+				padding-bottom:18px;
+				font-weight:bold;
+				display:block;
+			}
+		}
+		
+		.views-field-name {
+			display:block;
+			margin-bottom:4px;
+			margin-top:18px;
+			float:left;
+			width:100%;
+			.views-label {
+				text-transform:uppercase;
+				color:$text-grey;
+				
+			}
+			span.field-content {
+				a {
+					color:$text-grey;
+				}
+			}
+		}
+		
+		.views-field-field-tags {
+			display:block;
+			float:left;
+			width:100%;
+			
+			margin-bottom:.6em;
+			.views-label {
+				text-transform:uppercase;
+				color:$text-grey;
+				display:inline;
+
+			}
+			div.field-content {
+				display:inline;
+				color:$text-grey;
+				a {
+					color:$text-grey;
+				}
+			}
+		}
+		
+		article.node-event {
+			.views-field-body {
+				font-size:1.1em;
+				line-height:1.6em;
+				display:block;
+				width:100%;
+				float:left;
+				padding-top:1em;
 			}
 		}
 	

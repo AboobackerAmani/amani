@@ -38,6 +38,9 @@
     if ($node->type == 'article') {
     		print views_embed_view('peace_geeks_news_and_events','news_item_override', $node->nid);
     	}
+    	elseif ($node->type == 'event') {
+    		print views_embed_view('peace_geeks_news_and_events','event_item_override', $node->nid);
+    	}
     	else {
     		print render($content);
     	}
