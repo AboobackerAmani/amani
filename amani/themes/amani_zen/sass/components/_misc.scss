@@ -91,7 +91,7 @@
 
 /* Wrapper for website name and slogan. */
 .header__name-and-slogan {
-  float: left;
+  //float: left;
 }
 
 /* The name of the website. */
@@ -117,7 +117,10 @@
 
 /* The slogan (or tagline) of a website. */
 .header__site-slogan {
-  @include element-invisible();
+  font-size: 16px;
+  text-align: center;
+  color: #acacac;
+  //@include element-invisible();
 }
 
 /* The secondary menu (login, etc.) */
