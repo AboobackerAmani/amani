@@ -139,5 +139,62 @@ function peace_geeks_blocks_and_views_context_default_contexts() {
   t('Peace Geeks');
   $export['front_page_blocks'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'news_section_blocks';
+  $context->description = '';
+  $context->tag = 'Peace Geeks';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'article' => 'article',
+      ),
+      'options' => array(
+        'node_form' => '1',
+      ),
+    ),
+    'path' => array(
+      'values' => array(
+        'news' => 'news',
+        'news/*' => 'news/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-3033038f735b30dc4c5f3e9635110e30' => array(
+          'module' => 'views',
+          'delta' => '3033038f735b30dc4c5f3e9635110e30',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+        'views-8cf3f1d837b1733a0219d8d51cf941a8' => array(
+          'module' => 'views',
+          'delta' => '8cf3f1d837b1733a0219d8d51cf941a8',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+        'views-7c3d9ae9cc402ea6c0237ed21e71c40d' => array(
+          'module' => 'views',
+          'delta' => '7c3d9ae9cc402ea6c0237ed21e71c40d',
+          'region' => 'sidebar_second',
+          'weight' => '-8',
+        ),
+      ),
+    ),
+    'menu' => array(
+      0 => 'menu-amani-main-menu:news-and-events',
+      1 => 'main-menu:news',
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Peace Geeks');
+  $export['news_section_blocks'] = $context;
+
   return $export;
 }
