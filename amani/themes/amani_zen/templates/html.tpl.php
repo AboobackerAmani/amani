@@ -39,6 +39,12 @@
     <script src="<?php print $base_path . $path_to_zen; ?>/js/respond.js"></script>
     <![endif]-->
   <?php endif; ?>
+  
+  <script type="text/javascript">
+    var vpw = (screen.width>=768)?'980':'device-width';
+    document.write('<meta name="viewport" content="width='+vpw+'" >');
+  </script>
+  
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <?php if ($skip_link_text && $skip_link_anchor): ?>

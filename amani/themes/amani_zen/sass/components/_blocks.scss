@@ -289,4 +289,196 @@
 }
 
 
+/* Events blocks */
 
+@media all and (min-width: $breakpoint) {
+
+	body.section-event, body.section-events {
+	
+		aside.sidebars {
+			.region-sidebar-second {
+				display:block;
+				float:right;
+				width:260px;
+				margin-left:0;
+				margin-right:0;
+				background:$soft-grey;
+				padding:0;
+				
+				
+				/* Calendar styling */
+				
+				.block-views.first {
+					border-bottom:none;
+					margin-top:-4px;
+					h2.block-title {
+						display:none;
+					}
+					
+					.view-header {
+						width:260px;
+						display:block;
+						height:32px;
+					}
+					
+					.view-content {
+						width:260px;
+						display:block;
+						padding-bottom:20px;
+					}
+					
+					.calendar-calendar {
+						table {
+							border:1px solid $border-grey;
+							background:$soft-grey;
+							thead {
+								background:$grey;
+								tr {
+									background:$grey;
+									th {
+										background:$grey;
+										color:$text-grey;
+										font-weight:300;
+										font-size:11px;
+									}
+								}	
+							}
+							tr {
+								border:1px solid $border-grey;
+								height:28px;
+								background:$soft-grey;
+								td {	
+									border:1px solid $border-grey;
+									text-align:center;
+									font-size:11px;
+									color:$text-black;
+									&.empty {
+										background:$soft-grey;
+									}
+								}	
+							}	
+						}	
+					}
+					
+					ul.pager {
+						li {
+							list-style-type:none;
+							padding:0;
+							margin:0;
+							background:$blue;
+							a {
+								color:white;
+								font-weight:300;
+								font-size:30px;
+							}
+						}
+					}
+					
+										
+					.date-heading {
+						display:block;
+						background:$blue;
+						color:white;
+						height:33px;
+						h3 {
+							font-weight:300;
+							color:white;
+							font-size:20px;
+							a {
+								color:white;
+							}
+						}
+					}
+				}
+				/* End Calendar Styling */
+				
+				
+				/* Other Events block styling */
+				
+				.block-views {
+				
+					h2 {
+						font-size:16px;
+						color:$blue;
+						text-transform:uppercase;
+						line-height:14px;
+						font-weight:600;
+						margin-top:0;
+						margin-bottom:0;
+						padding-left:20px;
+						padding-right:20px;
+						padding-top:20px;
+					}
+					
+					display:block;
+					width:260px;
+					border-bottom:1px solid $text-grey;
+					
+					&.last {
+						border-bottom:none;
+					}
+					
+					ol {
+						display:block;
+						padding-top:10px;
+						li {
+							list-style-type:none;
+							display:block;
+							padding-bottom:30px;
+							&.views-row-last {
+								padding-bottom:10px;
+							}
+						}
+					}
+					
+					.view.upcoming-events-side-block, .view.facts-block {
+						padding:10px 20px;
+						display:block;
+					}
+					
+					.view.upcoming-events-side-block {
+						.views-field-title a {
+							color:$text-black;
+							font-size:14px;
+							font-weight:300;
+							line-height:18px;
+							padding:0;
+						}
+						.views-field-field-event-date {
+							color:$blue;
+							font-size:11px;
+							margin:0;
+						}
+						
+						ol {
+							li {
+								padding-bottom:20px;
+							}
+						}
+					}
+					
+					.view.facts-block {
+						.views-field-title {
+							color:$orange;
+							font-size:30px;
+							font-weight:600;
+							line-height:30px;
+						}
+						
+						.views-field-body {
+							font-size:14px;
+							color:$text-grey;
+							line-height:18px;
+							padding-top:6px;
+						}
+					}
+					
+					
+				}
+			}
+		}
+	
+	
+	}
+
+}

@@ -457,7 +457,7 @@
 					color:$blue;
 					font-weight:300;
 					font-size:2.4em;
-					margin-top:0;
+					margin-top:-14px;
 					margin-bottom:0;	
 				}
 				
@@ -606,6 +606,10 @@
 				display:block;
 				float:left;
 				width:662px;
+			}
+			
+			.date-nav-wrapper ul.pager {
+				float:none;
 			}
 			
 			ul.pager.pager-load-more {
