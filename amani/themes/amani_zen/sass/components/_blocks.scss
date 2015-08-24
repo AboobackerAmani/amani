@@ -251,7 +251,7 @@
 
 
 
-/* Twitter Block */
+/* Twitter Block 
 #block-views-front_page_tweets-block  {
   .view-header {
     display: none;
@@ -286,7 +286,7 @@
   margin-bottom: 10px;
   background-color: rgb(230, 230, 230);
   padding: 20px;
-}
+}*/
 
 
 /* Events blocks */
@@ -472,6 +472,176 @@
 							padding-top:6px;
 						}
 					}
+					
+					
+				}
+			}
+		}
+	
+	
+	}
+
+}
+
+
+
+/* News blocks */
+
+@media all and (min-width: $breakpoint) {
+
+	body.section-news, body.node-type-article {
+	
+		aside.sidebars {
+			.region-sidebar-second {
+				display:block;
+				float:right;
+				width:260px;
+				margin-left:0;
+				margin-right:0;
+				background:$soft-grey;
+				padding:0;
+				
+				
+				.block-views {
+				
+					h2 {
+						font-size:16px;
+						color:$blue;
+						text-transform:uppercase;
+						line-height:14px;
+						font-weight:600;
+						margin-top:0;
+						margin-bottom:0;
+						padding-left:20px;
+						padding-right:20px;
+						padding-top:20px;
+					}
+					
+					display:block;
+					width:260px;
+					border-bottom:1px solid $text-grey;
+					
+					&.last {
+						border-bottom:none;
+					}
+					
+					ol {
+						display:block;
+						padding-top:10px;
+						li {
+							list-style-type:none;
+							display:block;
+							padding-bottom:30px;
+							&.views-row-last {
+								padding-bottom:10px;
+							}
+						}
+					}
+					
+
+					
+					.view {
+						padding:10px 20px;
+						display:block;
+						
+						.views-field-title a {
+							color:$text-black;
+							font-size:14px;
+							font-weight:300;
+							line-height:18px;
+							padding:0;
+						}
+						
+						
+						ol {
+							li {
+								padding-bottom:16px;
+								&.views-row-last {
+								padding-bottom:6px;
+							}
+							}
+						}
+					}
+					
+					.view-display-id-news_categories_block {
+						.views-field-name {
+							margin:0;
+							a {
+								color:$text-black;
+								font-size:14px;
+								font-weight:300;
+								line-height:18px;
+								padding:0;
+							}
+						}
+					}
+					
+					.view-display-id-pg_twitter_sideblock {
+									
+				
+						padding:20px;
+						background:$soft-grey;
+						font-size:1em;
+						display:block;
+						float:left;
+						color:$text-grey;
+						a {
+							color:$orange;
+						}
+						h2.block-title {
+							display:none;
+						}
+						.view-content {
+							
+						}	
+			
+						.view-header {
+							padding-bottom:1em;
+							a {
+								color:$text-grey;
+								font-style:italic;
+								font-family:"Open Sans Italic";
+								font-weight:normal;
+								font-size:1.1em;
+							}
+						}
+			
+						.views-row {
+							display:block;
+							width:100%;
+							/*border-bottom:1px solid $text-grey;*/
+							margin-bottom:1em;
+							padding-bottom:1em;
+						}
+			
+						.views-field-created-time {
+							a {
+								color:$text-grey;
+							}
+						}
+			
+						.view-footer {
+							
+							a {
+								color:$text-black;
+								display:block;
+								width:74%;
+								margin:0 auto;
+								border:2px solid $border-grey;
+								padding:10px 6px 6px 8px;
+								text-align:right;
+							}
+							#front-twitter-logo-block {
+								display:block;
+								background:url(../images/twitter-bird-small.png) bottom right no-repeat;
+								width:100%;
+								background-size:30px;
+								background-position:0 0;
+								height:24px;
+							}
+						}	
+					}
+					
 					
 					
 				}
