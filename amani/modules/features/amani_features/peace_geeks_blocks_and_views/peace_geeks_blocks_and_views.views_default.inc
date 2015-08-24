@@ -477,6 +477,10 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Content: Article Type (field_article_type) */
+  $handler->display->display_options['relationships']['field_article_type_tid']['id'] = 'field_article_type_tid';
+  $handler->display->display_options['relationships']['field_article_type_tid']['table'] = 'field_data_field_article_type';
+  $handler->display->display_options['relationships']['field_article_type_tid']['field'] = 'field_article_type_tid';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -1390,6 +1394,20 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['suffix'] = ' comments:';
+  /* Field: Content: Date */
+  $handler->display->display_options['fields']['field_event_date_1']['id'] = 'field_event_date_1';
+  $handler->display->display_options['fields']['field_event_date_1']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['fields']['field_event_date_1']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date_1']['label'] = 'Time 2';
+  $handler->display->display_options['fields']['field_event_date_1']['settings'] = array(
+    'format_type' => 'just_time',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
+  $handler->display->display_options['fields']['field_event_date_1']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
@@ -1614,6 +1632,47 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['filters']['field_event_date_value']['default_date'] = 'now + 1 day';
   $handler->display->display_options['filters']['field_event_date_value']['year_range'] = '-0:+3';
   $handler->display->display_options['block_description'] = 'PG Upcoming Events Calendar Block';
+
+  /* Display: Popular Posts */
+  $handler = $view->new_display('block', 'Popular Posts', 'popular_posts_block');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Popular Posts';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['type'] = 'ol';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'body' => 'body',
+    'title_1' => 'title_1',
+  );
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content statistics: Total views */
+  $handler->display->display_options['sorts']['totalcount']['id'] = 'totalcount';
+  $handler->display->display_options['sorts']['totalcount']['table'] = 'node_counter';
+  $handler->display->display_options['sorts']['totalcount']['field'] = 'totalcount';
+  $handler->display->display_options['sorts']['totalcount']['order'] = 'DESC';
+  $handler->display->display_options['block_description'] = 'PG Popular Posts';
   $translatables['peace_geeks_news_and_events'] = array(
     t('Master'),
     t('News and Events'),
@@ -1623,6 +1682,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('term from field_article_type'),
     t('Page'),
     t('News'),
     t('Items per page'),
@@ -1655,7 +1715,6 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('Time'),
     t('Register'),
     t('News Item Override'),
-    t('term from field_article_type'),
     t('Category'),
     t('Labels'),
     t(' comments:'),
@@ -1669,10 +1728,13 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('Venue'),
     t('Thank You To'),
     t('Partnership With'),
+    t('Time 2'),
     t('Upcoming Events Side Block'),
     t('PG Upcoming Events'),
     t('Upcoming Events Calendar'),
     t('PG Upcoming Events Calendar Block'),
+    t('Popular Posts'),
+    t('PG Popular Posts'),
   );
   $export['peace_geeks_news_and_events'] = $view;
 
@@ -2180,6 +2242,24 @@ function peace_geeks_blocks_and_views_views_default_views() {
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['block_description'] = 'Peace Geeks Twitter Front';
+
+  /* Display: Twitter Side Block */
+  $handler = $view->new_display('block', 'Twitter Side Block', 'pg_twitter_sideblock');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Latest Tweets';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="http://twitter.com/peacegeeks"><div id="front-twitter-logo-block">Follow @PeaceGeeks</div></a>';
+  $handler->display->display_options['footer']['area']['format'] = 'php_code';
+  $handler->display->display_options['block_description'] = 'PG Twitter Right Side Block';
   $translatables['peace_geeks_twitter'] = array(
     t('Master'),
     t('Peace Geeks Twitter'),
@@ -2193,6 +2273,10 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('<a href="http://twitter.com/peacegeeks"><div id="front-twitter-logo-block"></div></a>'),
     t('Block'),
     t('Peace Geeks Twitter Front'),
+    t('Twitter Side Block'),
+    t('Latest Tweets'),
+    t('<a href="http://twitter.com/peacegeeks"><div id="front-twitter-logo-block">Follow @PeaceGeeks</div></a>'),
+    t('PG Twitter Right Side Block'),
   );
   $export['peace_geeks_twitter'] = $view;
 
