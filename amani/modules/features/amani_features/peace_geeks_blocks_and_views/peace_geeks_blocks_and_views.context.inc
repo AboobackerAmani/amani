@@ -13,6 +13,67 @@ function peace_geeks_blocks_and_views_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'event_section_blocks';
+  $context->description = '';
+  $context->tag = 'Peace Geeks';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'event' => 'event',
+      ),
+      'options' => array(
+        'node_form' => '1',
+      ),
+    ),
+    'path' => array(
+      'values' => array(
+        'events' => 'events',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-b1374145c0c4af521797fc335e522eed' => array(
+          'module' => 'views',
+          'delta' => 'b1374145c0c4af521797fc335e522eed',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+        'views-4e228403a00d4f1b782faf1e2864ccd2' => array(
+          'module' => 'views',
+          'delta' => '4e228403a00d4f1b782faf1e2864ccd2',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+        'views-facts-quick_facts' => array(
+          'module' => 'views',
+          'delta' => 'facts-quick_facts',
+          'region' => 'sidebar_second',
+          'weight' => '-8',
+        ),
+        'views-facts-peacegeeks_facts' => array(
+          'module' => 'views',
+          'delta' => 'facts-peacegeeks_facts',
+          'region' => 'sidebar_second',
+          'weight' => '-7',
+        ),
+      ),
+    ),
+    'menu' => array(
+      0 => 'main-menu:events',
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Peace Geeks');
+  $export['event_section_blocks'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'front_page_blocks';
   $context->description = '';
   $context->tag = 'Peace Geeks';
