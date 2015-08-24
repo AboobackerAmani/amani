@@ -176,11 +176,17 @@ function peace_geeks_blocks_and_views_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-9',
         ),
+        'block-2' => array(
+          'module' => 'block',
+          'delta' => '2',
+          'region' => 'sidebar_second',
+          'weight' => '-8',
+        ),
         'views-7c3d9ae9cc402ea6c0237ed21e71c40d' => array(
           'module' => 'views',
           'delta' => '7c3d9ae9cc402ea6c0237ed21e71c40d',
           'region' => 'sidebar_second',
-          'weight' => '-8',
+          'weight' => '-7',
         ),
       ),
     ),

@@ -1704,13 +1704,41 @@ div[id*="block-menu-menu-social-media"] li {
     background: #E6E6E6;
     padding: 0;
   }
-  /* line 505, ../sass/components/_blocks.scss */
+  /* line 504, ../sass/components/_blocks.scss */
+  body.section-news aside.sidebars .region-sidebar-second a#likeusfacebook, body.node-type-article aside.sidebars .region-sidebar-second a#likeusfacebook {
+    display: block;
+    width: 180px;
+    padding: 20px;
+    background: url(../images/facebook-peacegeeks.png) top left no-repeat;
+    height: 70px;
+    margin: 14px auto 30px auto;
+  }
+  /* line 513, ../sass/components/_blocks.scss */
+  body.section-news aside.sidebars .region-sidebar-second .block-block, body.node-type-article aside.sidebars .region-sidebar-second .block-block {
+    display: block;
+    width: 260px;
+    border-bottom: 1px solid #9a9a9a;
+  }
+  /* line 514, ../sass/components/_blocks.scss */
+  body.section-news aside.sidebars .region-sidebar-second .block-block h2, body.node-type-article aside.sidebars .region-sidebar-second .block-block h2 {
+    font-size: 16px;
+    color: #59C2ED;
+    text-transform: uppercase;
+    line-height: 14px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+  /* line 532, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views, body.node-type-article aside.sidebars .region-sidebar-second .block-views {
     display: block;
     width: 260px;
     border-bottom: 1px solid #9a9a9a;
   }
-  /* line 507, ../sass/components/_blocks.scss */
+  /* line 534, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views h2, body.node-type-article aside.sidebars .region-sidebar-second .block-views h2 {
     font-size: 16px;
     color: #59C2ED;
@@ -1723,31 +1751,31 @@ div[id*="block-menu-menu-social-media"] li {
     padding-right: 20px;
     padding-top: 20px;
   }
-  /* line 524, ../sass/components/_blocks.scss */
+  /* line 551, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views.last, body.node-type-article aside.sidebars .region-sidebar-second .block-views.last {
     border-bottom: none;
   }
-  /* line 528, ../sass/components/_blocks.scss */
+  /* line 555, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views ol, body.node-type-article aside.sidebars .region-sidebar-second .block-views ol {
     display: block;
     padding-top: 10px;
   }
-  /* line 531, ../sass/components/_blocks.scss */
+  /* line 558, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views ol li, body.node-type-article aside.sidebars .region-sidebar-second .block-views ol li {
     list-style-type: none;
     display: block;
     padding-bottom: 30px;
   }
-  /* line 535, ../sass/components/_blocks.scss */
+  /* line 562, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views ol li.views-row-last, body.node-type-article aside.sidebars .region-sidebar-second .block-views ol li.views-row-last {
     padding-bottom: 10px;
   }
-  /* line 543, ../sass/components/_blocks.scss */
+  /* line 570, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view {
     padding: 10px 20px;
     display: block;
   }
-  /* line 547, ../sass/components/_blocks.scss */
+  /* line 574, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view .views-field-title a, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view .views-field-title a {
     color: #414042;
     font-size: 14px;
@@ -1755,19 +1783,19 @@ div[id*="block-menu-menu-social-media"] li {
     line-height: 18px;
     padding: 0;
   }
-  /* line 557, ../sass/components/_blocks.scss */
+  /* line 584, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view ol li, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view ol li {
     padding-bottom: 16px;
   }
-  /* line 559, ../sass/components/_blocks.scss */
+  /* line 586, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view ol li.views-row-last, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view ol li.views-row-last {
     padding-bottom: 6px;
   }
-  /* line 567, ../sass/components/_blocks.scss */
+  /* line 594, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-news_categories_block .views-field-name, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-news_categories_block .views-field-name {
     margin: 0;
   }
-  /* line 569, ../sass/components/_blocks.scss */
+  /* line 596, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-news_categories_block .views-field-name a, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-news_categories_block .views-field-name a {
     color: #414042;
     font-size: 14px;
@@ -1775,7 +1803,7 @@ div[id*="block-menu-menu-social-media"] li {
     line-height: 18px;
     padding: 0;
   }
-  /* line 579, ../sass/components/_blocks.scss */
+  /* line 606, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock {
     padding: 20px;
     background: #E6E6E6;
@@ -1784,19 +1812,19 @@ div[id*="block-menu-menu-social-media"] li {
     float: left;
     color: #9a9a9a;
   }
-  /* line 588, ../sass/components/_blocks.scss */
+  /* line 615, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock a, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock a {
     color: #F09416;
   }
-  /* line 591, ../sass/components/_blocks.scss */
+  /* line 618, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock h2.block-title, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock h2.block-title {
     display: none;
   }
-  /* line 598, ../sass/components/_blocks.scss */
+  /* line 625, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .view-header, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .view-header {
     padding-bottom: 1em;
   }
-  /* line 600, ../sass/components/_blocks.scss */
+  /* line 627, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .view-header a, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .view-header a {
     color: #9a9a9a;
     font-style: italic;
@@ -1804,7 +1832,7 @@ div[id*="block-menu-menu-social-media"] li {
     font-weight: normal;
     font-size: 1.1em;
   }
-  /* line 609, ../sass/components/_blocks.scss */
+  /* line 636, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .views-row, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .views-row {
     display: block;
     width: 100%;
@@ -1812,11 +1840,11 @@ div[id*="block-menu-menu-social-media"] li {
     margin-bottom: 1em;
     padding-bottom: 1em;
   }
-  /* line 618, ../sass/components/_blocks.scss */
+  /* line 645, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .views-field-created-time a, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .views-field-created-time a {
     color: #9a9a9a;
   }
-  /* line 625, ../sass/components/_blocks.scss */
+  /* line 652, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .view-footer a, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .view-footer a {
     color: #414042;
     display: block;
@@ -1826,7 +1854,7 @@ div[id*="block-menu-menu-social-media"] li {
     padding: 10px 6px 6px 8px;
     text-align: right;
   }
-  /* line 634, ../sass/components/_blocks.scss */
+  /* line 661, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .view-footer #front-twitter-logo-block, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .view-footer #front-twitter-logo-block {
     display: block;
     background: url(../images/twitter-bird-small.png) bottom right no-repeat;
