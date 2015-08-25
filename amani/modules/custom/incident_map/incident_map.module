@@ -668,7 +668,8 @@ function incident_map_report_values($info = array()) {
   $query
     ->entityCondition('entity_type', 'node')
     ->entityCondition('bundle', 'incident_report')
-    ->fieldCondition('field_incident_geolocation', 'geom', 'NULL', '!=');
+    ->fieldCondition('field_incident_geolocation', 'geom', 'NULL', '!=')
+    ->propertyCondition('status', NODE_PUBLISHED);
 
   $result = $query->execute();
   $nids = empty($result['node']) ? array() : array_keys($result['node']);

@@ -20,20 +20,6 @@ function amani_global_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'botcha_enabled_incident_report_node_form';
-  $strongarm->value = 1;
-  $export['botcha_enabled_incident_report_node_form'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'botcha_enabled_user_register_form';
-  $strongarm->value = 1;
-  $export['botcha_enabled_user_register_form'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'captcha_default_challenge';
   $strongarm->value = 'image_captcha/Image';
   $export['captcha_default_challenge'] = $strongarm;

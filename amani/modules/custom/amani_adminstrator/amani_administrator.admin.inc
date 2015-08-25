@@ -475,14 +475,6 @@ function amani_administrator_configure_amani_form() {
 
   $form['spam_control'][] = array(
     '#type' => 'button',
-    '#value' => t('Configure Botcha'),
-    '#executes_submit_callback' => TRUE,
-    '#prefix' => $prefix_3,
-    '#suffix' => '</div>',
-  );
-
-  $form['spam_control'][] = array(
-    '#type' => 'button',
     '#value' => t('Configure Spambot'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix_3,
@@ -564,10 +556,6 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       break;
     case 'Content Management Documentation':
       drupal_goto('http://projectamani.org/content/manage-content-amani-admins-editors-contributors');
-      break;
-    case 'Configure Botcha':
-      module_enable(array('botcha'));
-      drupal_goto('admin/config/people/botcha');
       break;
     case 'Configure Spambot':
       module_enable(array('spambot'));
