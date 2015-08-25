@@ -14,6 +14,17 @@
     width: 31%;
     margin: 0 1%;
     vertical-align: top;
+    
+    @media all and (max-width: $breakpoint) {
+      background: url(../images/divid-line.png) no-repeat center bottom;
+      width: 100%;
+      padding: 10px 20px 70px;
+      
+      &.views-row-last {
+        background: none;
+        padding-bottom: 10px;
+      }
+    }
     @media all and (min-width: 960px) {
       padding-left: 5%;
       padding-right: 5%;
@@ -77,6 +88,10 @@
   width: 290px;
   height: 370px;
   text-align: left;
+  
+  @media all and (max-width: $breakpoint) {
+    margin: 50px 0;
+  }
 
   .view {
     padding: 10px;
@@ -90,6 +105,17 @@
     height: 386.5px !important;
     min-height: 386.5px !important;
   }
+}
+
+@media all and (max-width: $breakpoint) {
+   #block-fb-likebox-0.block-fb-likebox {
+     background-color: $purple;
+     text-align: center;
+     padding: 50px 0 70px;
+     margin: 0  -5%;
+     width: 110%;
+     box-sizing: content-box;
+   }
 }
 
 // background image block
@@ -115,11 +141,26 @@
   margin-left: 30px;
   font-family: $avenir-condensed;
   min-height: 387px;
+  
+  @media all and (max-width: $breakpoint) {
+    background: #5e5e5e;
+    width: 110%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0 -5%;
+    box-sizing: content-box;
+  }
 
   .home-page-twitter-block {
     text-transform: uppercase;
-    background: rgba(0,0,0, 0.5);
+    background: #5e5e5e;
     padding: 16px;
+    min-height: 387px;
+    
+    @media all and (max-width: $breakpoint) {
+       width: 280px;
+       margin: 0 auto;
+     }
 
     .view-header {
       margin-bottom: 16.5px;
@@ -170,10 +211,24 @@
 #block-views-calendar-of-events-block-3 {
 
   font-family: $avenir;
+  
+  @media all and (max-width: $breakpoint) {
+    background: #5e5e5e;
+    width: 110%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0 -5%;
+    box-sizing: content-box;
+  }
 
   .view-calendar-of-events {
-    background: rgba(0,0,0, 0.5);
+    background: #5e5e5e;
     height: 370px;
+    
+    @media all and (max-width: $breakpoint) {
+      width: 280px;
+      margin: 0 auto;
+    }
 
     .view-header {
       color: white;
@@ -302,12 +357,18 @@
   //text-align: left;
   margin-top: 80px;
   float: left;
+  @media all and (max-width: $breakpoint) {
+    margin-top: 40px;
+  }
   
   h2 {
     font-size: 28px;
     font-family: $avenir-condensed;
     margin-bottom: 50px;
     text-transform: uppercase;
+    @media all and (max-width: $breakpoint) {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -319,6 +380,11 @@
     display: inline-block;
     vertical-align: top;
     
+    @media all and (max-width: $breakpoint) {
+      width: 100%;
+      margin: 0 0 20px;
+    }
+    
     .views-field-field-image {
       float: left;
       margin-right: 15px;
@@ -326,10 +392,19 @@
       height: 160px;
       width: 210px;
       position: relative;
+      @media all and (max-width: $breakpoint) {
+        width: 160px;
+        height: 120px;
+      }
       
       img {
         border: $almost-white solid 5px;
         box-shadow: 1px 1px 1px $grey-clear;
+        
+        @media all and (max-width: $breakpoint) {
+          width: 150px;
+          height: 110px;
+        }
       }
       
       &:before {
@@ -374,6 +449,9 @@
       color: $purple-primary;
       margin-left: 220px;
       margin-top: 5px;
+      @media all and (max-width: $breakpoint) {
+        margin-left: 175px;
+      }
       
       &:before {
         content: ">>";

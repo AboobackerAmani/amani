@@ -992,6 +992,19 @@ body {
   margin: 0 1%;
   vertical-align: top;
 }
+@media all and (max-width: 768px) {
+  /* line 11, ../sass/components/_front-page-blocks.scss */
+  .front-page-blocks .views-row {
+    background: url(../images/divid-line.png) no-repeat center bottom;
+    width: 100%;
+    padding: 10px 20px 70px;
+  }
+  /* line 23, ../sass/components/_front-page-blocks.scss */
+  .front-page-blocks .views-row.views-row-last {
+    background: none;
+    padding-bottom: 10px;
+  }
+}
 @media all and (min-width: 960px) {
   /* line 11, ../sass/components/_front-page-blocks.scss */
   .front-page-blocks .views-row {
@@ -999,7 +1012,7 @@ body {
     padding-right: 5%;
   }
 }
-/* line 22, ../sass/components/_front-page-blocks.scss */
+/* line 33, ../sass/components/_front-page-blocks.scss */
 .front-page-blocks .views-row .views-field-title {
   text-transform: uppercase;
   font-weight: 400;
@@ -1008,11 +1021,11 @@ body {
   margin-top: 15px;
   margin-bottom: 30px;
 }
-/* line 32, ../sass/components/_front-page-blocks.scss */
+/* line 43, ../sass/components/_front-page-blocks.scss */
 .front-page-blocks .views-row .read_more_link {
   margin-top: 40px;
 }
-/* line 35, ../sass/components/_front-page-blocks.scss */
+/* line 46, ../sass/components/_front-page-blocks.scss */
 .front-page-blocks .views-row .read_more_link span {
   font-family: "Avenir Next Condensed", sans-serif;
   text-transform: uppercase;
@@ -1021,11 +1034,11 @@ body {
   padding: 10px 25px 8px;
   cursor: pointer;
 }
-/* line 43, ../sass/components/_front-page-blocks.scss */
+/* line 54, ../sass/components/_front-page-blocks.scss */
 .front-page-blocks .views-row .read_more_link span a {
   color: #333;
 }
-/* line 46, ../sass/components/_front-page-blocks.scss */
+/* line 57, ../sass/components/_front-page-blocks.scss */
 .front-page-blocks .views-row .read_more_link span a .more-arrow {
   border: 0;
   font-family: "Avenir", sans-serif;
@@ -1034,17 +1047,17 @@ body {
   color: #ce9bc0;
   padding: 0;
 }
-/* line 56, ../sass/components/_front-page-blocks.scss */
+/* line 67, ../sass/components/_front-page-blocks.scss */
 .front-page-blocks .views-row .read_more_link span:hover {
   background: #eee;
 }
 
-/* line 65, ../sass/components/_front-page-blocks.scss */
+/* line 76, ../sass/components/_front-page-blocks.scss */
 .page-home .contextual-links-region {
   position: initial;
 }
 
-/* line 71, ../sass/components/_front-page-blocks.scss */
+/* line 82, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block,
 #block-fb-likebox-0.block-fb-likebox,
 #block-views-calendar-of-events-block-3 {
@@ -1055,20 +1068,39 @@ body {
   height: 370px;
   text-align: left;
 }
-/* line 81, ../sass/components/_front-page-blocks.scss */
+@media all and (max-width: 768px) {
+  /* line 82, ../sass/components/_front-page-blocks.scss */
+  #block-views-front-page-tweets-block,
+  #block-fb-likebox-0.block-fb-likebox,
+  #block-views-calendar-of-events-block-3 {
+    margin: 50px 0;
+  }
+}
+/* line 96, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .view,
 #block-fb-likebox-0.block-fb-likebox .view,
 #block-views-calendar-of-events-block-3 .view {
   padding: 10px;
 }
 
-/* line 89, ../sass/components/_front-page-blocks.scss */
+/* line 104, ../sass/components/_front-page-blocks.scss */
 #block-fb-likebox-0.block-fb-likebox iframe {
   height: 386.5px !important;
   min-height: 386.5px !important;
 }
 
-/* line 96, ../sass/components/_front-page-blocks.scss */
+@media all and (max-width: 768px) {
+  /* line 111, ../sass/components/_front-page-blocks.scss */
+  #block-fb-likebox-0.block-fb-likebox {
+    background-color: #784580;
+    text-align: center;
+    padding: 50px 0 70px;
+    margin: 0  -5%;
+    width: 110%;
+    box-sizing: content-box;
+  }
+}
+/* line 122, ../sass/components/_front-page-blocks.scss */
 .fb-twit-cal-bgimage {
   position: absolute;
   top: 415px;
@@ -1080,36 +1112,55 @@ body {
   height: 500px;
   overflow: hidden;
 }
-/* line 107, ../sass/components/_front-page-blocks.scss */
+/* line 133, ../sass/components/_front-page-blocks.scss */
 .fb-twit-cal-bgimage img {
   height: auto !important;
   width: 100% !important;
 }
 
-/* line 114, ../sass/components/_front-page-blocks.scss */
+/* line 140, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block {
   margin-left: 30px;
   font-family: "Avenir Next Condensed", sans-serif;
   min-height: 387px;
 }
-/* line 119, ../sass/components/_front-page-blocks.scss */
+@media all and (max-width: 768px) {
+  /* line 140, ../sass/components/_front-page-blocks.scss */
+  #block-views-front-page-tweets-block {
+    background: #5e5e5e;
+    width: 110%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0 -5%;
+    box-sizing: content-box;
+  }
+}
+/* line 154, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block {
   text-transform: uppercase;
-  background: rgba(0, 0, 0, 0.5);
+  background: #5e5e5e;
   padding: 16px;
+  min-height: 387px;
 }
-/* line 124, ../sass/components/_front-page-blocks.scss */
+@media all and (max-width: 768px) {
+  /* line 154, ../sass/components/_front-page-blocks.scss */
+  #block-views-front-page-tweets-block .home-page-twitter-block {
+    width: 280px;
+    margin: 0 auto;
+  }
+}
+/* line 165, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-header {
   margin-bottom: 16.5px;
   color: white;
   font-size: 1.5em;
   letter-spacing: 2px;
 }
-/* line 130, ../sass/components/_front-page-blocks.scss */
+/* line 171, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-header * {
   display: inline-block;
 }
-/* line 134, ../sass/components/_front-page-blocks.scss */
+/* line 175, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-header::before {
   content: "";
   background: url("../images/icon-twitter.png") 100%;
@@ -1120,35 +1171,53 @@ body {
   margin-right: 10px;
   margin-bottom: 5px;
 }
-/* line 148, ../sass/components/_front-page-blocks.scss */
+/* line 189, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-content .views-row {
   color: white;
   margin-bottom: 20px;
 }
-/* line 152, ../sass/components/_front-page-blocks.scss */
+/* line 193, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-content .views-row .views-field-text {
   display: block;
   letter-spacing: 1.2px;
 }
-/* line 156, ../sass/components/_front-page-blocks.scss */
+/* line 197, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-content .views-row .views-field-text a {
   color: #ce9bc0;
 }
-/* line 161, ../sass/components/_front-page-blocks.scss */
+/* line 202, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-content .views-row .views-field-created-time {
   font-size: 0.5em;
 }
 
-/* line 170, ../sass/components/_front-page-blocks.scss */
+/* line 211, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 {
   font-family: "Avenir", sans-serif;
 }
-/* line 174, ../sass/components/_front-page-blocks.scss */
+@media all and (max-width: 768px) {
+  /* line 211, ../sass/components/_front-page-blocks.scss */
+  #block-views-calendar-of-events-block-3 {
+    background: #5e5e5e;
+    width: 110%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0 -5%;
+    box-sizing: content-box;
+  }
+}
+/* line 224, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events {
-  background: rgba(0, 0, 0, 0.5);
+  background: #5e5e5e;
   height: 370px;
 }
-/* line 178, ../sass/components/_front-page-blocks.scss */
+@media all and (max-width: 768px) {
+  /* line 224, ../sass/components/_front-page-blocks.scss */
+  #block-views-calendar-of-events-block-3 .view-calendar-of-events {
+    width: 280px;
+    margin: 0 auto;
+  }
+}
+/* line 233, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .view-header {
   color: white;
   font-size: 1.5em;
@@ -1157,11 +1226,11 @@ body {
   letter-spacing: 2px;
   padding: 6px;
 }
-/* line 186, ../sass/components/_front-page-blocks.scss */
+/* line 241, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .view-header * {
   display: inline-block;
 }
-/* line 190, ../sass/components/_front-page-blocks.scss */
+/* line 245, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .view-header::before {
   content: "";
   background: url("../images/icon-cal.png") 100%;
@@ -1172,89 +1241,89 @@ body {
   margin-right: 10px;
   margin-bottom: 5px;
 }
-/* line 201, ../sass/components/_front-page-blocks.scss */
+/* line 256, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .view-header p {
   margin: 0;
 }
-/* line 207, ../sass/components/_front-page-blocks.scss */
+/* line 262, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar table {
   border-collapse: separate;
   border-spacing: 5px 7px;
   min-height: 290px;
 }
-/* line 213, ../sass/components/_front-page-blocks.scss */
+/* line 268, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .month-view .full td .inner div.day {
   width: 28px;
   margin-top: auto;
 }
-/* line 218, ../sass/components/_front-page-blocks.scss */
+/* line 273, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar tr, #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar td {
   vertical-align: bottom;
 }
-/* line 222, ../sass/components/_front-page-blocks.scss */
+/* line 277, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .month-view .full tr.single-day .no-entry,
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .month-view .full tr.single-day .no-entry .inner {
   height: 20px !important;
 }
-/* line 228, ../sass/components/_front-page-blocks.scss */
+/* line 283, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar * {
   background: transparent;
   color: white;
 }
-/* line 232, ../sass/components/_front-page-blocks.scss */
+/* line 287, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar th {
   background: rgba(255, 255, 255, 0.3);
 }
-/* line 235, ../sass/components/_front-page-blocks.scss */
+/* line 290, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar th.days {
   border: none;
   font-weight: 300;
 }
-/* line 240, ../sass/components/_front-page-blocks.scss */
+/* line 295, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar tr.single-day {
   display: none;
 }
-/* line 245, ../sass/components/_front-page-blocks.scss */
+/* line 300, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .date-box td {
   border: 0;
   background: rgba(0, 0, 0, 0.7);
   padding: 0;
 }
-/* line 250, ../sass/components/_front-page-blocks.scss */
+/* line 305, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .date-box td .day {
   text-align: right;
 }
-/* line 259, ../sass/components/_front-page-blocks.scss */
+/* line 314, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .date-nav-wrapper .date-nav {
   margin-bottom: -38px;
 }
-/* line 263, ../sass/components/_front-page-blocks.scss */
+/* line 318, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .date-nav-wrapper .date-heading {
   color: white;
   font-size: 0.7em;
 }
-/* line 267, ../sass/components/_front-page-blocks.scss */
+/* line 322, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .date-nav-wrapper .date-heading h3 {
   font-family: "Avenir Next Condensed", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
 }
-/* line 272, ../sass/components/_front-page-blocks.scss */
+/* line 327, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .date-nav-wrapper .date-heading h3 .month {
   color: #ce9bc0;
   font-size: 1.5em;
   line-height: 40px;
 }
-/* line 281, ../sass/components/_front-page-blocks.scss */
+/* line 336, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .pager {
   list-style-type: none;
   color: white;
 }
-/* line 285, ../sass/components/_front-page-blocks.scss */
+/* line 340, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .pager li {
   background: none;
 }
-/* line 288, ../sass/components/_front-page-blocks.scss */
+/* line 343, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .pager li a {
   font-weight: 100;
   font-size: 3em;
@@ -1262,31 +1331,50 @@ body {
   font-family: "Avenir", sans-serif;
 }
 
-/* line 301, ../sass/components/_front-page-blocks.scss */
+/* line 356, ../sass/components/_front-page-blocks.scss */
 #block-views-news-and-events-block-1 {
   margin-top: 80px;
   float: left;
 }
-/* line 306, ../sass/components/_front-page-blocks.scss */
+@media all and (max-width: 768px) {
+  /* line 356, ../sass/components/_front-page-blocks.scss */
+  #block-views-news-and-events-block-1 {
+    margin-top: 40px;
+  }
+}
+/* line 364, ../sass/components/_front-page-blocks.scss */
 #block-views-news-and-events-block-1 h2 {
   font-size: 28px;
   font-family: "Avenir Next Condensed", sans-serif;
   margin-bottom: 50px;
   text-transform: uppercase;
 }
+@media all and (max-width: 768px) {
+  /* line 364, ../sass/components/_front-page-blocks.scss */
+  #block-views-news-and-events-block-1 h2 {
+    margin-bottom: 40px;
+  }
+}
 
-/* line 314, ../sass/components/_front-page-blocks.scss */
+/* line 375, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events {
   text-align: left;
 }
-/* line 316, ../sass/components/_front-page-blocks.scss */
+/* line 377, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row {
   width: 45%;
   margin: 0 2% 20px;
   display: inline-block;
   vertical-align: top;
 }
-/* line 322, ../sass/components/_front-page-blocks.scss */
+@media all and (max-width: 768px) {
+  /* line 377, ../sass/components/_front-page-blocks.scss */
+  .view-news-and-events .views-row {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+}
+/* line 388, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-field-image {
   float: left;
   margin-right: 15px;
@@ -1295,12 +1383,26 @@ body {
   width: 210px;
   position: relative;
 }
-/* line 330, ../sass/components/_front-page-blocks.scss */
+@media all and (max-width: 768px) {
+  /* line 388, ../sass/components/_front-page-blocks.scss */
+  .view-news-and-events .views-row .views-field-field-image {
+    width: 160px;
+    height: 120px;
+  }
+}
+/* line 400, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-field-image img {
   border: #fdfeff solid 5px;
   box-shadow: 1px 1px 1px #e6e7e8;
 }
-/* line 335, ../sass/components/_front-page-blocks.scss */
+@media all and (max-width: 768px) {
+  /* line 400, ../sass/components/_front-page-blocks.scss */
+  .view-news-and-events .views-row .views-field-field-image img {
+    width: 150px;
+    height: 110px;
+  }
+}
+/* line 410, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-field-image:before {
   content: "";
   background: url(../images/photo-shadow-left.png) no-repeat 0 0;
@@ -1311,7 +1413,7 @@ body {
   bottom: -6px;
   left: 0;
 }
-/* line 345, ../sass/components/_front-page-blocks.scss */
+/* line 420, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-field-image:after {
   content: "";
   background: url(../images/photo-shadow-right.png) no-repeat 0 0;
@@ -1322,21 +1424,21 @@ body {
   bottom: -6px;
   right: 0;
 }
-/* line 357, ../sass/components/_front-page-blocks.scss */
+/* line 432, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-body {
   display: table;
 }
-/* line 361, ../sass/components/_front-page-blocks.scss */
+/* line 436, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-title {
   margin-bottom: 5px;
 }
-/* line 365, ../sass/components/_front-page-blocks.scss */
+/* line 440, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-title a {
   font-family: "Avenir Next Condensed", sans-serif;
   color: #ce9bc0;
   font-size: 16px;
 }
-/* line 371, ../sass/components/_front-page-blocks.scss */
+/* line 446, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-title-1 a {
   font-family: "Avenir Next Condensed", sans-serif;
   display: block;
@@ -1344,7 +1446,13 @@ body {
   margin-left: 220px;
   margin-top: 5px;
 }
-/* line 378, ../sass/components/_front-page-blocks.scss */
+@media all and (max-width: 768px) {
+  /* line 446, ../sass/components/_front-page-blocks.scss */
+  .view-news-and-events .views-row .views-field-title-1 a {
+    margin-left: 175px;
+  }
+}
+/* line 456, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-title-1 a:before {
   content: ">>";
   font-family: "Avenir", sans-serif;
@@ -1355,47 +1463,143 @@ body {
 .region-header {
   margin: 20px auto 0;
   max-width: 1280px;
-  padding: 0 10px;
+  padding: 0;
   position: relative;
+  z-index: 999;
+}
+/* line 14, ../sass/components/_header.scss */
+.region-header .block-title {
+  display: none;
 }
 
-/* line 14, ../sass/components/_header.scss */
+/* line 17, ../sass/components/_header.scss */
 .header-logo {
   margin-top: 10px;
   text-align: center;
   width: 100%;
 }
 
-/* line 22, ../sass/components/_header.scss */
+/* line 23, ../sass/components/_header.scss */
+.header__region {
+  min-height: 50px;
+}
+/* line 26, ../sass/components/_header.scss */
 .header__region .block {
   margin-bottom: 0;
 }
-/* line 27, ../sass/components/_header.scss */
-.header__region .menu a {
-  border-top: 5px solid #513e79;
-  color: white;
-  display: block;
-  margin: 0 20px 0 0;
-  padding: 10px 0 15px 0;
-  text-transform: uppercase;
-}
 /* line 35, ../sass/components/_header.scss */
-.header__region .menu a.active, .header__region .menu a:hover, .header__region .menu a:focus {
-  border-top: 5px solid #d19fc0;
-  color: #d19fc0;
-}
-/* line 49, ../sass/components/_header.scss */
 .header__region .block-menu ul.menu li {
   display: inline-block;
   margin-bottom: 0;
 }
 
-/* line 58, ../sass/components/_header.scss */
+/* line 45, ../sass/components/_header.scss */
+#mobile-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 35px;
+  height: 35px;
+  background: url("../images/mobile-menu-toggle.png") no-repeat center center;
+  display: block;
+  z-index: 999;
+}
+
+/* line 60, ../sass/components/_header.scss */
+#block-menu-menu-amani-main-menu {
+  display: none;
+}
+/* line 64, ../sass/components/_header.scss */
+#block-menu-menu-amani-main-menu ul.menu li {
+  float: none;
+  width: 100%;
+  border-right: none;
+  margin: 0;
+  border-bottom: 1px solid #ce9bc0;
+  padding: 0;
+}
+/* line 72, ../sass/components/_header.scss */
+#block-menu-menu-amani-main-menu ul.menu li a {
+  background-color: #784580;
+  display: block;
+  font-family: "Avenir Next Condensed", sans-serif;
+  font-size: 18px;
+  padding: 14px;
+  color: #fff;
+  text-align: center;
+}
+/* line 81, ../sass/components/_header.scss */
+#block-menu-menu-amani-main-menu ul.menu li a:hover {
+  text-decoration: none;
+  color: #ffaa02;
+}
+/* line 88, ../sass/components/_header.scss */
+#block-menu-menu-amani-main-menu ul.menu li.first {
+  margin-top: 50px;
+  width: 100%;
+  float: left;
+}
+/* line 94, ../sass/components/_header.scss */
+#block-menu-menu-amani-main-menu ul.menu li.last {
+  border-bottom: 0;
+}
+
+@media all and (min-width: 768px) {
+  /* line 103, ../sass/components/_header.scss */
+  .region-header {
+    padding: 0 10px;
+  }
+
+  /* line 107, ../sass/components/_header.scss */
+  #mobile-toggle {
+    display: none;
+  }
+
+  /* line 110, ../sass/components/_header.scss */
+  #block-menu-menu-amani-main-menu {
+    display: table;
+  }
+  /* line 114, ../sass/components/_header.scss */
+  #block-menu-menu-amani-main-menu ul.menu li {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+  /* line 121, ../sass/components/_header.scss */
+  #block-menu-menu-amani-main-menu ul.menu li.first {
+    margin-top: 0;
+    width: auto;
+    float: none;
+  }
+  /* line 127, ../sass/components/_header.scss */
+  #block-menu-menu-amani-main-menu ul.menu li a {
+    background-color: transparent;
+    border-top: 5px solid #513e79;
+    color: white;
+    display: block;
+    margin: 0 20px 0 0;
+    padding: 10px 0 15px 0;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  /* line 137, ../sass/components/_header.scss */
+  #block-menu-menu-amani-main-menu ul.menu li a.active, #block-menu-menu-amani-main-menu ul.menu li a:hover, #block-menu-menu-amani-main-menu ul.menu li a:focus {
+    border-top: 5px solid #d19fc0;
+    color: #d19fc0;
+    text-decoration: none;
+  }
+}
+/* line 150, ../sass/components/_header.scss */
 .primary-nav-wrapper {
   background-color: #513e79;
 }
 
-/* line 71, ../sass/components/_header.scss */
+/* line 161, ../sass/components/_header.scss */
 .block-search {
   border: 2px solid white;
   position: absolute !important;
@@ -1407,37 +1611,47 @@ body {
   -o-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
-/* line 82, ../sass/components/_header.scss */
+@media all and (max-width: 768px) {
+  /* line 161, ../sass/components/_header.scss */
+  .block-search {
+    -webkit-transition: width 0.4s ease-out;
+    -moz-transition: width 0.4s ease-out;
+    -o-transition: width 0.4s ease-out;
+    transition: width 0.4s ease-out;
+    left: 15px;
+  }
+}
+/* line 181, ../sass/components/_header.scss */
 .block-search:hover {
   width: 136px;
 }
-/* line 86, ../sass/components/_header.scss */
+/* line 185, ../sass/components/_header.scss */
 .block-search .form-text {
   background-color: transparent;
 }
-/* line 91, ../sass/components/_header.scss */
+/* line 190, ../sass/components/_header.scss */
 .block-search .form-actions {
   position: absolute;
   top: 0;
   right: 0;
 }
-/* line 98, ../sass/components/_header.scss */
+/* line 197, ../sass/components/_header.scss */
 .block-search input[type="text"] {
   color: white;
   padding-right: 25px;
 }
-/* line 102, ../sass/components/_header.scss */
+/* line 201, ../sass/components/_header.scss */
 .block-search input[type="text"]::-webkit-input-placeholder,
 .block-search input[type="text"] #placeholder {
   color: white;
 }
-/* line 108, ../sass/components/_header.scss */
+/* line 207, ../sass/components/_header.scss */
 .block-search input[type="submit"] {
   background-color: transparent;
   text-indent: -9999px;
   padding: 6px 15px;
 }
-/* line 114, ../sass/components/_header.scss */
+/* line 213, ../sass/components/_header.scss */
 .block-search .search-icon {
   position: absolute;
   top: 5px;
@@ -1482,44 +1696,50 @@ body {
 /* line 33, ../sass/components/_menus.scss */
 #block-menu-menu-social-media {
   position: absolute;
-  right: 0;
-  top: 5px;
+  right: 10px;
+  top: 10px;
+}
+@media all and (min-width: 768px) {
+  /* line 33, ../sass/components/_menus.scss */
+  #block-menu-menu-social-media {
+    right: 0;
+  }
 }
 /* line 78, ../sass/_mixins.scss */
 #block-menu-menu-social-media:hover .contextual-links-wrapper {
   display: none;
 }
-/* line 40, ../sass/components/_menus.scss */
+/* line 44, ../sass/components/_menus.scss */
 #block-menu-menu-social-media .block-title {
   display: none;
 }
-/* line 42, ../sass/components/_menus.scss */
+/* line 46, ../sass/components/_menus.scss */
 #block-menu-menu-social-media ul {
   margin: 0;
 }
-/* line 46, ../sass/components/_menus.scss */
+/* line 50, ../sass/components/_menus.scss */
 #block-menu-menu-social-media li {
   display: inline-block;
   list-style: none outside none;
   margin-left: 0.3em;
 }
-/* line 51, ../sass/components/_menus.scss */
+/* line 55, ../sass/components/_menus.scss */
 #block-menu-menu-social-media li a {
   text-indent: -999em;
   margin-right: 5px;
 }
-/* line 54, ../sass/components/_menus.scss */
+/* line 58, ../sass/components/_menus.scss */
 #block-menu-menu-social-media li a:hover {
   border-top: 0;
 }
-/* line 59, ../sass/components/_menus.scss */
+/* line 63, ../sass/components/_menus.scss */
 #block-menu-menu-social-media li.social-media-facebook a {
   background: url(../images/icons/icn-facebook-30.png) no-repeat 0 0;
   height: 30px;
   width: 30px;
   display: inline-block;
 }
-/* line 66, ../sass/components/_menus.scss */
+/* line 70, ../sass/components/_menus.scss */
 #block-menu-menu-social-media li.social-media-twitter a {
   background: url(../images/icons/icn-twitter-30.png) no-repeat 0 0;
   height: 30px;
@@ -2526,6 +2746,13 @@ tr.selected td {
   background-image: url('../images/progress.gif?1440018546');
 }
 
+@media all and (max-width: 768px) {
+  /* line 816, ../sass/components/_misc.scss */
+  .sidebar-second #content {
+    margin-right: auto;
+    width: auto;
+  }
+}
 /**
  * @file
  * Print styling
@@ -2707,12 +2934,12 @@ footer > .block-menu {
   margin-right: -33.33333%;
   margin-bottom: 0;
 }
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 768px) {
   /* line 65, ../sass/theme/_layout.scss */
   footer > .block-menu {
     float: none;
     margin: 0;
-    width: 100%;
+    width: 40%;
   }
 }
 
@@ -2735,34 +2962,36 @@ footer > .block-menu {
   }
 }
 
-/* line 91, ../sass/theme/_layout.scss */
+/* line 90, ../sass/theme/_layout.scss */
+footer {
+  position: relative;
+}
+/* line 92, ../sass/theme/_layout.scss */
 footer .menu {
   float: left;
   position: relative;
   margin: 0 50px 0 0;
 }
 @media screen and (max-width: 939px) {
-  /* line 91, ../sass/theme/_layout.scss */
+  /* line 92, ../sass/theme/_layout.scss */
   footer .menu {
     margin-bottom: 15px;
   }
 }
-@media screen and (max-width: 570px) {
-  /* line 91, ../sass/theme/_layout.scss */
+@media screen and (max-width: 768px) {
+  /* line 92, ../sass/theme/_layout.scss */
   footer .menu {
     float: none;
-    width: 100%;
-    margin: 0 0 15px 0;
-    text-align: center;
+    margin: 0 0 15px 0 !important;
   }
 }
-/* line 107, ../sass/theme/_layout.scss */
+/* line 106, ../sass/theme/_layout.scss */
 footer .menu li {
   position: relative;
   text-indent: 20px;
   margin-bottom: 15px;
 }
-/* line 112, ../sass/theme/_layout.scss */
+/* line 111, ../sass/theme/_layout.scss */
 footer .menu li:before {
   content: "\f078";
   font-family: amani-icons;
@@ -2770,21 +2999,21 @@ footer .menu li:before {
   font-size: 11px;
 }
 @media screen and (max-width: 570px) {
-  /* line 107, ../sass/theme/_layout.scss */
+  /* line 106, ../sass/theme/_layout.scss */
   footer .menu li {
     text-indent: 0;
   }
 }
-/* line 123, ../sass/theme/_layout.scss */
+/* line 122, ../sass/theme/_layout.scss */
 footer .menu li:last-child {
   margin-bottom: 0;
 }
-/* line 127, ../sass/theme/_layout.scss */
+/* line 126, ../sass/theme/_layout.scss */
 footer .menu a {
   transition: all 0.3s;
   font-size: 12px;
 }
-/* line 131, ../sass/theme/_layout.scss */
+/* line 130, ../sass/theme/_layout.scss */
 footer .menu a:before {
   position: absolute;
   content: '';
@@ -2792,46 +3021,46 @@ footer .menu a:before {
   left: 0;
 }
 
-/* line 142, ../sass/theme/_layout.scss */
+/* line 141, ../sass/theme/_layout.scss */
 footer > .block-menu {
   margin-right: 0;
 }
 
-/* line 146, ../sass/theme/_layout.scss */
+/* line 145, ../sass/theme/_layout.scss */
 footer .block-menu ul.menu {
   margin-right: 50px;
 }
 
-/* line 150, ../sass/theme/_layout.scss */
+/* line 149, ../sass/theme/_layout.scss */
 footer .field-label {
   display: none;
 }
 
-/* line 154, ../sass/theme/_layout.scss */
+/* line 153, ../sass/theme/_layout.scss */
 .region-footer .block.block-bean {
   display: inline-block;
   margin: 0 20px;
   float: right;
 }
 
-/* line 160, ../sass/theme/_layout.scss */
+/* line 159, ../sass/theme/_layout.scss */
 footer #block-bean-img1,
 footer .bean-a-project-by- a {
   margin-top: 15px;
 }
 
-/* line 165, ../sass/theme/_layout.scss */
+/* line 164, ../sass/theme/_layout.scss */
 .peacegeeks-logo {
   margin: 0 0 20px 50px;
 }
 @media screen and (max-width: 570px) {
-  /* line 165, ../sass/theme/_layout.scss */
+  /* line 164, ../sass/theme/_layout.scss */
   .peacegeeks-logo {
     margin-left: 0;
   }
 }
 
-/* line 173, ../sass/theme/_layout.scss */
+/* line 172, ../sass/theme/_layout.scss */
 .footer-legal {
   background-color: #533058;
   border-top: 1px solid #67486b;
@@ -2841,7 +3070,7 @@ footer .bean-a-project-by- a {
   text-transform: uppercase;
   width: 100%;
 }
-/* line 182, ../sass/theme/_layout.scss */
+/* line 181, ../sass/theme/_layout.scss */
 .footer-legal div {
   margin: 0 auto;
   width: 75%;
