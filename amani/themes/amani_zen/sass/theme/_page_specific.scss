@@ -958,6 +958,46 @@
 	
 	/* Current Projects */
 	
+	body.currentprojects {
+	
+		#howcanyouhelp {
+			
+			display:block;
+			float:right;
+			position:absolute;
+			top:-41px;
+			right: 0;
+					
+			.field-name-field-header-text {
+				font-size:18px;
+			}
+		
+			a.orangeblock {
+				    color: white;
+					display: block;
+					float: left;
+					width: 190px;
+					font-weight: 600;
+					height: 210px;
+					background: $orange;
+					padding: 20px;
+					font-size: 18px;
+					line-height: 22px;
+				&:after {
+					content:"and become a PeaceGeek";
+					font-weight:300;
+					display:block;
+				}
+			}
+			
+			.rightarrow {
+				
+			}
+		}
+	
+	
+	}
+	
 	/* Projects cards */
 	
 	.view-peace-geeks-projects.view-display-id-block {
