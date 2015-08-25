@@ -2743,9 +2743,16 @@ tr.selected td {
 /* line 808, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1439328429');
+  background-image: url('../images/progress.gif?1440018546');
 }
 
+@media all and (max-width: 768px) {
+  /* line 816, ../sass/components/_misc.scss */
+  .sidebar-second #content {
+    margin-right: auto;
+    width: auto;
+  }
+}
 /* line 1, ../sass/components/_resources_node.scss */
 .node-type-resource #content {
   font-family: "Avenir Next Condensed", sans-serif;
@@ -2881,13 +2888,6 @@ tr.selected td {
   color: white;
 }
 
-@media all and (max-width: 768px) {
-  /* line 816, ../sass/components/_misc.scss */
-  .sidebar-second #content {
-    margin-right: auto;
-    width: auto;
-  }
-}
 /**
  * @file
  * Print styling
@@ -2997,7 +2997,7 @@ tr.selected td {
 }
 /* line 61, ../sass/_mixins.scss */
 .form-submit:hover, .form-submit:focus {
-  background-color: #5b595c;
+  background-color: #5a595c;
 }
 
 /* line 12, ../sass/theme/_layout.scss */
