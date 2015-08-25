@@ -46,34 +46,14 @@ function amani_team_views_default_views() {
   );
   $handler->display->display_options['row_options']['separator'] = ' - ';
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
-  /* Relationship: Content: Taxonomy terms on node */
-  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
-  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
-    'team_member_type' => 'team_member_type',
-    'forums' => 0,
-    'activity_status' => 0,
-    'article_type' => 0,
-    'categories' => 0,
-    'event_type' => 0,
-    'gallery_collections' => 0,
-    'report_type' => 0,
-    'incident_severity' => 0,
-    'partner_type' => 0,
-    'project_location' => 0,
-    'project_status' => 0,
-    'theme' => 0,
-    'resource_type' => 0,
-    'tags' => 0,
-    'contributor_type' => 0,
-  );
   /* Field: Content: Team member type */
   $handler->display->display_options['fields']['field_team_member_type']['id'] = 'field_team_member_type';
   $handler->display->display_options['fields']['field_team_member_type']['table'] = 'field_data_field_team_member_type';
   $handler->display->display_options['fields']['field_team_member_type']['field'] = 'field_team_member_type';
   $handler->display->display_options['fields']['field_team_member_type']['label'] = '';
   $handler->display->display_options['fields']['field_team_member_type']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_team_member_type']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_team_member_type']['delta_offset'] = '0';
   /* Field: Content: Photo */
   $handler->display->display_options['fields']['field_team_image']['id'] = 'field_team_image';
   $handler->display->display_options['fields']['field_team_image']['table'] = 'field_data_field_team_image';
@@ -118,11 +98,6 @@ function amani_team_views_default_views() {
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Read more';
-  /* Sort criterion: Taxonomy term: Weight */
-  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['relationship'] = 'term_node_tid';
   /* Sort criterion: Content: Display ranking (field_display_ranking) */
   $handler->display->display_options['sorts']['field_display_ranking_value']['id'] = 'field_display_ranking_value';
   $handler->display->display_options['sorts']['field_display_ranking_value']['table'] = 'field_data_field_display_ranking';
@@ -209,7 +184,6 @@ function amani_team_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('term'),
     t('Read more'),
     t('Search'),
     t('Team member type (field_team_member_type)'),

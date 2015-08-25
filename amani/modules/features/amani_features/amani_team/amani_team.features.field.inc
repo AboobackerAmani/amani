@@ -739,7 +739,7 @@ Prof.',
   $fields['node-team-field_team_member_type'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_team_member_type',
@@ -772,7 +772,7 @@ Prof.',
     ),
     'field_instance' => array(
       'bundle' => 'team',
-      'default_value' => array(),
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
