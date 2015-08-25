@@ -32,8 +32,12 @@
 // Social Media
 #block-menu-menu-social-media {
   position: absolute;
-  right: 0;
-  top: 5px;
+  right: 10px;
+  top: 10px;
+  //screen bigger than 768px
+  @media all and (min-width: $breakpoint) {
+    right: 0;
+  }
 
   @include hide-contextual-links();
 

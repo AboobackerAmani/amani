@@ -36,7 +36,9 @@
   <div class="primary-nav-wrapper">
     <?php print render($page['header']); ?>
   </div>
-
+  
+	<a href="#" id="mobile-toggle" title="Menu">Menu</a>
+	
   <div class="slideshow">
     <?php print render($page['subheader']); ?>
   </div>

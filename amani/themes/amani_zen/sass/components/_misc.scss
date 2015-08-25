@@ -810,3 +810,11 @@ tr.selected td {
     background-image: image-url("progress.gif");
   }
 }
+
+//mobile for super admin
+@media all and (max-width: $breakpoint) {
+  .sidebar-second #content {
+     margin-right: auto;
+     width: auto;
+  }
+}

@@ -25,7 +25,6 @@ Drupal.behaviors.my_custom_behavior = {
   }
 };
 
-
 })(jQuery, Drupal, this, this.document);
 
 
@@ -108,6 +107,39 @@ Drupal.behaviors.my_custom_behavior = {
       $(window).resize( function() {
         Drupal.theme('slideshowResizer', '.slideshow');
       });
+    }
+  };
+  
+  //Mobile nav
+  Drupal.behaviors.mobileNav = {
+    attach: function(context, settings) {
+
+      var nb = $('#mobile-toggle');
+      var n = $('#block-menu-menu-amani-main-menu');
+      
+      $(window).resize(function(){
+
+        if($(this).width() < 768 && n.hasClass('keep-nav-closed')) {
+          // if the nav menu and nav button are both visible,
+          // then the responsive nav transitioned from open to non-responsive, then back again.
+          // re-hide the nav menu and remove the hidden class
+          $('#block-menu-menu-amani-main-menu').hide().removeAttr('class');
+        }
+        if(nb.is(':hidden') && n.is(':hidden') && $(window).width() > 767) {
+          // if the navigation menu and nav button are both hidden,
+          // then the responsive nav is closed and the window resized larger than 767.
+          // just display the nav menu which will auto-hide at <768 width.
+          $('#block-menu-menu-amani-main-menu').show().addClass('keep-nav-closed');
+        }
+      }); 
+      
+      //slide toggle for mobile menu
+      $("#block-menu-menu-amani-main-menu").once('mobileNav', function() {
+        $("#mobile-toggle").click(function() {
+          $(this).toggleClass('expand');
+          $("#block-menu-menu-amani-main-menu").slideToggle('slow');
+        });
+      })
     }
   };
 
