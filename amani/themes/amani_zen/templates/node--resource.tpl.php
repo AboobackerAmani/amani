@@ -1,4 +1,3 @@
-<?php dsm($node); ?>
 <?php print render($content['field_image']); ?>
 <div class="inner-content">
   <div class="share-icons">
