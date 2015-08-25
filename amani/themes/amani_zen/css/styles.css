@@ -2536,98 +2536,103 @@ tr.selected td {
 /* line 1, ../sass/components/_resources_node.scss */
 .node-type-resource #content {
   font-family: "Avenir Next Condensed", sans-serif;
-  font-weight: 100;
   width: 840px;
   margin: auto;
+}
+/* line 6, ../sass/components/_resources_node.scss */
+.node-type-resource #content .breadcrumb, .node-type-resource #content #page-title {
+  display: none;
+}
+/* line 10, ../sass/components/_resources_node.scss */
+.node-type-resource #content .field-name-field-image {
+  margin-bottom: -10px;
+}
+/* line 14, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content {
+  font-weight: 100;
   background: #fcfbfb;
   padding: 35px;
   box-shadow: 0px 3px 3px -2px #777;
-  position: relative;
 }
-/* line 11, ../sass/components/_resources_node.scss */
-.node-type-resource #content .breadcrumb {
-  display: none;
-}
-/* line 15, ../sass/components/_resources_node.scss */
-.node-type-resource #content #page-title {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #ce9bc0;
-  font-size: 30px;
-  margin-top: 10px;
+/* line 20, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content .share-icons {
+  float: right;
 }
 /* line 23, ../sass/components/_resources_node.scss */
-.node-type-resource #content .share-icons {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-/* line 28, ../sass/components/_resources_node.scss */
-.node-type-resource #content .share-icons h3 {
+.node-type-resource #content .inner-content .share-icons h3 {
   display: inline-block;
   margin-right: 5px;
   font-family: "Avenir", sans-serif;
 }
-/* line 34, ../sass/components/_resources_node.scss */
-.node-type-resource #content .share-icons .social-menu {
+/* line 29, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content .share-icons .social-menu {
   width: 100px;
   display: inline-block;
   vertical-align: bottom;
 }
-/* line 39, ../sass/components/_resources_node.scss */
-.node-type-resource #content .share-icons .social-menu div {
+/* line 34, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content .share-icons .social-menu div {
   width: 30px;
   height: 36px;
   display: inline-block;
   margin: 0px 2px;
 }
-/* line 46, ../sass/components/_resources_node.scss */
-.node-type-resource #content .share-icons .social-menu .social-media-facebook {
+/* line 41, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content .share-icons .social-menu .social-media-facebook {
   background: url(../images/icons/black-facebook.png) no-repeat 0 0;
 }
-/* line 49, ../sass/components/_resources_node.scss */
-.node-type-resource #content .share-icons .social-menu .social-media-twitter {
+/* line 44, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content .share-icons .social-menu .social-media-twitter {
   background: url(../images/icons/black-twitter.png) no-repeat 0 0;
 }
-/* line 55, ../sass/components/_resources_node.scss */
-.node-type-resource #content .content-body {
+/* line 50, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content h1#node-title {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #ce9bc0;
+  font-size: 30px;
+  margin-top: 10px;
+  clear: both;
+}
+/* line 59, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content .content-body {
   font-size: 16px;
 }
-/* line 58, ../sass/components/_resources_node.scss */
-.node-type-resource #content .content-body .meta-info {
+/* line 62, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content .content-body .meta-info {
   color: #acacac;
   border-left: 2px solid;
   padding-left: 10px;
   margin-bottom: 30px;
 }
-/* line 64, ../sass/components/_resources_node.scss */
-.node-type-resource #content .content-body .meta-info p {
+/* line 68, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content .content-body .meta-info p {
   margin-bottom: 10px;
 }
-/* line 69, ../sass/components/_resources_node.scss */
-.node-type-resource #content .content-body .field-name-body {
+/* line 73, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content .content-body .field-name-body {
   font-family: "Avenir", sans-serif;
   line-height: 30px;
 }
-/* line 75, ../sass/components/_resources_node.scss */
-.node-type-resource #content .content-body .field-name-field-amani-tags .field-label {
+/* line 79, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-label {
   font-family: "Avenir", sans-serif;
   margin-bottom: 5px;
 }
-/* line 80, ../sass/components/_resources_node.scss */
-.node-type-resource #content .content-body .field-name-field-amani-tags .field-items > div {
+/* line 84, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-items > div {
   display: inline-block;
   background: #d9d9d9;
   padding: 5px 10px;
   margin-right: 5px;
 }
-/* line 86, ../sass/components/_resources_node.scss */
-.node-type-resource #content .content-body .field-name-field-amani-tags .field-items > div a {
+/* line 90, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-items > div a {
   color: #7f7f7f;
   text-transform: uppercase;
 }
-/* line 93, ../sass/components/_resources_node.scss */
-.node-type-resource #content .content-body .file-download {
+/* line 97, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content .content-body .file-download {
   font-family: "Avenir", sans-serif;
   background: #ebebeb;
   padding: 40px;
@@ -2635,31 +2640,31 @@ tr.selected td {
   margin-top: 30px;
   overflow: hidden;
 }
-/* line 101, ../sass/components/_resources_node.scss */
-.node-type-resource #content .content-body .file-download > div {
+/* line 105, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content .content-body .file-download > div {
   display: inline-block;
   vertical-align: middle;
   width: 49%;
 }
-/* line 107, ../sass/components/_resources_node.scss */
-.node-type-resource #content .content-body .file-download .field-name-field-media {
+/* line 111, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content .content-body .file-download .field-name-field-media {
   float: left;
   font-size: 16px;
 }
-/* line 111, ../sass/components/_resources_node.scss */
-.node-type-resource #content .content-body .file-download .field-name-field-media a {
+/* line 115, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content .content-body .file-download .field-name-field-media a {
   color: #131313;
 }
-/* line 116, ../sass/components/_resources_node.scss */
-.node-type-resource #content .content-body .file-download .field-name-field-link {
+/* line 120, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content .content-body .file-download .field-name-field-link {
   float: right;
   background: #ce9bc0;
   text-transform: uppercase;
   padding: 20px 45px;
   font-size: 24px;
 }
-/* line 123, ../sass/components/_resources_node.scss */
-.node-type-resource #content .content-body .file-download .field-name-field-link a {
+/* line 127, ../sass/components/_resources_node.scss */
+.node-type-resource #content .inner-content .content-body .file-download .field-name-field-link a {
   color: white;
 }
 
