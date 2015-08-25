@@ -79,6 +79,9 @@ function amani_zen_preprocess_html(&$variables, $hook) {
   // SS Social
   drupal_add_css($theme_path . '/fonts/ss-social/ss-social.css', array('group' => CSS_THEME, 'every_page' => TRUE));
   drupal_add_js($theme_path . '/fonts/ss-social/ss-social.js', array('type' => 'file', 'scope' => 'footer'));
+
+  // masonary
+  drupal_add_js('//cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js');
 }
 
 

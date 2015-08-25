@@ -2526,59 +2526,222 @@ tr.selected td {
   background-image: url('../images/progress.gif?1439328429');
 }
 
-/* line 1, ../sass/components/_resources_node.scss */
+/* line 1, ../sass/components/_resources_page.scss */
+.page-resources #page-title {
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ce9bc0;
+}
+
+/* line 7, ../sass/components/_resources_page.scss */
+.resources-page-view {
+  font-family: "Avenir Next Condensed", sans-serif;
+}
+/* line 10, ../sass/components/_resources_page.scss */
+.resources-page-view .view-filters {
+  float: right;
+  width: 300px;
+  background-color: #f7f6f5;
+  padding: 12px;
+  box-shadow: 0px 3px 3px -2px #777;
+}
+/* line 18, ../sass/components/_resources_page.scss */
+.resources-page-view .view-filters form .views-exposed-form div {
+  float: none;
+  padding: 0;
+}
+/* line 24, ../sass/components/_resources_page.scss */
+.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets > div {
+  margin-bottom: 10px;
+}
+/* line 28, ../sass/components/_resources_page.scss */
+.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets .form-submit {
+  width: 48%;
+  float: left;
+  margin: 0;
+  border: 1px solid #ce9bc0;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+/* line 38, ../sass/components/_resources_page.scss */
+.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets .form-submit#edit-submit-resources {
+  background: #ce9bc0;
+  color: white;
+  margin-right: 5px;
+}
+/* line 44, ../sass/components/_resources_page.scss */
+.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets .form-submit#edit-reset {
+  background: transparent;
+}
+/* line 49, ../sass/components/_resources_page.scss */
+.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets label[for="edit-date-min"], .resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets label[for="edit-date-max"] {
+  display: none;
+}
+/* line 50, ../sass/components/_resources_page.scss */
+.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets input[type="text"] {
+  border: 1px solid #cccccc;
+  height: 35px;
+  border-radius: 4px;
+}
+/* line 55, ../sass/components/_resources_page.scss */
+.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets select, .resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets input {
+  background: white;
+}
+/* line 56, ../sass/components/_resources_page.scss */
+.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets label, .resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets input {
+  color: #ce9bc0;
+}
+/* line 57, ../sass/components/_resources_page.scss */
+.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets select {
+  border: 1px solid #aaa;
+  outline: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: 35px;
+  font-size: 14px;
+  color: #ce9bc0;
+}
+/* line 67, ../sass/components/_resources_page.scss */
+.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets select, .resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets input, .resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets .form-type-date-popup {
+  width: 100%;
+}
+/* line 68, ../sass/components/_resources_page.scss */
+.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets label {
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 3px;
+  letter-spacing: 1.3px;
+}
+/* line 76, ../sass/components/_resources_page.scss */
+.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets #edit-date-wrapper .views-widget > div {
+  margin-bottom: 10px;
+}
+/* line 84, ../sass/components/_resources_page.scss */
+.resources-page-view .view-content {
+  width: 70%;
+  position: relative;
+}
+/* line 88, ../sass/components/_resources_page.scss */
+.resources-page-view .view-content .views-row {
+  width: 31.5%;
+  max-width: 32%;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  margin: 12px 12px 12px 0;
+}
+/* line 97, ../sass/components/_resources_page.scss */
+.resources-page-view .view-content .views-row .views-field {
+  margin-bottom: 5px;
+}
+/* line 100, ../sass/components/_resources_page.scss */
+.resources-page-view .view-content .views-row .views-field, .resources-page-view .view-content .views-row .views-field span, .resources-page-view .view-content .views-row .views-field a {
+  color: #acacac;
+  font-size: 14px;
+}
+/* line 106, ../sass/components/_resources_page.scss */
+.resources-page-view .view-content .views-row .views-field-title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+/* line 111, ../sass/components/_resources_page.scss */
+.resources-page-view .view-content .views-row .views-field-title a {
+  color: #ce9bc0;
+  font-size: 16px;
+}
+/* line 117, ../sass/components/_resources_page.scss */
+.resources-page-view .view-content .views-row .views-field-field-link {
+  margin: 0 -10px;
+  border-top: 1px solid;
+  padding: 8px 10px;
+  margin-top: 10px;
+  margin-bottom: -14px;
+  text-align: right;
+  text-transform: uppercase;
+}
+/* line 126, ../sass/components/_resources_page.scss */
+.resources-page-view .view-content .views-row .views-field-field-link a {
+  color: #ce9bc0;
+}
+/* line 129, ../sass/components/_resources_page.scss */
+.resources-page-view .view-content .views-row .views-field-field-link a::before {
+  content: "";
+  background: url("../images/icons/download.png") no-repeat;
+  width: 16px;
+  height: 16px;
+  background-size: 100%;
+  display: inline-block;
+  margin: -2px 5px;
+}
+/* line 141, ../sass/components/_resources_page.scss */
+.resources-page-view .view-content .views-row .views-field-field-image {
+  margin-bottom: 15px;
+}
+/* line 144, ../sass/components/_resources_page.scss */
+.resources-page-view .view-content .views-row .views-field-field-image img {
+  border: 2.5px solid #fff;
+  margin: 0px -3px;
+  box-shadow: 1.7px 2px 4px -3px #333;
+}
+
+/* line 155, ../sass/components/_resources_page.scss */
 .node-type-resource #content {
   font-family: "Avenir Next Condensed", sans-serif;
   width: 840px;
   margin: auto;
 }
-/* line 6, ../sass/components/_resources_node.scss */
+/* line 160, ../sass/components/_resources_page.scss */
 .node-type-resource #content .breadcrumb, .node-type-resource #content #page-title {
   display: none;
 }
-/* line 10, ../sass/components/_resources_node.scss */
+/* line 164, ../sass/components/_resources_page.scss */
 .node-type-resource #content .field-name-field-image {
   margin-bottom: -10px;
 }
-/* line 14, ../sass/components/_resources_node.scss */
+/* line 168, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content {
   font-weight: 100;
   background: #fcfbfb;
   padding: 35px;
   box-shadow: 0px 3px 3px -2px #777;
 }
-/* line 20, ../sass/components/_resources_node.scss */
+/* line 174, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons {
   float: right;
 }
-/* line 23, ../sass/components/_resources_node.scss */
+/* line 177, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons h3 {
   display: inline-block;
   margin-right: 5px;
   font-family: "Avenir", sans-serif;
 }
-/* line 29, ../sass/components/_resources_node.scss */
+/* line 183, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons .social-menu {
   width: 100px;
   display: inline-block;
   vertical-align: bottom;
 }
-/* line 34, ../sass/components/_resources_node.scss */
+/* line 188, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons .social-menu div {
   width: 30px;
   height: 36px;
   display: inline-block;
   margin: 0px 2px;
 }
-/* line 41, ../sass/components/_resources_node.scss */
+/* line 195, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons .social-menu .social-media-facebook {
   background: url(../images/icons/black-facebook.png) no-repeat 0 0;
 }
-/* line 44, ../sass/components/_resources_node.scss */
+/* line 198, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons .social-menu .social-media-twitter {
   background: url(../images/icons/black-twitter.png) no-repeat 0 0;
 }
-/* line 50, ../sass/components/_resources_node.scss */
+/* line 204, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content h1#node-title {
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -2587,44 +2750,44 @@ tr.selected td {
   margin-top: 10px;
   clear: both;
 }
-/* line 59, ../sass/components/_resources_node.scss */
+/* line 213, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body {
   font-size: 16px;
 }
-/* line 62, ../sass/components/_resources_node.scss */
+/* line 216, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .meta-info {
   color: #acacac;
   border-left: 2px solid;
   padding-left: 10px;
   margin-bottom: 30px;
 }
-/* line 68, ../sass/components/_resources_node.scss */
+/* line 222, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .meta-info p {
   margin-bottom: 10px;
 }
-/* line 73, ../sass/components/_resources_node.scss */
+/* line 227, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .field-name-body {
   font-family: "Avenir", sans-serif;
   line-height: 30px;
 }
-/* line 79, ../sass/components/_resources_node.scss */
+/* line 233, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-label {
   font-family: "Avenir", sans-serif;
   margin-bottom: 5px;
 }
-/* line 84, ../sass/components/_resources_node.scss */
+/* line 238, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-items > div {
   display: inline-block;
   background: #d9d9d9;
   padding: 5px 10px;
   margin-right: 5px;
 }
-/* line 90, ../sass/components/_resources_node.scss */
+/* line 244, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-items > div a {
   color: #7f7f7f;
   text-transform: uppercase;
 }
-/* line 97, ../sass/components/_resources_node.scss */
+/* line 251, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download {
   font-family: "Avenir", sans-serif;
   background: #ebebeb;
@@ -2633,22 +2796,22 @@ tr.selected td {
   margin-top: 30px;
   overflow: hidden;
 }
-/* line 105, ../sass/components/_resources_node.scss */
+/* line 259, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download > div {
   display: inline-block;
   vertical-align: middle;
   width: 49%;
 }
-/* line 111, ../sass/components/_resources_node.scss */
+/* line 265, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download .field-name-field-media {
   float: left;
   font-size: 16px;
 }
-/* line 115, ../sass/components/_resources_node.scss */
+/* line 269, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download .field-name-field-media a {
   color: #131313;
 }
-/* line 120, ../sass/components/_resources_node.scss */
+/* line 274, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download .field-name-field-link {
   float: right;
   background: #ce9bc0;
@@ -2656,7 +2819,7 @@ tr.selected td {
   padding: 20px 45px;
   font-size: 24px;
 }
-/* line 127, ../sass/components/_resources_node.scss */
+/* line 281, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download .field-name-field-link a {
   color: white;
 }

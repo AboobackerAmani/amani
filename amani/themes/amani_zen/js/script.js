@@ -18,6 +18,9 @@ Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
     // Place your code here.
+    $('.view-content').masonry({
+      itemSelector: '.views-row'
+    });
 
   }
 };
@@ -109,12 +112,3 @@ Drupal.behaviors.my_custom_behavior = {
   };
 
 })(jQuery);
-
-
-
-
-
-
-
-
-

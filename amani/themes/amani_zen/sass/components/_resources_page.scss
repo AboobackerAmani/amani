@@ -1,0 +1,288 @@
+.page-resources #page-title {
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ce9bc0;
+}
+// resources page view
+.resources-page-view {
+  font-family: $avenir-condensed;
+
+  .view-filters {
+    float: right;
+    width: 300px;
+    background-color: #f7f6f5;
+    padding: 12px;
+    box-shadow: 0px 3px 3px -2px #777;
+
+    form .views-exposed-form  {
+      & div {
+        float: none;
+        padding: 0;
+      }
+
+      .views-exposed-widgets {
+        & > div {
+          margin-bottom: 10px;
+        }
+
+        .form-submit {
+          width: 48%;
+          float: left;
+          margin: 0;
+          border: 1px solid #ce9bc0;
+          padding: 10px;
+          text-transform: uppercase;
+          font-size: 17px;
+          letter-spacing: 1px;
+
+          &#edit-submit-resources {
+            background: #ce9bc0;
+            color: white;
+            margin-right: 5px;
+          }
+
+          &#edit-reset {
+            background: transparent;
+          }
+        }
+
+        label[for="edit-date-min"], label[for="edit-date-max"] { display: none; }
+        input[type="text"] {
+          border: 1px solid #cccccc;
+          height: 35px;
+          border-radius: 4px;
+        }
+        select, input { background: white; }
+        label, input { color: #ce9bc0; }
+        select {
+          border: 1px solid #aaa;
+          outline: none;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          height: 35px;
+          font-size: 14px;
+          color: #ce9bc0;
+        }
+        select, input, .form-type-date-popup { width: 100%; }
+        label {
+          text-transform: uppercase;
+          font-size: 12px;
+          margin-bottom: 3px;
+          letter-spacing: 1.3px;
+        }
+
+        #edit-date-wrapper {
+          .views-widget > div {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .view-content {
+    width: 70%;
+    position: relative;
+
+    .views-row {
+      width: 31.5%;
+      max-width: 32%;
+      display: inline-block;
+      vertical-align: top;
+      border: 1px solid #cccccc;
+      padding: 10px;
+      margin: 12px 12px 12px 0;
+
+      .views-field {
+        margin-bottom: 5px;
+
+        &, span, a {
+          color: #acacac;
+          font-size: 14px;
+        }
+      }
+
+      .views-field-title {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+
+        a {
+          color: #ce9bc0;
+          font-size: 16px;
+        }
+      }
+
+      .views-field-field-link {
+        margin: 0 -10px;
+        border-top: 1px solid;
+        padding: 8px 10px;
+        margin-top: 10px;
+        margin-bottom: -14px;
+        text-align: right;
+        text-transform: uppercase;
+
+        a {
+          color: #ce9bc0;
+
+          &::before {
+            content: "";
+            background: url("../images/icons/download.png") no-repeat;
+            width: 16px;
+            height: 16px;
+            background-size: 100%;
+            display: inline-block;
+            margin: -2px 5px;
+          }
+        }
+      }
+
+      .views-field-field-image {
+        margin-bottom: 15px;
+
+        img {
+          border: 2.5px solid #fff;
+          margin: 0px -3px;
+          box-shadow: 1.7px 2px 4px -3px #333;
+        }
+      }
+    }
+  }
+}
+
+// node type resource page
+.node-type-resource #content {
+  font-family: $avenir-condensed;
+  width: 840px;
+  margin: auto;
+
+  .breadcrumb, #page-title {
+    display: none;
+  }
+
+  .field-name-field-image {
+    margin-bottom: -10px;
+  }
+
+  .inner-content {
+    font-weight: 100;
+    background: #fcfbfb;
+    padding: 35px;
+    box-shadow: 0px 3px 3px -2px #777;
+
+    .share-icons {
+      float: right;
+
+      h3 {
+        display: inline-block;
+        margin-right: 5px;
+        font-family: $avenir;
+      }
+
+      .social-menu {
+        width: 100px;
+        display: inline-block;
+        vertical-align: bottom;
+
+        div {
+          width: 30px;
+          height: 36px;
+          display: inline-block;
+          margin: 0px 2px;
+        }
+
+        .social-media-facebook {
+          background: url(../images/icons/black-facebook.png) no-repeat 0 0;
+        }
+        .social-media-twitter {
+          background: url(../images/icons/black-twitter.png) no-repeat 0 0;
+        }
+      }
+    }
+
+    h1#node-title {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #ce9bc0;
+      font-size: 30px;
+      margin-top: 10px;
+      clear: both;
+    }
+
+    .content-body {
+      font-size: 16px;
+
+      .meta-info {
+        color: #acacac;
+        border-left: 2px solid;
+        padding-left: 10px;
+        margin-bottom: 30px;
+
+        p {
+          margin-bottom: 10px;
+        }
+      }
+
+      .field-name-body {
+        font-family: $avenir;
+        line-height: 30px;
+      }
+
+      .field-name-field-amani-tags {
+        .field-label {
+          font-family: $avenir;
+          margin-bottom: 5px;
+        }
+
+        .field-items > div {
+          display: inline-block;
+          background: #d9d9d9;
+          padding: 5px 10px;
+          margin-right: 5px;
+
+          a {
+            color: #7f7f7f;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .file-download {
+        font-family: $avenir;
+        background: #ebebeb;
+        padding: 40px;
+        margin: 0 auto;
+        margin-top: 30px;
+        overflow:hidden;
+
+        & > div {
+          display:inline-block;
+          vertical-align:middle;
+          width:49%;
+        }
+
+        .field-name-field-media {
+          float: left;
+          font-size: 16px;
+
+          a {
+            color: #131313;
+          }
+        }
+
+        .field-name-field-link {
+          float: right;
+          background: #ce9bc0;
+          text-transform: uppercase;
+          padding: 20px 45px;
+          font-size: 24px;
+
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
