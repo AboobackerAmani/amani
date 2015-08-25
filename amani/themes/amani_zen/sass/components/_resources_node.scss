@@ -1,0 +1,134 @@
+.node-type-resource #content {
+  font-family: $avenir-condensed;
+  width: 840px;
+  margin: auto;
+
+  .breadcrumb, #page-title {
+    display: none;
+  }
+
+  .field-name-field-image {
+    margin-bottom: -10px;
+  }
+
+  .inner-content {
+    font-weight: 100;
+    background: #fcfbfb;
+    padding: 35px;
+    box-shadow: 0px 3px 3px -2px #777;
+
+    .share-icons {
+      float: right;
+
+      h3 {
+        display: inline-block;
+        margin-right: 5px;
+        font-family: $avenir;
+      }
+
+      .social-menu {
+        width: 100px;
+        display: inline-block;
+        vertical-align: bottom;
+
+        div {
+          width: 30px;
+          height: 36px;
+          display: inline-block;
+          margin: 0px 2px;
+        }
+
+        .social-media-facebook {
+          background: url(../images/icons/black-facebook.png) no-repeat 0 0;
+        }
+        .social-media-twitter {
+          background: url(../images/icons/black-twitter.png) no-repeat 0 0;
+        }
+      }
+    }
+
+    h1#node-title {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #ce9bc0;
+      font-size: 30px;
+      margin-top: 10px;
+      clear: both;
+    }
+
+    .content-body {
+      font-size: 16px;
+
+      .meta-info {
+        color: #acacac;
+        border-left: 2px solid;
+        padding-left: 10px;
+        margin-bottom: 30px;
+
+        p {
+          margin-bottom: 10px;
+        }
+      }
+
+      .field-name-body {
+        font-family: $avenir;
+        line-height: 30px;
+      }
+
+      .field-name-field-amani-tags {
+        .field-label {
+          font-family: $avenir;
+          margin-bottom: 5px;
+        }
+
+        .field-items > div {
+          display: inline-block;
+          background: #d9d9d9;
+          padding: 5px 10px;
+          margin-right: 5px;
+
+          a {
+            color: #7f7f7f;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .file-download {
+        font-family: $avenir;
+        background: #ebebeb;
+        padding: 40px;
+        margin: 0 auto;
+        margin-top: 30px;
+        overflow:hidden;
+
+        & > div {
+          display:inline-block;
+          vertical-align:middle;
+          width:49%;
+        }
+
+        .field-name-field-media {
+          float: left;
+          font-size: 16px;
+
+          a {
+            color: #131313;
+          }
+        }
+
+        .field-name-field-link {
+          float: right;
+          background: #ce9bc0;
+          text-transform: uppercase;
+          padding: 20px 45px;
+          font-size: 24px;
+
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
