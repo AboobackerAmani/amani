@@ -2170,28 +2170,6 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['header']['area']['label'] = 'header text';
   $handler->display->display_options['header']['area']['content'] = '<h2>We are a team made up of skilled individuals from a variety of backgrounds, including: law, design, accounting, marketing and more. Meet our team.</h2>';
   $handler->display->display_options['header']['area']['format'] = 'wysiwyg_advanced';
-  /* Relationship: Content: Taxonomy terms on node */
-  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
-  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
-    'team_member_type' => 'team_member_type',
-    'forums' => 0,
-    'activity_status' => 0,
-    'article_type' => 0,
-    'categories' => 0,
-    'event_type' => 0,
-    'gallery_collections' => 0,
-    'report_type' => 0,
-    'incident_severity' => 0,
-    'partner_type' => 0,
-    'project_location' => 0,
-    'project_status' => 0,
-    'theme' => 0,
-    'resource_type' => 0,
-    'tags' => 0,
-    'contributor_type' => 0,
-  );
   /* Field: Content: Photo */
   $handler->display->display_options['fields']['field_team_image']['id'] = 'field_team_image';
   $handler->display->display_options['fields']['field_team_image']['table'] = 'field_data_field_team_image';
@@ -2237,6 +2215,10 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Read more';
+  /* Sort criterion: Content: Display ranking (field_display_ranking) */
+  $handler->display->display_options['sorts']['field_display_ranking_value']['id'] = 'field_display_ranking_value';
+  $handler->display->display_options['sorts']['field_display_ranking_value']['table'] = 'field_data_field_display_ranking';
+  $handler->display->display_options['sorts']['field_display_ranking_value']['field'] = 'field_display_ranking_value';
   /* Sort criterion: Content: Name (field_name:family) */
   $handler->display->display_options['sorts']['field_name_family']['id'] = 'field_name_family';
   $handler->display->display_options['sorts']['field_name_family']['table'] = 'field_data_field_name';
@@ -2318,7 +2300,6 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('Desc'),
     t('header text'),
     t('<h2>We are a team made up of skilled individuals from a variety of backgrounds, including: law, design, accounting, marketing and more. Meet our team.</h2>'),
-    t('term'),
     t('Read more'),
     t('Team member type (field_team_member_type)'),
     t('Filter Your Search'),
