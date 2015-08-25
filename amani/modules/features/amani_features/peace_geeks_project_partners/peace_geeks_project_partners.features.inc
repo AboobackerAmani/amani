@@ -15,6 +15,45 @@ function peace_geeks_project_partners_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function peace_geeks_project_partners_views_api() {
+  return array("version" => "3.0");
+}
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function peace_geeks_project_partners_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: project_card_image.
+  $styles['project_card_image'] = array(
+    'name' => 'project_card_image',
+    'label' => 'Project Card Image (234 x 174)',
+    'effects' => array(
+      16 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '234',
+          'height' => '174',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function peace_geeks_project_partners_node_info() {
