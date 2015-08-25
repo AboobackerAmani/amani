@@ -4221,16 +4221,246 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     display: block;
   }
 
-  /* Projects cards */
-  /* line 1003, ../sass/theme/_page_specific.scss */
-  .view-peace-geeks-projects.view-display-id-block {
-    margin-top: -3em;
+  /* Past Projects */
+  /* line 1005, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners #main {
+    padding-top: 50px;
+    padding-bottom: 7em;
   }
   /* line 1010, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners a#apply-today-button {
+    display: block;
+    float: left;
+    background: #474F5E;
+    color: white;
+    font-weight: 600;
+    padding: 20px;
+    height: 120px;
+    width: 300px;
+    margin-right: 20px;
+    font-size: 18px;
+    margin-bottom: 4px;
+    margin-top: 30px;
+  }
+  /* line 1023, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners a#apply-today-button:after {
+    content: "become a PeaceGeek!";
+    font-weight: 300;
+    display: block;
+    padding-top: 4px;
+    color: #E6E6E6;
+  }
+  /* line 1032, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners a#donate-button {
+    display: block;
+    float: left;
+    background: #F09416;
+    color: white;
+    font-weight: 600;
+    padding: 20px;
+    height: 120px;
+    width: 300px;
+    margin-right: 0;
+    font-size: 18px;
+    margin-bottom: 4px;
+    margin-top: 30px;
+  }
+  /* line 1045, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners a#donate-button:after {
+    content: "to PeaceGeeks";
+    font-weight: 300;
+    display: block;
+    padding-top: 4px;
+  }
+  /* line 1053, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block {
+    display: block;
+    width: 100%;
+  }
+  /* line 1057, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content {
+    display: block;
+    z-index: 10;
+    position: relative;
+    padding-left: 3000px;
+    margin-left: -3000px;
+    padding-right: 3000px;
+    margin-right: -3000px;
+    height: 400px;
+    background: #59C2ED;
+    overflow: hidden;
+  }
+  /* line 1070, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row {
+    display: block;
+    width: 980px;
+    margin: 0 auto;
+    height: 400px;
+    position: relative;
+    padding: 40px 20px;
+  }
+  /* line 1078, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-label {
+    display: inline;
+    float: left;
+    padding-right: 6px;
+  }
+  /* line 1084, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  /* line 1092, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-proj-partners-location .locality-block {
+    display: inline;
+    float: left;
+  }
+  /* line 1096, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-proj-partners-location .country {
+    display: inline;
+    padding-left: 6px;
+  }
+  /* line 1105, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-proj-partners-url a {
+    color: #414042;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    margin-top: 8px;
+    display: block;
+  }
+  /* line 1115, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-title {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  /* line 1127, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-partner-one-liner {
+    color: white;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 300;
+  }
+  /* line 1135, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-nothing h3 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  /* line 1146, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-tags {
+    display: block;
+    right: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: .6em;
+  }
+  /* line 1153, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-tags .views-label {
+    text-transform: uppercase;
+    color: #9a9a9a;
+    display: inline;
+  }
+  /* line 1160, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-tags ol {
+    text-align: right;
+    margin: 0 0 -5px 0;
+  }
+  /* line 1163, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-tags ol li {
+    list-style-type: none;
+    display: inline;
+  }
+  /* line 1166, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-tags ol li a {
+    background: #E6E6E6;
+    color: #414042;
+    font-style: italic;
+    padding: 4px 14px;
+    margin-left: 8px;
+  }
+  /* line 1172, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-tags ol li a:before {
+    content: "#";
+  }
+  /* line 1184, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners #main {
+    padding-top: 50px;
+  }
+  /* line 1186, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners h1#page-title {
+    display: none;
+  }
+  /* line 1192, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-peace-geeks-projects.view-display-id-project_partners_node_override .views-row .views-label {
+    font-size: 1.4em;
+    text-transform: uppercase;
+    color: #414042;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  /* line 1202, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-peace-geeks-projects.view-display-id-project_partners_node_override .views-row .views-field-field-image-caption {
+    display: block;
+    background: #59C2ED;
+    width: 100%;
+    float: left;
+    color: white;
+    height: 60px;
+    margin-top: -25px;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 40px !important;
+  }
+  /* line 1216, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-peace-geeks-projects.view-display-id-project_partners_node_override .views-row .views-field {
+    margin-bottom: 20px;
+    display: block;
+    float: left;
+  }
+  /* line 1220, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-peace-geeks-projects.view-display-id-project_partners_node_override .views-row .views-field h3 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  /* line 1229, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-peace-geeks-projects.view-display-id-project_partners_node_override .views-row .views-field-field-peacegeeks-contributions {
+    border-top: 1px solid #59C2ED;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+  /* line 1237, ../sass/theme/_page_specific.scss */
+  body.node-type-project-partners .view-peace-geeks-projects.view-display-id-project_partners_node_override .views-row .field-content p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  /* Projects cards */
+  /* line 1250, ../sass/theme/_page_specific.scss */
+  .view-peace-geeks-projects.view-display-id-block {
+    margin-top: -4em;
+  }
+  /* line 1257, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block div.item-list ul.pager.pager-load-more li {
     list-style-type: none;
   }
-  /* line 1012, ../sass/theme/_page_specific.scss */
+  /* line 1259, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block div.item-list ul.pager.pager-load-more li a {
     display: block;
     float: left;
@@ -4241,13 +4471,13 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     color: white;
     font-size: 18px;
   }
-  /* line 1021, ../sass/theme/_page_specific.scss */
+  /* line 1268, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block div.item-list ul.pager.pager-load-more li a:after {
     content: "current projects";
     font-weight: 300;
     display: block;
   }
-  /* line 1031, ../sass/theme/_page_specific.scss */
+  /* line 1278, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block .views-row {
     display: block;
     float: left;
@@ -4258,15 +4488,15 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 20px;
     position: relative;
   }
-  /* line 1040, ../sass/theme/_page_specific.scss */
+  /* line 1287, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block .views-row:nth-child(3n) {
     margin-right: 0;
   }
-  /* line 1048, ../sass/theme/_page_specific.scss */
+  /* line 1295, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block .views-row .views-field-title {
     padding: 10px 20px;
   }
-  /* line 1050, ../sass/theme/_page_specific.scss */
+  /* line 1297, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block .views-row .views-field-title a {
     color: #59C2ED;
     font-size: 16px;
@@ -4274,18 +4504,18 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     text-transform: uppercase;
     font-weight: 600;
   }
-  /* line 1059, ../sass/theme/_page_specific.scss */
+  /* line 1306, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block .views-row .views-field-field-tags {
     padding: 10px 20px 0 20px;
   }
-  /* line 1061, ../sass/theme/_page_specific.scss */
+  /* line 1308, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block .views-row .views-field-field-tags ol {
     display: block;
     position: absolute;
     bottom: 0;
     margin-bottom: -4px;
   }
-  /* line 1066, ../sass/theme/_page_specific.scss */
+  /* line 1313, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block .views-row .views-field-field-tags ol li {
     list-style-type: none;
     display: block;
@@ -4293,7 +4523,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-right: 6px;
     margin-bottom: 4px;
   }
-  /* line 1072, ../sass/theme/_page_specific.scss */
+  /* line 1319, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block .views-row .views-field-field-tags ol li a {
     display: inline-block;
     background: white;
@@ -4303,7 +4533,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 12px;
     font-weight: normal;
   }
-  /* line 1080, ../sass/theme/_page_specific.scss */
+  /* line 1327, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block .views-row .views-field-field-tags ol li a:before {
     content: "#";
   }

@@ -998,11 +998,258 @@
 	
 	}
 	
+	/* Past Projects */
+	
+	body.node-type-project-partners {
+	
+		#main {
+			padding-top:50px;
+			padding-bottom:7em;
+		}
+	
+		a#apply-today-button {
+			display:block;
+			float:left;
+			background:$grey;
+			color:white;
+			font-weight:600;
+			padding:20px;
+			height:120px;
+			width:300px;
+			margin-right:20px;
+			font-size:18px;
+			margin-bottom:4px;
+			margin-top:30px;
+			&:after {
+				content:"become a PeaceGeek!";
+				font-weight:300;
+				display:block;
+				padding-top:4px;
+				color:$soft-grey;
+			}	
+		}
+	
+		a#donate-button {
+			display:block;
+			float:left;
+			background:$orange;
+			color:white;
+			font-weight:600;
+			padding:20px;
+			height:120px;
+			width:300px;
+			margin-right:0;
+			font-size:18px;
+			margin-bottom:4px;
+			margin-top:30px;
+			&:after {
+				content:"to PeaceGeeks";
+				font-weight:300;
+				display:block;
+				padding-top:4px;
+			}	
+		}
+		
+		.view-id-peace_geeks_projects.view-display-id-project_partners_banner_block {
+			display:block;
+			width:100%;
+			
+			.view-content {
+				
+				display: block;
+				z-index: 10;
+				position: relative;
+				padding-left: 3000px;
+				margin-left: -3000px;
+				padding-right: 3000px;
+				margin-right: -3000px;
+				height: 400px;
+				background: $blue;
+				overflow: hidden;
+				
+				.views-row {
+					display:block;
+					width:980px;
+					margin:0 auto;
+					height:400px;
+					position:relative;
+					padding:40px 20px;
+					
+					.views-label {
+						display:inline;
+						float:left;
+						padding-right:6px;
+					}	
+					
+					.views-field {
+						display:block;
+						font-size:14px;
+						line-height:20px;
+						
+					}
+					
+					.views-field-field-proj-partners-location {
+						.locality-block {
+							display:inline;
+							float:left;
+						}
+						.country {
+							display:inline;
+							padding-left:6px;
+						}
+					}
+					
+					
+					
+					.views-field-field-proj-partners-url {
+						a {
+							color:$text-black;
+							font-weight:bold;
+							font-style:italic;
+							text-decoration:underline;
+							margin-top:8px;
+							display:block;
+						}
+					}
+					
+					.views-field-title {
+						color:white;
+						font-size:16px;
+						font-weight:600;
+						letter-spacing:1px;
+						text-transform:uppercase;
+						display:block;
+						width:100%;
+						margin-bottom:12px;
+						
+					}
+					
+					.views-field-field-partner-one-liner {
+						color:white;
+						font-size:36px;
+						line-height:44px;
+						font-weight:300;
+					}
+					
+					.views-field-nothing {
+						h3 {
+							font-size:16px;
+							font-weight:600;
+							text-transform:uppercase;
+							margin-top:30px;
+							margin-bottom:10px;
+						}
+					}
+					
+					
+					
+					.views-field-field-tags {
+						display:block;
+						right:0;
+						width:100%;
+						position:absolute;
+						bottom:0;
+						margin-bottom:.6em;
+						.views-label {
+							text-transform:uppercase;
+							color:$text-grey;
+							display:inline;
+
+						}
+						
+						ol {
+							text-align:right;
+							margin:0 0 -5px 0;
+							li {
+								list-style-type:none;
+								display:inline;
+								a {
+									background:$soft-grey;
+									color:$text-black;
+									font-style:italic;
+									padding:4px 14px;
+									margin-left:8px;
+									&:before {
+										content:"#";
+									}
+								}
+							}
+						}
+						
+					}
+				}
+			}
+		}
+		
+		#main {padding-top:50px;}
+		
+		h1#page-title {display:none;}
+		
+		.view-peace-geeks-projects.view-display-id-project_partners_node_override {
+			
+			.views-row {
+				
+				.views-label {
+					font-size:1.4em;
+					text-transform:uppercase;
+					color:$text-black;
+					font-weight:600;
+					display:block;
+					width:100%;
+					margin-bottom:16px;
+				}
+				
+				.views-field-field-image-caption {
+					display:block;
+					background:$blue;
+					width:100%;
+					float:left;
+					color:white;
+					height:60px;
+					margin-top:-25px;
+					padding:20px;
+					font-size:14px;
+					font-weight:300;
+					margin-bottom:40px !important;
+				}
+				
+				.views-field {
+					margin-bottom:20px;
+					display:block;
+					float:left;
+					h3 {
+						font-size:16px;
+						font-weight:600;
+						text-transform:uppercase;
+						margin-top:30px;
+						margin-bottom:10px;
+					}
+				}
+				
+				.views-field-field-peacegeeks-contributions {
+					border-top:1px solid $blue;
+					padding-top:20px;
+					margin-top:20px;
+				}
+				
+				
+				.field-content {
+					p {
+						font-size:15px;
+						line-height:22px;
+						
+					}
+				}
+			}
+		}
+	
+	}
+	
 	/* Projects cards */
 	
 	.view-peace-geeks-projects.view-display-id-block {
 		
-		margin-top:-3em;
+		margin-top:-4em;
 	
 		div.item-list {
 			ul.pager.pager-load-more {	
