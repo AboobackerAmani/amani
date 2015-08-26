@@ -4733,28 +4733,102 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   }
   /* line 1531, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-title {
-    margin-left: -26px;
-  }
-  /* line 1533, ../sass/theme/_page_specific.scss */
-  body.page-currentopenings .view-display-id-current_openings_page .views-field-title a {
+    margin-left: -40px;
     color: #414042;
     font-weight: 600;
     font-size: 26px;
     display: block;
     margin-bottom: 16px;
+    cursor: pointer;
   }
   /* line 1539, ../sass/theme/_page_specific.scss */
-  body.page-currentopenings .view-display-id-current_openings_page .views-field-title a:before {
-    content: "+";
-    padding-right: 14px;
+  body.page-currentopenings .view-display-id-current_openings_page .views-field-title .views-label {
+    padding-right: 24px;
+    font-size: 36px;
+    display: block;
+    float: left;
   }
-  /* line 1546, ../sass/theme/_page_specific.scss */
+  /* line 1547, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-body {
     font-size: 1.2em;
     line-height: 1.6em;
+    margin-left: -8px;
+    margin-bottom: 10px;
   }
-  /* line 1552, ../sass/theme/_page_specific.scss */
-  body.page-currentopenings .view-display-id-current_openings_page ol li {
+  /* line 1554, ../sass/theme/_page_specific.scss */
+  body.page-currentopenings .view-display-id-current_openings_page .view-footer {
+    display: block;
+    float: left;
+    width: 752px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
+  /* line 1562, ../sass/theme/_page_specific.scss */
+  body.page-currentopenings .view-display-id-current_openings_page #current-openings-general-application {
+    display: block;
+    float: left;
+    width: 331px;
+    margin-right: 0;
+    background: #F09416;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 20px 20px 10px 20px;
+    height: 110px;
+  }
+  /* line 1574, ../sass/theme/_page_specific.scss */
+  body.page-currentopenings .view-display-id-current_openings_page #current-openings-general-application span {
+    display: block;
+    font-weight: 300;
+  }
+  /* line 1580, ../sass/theme/_page_specific.scss */
+  body.page-currentopenings .view-display-id-current_openings_page #current-openings-bottom-text {
+    display: block;
+    float: left;
+    width: 341px;
+    margin-right: 40px;
+    margin-bottom: 6px;
+    height: 110px;
+    font-size: 1.2em;
+    line-height: 1.6em;
+  }
+  /* line 1591, ../sass/theme/_page_specific.scss */
+  body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags {
+    padding-top: 30px;
+  }
+  /* line 1593, ../sass/theme/_page_specific.scss */
+  body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags ol {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -4px;
+  }
+  /* line 1598, ../sass/theme/_page_specific.scss */
+  body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags ol li {
+    list-style-type: none;
+    display: block;
+    float: left;
+    margin-right: 6px;
+    margin-bottom: 4px;
+  }
+  /* line 1604, ../sass/theme/_page_specific.scss */
+  body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags ol li a {
+    display: inline-block;
+    background: white;
+    padding: 4px 10px;
+    color: #9a9a9a;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  /* line 1612, ../sass/theme/_page_specific.scss */
+  body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags ol li a:before {
+    content: "#";
+    font-style: italic;
+  }
+  /* line 1622, ../sass/theme/_page_specific.scss */
+  body.page-currentopenings .view-display-id-current_openings_page ol li.views-row {
     list-style-type: none;
     display: block;
     z-index: 10;

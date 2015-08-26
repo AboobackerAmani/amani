@@ -1799,6 +1799,38 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<div id="current-openings-bottom-text">If you don\'t see a suitable opening here please feel free to submit a general application.</div>
+<a id="current-openings-general-application" href="/generalapplication">Apply with<span>general application</span></a>';
+  $handler->display->display_options['footer']['area']['format'] = 'php_code';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '+';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  /* Field: Content: Tags */
+  $handler->display->display_options['fields']['field_opportunity_tags']['id'] = 'field_opportunity_tags';
+  $handler->display->display_options['fields']['field_opportunity_tags']['table'] = 'field_data_field_opportunity_tags';
+  $handler->display->display_options['fields']['field_opportunity_tags']['field'] = 'field_opportunity_tags';
+  $handler->display->display_options['fields']['field_opportunity_tags']['label'] = '';
+  $handler->display->display_options['fields']['field_opportunity_tags']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_opportunity_tags']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_opportunity_tags']['multi_type'] = 'ol';
   $handler->display->display_options['path'] = 'currentopenings';
 
   /* Display: Current Openings */
@@ -1844,6 +1876,9 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Current Openings Page'),
+    t('<div id="current-openings-bottom-text">If you don\'t see a suitable opening here please feel free to submit a general application.</div>
+<a id="current-openings-general-application" href="/generalapplication">Apply with<span>general application</span></a>'),
+    t('+'),
     t('<h3>Current Openings</h3>'),
     t('Current Openings Block'),
   );
