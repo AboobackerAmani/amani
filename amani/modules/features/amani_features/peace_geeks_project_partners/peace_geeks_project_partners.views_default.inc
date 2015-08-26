@@ -163,10 +163,11 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['fields']['field_what_they_do']['table'] = 'field_data_field_what_they_do';
   $handler->display->display_options['fields']['field_what_they_do']['field'] = 'field_what_they_do';
   $handler->display->display_options['fields']['field_what_they_do']['element_label_colon'] = FALSE;
-  /* Field: Content: How PeaceGeeks Is Helping */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_how_peacegeeks_is_helping']['id'] = 'field_how_peacegeeks_is_helping';
   $handler->display->display_options['fields']['field_how_peacegeeks_is_helping']['table'] = 'field_data_field_how_peacegeeks_is_helping';
   $handler->display->display_options['fields']['field_how_peacegeeks_is_helping']['field'] = 'field_how_peacegeeks_is_helping';
+  $handler->display->display_options['fields']['field_how_peacegeeks_is_helping']['label'] = 'How PeaceGeeks Is Helping';
   $handler->display->display_options['fields']['field_how_peacegeeks_is_helping']['element_label_colon'] = FALSE;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_proj_partners_image']['id'] = 'field_proj_partners_image';
@@ -185,6 +186,8 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['fields']['field_image_caption']['field'] = 'field_image_caption';
   $handler->display->display_options['fields']['field_image_caption']['label'] = '';
   $handler->display->display_options['fields']['field_image_caption']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image_caption']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_image_caption']['empty_zero'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -265,10 +268,11 @@ function peace_geeks_project_partners_views_default_views() {
       'address' => 'address',
     ),
   );
-  /* Field: Content: Project Dates */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_project_dates']['id'] = 'field_project_dates';
   $handler->display->display_options['fields']['field_project_dates']['table'] = 'field_data_field_project_dates';
   $handler->display->display_options['fields']['field_project_dates']['field'] = 'field_project_dates';
+  $handler->display->display_options['fields']['field_project_dates']['label'] = 'Project Dates';
   /* Field: Content: Project Lead */
   $handler->display->display_options['fields']['field_project_lead']['id'] = 'field_project_lead';
   $handler->display->display_options['fields']['field_project_lead']['table'] = 'field_data_field_project_lead';
