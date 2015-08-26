@@ -181,10 +181,7 @@ $zen-auto-include-item-base: false;
     #content{
       width: 100% !important;
     }
-    &.node-type-project .node-title,
-    &.node-type-project .real-node-title{
-      font-size: 8vw;
-    }
+    
     #mobile-menu-wrapper{
       display: block;
       width: 100%;
@@ -744,6 +741,10 @@ $zen-auto-include-item-base: false;
     }/*footer*/
 
     &.not-front{
+      &.node-type-project .node-title,
+      &.node-type-project .real-node-title{
+        font-size: 8vw ;
+      }
       &.section-resources{
         .region-sidebar-second{
           display: none;
