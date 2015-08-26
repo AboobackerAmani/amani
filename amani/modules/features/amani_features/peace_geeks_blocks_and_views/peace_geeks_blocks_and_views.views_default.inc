@@ -1794,8 +1794,8 @@ function peace_geeks_blocks_and_views_views_default_views() {
     'opportunity' => 'opportunity',
   );
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
+  /* Display: Current Openings Page */
+  $handler = $view->new_display('page', 'Current Openings Page', 'current_openings_page');
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -1827,8 +1827,9 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '180',
   );
@@ -1842,7 +1843,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Page'),
+    t('Current Openings Page'),
     t('<h3>Current Openings</h3>'),
     t('Current Openings Block'),
   );
