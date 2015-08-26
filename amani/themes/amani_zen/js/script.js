@@ -145,7 +145,24 @@ Drupal.behaviors.paragraphs_adjustments = {
 		}
 	});
 	
+// Change background colour of full-width callout box based on selected colour 
 
+	$('div.paragraphs-item-callout-box-full-width-grey').each(function() {
+		
+		var backcolour = $(this).find('.field-name-field-background-colour .field-item').html();
+		
+		if (backcolour == 'PG Blue') {
+			$(this).css('background','#59C2ED');
+			$(this).css('color','white');
+		}
+		
+		if (backcolour == 'Soft Grey') {
+			$(this).css('background','#E6E6E6');
+		}
+		
+	
+	});	
+	
 
 // Add body class if present 
 
@@ -158,14 +175,14 @@ Drupal.behaviors.paragraphs_adjustments = {
 
 // Add link box classes if present 
 
-	var anchorlinkbox = $('.paragraphs-item-light-grey-text-box-with-link-to .field-name-field-class-for-this-box .field-item');
+	$('.paragraphs-item-light-grey-text-box-with-link-to').each(function() {
 	
-	if (anchorlinkbox.length) {
+		var anchorlinkbox = $(this).find('.field-name-field-class-for-this-box .field-item');
 	
-		var boxclass = anchorlinkbox.html();
-		anchorlinkbox.parent().parent().prev().prev().find('a').addClass(boxclass);
-		anchorlinkbox.hide();
-	}
+			var boxclass = anchorlinkbox.html();
+			anchorlinkbox.parent().parent().parent().parent().parent().addClass(boxclass).addClass('anchor-link-to-box').css('float','left');;
+			anchorlinkbox.hide();
+	});
 	
 	var narrowgreybox = $('.paragraphs-item-light-grey-text-box-narrower .field-name-field-class-for-this-box .field-item');
 	
@@ -224,6 +241,11 @@ Drupal.behaviors.paragraphs_adjustments = {
 	
 	});
 
+
+
+	
+	
+	
 
 // Change current openings block links to lead to currentopenings page 
 
@@ -343,8 +365,12 @@ Drupal.behaviors.paragraphs_adjustments = {
 // Front page area of focus link anchor change
 
 	var frontareaanchor = $('body.front .view-display-id-front_areas_of_focus .views-field-field-anchor-to-link-to .field-content').html();
+	
 	var frontareanewlink = location.protocol + '//' + location.host + '/areas-of-focus#' + frontareaanchor;
+	
 	$('body.front .view-display-id-front_areas_of_focus .views-field-title a').attr('href', frontareanewlink);
+	
+	
 
 // Team page adjustments, hover effects, etc
 
