@@ -1371,6 +1371,11 @@
 			background: #E6E6E6;
 			overflow: hidden;
 			
+			.view-content {
+				width:980px;
+				margin-left:-114px;
+			}
+			
 			.views-field-field-team-image {
 				position:absolute;
 				bottom:0;
@@ -1501,8 +1506,46 @@
 			}
 		}
 	
+	}
 	
 	
+	/* Current Openings */
+	
+	body.page-currentopenings {
+	
+		#main {
+			padding-bottom:6em;
+		}
+	
+		h1#page-title {
+			font-weight:600;
+			font-size:1.6em;
+			margin-top:0;
+			text-transform:uppercase;
+			letter-spacing:1px;
+			margin-bottom:2em;
+		}
+		
+		.view-display-id-current_openings_page {
+		
+			ol {
+				li {
+					list-style-type:none;
+					display: block;
+					z-index: 10;
+					position: relative;
+					padding-left: 3000px;
+					margin-left: -3000px;
+					padding-right: 3000px;
+					margin-right: -3000px;
+					background: #E6E6E6;
+					overflow: hidden;
+					margin-bottom:1em;
+				}
+			}
+		
+		
+		}
 	
 	}
 

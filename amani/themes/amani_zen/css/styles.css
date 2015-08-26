@@ -2017,7 +2017,7 @@ div.breadcrumb {
 @media all and (min-width: 768px) {
   /* line 42, ../sass/theme/_layout.scss */
   body.not-front #main {
-    padding-top: 7em;
+    padding-top: 50px;
   }
 
   /* line 47, ../sass/theme/_layout.scss */
@@ -4593,17 +4593,22 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     overflow: hidden;
   }
   /* line 1374, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .view-content {
+    width: 980px;
+    margin-left: -114px;
+  }
+  /* line 1379, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-team-image {
     position: absolute;
     bottom: 0;
     margin-bottom: -4px;
   }
-  /* line 1380, ../sass/theme/_page_specific.scss */
+  /* line 1385, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-title {
     margin-left: 300px;
     margin-top: 50px;
   }
-  /* line 1383, ../sass/theme/_page_specific.scss */
+  /* line 1388, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-title .views-label {
     display: block;
     font-size: 18px;
@@ -4612,7 +4617,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     letter-spacing: 1px;
     margin-bottom: 16px;
   }
-  /* line 1393, ../sass/theme/_page_specific.scss */
+  /* line 1398, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-title .field-content {
     font-size: 28px;
     font-weight: 600;
@@ -4620,22 +4625,22 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 30px;
     display: block;
   }
-  /* line 1403, ../sass/theme/_page_specific.scss */
+  /* line 1408, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-team-bio {
     font-size: 1.2em;
     line-height: 1.6em;
     margin-left: 300px;
   }
-  /* line 1410, ../sass/theme/_page_specific.scss */
+  /* line 1415, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block {
     margin-top: -2em;
   }
-  /* line 1414, ../sass/theme/_page_specific.scss */
+  /* line 1419, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .view-header h3 {
     font-size: 1.4em;
     letter-spacing: 1px;
   }
-  /* line 1420, ../sass/theme/_page_specific.scss */
+  /* line 1425, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-title a {
     color: #414042;
     font-size: 1.4em;
@@ -4645,12 +4650,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     display: block;
     letter-spacing: 1px;
   }
-  /* line 1431, ../sass/theme/_page_specific.scss */
+  /* line 1436, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-body {
     font-size: 1.2em;
     line-height: 1.6em;
   }
-  /* line 1437, ../sass/theme/_page_specific.scss */
+  /* line 1442, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block ol li {
     list-style-type: none;
     display: block;
@@ -4661,11 +4666,11 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     height: 330px;
     padding: 34px 20px;
   }
-  /* line 1449, ../sass/theme/_page_specific.scss */
+  /* line 1454, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block ol li:nth-child(3) {
     margin-right: 0;
   }
-  /* line 1459, ../sass/theme/_page_specific.scss */
+  /* line 1464, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons {
     display: block;
     float: left;
@@ -4673,7 +4678,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 60px;
     margin-top: -10px;
   }
-  /* line 1467, ../sass/theme/_page_specific.scss */
+  /* line 1472, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons #volunteer-general-app-link {
     display: block;
     float: left;
@@ -4687,12 +4692,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 10px 20px;
     height: 110px;
   }
-  /* line 1479, ../sass/theme/_page_specific.scss */
+  /* line 1484, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons #volunteer-general-app-link span {
     display: block;
     font-weight: 300;
   }
-  /* line 1485, ../sass/theme/_page_specific.scss */
+  /* line 1490, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons #volunteer-current-openings-link {
     display: block;
     float: left;
@@ -4706,10 +4711,39 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 10px 20px;
     height: 110px;
   }
-  /* line 1497, ../sass/theme/_page_specific.scss */
+  /* line 1502, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons #volunteer-current-openings-link span {
     display: block;
     font-weight: 300;
+  }
+
+  /* Current Openings */
+  /* line 1516, ../sass/theme/_page_specific.scss */
+  body.page-currentopenings #main {
+    padding-bottom: 6em;
+  }
+  /* line 1520, ../sass/theme/_page_specific.scss */
+  body.page-currentopenings h1#page-title {
+    font-weight: 600;
+    font-size: 1.6em;
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2em;
+  }
+  /* line 1532, ../sass/theme/_page_specific.scss */
+  body.page-currentopenings .view-display-id-current_openings_page ol li {
+    list-style-type: none;
+    display: block;
+    z-index: 10;
+    position: relative;
+    padding-left: 3000px;
+    margin-left: -3000px;
+    padding-right: 3000px;
+    margin-right: -3000px;
+    background: #E6E6E6;
+    overflow: hidden;
+    margin-bottom: 1em;
   }
 }
 /* Styling for administrative/editor stuff */
