@@ -191,6 +191,29 @@ function peace_geeks_blocks_and_views_image_default_styles() {
     ),
   );
 
+  // Exported image style: meet_volunteer_block.
+  $styles['meet_volunteer_block'] = array(
+    'name' => 'meet_volunteer_block',
+    'label' => 'Meet Volunteer Block (270 x 380)',
+    'effects' => array(
+      18 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '270',
+          'height' => '380',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
   // Exported image style: news_card.
   $styles['news_card'] = array(
     'name' => 'news_card',

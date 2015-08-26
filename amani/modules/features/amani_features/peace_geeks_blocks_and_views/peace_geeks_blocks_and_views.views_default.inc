@@ -1739,6 +1739,116 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $export['peace_geeks_news_and_events'] = $view;
 
   $view = new view();
+  $view->name = 'peace_geeks_opportunities';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Peace Geeks Opportunities';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Current Openings';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['type'] = 'ol';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'opportunity' => 'opportunity',
+  );
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['path'] = 'currentopenings';
+
+  /* Display: Current Openings */
+  $handler = $view->new_display('block', 'Current Openings', 'current_openings_block');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<h3>Current Openings</h3>';
+  $handler->display->display_options['header']['area']['format'] = 'wysiwyg_advanced';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '180',
+  );
+  $handler->display->display_options['block_description'] = 'Current Openings Block';
+  $translatables['peace_geeks_opportunities'] = array(
+    t('Master'),
+    t('Current Openings'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Page'),
+    t('<h3>Current Openings</h3>'),
+    t('Current Openings Block'),
+  );
+  $export['peace_geeks_opportunities'] = $view;
+
+  $view = new view();
   $view->name = 'peace_geeks_resources';
   $view->description = '';
   $view->tag = 'default';
@@ -2242,7 +2352,6 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['filters']['field_team_member_type_tid']['id'] = 'field_team_member_type_tid';
   $handler->display->display_options['filters']['field_team_member_type_tid']['table'] = 'field_data_field_team_member_type';
   $handler->display->display_options['filters']['field_team_member_type_tid']['field'] = 'field_team_member_type_tid';
-  $handler->display->display_options['filters']['field_team_member_type_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['operator_id'] = 'field_team_member_type_tid_op';
   $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['label'] = 'Team member type (field_team_member_type)';
   $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['operator'] = 'field_team_member_type_tid_op';
@@ -2255,7 +2364,6 @@ function peace_geeks_blocks_and_views_views_default_views() {
     5 => 0,
     6 => 0,
   );
-  $handler->display->display_options['filters']['field_team_member_type_tid']['is_grouped'] = TRUE;
   $handler->display->display_options['filters']['field_team_member_type_tid']['group_info']['label'] = 'Filter Your Search';
   $handler->display->display_options['filters']['field_team_member_type_tid']['group_info']['identifier'] = 'field_team_member_type_tid';
   $handler->display->display_options['filters']['field_team_member_type_tid']['group_info']['widget'] = 'radios';
@@ -2289,6 +2397,145 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['path'] = 'team';
+
+  /* Display: Meet Volunteer Block */
+  $handler = $view->new_display('block', 'Meet Volunteer Block', 'meet_volunteer_block');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_team_member_type' => 'field_team_member_type',
+    'field_team_title' => 'field_team_title',
+  );
+  $handler->display->display_options['row_options']['separator'] = ' - ';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Photo */
+  $handler->display->display_options['fields']['field_team_image']['id'] = 'field_team_image';
+  $handler->display->display_options['fields']['field_team_image']['table'] = 'field_data_field_team_image';
+  $handler->display->display_options['fields']['field_team_image']['field'] = 'field_team_image';
+  $handler->display->display_options['fields']['field_team_image']['label'] = '';
+  $handler->display->display_options['fields']['field_team_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_team_image']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_team_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_team_image']['settings'] = array(
+    'image_style' => 'meet_volunteer_block',
+    'image_link' => '',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Meet a Volunteer';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Position */
+  $handler->display->display_options['fields']['field_team_title']['id'] = 'field_team_title';
+  $handler->display->display_options['fields']['field_team_title']['table'] = 'field_data_field_team_title';
+  $handler->display->display_options['fields']['field_team_title']['field'] = 'field_team_title';
+  $handler->display->display_options['fields']['field_team_title']['label'] = '';
+  $handler->display->display_options['fields']['field_team_title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_team_title']['element_label_colon'] = FALSE;
+  /* Field: Content: Bio */
+  $handler->display->display_options['fields']['field_team_bio']['id'] = 'field_team_bio';
+  $handler->display->display_options['fields']['field_team_bio']['table'] = 'field_data_field_team_bio';
+  $handler->display->display_options['fields']['field_team_bio']['field'] = 'field_team_bio';
+  $handler->display->display_options['fields']['field_team_bio']['label'] = '';
+  $handler->display->display_options['fields']['field_team_bio']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_team_bio']['alter']['preserve_tags'] = '<a>';
+  $handler->display->display_options['fields']['field_team_bio']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_team_bio']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_team_bio']['settings'] = array(
+    'trim_length' => '400',
+  );
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['text'] = 'Read more';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Global: Random */
+  $handler->display->display_options['sorts']['random']['id'] = 'random';
+  $handler->display->display_options['sorts']['random']['table'] = 'views';
+  $handler->display->display_options['sorts']['random']['field'] = 'random';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'team' => 'team',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Team member type (field_team_member_type) */
+  $handler->display->display_options['filters']['field_team_member_type_tid']['id'] = 'field_team_member_type_tid';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['table'] = 'field_data_field_team_member_type';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['field'] = 'field_team_member_type_tid';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['value'] = array(
+    39 => '39',
+  );
+  $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['operator_id'] = 'field_team_member_type_tid_op';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['label'] = 'Team member type (field_team_member_type)';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['operator'] = 'field_team_member_type_tid_op';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['identifier'] = 'field_team_member_type_tid';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+  );
+  $handler->display->display_options['filters']['field_team_member_type_tid']['group_info']['label'] = 'Filter Your Search';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['group_info']['identifier'] = 'field_team_member_type_tid';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['group_info']['widget'] = 'radios';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['group_info']['group_items'] = array(
+    2 => array(
+      'title' => 'Board Members',
+      'operator' => 'or',
+      'value' => array(
+        3 => '3',
+      ),
+    ),
+    3 => array(
+      'title' => 'Executives',
+      'operator' => 'or',
+      'value' => array(
+        4 => '4',
+      ),
+    ),
+    4 => array(
+      'title' => 'Team Leads',
+      'operator' => 'or',
+      'value' => array(
+        5 => '5',
+      ),
+    ),
+  );
+  $handler->display->display_options['filters']['field_team_member_type_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['vocabulary'] = 'team_member_type';
+  $handler->display->display_options['block_description'] = 'Meet a Volunteer';
   $translatables['peace_geeks_team'] = array(
     t('Master'),
     t('Team'),
@@ -2304,6 +2551,8 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('Team member type (field_team_member_type)'),
     t('Filter Your Search'),
     t('Page'),
+    t('Meet Volunteer Block'),
+    t('Meet a Volunteer'),
   );
   $export['peace_geeks_team'] = $view;
 
