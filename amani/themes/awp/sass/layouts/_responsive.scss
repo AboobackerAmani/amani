@@ -437,6 +437,11 @@ $zen-auto-include-item-base: false;
             width: 20%;
             top: 45px;
             font-size: 9vw;
+            [dir="rtl"] &{
+              float: right;
+              right: -32%;
+              left: auto;
+            }
           }
           .views-field-title-1{/*more*/
             position: absolute;
@@ -449,6 +454,12 @@ $zen-auto-include-item-base: false;
             margin-left: -60px;
             bottom: auto;
             width: 60px;
+            [dir="rtl"] &{
+              right: 100%;
+              left: auto;
+              margin-right: -60px;
+              margin-left: 0px;
+            }
             .field-content{
               display: table-cell;
               vertical-align: middle;
