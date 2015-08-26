@@ -1523,11 +1523,31 @@
 			margin-top:0;
 			text-transform:uppercase;
 			letter-spacing:1px;
-			margin-bottom:2em;
+			margin-bottom:30px;
 		}
 		
 		.view-display-id-current_openings_page {
-		
+			
+			.views-field-title {
+				margin-left:-26px;
+				a {
+					color:$text-black;
+					font-weight:600;
+					font-size:26px;
+					display:block;
+					margin-bottom:16px;
+					&:before {
+						content:"+";
+						padding-right:14px;
+					}
+				}
+			}
+			
+			.views-field-body {
+				font-size:1.2em;
+				line-height:1.6em;
+			}
+			
 			ol {
 				li {
 					list-style-type:none;
@@ -1541,6 +1561,8 @@
 					background: #E6E6E6;
 					overflow: hidden;
 					margin-bottom:1em;
+					padding-top:40px;
+					padding-bottom:20px;
 				}
 			}
 		

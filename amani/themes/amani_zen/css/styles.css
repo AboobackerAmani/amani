@@ -4729,9 +4729,31 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-top: 0;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 2em;
+    margin-bottom: 30px;
   }
-  /* line 1532, ../sass/theme/_page_specific.scss */
+  /* line 1531, ../sass/theme/_page_specific.scss */
+  body.page-currentopenings .view-display-id-current_openings_page .views-field-title {
+    margin-left: -26px;
+  }
+  /* line 1533, ../sass/theme/_page_specific.scss */
+  body.page-currentopenings .view-display-id-current_openings_page .views-field-title a {
+    color: #414042;
+    font-weight: 600;
+    font-size: 26px;
+    display: block;
+    margin-bottom: 16px;
+  }
+  /* line 1539, ../sass/theme/_page_specific.scss */
+  body.page-currentopenings .view-display-id-current_openings_page .views-field-title a:before {
+    content: "+";
+    padding-right: 14px;
+  }
+  /* line 1546, ../sass/theme/_page_specific.scss */
+  body.page-currentopenings .view-display-id-current_openings_page .views-field-body {
+    font-size: 1.2em;
+    line-height: 1.6em;
+  }
+  /* line 1552, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page ol li {
     list-style-type: none;
     display: block;
@@ -4744,6 +4766,8 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     background: #E6E6E6;
     overflow: hidden;
     margin-bottom: 1em;
+    padding-top: 40px;
+    padding-bottom: 20px;
   }
 }
 /* Styling for administrative/editor stuff */
