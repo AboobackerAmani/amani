@@ -84,10 +84,13 @@ function amani_team_views_default_views() {
   $handler->display->display_options['fields']['field_team_bio']['table'] = 'field_data_field_team_bio';
   $handler->display->display_options['fields']['field_team_bio']['field'] = 'field_team_bio';
   $handler->display->display_options['fields']['field_team_bio']['label'] = '';
+  $handler->display->display_options['fields']['field_team_bio']['alter']['trim_whitespace'] = TRUE;
+  $handler->display->display_options['fields']['field_team_bio']['alter']['max_length'] = '600';
   $handler->display->display_options['fields']['field_team_bio']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_team_bio']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_team_bio']['alter']['preserve_tags'] = '<a>';
+  $handler->display->display_options['fields']['field_team_bio']['alter']['html'] = TRUE;
   $handler->display->display_options['fields']['field_team_bio']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_team_bio']['type'] = 'text_trimmed';
   $handler->display->display_options['fields']['field_team_bio']['settings'] = array(
     'trim_length' => '600',
   );
@@ -98,7 +101,7 @@ function amani_team_views_default_views() {
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Read more';
-  /* Sort criterion: Content: Ranking (field_display_ranking) */
+  /* Sort criterion: Content: Display ranking (field_display_ranking) */
   $handler->display->display_options['sorts']['field_display_ranking_value']['id'] = 'field_display_ranking_value';
   $handler->display->display_options['sorts']['field_display_ranking_value']['table'] = 'field_data_field_display_ranking';
   $handler->display->display_options['sorts']['field_display_ranking_value']['field'] = 'field_display_ranking_value';
