@@ -1337,5 +1337,173 @@
 		}
 	
 	}
+	
+	
+	
+	/* Become a Volunteer */
+	
+	body.node-type-structure.becomevolunteer {
+	
+		#main {padding-top:50px;padding-bottom:6em;}
+		
+		.paragraphs-item-raw-block {
+			font-size:1.2em;
+			line-height:1.6em;
+			color:$text-black;
+			p {
+				margin-bottom:1em;
+			}
+		}
+		
+		.paragraphs-items-field-paragraphs {
+			margin-top:0;
+		}
+		
+		.view-display-id-meet_volunteer_block {
+			display: block;
+			z-index: 10;
+			position: relative;
+			padding-left: 3000px;
+			margin-left: -3000px;
+			padding-right: 3000px;
+			margin-right: -3000px;
+			height: 430px;
+			background: #E6E6E6;
+			overflow: hidden;
+			
+			.views-field-field-team-image {
+				position:absolute;
+				bottom:0;
+				margin-bottom:-4px;
+			}
+			
+			.views-field-title {
+				margin-left:300px;
+				margin-top:50px;
+				.views-label {
+					display:block;
+					font-size:18px;
+					font-weight:600;
+					text-transform:uppercase;
+					letter-spacing:1px;
+					margin-bottom:16px;
+					
+				}
+				
+				.field-content {
+					font-size:28px;
+					font-weight:600;
+					color:$text-black;
+					margin-bottom:30px;
+					display:block;
+					
+				}
+			}
+			
+			.views-field-field-team-bio {
+				font-size:1.2em;
+				line-height:1.6em;
+				margin-left:300px;
+			}
+		}
+		
+		.view-display-id-current_openings_block {
+			
+			margin-top:-2em;
+			
+			.view-header h3 {
+				font-size:1.4em;
+				letter-spacing:1px;
+			}
+			
+			.views-field-title {
+				a {
+					color:$text-black;
+					font-size:1.4em;
+					line-height:24px;
+					text-transform:uppercase;
+					margin-bottom:14px;
+					display:block;
+					letter-spacing:1px;
+				}
+			}
+			
+			.views-field-body {
+				font-size:1.2em;
+				line-height:1.6em;
+			}
+			
+			ol {
+				li {
+					list-style-type:none;
+					
+						display:block;
+						margin-right:10px;
+						background:$soft-grey;
+						float:left;
+						width:204px;
+						height:330px;
+						padding:34px 20px;
+						
+						
+						&:nth-child(3) {
+							margin-right:0;
+						}
+					
+				}
+			}	
+		
+		
+		}
+	
+		#volunteer-landing-buttons {
+		
+			display:block;
+			float:left;
+			width:752px;
+			margin-bottom:60px;
+			margin-top:-10px;
+			
+			#volunteer-general-app-link {
+				display:block;
+				float:left;
+				width:331px;
+				margin-right:10px;
+				background:$grey;
+				color:white;
+				font-weight:600;
+				font-size:18px;
+				margin-bottom:6px;
+				padding:10px 20px;
+				height:110px;
+				span {
+					display:block;
+					font-weight:300;
+				}
+			}
+			
+			#volunteer-current-openings-link {
+				display:block;
+				float:left;
+				width:331px;
+				margin-right:0;
+				background:$orange;
+				color:white;
+				font-weight:600;
+				font-size:18px;
+				margin-bottom:6px;
+				padding:10px 20px;
+				height:110px;
+				span {
+					display:block;
+					font-weight:300;
+				}
+			}
+		}
+	
+	
+	
+	
+	}
 
 }

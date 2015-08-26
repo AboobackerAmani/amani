@@ -51,7 +51,22 @@
 
 @media all and (min-width: $breakpoint) {
 
+	.float-left-half-width {
+		display:block;
+		float:left;
+		width:358px;
+		margin-right:30px;
+	}
 	
+	.field-name-field-class-for-this-box {
+		display:none;
+	}
+	
+	.float-right-half-width {
+		display:block;
+		float:right;
+		width:358px;
+	}
 
 	body.front #content #block-views-peace-geeks-twitter-block {
 			width:290px;

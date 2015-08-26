@@ -184,6 +184,23 @@ Drupal.behaviors.paragraphs_adjustments = {
 		linkblockbox.hide();
 	
 	});
+	
+	$('.paragraphs-item-raw-block').each(function() {
+		var rawblockbox = $(this).find('.field-name-field-class-for-this-box .field-item');
+		var rawblockclass = rawblockbox.html();
+		$(this).parent().addClass(rawblockclass);
+		rawblockbox.hide();
+	
+	});
+	
+
+// Change current openings block links to lead to currentopenings page 
+
+	$('.view-display-id-current_openings_block ol li .views-field-title a').each(function() {
+		
+		$(this).attr('href','/currentopenings');
+	
+	});
 
 // Set anchorlink and other boxes to same height
 
