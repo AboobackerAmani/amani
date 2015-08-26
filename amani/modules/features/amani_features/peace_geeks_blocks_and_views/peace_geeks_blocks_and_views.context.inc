@@ -13,6 +13,31 @@ function peace_geeks_blocks_and_views_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'current_openings_active_menu';
+  $context->description = '';
+  $context->tag = 'Peace Geeks';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'currentopenings' => 'currentopenings',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'menu' => array(
+      0 => 'main-menu:node/360',
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Peace Geeks');
+  $export['current_openings_active_menu'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'event_section_blocks';
   $context->description = '';
   $context->tag = 'Peace Geeks';
