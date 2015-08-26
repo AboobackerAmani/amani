@@ -742,8 +742,16 @@ $zen-auto-include-item-base: false;
 
     &.not-front{
       &.node-type-project .node-title,
-      &.node-type-project .real-node-title{
+      &.node-type-project .real-node-title,
+      &.page-resources-list .view-resource-inner .view-header .views-field-name
+      {
         font-size: 8vw ;
+      }
+      &.page-resources-list .view-resource-inner .view-content .views-row .views-field-title{
+        font-size: 7vw;
+      }
+      &.page-resources-list .view-resource-inner .view-header .views-field-name{
+        margin-top: 5%;
       }
       &.section-resources{
         .region-sidebar-second{
