@@ -279,6 +279,76 @@ function peace_geeks_paragraphs_and_structure_field_default_fields() {
     ),
   );
 
+  // Exported field: 'paragraphs_item-callout_box_full_width_grey-field_background_colour'.
+  $fields['paragraphs_item-callout_box_full_width_grey-field_background_colour'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_background_colour',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          'PG Blue' => 'PG Blue',
+          'PG Orange' => 'PG Orange',
+          'PG Grey' => 'PG Grey',
+          'Soft Grey' => 'Soft Grey',
+          'Soft Blue' => 'Soft Blue',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'callout_box_full_width_grey',
+      'default_value' => array(
+        0 => array(
+          'value' => 'Soft Grey',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => '4',
+        ),
+        'paragraphs_editor_preview' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'paragraphs_item',
+      'field_name' => 'field_background_colour',
+      'label' => 'Background Colour',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '49',
+      ),
+    ),
+  );
+
   // Exported field: 'paragraphs_item-callout_box_full_width_grey-field_header_text'.
   $fields['paragraphs_item-callout_box_full_width_grey-field_header_text'] = array(
     'field_config' => array(
