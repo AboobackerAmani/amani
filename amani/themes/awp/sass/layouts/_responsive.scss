@@ -407,6 +407,10 @@ $zen-auto-include-item-base: false;
             background: $awp-red;
             height: 100%;
             width: 20%;
+            [dir="rtl"] &{
+              margin-left: 10%;
+              margin-right: 0%;
+            }
             img{
               /*-webkit-filter: saturate(33333333%);*/
               display: none !important;
@@ -420,8 +424,13 @@ $zen-auto-include-item-base: false;
             top: 40px;
             display: block;
             width: 25%;
+            [dir="rtl"] &{
+              float: right;
+              right: 16%;
+              left: auto;
+            }
             a{
-              font-size: 5vw;
+              font-size: 4.5vw;
               font-weight: bold;
               color: #807f83;
 
