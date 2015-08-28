@@ -944,24 +944,38 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['filters']['field_event_type_tid']['group_info']['widget'] = 'radios';
   $handler->display->display_options['filters']['field_event_type_tid']['group_info']['group_items'] = array(
     1 => array(
-      'title' => 'Crowdfunding Campaign',
+      'title' => 'Fundraising Events',
       'operator' => 'or',
       'value' => array(
         20 => '20',
       ),
     ),
     2 => array(
-      'title' => 'Hackathon',
+      'title' => 'Hackathons',
       'operator' => 'or',
       'value' => array(
         19 => '19',
       ),
     ),
     3 => array(
-      'title' => 'PeaceTalk',
+      'title' => 'PeaceTalks',
       'operator' => 'or',
       'value' => array(
         18 => '18',
+      ),
+    ),
+    4 => array(
+      'title' => 'Public Speaking Events',
+      'operator' => 'or',
+      'value' => array(
+        48 => '48',
+      ),
+    ),
+    5 => array(
+      'title' => 'Other',
+      'operator' => 'or',
+      'value' => array(
+        47 => '47',
       ),
     ),
   );
@@ -2513,37 +2527,67 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['filters']['field_team_member_type_tid']['id'] = 'field_team_member_type_tid';
   $handler->display->display_options['filters']['field_team_member_type_tid']['table'] = 'field_data_field_team_member_type';
   $handler->display->display_options['filters']['field_team_member_type_tid']['field'] = 'field_team_member_type_tid';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['operator_id'] = 'field_team_member_type_tid_op';
   $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['label'] = 'Team member type (field_team_member_type)';
   $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['operator'] = 'field_team_member_type_tid_op';
   $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['identifier'] = 'field_team_member_type_tid';
-  $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-    6 => 0,
+  $handler->display->display_options['filters']['field_team_member_type_tid']['is_grouped'] = TRUE;
+  $handler->display->display_options['filters']['field_team_member_type_tid']['group_info']['label'] = 'Team member type (field_team_member_type)';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['group_info']['identifier'] = 'field_team_member_type_tid';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['group_info']['remember'] = FALSE;
+  $handler->display->display_options['filters']['field_team_member_type_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['vocabulary'] = 'team_member_type';
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'team' => 'team',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Team member type (field_team_member_type) */
+  $handler->display->display_options['filters']['field_team_member_type_tid']['id'] = 'field_team_member_type_tid';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['table'] = 'field_data_field_team_member_type';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['field'] = 'field_team_member_type_tid';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['operator_id'] = 'field_team_member_type_tid_op';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['label'] = 'Team member type (field_team_member_type)';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['operator'] = 'field_team_member_type_tid_op';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['identifier'] = 'field_team_member_type_tid';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['is_grouped'] = TRUE;
   $handler->display->display_options['filters']['field_team_member_type_tid']['group_info']['label'] = 'Filter Your Search';
   $handler->display->display_options['filters']['field_team_member_type_tid']['group_info']['identifier'] = 'field_team_member_type_tid';
   $handler->display->display_options['filters']['field_team_member_type_tid']['group_info']['widget'] = 'radios';
   $handler->display->display_options['filters']['field_team_member_type_tid']['group_info']['group_items'] = array(
-    2 => array(
+    1 => array(
       'title' => 'Board Members',
       'operator' => 'or',
       'value' => array(
         3 => '3',
       ),
     ),
-    3 => array(
+    2 => array(
       'title' => 'Executives',
       'operator' => 'or',
       'value' => array(
         4 => '4',
       ),
     ),
-    4 => array(
+    3 => array(
       'title' => 'Team Leads',
       'operator' => 'or',
       'value' => array(
@@ -2553,10 +2597,16 @@ function peace_geeks_blocks_and_views_views_default_views() {
   );
   $handler->display->display_options['filters']['field_team_member_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_team_member_type_tid']['vocabulary'] = 'team_member_type';
-
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  /* Filter criterion: Content: Team member type (field_team_member_type) */
+  $handler->display->display_options['filters']['field_team_member_type_tid_1']['id'] = 'field_team_member_type_tid_1';
+  $handler->display->display_options['filters']['field_team_member_type_tid_1']['table'] = 'field_data_field_team_member_type';
+  $handler->display->display_options['filters']['field_team_member_type_tid_1']['field'] = 'field_team_member_type_tid';
+  $handler->display->display_options['filters']['field_team_member_type_tid_1']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_team_member_type_tid_1']['value'] = array(
+    39 => '39',
+  );
+  $handler->display->display_options['filters']['field_team_member_type_tid_1']['type'] = 'select';
+  $handler->display->display_options['filters']['field_team_member_type_tid_1']['vocabulary'] = 'team_member_type';
   $handler->display->display_options['path'] = 'team';
 
   /* Display: Meet Volunteer Block */
@@ -2710,8 +2760,8 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('<h2>We are a team made up of skilled individuals from a variety of backgrounds, including: law, design, accounting, marketing and more. Meet our team.</h2>'),
     t('Read more'),
     t('Team member type (field_team_member_type)'),
-    t('Filter Your Search'),
     t('Page'),
+    t('Filter Your Search'),
     t('Meet Volunteer Block'),
     t('Meet a Volunteer'),
   );
