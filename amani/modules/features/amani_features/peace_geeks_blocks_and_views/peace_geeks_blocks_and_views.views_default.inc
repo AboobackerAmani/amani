@@ -1012,7 +1012,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'upcoming_event_image',
+    'image_style' => 'event_page_main_image',
     'image_link' => 'content',
   );
   /* Field: Content: Title */

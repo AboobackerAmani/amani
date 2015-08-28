@@ -227,7 +227,6 @@ Drupal.behaviors.paragraphs_adjustments = {
 	
 	$('.view-display-id-current_openings_page .views-field-title').click(function() {
 		
-		console.log('clicked');
 		$(this).parent().find('.views-field-body').toggle('fast');
 		//$(this).parent().find('.views-field-field-opportunity-tags').toggle('fast');
 		var labelcheck = $(this).find('.views-label').html();
