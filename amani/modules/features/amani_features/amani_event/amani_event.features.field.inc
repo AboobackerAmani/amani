@@ -701,7 +701,7 @@ function amani_event_field_default_fields() {
             'type' => 'none',
           ),
           'target_bundles' => array(
-            'sponsor' => 'sponsor',
+            'partner' => 'partner',
           ),
         ),
         'target_type' => 'node',
@@ -890,7 +890,7 @@ function amani_event_field_default_fields() {
             'type' => 'none',
           ),
           'target_bundles' => array(
-            'sponsor' => 'sponsor',
+            'partner' => 'partner',
           ),
         ),
         'target_type' => 'node',
