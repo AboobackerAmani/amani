@@ -110,13 +110,16 @@ function amani_team_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '17',
         ),
         'title' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
         'path' => array(
-          'weight' => '9',
+          'weight' => '16',
+        ),
+        'language' => array(
+          'weight' => '0',
         ),
       ),
       'display' => array(
