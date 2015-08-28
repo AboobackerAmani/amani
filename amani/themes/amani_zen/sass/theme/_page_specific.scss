@@ -843,7 +843,7 @@
 			}
 		}
 		
-		.views-field-field-image-1 {
+		.views-field-view {
 			display:block;
 			float:left;
 			margin-bottom:4px;
@@ -852,6 +852,10 @@
 			width:auto;
 			padding-right:40px;
 			margin-bottom:30px;
+			.views-row {
+				display:block;
+				float:left;
+			}
 			.views-label {
 				display:block;
 				font-weight:600;
@@ -863,7 +867,7 @@
 			}
 		}
 		
-		.views-field-field-image-2 {
+		.views-field-view-1 {
 			display:block;
 			float:left;
 			margin-bottom:4px;
@@ -871,6 +875,10 @@
 			font-size:1em;
 			width:auto;
 			margin-bottom:30px;
+			.views-row {
+				display:block;
+				float:left;
+			}
 			.views-label {
 				display:block;
 				font-weight:600;

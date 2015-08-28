@@ -1342,28 +1342,22 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['max_length'] = '100';
   $handler->display->display_options['fields']['body']['alter']['preserve_tags'] = '<a>';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  /* Field: Content: Sponsor Logo */
-  $handler->display->display_options['fields']['field_sponsor_logo']['id'] = 'field_sponsor_logo';
-  $handler->display->display_options['fields']['field_sponsor_logo']['table'] = 'field_data_field_sponsor_logo';
-  $handler->display->display_options['fields']['field_sponsor_logo']['field'] = 'field_sponsor_logo';
-  $handler->display->display_options['fields']['field_sponsor_logo']['relationship'] = 'field_event_thanks_to_target_id';
-  $handler->display->display_options['fields']['field_sponsor_logo']['label'] = 'Thank You To';
-  $handler->display->display_options['fields']['field_sponsor_logo']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_sponsor_logo']['settings'] = array(
-    'image_style' => 'event_sponsor_logo_small',
-    'image_link' => '',
-  );
-  /* Field: Content: Sponsor Logo */
-  $handler->display->display_options['fields']['field_sponsor_logo_1']['id'] = 'field_sponsor_logo_1';
-  $handler->display->display_options['fields']['field_sponsor_logo_1']['table'] = 'field_data_field_sponsor_logo';
-  $handler->display->display_options['fields']['field_sponsor_logo_1']['field'] = 'field_sponsor_logo';
-  $handler->display->display_options['fields']['field_sponsor_logo_1']['relationship'] = 'reverse_field_event_partners_node';
-  $handler->display->display_options['fields']['field_sponsor_logo_1']['label'] = 'Partnership With';
-  $handler->display->display_options['fields']['field_sponsor_logo_1']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_sponsor_logo_1']['settings'] = array(
-    'image_style' => 'event_sponsor_logo_small',
-    'image_link' => '',
-  );
+  /* Field: Global: View */
+  $handler->display->display_options['fields']['view']['id'] = 'view';
+  $handler->display->display_options['fields']['view']['table'] = 'views';
+  $handler->display->display_options['fields']['view']['field'] = 'view';
+  $handler->display->display_options['fields']['view']['label'] = 'Thank You To';
+  $handler->display->display_options['fields']['view']['view'] = 'peace_geeks_news_and_events';
+  $handler->display->display_options['fields']['view']['display'] = 'event_thank_you_partners';
+  $handler->display->display_options['fields']['view']['arguments'] = '!1';
+  /* Field: Global: View */
+  $handler->display->display_options['fields']['view_1']['id'] = 'view_1';
+  $handler->display->display_options['fields']['view_1']['table'] = 'views';
+  $handler->display->display_options['fields']['view_1']['field'] = 'view';
+  $handler->display->display_options['fields']['view_1']['label'] = 'Partnership With';
+  $handler->display->display_options['fields']['view_1']['view'] = 'peace_geeks_news_and_events';
+  $handler->display->display_options['fields']['view_1']['display'] = 'event_partnership_with_partners';
+  $handler->display->display_options['fields']['view_1']['arguments'] = '!1';
   /* Field: Content: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'node';
@@ -1673,6 +1667,134 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['sorts']['totalcount']['field'] = 'totalcount';
   $handler->display->display_options['sorts']['totalcount']['order'] = 'DESC';
   $handler->display->display_options['block_description'] = 'PG Popular Posts';
+
+  /* Display: Event Thank You Partners */
+  $handler = $view->new_display('block', 'Event Thank You Partners', 'event_thank_you_partners');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Event Thank You Partners';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_event_thanks_to_node']['id'] = 'reverse_field_event_thanks_to_node';
+  $handler->display->display_options['relationships']['reverse_field_event_thanks_to_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_event_thanks_to_node']['field'] = 'reverse_field_event_thanks_to_node';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Lead Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'event_sponsor_logo_small',
+    'image_link' => '',
+  );
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['relationship'] = 'reverse_field_event_thanks_to_node';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'partner' => 'partner',
+  );
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+    'und' => 'und',
+  );
+
+  /* Display: Event Partnership With Partners */
+  $handler = $view->new_display('block', 'Event Partnership With Partners', 'event_partnership_with_partners');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Event Partnership With Partners';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_event_partners_node']['id'] = 'reverse_field_event_partners_node';
+  $handler->display->display_options['relationships']['reverse_field_event_partners_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_event_partners_node']['field'] = 'reverse_field_event_partners_node';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Lead Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'event_sponsor_logo_small',
+    'image_link' => '',
+  );
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['relationship'] = 'reverse_field_event_partners_node';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'partner' => 'partner',
+  );
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+    'und' => 'und',
+  );
   $translatables['peace_geeks_news_and_events'] = array(
     t('Master'),
     t('News and Events'),
@@ -1735,6 +1857,9 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('PG Upcoming Events Calendar Block'),
     t('Popular Posts'),
     t('PG Popular Posts'),
+    t('Event Thank You Partners'),
+    t('Content referencing Content from field_event_thanks_to'),
+    t('Event Partnership With Partners'),
   );
   $export['peace_geeks_news_and_events'] = $view;
 
