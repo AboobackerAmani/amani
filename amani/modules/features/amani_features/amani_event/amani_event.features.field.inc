@@ -90,7 +90,7 @@ function amani_event_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '12',
+        'weight' => '13',
       ),
       'widget_type' => 'text_textarea_with_summary',
     ),
@@ -172,7 +172,7 @@ function amani_event_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '11',
+        'weight' => '12',
       ),
     ),
   );
@@ -254,7 +254,7 @@ function amani_event_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '8',
+        'weight' => '9',
       ),
     ),
   );
@@ -345,7 +345,7 @@ function amani_event_field_default_fields() {
           ),
         ),
         'type' => 'addressfield_standard',
-        'weight' => '5',
+        'weight' => '6',
       ),
     ),
   );
@@ -445,7 +445,7 @@ function amani_event_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '3',
+        'weight' => '5',
       ),
     ),
   );
@@ -573,7 +573,7 @@ function amani_event_field_default_fields() {
           'use_geocoder' => 1,
         ),
         'type' => 'geofield_openlayers',
-        'weight' => '6',
+        'weight' => '7',
       ),
     ),
   );
@@ -661,7 +661,7 @@ function amani_event_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '13',
+        'weight' => '14',
       ),
     ),
   );
@@ -749,7 +749,108 @@ function amani_event_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '20',
+        'weight' => '21',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-event-field_event_subtitle'.
+  $fields['node-event-field_event_subtitle'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_event_subtitle',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'event',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 18,
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_event_subtitle',
+      'label' => 'Event Subtitle',
+      'required' => 0,
+      'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'php_code' => 'php_code',
+            'plain_text' => 'plain_text',
+            'wysiwyg_advanced' => 'wysiwyg_advanced',
+            'wysiwyg_public' => 'wysiwyg_public',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'php_code' => array(
+                'weight' => '11',
+              ),
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+              'wysiwyg_advanced' => array(
+                'weight' => '-10',
+              ),
+              'wysiwyg_public' => array(
+                'weight' => '-9',
+              ),
+            ),
+          ),
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '1',
       ),
     ),
   );
@@ -837,7 +938,7 @@ function amani_event_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '21',
+        'weight' => '22',
       ),
     ),
   );
@@ -938,7 +1039,7 @@ function amani_event_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '19',
+        'weight' => '20',
       ),
     ),
   );
@@ -1018,7 +1119,7 @@ function amani_event_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '14',
+        'weight' => '15',
       ),
     ),
   );
@@ -1119,7 +1220,7 @@ function amani_event_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '18',
+        'weight' => '19',
       ),
     ),
   );
@@ -1201,7 +1302,7 @@ function amani_event_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '7',
+        'weight' => '8',
       ),
     ),
   );
@@ -1293,10 +1394,10 @@ function amani_event_field_default_fields() {
           'enforce_ratio' => 1,
           'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
-          'resolution' => '200x150',
+          'resolution' => '330x390',
         ),
         'type' => 'imagefield_crop_widget',
-        'weight' => '1',
+        'weight' => '3',
       ),
     ),
   );
@@ -1397,7 +1498,7 @@ function amani_event_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '2',
+        'weight' => '4',
       ),
     ),
   );
@@ -1486,7 +1587,7 @@ function amani_event_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '16',
+        'weight' => '17',
       ),
     ),
   );
@@ -1566,7 +1667,7 @@ function amani_event_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '15',
+        'weight' => '16',
       ),
     ),
   );
@@ -1667,7 +1768,7 @@ function amani_event_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '17',
+        'weight' => '18',
       ),
     ),
   );
@@ -1681,6 +1782,7 @@ function amani_event_field_default_fields() {
   t('Description');
   t('Enter a comma-separated list of words to describe your content.');
   t('Event Partners');
+  t('Event Subtitle');
   t('Event Thanks To');
   t('Event Time');
   t('Event type');
