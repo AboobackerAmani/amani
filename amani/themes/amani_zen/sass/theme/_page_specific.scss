@@ -1426,6 +1426,36 @@
 				line-height:1.6em;
 				margin-left:300px;
 			}
+			
+			.views-field-field-amani-tags {
+				padding:10px 20px 0 20px;
+				ol {
+					display:block;
+					position:absolute;
+					bottom:0;
+					margin-bottom:-4px;
+					margin-left:300px;
+					li {
+						list-style-type:none;
+						display:block;
+						float:left;
+						margin-right:16px;
+						margin-bottom:4px;
+						a {
+							display:inline-block;
+							background:white;
+							padding:6px 20px;
+							color:$text-grey;
+							font-style:italic;
+							font-size:14px;
+							font-weight:normal;
+							&:before {
+								content:"#";
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		.view-display-id-current_openings_block {
@@ -1446,6 +1476,7 @@
 					margin-bottom:14px;
 					display:block;
 					letter-spacing:1px;
+					font-weight:600;
 				}
 			}
 			
@@ -1455,7 +1486,7 @@
 			}
 			
 			ol {
-				li {
+				> li {
 					list-style-type:none;
 					
 						display:block;
@@ -1465,7 +1496,7 @@
 						width:204px;
 						height:330px;
 						padding:34px 20px;
-						
+						position:relative;
 						
 						&:nth-child(3) {
 							margin-right:0;
@@ -1473,6 +1504,36 @@
 					
 				}
 			}	
+			
+			.views-field-field-opportunity-tags {
+				padding:0;
+				ul {
+					display:block;
+					position:absolute;
+					bottom:0;
+					margin-bottom:-4px;
+					li {
+						list-style-type:none;
+						display:block;
+						float:left;
+						margin-right:6px;
+						margin-bottom:4px;
+						margin-top:4px;
+						a {
+							display:inline-block;
+							background:white;
+							padding:6px 20px;
+							color:$text-grey;
+							font-style:italic;
+							font-size:13px;
+							font-weight:normal;
+							&:before {
+								content:"#";
+							}
+						}
+					}
+				}
+			}
 		
 		
 		}
