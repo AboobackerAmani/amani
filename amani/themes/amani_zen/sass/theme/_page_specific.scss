@@ -1756,25 +1756,77 @@
 		
 		.anchor-link-to-box {
 			float:left !important;
+			position:relative;
+			
+			
 			.paragraphs-item-light-grey-text-box-with-link-to {
+				
 				padding:0;
-				a {
-					width:230px;
-					display:block;
-					height:280px;
-					background:$soft-grey;
-					margin-right:20px;
-					text-align:left;
-					color:$blue;
-					text-transform:uppercase;
-					letter-spacing:1px;
-					padding:20px 0 0 0;
-					text-indent:20px;
+				
+				.field-type-link-field .field-item {
+					position:relative;
+					a {
+						width:234px;
+						display:block;
+						height:140px;
+						background:$soft-grey;
+						margin-right:16px;
+						text-align:left;
+						color:$blue;
+						text-transform:uppercase;
+						letter-spacing:1px;
+						padding:20px 0 0 0;
+						text-indent:20px;
+						font-weight:600;
+					}
+				}
+				
+				
+				.field-name-field-image {
+					margin-bottom:-5px;
 				}
 			}
 
 		}
 		
+		.paragraphs-item-paragraph-text-with-anchor {
+			border-top:0;
+			padding-top:0;
+			
+			.field-name-field-image {
+				float:left;
+				margin-right:2em;
+			}
+			.field-name-field-header-text {
+				font-weight:bold;
+				text-transform:none;
+				font-size:24px;
+				color:$grey;
+				margin-bottom:40px;
+				
+				
+			}
+		}
+		
+		#peacetalk {
+			border-top:1px solid $blue;
+			padding-top:4em;
+			margin-bottom:-40px;
+			.field-name-field-image {
+				float:right;
+				margin-left:2em;
+			}
+		}
+		
+		#hackathon {
+			margin-top:-20px;
+		}
+		
+		#project {
+			margin-top:2em;
+			margin-bottom:-20px;
+		}
+				
 		.project-box {
 			&:before {
 				content: "Sponsorship Opportunities";
@@ -1786,6 +1838,7 @@
 				font-weight: 600;
 				position: absolute;
 				margin-bottom:40px;
+				width:300px;
 			}
 		}
 		

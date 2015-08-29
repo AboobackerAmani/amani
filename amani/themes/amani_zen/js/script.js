@@ -81,6 +81,7 @@ Drupal.behaviors.paragraphs_adjustments = {
 	
 		var theanchor = $(this).find('.field-item').html();
 		$(this).prev().find('a').attr('href', '#' + theanchor);
+		$(this).prev().prev().find('img').wrap('<a class="anchorlink" href="#' + theanchor + '"></a>');
 		
 	});
 	
