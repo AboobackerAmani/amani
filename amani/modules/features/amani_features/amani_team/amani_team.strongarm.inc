@@ -129,7 +129,7 @@ function amani_team_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '6',
+            'weight' => '2',
             'visible' => FALSE,
           ),
           'teaser' => array(

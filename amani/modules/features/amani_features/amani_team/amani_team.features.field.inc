@@ -10,6 +10,87 @@
 function amani_team_field_default_fields() {
   $fields = array();
 
+  // Exported field: 'node-team-field_amani_tags'.
+  $fields['node-team-field_amani_tags'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_amani_tags',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'tags',
+            'parent' => '0',
+          ),
+        ),
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
+        'profile2_private' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'team',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '3',
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_amani_tags',
+      'label' => 'Tags',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'taxonomy',
+        'settings' => array(
+          'autocomplete_path' => 'taxonomy/autocomplete',
+          'size' => 60,
+        ),
+        'type' => 'taxonomy_autocomplete',
+        'weight' => '19',
+      ),
+    ),
+  );
+
   // Exported field: 'node-team-field_display_on_team_page'.
   $fields['node-team-field_display_on_team_page'] = array(
     'field_config' => array(
@@ -50,7 +131,7 @@ function amani_team_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '8',
+          'weight' => '5',
         ),
         'ical' => array(
           'label' => 'above',
@@ -224,7 +305,7 @@ function amani_team_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '9',
+          'weight' => '6',
         ),
         'ical' => array(
           'label' => 'above',
@@ -403,9 +484,9 @@ function amani_team_field_default_fields() {
           'url_cutoff' => '80',
         ),
         'enable_tokens' => 0,
-        'title' => 'none',
+        'title' => 'required',
         'title_maxlength' => '128',
-        'title_value' => 'Facebook',
+        'title_value' => '',
         'url' => 0,
         'user_register_form' => FALSE,
         'validate_url' => 1,
@@ -549,7 +630,7 @@ function amani_team_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '7',
+          'weight' => '4',
         ),
         'ical' => array(
           'label' => 'above',
@@ -1414,6 +1495,7 @@ Prof.',
   t('Photo');
   t('Please choose a display ranking, lower values float to the top of the list.');
   t('Position');
+  t('Tags');
   t('Team member type');
   t('Twitter');
   t('Use your twitter @handle for the link title.');
