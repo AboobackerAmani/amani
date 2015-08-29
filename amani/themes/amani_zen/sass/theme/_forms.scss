@@ -20,3 +20,81 @@ textarea.form-textarea {
 	background:white;
 	border:4px solid $soft-grey;
 }
+
+
+/* Volunteer Application Form */
+
+body.section-volunteer-application {
+
+	p {
+		font-size:1.1em;
+		line-height:1.5em;
+	}
+	
+	h1#page-title {
+		margin-top:0;
+		font-weight:300;
+		color:$blue;
+		font-size:3em;
+		line-height:30px;
+	}
+
+	form {
+		
+		display:block;
+		float:left;
+		padding-bottom:6em;
+	
+		p {
+		
+			input[type="text"] {
+				display:block;
+				width:100%;
+				padding:.6em;
+			}
+			
+			background:$soft-grey;
+			padding:2em 1em;
+			font-size:1.1em;
+			line-height:1.5em;
+			display:block;
+			float:left;
+			width:96%;
+			
+			&:nth-child(3) {
+				display:none;
+			}
+			&:nth-child(2) {
+				display:none;
+			}
+			&:last-child {
+				background:white;
+				padding:0;
+				input[type="submit"] {
+					background:$blue;
+					color:white;
+					text-align:left;
+					padding:1em 2em 2em 2em;
+					width:100%;
+					font-size:1.2em;
+					border:0;
+					display:block;
+					float:left;
+					
+				}
+			}
+			
+			label {
+				font-weight:300;
+				font-size:1em;
+				display:block;
+				width:100%;
+				float:left;
+				margin-top:1em;
+			}
+		
+		}
+	
+	}
+
+}
