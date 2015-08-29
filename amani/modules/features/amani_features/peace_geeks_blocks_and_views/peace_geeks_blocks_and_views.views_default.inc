@@ -173,7 +173,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   /* Display: Latest News */
   $handler = $view->new_display('block', 'Latest News', 'front_latest_news');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Lead Image */
+  /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -218,7 +218,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   /* Display: Latest Event */
   $handler = $view->new_display('block', 'Latest Event', 'front_latest_event');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Lead Image */
+  /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -375,7 +375,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['field_link']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
-  /* Field: Content: Lead Image */
+  /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -561,7 +561,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Lead Image */
+  /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -630,7 +630,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Lead Image */
+  /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -690,7 +690,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Lead Image */
+  /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -776,7 +776,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Lead Image */
+  /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -929,7 +929,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['header']['view']['label'] = 'upcoming events view';
   $handler->display->display_options['header']['view']['view_to_insert'] = 'peace_geeks_news_and_events:block_3';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Lead Image */
+  /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -1098,7 +1098,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['footer']['area']['content'] = '<h2>Past Events</h2>';
   $handler->display->display_options['footer']['area']['format'] = 'php_code';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Lead Image */
+  /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -1246,7 +1246,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['relationships']['field_article_type_tid']['table'] = 'field_data_field_article_type';
   $handler->display->display_options['relationships']['field_article_type_tid']['field'] = 'field_article_type_tid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Lead Image */
+  /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -1367,7 +1367,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['relationships']['reverse_field_event_partners_node']['table'] = 'node';
   $handler->display->display_options['relationships']['reverse_field_event_partners_node']['field'] = 'reverse_field_event_partners_node';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Lead Image */
+  /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -1780,7 +1780,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['relationships']['reverse_field_event_thanks_to_node']['table'] = 'node';
   $handler->display->display_options['relationships']['reverse_field_event_thanks_to_node']['field'] = 'reverse_field_event_thanks_to_node';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Lead Image */
+  /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -1844,7 +1844,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['relationships']['reverse_field_event_partners_node']['table'] = 'node';
   $handler->display->display_options['relationships']['reverse_field_event_partners_node']['field'] = 'reverse_field_event_partners_node';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Lead Image */
+  /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -2145,7 +2145,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['relationships']['field_media_fid']['id'] = 'field_media_fid';
   $handler->display->display_options['relationships']['field_media_fid']['table'] = 'field_data_field_media';
   $handler->display->display_options['relationships']['field_media_fid']['field'] = 'field_media_fid';
-  /* Field: Content: Lead Image */
+  /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -2245,7 +2245,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h3>Annual Report Download</h3>';
   $handler->display->display_options['header']['area']['format'] = 'wysiwyg_advanced';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Lead Image */
+  /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -2434,7 +2434,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['pager']['options']['effects']['speed'] = 'slow';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Lead Image */
+  /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -3497,7 +3497,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'responsive_grid';
   $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Lead Image */
+  /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -3710,6 +3710,13 @@ function peace_geeks_blocks_and_views_views_default_views() {
   );
   $handler->display->display_options['filters']['field_partner_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_partner_type_tid']['vocabulary'] = 'partner_type';
+  /* Filter criterion: Content: Display on Supporters Page? (field_display_on_supporters_page) */
+  $handler->display->display_options['filters']['field_display_on_supporters_page_value']['id'] = 'field_display_on_supporters_page_value';
+  $handler->display->display_options['filters']['field_display_on_supporters_page_value']['table'] = 'field_data_field_display_on_supporters_page';
+  $handler->display->display_options['filters']['field_display_on_supporters_page_value']['field'] = 'field_display_on_supporters_page_value';
+  $handler->display->display_options['filters']['field_display_on_supporters_page_value']['value'] = array(
+    1 => '1',
+  );
   $handler->display->display_options['path'] = 'supportersView';
 
   /* Display: Featured Sponsors */
@@ -3754,7 +3761,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h3>Highlighted Sponsor:</h3>';
   $handler->display->display_options['header']['area']['format'] = 'wysiwyg_advanced';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Lead Image */
+  /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
