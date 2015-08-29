@@ -2085,6 +2085,14 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '180',
   );
+  /* Field: Content: Tags */
+  $handler->display->display_options['fields']['field_opportunity_tags']['id'] = 'field_opportunity_tags';
+  $handler->display->display_options['fields']['field_opportunity_tags']['table'] = 'field_data_field_opportunity_tags';
+  $handler->display->display_options['fields']['field_opportunity_tags']['field'] = 'field_opportunity_tags';
+  $handler->display->display_options['fields']['field_opportunity_tags']['label'] = '';
+  $handler->display->display_options['fields']['field_opportunity_tags']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_opportunity_tags']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_opportunity_tags']['multi_type'] = 'ul';
   $handler->display->display_options['block_description'] = 'Current Openings Block';
   $translatables['peace_geeks_opportunities'] = array(
     t('Master'),
@@ -2838,6 +2846,14 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Read more';
+  /* Field: Content: Tags */
+  $handler->display->display_options['fields']['field_amani_tags']['id'] = 'field_amani_tags';
+  $handler->display->display_options['fields']['field_amani_tags']['table'] = 'field_data_field_amani_tags';
+  $handler->display->display_options['fields']['field_amani_tags']['field'] = 'field_amani_tags';
+  $handler->display->display_options['fields']['field_amani_tags']['label'] = '';
+  $handler->display->display_options['fields']['field_amani_tags']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_amani_tags']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_amani_tags']['multi_type'] = 'ol';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Global: Random */
   $handler->display->display_options['sorts']['random']['id'] = 'random';
