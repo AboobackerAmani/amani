@@ -86,6 +86,75 @@ function amani_partners_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-partner-field_display_on_supporters_page'.
+  $fields['node-partner-field_display_on_supporters_page'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_display_on_supporters_page',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => 'No',
+          1 => 'Yes',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_boolean',
+    ),
+    'field_instance' => array(
+      'bundle' => 'partner',
+      'default_value' => array(
+        0 => array(
+          'value' => 1,
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => 19,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_display_on_supporters_page',
+      'label' => 'Display on Supporters Page?',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(
+          'display_label' => 1,
+        ),
+        'type' => 'options_onoff',
+        'weight' => '11',
+      ),
+    ),
+  );
+
   // Exported field: 'node-partner-field_featured_sponsor'.
   $fields['node-partner-field_featured_sponsor'] = array(
     'field_config' => array(
@@ -147,10 +216,10 @@ function amani_partners_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(
-          'display_label' => 0,
+          'display_label' => 1,
         ),
         'type' => 'options_onoff',
-        'weight' => '14',
+        'weight' => '10',
       ),
     ),
   );
@@ -325,7 +394,7 @@ function amani_partners_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '8',
+        'weight' => '6',
       ),
     ),
   );
@@ -417,7 +486,7 @@ function amani_partners_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '6',
+        'weight' => '5',
       ),
     ),
   );
@@ -571,7 +640,7 @@ function amani_partners_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '15',
+        'weight' => '12',
       ),
     ),
   );
@@ -653,7 +722,7 @@ function amani_partners_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '11',
+        'weight' => '8',
       ),
     ),
   );
@@ -748,7 +817,7 @@ function amani_partners_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '17',
+        'weight' => '13',
       ),
     ),
   );
@@ -756,6 +825,7 @@ function amani_partners_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Description');
+  t('Display on Supporters Page?');
   t('Featured Partner');
   t('Logo image');
   t('Map record');

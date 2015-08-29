@@ -96,13 +96,13 @@ function amani_partners_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '12',
+          'weight' => '9',
         ),
         'title' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
         'path' => array(
-          'weight' => '9',
+          'weight' => '7',
         ),
         'redirect' => array(
           'weight' => '19',
