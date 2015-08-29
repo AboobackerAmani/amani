@@ -306,6 +306,29 @@ function peace_geeks_blocks_and_views_image_default_styles() {
     ),
   );
 
+  // Exported image style: team_profile_photo_node.
+  $styles['team_profile_photo_node'] = array(
+    'name' => 'team_profile_photo_node',
+    'label' => 'Team Profile Photo Node (274 x 348)',
+    'effects' => array(
+      20 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '274',
+          'height' => '348',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
   // Exported image style: team_solo_page_profile.
   $styles['team_solo_page_profile'] = array(
     'name' => 'team_solo_page_profile',
