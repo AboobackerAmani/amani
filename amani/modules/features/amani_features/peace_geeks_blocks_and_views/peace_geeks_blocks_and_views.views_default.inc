@@ -2868,6 +2868,122 @@ function peace_geeks_blocks_and_views_views_default_views() {
     1 => '1',
   );
   $handler->display->display_options['block_description'] = 'Meet a Volunteer';
+
+  /* Display: Team Node Override Block */
+  $handler = $view->new_display('block', 'Team Node Override Block', 'team_node_override');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Team Node Override Block';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_team_member_type' => 'field_team_member_type',
+    'field_team_title' => 'field_team_title',
+  );
+  $handler->display->display_options['row_options']['separator'] = ' - ';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Photo */
+  $handler->display->display_options['fields']['field_team_image']['id'] = 'field_team_image';
+  $handler->display->display_options['fields']['field_team_image']['table'] = 'field_data_field_team_image';
+  $handler->display->display_options['fields']['field_team_image']['field'] = 'field_team_image';
+  $handler->display->display_options['fields']['field_team_image']['label'] = '';
+  $handler->display->display_options['fields']['field_team_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_team_image']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_team_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_team_image']['settings'] = array(
+    'image_style' => 'team_profile_photo_node',
+    'image_link' => '',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Position */
+  $handler->display->display_options['fields']['field_team_title']['id'] = 'field_team_title';
+  $handler->display->display_options['fields']['field_team_title']['table'] = 'field_data_field_team_title';
+  $handler->display->display_options['fields']['field_team_title']['field'] = 'field_team_title';
+  $handler->display->display_options['fields']['field_team_title']['label'] = '';
+  $handler->display->display_options['fields']['field_team_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_team_title']['element_wrapper_type'] = 'div';
+  /* Field: Content: Bio */
+  $handler->display->display_options['fields']['field_team_bio']['id'] = 'field_team_bio';
+  $handler->display->display_options['fields']['field_team_bio']['table'] = 'field_data_field_team_bio';
+  $handler->display->display_options['fields']['field_team_bio']['field'] = 'field_team_bio';
+  $handler->display->display_options['fields']['field_team_bio']['label'] = '';
+  $handler->display->display_options['fields']['field_team_bio']['alter']['preserve_tags'] = '<a>';
+  $handler->display->display_options['fields']['field_team_bio']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_team_bio']['settings'] = array(
+    'trim_length' => '100',
+  );
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Connect with [title]:';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: Content: Email */
+  $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
+  $handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
+  $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
+  /* Field: Content: Facebook */
+  $handler->display->display_options['fields']['field_facebook_link']['id'] = 'field_facebook_link';
+  $handler->display->display_options['fields']['field_facebook_link']['table'] = 'field_data_field_facebook_link';
+  $handler->display->display_options['fields']['field_facebook_link']['field'] = 'field_facebook_link';
+  $handler->display->display_options['fields']['field_facebook_link']['click_sort_column'] = 'url';
+  /* Field: Content: Github */
+  $handler->display->display_options['fields']['field_github_link']['id'] = 'field_github_link';
+  $handler->display->display_options['fields']['field_github_link']['table'] = 'field_data_field_github_link';
+  $handler->display->display_options['fields']['field_github_link']['field'] = 'field_github_link';
+  $handler->display->display_options['fields']['field_github_link']['click_sort_column'] = 'url';
+  /* Field: Content: LinkedIn */
+  $handler->display->display_options['fields']['field_linkedin_link']['id'] = 'field_linkedin_link';
+  $handler->display->display_options['fields']['field_linkedin_link']['table'] = 'field_data_field_linkedin_link';
+  $handler->display->display_options['fields']['field_linkedin_link']['field'] = 'field_linkedin_link';
+  $handler->display->display_options['fields']['field_linkedin_link']['click_sort_column'] = 'url';
+  /* Field: Content: Twitter */
+  $handler->display->display_options['fields']['field_twitter_link']['id'] = 'field_twitter_link';
+  $handler->display->display_options['fields']['field_twitter_link']['table'] = 'field_data_field_twitter_link';
+  $handler->display->display_options['fields']['field_twitter_link']['field'] = 'field_twitter_link';
+  $handler->display->display_options['fields']['field_twitter_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'team' => 'team',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  $handler->display->display_options['block_description'] = 'Team Node Override Block';
   $translatables['peace_geeks_team'] = array(
     t('Master'),
     t('Team'),
@@ -2888,6 +3004,13 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('Filter Your Search'),
     t('Meet Volunteer Block'),
     t('Meet a Volunteer'),
+    t('Team Node Override Block'),
+    t('Connect with [title]:'),
+    t('Email'),
+    t('Facebook'),
+    t('Github'),
+    t('LinkedIn'),
+    t('Twitter'),
   );
   $export['peace_geeks_team'] = $view;
 
