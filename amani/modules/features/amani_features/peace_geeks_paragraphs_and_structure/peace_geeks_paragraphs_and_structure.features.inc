@@ -129,6 +129,11 @@ function peace_geeks_paragraphs_and_structure_paragraphs_info() {
       'bundle' => 'paragraph_text_with_header_text',
       'locked' => '1',
     ),
+    'pull_quote' => array(
+      'name' => 'Pull Quote',
+      'bundle' => 'pull_quote',
+      'locked' => '1',
+    ),
     'raw_block' => array(
       'name' => 'Raw Block',
       'bundle' => 'raw_block',
