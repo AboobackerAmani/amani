@@ -3808,6 +3808,20 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'partner' => 'partner',
   );
+  /* Filter criterion: Content: Display on Supporters Page? (field_display_on_supporters_page) */
+  $handler->display->display_options['filters']['field_display_on_supporters_page_value']['id'] = 'field_display_on_supporters_page_value';
+  $handler->display->display_options['filters']['field_display_on_supporters_page_value']['table'] = 'field_data_field_display_on_supporters_page';
+  $handler->display->display_options['filters']['field_display_on_supporters_page_value']['field'] = 'field_display_on_supporters_page_value';
+  $handler->display->display_options['filters']['field_display_on_supporters_page_value']['value'] = array(
+    1 => '1',
+  );
+  /* Filter criterion: Content: Featured Sponsor (field_featured_sponsor) */
+  $handler->display->display_options['filters']['field_featured_sponsor_value']['id'] = 'field_featured_sponsor_value';
+  $handler->display->display_options['filters']['field_featured_sponsor_value']['table'] = 'field_data_field_featured_sponsor';
+  $handler->display->display_options['filters']['field_featured_sponsor_value']['field'] = 'field_featured_sponsor_value';
+  $handler->display->display_options['filters']['field_featured_sponsor_value']['value'] = array(
+    1 => '1',
+  );
   $translatables['supporters'] = array(
     t('Master'),
     t('Sponsors'),
