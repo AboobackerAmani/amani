@@ -98,6 +98,7 @@
 /**
  * Use 10 grid columns for larger screens.
 */
+/*768px;*/
 /* HTML element (SMACSS base) rules */
 /**
  * @file
@@ -719,7 +720,7 @@ body {
 body.not-logged-in #page {
   margin-top: 0;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 0) {
   /* line 43, ../sass/layouts/_responsive.scss */
   body.not-logged-in #page {
     margin-top: 3em;
@@ -1050,13 +1051,13 @@ body.not-logged-in #page {
     
   }
 }*/
-@media all and (min-width: 768px) {
+@media all and (min-width: 0) {
   /* line 56, ../sass/components/_menus.scss */
   #mobile-toggle {
     display: none;
   }
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 0) {
   /* line 66, ../sass/components/_menus.scss */
   body.not-front #main-submenu-backline {
     height: 47px;
@@ -1210,7 +1211,7 @@ div[id*="block-menu-menu-social-media"] {
   display: inline-block;
   margin-left: 40px;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 0) {
   /* line 220, ../sass/components/_menus.scss */
   div[id*="block-menu-menu-social-media"] {
     width: auto;
@@ -1284,7 +1285,7 @@ div[id*="block-menu-menu-social-media"] li {
 /**
  * Unique blocks
  */
-@media all and (min-width: 768px) {
+@media all and (min-width: 0) {
   /* line 54, ../sass/components/_blocks.scss */
   .float-left-half-width {
     display: block;
@@ -1512,7 +1513,7 @@ div[id*="block-menu-menu-social-media"] li {
   text-align: right;
   margin-top: -4px;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 0) {
   /* line 283, ../sass/components/_blocks.scss */
   #block-search-form {
     margin-top: 0;
@@ -1579,7 +1580,7 @@ div[id*="block-menu-menu-social-media"] li {
   padding: 20px;
 }*/
 /* Events blocks */
-@media all and (min-width: 768px) {
+@media all and (min-width: 0) {
   /* line 362, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second, body.section-events aside.sidebars .region-sidebar-second {
     display: block;
@@ -1758,7 +1759,7 @@ div[id*="block-menu-menu-social-media"] li {
   }
 }
 /* News blocks */
-@media all and (min-width: 768px) {
+@media all and (min-width: 0) {
   /* line 558, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second, body.node-type-article aside.sidebars .region-sidebar-second {
     display: block;
@@ -2059,7 +2060,7 @@ div.breadcrumb {
   display: none;
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 0) {
   /* line 42, ../sass/theme/_layout.scss */
   body.not-front #main {
     padding-top: 50px;
@@ -2872,7 +2873,7 @@ div.breadcrumb {
     padding: .2em 1em .4em 1em;
   }
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 0) {
   /* line 3, ../sass/theme/_slide_style.scss */
   body.front #banner {
     padding-top: 40px;
@@ -3104,7 +3105,7 @@ body.section-volunteer-application form p label {
 #footer:after {
   clear: both;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 0) {
   /* line 39, ../sass/theme/_footer.scss */
   #footer {
     padding-top: 40px;
@@ -3179,7 +3180,7 @@ body.section-volunteer-application form p label {
 #header #logo img {
   width: 120px;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 0) {
   /* line 7, ../sass/theme/_header.scss */
   #header #logo img {
     width: auto;
@@ -3194,7 +3195,7 @@ body.section-volunteer-application form p label {
   top: 70px;
   padding: 0 10px;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 0) {
   /* line 18, ../sass/theme/_header.scss */
   .region-header {
     position: initial;
@@ -3362,7 +3363,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
 }
 
 /* Styling for banner region */
-@media all and (min-width: 768px) {
+@media all and (min-width: 0) {
   /* line 6, ../sass/theme/_banner.scss */
   #banner {
     display: block;
@@ -3420,7 +3421,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   }
 }
 /* Overrides for pages based on body classes */
-@media all and (min-width: 768px) {
+@media all and (min-width: 0) {
   /* Programs page */
   /* line 8, ../sass/theme/_page_specific.scss */
   body.programspage {
