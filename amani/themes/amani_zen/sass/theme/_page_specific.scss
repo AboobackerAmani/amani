@@ -492,6 +492,7 @@
 							background:$soft-grey;
 							margin-right:18px;
 							margin-bottom:34px;
+							position:relative;
 							
 							&:nth-child(even) {
 								margin-right:0;
@@ -506,6 +507,7 @@
 					width:100%;
 					float:left;
 					padding:10px 20px 20px 20px;
+					
 					a {
 						font-size:1.6em;
 						line-height:1.1em;
@@ -524,8 +526,9 @@
 					display:block;
 					padding:0 20px 4px 20px;
 					width:286px;
-					margin-top:16px;
 					float:left;
+					position:relative;
+					margin-bottom:0;
 					span.views-label {
 						float:left;
 						display:inline;
@@ -541,6 +544,7 @@
 					width:286px;
 					margin-top:2px;
 					float:left;
+					position:relative;
 					span.views-label {
 						float:left;
 						display:inline;
@@ -556,6 +560,7 @@
 					width:286px;
 					margin-top:2px;
 					float:left;
+					position:relative;
 					span.views-label {
 						float:left;
 						display:inline;
@@ -569,6 +574,9 @@
 					padding-top:24px;
 					padding-left:20px;
 					width:auto;
+					position:absolute;
+					bottom:0;
+					margin-bottom:26px;
 					a {
 						font-size:1.2em;
 						color:$text-grey;
@@ -584,6 +592,9 @@
 					float:right;
 					padding-top:24px;
 					padding-right:20px;
+					position:absolute;
+					margin-bottom:26px;
+					bottom:0;
 					a {
 						font-size:1.2em;
 						color:white;
