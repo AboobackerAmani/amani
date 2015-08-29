@@ -345,10 +345,11 @@
 							display:block;
 							float:left;
 							width:210px;
-							height:394px;
+							height:434px;
 							background:$soft-grey;
 							margin-right:18px;
 							margin-bottom:34px;
+							position:relative;
 							
 							&:nth-child(3n) {
 								margin-right:0;
@@ -416,10 +417,10 @@
 					color:$text-grey;
 					display:block;
 					padding:0 20px 4px 20px;
-					
-					margin-top:16px;
 					float:left;
-					
+					position:absolute;
+					bottom:0;
+					margin-bottom:10px;
 				}
 				
 				.views-field-title-1 {
@@ -427,6 +428,9 @@
 					width:100%;
 					float:left;
 					padding-left:20px;
+					position:absolute;
+					bottom:0;
+					margin-bottom:46px;
 					a {
 						font-size:1em;
 						color:$text-grey;
