@@ -286,7 +286,7 @@ function peace_geeks_blocks_and_views_image_default_styles() {
   // Exported image style: team_profile_photo.
   $styles['team_profile_photo'] = array(
     'name' => 'team_profile_photo',
-    'label' => 'Team Profile Photo',
+    'label' => 'Team Profile Photo (241 x 306)',
     'effects' => array(
       4 => array(
         'label' => 'Scale and crop',
@@ -298,7 +298,7 @@ function peace_geeks_blocks_and_views_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => '230',
+          'width' => '241',
           'height' => '306',
         ),
         'weight' => '1',
