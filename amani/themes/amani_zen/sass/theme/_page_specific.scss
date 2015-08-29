@@ -1758,5 +1758,145 @@
 	
 	
 	}
+	
+	
+	/* Team - Node */
+	
+	body.node-type-team {
+	
+		h1#page-title {display:none;}
+	
+		.view-peace-geeks-team.view-display-id-team_node_override {
+			
+			.views-row {display:block;float:left;width:752px;}
+			
+			.views-field-field-team-image {
+				width:274px;
+				float:left;
+				display:block;
+				margin-right:2em;
+				margin-top:94px;
+			}
+			
+			.views-field-title {
+				font-size:3em;
+				color:$blue;
+				font-weight:300;
+				display:block;
+				width:444px;
+				margin-bottom:22px;
+				float:right;
+			}
+			
+			.views-field-field-team-title {
+				display:block;
+				font-style:italic;
+				font-size:1.3em;
+				font-weight:300;
+				width:444px;
+				float:right;
+			}
+			
+			.views-field-field-team-bio {
+				display:block;
+				font-size:1.1em;
+				line-height:1.6em;
+				width:444px;
+				border-bottom:2px solid $blue;
+				padding-bottom:1em;
+				margin-bottom:1em;
+				margin-top:2em;
+				float:right;
+			}
+			
+						
+			.views-field-field-email {
+				display:block;
+				float:right;
+				width:444px;
+				a {
+					color:$text-black;
+				}
+				span.views-label {
+					display:block;
+					float:left;
+					padding-right:8px;
+				}
+			}
+			
+			.views-field-nothing {
+				display:block;
+				float:right;
+				width:444px;
+				margin-bottom:10px;
+				font-weight:600;
+			}
+			
+			.views-field-field-facebook-link {
+				display:block;
+				float:right;
+				width:444px;
+				a {
+					color:$text-black;
+				}
+				span.views-label {
+					display:block;
+					float:left;
+					padding-right:8px;
+				}
+			}
+			
+			.views-field-field-twitter-link {
+				display:block;
+				float:right;
+				width:444px;
+				a {
+					color:$text-black;
+				}
+				span.views-label {
+					display:block;
+					float:left;
+					padding-right:8px;
+				}
+			}
+			
+			.views-field-field-github-link {
+				display:block;
+				float:right;
+				width:444px;
+				a {
+					color:$text-black;
+				}
+				span.views-label {
+					display:block;
+					float:left;
+					padding-right:8px;
+				}
+			}
+			
+			.views-field-field-linkedin-link {
+				display:block;
+				float:right;
+				width:444px;
+				a {
+					color:$text-black;
+				}
+				span.views-label {
+					display:block;
+					float:left;
+					padding-right:8px;
+				}
+			}
+		
+		}
+		
+		#content {
+			min-height:700px !important;
+			padding-bottom:6em;
+		}
+		
+		
+	
+	}
 
 }

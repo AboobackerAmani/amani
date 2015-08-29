@@ -2826,28 +2826,6 @@ div.breadcrumb {
   body.page-team .views-responsive-grid .views-field-field-team-bio {
     padding: .2em 1em .4em 1em;
   }
-
-  /* line 874, ../sass/theme/_layout.scss */
-  body.node-type-team #main {
-    padding-top: 5em;
-    padding-bottom: 5em;
-    min-height: 700px;
-  }
-  /* line 876, ../sass/theme/_layout.scss */
-  body.node-type-team h1#page-title {
-    display: none;
-  }
-  /* line 878, ../sass/theme/_layout.scss */
-  body.node-type-team .field-name-field-team-image {
-    display: block;
-    float: left;
-  }
-  /* line 882, ../sass/theme/_layout.scss */
-  body.node-type-team .group-right {
-    display: block;
-    float: right;
-    width: 414px;
-  }
 }
 @media all and (min-width: 768px) {
   /* line 3, ../sass/theme/_slide_style.scss */
@@ -4962,6 +4940,150 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   body.node-type-structure.becomesponsor #become-sponsor-buttons #download-sponsor-link span {
     display: block;
     font-weight: 300;
+  }
+
+  /* Team - Node */
+  /* line 1767, ../sass/theme/_page_specific.scss */
+  body.node-type-team h1#page-title {
+    display: none;
+  }
+  /* line 1771, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-row {
+    display: block;
+    float: left;
+    width: 752px;
+  }
+  /* line 1773, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-team-image {
+    width: 274px;
+    float: left;
+    display: block;
+    margin-right: 2em;
+    margin-top: 94px;
+  }
+  /* line 1781, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-title {
+    font-size: 3em;
+    color: #59C2ED;
+    font-weight: 300;
+    display: block;
+    width: 444px;
+    margin-bottom: 22px;
+    float: right;
+  }
+  /* line 1791, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-team-title {
+    display: block;
+    font-style: italic;
+    font-size: 1.3em;
+    font-weight: 300;
+    width: 444px;
+    float: right;
+  }
+  /* line 1800, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-team-bio {
+    display: block;
+    font-size: 1.1em;
+    line-height: 1.6em;
+    width: 444px;
+    border-bottom: 2px solid #59C2ED;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    margin-top: 2em;
+    float: right;
+  }
+  /* line 1813, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-email {
+    display: block;
+    float: right;
+    width: 444px;
+  }
+  /* line 1817, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-email a {
+    color: #414042;
+  }
+  /* line 1820, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-email span.views-label {
+    display: block;
+    float: left;
+    padding-right: 8px;
+  }
+  /* line 1827, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-nothing {
+    display: block;
+    float: right;
+    width: 444px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  /* line 1835, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-facebook-link {
+    display: block;
+    float: right;
+    width: 444px;
+  }
+  /* line 1839, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-facebook-link a {
+    color: #414042;
+  }
+  /* line 1842, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-facebook-link span.views-label {
+    display: block;
+    float: left;
+    padding-right: 8px;
+  }
+  /* line 1849, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-twitter-link {
+    display: block;
+    float: right;
+    width: 444px;
+  }
+  /* line 1853, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-twitter-link a {
+    color: #414042;
+  }
+  /* line 1856, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-twitter-link span.views-label {
+    display: block;
+    float: left;
+    padding-right: 8px;
+  }
+  /* line 1863, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-github-link {
+    display: block;
+    float: right;
+    width: 444px;
+  }
+  /* line 1867, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-github-link a {
+    color: #414042;
+  }
+  /* line 1870, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-github-link span.views-label {
+    display: block;
+    float: left;
+    padding-right: 8px;
+  }
+  /* line 1877, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-linkedin-link {
+    display: block;
+    float: right;
+    width: 444px;
+  }
+  /* line 1881, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-linkedin-link a {
+    color: #414042;
+  }
+  /* line 1884, ../sass/theme/_page_specific.scss */
+  body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-linkedin-link span.views-label {
+    display: block;
+    float: left;
+    padding-right: 8px;
+  }
+  /* line 1893, ../sass/theme/_page_specific.scss */
+  body.node-type-team #content {
+    min-height: 700px !important;
+    padding-bottom: 6em;
   }
 }
 /* Styling for administrative/editor stuff */

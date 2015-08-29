@@ -41,6 +41,9 @@
     	elseif ($node->type == 'event') {
     		print views_embed_view('peace_geeks_news_and_events','event_item_override', $node->nid);
     	}
+    	elseif ($node->type == 'team') {
+    		print views_embed_view('peace_geeks_team','team_node_override', $node->nid);
+    	}
     	elseif ($node->type == 'project_partners') {
     		print views_embed_view('peace_geeks_projects','project_partners_node_override', $node->nid);
     	}
