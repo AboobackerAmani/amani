@@ -3532,7 +3532,11 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 1.2em;
     font-weight: 300;
   }
-  /* line 117, ../sass/theme/_page_specific.scss */
+  /* line 115, ../sass/theme/_page_specific.scss */
+  body.programspage div.darkbackground.anchor-link-to-box div.paragraphs-item-light-grey-text-box-with-link-to a.anchorlink {
+    margin-right: 0;
+  }
+  /* line 120, ../sass/theme/_page_specific.scss */
   body.programspage div.paragraphs-item-light-grey-text-box-with-link-to a.anchorlink {
     color: white;
     text-align: left;
@@ -3543,7 +3547,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     width: 296px;
     margin-bottom: 1.8em;
   }
-  /* line 126, ../sass/theme/_page_specific.scss */
+  /* line 129, ../sass/theme/_page_specific.scss */
   body.programspage div.paragraphs-item-light-grey-text-box-with-link-to a.anchorlink.darkbackground {
     background: #474F5E;
     margin-right: 0;
@@ -3552,17 +3556,17 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   /* Current Projects page */
   /* Past Projects page */
   /* Front page content */
-  /* line 161, ../sass/theme/_page_specific.scss */
+  /* line 165, ../sass/theme/_page_specific.scss */
   body.front #content {
     width: 980px;
     padding-right: 10px;
     padding-left: 10px;
   }
-  /* line 168, ../sass/theme/_page_specific.scss */
+  /* line 172, ../sass/theme/_page_specific.scss */
   body.front .block-views .views-field-field-anchor-to-link-to {
     display: none;
   }
-  /* line 173, ../sass/theme/_page_specific.scss */
+  /* line 177, ../sass/theme/_page_specific.scss */
   body.front .paragraphs-item-special-event-callout-box {
     display: block;
     width: 100%;
@@ -3570,42 +3574,42 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     color: white;
     background: #474F5E;
   }
-  /* line 179, ../sass/theme/_page_specific.scss */
+  /* line 183, ../sass/theme/_page_specific.scss */
   body.front .paragraphs-item-special-event-callout-box .field-name-field-callout-title {
     font-size: 1.1em;
     font-style: italic;
   }
-  /* line 183, ../sass/theme/_page_specific.scss */
+  /* line 187, ../sass/theme/_page_specific.scss */
   body.front .paragraphs-item-special-event-callout-box .field-name-field-callout-text {
     font-size: 1.8em;
     line-height: 1.4em;
   }
-  /* line 187, ../sass/theme/_page_specific.scss */
+  /* line 191, ../sass/theme/_page_specific.scss */
   body.front .paragraphs-item-special-event-callout-box .field-name-field-callout-link {
     display: none;
   }
-  /* line 190, ../sass/theme/_page_specific.scss */
+  /* line 194, ../sass/theme/_page_specific.scss */
   body.front .paragraphs-item-special-event-callout-box .field-name-field-callout-active- {
     display: none;
   }
 
   /* News section */
-  /* line 203, ../sass/theme/_page_specific.scss */
+  /* line 207, ../sass/theme/_page_specific.scss */
   body.page-news #main {
     padding-top: 50px;
   }
-  /* line 205, ../sass/theme/_page_specific.scss */
+  /* line 209, ../sass/theme/_page_specific.scss */
   body.page-news #content {
     width: 686px;
     float: left;
     display: block;
     margin-top: -20px;
   }
-  /* line 212, ../sass/theme/_page_specific.scss */
+  /* line 216, ../sass/theme/_page_specific.scss */
   body.page-news h1#page-title {
     display: none;
   }
-  /* line 224, ../sass/theme/_page_specific.scss */
+  /* line 228, ../sass/theme/_page_specific.scss */
   body.page-news .view-peace-geeks-news-and-events.view-display-id-page .view-content ol li {
     list-style-type: none;
     display: block;
@@ -3616,18 +3620,18 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-right: 16px;
     margin-bottom: 34px;
   }
-  /* line 234, ../sass/theme/_page_specific.scss */
+  /* line 238, ../sass/theme/_page_specific.scss */
   body.page-news .view-peace-geeks-news-and-events.view-display-id-page .view-content ol li:nth-child(even) {
     margin-right: 0;
   }
-  /* line 241, ../sass/theme/_page_specific.scss */
+  /* line 245, ../sass/theme/_page_specific.scss */
   body.page-news .view-peace-geeks-news-and-events.view-display-id-page .views-field-title {
     display: block;
     height: 72px;
     width: 286px;
     float: left;
   }
-  /* line 246, ../sass/theme/_page_specific.scss */
+  /* line 250, ../sass/theme/_page_specific.scss */
   body.page-news .view-peace-geeks-news-and-events.view-display-id-page .views-field-title a {
     font-size: 1.6em;
     line-height: 1.4em;
@@ -3637,7 +3641,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 10px 20px 20px 20px;
     font-weight: 600;
   }
-  /* line 257, ../sass/theme/_page_specific.scss */
+  /* line 261, ../sass/theme/_page_specific.scss */
   body.page-news .view-peace-geeks-news-and-events.view-display-id-page .views-field-body {
     font-size: 1.2em;
     color: #414042;
@@ -3648,7 +3652,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-top: 8px;
     float: left;
   }
-  /* line 268, ../sass/theme/_page_specific.scss */
+  /* line 272, ../sass/theme/_page_specific.scss */
   body.page-news .view-peace-geeks-news-and-events.view-display-id-page .views-field-created {
     display: block;
     float: left;
@@ -3656,7 +3660,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     color: #9a9a9a;
     padding-left: 20px;
   }
-  /* line 276, ../sass/theme/_page_specific.scss */
+  /* line 280, ../sass/theme/_page_specific.scss */
   body.page-news .view-peace-geeks-news-and-events.view-display-id-page .views-field-comment-count {
     display: block;
     float: left;
@@ -3664,27 +3668,27 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     color: #9a9a9a;
     padding-left: 20px;
   }
-  /* line 282, ../sass/theme/_page_specific.scss */
+  /* line 286, ../sass/theme/_page_specific.scss */
   body.page-news .view-peace-geeks-news-and-events.view-display-id-page .views-field-comment-count:before {
     content: "|";
     padding-right: 20px;
   }
-  /* line 289, ../sass/theme/_page_specific.scss */
+  /* line 293, ../sass/theme/_page_specific.scss */
   body.page-news .view-peace-geeks-news-and-events ul.pager {
     display: block;
     float: left;
     width: 662px;
   }
-  /* line 295, ../sass/theme/_page_specific.scss */
+  /* line 299, ../sass/theme/_page_specific.scss */
   body.page-news .view-peace-geeks-news-and-events ul.pager.pager-load-more {
     display: block;
     margin-left: 380px;
   }
-  /* line 299, ../sass/theme/_page_specific.scss */
+  /* line 303, ../sass/theme/_page_specific.scss */
   body.page-news .view-peace-geeks-news-and-events ul.pager.pager-load-more li {
     list-style-type: none;
   }
-  /* line 301, ../sass/theme/_page_specific.scss */
+  /* line 305, ../sass/theme/_page_specific.scss */
   body.page-news .view-peace-geeks-news-and-events ul.pager.pager-load-more li a {
     color: #9a9a9a;
     padding: 14px 60px;
@@ -3696,25 +3700,25 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   }
 
   /* Events section */
-  /* line 320, ../sass/theme/_page_specific.scss */
+  /* line 324, ../sass/theme/_page_specific.scss */
   body.page-events #main {
     padding-top: 50px;
   }
-  /* line 322, ../sass/theme/_page_specific.scss */
+  /* line 326, ../sass/theme/_page_specific.scss */
   body.page-events #content {
     width: 686px;
     float: left;
   }
-  /* line 327, ../sass/theme/_page_specific.scss */
+  /* line 331, ../sass/theme/_page_specific.scss */
   body.page-events h1#page-title {
     display: none;
   }
-  /* line 333, ../sass/theme/_page_specific.scss */
+  /* line 337, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events {
     /* Past events */
     /* Upcoming events */
   }
-  /* line 343, ../sass/theme/_page_specific.scss */
+  /* line 347, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events.view-display-id-page_1 .view-content ol li {
     list-style-type: none;
     display: block;
@@ -3726,11 +3730,11 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 34px;
     position: relative;
   }
-  /* line 354, ../sass/theme/_page_specific.scss */
+  /* line 358, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events.view-display-id-page_1 .view-content ol li:nth-child(3n) {
     margin-right: 0;
   }
-  /* line 361, ../sass/theme/_page_specific.scss */
+  /* line 365, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events.view-display-id-page_1 .views-exposed-form {
     display: block;
     float: left;
@@ -3739,14 +3743,14 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 1em 2em;
     margin-bottom: 2em;
   }
-  /* line 368, ../sass/theme/_page_specific.scss */
+  /* line 372, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events.view-display-id-page_1 .views-exposed-form label {
     text-transform: uppercase;
     display: block;
     margin-bottom: 1em;
     cursor: pointer;
   }
-  /* line 374, ../sass/theme/_page_specific.scss */
+  /* line 378, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events.view-display-id-page_1 .views-exposed-form .form-item {
     display: inline-block;
     background: white;
@@ -3756,21 +3760,21 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-right: 4px;
     cursor: pointer;
   }
-  /* line 382, ../sass/theme/_page_specific.scss */
+  /* line 386, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events.view-display-id-page_1 .views-exposed-form .form-item:hover {
     background: #59C2ED;
   }
-  /* line 385, ../sass/theme/_page_specific.scss */
+  /* line 389, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events.view-display-id-page_1 .views-exposed-form .form-item input[type="radio"] {
     display: none;
   }
-  /* line 388, ../sass/theme/_page_specific.scss */
+  /* line 392, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events.view-display-id-page_1 .views-exposed-form .form-item label {
     text-transform: none;
     margin-bottom: 0;
     cursor: pointer;
   }
-  /* line 396, ../sass/theme/_page_specific.scss */
+  /* line 400, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events.view-display-id-page_1 .views-field-title {
     display: block;
     width: 170px;
@@ -3780,7 +3784,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding-top: 10px;
     padding-bottom: 20px;
   }
-  /* line 404, ../sass/theme/_page_specific.scss */
+  /* line 408, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events.view-display-id-page_1 .views-field-title a {
     font-size: 1.1em;
     line-height: 1.3em;
@@ -3790,7 +3794,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-weight: 400;
     text-transform: uppercase;
   }
-  /* line 415, ../sass/theme/_page_specific.scss */
+  /* line 419, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events.view-display-id-page_1 .views-field-field-event-date {
     font-size: 1em;
     color: #9a9a9a;
@@ -3801,7 +3805,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     bottom: 0;
     margin-bottom: 10px;
   }
-  /* line 426, ../sass/theme/_page_specific.scss */
+  /* line 430, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events.view-display-id-page_1 .views-field-title-1 {
     display: block;
     width: 100%;
@@ -3811,7 +3815,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     bottom: 0;
     margin-bottom: 46px;
   }
-  /* line 434, ../sass/theme/_page_specific.scss */
+  /* line 438, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events.view-display-id-page_1 .views-field-title-1 a {
     font-size: 1em;
     color: #9a9a9a;
@@ -3821,7 +3825,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: .2em .6em;
     text-transform: none;
   }
-  /* line 446, ../sass/theme/_page_specific.scss */
+  /* line 450, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events.view-display-id-page_1 .views-field-comment-count {
     display: block;
     float: right;
@@ -3830,12 +3834,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding-right: 20px;
     margin-top: 16px;
   }
-  /* line 453, ../sass/theme/_page_specific.scss */
+  /* line 457, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events.view-display-id-page_1 .views-field-comment-count:before {
     content: "|";
     padding-left: 20px;
   }
-  /* line 464, ../sass/theme/_page_specific.scss */
+  /* line 468, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .view-header .view-display-id-block_3 h2 {
     color: #59C2ED;
     font-weight: 300;
@@ -3843,14 +3847,14 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-top: -14px;
     margin-bottom: 0;
   }
-  /* line 473, ../sass/theme/_page_specific.scss */
+  /* line 477, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .view-header .view-display-id-block_3 .view-footer h2 {
     margin-top: 1em;
     display: block;
     float: left;
     width: 100%;
   }
-  /* line 486, ../sass/theme/_page_specific.scss */
+  /* line 490, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .view-header .view-display-id-block_3 .view-content ol li {
     list-style-type: none;
     display: block;
@@ -3862,11 +3866,11 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 34px;
     position: relative;
   }
-  /* line 497, ../sass/theme/_page_specific.scss */
+  /* line 501, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .view-header .view-display-id-block_3 .view-content ol li:nth-child(even) {
     margin-right: 0;
   }
-  /* line 504, ../sass/theme/_page_specific.scss */
+  /* line 508, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .view-header .view-display-id-block_3 .views-field-title {
     display: block;
     height: 82px;
@@ -3875,7 +3879,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 10px 20px 20px 20px;
     margin-bottom: 10px;
   }
-  /* line 511, ../sass/theme/_page_specific.scss */
+  /* line 515, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .view-header .view-display-id-block_3 .views-field-title a {
     font-size: 1.6em;
     line-height: 1.1em;
@@ -3885,7 +3889,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-weight: 600;
     text-transform: none;
   }
-  /* line 523, ../sass/theme/_page_specific.scss */
+  /* line 527, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .view-header .view-display-id-block_3 .views-field-field-event-date {
     font-size: 1.2em;
     color: #414042;
@@ -3896,13 +3900,13 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     position: relative;
     margin-bottom: 0;
   }
-  /* line 532, ../sass/theme/_page_specific.scss */
+  /* line 536, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .view-header .view-display-id-block_3 .views-field-field-event-date span.views-label {
     float: left;
     display: inline;
     padding-right: 6px;
   }
-  /* line 539, ../sass/theme/_page_specific.scss */
+  /* line 543, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .view-header .view-display-id-block_3 .views-field-field-event-date-1 {
     font-size: 1.2em;
     color: #414042;
@@ -3913,13 +3917,13 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     float: left;
     position: relative;
   }
-  /* line 548, ../sass/theme/_page_specific.scss */
+  /* line 552, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .view-header .view-display-id-block_3 .views-field-field-event-date-1 span.views-label {
     float: left;
     display: inline;
     padding-right: 6px;
   }
-  /* line 555, ../sass/theme/_page_specific.scss */
+  /* line 559, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .view-header .view-display-id-block_3 .views-field-field-event-date-2 {
     font-size: 1.2em;
     color: #414042;
@@ -3930,13 +3934,13 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     float: left;
     position: relative;
   }
-  /* line 564, ../sass/theme/_page_specific.scss */
+  /* line 568, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .view-header .view-display-id-block_3 .views-field-field-event-date-2 span.views-label {
     float: left;
     display: inline;
     padding-right: 6px;
   }
-  /* line 571, ../sass/theme/_page_specific.scss */
+  /* line 575, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .view-header .view-display-id-block_3 .views-field-title-1 {
     display: block;
     float: left;
@@ -3947,7 +3951,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     bottom: 0;
     margin-bottom: 26px;
   }
-  /* line 580, ../sass/theme/_page_specific.scss */
+  /* line 584, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .view-header .view-display-id-block_3 .views-field-title-1 a {
     font-size: 1.2em;
     color: #9a9a9a;
@@ -3956,7 +3960,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     letter-spacing: 1px;
     font-weight: 600;
   }
-  /* line 590, ../sass/theme/_page_specific.scss */
+  /* line 594, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .view-header .view-display-id-block_3 .views-field-field-registration-link {
     display: block;
     position: absolute;
@@ -3964,7 +3968,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     bottom: 0;
     margin-left: 200px;
   }
-  /* line 596, ../sass/theme/_page_specific.scss */
+  /* line 600, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .view-header .view-display-id-block_3 .views-field-field-registration-link a {
     font-size: 1.2em;
     color: white;
@@ -3972,7 +3976,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: .2em 1em;
     letter-spacing: 1px;
   }
-  /* line 605, ../sass/theme/_page_specific.scss */
+  /* line 609, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .view-header .view-display-id-block_3 .views-field-comment-count {
     display: block;
     float: left;
@@ -3984,31 +3988,31 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-top: 0;
     padding-right: 0;
   }
-  /* line 615, ../sass/theme/_page_specific.scss */
+  /* line 619, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .view-header .view-display-id-block_3 .views-field-comment-count:before {
     content: "";
     padding-right: 0;
   }
-  /* line 622, ../sass/theme/_page_specific.scss */
+  /* line 626, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events ul.pager {
     display: block;
     float: left;
     width: 662px;
   }
-  /* line 628, ../sass/theme/_page_specific.scss */
+  /* line 632, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events .date-nav-wrapper ul.pager {
     float: none;
   }
-  /* line 632, ../sass/theme/_page_specific.scss */
+  /* line 636, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events ul.pager.pager-load-more {
     display: block;
     margin-left: 380px;
   }
-  /* line 636, ../sass/theme/_page_specific.scss */
+  /* line 640, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events ul.pager.pager-load-more li {
     list-style-type: none;
   }
-  /* line 638, ../sass/theme/_page_specific.scss */
+  /* line 642, ../sass/theme/_page_specific.scss */
   body.page-events .view-peace-geeks-news-and-events ul.pager.pager-load-more li a {
     color: #9a9a9a;
     padding: 14px 60px;
@@ -4020,34 +4024,34 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   }
 
   /* Article pages */
-  /* line 659, ../sass/theme/_page_specific.scss */
+  /* line 663, ../sass/theme/_page_specific.scss */
   body.node-type-article h1#page-title {
     display: none;
   }
-  /* line 663, ../sass/theme/_page_specific.scss */
+  /* line 667, ../sass/theme/_page_specific.scss */
   body.node-type-article #main {
     padding-top: 50px;
     padding-bottom: 90px;
   }
-  /* line 668, ../sass/theme/_page_specific.scss */
+  /* line 672, ../sass/theme/_page_specific.scss */
   body.node-type-article #content {
     width: 686px;
     float: left;
     display: block;
   }
-  /* line 674, ../sass/theme/_page_specific.scss */
+  /* line 678, ../sass/theme/_page_specific.scss */
   body.node-type-article ol {
     padding: 1em 2em 1em 2em;
   }
-  /* line 682, ../sass/theme/_page_specific.scss */
+  /* line 686, ../sass/theme/_page_specific.scss */
   body.node-type-article aside.sidebars .region-sidebar-second ol {
     padding: 10px 0 0 0;
   }
-  /* line 690, ../sass/theme/_page_specific.scss */
+  /* line 694, ../sass/theme/_page_specific.scss */
   body.node-type-article .views-field-created {
     color: #9a9a9a;
   }
-  /* line 694, ../sass/theme/_page_specific.scss */
+  /* line 698, ../sass/theme/_page_specific.scss */
   body.node-type-article .views-field-comment-count {
     font-size: 1.2em;
     display: block;
@@ -4057,7 +4061,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-top: 2em;
     margin-bottom: 1em;
   }
-  /* line 705, ../sass/theme/_page_specific.scss */
+  /* line 709, ../sass/theme/_page_specific.scss */
   body.node-type-article .views-field-title a {
     color: black;
     font-size: 1.8em;
@@ -4067,71 +4071,71 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-weight: bold;
     display: block;
   }
-  /* line 716, ../sass/theme/_page_specific.scss */
+  /* line 720, ../sass/theme/_page_specific.scss */
   body.node-type-article .views-field-name {
     display: block;
     margin-bottom: 4px;
     margin-top: 18px;
   }
-  /* line 720, ../sass/theme/_page_specific.scss */
+  /* line 724, ../sass/theme/_page_specific.scss */
   body.node-type-article .views-field-name .views-label {
     text-transform: uppercase;
     color: #9a9a9a;
   }
-  /* line 726, ../sass/theme/_page_specific.scss */
+  /* line 730, ../sass/theme/_page_specific.scss */
   body.node-type-article .views-field-name span.field-content a {
     color: #9a9a9a;
   }
-  /* line 732, ../sass/theme/_page_specific.scss */
+  /* line 736, ../sass/theme/_page_specific.scss */
   body.node-type-article .views-field-field-tags {
     display: block;
     margin-bottom: .6em;
   }
-  /* line 736, ../sass/theme/_page_specific.scss */
+  /* line 740, ../sass/theme/_page_specific.scss */
   body.node-type-article .views-field-field-tags .views-label {
     text-transform: uppercase;
     color: #9a9a9a;
     display: inline;
   }
-  /* line 742, ../sass/theme/_page_specific.scss */
+  /* line 746, ../sass/theme/_page_specific.scss */
   body.node-type-article .views-field-field-tags div.field-content {
     display: inline;
     color: #9a9a9a;
   }
-  /* line 745, ../sass/theme/_page_specific.scss */
+  /* line 749, ../sass/theme/_page_specific.scss */
   body.node-type-article .views-field-field-tags div.field-content a {
     color: #9a9a9a;
   }
-  /* line 752, ../sass/theme/_page_specific.scss */
+  /* line 756, ../sass/theme/_page_specific.scss */
   body.node-type-article article.node-article .views-field-body {
     font-size: 1.1em;
     line-height: 1.6em;
   }
 
   /* Event pages */
-  /* line 765, ../sass/theme/_page_specific.scss */
+  /* line 769, ../sass/theme/_page_specific.scss */
   body.node-type-event h1#page-title {
     display: none;
   }
-  /* line 769, ../sass/theme/_page_specific.scss */
+  /* line 773, ../sass/theme/_page_specific.scss */
   body.node-type-event #main {
     padding-top: 50px;
     padding-bottom: 90px;
   }
-  /* line 774, ../sass/theme/_page_specific.scss */
+  /* line 778, ../sass/theme/_page_specific.scss */
   body.node-type-event #content {
     width: 686px;
     float: left;
     display: block;
   }
-  /* line 780, ../sass/theme/_page_specific.scss */
+  /* line 784, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-created {
     color: #9a9a9a;
     float: left;
     width: 100%;
     display: block;
   }
-  /* line 787, ../sass/theme/_page_specific.scss */
+  /* line 791, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-comment-count {
     font-size: 1.2em;
     display: block;
@@ -4141,12 +4145,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-top: 2em;
     margin-bottom: 1em;
   }
-  /* line 797, ../sass/theme/_page_specific.scss */
+  /* line 801, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-image {
     float: left;
     margin-right: 20px;
   }
-  /* line 803, ../sass/theme/_page_specific.scss */
+  /* line 807, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-name-1 a {
     color: #59C2ED;
     font-size: 1.8em;
@@ -4156,7 +4160,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-weight: 600;
     display: block;
   }
-  /* line 814, ../sass/theme/_page_specific.scss */
+  /* line 818, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-venue {
     display: block;
     margin-bottom: 4px;
@@ -4164,16 +4168,16 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 1.1em;
     width: 100%;
   }
-  /* line 820, ../sass/theme/_page_specific.scss */
+  /* line 824, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-venue .views-label {
     display: inline;
     font-weight: 600;
   }
-  /* line 824, ../sass/theme/_page_specific.scss */
+  /* line 828, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-venue .field-content {
     display: inline;
   }
-  /* line 829, ../sass/theme/_page_specific.scss */
+  /* line 833, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-event-time {
     display: block;
     margin-bottom: 4px;
@@ -4181,16 +4185,16 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 1.1em;
     width: 100%;
   }
-  /* line 835, ../sass/theme/_page_specific.scss */
+  /* line 839, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-event-time .views-label {
     display: inline;
     font-weight: 600;
   }
-  /* line 839, ../sass/theme/_page_specific.scss */
+  /* line 843, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-event-time .field-content {
     display: inline;
   }
-  /* line 844, ../sass/theme/_page_specific.scss */
+  /* line 848, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-event-date {
     display: block;
     margin-bottom: 4px;
@@ -4198,20 +4202,20 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 1.1em;
     width: 100%;
   }
-  /* line 850, ../sass/theme/_page_specific.scss */
+  /* line 854, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-event-date .views-label {
     display: inline;
     font-weight: 600;
   }
-  /* line 854, ../sass/theme/_page_specific.scss */
+  /* line 858, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-event-date .field-content {
     display: inline;
   }
-  /* line 859, ../sass/theme/_page_specific.scss */
+  /* line 863, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-event-date-1 {
     display: none;
   }
-  /* line 863, ../sass/theme/_page_specific.scss */
+  /* line 867, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-guest-speaker {
     display: block;
     margin-bottom: 4px;
@@ -4219,16 +4223,16 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 1.1em;
     width: 100%;
   }
-  /* line 869, ../sass/theme/_page_specific.scss */
+  /* line 873, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-guest-speaker .views-label {
     display: inline;
     font-weight: 600;
   }
-  /* line 873, ../sass/theme/_page_specific.scss */
+  /* line 877, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-guest-speaker .field-content {
     display: inline;
   }
-  /* line 878, ../sass/theme/_page_specific.scss */
+  /* line 882, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-view {
     display: block;
     float: left;
@@ -4239,23 +4243,23 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding-right: 40px;
     margin-bottom: 30px;
   }
-  /* line 887, ../sass/theme/_page_specific.scss */
+  /* line 891, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-view .views-row {
     display: block;
     float: left;
   }
-  /* line 891, ../sass/theme/_page_specific.scss */
+  /* line 895, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-view .views-label {
     display: block;
     font-weight: 600;
     margin-bottom: 14px;
     text-transform: uppercase;
   }
-  /* line 897, ../sass/theme/_page_specific.scss */
+  /* line 901, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-view .field-content {
     display: block;
   }
-  /* line 902, ../sass/theme/_page_specific.scss */
+  /* line 906, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-view-1 {
     display: block;
     float: left;
@@ -4265,23 +4269,23 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     width: auto;
     margin-bottom: 30px;
   }
-  /* line 910, ../sass/theme/_page_specific.scss */
+  /* line 914, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-view-1 .views-row {
     display: block;
     float: left;
   }
-  /* line 914, ../sass/theme/_page_specific.scss */
+  /* line 918, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-view-1 .views-label {
     display: block;
     font-weight: 600;
     margin-bottom: 14px;
     text-transform: uppercase;
   }
-  /* line 920, ../sass/theme/_page_specific.scss */
+  /* line 924, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-view-1 .field-content {
     display: block;
   }
-  /* line 926, ../sass/theme/_page_specific.scss */
+  /* line 930, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-registration-link a {
     font-size: 1.2em;
     color: white;
@@ -4291,7 +4295,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     display: inline-block;
     margin-top: 20px;
   }
-  /* line 938, ../sass/theme/_page_specific.scss */
+  /* line 942, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-title a {
     color: black;
     font-size: 1.8em;
@@ -4301,7 +4305,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-weight: bold;
     display: block;
   }
-  /* line 949, ../sass/theme/_page_specific.scss */
+  /* line 953, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-name {
     display: block;
     margin-bottom: 4px;
@@ -4309,38 +4313,38 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     float: left;
     width: 100%;
   }
-  /* line 955, ../sass/theme/_page_specific.scss */
+  /* line 959, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-name .views-label {
     text-transform: uppercase;
     color: #9a9a9a;
   }
-  /* line 961, ../sass/theme/_page_specific.scss */
+  /* line 965, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-name span.field-content a {
     color: #9a9a9a;
   }
-  /* line 967, ../sass/theme/_page_specific.scss */
+  /* line 971, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-tags {
     display: block;
     float: left;
     width: 100%;
     margin-bottom: .6em;
   }
-  /* line 973, ../sass/theme/_page_specific.scss */
+  /* line 977, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-tags .views-label {
     text-transform: uppercase;
     color: #9a9a9a;
     display: inline;
   }
-  /* line 979, ../sass/theme/_page_specific.scss */
+  /* line 983, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-tags div.field-content {
     display: inline;
     color: #9a9a9a;
   }
-  /* line 982, ../sass/theme/_page_specific.scss */
+  /* line 986, ../sass/theme/_page_specific.scss */
   body.node-type-event .views-field-field-tags div.field-content a {
     color: #9a9a9a;
   }
-  /* line 989, ../sass/theme/_page_specific.scss */
+  /* line 993, ../sass/theme/_page_specific.scss */
   body.node-type-event article.node-event .views-field-body {
     font-size: 1.1em;
     line-height: 1.6em;
@@ -4352,7 +4356,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   }
 
   /* Current Projects */
-  /* line 1008, ../sass/theme/_page_specific.scss */
+  /* line 1012, ../sass/theme/_page_specific.scss */
   body.currentprojects #howcanyouhelp {
     display: block;
     float: right;
@@ -4360,11 +4364,11 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     top: -41px;
     right: 0;
   }
-  /* line 1016, ../sass/theme/_page_specific.scss */
+  /* line 1020, ../sass/theme/_page_specific.scss */
   body.currentprojects #howcanyouhelp .field-name-field-header-text {
     font-size: 18px;
   }
-  /* line 1020, ../sass/theme/_page_specific.scss */
+  /* line 1024, ../sass/theme/_page_specific.scss */
   body.currentprojects #howcanyouhelp a.orangeblock {
     color: white;
     display: block;
@@ -4377,7 +4381,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 18px;
     line-height: 22px;
   }
-  /* line 1031, ../sass/theme/_page_specific.scss */
+  /* line 1035, ../sass/theme/_page_specific.scss */
   body.currentprojects #howcanyouhelp a.orangeblock:after {
     content: "and become a PeaceGeek";
     font-weight: 300;
@@ -4385,12 +4389,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   }
 
   /* Past Projects */
-  /* line 1050, ../sass/theme/_page_specific.scss */
+  /* line 1054, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners #main {
     padding-top: 50px;
     padding-bottom: 7em;
   }
-  /* line 1055, ../sass/theme/_page_specific.scss */
+  /* line 1059, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners a#apply-today-button {
     display: block;
     float: left;
@@ -4405,7 +4409,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 4px;
     margin-top: 30px;
   }
-  /* line 1068, ../sass/theme/_page_specific.scss */
+  /* line 1072, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners a#apply-today-button:after {
     content: "become a PeaceGeek!";
     font-weight: 300;
@@ -4413,7 +4417,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding-top: 4px;
     color: #E6E6E6;
   }
-  /* line 1077, ../sass/theme/_page_specific.scss */
+  /* line 1081, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners a#donate-button {
     display: block;
     float: left;
@@ -4428,19 +4432,19 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 4px;
     margin-top: 30px;
   }
-  /* line 1090, ../sass/theme/_page_specific.scss */
+  /* line 1094, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners a#donate-button:after {
     content: "to PeaceGeeks";
     font-weight: 300;
     display: block;
     padding-top: 4px;
   }
-  /* line 1098, ../sass/theme/_page_specific.scss */
+  /* line 1102, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block {
     display: block;
     width: 100%;
   }
-  /* line 1102, ../sass/theme/_page_specific.scss */
+  /* line 1106, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content {
     display: block;
     z-index: 10;
@@ -4453,7 +4457,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     background: #59C2ED;
     overflow: hidden;
   }
-  /* line 1115, ../sass/theme/_page_specific.scss */
+  /* line 1119, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row {
     display: block;
     width: 980px;
@@ -4462,29 +4466,29 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     position: relative;
     padding: 40px 20px;
   }
-  /* line 1123, ../sass/theme/_page_specific.scss */
+  /* line 1127, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-label {
     display: inline;
     float: left;
     padding-right: 6px;
   }
-  /* line 1129, ../sass/theme/_page_specific.scss */
+  /* line 1133, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field {
     display: block;
     font-size: 14px;
     line-height: 20px;
   }
-  /* line 1137, ../sass/theme/_page_specific.scss */
+  /* line 1141, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-proj-partners-location .locality-block {
     display: inline;
     float: left;
   }
-  /* line 1141, ../sass/theme/_page_specific.scss */
+  /* line 1145, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-proj-partners-location .country {
     display: inline;
     padding-left: 6px;
   }
-  /* line 1150, ../sass/theme/_page_specific.scss */
+  /* line 1154, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-proj-partners-url a {
     color: #414042;
     font-weight: bold;
@@ -4493,7 +4497,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-top: 8px;
     display: block;
   }
-  /* line 1160, ../sass/theme/_page_specific.scss */
+  /* line 1164, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-title {
     color: white;
     font-size: 16px;
@@ -4504,14 +4508,14 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     width: 100%;
     margin-bottom: 12px;
   }
-  /* line 1172, ../sass/theme/_page_specific.scss */
+  /* line 1176, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-partner-one-liner {
     color: white;
     font-size: 36px;
     line-height: 44px;
     font-weight: 300;
   }
-  /* line 1180, ../sass/theme/_page_specific.scss */
+  /* line 1184, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-nothing h3 {
     font-size: 16px;
     font-weight: 600;
@@ -4519,7 +4523,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-top: 30px;
     margin-bottom: 10px;
   }
-  /* line 1191, ../sass/theme/_page_specific.scss */
+  /* line 1195, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-tags {
     display: block;
     right: 0;
@@ -4528,23 +4532,23 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     bottom: 0;
     margin-bottom: .6em;
   }
-  /* line 1198, ../sass/theme/_page_specific.scss */
+  /* line 1202, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-tags .views-label {
     text-transform: uppercase;
     color: #9a9a9a;
     display: inline;
   }
-  /* line 1205, ../sass/theme/_page_specific.scss */
+  /* line 1209, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-tags ol {
     text-align: right;
     margin: 0 0 -5px 0;
   }
-  /* line 1208, ../sass/theme/_page_specific.scss */
+  /* line 1212, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-tags ol li {
     list-style-type: none;
     display: inline;
   }
-  /* line 1211, ../sass/theme/_page_specific.scss */
+  /* line 1215, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-tags ol li a {
     background: #E6E6E6;
     color: #414042;
@@ -4552,19 +4556,19 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 4px 14px;
     margin-left: 8px;
   }
-  /* line 1217, ../sass/theme/_page_specific.scss */
+  /* line 1221, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-id-peace_geeks_projects.view-display-id-project_partners_banner_block .view-content .views-row .views-field-field-tags ol li a:before {
     content: "#";
   }
-  /* line 1229, ../sass/theme/_page_specific.scss */
+  /* line 1233, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners #main {
     padding-top: 50px;
   }
-  /* line 1231, ../sass/theme/_page_specific.scss */
+  /* line 1235, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners h1#page-title {
     display: none;
   }
-  /* line 1237, ../sass/theme/_page_specific.scss */
+  /* line 1241, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-peace-geeks-projects.view-display-id-project_partners_node_override .views-row .views-label {
     font-size: 1.4em;
     text-transform: uppercase;
@@ -4574,7 +4578,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     width: 100%;
     margin-bottom: 16px;
   }
-  /* line 1247, ../sass/theme/_page_specific.scss */
+  /* line 1251, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-peace-geeks-projects.view-display-id-project_partners_node_override .views-row .views-field-field-image-caption {
     display: block;
     background: #59C2ED;
@@ -4588,13 +4592,13 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-weight: 300;
     margin-bottom: 40px !important;
   }
-  /* line 1261, ../sass/theme/_page_specific.scss */
+  /* line 1265, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-peace-geeks-projects.view-display-id-project_partners_node_override .views-row .views-field {
     margin-bottom: 20px;
     display: block;
     float: left;
   }
-  /* line 1265, ../sass/theme/_page_specific.scss */
+  /* line 1269, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-peace-geeks-projects.view-display-id-project_partners_node_override .views-row .views-field h3 {
     font-size: 16px;
     font-weight: 600;
@@ -4602,29 +4606,29 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-top: 30px;
     margin-bottom: 10px;
   }
-  /* line 1274, ../sass/theme/_page_specific.scss */
+  /* line 1278, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-peace-geeks-projects.view-display-id-project_partners_node_override .views-row .views-field-field-peacegeeks-contributions {
     border-top: 1px solid #59C2ED;
     padding-top: 20px;
     margin-top: 20px;
     margin-bottom: -40px;
   }
-  /* line 1283, ../sass/theme/_page_specific.scss */
+  /* line 1287, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners .view-peace-geeks-projects.view-display-id-project_partners_node_override .views-row .field-content p {
     font-size: 15px;
     line-height: 22px;
   }
 
   /* Projects cards */
-  /* line 1296, ../sass/theme/_page_specific.scss */
+  /* line 1300, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block {
     margin-top: -4em;
   }
-  /* line 1303, ../sass/theme/_page_specific.scss */
+  /* line 1307, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block div.item-list ul.pager.pager-load-more li {
     list-style-type: none;
   }
-  /* line 1305, ../sass/theme/_page_specific.scss */
+  /* line 1309, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block div.item-list ul.pager.pager-load-more li a {
     display: block;
     float: left;
@@ -4635,13 +4639,13 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     color: white;
     font-size: 18px;
   }
-  /* line 1314, ../sass/theme/_page_specific.scss */
+  /* line 1318, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block div.item-list ul.pager.pager-load-more li a:after {
     content: "current projects";
     font-weight: 300;
     display: block;
   }
-  /* line 1324, ../sass/theme/_page_specific.scss */
+  /* line 1328, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block .views-row {
     display: block;
     float: left;
@@ -4652,15 +4656,15 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 20px;
     position: relative;
   }
-  /* line 1333, ../sass/theme/_page_specific.scss */
+  /* line 1337, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block .views-row:nth-child(3n) {
     margin-right: 0;
   }
-  /* line 1341, ../sass/theme/_page_specific.scss */
+  /* line 1345, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block .views-row .views-field-title {
     padding: 10px 20px;
   }
-  /* line 1343, ../sass/theme/_page_specific.scss */
+  /* line 1347, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block .views-row .views-field-title a {
     color: #59C2ED;
     font-size: 16px;
@@ -4668,18 +4672,18 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     text-transform: uppercase;
     font-weight: 600;
   }
-  /* line 1352, ../sass/theme/_page_specific.scss */
+  /* line 1356, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block .views-row .views-field-field-tags {
     padding: 10px 20px 0 20px;
   }
-  /* line 1354, ../sass/theme/_page_specific.scss */
+  /* line 1358, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block .views-row .views-field-field-tags ol {
     display: block;
     position: absolute;
     bottom: 0;
     margin-bottom: -4px;
   }
-  /* line 1359, ../sass/theme/_page_specific.scss */
+  /* line 1363, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block .views-row .views-field-field-tags ol li {
     list-style-type: none;
     display: block;
@@ -4687,7 +4691,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-right: 6px;
     margin-bottom: 4px;
   }
-  /* line 1365, ../sass/theme/_page_specific.scss */
+  /* line 1369, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block .views-row .views-field-field-tags ol li a {
     display: inline-block;
     background: white;
@@ -4697,32 +4701,32 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 12px;
     font-weight: normal;
   }
-  /* line 1373, ../sass/theme/_page_specific.scss */
+  /* line 1377, ../sass/theme/_page_specific.scss */
   .view-peace-geeks-projects.view-display-id-block .views-row .views-field-field-tags ol li a:before {
     content: "#";
   }
 
   /* Become a Volunteer */
-  /* line 1392, ../sass/theme/_page_specific.scss */
+  /* line 1396, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer #main {
     padding-top: 50px;
     padding-bottom: 6em;
   }
-  /* line 1394, ../sass/theme/_page_specific.scss */
+  /* line 1398, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .paragraphs-item-raw-block {
     font-size: 1.2em;
     line-height: 1.6em;
     color: #414042;
   }
-  /* line 1398, ../sass/theme/_page_specific.scss */
+  /* line 1402, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .paragraphs-item-raw-block p {
     margin-bottom: 1em;
   }
-  /* line 1403, ../sass/theme/_page_specific.scss */
+  /* line 1407, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .paragraphs-items-field-paragraphs {
     margin-top: 0;
   }
-  /* line 1407, ../sass/theme/_page_specific.scss */
+  /* line 1411, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block {
     display: block;
     z-index: 10;
@@ -4735,23 +4739,23 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     background: #E6E6E6;
     overflow: hidden;
   }
-  /* line 1419, ../sass/theme/_page_specific.scss */
+  /* line 1423, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .view-content {
     width: 980px;
     margin-left: -114px;
   }
-  /* line 1424, ../sass/theme/_page_specific.scss */
+  /* line 1428, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-team-image {
     position: absolute;
     bottom: 0;
     margin-bottom: -4px;
   }
-  /* line 1430, ../sass/theme/_page_specific.scss */
+  /* line 1434, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-title {
     margin-left: 300px;
     margin-top: 50px;
   }
-  /* line 1433, ../sass/theme/_page_specific.scss */
+  /* line 1437, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-title .views-label {
     display: block;
     font-size: 18px;
@@ -4760,7 +4764,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     letter-spacing: 1px;
     margin-bottom: 16px;
   }
-  /* line 1443, ../sass/theme/_page_specific.scss */
+  /* line 1447, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-title .field-content {
     font-size: 28px;
     font-weight: 600;
@@ -4768,17 +4772,17 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 30px;
     display: block;
   }
-  /* line 1453, ../sass/theme/_page_specific.scss */
+  /* line 1457, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-team-bio {
     font-size: 1.2em;
     line-height: 1.6em;
     margin-left: 300px;
   }
-  /* line 1459, ../sass/theme/_page_specific.scss */
+  /* line 1463, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-amani-tags {
     padding: 10px 20px 0 20px;
   }
-  /* line 1461, ../sass/theme/_page_specific.scss */
+  /* line 1465, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-amani-tags ol {
     display: block;
     position: absolute;
@@ -4786,7 +4790,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: -4px;
     margin-left: 300px;
   }
-  /* line 1467, ../sass/theme/_page_specific.scss */
+  /* line 1471, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-amani-tags ol li {
     list-style-type: none;
     display: block;
@@ -4794,7 +4798,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-right: 16px;
     margin-bottom: 4px;
   }
-  /* line 1473, ../sass/theme/_page_specific.scss */
+  /* line 1477, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-amani-tags ol li a {
     display: inline-block;
     background: white;
@@ -4804,20 +4808,20 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 14px;
     font-weight: normal;
   }
-  /* line 1481, ../sass/theme/_page_specific.scss */
+  /* line 1485, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-amani-tags ol li a:before {
     content: "#";
   }
-  /* line 1490, ../sass/theme/_page_specific.scss */
+  /* line 1494, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block {
     margin-top: -2em;
   }
-  /* line 1494, ../sass/theme/_page_specific.scss */
+  /* line 1498, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .view-header h3 {
     font-size: 1.4em;
     letter-spacing: 1px;
   }
-  /* line 1500, ../sass/theme/_page_specific.scss */
+  /* line 1504, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-title a {
     color: #414042;
     font-size: 1.4em;
@@ -4828,12 +4832,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     letter-spacing: 1px;
     font-weight: 600;
   }
-  /* line 1512, ../sass/theme/_page_specific.scss */
+  /* line 1516, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-body {
     font-size: 1.2em;
     line-height: 1.6em;
   }
-  /* line 1518, ../sass/theme/_page_specific.scss */
+  /* line 1522, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block ol > li {
     list-style-type: none;
     display: block;
@@ -4845,22 +4849,22 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 34px 20px;
     position: relative;
   }
-  /* line 1530, ../sass/theme/_page_specific.scss */
+  /* line 1534, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block ol > li:nth-child(3) {
     margin-right: 0;
   }
-  /* line 1537, ../sass/theme/_page_specific.scss */
+  /* line 1541, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-field-opportunity-tags {
     padding: 0;
   }
-  /* line 1539, ../sass/theme/_page_specific.scss */
+  /* line 1543, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-field-opportunity-tags ul {
     display: block;
     position: absolute;
     bottom: 0;
     margin-bottom: -4px;
   }
-  /* line 1544, ../sass/theme/_page_specific.scss */
+  /* line 1548, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-field-opportunity-tags ul li {
     list-style-type: none;
     display: block;
@@ -4869,7 +4873,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 4px;
     margin-top: 4px;
   }
-  /* line 1551, ../sass/theme/_page_specific.scss */
+  /* line 1555, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-field-opportunity-tags ul li a {
     display: inline-block;
     background: white;
@@ -4879,11 +4883,11 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 13px;
     font-weight: normal;
   }
-  /* line 1559, ../sass/theme/_page_specific.scss */
+  /* line 1563, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-field-opportunity-tags ul li a:before {
     content: "#";
   }
-  /* line 1570, ../sass/theme/_page_specific.scss */
+  /* line 1574, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons {
     display: block;
     float: left;
@@ -4891,7 +4895,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 60px;
     margin-top: -10px;
   }
-  /* line 1578, ../sass/theme/_page_specific.scss */
+  /* line 1582, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons #volunteer-general-app-link {
     display: block;
     float: left;
@@ -4905,12 +4909,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 10px 20px;
     height: 110px;
   }
-  /* line 1590, ../sass/theme/_page_specific.scss */
+  /* line 1594, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons #volunteer-general-app-link span {
     display: block;
     font-weight: 300;
   }
-  /* line 1596, ../sass/theme/_page_specific.scss */
+  /* line 1600, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons #volunteer-current-openings-link {
     display: block;
     float: left;
@@ -4924,18 +4928,18 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 10px 20px;
     height: 110px;
   }
-  /* line 1608, ../sass/theme/_page_specific.scss */
+  /* line 1612, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons #volunteer-current-openings-link span {
     display: block;
     font-weight: 300;
   }
 
   /* Current Openings */
-  /* line 1622, ../sass/theme/_page_specific.scss */
+  /* line 1626, ../sass/theme/_page_specific.scss */
   body.page-currentopenings #main {
     padding-bottom: 6em;
   }
-  /* line 1626, ../sass/theme/_page_specific.scss */
+  /* line 1630, ../sass/theme/_page_specific.scss */
   body.page-currentopenings h1#page-title {
     font-weight: 600;
     font-size: 1.6em;
@@ -4944,7 +4948,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     letter-spacing: 1px;
     margin-bottom: 30px;
   }
-  /* line 1637, ../sass/theme/_page_specific.scss */
+  /* line 1641, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-title {
     margin-left: -40px;
     color: #414042;
@@ -4954,21 +4958,21 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 16px;
     cursor: pointer;
   }
-  /* line 1645, ../sass/theme/_page_specific.scss */
+  /* line 1649, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-title .views-label {
     padding-right: 24px;
     font-size: 36px;
     display: block;
     float: left;
   }
-  /* line 1653, ../sass/theme/_page_specific.scss */
+  /* line 1657, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-body {
     font-size: 1.2em;
     line-height: 1.6em;
     margin-left: -8px;
     margin-bottom: 10px;
   }
-  /* line 1660, ../sass/theme/_page_specific.scss */
+  /* line 1664, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .view-footer {
     display: block;
     float: left;
@@ -4976,7 +4980,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-top: 80px;
     margin-bottom: 20px;
   }
-  /* line 1668, ../sass/theme/_page_specific.scss */
+  /* line 1672, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page #current-openings-general-application {
     display: block;
     float: left;
@@ -4990,12 +4994,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 20px 20px 10px 20px;
     height: 110px;
   }
-  /* line 1680, ../sass/theme/_page_specific.scss */
+  /* line 1684, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page #current-openings-general-application span {
     display: block;
     font-weight: 300;
   }
-  /* line 1686, ../sass/theme/_page_specific.scss */
+  /* line 1690, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page #current-openings-bottom-text {
     display: block;
     float: left;
@@ -5006,18 +5010,18 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 1.2em;
     line-height: 1.6em;
   }
-  /* line 1697, ../sass/theme/_page_specific.scss */
+  /* line 1701, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags {
     padding-top: 30px;
   }
-  /* line 1699, ../sass/theme/_page_specific.scss */
+  /* line 1703, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags ol {
     display: block;
     position: absolute;
     bottom: 0;
     margin-bottom: -4px;
   }
-  /* line 1704, ../sass/theme/_page_specific.scss */
+  /* line 1708, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags ol li {
     list-style-type: none;
     display: block;
@@ -5025,7 +5029,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-right: 6px;
     margin-bottom: 4px;
   }
-  /* line 1710, ../sass/theme/_page_specific.scss */
+  /* line 1714, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags ol li a {
     display: inline-block;
     background: white;
@@ -5035,12 +5039,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 14px;
     font-weight: normal;
   }
-  /* line 1718, ../sass/theme/_page_specific.scss */
+  /* line 1722, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags ol li a:before {
     content: "#";
     font-style: italic;
   }
-  /* line 1728, ../sass/theme/_page_specific.scss */
+  /* line 1732, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page ol li.views-row {
     list-style-type: none;
     display: block;
@@ -5058,24 +5062,24 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   }
 
   /* Become a Corporate Sponsor */
-  /* line 1755, ../sass/theme/_page_specific.scss */
+  /* line 1759, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor h1#page-title {
     display: none;
   }
-  /* line 1757, ../sass/theme/_page_specific.scss */
+  /* line 1761, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .anchor-link-to-box {
     float: left !important;
     position: relative;
   }
-  /* line 1762, ../sass/theme/_page_specific.scss */
+  /* line 1766, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .anchor-link-to-box .paragraphs-item-light-grey-text-box-with-link-to {
     padding: 0;
   }
-  /* line 1766, ../sass/theme/_page_specific.scss */
+  /* line 1770, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .anchor-link-to-box .paragraphs-item-light-grey-text-box-with-link-to .field-type-link-field .field-item {
     position: relative;
   }
-  /* line 1768, ../sass/theme/_page_specific.scss */
+  /* line 1772, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .anchor-link-to-box .paragraphs-item-light-grey-text-box-with-link-to .field-type-link-field .field-item a {
     width: 234px;
     display: block;
@@ -5091,21 +5095,21 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-weight: 600;
     margin-bottom: 3em;
   }
-  /* line 1786, ../sass/theme/_page_specific.scss */
+  /* line 1790, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .anchor-link-to-box .paragraphs-item-light-grey-text-box-with-link-to .field-name-field-image {
     margin-bottom: -5px;
   }
-  /* line 1793, ../sass/theme/_page_specific.scss */
+  /* line 1797, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .paragraphs-item-paragraph-text-with-anchor {
     border-top: 0;
     padding-top: 0;
   }
-  /* line 1797, ../sass/theme/_page_specific.scss */
+  /* line 1801, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .paragraphs-item-paragraph-text-with-anchor .field-name-field-image {
     float: left;
     margin-right: 2em;
   }
-  /* line 1801, ../sass/theme/_page_specific.scss */
+  /* line 1805, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .paragraphs-item-paragraph-text-with-anchor .field-name-field-header-text {
     font-weight: bold;
     text-transform: none;
@@ -5113,26 +5117,26 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     color: #474F5E;
     margin-bottom: 40px;
   }
-  /* line 1812, ../sass/theme/_page_specific.scss */
+  /* line 1816, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor #peacetalk {
     border-top: 1px solid #59C2ED;
     padding-top: 4em;
     margin-bottom: -40px;
   }
-  /* line 1816, ../sass/theme/_page_specific.scss */
+  /* line 1820, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor #peacetalk .field-name-field-image {
     float: right;
     margin-left: 2em;
   }
-  /* line 1822, ../sass/theme/_page_specific.scss */
+  /* line 1826, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor #hackathon {
     margin-top: -20px;
   }
-  /* line 1826, ../sass/theme/_page_specific.scss */
+  /* line 1830, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor #project {
     margin-top: 2em;
   }
-  /* line 1831, ../sass/theme/_page_specific.scss */
+  /* line 1835, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .project-box:before {
     content: "Sponsorship Opportunities";
     display: block;
@@ -5145,24 +5149,24 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 40px;
     width: 300px;
   }
-  /* line 1845, ../sass/theme/_page_specific.scss */
+  /* line 1849, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .hackathon-box {
     float: left !important;
   }
-  /* line 1847, ../sass/theme/_page_specific.scss */
+  /* line 1851, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .hackathon-box .paragraphs-item-light-grey-text-box-with-link-to {
     padding: 0;
   }
-  /* line 1849, ../sass/theme/_page_specific.scss */
+  /* line 1853, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .hackathon-box .paragraphs-item-light-grey-text-box-with-link-to a {
     margin-right: 0;
   }
-  /* line 1859, ../sass/theme/_page_specific.scss */
+  /* line 1863, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons {
     width: 752px;
     margin-top: 1em;
   }
-  /* line 1864, ../sass/theme/_page_specific.scss */
+  /* line 1868, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #visit-sponsors-link {
     display: block;
     float: left;
@@ -5176,12 +5180,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 10px 20px;
     height: 110px;
   }
-  /* line 1876, ../sass/theme/_page_specific.scss */
+  /* line 1880, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #visit-sponsors-link span {
     display: block;
     font-weight: 300;
   }
-  /* line 1882, ../sass/theme/_page_specific.scss */
+  /* line 1886, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #download-sponsor-link {
     display: block;
     float: left;
@@ -5195,24 +5199,24 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 10px 20px;
     height: 110px;
   }
-  /* line 1894, ../sass/theme/_page_specific.scss */
+  /* line 1898, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #download-sponsor-link span {
     display: block;
     font-weight: 300;
   }
 
   /* Team - Node */
-  /* line 1910, ../sass/theme/_page_specific.scss */
+  /* line 1914, ../sass/theme/_page_specific.scss */
   body.node-type-team h1#page-title {
     display: none;
   }
-  /* line 1914, ../sass/theme/_page_specific.scss */
+  /* line 1918, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-row {
     display: block;
     float: left;
     width: 752px;
   }
-  /* line 1916, ../sass/theme/_page_specific.scss */
+  /* line 1920, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-team-image {
     width: 274px;
     float: left;
@@ -5220,7 +5224,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-right: 2em;
     margin-top: 94px;
   }
-  /* line 1924, ../sass/theme/_page_specific.scss */
+  /* line 1928, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-title {
     font-size: 3em;
     color: #59C2ED;
@@ -5231,7 +5235,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     float: right;
     line-height: 28px;
   }
-  /* line 1935, ../sass/theme/_page_specific.scss */
+  /* line 1939, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-team-title {
     display: block;
     font-style: italic;
@@ -5240,7 +5244,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     width: 444px;
     float: right;
   }
-  /* line 1944, ../sass/theme/_page_specific.scss */
+  /* line 1948, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-team-bio {
     display: block;
     font-size: 1.1em;
@@ -5252,23 +5256,23 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-top: 2em;
     float: right;
   }
-  /* line 1957, ../sass/theme/_page_specific.scss */
+  /* line 1961, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-email {
     display: block;
     float: right;
     width: 444px;
   }
-  /* line 1961, ../sass/theme/_page_specific.scss */
+  /* line 1965, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-email a {
     color: #414042;
   }
-  /* line 1964, ../sass/theme/_page_specific.scss */
+  /* line 1968, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-email span.views-label {
     display: block;
     float: left;
     padding-right: 8px;
   }
-  /* line 1971, ../sass/theme/_page_specific.scss */
+  /* line 1975, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-nothing {
     display: block;
     float: right;
@@ -5276,71 +5280,71 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 10px;
     font-weight: 600;
   }
-  /* line 1979, ../sass/theme/_page_specific.scss */
+  /* line 1983, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-facebook-link {
     display: block;
     float: right;
     width: 444px;
   }
-  /* line 1983, ../sass/theme/_page_specific.scss */
+  /* line 1987, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-facebook-link a {
     color: #414042;
   }
-  /* line 1986, ../sass/theme/_page_specific.scss */
+  /* line 1990, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-facebook-link span.views-label {
     display: block;
     float: left;
     padding-right: 8px;
   }
-  /* line 1993, ../sass/theme/_page_specific.scss */
+  /* line 1997, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-twitter-link {
     display: block;
     float: right;
     width: 444px;
   }
-  /* line 1997, ../sass/theme/_page_specific.scss */
+  /* line 2001, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-twitter-link a {
     color: #414042;
   }
-  /* line 2000, ../sass/theme/_page_specific.scss */
+  /* line 2004, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-twitter-link span.views-label {
     display: block;
     float: left;
     padding-right: 8px;
   }
-  /* line 2007, ../sass/theme/_page_specific.scss */
+  /* line 2011, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-github-link {
     display: block;
     float: right;
     width: 444px;
   }
-  /* line 2011, ../sass/theme/_page_specific.scss */
+  /* line 2015, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-github-link a {
     color: #414042;
   }
-  /* line 2014, ../sass/theme/_page_specific.scss */
+  /* line 2018, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-github-link span.views-label {
     display: block;
     float: left;
     padding-right: 8px;
   }
-  /* line 2021, ../sass/theme/_page_specific.scss */
+  /* line 2025, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-linkedin-link {
     display: block;
     float: right;
     width: 444px;
   }
-  /* line 2025, ../sass/theme/_page_specific.scss */
+  /* line 2029, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-linkedin-link a {
     color: #414042;
   }
-  /* line 2028, ../sass/theme/_page_specific.scss */
+  /* line 2032, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-linkedin-link span.views-label {
     display: block;
     float: left;
     padding-right: 8px;
   }
-  /* line 2037, ../sass/theme/_page_specific.scss */
+  /* line 2041, ../sass/theme/_page_specific.scss */
   body.node-type-team #content {
     min-height: 700px !important;
     padding-bottom: 6em;
