@@ -48,10 +48,9 @@ function amani_team_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'list',
           'settings' => array(),
-          'type' => 'list_default',
-          'weight' => 14,
+          'type' => 'hidden',
+          'weight' => '8',
         ),
         'ical' => array(
           'label' => 'above',
@@ -225,7 +224,7 @@ function amani_team_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '8',
+          'weight' => '9',
         ),
         'ical' => array(
           'label' => 'above',
@@ -369,11 +368,11 @@ function amani_team_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => 9,
+          'weight' => '8',
         ),
         'ical' => array(
           'label' => 'above',
@@ -390,7 +389,7 @@ function amani_team_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_facebook_link',
-      'label' => 'Facebook Link',
+      'label' => 'Facebook',
       'required' => 0,
       'settings' => array(
         'attributes' => array(
@@ -458,11 +457,11 @@ function amani_team_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => 12,
+          'weight' => '11',
         ),
         'ical' => array(
           'label' => 'above',
@@ -479,7 +478,7 @@ function amani_team_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_github_link',
-      'label' => 'Github Link',
+      'label' => 'Github',
       'required' => 0,
       'settings' => array(
         'attributes' => array(
@@ -548,10 +547,9 @@ function amani_team_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'list',
           'settings' => array(),
-          'type' => 'list_default',
-          'weight' => 13,
+          'type' => 'hidden',
+          'weight' => '7',
         ),
         'ical' => array(
           'label' => 'above',
@@ -622,11 +620,11 @@ function amani_team_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => 11,
+          'weight' => '10',
         ),
         'ical' => array(
           'label' => 'above',
@@ -643,7 +641,7 @@ function amani_team_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_linkedin_link',
-      'label' => 'LinkedIn Link',
+      'label' => 'LinkedIn',
       'required' => 0,
       'settings' => array(
         'attributes' => array(
@@ -1350,11 +1348,11 @@ Prof.',
       'description' => 'Use your twitter @handle for the link title.',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => 10,
+          'weight' => '9',
         ),
         'ical' => array(
           'label' => 'above',
@@ -1371,7 +1369,7 @@ Prof.',
       ),
       'entity_type' => 'node',
       'field_name' => 'field_twitter_link',
-      'label' => 'Twitter Link',
+      'label' => 'Twitter',
       'required' => 0,
       'settings' => array(
         'attributes' => array(
@@ -1408,16 +1406,16 @@ Prof.',
   t('Display on Team Page?');
   t('Display ranking');
   t('Email');
-  t('Facebook Link');
-  t('Github Link');
-  t('LinkedIn Link');
+  t('Facebook');
+  t('Github');
+  t('LinkedIn');
   t('Name');
   t('Phone');
   t('Photo');
   t('Please choose a display ranking, lower values float to the top of the list.');
   t('Position');
   t('Team member type');
-  t('Twitter Link');
+  t('Twitter');
   t('Use your twitter @handle for the link title.');
   t('Volunteer?');
 

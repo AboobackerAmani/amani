@@ -29,6 +29,10 @@ function amani_team_field_group_info() {
       3 => 'field_team_bio',
       4 => 'field_team_member_type',
       5 => 'field_team_title',
+      6 => 'field_facebook_link',
+      7 => 'field_twitter_link',
+      8 => 'field_linkedin_link',
+      9 => 'field_github_link',
     ),
     'format_type' => 'div',
     'format_settings' => array(
