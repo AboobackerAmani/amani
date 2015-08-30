@@ -129,9 +129,86 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['sorts']['title']['field'] = 'title';
 
   /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler = $view->new_display('page', 'Page', 'all_projects_page');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'pastprojects';
+  $handler->display->display_options['defaults']['exposed_form'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Filter Your Search';
+  $handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'allow_secondary' => 0,
+      'secondary_label' => 'Advanced options',
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
+    'field_project_tags_tid' => array(
+      'bef_format' => 'bef',
+      'more_options' => array(
+        'bef_select_all_none' => 0,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            1 => 'vocabulary',
+            'secondary_label' => NULL,
+            'collapsible_label' => NULL,
+            'combine_rewrite' => NULL,
+            'reset_label' => NULL,
+            'bef_filter_description' => NULL,
+            'any_label' => NULL,
+            'filter_rewrite_values' => NULL,
+          ),
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+          'filter_rewrite_values' => NULL,
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+        ),
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'filter_rewrite_values' => NULL,
+      ),
+      'secondary_label' => NULL,
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
+    'secondary_label' => NULL,
+    'collapsible_label' => NULL,
+    'combine_rewrite' => NULL,
+    'reset_label' => NULL,
+    'bef_filter_description' => NULL,
+    'any_label' => NULL,
+    'filter_rewrite_values' => NULL,
+  );
+  $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
+  $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'wysiwyg_advanced';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'load_more';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
@@ -140,13 +217,54 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['pager']['options']['effects']['type'] = 'fade';
   $handler->display->display_options['pager']['options']['effects']['speed'] = 'fast';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: View (Views field view) */
+  $handler->display->display_options['header']['view_field']['id'] = 'view_field';
+  $handler->display->display_options['header']['view_field']['table'] = 'views';
+  $handler->display->display_options['header']['view_field']['field'] = 'view_field';
+  $handler->display->display_options['header']['view_field']['label'] = '';
+  $handler->display->display_options['header']['view_field']['element_label_colon'] = FALSE;
+  $handler->display->display_options['header']['view_field']['view'] = 'peace_geeks_projects';
+  $handler->display->display_options['header']['view_field']['display'] = 'random_partner_quotes';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['content'] = '<a id="apply-today-button">Apply Today...</a><a id="donate-button">Donate</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a id="apply-today-button" href="/generalapplication">Apply Today<span>and become a PeaceGeek</span></a><a id="faq-button" href="/faq">F.A.Q</a>';
   $handler->display->display_options['footer']['area']['format'] = 'php_code';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Project Image */
+  $handler->display->display_options['fields']['field_project_image']['id'] = 'field_project_image';
+  $handler->display->display_options['fields']['field_project_image']['table'] = 'field_data_field_project_image';
+  $handler->display->display_options['fields']['field_project_image']['field'] = 'field_project_image';
+  $handler->display->display_options['fields']['field_project_image']['label'] = '';
+  $handler->display->display_options['fields']['field_project_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_project_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_project_image']['settings'] = array(
+    'image_style' => 'project_card_image',
+    'image_link' => 'content',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Project Tags */
+  $handler->display->display_options['fields']['field_project_tags']['id'] = 'field_project_tags';
+  $handler->display->display_options['fields']['field_project_tags']['table'] = 'field_data_field_project_tags';
+  $handler->display->display_options['fields']['field_project_tags']['field'] = 'field_project_tags';
+  $handler->display->display_options['fields']['field_project_tags']['label'] = '';
+  $handler->display->display_options['fields']['field_project_tags']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_project_tags']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_project_tags']['multi_type'] = 'ol';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -163,7 +281,27 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'projects' => 'projects',
   );
-  $handler->display->display_options['path'] = 'allprojects';
+  /* Filter criterion: Content: Project Tags (field_project_tags) */
+  $handler->display->display_options['filters']['field_project_tags_tid']['id'] = 'field_project_tags_tid';
+  $handler->display->display_options['filters']['field_project_tags_tid']['table'] = 'field_data_field_project_tags';
+  $handler->display->display_options['filters']['field_project_tags_tid']['field'] = 'field_project_tags_tid';
+  $handler->display->display_options['filters']['field_project_tags_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_project_tags_tid']['expose']['operator_id'] = 'field_project_tags_tid_op';
+  $handler->display->display_options['filters']['field_project_tags_tid']['expose']['label'] = 'Theme';
+  $handler->display->display_options['filters']['field_project_tags_tid']['expose']['operator'] = 'field_project_tags_tid_op';
+  $handler->display->display_options['filters']['field_project_tags_tid']['expose']['identifier'] = 'field_project_tags_tid';
+  $handler->display->display_options['filters']['field_project_tags_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_project_tags_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    5 => 0,
+    6 => 0,
+    4 => 0,
+  );
+  $handler->display->display_options['filters']['field_project_tags_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_project_tags_tid']['vocabulary'] = 'tags';
+  $handler->display->display_options['path'] = 'projects';
 
   /* Display: Project Partners Node Override */
   $handler = $view->new_display('block', 'Project Partners Node Override', 'project_partners_node_override');
@@ -243,6 +381,8 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['fields']['field_proj_partners_testimonial']['alter']['text'] = '[field_proj_partners_testimonial]
 <div id="proj-testimonial-author">[field_testimonial_author]</div>';
   $handler->display->display_options['fields']['field_proj_partners_testimonial']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_proj_partners_testimonial']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_proj_partners_testimonial']['empty_zero'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -548,6 +688,72 @@ function peace_geeks_project_partners_views_default_views() {
     'projects' => 'projects',
   );
   $handler->display->display_options['block_description'] = 'PG Project Node Override';
+
+  /* Display: Quotes Block */
+  $handler = $view->new_display('block', 'Quotes Block', 'random_partner_quotes');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Quotes Block';
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Testimonial Author */
+  $handler->display->display_options['fields']['field_testimonial_author']['id'] = 'field_testimonial_author';
+  $handler->display->display_options['fields']['field_testimonial_author']['table'] = 'field_data_field_testimonial_author';
+  $handler->display->display_options['fields']['field_testimonial_author']['field'] = 'field_testimonial_author';
+  $handler->display->display_options['fields']['field_testimonial_author']['label'] = '';
+  $handler->display->display_options['fields']['field_testimonial_author']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_testimonial_author']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_testimonial_author']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_testimonial_author']['click_sort_column'] = 'title';
+  $handler->display->display_options['fields']['field_testimonial_author']['settings'] = array(
+    'format' => 'default',
+    'markup' => 0,
+    'output' => 'default',
+    'multiple' => 'default',
+    'multiple_delimiter' => ', ',
+    'multiple_and' => 'text',
+    'multiple_delimiter_precedes_last' => 'never',
+    'multiple_el_al_min' => '3',
+    'multiple_el_al_first' => '1',
+  );
+  /* Field: Content: Testimonial */
+  $handler->display->display_options['fields']['field_proj_partners_testimonial']['id'] = 'field_proj_partners_testimonial';
+  $handler->display->display_options['fields']['field_proj_partners_testimonial']['table'] = 'field_data_field_proj_partners_testimonial';
+  $handler->display->display_options['fields']['field_proj_partners_testimonial']['field'] = 'field_proj_partners_testimonial';
+  $handler->display->display_options['fields']['field_proj_partners_testimonial']['label'] = '';
+  $handler->display->display_options['fields']['field_proj_partners_testimonial']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_proj_partners_testimonial']['alter']['text'] = '[field_proj_partners_testimonial]
+<div id="proj-testimonial-author">[field_testimonial_author], [title]</div>';
+  $handler->display->display_options['fields']['field_proj_partners_testimonial']['element_label_colon'] = FALSE;
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['text'] = 'here.';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div id="learn-more-partnership">Learn more about the partnership with [title] [view_node]</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['block_description'] = 'PG Random Partner Quotes Block';
   $translatables['peace_geeks_projects'] = array(
     t('Master'),
     t('Peace Geeks Projects'),
@@ -568,7 +774,11 @@ function peace_geeks_project_partners_views_default_views() {
     t('last »'),
     t('Load more'),
     t('Page'),
-    t('<a id="apply-today-button">Apply Today...</a><a id="donate-button">Donate</a>'),
+    t('Filter Your Search'),
+    t('Advanced options'),
+    t('Select any filter and click on Apply to see results'),
+    t('<a id="apply-today-button" href="/generalapplication">Apply Today<span>and become a PeaceGeek</span></a><a id="faq-button" href="/faq">F.A.Q</a>'),
+    t('Theme'),
     t('Project Partners Node Override'),
     t('<a id="apply-today-button" href="/volunteer">Apply Today...</a><a id="donate-button" href="/donate">Donate</a>'),
     t('Crisis Overview'),
@@ -604,6 +814,12 @@ function peace_geeks_project_partners_views_default_views() {
     t('Project Problem'),
     t('How We Helped'),
     t('PG Project Node Override'),
+    t('Quotes Block'),
+    t('[field_proj_partners_testimonial]
+<div id="proj-testimonial-author">[field_testimonial_author], [title]</div>'),
+    t('here.'),
+    t('<div id="learn-more-partnership">Learn more about the partnership with [title] [view_node]</div>'),
+    t('PG Random Partner Quotes Block'),
   );
   $export['peace_geeks_projects'] = $view;
 
