@@ -27,7 +27,7 @@ foreach($nodes as $node) {
         $image_link = $node->field_image_link[LANGUAGE_NONE][0][url];
         $link_target = $node->field_image_link[LANGUAGE_NONE][0][target];
         print_r($node->field_image_link);
-        exit();
+        //exit();
         $html_image='<a href="'.$image_link.'" target="'.$link_target.'"><img src="'.$styled_image.'"></a>';
     }
     else {
