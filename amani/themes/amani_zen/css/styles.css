@@ -4388,7 +4388,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     display: block;
   }
 
-  /* Past Projects */
+  /* Project Partners (Partner content type) node override */
   /* line 1054, ../sass/theme/_page_specific.scss */
   body.node-type-project-partners #main {
     padding-top: 50px;
@@ -4706,27 +4706,283 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     content: "#";
   }
 
+  /* Project  node override */
+  /* line 1395, ../sass/theme/_page_specific.scss */
+  body.node-type-projects #main {
+    padding-top: 50px;
+    padding-bottom: 7em;
+  }
+  /* line 1400, ../sass/theme/_page_specific.scss */
+  body.node-type-projects a#apply-today-button {
+    display: block;
+    float: left;
+    background: #474F5E;
+    color: white;
+    font-weight: 600;
+    padding: 20px;
+    height: 120px;
+    width: 300px;
+    margin-right: 20px;
+    font-size: 18px;
+    margin-bottom: 4px;
+    margin-top: 30px;
+  }
+  /* line 1413, ../sass/theme/_page_specific.scss */
+  body.node-type-projects a#apply-today-button:after {
+    content: "become a PeaceGeek!";
+    font-weight: 300;
+    display: block;
+    padding-top: 4px;
+    color: #E6E6E6;
+  }
+  /* line 1422, ../sass/theme/_page_specific.scss */
+  body.node-type-projects a#donate-button {
+    display: block;
+    float: left;
+    background: #F09416;
+    color: white;
+    font-weight: 600;
+    padding: 20px;
+    height: 120px;
+    width: 300px;
+    margin-right: 0;
+    font-size: 18px;
+    margin-bottom: 4px;
+    margin-top: 30px;
+  }
+  /* line 1435, ../sass/theme/_page_specific.scss */
+  body.node-type-projects a#donate-button:after {
+    content: "to PeaceGeeks";
+    font-weight: 300;
+    display: block;
+    padding-top: 4px;
+  }
+  /* line 1443, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 {
+    display: block;
+    width: 100%;
+  }
+  /* line 1447, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content {
+    display: block;
+    z-index: 10;
+    position: relative;
+    padding-left: 3000px;
+    margin-left: -3000px;
+    padding-right: 3000px;
+    margin-right: -3000px;
+    height: 300px;
+    background: #59C2ED;
+    overflow: hidden;
+  }
+  /* line 1460, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content .views-row {
+    display: block;
+    width: 980px;
+    margin: 0 auto;
+    height: 300px;
+    position: relative;
+    padding: 40px 20px;
+  }
+  /* line 1468, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content .views-row .views-field-view-node {
+    margin-top: 10px;
+  }
+  /* line 1471, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content .views-row a {
+    color: #414042;
+    text-decoration: underline;
+  }
+  /* line 1476, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content .views-row .views-label {
+    display: inline;
+    float: left;
+    padding-right: 6px;
+  }
+  /* line 1482, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content .views-row .views-field {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  /* line 1490, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content .views-row .views-field-field-proj-partners-location .locality-block {
+    display: inline;
+    float: left;
+  }
+  /* line 1494, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content .views-row .views-field-field-proj-partners-location .country {
+    display: inline;
+    padding-left: 6px;
+  }
+  /* line 1503, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content .views-row .views-field-field-proj-partners-url a {
+    color: #414042;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    margin-top: 8px;
+    display: block;
+  }
+  /* line 1517, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content .views-row .views-field-field-project-date {
+    margin-top: 10px;
+  }
+  /* line 1521, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content .views-row .views-field-title {
+    color: white;
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    margin-top: 1em;
+  }
+  /* line 1534, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content .views-row .views-field-field-partner-one-liner {
+    color: white;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 300;
+    display: none;
+  }
+  /* line 1543, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content .views-row .views-field-nothing h3 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  /* line 1554, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content .views-row .views-field-field-project-tags {
+    display: block;
+    right: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: .6em;
+  }
+  /* line 1561, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content .views-row .views-field-field-project-tags .views-label {
+    text-transform: uppercase;
+    color: #9a9a9a;
+    display: inline;
+  }
+  /* line 1568, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content .views-row .views-field-field-project-tags ol {
+    text-align: right;
+    margin: 0 0 -5px 0;
+  }
+  /* line 1571, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content .views-row .views-field-field-project-tags ol li {
+    list-style-type: none;
+    display: inline;
+  }
+  /* line 1574, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content .views-row .views-field-field-project-tags ol li a {
+    background: #E6E6E6;
+    color: #414042;
+    font-style: italic;
+    padding: 4px 14px;
+    margin-left: 8px;
+    text-decoration: none;
+  }
+  /* line 1581, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-id-peace_geeks_projects.view-display-id-block_1 .view-content .views-row .views-field-field-project-tags ol li a:before {
+    content: "#";
+  }
+  /* line 1593, ../sass/theme/_page_specific.scss */
+  body.node-type-projects #main {
+    padding-top: 50px;
+  }
+  /* line 1595, ../sass/theme/_page_specific.scss */
+  body.node-type-projects h1#page-title {
+    display: none;
+  }
+  /* line 1601, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-peace-geeks-projects.view-display-id-project_node_override .views-row .views-label {
+    font-size: 1.4em;
+    text-transform: uppercase;
+    color: #414042;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  /* line 1611, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-peace-geeks-projects.view-display-id-project_node_override .views-row .views-field-field-image-caption {
+    display: block;
+    background: #59C2ED;
+    width: 100%;
+    float: left;
+    color: white;
+    height: 60px;
+    margin-top: -25px;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 40px !important;
+  }
+  /* line 1625, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-peace-geeks-projects.view-display-id-project_node_override .views-row .views-field-field-project-image {
+    margin-bottom: 4em;
+  }
+  /* line 1629, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-peace-geeks-projects.view-display-id-project_node_override .views-row .views-field {
+    margin-bottom: 20px;
+    display: block;
+    float: left;
+  }
+  /* line 1633, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-peace-geeks-projects.view-display-id-project_node_override .views-row .views-field h3 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  /* line 1642, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-peace-geeks-projects.view-display-id-project_node_override .views-row .views-field-field-peacegeeks-contributions {
+    border-top: 1px solid #59C2ED;
+    padding-top: 20px;
+    margin-top: 20px;
+    margin-bottom: -40px;
+  }
+  /* line 1650, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-peace-geeks-projects.view-display-id-project_node_override .views-row .field-content {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  /* line 1653, ../sass/theme/_page_specific.scss */
+  body.node-type-projects .view-peace-geeks-projects.view-display-id-project_node_override .views-row .field-content p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
   /* Become a Volunteer */
-  /* line 1396, ../sass/theme/_page_specific.scss */
+  /* line 1669, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer #main {
     padding-top: 50px;
     padding-bottom: 6em;
   }
-  /* line 1398, ../sass/theme/_page_specific.scss */
+  /* line 1671, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .paragraphs-item-raw-block {
     font-size: 1.2em;
     line-height: 1.6em;
     color: #414042;
   }
-  /* line 1402, ../sass/theme/_page_specific.scss */
+  /* line 1675, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .paragraphs-item-raw-block p {
     margin-bottom: 1em;
   }
-  /* line 1407, ../sass/theme/_page_specific.scss */
+  /* line 1680, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .paragraphs-items-field-paragraphs {
     margin-top: 0;
   }
-  /* line 1411, ../sass/theme/_page_specific.scss */
+  /* line 1684, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block {
     display: block;
     z-index: 10;
@@ -4739,23 +4995,23 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     background: #E6E6E6;
     overflow: hidden;
   }
-  /* line 1423, ../sass/theme/_page_specific.scss */
+  /* line 1696, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .view-content {
     width: 980px;
     margin-left: -114px;
   }
-  /* line 1428, ../sass/theme/_page_specific.scss */
+  /* line 1701, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-team-image {
     position: absolute;
     bottom: 0;
     margin-bottom: -4px;
   }
-  /* line 1434, ../sass/theme/_page_specific.scss */
+  /* line 1707, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-title {
     margin-left: 300px;
     margin-top: 50px;
   }
-  /* line 1437, ../sass/theme/_page_specific.scss */
+  /* line 1710, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-title .views-label {
     display: block;
     font-size: 18px;
@@ -4764,7 +5020,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     letter-spacing: 1px;
     margin-bottom: 16px;
   }
-  /* line 1447, ../sass/theme/_page_specific.scss */
+  /* line 1720, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-title .field-content {
     font-size: 28px;
     font-weight: 600;
@@ -4772,17 +5028,17 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 30px;
     display: block;
   }
-  /* line 1457, ../sass/theme/_page_specific.scss */
+  /* line 1730, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-team-bio {
     font-size: 1.2em;
     line-height: 1.6em;
     margin-left: 300px;
   }
-  /* line 1463, ../sass/theme/_page_specific.scss */
+  /* line 1736, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-amani-tags {
     padding: 10px 20px 0 20px;
   }
-  /* line 1465, ../sass/theme/_page_specific.scss */
+  /* line 1738, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-amani-tags ol {
     display: block;
     position: absolute;
@@ -4790,7 +5046,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: -4px;
     margin-left: 300px;
   }
-  /* line 1471, ../sass/theme/_page_specific.scss */
+  /* line 1744, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-amani-tags ol li {
     list-style-type: none;
     display: block;
@@ -4798,7 +5054,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-right: 16px;
     margin-bottom: 4px;
   }
-  /* line 1477, ../sass/theme/_page_specific.scss */
+  /* line 1750, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-amani-tags ol li a {
     display: inline-block;
     background: white;
@@ -4808,20 +5064,20 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 14px;
     font-weight: normal;
   }
-  /* line 1485, ../sass/theme/_page_specific.scss */
+  /* line 1758, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-amani-tags ol li a:before {
     content: "#";
   }
-  /* line 1494, ../sass/theme/_page_specific.scss */
+  /* line 1767, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block {
     margin-top: -2em;
   }
-  /* line 1498, ../sass/theme/_page_specific.scss */
+  /* line 1771, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .view-header h3 {
     font-size: 1.4em;
     letter-spacing: 1px;
   }
-  /* line 1504, ../sass/theme/_page_specific.scss */
+  /* line 1777, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-title a {
     color: #414042;
     font-size: 1.4em;
@@ -4832,12 +5088,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     letter-spacing: 1px;
     font-weight: 600;
   }
-  /* line 1516, ../sass/theme/_page_specific.scss */
+  /* line 1789, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-body {
     font-size: 1.2em;
     line-height: 1.6em;
   }
-  /* line 1522, ../sass/theme/_page_specific.scss */
+  /* line 1795, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block ol > li {
     list-style-type: none;
     display: block;
@@ -4849,22 +5105,22 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 34px 20px;
     position: relative;
   }
-  /* line 1534, ../sass/theme/_page_specific.scss */
+  /* line 1807, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block ol > li:nth-child(3) {
     margin-right: 0;
   }
-  /* line 1541, ../sass/theme/_page_specific.scss */
+  /* line 1814, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-field-opportunity-tags {
     padding: 0;
   }
-  /* line 1543, ../sass/theme/_page_specific.scss */
+  /* line 1816, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-field-opportunity-tags ul {
     display: block;
     position: absolute;
     bottom: 0;
     margin-bottom: -4px;
   }
-  /* line 1548, ../sass/theme/_page_specific.scss */
+  /* line 1821, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-field-opportunity-tags ul li {
     list-style-type: none;
     display: block;
@@ -4873,7 +5129,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 4px;
     margin-top: 4px;
   }
-  /* line 1555, ../sass/theme/_page_specific.scss */
+  /* line 1828, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-field-opportunity-tags ul li a {
     display: inline-block;
     background: white;
@@ -4883,11 +5139,11 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 13px;
     font-weight: normal;
   }
-  /* line 1563, ../sass/theme/_page_specific.scss */
+  /* line 1836, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-field-opportunity-tags ul li a:before {
     content: "#";
   }
-  /* line 1574, ../sass/theme/_page_specific.scss */
+  /* line 1847, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons {
     display: block;
     float: left;
@@ -4895,7 +5151,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 60px;
     margin-top: -10px;
   }
-  /* line 1582, ../sass/theme/_page_specific.scss */
+  /* line 1855, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons #volunteer-general-app-link {
     display: block;
     float: left;
@@ -4909,12 +5165,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 10px 20px;
     height: 110px;
   }
-  /* line 1594, ../sass/theme/_page_specific.scss */
+  /* line 1867, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons #volunteer-general-app-link span {
     display: block;
     font-weight: 300;
   }
-  /* line 1600, ../sass/theme/_page_specific.scss */
+  /* line 1873, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons #volunteer-current-openings-link {
     display: block;
     float: left;
@@ -4928,18 +5184,18 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 10px 20px;
     height: 110px;
   }
-  /* line 1612, ../sass/theme/_page_specific.scss */
+  /* line 1885, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons #volunteer-current-openings-link span {
     display: block;
     font-weight: 300;
   }
 
   /* Current Openings */
-  /* line 1626, ../sass/theme/_page_specific.scss */
+  /* line 1899, ../sass/theme/_page_specific.scss */
   body.page-currentopenings #main {
     padding-bottom: 6em;
   }
-  /* line 1630, ../sass/theme/_page_specific.scss */
+  /* line 1903, ../sass/theme/_page_specific.scss */
   body.page-currentopenings h1#page-title {
     font-weight: 600;
     font-size: 1.6em;
@@ -4948,7 +5204,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     letter-spacing: 1px;
     margin-bottom: 30px;
   }
-  /* line 1641, ../sass/theme/_page_specific.scss */
+  /* line 1914, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-title {
     margin-left: -40px;
     color: #414042;
@@ -4958,21 +5214,21 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 16px;
     cursor: pointer;
   }
-  /* line 1649, ../sass/theme/_page_specific.scss */
+  /* line 1922, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-title .views-label {
     padding-right: 24px;
     font-size: 36px;
     display: block;
     float: left;
   }
-  /* line 1657, ../sass/theme/_page_specific.scss */
+  /* line 1930, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-body {
     font-size: 1.2em;
     line-height: 1.6em;
     margin-left: -8px;
     margin-bottom: 10px;
   }
-  /* line 1664, ../sass/theme/_page_specific.scss */
+  /* line 1937, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .view-footer {
     display: block;
     float: left;
@@ -4980,7 +5236,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-top: 80px;
     margin-bottom: 20px;
   }
-  /* line 1672, ../sass/theme/_page_specific.scss */
+  /* line 1945, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page #current-openings-general-application {
     display: block;
     float: left;
@@ -4994,12 +5250,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 20px 20px 10px 20px;
     height: 110px;
   }
-  /* line 1684, ../sass/theme/_page_specific.scss */
+  /* line 1957, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page #current-openings-general-application span {
     display: block;
     font-weight: 300;
   }
-  /* line 1690, ../sass/theme/_page_specific.scss */
+  /* line 1963, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page #current-openings-bottom-text {
     display: block;
     float: left;
@@ -5010,18 +5266,18 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 1.2em;
     line-height: 1.6em;
   }
-  /* line 1701, ../sass/theme/_page_specific.scss */
+  /* line 1974, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags {
     padding-top: 30px;
   }
-  /* line 1703, ../sass/theme/_page_specific.scss */
+  /* line 1976, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags ol {
     display: block;
     position: absolute;
     bottom: 0;
     margin-bottom: -4px;
   }
-  /* line 1708, ../sass/theme/_page_specific.scss */
+  /* line 1981, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags ol li {
     list-style-type: none;
     display: block;
@@ -5029,7 +5285,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-right: 6px;
     margin-bottom: 4px;
   }
-  /* line 1714, ../sass/theme/_page_specific.scss */
+  /* line 1987, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags ol li a {
     display: inline-block;
     background: white;
@@ -5039,12 +5295,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 14px;
     font-weight: normal;
   }
-  /* line 1722, ../sass/theme/_page_specific.scss */
+  /* line 1995, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags ol li a:before {
     content: "#";
     font-style: italic;
   }
-  /* line 1732, ../sass/theme/_page_specific.scss */
+  /* line 2005, ../sass/theme/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page ol li.views-row {
     list-style-type: none;
     display: block;
@@ -5062,24 +5318,24 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   }
 
   /* Become a Corporate Sponsor */
-  /* line 1759, ../sass/theme/_page_specific.scss */
+  /* line 2032, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor h1#page-title {
     display: none;
   }
-  /* line 1761, ../sass/theme/_page_specific.scss */
+  /* line 2034, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .anchor-link-to-box {
     float: left !important;
     position: relative;
   }
-  /* line 1766, ../sass/theme/_page_specific.scss */
+  /* line 2039, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .anchor-link-to-box .paragraphs-item-light-grey-text-box-with-link-to {
     padding: 0;
   }
-  /* line 1770, ../sass/theme/_page_specific.scss */
+  /* line 2043, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .anchor-link-to-box .paragraphs-item-light-grey-text-box-with-link-to .field-type-link-field .field-item {
     position: relative;
   }
-  /* line 1772, ../sass/theme/_page_specific.scss */
+  /* line 2045, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .anchor-link-to-box .paragraphs-item-light-grey-text-box-with-link-to .field-type-link-field .field-item a {
     width: 234px;
     display: block;
@@ -5095,21 +5351,21 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-weight: 600;
     margin-bottom: 3em;
   }
-  /* line 1790, ../sass/theme/_page_specific.scss */
+  /* line 2063, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .anchor-link-to-box .paragraphs-item-light-grey-text-box-with-link-to .field-name-field-image {
     margin-bottom: -5px;
   }
-  /* line 1797, ../sass/theme/_page_specific.scss */
+  /* line 2070, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .paragraphs-item-paragraph-text-with-anchor {
     border-top: 0;
     padding-top: 0;
   }
-  /* line 1801, ../sass/theme/_page_specific.scss */
+  /* line 2074, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .paragraphs-item-paragraph-text-with-anchor .field-name-field-image {
     float: left;
     margin-right: 2em;
   }
-  /* line 1805, ../sass/theme/_page_specific.scss */
+  /* line 2078, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .paragraphs-item-paragraph-text-with-anchor .field-name-field-header-text {
     font-weight: bold;
     text-transform: none;
@@ -5117,26 +5373,26 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     color: #474F5E;
     margin-bottom: 40px;
   }
-  /* line 1816, ../sass/theme/_page_specific.scss */
+  /* line 2089, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor #peacetalk {
     border-top: 1px solid #59C2ED;
     padding-top: 4em;
     margin-bottom: -40px;
   }
-  /* line 1820, ../sass/theme/_page_specific.scss */
+  /* line 2093, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor #peacetalk .field-name-field-image {
     float: right;
     margin-left: 2em;
   }
-  /* line 1826, ../sass/theme/_page_specific.scss */
+  /* line 2099, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor #hackathon {
     margin-top: -20px;
   }
-  /* line 1830, ../sass/theme/_page_specific.scss */
+  /* line 2103, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor #project {
     margin-top: 2em;
   }
-  /* line 1835, ../sass/theme/_page_specific.scss */
+  /* line 2108, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .project-box:before {
     content: "Sponsorship Opportunities";
     display: block;
@@ -5149,24 +5405,24 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 40px;
     width: 300px;
   }
-  /* line 1849, ../sass/theme/_page_specific.scss */
+  /* line 2122, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .hackathon-box {
     float: left !important;
   }
-  /* line 1851, ../sass/theme/_page_specific.scss */
+  /* line 2124, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .hackathon-box .paragraphs-item-light-grey-text-box-with-link-to {
     padding: 0;
   }
-  /* line 1853, ../sass/theme/_page_specific.scss */
+  /* line 2126, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor .hackathon-box .paragraphs-item-light-grey-text-box-with-link-to a {
     margin-right: 0;
   }
-  /* line 1863, ../sass/theme/_page_specific.scss */
+  /* line 2136, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons {
     width: 752px;
     margin-top: 1em;
   }
-  /* line 1868, ../sass/theme/_page_specific.scss */
+  /* line 2141, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #visit-sponsors-link {
     display: block;
     float: left;
@@ -5180,12 +5436,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 10px 20px;
     height: 110px;
   }
-  /* line 1880, ../sass/theme/_page_specific.scss */
+  /* line 2153, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #visit-sponsors-link span {
     display: block;
     font-weight: 300;
   }
-  /* line 1886, ../sass/theme/_page_specific.scss */
+  /* line 2159, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #download-sponsor-link {
     display: block;
     float: left;
@@ -5199,24 +5455,24 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 10px 20px;
     height: 110px;
   }
-  /* line 1898, ../sass/theme/_page_specific.scss */
+  /* line 2171, ../sass/theme/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #download-sponsor-link span {
     display: block;
     font-weight: 300;
   }
 
   /* Team - Node */
-  /* line 1914, ../sass/theme/_page_specific.scss */
+  /* line 2187, ../sass/theme/_page_specific.scss */
   body.node-type-team h1#page-title {
     display: none;
   }
-  /* line 1918, ../sass/theme/_page_specific.scss */
+  /* line 2191, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-row {
     display: block;
     float: left;
     width: 752px;
   }
-  /* line 1920, ../sass/theme/_page_specific.scss */
+  /* line 2193, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-team-image {
     width: 274px;
     float: left;
@@ -5224,7 +5480,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-right: 2em;
     margin-top: 94px;
   }
-  /* line 1928, ../sass/theme/_page_specific.scss */
+  /* line 2201, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-title {
     font-size: 3em;
     color: #59C2ED;
@@ -5235,7 +5491,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     float: right;
     line-height: 28px;
   }
-  /* line 1939, ../sass/theme/_page_specific.scss */
+  /* line 2212, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-team-title {
     display: block;
     font-style: italic;
@@ -5244,7 +5500,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     width: 444px;
     float: right;
   }
-  /* line 1948, ../sass/theme/_page_specific.scss */
+  /* line 2221, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-team-bio {
     display: block;
     font-size: 1.1em;
@@ -5256,23 +5512,23 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-top: 2em;
     float: right;
   }
-  /* line 1961, ../sass/theme/_page_specific.scss */
+  /* line 2234, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-email {
     display: block;
     float: right;
     width: 444px;
   }
-  /* line 1965, ../sass/theme/_page_specific.scss */
+  /* line 2238, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-email a {
     color: #414042;
   }
-  /* line 1968, ../sass/theme/_page_specific.scss */
+  /* line 2241, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-email span.views-label {
     display: block;
     float: left;
     padding-right: 8px;
   }
-  /* line 1975, ../sass/theme/_page_specific.scss */
+  /* line 2248, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-nothing {
     display: block;
     float: right;
@@ -5280,71 +5536,71 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 10px;
     font-weight: 600;
   }
-  /* line 1983, ../sass/theme/_page_specific.scss */
+  /* line 2256, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-facebook-link {
     display: block;
     float: right;
     width: 444px;
   }
-  /* line 1987, ../sass/theme/_page_specific.scss */
+  /* line 2260, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-facebook-link a {
     color: #414042;
   }
-  /* line 1990, ../sass/theme/_page_specific.scss */
+  /* line 2263, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-facebook-link span.views-label {
     display: block;
     float: left;
     padding-right: 8px;
   }
-  /* line 1997, ../sass/theme/_page_specific.scss */
+  /* line 2270, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-twitter-link {
     display: block;
     float: right;
     width: 444px;
   }
-  /* line 2001, ../sass/theme/_page_specific.scss */
+  /* line 2274, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-twitter-link a {
     color: #414042;
   }
-  /* line 2004, ../sass/theme/_page_specific.scss */
+  /* line 2277, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-twitter-link span.views-label {
     display: block;
     float: left;
     padding-right: 8px;
   }
-  /* line 2011, ../sass/theme/_page_specific.scss */
+  /* line 2284, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-github-link {
     display: block;
     float: right;
     width: 444px;
   }
-  /* line 2015, ../sass/theme/_page_specific.scss */
+  /* line 2288, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-github-link a {
     color: #414042;
   }
-  /* line 2018, ../sass/theme/_page_specific.scss */
+  /* line 2291, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-github-link span.views-label {
     display: block;
     float: left;
     padding-right: 8px;
   }
-  /* line 2025, ../sass/theme/_page_specific.scss */
+  /* line 2298, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-linkedin-link {
     display: block;
     float: right;
     width: 444px;
   }
-  /* line 2029, ../sass/theme/_page_specific.scss */
+  /* line 2302, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-linkedin-link a {
     color: #414042;
   }
-  /* line 2032, ../sass/theme/_page_specific.scss */
+  /* line 2305, ../sass/theme/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-linkedin-link span.views-label {
     display: block;
     float: left;
     padding-right: 8px;
   }
-  /* line 2041, ../sass/theme/_page_specific.scss */
+  /* line 2314, ../sass/theme/_page_specific.scss */
   body.node-type-team #content {
     min-height: 700px !important;
     padding-bottom: 6em;
