@@ -20,7 +20,7 @@ function peace_geeks_projects_ctools_plugin_api() {
 function peace_geeks_projects_node_info() {
   $items = array(
     'projects' => array(
-      'name' => t('Projects'),
+      'name' => t('Project'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
