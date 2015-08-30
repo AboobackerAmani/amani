@@ -3,6 +3,7 @@
 //$mynode=node_load($nid);
 
 $path=current_path();
+$path_alias=drupal_get_path_alias($path);
 print $path;
 exit();
 
