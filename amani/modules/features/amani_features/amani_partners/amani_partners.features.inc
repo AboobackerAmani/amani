@@ -104,7 +104,7 @@ function amani_partners_image_default_styles() {
 function amani_partners_node_info() {
   $items = array(
     'partner' => array(
-      'name' => t('Partner'),
+      'name' => t('Sponsor'),
       'base' => 'node_content',
       'description' => t('An organization\'s partner.'),
       'has_title' => '1',
