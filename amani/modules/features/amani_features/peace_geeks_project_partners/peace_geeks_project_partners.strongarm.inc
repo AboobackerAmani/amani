@@ -96,16 +96,16 @@ function peace_geeks_project_partners_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '1',
+          'weight' => '2',
         ),
         'metatags' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '2',
+          'weight' => '3',
         ),
       ),
       'display' => array(
