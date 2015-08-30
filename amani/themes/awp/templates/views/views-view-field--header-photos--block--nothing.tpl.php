@@ -15,10 +15,17 @@ $query->entityCondition('entity_type', 'node')
 $result = $query->execute();
 
 
-$my_node = node_load(array_keys($result['node']));
+$nodes = node_load_multiple(array_keys($result['node']));
 
-print_r($my_node);
-exit();
+foreach($nodes as $node) {
+    //field_header_image
+
+    $imageone = $node->field_header_image[LANGUAGE_NONE][0]['uri'];
+    $style = 'header_photo';
+    print image_style_url($style, $imageone);
+    exit();
+}
+
 
 ?>
 
