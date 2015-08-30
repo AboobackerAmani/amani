@@ -323,6 +323,7 @@ function peace_geeks_projects_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'projects',
+      'default_value' => array(),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -360,28 +361,17 @@ function peace_geeks_projects_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'media',
+        'module' => 'imagefield_crop',
         'settings' => array(
-          'allowed_schemes' => array(
-            'public' => 'public',
-            'vimeo' => 0,
-            'youtube' => 0,
-          ),
-          'allowed_types' => array(
-            'audio' => 0,
-            'document' => 0,
-            'image' => 'image',
-            'video' => 0,
-          ),
-          'browser_plugins' => array(
-            'media_default--media_browser_1' => 0,
-            'media_default--media_browser_my_files' => 0,
-            'media_internet' => 0,
-            'upload' => 0,
-          ),
+          'collapsible' => '2',
+          'croparea' => '500x500',
+          'enforce_minimum' => 1,
+          'enforce_ratio' => 1,
+          'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
+          'resolution' => '752x560',
         ),
-        'type' => 'media_generic',
+        'type' => 'imagefield_crop_widget',
         'weight' => '1',
       ),
     ),

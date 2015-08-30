@@ -217,6 +217,19 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['pager']['options']['effects']['type'] = 'fade';
   $handler->display->display_options['pager']['options']['effects']['speed'] = 'fast';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_project_type',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Global: View (Views field view) */
   $handler->display->display_options['header']['view_field']['id'] = 'view_field';
@@ -234,6 +247,11 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['footer']['area']['content'] = '<a id="apply-today-button" href="/generalapplication">Apply Today<span>and become a PeaceGeek</span></a><a id="faq-button" href="/faq">F.A.Q</a>';
   $handler->display->display_options['footer']['area']['format'] = 'php_code';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Project Type */
+  $handler->display->display_options['fields']['field_project_type']['id'] = 'field_project_type';
+  $handler->display->display_options['fields']['field_project_type']['table'] = 'field_data_field_project_type';
+  $handler->display->display_options['fields']['field_project_type']['field'] = 'field_project_type';
+  $handler->display->display_options['fields']['field_project_type']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Project Image */
   $handler->display->display_options['fields']['field_project_image']['id'] = 'field_project_image';
   $handler->display->display_options['fields']['field_project_image']['table'] = 'field_data_field_project_image';
@@ -301,7 +319,7 @@ function peace_geeks_project_partners_views_default_views() {
   );
   $handler->display->display_options['filters']['field_project_tags_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_project_tags_tid']['vocabulary'] = 'tags';
-  $handler->display->display_options['path'] = 'projects';
+  $handler->display->display_options['path'] = 'projectsOldTest';
 
   /* Display: Project Partners Node Override */
   $handler = $view->new_display('block', 'Project Partners Node Override', 'project_partners_node_override');
@@ -754,6 +772,148 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div id="learn-more-partnership">Learn more about the partnership with [title] [view_node]</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['block_description'] = 'PG Random Partner Quotes Block';
+
+  /* Display: Project By Type Block */
+  $handler = $view->new_display('block', 'Project By Type Block', 'projects_by_type_block');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Project By Type Block';
+  $handler->display->display_options['defaults']['exposed_form'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'allow_secondary' => 0,
+      'secondary_label' => 'Advanced options',
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+    ),
+    'secondary_label' => NULL,
+    'collapsible_label' => NULL,
+    'combine_rewrite' => NULL,
+    'reset_label' => NULL,
+  );
+  $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
+  $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'wysiwyg_advanced';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'load_more';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['effects']['speed'] = 'slow';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<h3>[field_project_type]</h3>
+[description]';
+  $handler->display->display_options['header']['area']['format'] = 'php_code';
+  $handler->display->display_options['header']['area']['tokenize'] = TRUE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
+    'project_type' => 'project_type',
+    'forums' => 0,
+    'activity_status' => 0,
+    'article_type' => 0,
+    'categories' => 0,
+    'event_type' => 0,
+    'fact_type' => 0,
+    'gallery_collections' => 0,
+    'report_type' => 0,
+    'incident_severity' => 0,
+    'partner_type' => 0,
+    'position_type' => 0,
+    'project_location' => 0,
+    'project_status' => 0,
+    'theme' => 0,
+    'resource_type' => 0,
+    'sponsor_group' => 0,
+    'stage' => 0,
+    'tags' => 0,
+    'team_member_type' => 0,
+    'team_type' => 0,
+    'contributor_type' => 0,
+  );
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Project Type */
+  $handler->display->display_options['fields']['field_project_type']['id'] = 'field_project_type';
+  $handler->display->display_options['fields']['field_project_type']['table'] = 'field_data_field_project_type';
+  $handler->display->display_options['fields']['field_project_type']['field'] = 'field_project_type';
+  $handler->display->display_options['fields']['field_project_type']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_project_type']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Project Image */
+  $handler->display->display_options['fields']['field_project_image']['id'] = 'field_project_image';
+  $handler->display->display_options['fields']['field_project_image']['table'] = 'field_data_field_project_image';
+  $handler->display->display_options['fields']['field_project_image']['field'] = 'field_project_image';
+  $handler->display->display_options['fields']['field_project_image']['label'] = '';
+  $handler->display->display_options['fields']['field_project_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_project_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_project_image']['settings'] = array(
+    'image_style' => 'project_card_image',
+    'image_link' => 'content',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Project Tags */
+  $handler->display->display_options['fields']['field_project_tags']['id'] = 'field_project_tags';
+  $handler->display->display_options['fields']['field_project_tags']['table'] = 'field_data_field_project_tags';
+  $handler->display->display_options['fields']['field_project_tags']['field'] = 'field_project_tags';
+  $handler->display->display_options['fields']['field_project_tags']['label'] = '';
+  $handler->display->display_options['fields']['field_project_tags']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_project_tags']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_project_tags']['multi_type'] = 'ol';
+  /* Field: Taxonomy term: Term description */
+  $handler->display->display_options['fields']['description']['id'] = 'description';
+  $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['description']['field'] = 'description';
+  $handler->display->display_options['fields']['description']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['fields']['description']['label'] = '';
+  $handler->display->display_options['fields']['description']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'projects' => 'projects',
+  );
+  $handler->display->display_options['block_description'] = 'PG Project By Type Block';
   $translatables['peace_geeks_projects'] = array(
     t('Master'),
     t('Peace Geeks Projects'),
@@ -778,6 +938,7 @@ function peace_geeks_project_partners_views_default_views() {
     t('Advanced options'),
     t('Select any filter and click on Apply to see results'),
     t('<a id="apply-today-button" href="/generalapplication">Apply Today<span>and become a PeaceGeek</span></a><a id="faq-button" href="/faq">F.A.Q</a>'),
+    t('Project Type'),
     t('Theme'),
     t('Project Partners Node Override'),
     t('<a id="apply-today-button" href="/volunteer">Apply Today...</a><a id="donate-button" href="/donate">Donate</a>'),
@@ -820,6 +981,11 @@ function peace_geeks_project_partners_views_default_views() {
     t('here.'),
     t('<div id="learn-more-partnership">Learn more about the partnership with [title] [view_node]</div>'),
     t('PG Random Partner Quotes Block'),
+    t('Project By Type Block'),
+    t('<h3>[field_project_type]</h3>
+[description]'),
+    t('term'),
+    t('PG Project By Type Block'),
   );
   $export['peace_geeks_projects'] = $view;
 
