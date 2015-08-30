@@ -1113,16 +1113,16 @@
 				padding-right: 3000px;
 				margin-right: -3000px;
 				height: 400px;
-				background: $blue;
+				background: $soft-grey;
 				overflow: hidden;
 				
 				.views-row {
 					display:block;
-					width:980px;
+					width:1200px;
 					margin:0 auto;
 					height:400px;
 					position:relative;
-					padding:40px 20px;
+					padding:0;
 					
 					.views-label {
 						display:inline;
@@ -1162,22 +1162,41 @@
 					}
 					
 					.views-field-title {
-						color:white;
-						font-size:16px;
-						font-weight:600;
-						letter-spacing:1px;
-						text-transform:uppercase;
-						display:block;
-						width:100%;
-						margin-bottom:12px;
+						display: block;
+						float: left;
+						margin-top: -330px;
+						z-index: 30;
+						position: relative;
+						color: white;
+						font-style: italic;
+						font-size: 1.2em;
+						margin-left: 146px;
 						
 					}
 					
+					#partner-profile-label {
+					
+					}
+					
+					#parter-profile-name {
+					
+					}
+					
 					.views-field-field-partner-one-liner {
-						color:white;
-						font-size:36px;
-						line-height:44px;
-						font-weight:300;
+						display: block;
+						background: #59C2ED;
+						color: white;
+						font-weight: 600;
+						font-size: 2.2em;
+						position: relative;
+						float: left;
+						margin-top: -347px;
+						margin-left: 120px;
+						width: 350px;
+						height: 347px;
+						padding: 2.6em 1em 1em 1em;
+						line-height: 1.2em;
+						z-index: 20;
 					}
 					
 					.views-field-nothing {
@@ -1388,7 +1407,7 @@
 	}
 	
 	
-	/* Project  node override */
+	/* Project node override */
 	
 	body.node-type-projects {
 	
