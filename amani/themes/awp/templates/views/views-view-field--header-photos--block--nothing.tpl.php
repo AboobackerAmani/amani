@@ -19,12 +19,18 @@ foreach($nodes as $node) {
     //field_header_image
 
     $imageone = $node->field_header_image[LANGUAGE_NONE][0]['uri'];
-    $imagelink = $node->field_image_link[LANGUAGE_NONE][0];
-    print_r($imagelink);
-    exit();
+
+
     $style = 'header_photo';
     $styled_image= image_style_url($style, $imageone);
-    $html_image='<img src="'.$styled_image.'">';
+    if (isset($node->field_image_link)) {
+        $image_link = $node->field_image_link[LANGUAGE_NONE][0][url];
+        $link_target = $node->field_image_link[LANGUAGE_NONE][0][target];
+        $html_image='<a href="'.$image_link.' target="'.$link_target.'"><img src="'.$styled_image.'"></a>';
+    }
+    else {
+        $html_image = '<img src="' . $styled_image . '">';
+    }
 }
 print $html_image;
 
