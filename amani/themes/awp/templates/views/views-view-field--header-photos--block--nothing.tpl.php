@@ -25,5 +25,4 @@ foreach($nodes as $node) {
 }
 print $html_image;
 
-?>
 
