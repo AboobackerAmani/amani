@@ -82,6 +82,8 @@ function peace_geeks_project_partners_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Peace Geeks Project Partners Cards';
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'load_more';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
@@ -116,6 +118,15 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['fields']['field_tags']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_tags']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_tags']['multi_type'] = 'ol';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Display ranking (field_display_ranking) */
+  $handler->display->display_options['sorts']['field_display_ranking_value']['id'] = 'field_display_ranking_value';
+  $handler->display->display_options['sorts']['field_display_ranking_value']['table'] = 'field_data_field_display_ranking';
+  $handler->display->display_options['sorts']['field_display_ranking_value']['field'] = 'field_display_ranking_value';
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_1');
@@ -136,7 +147,23 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<a id="apply-today-button">Apply Today...</a><a id="donate-button">Donate</a>';
   $handler->display->display_options['footer']['area']['format'] = 'php_code';
-  $handler->display->display_options['path'] = 'pastprojects';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'projects' => 'projects',
+  );
+  $handler->display->display_options['path'] = 'allprojects';
 
   /* Display: Project Partners Node Override */
   $handler = $view->new_display('block', 'Project Partners Node Override', 'project_partners_node_override');

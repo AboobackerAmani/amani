@@ -83,7 +83,7 @@ function peace_geeks_project_partners_image_default_styles() {
 function peace_geeks_project_partners_node_info() {
   $items = array(
     'project_partners' => array(
-      'name' => t('Project Partners'),
+      'name' => t('Partner'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
