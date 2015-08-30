@@ -214,18 +214,14 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['fields']['field_image_caption']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image_caption']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_image_caption']['empty_zero'] = TRUE;
-  /* Field: Content: Testimonial */
-  $handler->display->display_options['fields']['field_proj_partners_testimonial']['id'] = 'field_proj_partners_testimonial';
-  $handler->display->display_options['fields']['field_proj_partners_testimonial']['table'] = 'field_data_field_proj_partners_testimonial';
-  $handler->display->display_options['fields']['field_proj_partners_testimonial']['field'] = 'field_proj_partners_testimonial';
-  $handler->display->display_options['fields']['field_proj_partners_testimonial']['label'] = '';
-  $handler->display->display_options['fields']['field_proj_partners_testimonial']['element_label_colon'] = FALSE;
   /* Field: Content: Testimonial Author */
   $handler->display->display_options['fields']['field_testimonial_author']['id'] = 'field_testimonial_author';
   $handler->display->display_options['fields']['field_testimonial_author']['table'] = 'field_data_field_testimonial_author';
   $handler->display->display_options['fields']['field_testimonial_author']['field'] = 'field_testimonial_author';
   $handler->display->display_options['fields']['field_testimonial_author']['label'] = '';
+  $handler->display->display_options['fields']['field_testimonial_author']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_testimonial_author']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_testimonial_author']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_testimonial_author']['click_sort_column'] = 'title';
   $handler->display->display_options['fields']['field_testimonial_author']['settings'] = array(
     'format' => 'default',
@@ -238,6 +234,15 @@ function peace_geeks_project_partners_views_default_views() {
     'multiple_el_al_min' => '3',
     'multiple_el_al_first' => '1',
   );
+  /* Field: Content: Testimonial */
+  $handler->display->display_options['fields']['field_proj_partners_testimonial']['id'] = 'field_proj_partners_testimonial';
+  $handler->display->display_options['fields']['field_proj_partners_testimonial']['table'] = 'field_data_field_proj_partners_testimonial';
+  $handler->display->display_options['fields']['field_proj_partners_testimonial']['field'] = 'field_proj_partners_testimonial';
+  $handler->display->display_options['fields']['field_proj_partners_testimonial']['label'] = '';
+  $handler->display->display_options['fields']['field_proj_partners_testimonial']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_proj_partners_testimonial']['alter']['text'] = '[field_proj_partners_testimonial]
+<div id="proj-testimonial-author">[field_testimonial_author]</div>';
+  $handler->display->display_options['fields']['field_proj_partners_testimonial']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -248,6 +253,11 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Deliverables Summary */
+  $handler->display->display_options['fields']['field_deliverables_summary']['id'] = 'field_deliverables_summary';
+  $handler->display->display_options['fields']['field_deliverables_summary']['table'] = 'field_data_field_deliverables_summary';
+  $handler->display->display_options['fields']['field_deliverables_summary']['field'] = 'field_deliverables_summary';
+  $handler->display->display_options['fields']['field_deliverables_summary']['element_label_colon'] = FALSE;
   /* Field: Content: PeaceGeeks Contributors */
   $handler->display->display_options['fields']['field_peacegeeks_contributions']['id'] = 'field_peacegeeks_contributions';
   $handler->display->display_options['fields']['field_peacegeeks_contributions']['table'] = 'field_data_field_peacegeeks_contributions';
@@ -266,11 +276,6 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['fields']['field_partner_contributions']['alter']['text'] = '<h3>[title] Contributors</h3>
 [field_partner_contributions] ';
   $handler->display->display_options['fields']['field_partner_contributions']['element_label_colon'] = FALSE;
-  /* Field: Content: Deliverables Summary */
-  $handler->display->display_options['fields']['field_deliverables_summary']['id'] = 'field_deliverables_summary';
-  $handler->display->display_options['fields']['field_deliverables_summary']['table'] = 'field_data_field_deliverables_summary';
-  $handler->display->display_options['fields']['field_deliverables_summary']['field'] = 'field_deliverables_summary';
-  $handler->display->display_options['fields']['field_deliverables_summary']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
@@ -569,11 +574,13 @@ function peace_geeks_project_partners_views_default_views() {
     t('Crisis Overview'),
     t('What They Do'),
     t('Our Impact'),
+    t('[field_proj_partners_testimonial]
+<div id="proj-testimonial-author">[field_testimonial_author]</div>'),
+    t('Deliverables Summary'),
     t('<h3>PeaceGeeks Contributors</h3>
 [field_peacegeeks_contributions]'),
     t('<h3>[title] Contributors</h3>
 [field_partner_contributions] '),
-    t('Deliverables Summary'),
     t('All'),
     t('PG Project Partners Node Override'),
     t('PG Partners Node Banner'),
