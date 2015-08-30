@@ -14,8 +14,6 @@ $query->entityCondition('entity_type', 'node')
 
 $result = $query->execute();
 
-print_r($result);
-exit();
 
 $nodes = node_load_multiple(array_keys($result['node']));
 
