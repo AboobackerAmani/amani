@@ -1383,7 +1383,7 @@
 	
 	}
 	
-	/* Projects cards */
+	/* Partner cards */
 	
 	.view-peace-geeks-projects.view-display-id-block {
 		
@@ -1476,6 +1476,98 @@
 	}
 	
 	
+	/* Projects cards on all projects page */
+	
+	.view-peace-geeks-projects.view-display-id-all_projects_page {
+		
+	
+		div.item-list {
+			ul.pager.pager-load-more {	
+					
+					li {
+						list-style-type:none;
+						a {
+							display:block;
+							float:left;
+							width:194px;
+							height:360px;
+							background:$blue;
+							padding:20px;
+							color:white;
+							font-size:18px;
+							&:after {
+								content:"projects";
+								font-weight:300;
+								display:block;
+							}
+						}
+					}
+				}
+		}
+	
+		.view-content .views-row {
+			display:block;
+			float:left;
+			width:234px;
+			height:400px;
+			margin-right:15px;
+			background:$soft-grey;
+			margin-bottom:20px;
+			position:relative;
+			&:nth-child(3n) {
+				margin-right:0;
+			}
+			
+			.views-field-field-image {
+				
+			}
+			
+			.views-field-title {
+				padding:10px 20px;
+				a {
+					color:$blue;
+					font-size:16px;
+					line-height:20px;
+					text-transform:uppercase;
+					font-weight:600;
+				}
+			}
+			
+			.views-field-field-project-tags {
+				padding:10px 20px 0 20px;
+				ol {
+					display:block;
+					position:absolute;
+					bottom:0;
+					margin-bottom:-4px;
+					li {
+						list-style-type:none;
+						display:block;
+						float:left;
+						margin-right:6px;
+						margin-bottom:4px;
+						a {
+							display:inline-block;
+							background:white;
+							padding:4px 10px;
+							color:$text-grey;
+							font-style:italic;
+							font-size:12px;
+							font-weight:normal;
+							&:before {
+								content:"#";
+							}
+						}
+					}
+				}
+			}
+			
+			
+		}
+	
+	}
+	
+	
 	/* Project node override */
 	
 	body.node-type-projects {
@@ -1493,7 +1585,7 @@
 			font-weight:600;
 			padding:20px;
 			height:120px;
-			width:300px;
+			width:320px;
 			margin-right:20px;
 			font-size:18px;
 			margin-bottom:4px;
@@ -1515,7 +1607,7 @@
 			font-weight:600;
 			padding:20px;
 			height:120px;
-			width:300px;
+			width:310px;
 			margin-right:0;
 			font-size:18px;
 			margin-bottom:4px;
@@ -1531,6 +1623,8 @@
 		.view-id-peace_geeks_projects.view-display-id-block_1 {
 			display:block;
 			width:100%;
+			
+			
 			
 			.view-content {
 				
@@ -1685,6 +1779,13 @@
 		
 		.view-peace-geeks-projects.view-display-id-project_node_override {
 			
+			.view-footer {
+				width:752px;
+				float:left;
+				display:block;
+				margin-top:2em;
+			}
+			
 			.views-row {
 				
 				.views-label {
@@ -1749,6 +1850,192 @@
 		}
 	
 	}
+	
+	
+	/* Projects landing page at /projects */
+	
+	body.page-projects.section-projects {
+	
+		h1#page-title {display:none;}
+		
+		h2.element-invisible {display:none;}
+		
+		#main {padding-bottom:6em;}
+		
+		.view-peace-geeks-projects {
+			.view-footer {
+				display:block;
+				width:752px;
+				float:left;
+			}
+		}
+		
+		.views-exposed-form {
+			display:block;
+			width:$container - 20;
+			background:$soft-grey;
+			padding:1em 2em;
+			margin-bottom:2em;
+			position:relative;
+			float:left;
+			&:before {
+				content:"Filter Your Search";
+				display:block;
+				position:absolute;
+				margin-top:4px;
+				text-transform:uppercase;
+				letter-spacing:1px;
+				font-size:12px;
+				font-weight:600;
+			}
+			.views-exposed-widgets {
+				margin-top:2em;
+				.views-exposed-widget > label {
+					font-weight:300;
+					font-style:italic;
+					margin-bottom:10px;
+					margin-top:2em;
+				}
+			}
+			.form-item .form-item{
+				display: inline-block;
+				background: white;
+				font-weight: 300;
+				font-style: italic;
+				padding: .4em 1em;
+				margin-right: 4px;
+				margin-bottom:8px;
+				cursor: pointer;
+				input[type="checkbox"] {
+					display:none;
+				}
+				&.highlight {
+					background:$blue;
+				}
+				label {
+					cursor:pointer;
+				}
+			}
+			input[type="submit"] {
+				background:$orange;
+			}
+			input[type="submit"]#edit-reset {
+				background:none;
+				color:$text-black;
+				position:absolute;
+				top:-10px;
+				right:110px;
+				font-weight:600;
+			}
+		}
+		
+		a#apply-today-button {
+			display:block;
+			float:left;
+			background:$orange;
+			color:white;
+			font-weight:600;
+			padding:20px;
+			height:120px;
+			width:320px;
+			margin-right:20px;
+			font-size:18px;
+			margin-bottom:4px;
+			margin-top:50px;
+			span {
+				font-weight:300;
+				display:block;
+				padding-top:4px;
+			}	
+		}
+	
+		a#faq-button {
+			display:block;
+			float:left;
+			background:$grey;
+			color:white;
+			font-weight:600;
+			padding:20px;
+			height:120px;
+			width:310px;
+			margin-right:0;
+			font-size:18px;
+			margin-bottom:4px;
+			margin-top:50px;
+			
+		}
+		
+		.view-peace-geeks-projects.view-display-id-all_projects_page {
+			
+			.view-header {
+				display:block;
+				float:left;
+				width:100%;
+				margin-bottom:3em;
+				
+				.views-row {
+					background:white;
+					width:100%;
+					display:block;
+					float:left;
+					height:auto;
+					margin-top:-28px;
+					
+					#proj-testimonial-author {
+						font-size:16px;
+						color:$text-grey;
+						font-style:italic;
+					}
+					
+					#learn-more-partnership {
+						color:$text-black;
+						font-weight:600;
+						font-style:italic;
+						font-size:14px;
+						font-family:'Open Sans Bold Italic';
+						margin-top:6px;
+						float:left;
+						display:block;
+						a {
+							text-decoration:underline;
+							color:$text-black;
+						}
+					}
+				
+					.views-field-field-proj-partners-testimonial {
+						display: block;
+						float: left;
+						width: 100%;
+						&:before {
+							content:"“";
+							font-size: 5em;
+							color: $blue;
+							line-height: 0;
+							font-weight: bold;
+							display: block;
+							margin-bottom: 8px;
+							margin-top: 30px;
+						}
+						.field-content p {
+							font-size: 2.8em;
+							color: $blue;
+							line-height: 1.4em;
+							margin-bottom: 20px;
+							font-weight: 300;
+							float: left;
+							&:after {
+								content:"”";
+								display:inline;
+							}
+						}
+					}
+				}
+			}
+		
+		}
+	
+	}
+	
 	
 	
 	/* Become a Volunteer */
