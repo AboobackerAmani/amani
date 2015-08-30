@@ -15,7 +15,7 @@ $query->entityCondition('entity_type', 'node')
 $result = $query->execute();
 
 
-$my_node = node_loa(array_keys($result['node']));
+$my_node = node_load(array_keys($result['node']));
 
 print_r($my_node);
 
