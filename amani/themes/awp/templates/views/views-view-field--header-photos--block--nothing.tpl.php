@@ -19,6 +19,9 @@ foreach($nodes as $node) {
     //field_header_image
 
     $imageone = $node->field_header_image[LANGUAGE_NONE][0]['uri'];
+    $imagelink = $node->field_image_link[LANGUAGE_NONE][0];
+    print_r($imagelink);
+    exit();
     $style = 'header_photo';
     $styled_image= image_style_url($style, $imageone);
     $html_image='<img src="'.$styled_image.'">';
