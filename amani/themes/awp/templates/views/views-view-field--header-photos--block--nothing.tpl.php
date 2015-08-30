@@ -22,10 +22,11 @@ foreach($nodes as $node) {
 
     $imageone = $node->field_header_image[LANGUAGE_NONE][0]['uri'];
     $style = 'header_photo';
-    print image_style_url($style, $imageone);
-    exit();
+    $styled_image= image_style_url($style, $imageone);
+    $html_image='<img src="'.$styled_image.'">';
 }
-
+print $html_image;
+exit();
 
 ?>
 
