@@ -15,10 +15,10 @@ $query->entityCondition('entity_type', 'node')
 $result = $query->execute();
 
 
-$nodes = node_load_multiple(array_keys($result['node']));
+$my_node = node_loa(array_keys($result['node']));
 
+print_r($my_node);
 
-return node_view_multiple($nodes, 'full');
 
 ?>
 
