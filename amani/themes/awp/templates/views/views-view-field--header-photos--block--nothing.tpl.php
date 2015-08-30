@@ -1,11 +1,8 @@
-<?php $nid=$row->_field_data['nid']['entity']->nid;
-//print $nid;
-//$mynode=node_load($nid);
+<?php// $nid=$row->_field_data['nid']['entity']->nid;
 
 $path_alias=drupal_get_path_alias();
-//print $path_alias;
-//exit();
 global $language;
+
 $query = new EntityFieldQuery();
 $query->entityCondition('entity_type', 'node')
     ->entityCondition('bundle', 'header_photos')
@@ -27,7 +24,6 @@ foreach($nodes as $node) {
     $html_image='<img src="'.$styled_image.'">';
 }
 print $html_image;
-exit();
 
 ?>
 
