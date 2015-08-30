@@ -1,4 +1,4 @@
-<?php// $nid=$row->_field_data['nid']['entity']->nid;
+<?php // $nid=$row->_field_data['nid']['entity']->nid;
 
 $path_alias=drupal_get_path_alias();
 global $language;
