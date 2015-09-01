@@ -2737,5 +2737,134 @@
 		
 	
 	}
+	
+	
+	/* Where We Work */
+	
+	body.node-type-structure.wherewework {
+		
+		#partner-apply {
+			display:block;
+			float:left;
+			width:$container - 40;
+			margin-right:0;
+			background:$blue;
+			color:white;
+			font-weight:600;
+			font-size:18px;
+			margin-bottom:6px;
+			padding:20px 20px;
+			height:90px;
+			span {
+				display:block;
+				margin-top:4px;
+				font-weight:300;
+			}
+		}
+		
+		.paragraphs-item-add-a-view {
+			display:block;
+			width:$container;
+			float:left;
+			margin-top:-20px;
+			.field-name-field-view-title-text {
+				font-size:1.2em;
+				text-transform:uppercase;
+				color:$text-black;
+				letter-spacing:2px;
+				font-weight:600;
+				margin-bottom:16px;
+			}
+		}
+		
+		.view-display-id-region_country_name_blocks {
+		
+			display:block;
+			float:left;
+			width:$container;
+			h3 {
+				font-size:1.2em;
+				text-transform:uppercase;
+				color:$text-black;
+				letter-spacing:2px;
+				font-weight:600;
+				margin-bottom:14px;
+			}
+			ul {
+				
+				li {
+					list-style-type:none;
+					font-size:1.1em;
+					margin-bottom:10px;
+				}
+			}
+			
+			.view-content .item-list {
+				display:block;
+				float:left;
+				width:366px;
+				background:$soft-grey;
+				margin-right:20px;
+				padding:0 20px;
+				&:nth-child(even) {
+					margin-right:0;
+				}
+			}
+		
+		}
+		
+		.view-display-id-country_image_cards {
+			.views-row {
+				position:relative;
+				display:block;
+				float:left;
+				margin-right:24px;
+				&.views-row-last {
+					margin-right:0;
+				}
+				.views-field-title {
+					position:absolute;
+					display:block;
+					color:white;
+					text-transform:uppercase;
+					letter-spacing:1px;
+					font-size:1.2em;
+					top:78px;
+					text-align:center;
+					width:100%;
+					font-weight:600;
+					padding:0 20px;
+					z-index:300;
+				}
+				.views-field-field-image {
+					position:relative;
+					float:left;
+					&:before {
+						content: "";
+						display: block;
+						position: absolute;
+						top: 0;
+						bottom: 4px;
+						left: 0;
+						right: 0;
+						background: rgba(71,79,94, 0.7);
+						-moz-transition: background .3s linear;
+						-webkit-transition: background .3s linear;
+						-o-transition: background .3s linear;
+						transition: background .3s linear;
+					}
+
+					img {
+					
+					}
+				}
+			}
+		}
+	
+	}
+	
+	
+	
+	
 
 }

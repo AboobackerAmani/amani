@@ -278,6 +278,25 @@ Drupal.behaviors.paragraphs_adjustments = {
 			'margin-bottom':'0'
 		}).addClass('shorterlinkbox').find('span').removeClass('first-word');
 		
+	}
+	
+// Set country region boxes to same height
+
+	  if ($('body.node-type-structure').length) {
+  
+		var divBHeights = $('.view-display-id-region_country_name_blocks .item-list').map(function() {
+			
+			heght = $(this).height();
+			console.log(heght);
+			return $(this).height();
+		
+		}).get();
+	
+		var maxBHeight = Math.max.apply(null, divBHeights);
+	
+		$('.view-display-id-region_country_name_blocks .item-list').height(maxBHeight);
+		
+		}
 		
 		// Sponsor logo boxes
 		
@@ -292,7 +311,7 @@ Drupal.behaviors.paragraphs_adjustments = {
 		$('.view-sponsors.view-display-id-block_1 .views-column').height(maxSponsorHeight);*/
 		
 			
-	  }	
+	  
 	  
 
 // Set anchor names on anchor text boxes 
