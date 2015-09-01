@@ -672,6 +672,11 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = 'Project Problem';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  /* Field: Content: How We Helped */
+  $handler->display->display_options['fields']['field_how_we_helped']['id'] = 'field_how_we_helped';
+  $handler->display->display_options['fields']['field_how_we_helped']['table'] = 'field_data_field_how_we_helped';
+  $handler->display->display_options['fields']['field_how_we_helped']['field'] = 'field_how_we_helped';
+  $handler->display->display_options['fields']['field_how_we_helped']['element_label_colon'] = FALSE;
   /* Field: Content: Project Image */
   $handler->display->display_options['fields']['field_project_image']['id'] = 'field_project_image';
   $handler->display->display_options['fields']['field_project_image']['table'] = 'field_data_field_project_image';
@@ -683,11 +688,6 @@ function peace_geeks_project_partners_views_default_views() {
     'image_style' => 'project_partners_page_image',
     'image_link' => '',
   );
-  /* Field: Content: How We Helped */
-  $handler->display->display_options['fields']['field_how_we_helped']['id'] = 'field_how_we_helped';
-  $handler->display->display_options['fields']['field_how_we_helped']['table'] = 'field_data_field_how_we_helped';
-  $handler->display->display_options['fields']['field_how_we_helped']['field'] = 'field_how_we_helped';
-  $handler->display->display_options['fields']['field_how_we_helped']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
@@ -884,6 +884,7 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['fields']['field_project_tags']['table'] = 'field_data_field_project_tags';
   $handler->display->display_options['fields']['field_project_tags']['field'] = 'field_project_tags';
   $handler->display->display_options['fields']['field_project_tags']['label'] = '';
+  $handler->display->display_options['fields']['field_project_tags']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_project_tags']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_project_tags']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_project_tags']['multi_type'] = 'ol';
@@ -895,6 +896,19 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['fields']['description']['label'] = '';
   $handler->display->display_options['fields']['description']['exclude'] = TRUE;
   $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+  /* Field: Content: Project Date */
+  $handler->display->display_options['fields']['field_project_date']['id'] = 'field_project_date';
+  $handler->display->display_options['fields']['field_project_date']['table'] = 'field_data_field_project_date';
+  $handler->display->display_options['fields']['field_project_date']['field'] = 'field_project_date';
+  $handler->display->display_options['fields']['field_project_date']['label'] = 'Completed';
+  $handler->display->display_options['fields']['field_project_date']['settings'] = array(
+    'format_type' => 'short_month_day_year',
+    'fromto' => 'value2',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
@@ -921,6 +935,13 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'projects' => 'projects',
+  );
+  /* Filter criterion: Content: Project Completed? (field_project_status_binary) */
+  $handler->display->display_options['filters']['field_project_status_binary_value']['id'] = 'field_project_status_binary_value';
+  $handler->display->display_options['filters']['field_project_status_binary_value']['table'] = 'field_data_field_project_status_binary';
+  $handler->display->display_options['filters']['field_project_status_binary_value']['field'] = 'field_project_status_binary_value';
+  $handler->display->display_options['filters']['field_project_status_binary_value']['value'] = array(
+    1 => '1',
   );
   $handler->display->display_options['block_description'] = 'PG Project By Type Block';
 
@@ -1119,9 +1140,9 @@ function peace_geeks_project_partners_views_default_views() {
     t('<h3>[field_project_type]</h3>
 [description]'),
     t('term'),
+    t('Completed'),
     t('PG Project By Type Block'),
     t('Projects on Partner Block - Completed'),
-    t('Completed'),
     t('PG Projects on Partner Block - Completed'),
   );
   $export['peace_geeks_projects'] = $view;
