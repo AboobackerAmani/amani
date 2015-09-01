@@ -110,7 +110,7 @@ function peace_geeks_paragraphs_and_structure_field_default_fields() {
           'module' => 'viewfield',
           'settings' => array(),
           'type' => 'viewfield_default',
-          'weight' => '0',
+          'weight' => '1',
         ),
         'paragraphs_editor_preview' => array(
           'label' => 'above',
@@ -150,6 +150,7 @@ function peace_geeks_paragraphs_and_structure_field_default_fields() {
           'news_and_events_blog' => 0,
           'partners' => 0,
           'partners_carousel' => 0,
+          'peace_geeks_countries' => 'peace_geeks_countries',
           'peace_geeks_front_page_blocks' => 0,
           'peace_geeks_front_page_slideshow' => 0,
           'peace_geeks_front_page_tweets' => 0,
@@ -179,7 +180,7 @@ function peace_geeks_paragraphs_and_structure_field_default_fields() {
         'module' => 'viewfield',
         'settings' => array(),
         'type' => 'viewfield_select',
-        'weight' => '41',
+        'weight' => '2',
       ),
     ),
   );
