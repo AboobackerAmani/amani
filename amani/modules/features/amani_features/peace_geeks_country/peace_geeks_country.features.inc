@@ -15,6 +15,13 @@ function peace_geeks_country_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function peace_geeks_country_views_api() {
+  return array("version" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function peace_geeks_country_node_info() {
