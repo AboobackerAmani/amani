@@ -6125,6 +6125,70 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     -o-transition: background .3s linear;
     transition: background .3s linear;
   }
+
+  /* Products pages */
+  /* line 2892, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.ourproducts #main {
+    padding-bottom: 0;
+  }
+  /* line 2896, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.ourproducts #learn-more-partnership {
+    display: none;
+  }
+  /* line 2900, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.ourproducts .view-display-id-random_partner_quotes {
+    display: block;
+    float: left;
+    position: relative;
+    padding-left: 3000px;
+    margin-left: -3000px;
+    padding-right: 3000px;
+    margin-right: -3000px;
+    background: #E6E6E6;
+    margin-bottom: -71px;
+  }
+  /* line 2912, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.ourproducts #proj-testimonial-author {
+    font-size: 16px;
+    color: #9a9a9a;
+    font-style: italic;
+    text-align: right;
+  }
+  /* line 2919, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.ourproducts .views-field-field-proj-partners-testimonial {
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    padding-top: 3em;
+    padding-bottom: 8em;
+  }
+  /* line 2929, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.ourproducts .views-field-field-proj-partners-testimonial:before {
+    content: "“";
+    font-size: 5em;
+    color: #59C2ED;
+    line-height: 0;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 16px;
+    margin-top: 30px;
+  }
+  /* line 2939, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.ourproducts .views-field-field-proj-partners-testimonial .field-content p {
+    font-size: 2.8em;
+    color: #59C2ED;
+    line-height: 1.4em;
+    margin-bottom: 20px;
+    font-weight: 300;
+    float: left;
+  }
+  /* line 2946, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.ourproducts .views-field-field-proj-partners-testimonial .field-content p:after {
+    content: "”";
+    display: inline;
+  }
 }
 /* Styling for administrative/editor stuff */
 /* line 3, ../sass/theme/_admin_interface.scss */

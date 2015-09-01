@@ -2885,7 +2885,73 @@
 	}
 	
 	
+	/* Products pages */
 	
+	body.node-type-structure.ourproducts {
+	
+		#main {
+			padding-bottom:0;
+		}
+		
+		#learn-more-partnership {
+			display:none;
+		}
+		
+		.view-display-id-random_partner_quotes {
+			display: block;
+			float: left;
+			position: relative;
+			padding-left: 3000px;
+			margin-left: -3000px;
+			padding-right: 3000px;
+			margin-right: -3000px;
+			background:$soft-grey;
+			margin-bottom:-71px;
+		}
+		
+		#proj-testimonial-author {
+			font-size:16px;
+			color:$text-grey;
+			font-style:italic;
+			text-align:right;
+		}
+		
+		.views-field-field-proj-partners-testimonial {
+			
+			display: block;
+			float: left;
+			width: 100%;
+			margin-bottom: 2em;
+			margin-top: 2em;
+			padding-top: 3em;
+			padding-bottom:8em;
+
+			&:before {
+				content:"“";
+				font-size: 5em;
+				color: $blue;
+				line-height: 0;
+				font-weight: bold;
+				display: block;
+				margin-bottom: 16px;
+				margin-top: 30px;
+			}
+			.field-content p {
+				font-size: 2.8em;
+				color: $blue;
+				line-height: 1.4em;
+				margin-bottom: 20px;
+				font-weight: 300;
+				float: left;
+				&:after {
+					content:"”";
+					display:inline;
+				}
+			}
+		}
+	
+	
+	}
 	
 
 }
