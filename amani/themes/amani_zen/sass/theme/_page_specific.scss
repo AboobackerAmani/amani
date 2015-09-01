@@ -2742,6 +2742,15 @@
 	/* Where We Work */
 	
 	body.node-type-structure.wherewework {
+	
+		.paragraphs-item-paragraph-text-with-header-text {
+			.field-name-field-large-header-text {
+				margin-bottom:20px;
+				&:nth-child(2) {
+					margin-top:1em;
+				}
+			}
+		}
 		
 		#partner-apply {
 			display:block;
@@ -2806,6 +2815,7 @@
 				background:$soft-grey;
 				margin-right:20px;
 				padding:0 20px;
+				margin-bottom:20px;
 				&:nth-child(even) {
 					margin-right:0;
 				}

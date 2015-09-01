@@ -5992,7 +5992,15 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   }
 
   /* Where We Work */
-  /* line 2746, ../sass/theme/_page_specific.scss */
+  /* line 2747, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.wherewework .paragraphs-item-paragraph-text-with-header-text .field-name-field-large-header-text {
+    margin-bottom: 20px;
+  }
+  /* line 2749, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.wherewework .paragraphs-item-paragraph-text-with-header-text .field-name-field-large-header-text:nth-child(2) {
+    margin-top: 1em;
+  }
+  /* line 2755, ../sass/theme/_page_specific.scss */
   body.node-type-structure.wherewework #partner-apply {
     display: block;
     float: left;
@@ -6006,20 +6014,20 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 20px 20px;
     height: 90px;
   }
-  /* line 2758, ../sass/theme/_page_specific.scss */
+  /* line 2767, ../sass/theme/_page_specific.scss */
   body.node-type-structure.wherewework #partner-apply span {
     display: block;
     margin-top: 4px;
     font-weight: 300;
   }
-  /* line 2765, ../sass/theme/_page_specific.scss */
+  /* line 2774, ../sass/theme/_page_specific.scss */
   body.node-type-structure.wherewework .paragraphs-item-add-a-view {
     display: block;
     width: 752px;
     float: left;
     margin-top: -20px;
   }
-  /* line 2770, ../sass/theme/_page_specific.scss */
+  /* line 2779, ../sass/theme/_page_specific.scss */
   body.node-type-structure.wherewework .paragraphs-item-add-a-view .field-name-field-view-title-text {
     font-size: 1.2em;
     text-transform: uppercase;
@@ -6028,13 +6036,13 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-weight: 600;
     margin-bottom: 16px;
   }
-  /* line 2780, ../sass/theme/_page_specific.scss */
+  /* line 2789, ../sass/theme/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-region_country_name_blocks {
     display: block;
     float: left;
     width: 752px;
   }
-  /* line 2785, ../sass/theme/_page_specific.scss */
+  /* line 2794, ../sass/theme/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-region_country_name_blocks h3 {
     font-size: 1.2em;
     text-transform: uppercase;
@@ -6043,13 +6051,13 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-weight: 600;
     margin-bottom: 14px;
   }
-  /* line 2795, ../sass/theme/_page_specific.scss */
+  /* line 2804, ../sass/theme/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-region_country_name_blocks ul li {
     list-style-type: none;
     font-size: 1.1em;
     margin-bottom: 10px;
   }
-  /* line 2802, ../sass/theme/_page_specific.scss */
+  /* line 2811, ../sass/theme/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-region_country_name_blocks .view-content .item-list {
     display: block;
     float: left;
@@ -6057,23 +6065,24 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     background: #E6E6E6;
     margin-right: 20px;
     padding: 0 20px;
+    margin-bottom: 20px;
   }
-  /* line 2809, ../sass/theme/_page_specific.scss */
+  /* line 2819, ../sass/theme/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-region_country_name_blocks .view-content .item-list:nth-child(even) {
     margin-right: 0;
   }
-  /* line 2817, ../sass/theme/_page_specific.scss */
+  /* line 2827, ../sass/theme/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-country_image_cards .views-row {
     position: relative;
     display: block;
     float: left;
     margin-right: 24px;
   }
-  /* line 2822, ../sass/theme/_page_specific.scss */
+  /* line 2832, ../sass/theme/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-country_image_cards .views-row.views-row-last {
     margin-right: 0;
   }
-  /* line 2825, ../sass/theme/_page_specific.scss */
+  /* line 2835, ../sass/theme/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-country_image_cards .views-row .views-field-title {
     position: absolute;
     display: block;
@@ -6088,12 +6097,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding: 0 20px;
     z-index: 300;
   }
-  /* line 2839, ../sass/theme/_page_specific.scss */
+  /* line 2849, ../sass/theme/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-country_image_cards .views-row .views-field-field-image {
     position: relative;
     float: left;
   }
-  /* line 2842, ../sass/theme/_page_specific.scss */
+  /* line 2852, ../sass/theme/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-country_image_cards .views-row .views-field-field-image:before {
     content: "";
     display: block;
