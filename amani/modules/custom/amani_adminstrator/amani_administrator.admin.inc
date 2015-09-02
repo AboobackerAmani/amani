@@ -330,7 +330,7 @@ function amani_administrator_configure_amani_form() {
 
   $form['site-info'][] = array(
     '#type' => 'button',
-    '#value' => t('Configure Site Info and Logo'),
+    '#value' => t('Manage Logo & Tagline'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
     '#suffix' =>
@@ -689,7 +689,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
     case 'Enable \'Get Involved\'':
       variable_set('amani_admin_get_involved_show', 1);
       break;
-    case 'Configure Site Info and Logo':
+    case 'Manage Logo & Tagline':
       drupal_goto('admin/configure-amani/site-info');
       break;
     case 'Configure Map':
