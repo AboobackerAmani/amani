@@ -212,7 +212,7 @@ else{ ?>
 
 
                 <!-------------------------------- Pledged Amount -------------------------------->
-                <div class="views-row views-row-2 views-row-even views-row-last row-pledged">
+                <div class="views-row views-row-2 views-row-even views-row-first  row-pledged">
 
                     <div class="views-field views-field-field-image">        <div class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
                                 print ($node->field_pledged_link[und][0][url]);
@@ -231,7 +231,7 @@ else{ ?>
                 </div>
 
                 <!-------------------------------- Average Temperature -------------------------------->
-                <div class="views-row views-row-1 views-row-odd views-row-first row-temperature">
+                <div class="views-row views-row-1 views-row-odd views-row-last row-temperature">
 
                     <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_temperature_link)):
                                 print ($node->field_temperature_link[und][0][url]);
