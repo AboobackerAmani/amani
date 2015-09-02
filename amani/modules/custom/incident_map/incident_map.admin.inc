@@ -177,6 +177,12 @@ function incident_map_map_settings($prefix) {
  */
 function incident_map_filter_settings($prefix) {
   $items = array();
+  $filterable_fields = array(
+    'field_incident_report_type',
+    'field_incident_severity',
+    'field_filter_3',
+    'field_filter_4',
+  );
 
   $filters = incident_map_filters_by_field_type();
 
@@ -188,8 +194,8 @@ function incident_map_filter_settings($prefix) {
       '#collapsible' => TRUE,
       '#collapsed' => TRUE,
     );
-    if ($field_name == 'field_incident_report_type' || $field_name == 'field_incident_severity') {
-      $set['#description'] = t("Users can customize the labels for both filters, choose between a radio button (single select) or checkbox (multi-select) and set a default value for uncategorized records.");
+    if (in_array($field_name, $filterable_fields)) {
+      $set['#description'] = t("Users can customize the labels for all filters, choose between a radio button (single select) or checkbox (multi-select) and set a default value for uncategorized records.");
     }
 
     $enabled = "$prefix-enabled-{$field_name}";

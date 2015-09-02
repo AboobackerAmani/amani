@@ -131,7 +131,6 @@ function incident_map_block_view($delta = '') {
   $block = array();
   $filter_type = variable_get("$prefix-$delta", NULL);
   $filters = incident_map_filters();
-
   if (!is_null($filter_type) && isset($filters[$filter_type])) {
     $filter = $filters[$filter_type];
     $args = array($map_id, $delta);
@@ -228,7 +227,6 @@ function incident_map_category_filter($map, $key, $title = NULL, $type = 'checkb
   drupal_add_library('incident_map', 'CategoryFilter');
 
   $container = "$map-category-filter-$key";
-
   leaflet_framework_extend_map('incident_reports', $map, array(
     'filters' => array(array(
       'provider' => 'category',
@@ -648,6 +646,8 @@ function incident_map_geojson_info() {
       'query' => array(
         'severity' => array('fieldCondition', 'field_incident_severity:tid', '=', NULL),
         'type' => array('fieldCondition', 'field_incident_report_type:tid', '=', NULL),
+        'filter_3' => array('fieldCondition', 'field_filter_3:tid', '=', NULL),
+        'filter_4' => array('fieldCondition', 'field_filter_4:tid', '=', NULL),
         'from' => array('fieldCondition', 'field_incident_date:value', '>=', NULL),
         'to' => array('fieldCondition', 'field_incident_date:value', '<=', NULL),
       ),
