@@ -323,7 +323,7 @@ function amani_administrator_configure_amani_form() {
 
   $form['site-info'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Manage Site Info and Logo'),
+    '#title' => t('Manage Logo & Tagline'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
