@@ -79,7 +79,7 @@
 
 /* Wrapping link for logo. */
 .header__logo {
-  float: left; /* LTR */
+  float: none;
   margin: 0;
   padding: 0;
 }
@@ -91,7 +91,7 @@
 
 /* Wrapper for website name and slogan. */
 .header__name-and-slogan {
-  float: left;
+  //float: left;
 }
 
 /* The name of the website. */
@@ -117,7 +117,10 @@
 
 /* The slogan (or tagline) of a website. */
 .header__site-slogan {
-  @include element-invisible();
+  font-size: 16px;
+  text-align: center;
+  color: #acacac;
+  //@include element-invisible();
 }
 
 /* The secondary menu (login, etc.) */
@@ -805,5 +808,13 @@ tr.selected td {
   .filled {
     background-color: #0072b9;
     background-image: image-url("progress.gif");
+  }
+}
+
+//mobile for super admin
+@media all and (max-width: $breakpoint) {
+  .sidebar-second #content {
+     margin-right: auto;
+     width: auto;
   }
 }

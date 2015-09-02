@@ -23,13 +23,71 @@ function amani_resource_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Resources';
+  $handler->display->display_options['css_class'] = 'resources-page-view';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'allow_secondary' => 0,
+      'secondary_label' => 'Advanced options',
+    ),
+    'term_node_tid_depth' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+      ),
+    ),
+    'term_node_tid_depth_1' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+      ),
+    ),
+    'field_location_name_value' => array(
+      'more_options' => array(
+        'is_secondary' => 0,
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+      ),
+    ),
+    'field_date_value' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'is_secondary' => 0,
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+      ),
+    ),
+  );
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'table';
@@ -293,6 +351,7 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
@@ -307,31 +366,6 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['text'] = '<h3>[title]</h3>
 [body]';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Resource Type */
-  $handler->display->display_options['fields']['field_resource_type']['id'] = 'field_resource_type';
-  $handler->display->display_options['fields']['field_resource_type']['table'] = 'field_data_field_resource_type';
-  $handler->display->display_options['fields']['field_resource_type']['field'] = 'field_resource_type';
-  $handler->display->display_options['fields']['field_resource_type']['hide_empty'] = TRUE;
-  /* Field: Content: Resource Theme(s) */
-  $handler->display->display_options['fields']['field_theme_s_']['id'] = 'field_theme_s_';
-  $handler->display->display_options['fields']['field_theme_s_']['table'] = 'field_data_field_theme_s_';
-  $handler->display->display_options['fields']['field_theme_s_']['field'] = 'field_theme_s_';
-  $handler->display->display_options['fields']['field_theme_s_']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_theme_s_']['delta_offset'] = '0';
-  /* Field: Content: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['alter']['max_length'] = '600';
-  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['preserve_tags'] = '<a>';
-  $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '600',
-  );
   /* Field: Content: Date */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
@@ -346,15 +380,34 @@ function amani_resource_views_default_views() {
     'multiple_to' => '',
     'show_repeat_rule' => 'show',
   );
-  /* Field: Content: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['nid']['alter']['text'] = 'more';
-  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['nid']['link_to_node'] = TRUE;
+  /* Field: Content: Resource Type */
+  $handler->display->display_options['fields']['field_resource_type']['id'] = 'field_resource_type';
+  $handler->display->display_options['fields']['field_resource_type']['table'] = 'field_data_field_resource_type';
+  $handler->display->display_options['fields']['field_resource_type']['field'] = 'field_resource_type';
+  $handler->display->display_options['fields']['field_resource_type']['label'] = '';
+  $handler->display->display_options['fields']['field_resource_type']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_resource_type']['hide_empty'] = TRUE;
+  /* Field: Content: Resource Theme(s) */
+  $handler->display->display_options['fields']['field_theme_s_']['id'] = 'field_theme_s_';
+  $handler->display->display_options['fields']['field_theme_s_']['table'] = 'field_data_field_theme_s_';
+  $handler->display->display_options['fields']['field_theme_s_']['field'] = 'field_theme_s_';
+  $handler->display->display_options['fields']['field_theme_s_']['label'] = '';
+  $handler->display->display_options['fields']['field_theme_s_']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_theme_s_']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_theme_s_']['delta_offset'] = '0';
+  /* Field: Content: Location */
+  $handler->display->display_options['fields']['field_location_name']['id'] = 'field_location_name';
+  $handler->display->display_options['fields']['field_location_name']['table'] = 'field_data_field_location_name';
+  $handler->display->display_options['fields']['field_location_name']['field'] = 'field_location_name';
+  $handler->display->display_options['fields']['field_location_name']['label'] = '';
+  $handler->display->display_options['fields']['field_location_name']['element_label_colon'] = FALSE;
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
+  $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['label'] = '';
+  $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -451,20 +504,16 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['filters']['field_date_value']['group'] = 1;
   $handler->display->display_options['filters']['field_date_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_date_value']['expose']['operator_id'] = 'field_date_value_op';
-  $handler->display->display_options['filters']['field_date_value']['expose']['label'] = 'Date';
+  $handler->display->display_options['filters']['field_date_value']['expose']['label'] = 'Date Select';
   $handler->display->display_options['filters']['field_date_value']['expose']['operator'] = 'field_date_value_op';
   $handler->display->display_options['filters']['field_date_value']['expose']['identifier'] = 'date';
   $handler->display->display_options['filters']['field_date_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
-    8 => 0,
-    4 => 0,
-    7 => 0,
     5 => 0,
+    4 => 0,
     6 => 0,
-    10 => 0,
-    9 => 0,
   );
   $handler->display->display_options['filters']['field_date_value']['form_type'] = 'date_popup';
   $handler->display->display_options['filters']['field_date_value']['year_range'] = '-10:+0';
@@ -504,8 +553,8 @@ function amani_resource_views_default_views() {
     t('Date'),
     t('Page'),
     t('<h2>Documents</h2>'),
-    t('Resource Theme(s)'),
     t('Resource Theme'),
+    t('Date Select'),
   );
   $export['resources'] = $view;
 

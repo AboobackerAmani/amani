@@ -79,7 +79,12 @@ function amani_zen_preprocess_html(&$variables, $hook) {
   // SS Social
   drupal_add_css($theme_path . '/fonts/ss-social/ss-social.css', array('group' => CSS_THEME, 'every_page' => TRUE));
   drupal_add_js($theme_path . '/fonts/ss-social/ss-social.js', array('type' => 'file', 'scope' => 'footer'));
+
+  // masonary
+  drupal_add_js('//cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js');
 }
+
+
 
 /**
  * Override or insert variables into the page templates.
@@ -89,9 +94,10 @@ function amani_zen_preprocess_html(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function amani_zen_preprocess_page(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+  $variables['page']['footer']['site_name'] = $variables['site_name'];
+    // die(var_dump($variables['page']['footer']['amani_site_name']));
+
 }
 // */
 
@@ -167,3 +173,46 @@ function amani_zen_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+function amani_zen_form_alter(&$form, &$form_state, $form_id) {
+
+  if ($form_id == 'search_block_form') {
+    // add the magnifying glass icon
+    $form['search_block_form']['#suffix'] = '<div class="search-icon amani-icon-search"></div>';
+  }
+
+}
+
+/**
+ * Customize the calendar pager
+ */
+function amani_zen_preprocess_date_views_pager(&$vars) {
+  $datetime = DateTime::createFromFormat('l, F d, Y', $vars['nav_title']);
+  $month = $datetime->format('F');
+  $year = $datetime->format('Y');
+  $vars['nav_title'] = "<span class='month'>$month</span> - $year";
+
+  $vars['mini'] = TRUE;
+}
+
+/**
+* Implements theme_menu_link().
+* Adds menu description under main menu
+*/
+function amani_zen_menu_link(array $variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+  $element['#localized_options']['html'] = TRUE;
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+
+  if ($element['#original_link']['menu_name'] == "menu-social-media" && isset($element['#localized_options']['attributes']['title'])){
+    $social_media_name = strtolower($element['#title']);
+    $element['#attributes']['class'][] = 'social-media-' . $social_media_name;
+  }
+
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}

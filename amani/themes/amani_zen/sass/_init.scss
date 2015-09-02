@@ -113,7 +113,9 @@ $grey-darker: #282828;
 
 $white: #fff;
 $almost-white: #fdfeff;
-
+$purple-primary:  #ce9bc0;
+$purple: #784580;
+$purple-dark: #533058;
 // Primary Color for the site.
 $primary-color: $blue;
 $secondary-color: $orange;
@@ -135,6 +137,12 @@ $nav-height: 3em;
 $tabs-container-bg: $white;
 $tabs-border: $grey-clear;
 
+// Maximum width of the site
+$max-width: 1280px;
+$desktop: 960px;
+
+//break points
+$breakpoint: 768px;
 
 // =============================================================================
 // Partials to be shared with all .scss files.
@@ -155,3 +163,27 @@ $tabs-border: $grey-clear;
 
 // Now we add our custom helper mixins.
 @import "mixins";
+
+
+// include custom fonts
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/AvenirNextLTPro-Regular.eot');
+	src: url('../fonts/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/AvenirNextLTPro-Regular.woff') format('woff'),
+		url('../fonts/AvenirNextLTPro-Regular.ttf')  format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next Condensed';
+  src: url('../fonts/AvenirNextLTPro-Cn.eot');
+	src: url('../fonts/AvenirNextLTPro-Cn.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/AvenirNextLTPro-Cn.woff') format('woff'),
+		url('../fonts/AvenirNextLTPro-Cn.ttf')  format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$avenir:           "Avenir", sans-serif;
+$avenir-condensed: "Avenir Next Condensed", sans-serif;

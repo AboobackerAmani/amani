@@ -276,32 +276,6 @@ function amani_event_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '4';
   $handler->display->display_options['menu']['context'] = 0;
 
-  /* Display: block - calendar */
-  $handler = $view->new_display('block', 'block - calendar', 'calendar');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Upcoming Events';
-  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
-  $handler->display->display_options['use_ajax'] = TRUE;
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'date_views_pager';
-  $handler->display->display_options['pager']['options']['date_id'] = 'mini';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'calendar_style';
-  $handler->display->display_options['style_options']['name_size'] = '1';
-  $handler->display->display_options['style_options']['mini'] = '1';
-  $handler->display->display_options['style_options']['with_weekno'] = '0';
-  $handler->display->display_options['style_options']['multiday_theme'] = '1';
-  $handler->display->display_options['style_options']['theme_style'] = '1';
-  $handler->display->display_options['style_options']['max_items'] = '0';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'calendar_entity';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['header'] = FALSE;
-  $handler->display->display_options['defaults']['footer'] = FALSE;
-  $handler->display->display_options['block_description'] = 'upcoming events - calendar month';
-
   /* Display: block - list */
   $handler = $view->new_display('block', 'block - list', 'list');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -411,10 +385,11 @@ function amani_event_views_default_views() {
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'date_views_pager';
   $handler->display->display_options['pager']['options']['date_id'] = 'mini';
+  $handler->display->display_options['pager']['options']['pager_position'] = 'bottom';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'calendar_style';
   $handler->display->display_options['style_options']['name_size'] = '1';
-  $handler->display->display_options['style_options']['mini'] = '1';
+  $handler->display->display_options['style_options']['mini'] = '0';
   $handler->display->display_options['style_options']['with_weekno'] = '0';
   $handler->display->display_options['style_options']['multiday_theme'] = '1';
   $handler->display->display_options['style_options']['theme_style'] = '1';
@@ -424,6 +399,12 @@ function amani_event_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = 'Upcoming Events';
+  $handler->display->display_options['header']['area']['format'] = 'wysiwyg_advanced';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
@@ -449,10 +430,8 @@ function amani_event_views_default_views() {
     t('Week'),
     t('Day'),
     t('Year'),
-    t('block - calendar'),
-    t('Upcoming Events'),
-    t('upcoming events - calendar month'),
     t('block - list'),
+    t('Upcoming Events'),
     t('Upcoming events block'),
     t('<p></br></p>'),
     t('upcoming events - list'),

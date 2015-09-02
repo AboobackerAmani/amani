@@ -9,7 +9,7 @@
  * Implements hook_block_info().
  */
 function fb_likebox_block_info() {
-  $blocks['0']['info'] = t('@site_name on Facebook', array('@site_name' => variable_get('site_name', 'Default site name')));
+  $blocks['0']['info'] = t('Facebook Feed');
   $blocks['0']['cache'] = DRUPAL_NO_CACHE;
   return $blocks;
 }
@@ -149,7 +149,7 @@ function _fb_likebox_block_view(){
     $fb_width = variable_get('fb_likebox_width', '340');
     $fb_height = variable_get('fb_likebox_height', '500');
     $fb_iframe_title = variable_get('fb_likebox_title', 'Like us on Facebook');
-   
+
      $block['block'] = array(
         '#type' => 'container',
         '#attributes' => array(

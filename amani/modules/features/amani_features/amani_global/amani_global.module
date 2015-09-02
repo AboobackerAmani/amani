@@ -22,7 +22,7 @@ function amani_global_menu() {
   $version = amani_global_get_version();
 
   $items['admin/configure-amani/site-info'] = array(
-    'title' => 'Configure Site Info and Logo',
+    'title' => 'Manage Logo & Tagline',
     'description' => 'Manage site name, e-mail address, slogan, logo and favicon.',
     'page callback' => 'drupal_get_form',
     'type' => MENU_NORMAL_ITEM,

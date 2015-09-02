@@ -16,7 +16,7 @@ function amani_social_media_quicktabs_default_quicktabs() {
   $quicktabs->machine_name = 'social_media_feeds';
   $quicktabs->ajax = 0;
   $quicktabs->hide_empty_tabs = TRUE;
-  $quicktabs->default_tab = 0;
+  $quicktabs->default_tab = 999999;
   $quicktabs->title = 'Social Media Feeds';
   $quicktabs->tabs = array(
     0 => array(
@@ -24,13 +24,6 @@ function amani_social_media_quicktabs_default_quicktabs() {
       'hide_title' => 1,
       'title' => 'twitter',
       'weight' => '-100',
-      'type' => 'block',
-    ),
-    1 => array(
-      'bid' => 'fb_likebox_delta_0',
-      'hide_title' => 1,
-      'title' => 'facebook',
-      'weight' => '-99',
       'type' => 'block',
     ),
   );
@@ -41,7 +34,6 @@ function amani_social_media_quicktabs_default_quicktabs() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Social Media Feeds');
-  t('facebook');
   t('twitter');
 
   $export['social_media_feeds'] = $quicktabs;

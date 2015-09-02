@@ -103,35 +103,23 @@ function amani_global_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'bean-amani-powered-by' => array(
-          'module' => 'bean',
-          'delta' => 'amani-powered-by',
-          'region' => 'footer',
-          'weight' => '-9',
-        ),
         'menu-menu-amani-main-menu' => array(
           'module' => 'menu',
           'delta' => 'menu-amani-main-menu',
           'region' => 'footer',
-          'weight' => '-8',
+          'weight' => '-40',
         ),
-        'menu-menu-meta' => array(
-          'module' => 'menu',
-          'delta' => 'menu-meta',
-          'region' => 'footer',
-          'weight' => '-7',
-        ),
-        'search-form' => array(
-          'module' => 'search',
-          'delta' => 'form',
-          'region' => 'footer',
-          'weight' => '-6',
-        ),
-        'bean-amani-special-thanks' => array(
+        'bean-img1' => array(
           'module' => 'bean',
-          'delta' => 'amani-special-thanks',
+          'delta' => 'img1',
           'region' => 'footer',
-          'weight' => '-4',
+          'weight' => '-10',
+        ),
+        'bean-img2' => array(
+          'module' => 'bean',
+          'delta' => 'img2',
+          'region' => 'footer',
+          'weight' => '-9',
         ),
       ),
     ),
@@ -163,38 +151,56 @@ function amani_global_context_default_contexts() {
         'views-front_page_slideshow-block' => array(
           'module' => 'views',
           'delta' => 'front_page_slideshow-block',
-          'region' => 'home_content_top_rotator',
+          'region' => 'subheader',
           'weight' => '-10',
         ),
         'views-front_page_blocks-block' => array(
           'module' => 'views',
           'delta' => 'front_page_blocks-block',
-          'region' => 'home_content_top_static_region',
+          'region' => 'content',
           'weight' => '-10',
         ),
         'views-front_page_blocks-block_1' => array(
           'module' => 'views',
           'delta' => 'front_page_blocks-block_1',
-          'region' => 'home_content_top_static_region',
+          'region' => 'content',
           'weight' => '-9',
         ),
         'views-front_page_blocks-block_2' => array(
           'module' => 'views',
           'delta' => 'front_page_blocks-block_2',
-          'region' => 'home_content_top_static_region',
+          'region' => 'content',
           'weight' => '-8',
+        ),
+        'views-front_page_tweets-block' => array(
+          'module' => 'views',
+          'delta' => 'front_page_tweets-block',
+          'region' => 'content',
+          'weight' => '-7',
+        ),
+        'fb_likebox-0' => array(
+          'module' => 'fb_likebox',
+          'delta' => '0',
+          'region' => 'content',
+          'weight' => '-6',
+        ),
+        'views-calendar_of_events-block_3' => array(
+          'module' => 'views',
+          'delta' => 'calendar_of_events-block_3',
+          'region' => 'content',
+          'weight' => '-5',
+        ),
+        'views-72a1db79709d2921e03b4173ca67a118' => array(
+          'module' => 'views',
+          'delta' => '72a1db79709d2921e03b4173ca67a118',
+          'region' => 'content',
+          'weight' => '-4',
         ),
         'views-news_and_events-block_1' => array(
           'module' => 'views',
           'delta' => 'news_and_events-block_1',
           'region' => 'content',
-          'weight' => '-10',
-        ),
-        'views-calendar_of_events-list' => array(
-          'module' => 'views',
-          'delta' => 'calendar_of_events-list',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
+          'weight' => '-3',
         ),
       ),
     ),
@@ -223,35 +229,29 @@ function amani_global_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'search-form' => array(
-          'module' => 'search',
-          'delta' => 'form',
-          'region' => 'header',
-          'weight' => '-41',
-        ),
-        'menu-menu-meta' => array(
+        'menu-menu-amani-main-menu' => array(
           'module' => 'menu',
-          'delta' => 'menu-meta',
+          'delta' => 'menu-amani-main-menu',
           'region' => 'header',
-          'weight' => '-40',
+          'weight' => '-10',
         ),
         'locale-language' => array(
           'module' => 'locale',
           'delta' => 'language',
           'region' => 'header',
-          'weight' => '-39',
+          'weight' => '-9',
         ),
         'menu-menu-social-media' => array(
           'module' => 'menu',
           'delta' => 'menu-social-media',
           'region' => 'header',
-          'weight' => '-38',
+          'weight' => '-8',
         ),
-        'superfish-1' => array(
-          'module' => 'superfish',
-          'delta' => '1',
-          'region' => 'navigation_region',
-          'weight' => '-10',
+        'search-form' => array(
+          'module' => 'search',
+          'delta' => 'form',
+          'region' => 'header',
+          'weight' => '-7',
         ),
       ),
     ),
