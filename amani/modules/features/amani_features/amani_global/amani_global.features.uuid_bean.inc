@@ -37,33 +37,5 @@ function amani_global_uuid_features_default_beans() {
     ),
     'metatags' => array(),
   );
-  $beans[] = array(
-    'label' => 'Amani: Powered by',
-    'description' => NULL,
-    'title' => '',
-    'type' => 'static_content',
-    'data' => array(
-      'view_mode' => 'default',
-    ),
-    'delta' => 'amani-powered-by',
-    'view_mode' => 'default',
-    'created' => '1374817913',
-    'log' => '',
-    'uid' => '0',
-    'default_revision' => '1',
-    'revisions' => array(),
-    'vuuid' => '74895912-6a98-4d34-9f5f-ebd01453fd1a',
-    'uuid' => 'db498fe8-1460-4588-807e-e94ee68ea016',
-    'field_bean_body' => array(
-      'und' => array(
-        0 => array(
-          'value' => '<img src="<?php echo base_path();  ?>profiles/amani/themes/peace/images/amani_powered_by.png" style="width: 50%; margin-bottom: 20px;" />
-<div class="credits-logo"><img src="<?php echo base_path() . path_to_theme(); ?>/images/icons/logo_peacegeeks.png" style="width: 50%;" /></div>',
-          'format' => 'php_code',
-        ),
-      ),
-    ),
-    'metatags' => array(),
-  );
   return $beans;
 }

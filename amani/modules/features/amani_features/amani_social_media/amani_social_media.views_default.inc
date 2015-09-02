@@ -22,6 +22,7 @@ function amani_social_media_views_default_views() {
 
   /* Display: Tweets */
   $handler = $view->new_display('default', 'Tweets', 'default');
+  $handler->display->display_options['css_class'] = 'home-page-twitter-block';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -250,8 +251,7 @@ function amani_social_media_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['style_options']['grouping'] = '';
+  $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -259,7 +259,7 @@ function amani_social_media_views_default_views() {
     'text' => 'text',
     'created_time' => 'created_time',
   );
-  $handler->display->display_options['row_options']['separator'] = ' &#8212; ';
+  $handler->display->display_options['row_options']['separator'] = '&ndash;';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Global: Text area */

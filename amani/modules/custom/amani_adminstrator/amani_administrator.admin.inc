@@ -106,7 +106,7 @@ function amani_administrator_configure_amani_form() {
     '#attributes' => array('onclick' => 'if(!confirm("Are you sure?")){return false;}'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
-    '#suffix' => '<p>This action builds the<a href="http://projectamani.org/content/edit-main-menu-links">default main menu</a>. 
+    '#suffix' => '<p>This action builds the<a href="http://projectamani.org/content/edit-main-menu-links">default main menu</a>.
       It will not enable or remove any existing links.</p></div>',
   );
 
@@ -128,14 +128,14 @@ function amani_administrator_configure_amani_form() {
 
   $form['meta_menu'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Manage Meta Menu'),
+    '#title' => t('Manage Secondary Menu'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
 
   $form['meta_menu'][] = array(
     '#type' => 'button',
-    '#value' => t('Reset Default Meta Menu Links'),
+    '#value' => t('Reset Default Secondary Menu Links'),
     '#attributes' => array('onclick' => 'if(!confirm("Are you sure?")){return false;}'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
@@ -145,7 +145,7 @@ function amani_administrator_configure_amani_form() {
 
   $form['meta_menu'][] = array(
     '#type' => 'button',
-    '#value' => t('Configure Meta Menu Links'),
+    '#value' => t('Configure Secondary Menu Links'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
     '#suffix' =>
@@ -161,17 +161,18 @@ function amani_administrator_configure_amani_form() {
 
   $form['donate_menu'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Manage Donate Button'),
+    '#title' => t('Manage Floating Button'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
 
   $form['donate_menu'][] = array(
     '#type' => 'button',
-    '#value' => t('Configure \'Donate\' Button'),
+    '#value' => t('Configure Floating Button'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
-    '#suffix' => '<p>This action allows users to enable, disable or delete your \'Donate\' button and set your \'Donate\' button link. The \'Donate\' button will appear as a dynamically scrolling button on the right side of your page.</p></div>',
+    '#suffix' => '<p>This action allows users to enable, disable, edit or delete your floating button and set your floating button link. The floating button will appear as a dynamically scrolling button on the right side of your page.
+                  Example use: A \'Donate\' button.</p></div>',
   );
 
   $form['blocks'] = array(
@@ -224,7 +225,7 @@ function amani_administrator_configure_amani_form() {
     '#value' => t('Enable \'Partners Carousel\''),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
-    '#suffix' => '<p>This action enables a ‘Partners Carousel’ to appear on your site, as a scrolling bar at the bottom of 
+    '#suffix' => '<p>This action enables a ‘Partners Carousel’ to appear on your site, as a scrolling bar at the bottom of
       your page. Please note without partner content you will not see this block.</p></div>',
   );
 
@@ -305,16 +306,31 @@ function amani_administrator_configure_amani_form() {
     '#suffix' => '<p>This action disables the \'Get Involved Block\' to appear on your site\'s /programs page.</p></div>'
   );
 
+  $form['blocks']['img_behind_blocks'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Manage Image Behind Homepage Block (Home Page)'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['blocks']['img_behind_blocks'][] = array(
+    '#type' => 'button',
+    '#value' => t('Change Image'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>Change image behind homepage twitter, faceboook & calender blocks.</p>',
+  );
+
   $form['site-info'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Manage Site Info and Logo'),
+    '#title' => t('Manage Logo & Tagline'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
 
   $form['site-info'][] = array(
     '#type' => 'button',
-    '#value' => t('Configure Site Info and Logo'),
+    '#value' => t('Manage Logo & Tagline'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
     '#suffix' =>
@@ -343,9 +359,9 @@ function amani_administrator_configure_amani_form() {
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
     '#suffix' =>
-    '<p>This option allows you to add new categories for the ‘Contact Form’ (e.g. General Inquiries, Donation Inquiries, Volunteer with Us, 
-      Website Feedback, etc.) and customize the set of recipients for each category type on your site’s default Contact page. 
-      Please note that your site comes with one default category ‘General Inquiries.’ When there is only one ‘Category’, there is no ‘Category’ 
+    '<p>This option allows you to add new categories for the ‘Contact Form’ (e.g. General Inquiries, Donation Inquiries, Volunteer with Us,
+      Website Feedback, etc.) and customize the set of recipients for each category type on your site’s default Contact page.
+      Please note that your site comes with one default category ‘General Inquiries.’ When there is only one ‘Category’, there is no ‘Category’
       dropdown list. This dropdown option will appear as soon as you add a second ‘Category’ option.</p></div>'
   );
 
@@ -446,8 +462,8 @@ function amani_administrator_configure_amani_form() {
     '#value' => t('Configure Redhen'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
-    '#suffix' => '<p><a href="https://www.drupal.org/project/redhen">RedHen CRM</a> is an open source CRM framework built in <a href="https://www.drupal.org/">Drupal</a>. 
-      RedHen CRM is packed with <a href="http://en.wikipedia.org/wiki/Association_management_system">association management</a> (AMS) features for managing detailed information on Contacts and Organizations, Membership services, Event registrations, and 
+    '#suffix' => '<p><a href="https://www.drupal.org/project/redhen">RedHen CRM</a> is an open source CRM framework built in <a href="https://www.drupal.org/">Drupal</a>.
+      RedHen CRM is packed with <a href="http://en.wikipedia.org/wiki/Association_management_system">association management</a> (AMS) features for managing detailed information on Contacts and Organizations, Membership services, Event registrations, and
       Constituent engagement.</p></div>',
   );
 
@@ -543,6 +559,41 @@ function amani_administrator_configure_amani_form() {
     '#suffix' => '</div>',
   );
 
+  $form['login_items'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Manage Third-Party Logins'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['login_items'][] = array(
+    '#type' => 'button',
+    '#value' => t('Edit Third-Party Logins'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>Select which login methods users can use, eg: Facebook, Twitter, Google or Yahoo.
+                  Click <a href="https://www.prophoto.com/support/twitter-api-credentials/">here</a> for an instructional to setup a Twitter application.
+                  Click <a href="https://developers.facebook.com/docs/apps/register">here</a> for an instructional to setup a Facebook application.
+                  Click <a href="https://developers.google.com/identity/protocols/OpenIDConnect?hl=en#appsetup">here</a> for an instructional on setting up a Google application.
+                  Click <a href="https://developer.yahoo.com/oauth/guide/oauth-auth-flow.html">here</a> for instructions on creating a Yahoo application.</p>',
+  );
+
+  $form['front_page_feed'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Manage front page feed'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['front_page_feed'][] = array(
+    '#type' => 'button',
+    '#value' => t('Configure content types to display'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>You can configure the content type to be displayed on
+      the feed displayed at the bottom of the front page</p></div>',
+  );
+
   return $form;
 }
 
@@ -592,7 +643,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
     case 'Configure Meta Menu Links':
       drupal_goto('admin/structure/menu/manage/menu-meta');
       break;
-    case 'Configure \'Donate\' Button':
+    case 'Configure Floating Button':
       drupal_goto('admin/structure/menu/manage/menu-donate');
       break;
     case 'Enable \'Partners Carousel\'':
@@ -638,7 +689,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
     case 'Enable \'Get Involved\'':
       variable_set('amani_admin_get_involved_show', 1);
       break;
-    case 'Configure Site Info and Logo':
+    case 'Manage Logo & Tagline':
       drupal_goto('admin/configure-amani/site-info');
       break;
     case 'Configure Map':
@@ -670,6 +721,15 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       break;
     case 'View Amani Release Notes':
       drupal_goto('admin/configure-amani/release-notes');
+      break;
+    case 'Change Image':
+      drupal_goto('node/add/image-behind-twitter-fb-cal-bloc');
+      break;
+    case 'Edit Third-Party Logins':
+      drupal_goto('admin/config/people/hybridauth');
+      break;
+    case 'Configure content types to display':
+      drupal_goto('admin/structure/views/view/news_and_events/edit/block_1');
       break;
   }
 }

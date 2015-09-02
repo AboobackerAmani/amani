@@ -1,0 +1,9 @@
+<?php
+
+/*
+* Implements hook_update() to enable newly added modules.
+*/
+function amani_core_enable_update_7001() {
+  $modules = array('module_filter', 'hybridauth');
+  module_enable($modules);
+}

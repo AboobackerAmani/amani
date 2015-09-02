@@ -49,8 +49,9 @@ stylesheets[all][] = system.menus.css
 stylesheets[all][] = system.messages.css
 stylesheets[all][] = system.theme.css
 
-; Then we add our own stylesheet.
+; Then we add our own stylesheets.
 stylesheets[all][] = css/styles.css
+stylesheets[all][] = icons/style.css
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html
@@ -66,7 +67,8 @@ stylesheets[all][] = css/styles.css
 
 ; Optionally add some JavaScripts to your theme.
 
-;scripts[] = js/script.js
+scripts[] = js/jquery.uniform.min.js
+scripts[] = js/script.js
 
 
 
@@ -86,6 +88,7 @@ stylesheets[all][] = css/styles.css
 ;   <?php print $header_top; ?>
 
 regions[header]         = Header
+regions[subheader]      = Sub Header
 regions[navigation]     = Navigation bar
 regions[highlighted]    = Highlighted
 regions[help]           = Help
