@@ -99,7 +99,7 @@ else{ ?>
 
                 <!-------------------------------- Ceasfire -------------------------------->
 
-                <div class="views-row views-row-1 views-row-odd views-row-first row-days">
+                <div class="views-row views-row-1  views-row-first row-days">
                     <?php
                     $now = time(); // or your date as well
                     $your_date = strtotime("2014-08-26");
@@ -116,7 +116,7 @@ else{ ?>
 
                 <!-------------------------------- Trucks -------------------------------->
 
-                <div class="views-row views-row-2 views-row-even views-row-last row-trucks">
+                <div class="views-row views-row-2 views-row-odd views-row-last row-trucks">
 
                     <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_trucks_link)) {
                                 print ($node->field_trucks_link[und][0][url]);
