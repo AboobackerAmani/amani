@@ -86,6 +86,8 @@
 else{ ?>
     <?php $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
     $theme_path = '/'.$theme_path.'/images/indicators/';?>
+
+    <!------------------------------------------------First Column----------------------------------------------------------------->
     <div id="left-wrapper" class="block block-views contextual-links-region even left-wrapper">
 
 
@@ -94,6 +96,9 @@ else{ ?>
 
 
             <div class="view-content">
+
+                <!-------------------------------- Ceasfire -------------------------------->
+
                 <div class="views-row views-row-1 views-row-odd views-row-first row-days">
                     <?php
                     $now = time(); // or your date as well
@@ -104,7 +109,12 @@ else{ ?>
                     <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_days_link)){ print ($node->field_days_link[und][0][url]);}?>"><img typeof="foaf:Image" src="<?php print $theme_path.'calendar.png';?>" width="104" height="91" alt=""></a></div>  </div>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_days_link)){print ($node->field_days_link[und][0][url]);}?>"><?php print t('Days Since Ceasefire');?></a></span>  </div>
                     <div class="views-field views-field-field-text big">        <div class="field-content"><?php print floor($number_days);?></div>  </div>
-                    <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_days_link)){ print ($node->field_days_link[und][0][url]);}?>"><?php print t('Read More');?></a></span>  </div>  </div>
+                    <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_days_link)){ print ($node->field_days_link[und][0][url]);}?>"><?php print t('Read More');?></a></span>  </div>
+                </div>
+
+
+
+                <!-------------------------------- Trucks -------------------------------->
 
                 <div class="views-row views-row-2 views-row-even views-row-last row-trucks">
 
@@ -121,11 +131,14 @@ else{ ?>
                             }?> </div>  </div>
                     <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_trucks_link)){
                                 print ($node->field_trucks_link[und][0][url]);
-                            }?>"><?php print t('Read More');?></a></span>  </div>  </div>
+                            }?>"><?php print t('Read More');?></a></span>  </div>
+                </div>
+
             </div>
         </div>
     </div>
 
+    <!------------------------------------------------Second Column----------------------------------------------------------------->
 
     <div id="center-wrapper" class="block block-views  odd center-wrapper">
 
@@ -134,23 +147,11 @@ else{ ?>
 
 
             <div class="view-content">
-                <div class="views-row views-row-2 views-row-even views-row-last row-pledged">
 
-                    <div class="views-field views-field-field-image">        <div class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
-                                print ($node->field_pledged_link[und][0][url]);
-                            endif;?>"><img typeof="foaf:Image" src="<?php print $theme_path.'dollar.png'?>" width="69" height="103" alt=""></a></div>  </div>
-                    <div class="views-field views-field-title">        <span class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
-                                print ($node->field_pledged_link[und][0][url]);
-                            endif;?>"><?php print t('Amount pledged and paid');?> </a></span>  </div>
-                    <div class="views-field views-field-field-text">        <div class="field-content">   <?php if(!empty($node->field_pledged_amount)):
-                                print $node->field_pledged_amount[und][0][value];
-                            endif;?> /               <?php if(!empty($node->field_paid_amount)):
-                                print $node->field_paid_amount[und][0][value];
-                            endif;?></div>  </div>
-                    <div class="views-field views-field-title-1">        <span class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
-                                print ($node->field_pledged_link[und][0][url]);
-                            endif;?>"><?php print t('Read More');?></a></span>  </div>
-                </div>
+
+
+
+                <!-------------------------------- people Displaced -------------------------------->
                 <div class="views-row views-row-1 views-row-odd views-row-first row-people">
 
                     <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_people_link)):
@@ -173,21 +174,63 @@ else{ ?>
                             endif;?>"><?php print t('Read More');?></a></span>  </div>
                 </div>
 
+                <!-------------------------------- Homes repaired -------------------------------->
+                <div class="views-row views-row-2 views-row-even views-row-last row-home">
 
-
+                    <div class="views-field views-field-field-image">        <div class="field-content"><a href="    <?php if(!empty($node->field_home_link)):
+                                print ($node->field_home_link[und][0][url]);
+                            endif;?>"><img typeof="foaf:Image" src="<?php print $theme_path.'hummer.png';?>" width="84" height="112" alt=""></a></div>  </div>
+                    <div class="views-field views-field-title">        <span class="field-content"><a href="    <?php if(!empty($node->field_home_link)):
+                                print ($node->field_home_link[und][0][url]);
+                            endif;?>"><?php print t('Homes repaired and rebuilt');?> </a></span>  </div>
+                    <div class="views-field views-field-field-text">
+                        <div class="field-content">  <?php if(!empty($node->field_home_rebuilt)):
+                                print $node->field_home_rebuilt[und][0][value];
+                            endif;?> /       <?php if(!empty($node->field_home_destroyed)):
+                                print $node->field_home_destroyed[und][0][value];
+                            endif;?> </div>  </div>
+                    <div class="views-field views-field-title-1">        <span class="field-content"><a href="    <?php if(!empty($node->field_home_link)):
+                                print ($node->field_home_link[und][0][url]);
+                            endif;?>"><?php print t('Read More');?></a></span>  </div>
+                </div>
 
             </div>
         </div>
     </div>
 
 
+
+
+    <!--------------------------------------------Third Column------------------------------------------------->
+
+
     <div id="right-wrapper" class="block block-views  even right-wrapper">
 
         <div class=" view-aidwatch-front-page-blocks view-display-id-block_2 f-right-block">
 
-
-
             <div class="view-content">
+
+
+                <!-------------------------------- Pledged Amount -------------------------------->
+                <div class="views-row views-row-2 views-row-even views-row-last row-pledged">
+
+                    <div class="views-field views-field-field-image">        <div class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
+                                print ($node->field_pledged_link[und][0][url]);
+                            endif;?>"><img typeof="foaf:Image" src="<?php print $theme_path.'dollar.png'?>" width="69" height="103" alt=""></a></div>  </div>
+                    <div class="views-field views-field-title">        <span class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
+                                print ($node->field_pledged_link[und][0][url]);
+                            endif;?>"><?php print t('Amount pledged and paid');?> </a></span>  </div>
+                    <div class="views-field views-field-field-text">        <div class="field-content">   <?php if(!empty($node->field_pledged_amount)):
+                                print $node->field_pledged_amount[und][0][value];
+                            endif;?> /               <?php if(!empty($node->field_paid_amount)):
+                                print $node->field_paid_amount[und][0][value];
+                            endif;?></div>  </div>
+                    <div class="views-field views-field-title-1">        <span class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
+                                print ($node->field_pledged_link[und][0][url]);
+                            endif;?>"><?php print t('Read More');?></a></span>  </div>
+                </div>
+
+                <!-------------------------------- Average Temperature -------------------------------->
                 <div class="views-row views-row-1 views-row-odd views-row-first row-temperature">
 
                     <div class="views-field views-field-field-image">        <div class="field-content"><a href="<?php if(!empty($node->field_temperature_link)):
@@ -206,24 +249,12 @@ else{ ?>
 
                     <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_temperature_link)):
                                 print ($node->field_temperature_link[und][0][url]);
-                            endif;?>"><?php print t('Read More');?></a></span>  </div>  </div>
-                <div class="views-row views-row-2 views-row-even views-row-last row-home">
+                            endif;?>"><?php print t('Read More');?></a></span>  </div>
+                </div>
 
-                    <div class="views-field views-field-field-image">        <div class="field-content"><a href="    <?php if(!empty($node->field_home_link)):
-                                print ($node->field_home_link[und][0][url]);
-                            endif;?>"><img typeof="foaf:Image" src="<?php print $theme_path.'hummer.png';?>" width="84" height="112" alt=""></a></div>  </div>
-                    <div class="views-field views-field-title">        <span class="field-content"><a href="    <?php if(!empty($node->field_home_link)):
-                                print ($node->field_home_link[und][0][url]);
-                            endif;?>"><?php print t('Homes repaired and rebuilt');?> </a></span>  </div>
-                    <div class="views-field views-field-field-text">
-                        <div class="field-content">  <?php if(!empty($node->field_home_rebuilt)):
-                                print $node->field_home_rebuilt[und][0][value];
-                            endif;?> /       <?php if(!empty($node->field_home_destroyed)):
-                                print $node->field_home_destroyed[und][0][value];
-                            endif;?> </div>  </div>
-                    <div class="views-field views-field-title-1">        <span class="field-content"><a href="    <?php if(!empty($node->field_home_link)):
-                                print ($node->field_home_link[und][0][url]);
-                            endif;?>"><?php print t('Read More');?></a></span>  </div>  </div>
+
+
+
             </div>
 
         </div>
