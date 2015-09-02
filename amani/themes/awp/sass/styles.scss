@@ -650,12 +650,24 @@ body {
       padding: 20px;
       background: $awp-white;
       height: 180px;
+      img.normal-img{
+        display: block;
+      }
+      img.hover-img{
+        display: none;
+      }
       &:hover{
         background: $awp-light-grey;
         .views-field-title,
         .views-field-field-text,
         .views-field-title a{
           color: $awp-white;
+        }
+        img.normal-img{
+          display: none;
+        }
+        img.hover-img{
+          display: block;
         }
       }
       clear: both;
@@ -758,10 +770,13 @@ body {
       .views-row{
         &:hover{
           img{
-            -webkit-filter: saturate(33333333%);
+            //-webkit-filter: saturate(33333333%);
           }
           &.views-row-first{
             background-color: $calendar-color;
+            img{
+              background: url("../images/homepage/calendar-w.png") center no-repeat;
+            }
           }
           &.views-row-last{
             background-color: $trucks-color;
@@ -774,7 +789,7 @@ body {
       .views-row{
         &:hover{
           img{
-            -webkit-filter: saturate(33333333%);
+            //-webkit-filter: saturate(33333333%);
           }
           &.views-row-first{
             background-color: $money-color;
@@ -790,7 +805,7 @@ body {
       .views-row{
         &:hover{
           img{
-            -webkit-filter: saturate(33333333%);
+            //-webkit-filter: saturate(33333333%);
           }
           &.views-row-first{
             background-color: $temp-color;
