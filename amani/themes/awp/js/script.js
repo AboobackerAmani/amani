@@ -28,10 +28,10 @@ Drupal.behaviors.my_custom_behavior = {
       $('.header__region .header_links .search_link #search-block-form .form-text').focusout(function() {
           $('.header__region .header_links .search_link #search-block-form').hide();
       });
-    if ($( document ).width()>781)
+    if ($( document ).width()-20>780)
       {
           //$('.section-resources .sidebars .region-sidebar-second').height($('.section-resources .view-resources-categories').height());
-          console.log("width=" + $( document ).width());
+          console.log("width=" + $( document ).width()-20);
       }
       else{
         $('#header').append($('#header .lang-block'));
