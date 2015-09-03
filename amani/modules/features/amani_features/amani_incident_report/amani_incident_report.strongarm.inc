@@ -104,6 +104,9 @@ function amani_incident_report_strongarm() {
         'path' => array(
           'weight' => '4',
         ),
+        'language' => array(
+          'weight' => '0',
+        ),
       ),
       'display' => array(
         'language' => array(
