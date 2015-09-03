@@ -28,7 +28,7 @@ Drupal.behaviors.my_custom_behavior = {
       $('.header__region .header_links .search_link #search-block-form .form-text').focusout(function() {
           $('.header__region .header_links .search_link #search-block-form').hide();
       });
-    if ($( document ).width()-20>780)
+    if (($( document ).width()-20)>781)
       {
           //$('.section-resources .sidebars .region-sidebar-second').height($('.section-resources .view-resources-categories').height());
           console.log("width=" + $( document ).width()-20);
