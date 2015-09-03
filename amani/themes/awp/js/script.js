@@ -31,7 +31,7 @@ Drupal.behaviors.my_custom_behavior = {
     if (($( document ).width()-20)>781)
       {
           //$('.section-resources .sidebars .region-sidebar-second').height($('.section-resources .view-resources-categories').height());
-          console.log("width=" + $( document ).width()-20);
+          console.log("width=" + $( document ).width());
       }
       else{
         $('#header').append($('#header .lang-block'));
