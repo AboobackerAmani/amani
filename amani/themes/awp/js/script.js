@@ -35,6 +35,7 @@ Drupal.behaviors.my_custom_behavior = {
       }
       else{
         $('#header').append($('#header .lang-block'));
+        console.log("width=" + $( document ).width());
     }
 
 
