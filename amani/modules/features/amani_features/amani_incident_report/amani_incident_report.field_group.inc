@@ -90,7 +90,9 @@ function amani_incident_report_field_group_info() {
       2 => 'field_incident_date',
       3 => 'field_incident_report_type',
       4 => 'field_incident_severity',
-      5 => 'title',
+      5 => 'field_map_filter_3',
+      6 => 'field_map_filter_4',
+      7 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -122,8 +124,8 @@ function amani_incident_report_field_group_info() {
     'label' => 'Supporting Documents & Links',
     'weight' => '2',
     'children' => array(
-      0 => 'field_incident_media',
-      1 => 'field_links',
+      0 => 'field_links',
+      1 => 'field_incident_media',
     ),
     'format_type' => 'div',
     'format_settings' => array(

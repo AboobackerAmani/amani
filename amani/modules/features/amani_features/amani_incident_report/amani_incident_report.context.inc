@@ -173,6 +173,76 @@ function amani_incident_report_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'incident_map_filter_3';
+  $context->description = '';
+  $context->tag = 'Context using variables';
+  $context->conditions = array(
+    'context_var' => array(
+      'values' => array(
+        'incident-map-filter-enabled-field_map_filter_3|1' => 'incident-map-filter-enabled-field_map_filter_3|1',
+      ),
+    ),
+    'path' => array(
+      'values' => array(
+        'incident-reports' => 'incident-reports',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'incident_map-field_map_filter_3' => array(
+          'module' => 'incident_map',
+          'delta' => 'field_map_filter_3',
+          'region' => 'sidebar_second',
+          'weight' => '2',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Context using variables');
+  $export['incident_map_filter_3'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'incident_map_filter_4';
+  $context->description = '';
+  $context->tag = '';
+  $context->conditions = array(
+    'context_var' => array(
+      'values' => array(
+        'incident-map-filter-enabled-field_map_filter_4|1' => 'incident-map-filter-enabled-field_map_filter_4|1',
+      ),
+    ),
+    'path' => array(
+      'values' => array(
+        'incident-reports' => 'incident-reports',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'incident_map-field_map_filter_4' => array(
+          'module' => 'incident_map',
+          'delta' => 'field_map_filter_4',
+          'region' => 'sidebar_second',
+          'weight' => '3',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+  $export['incident_map_filter_4'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'incident_map_timeline';
   $context->description = '';
   $context->tag = 'Context using variables';
