@@ -38,7 +38,7 @@ Drupal.behaviors.my_custom_behavior = {
         console.log("width=" + $( document ).width());
     }*/
 
-      $('#header .lang-block').appendTo($('#header'));
+      $('#header .lang-block').clone().appendTo($('#header'));
 
 
       var ourLabel = $('#views-exposed-form-resource-inner-page .views-widget-filter-keys label').text();
