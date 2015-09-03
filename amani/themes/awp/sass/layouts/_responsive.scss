@@ -287,6 +287,7 @@ $zen-auto-include-item-base: false;
         display: none;
       }
       .lang-block{
+        display: block;
         position: absolute;
         top: 35px;
         left: 25px;
@@ -1004,6 +1005,12 @@ $zen-auto-include-item-base: false;
         display: none;
       }
     }
+  }
+  #header .lang-block{
+    display: none;
+  }
+  #header .header_links .lang-block{
+    display: block;
   }
   #highlighted{
     $zen-column-count: 12;
