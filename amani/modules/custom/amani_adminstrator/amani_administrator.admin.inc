@@ -591,7 +591,7 @@ function amani_administrator_configure_amani_form() {
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
     '#suffix' => '<p>You can configure the content type to be displayed on
-      the feed displayed at the bottom of the front page</p></div>',
+      the feed displayed at the bottom of the front page. Click on the button above and go to the "FILTER CRITERIA" part. Then click on "Content:type", select the content types that you want to see on the front pahe, then save and save the view.</p></div>',
   );
 
   return $form;
