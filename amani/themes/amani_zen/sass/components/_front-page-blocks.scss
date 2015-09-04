@@ -88,8 +88,13 @@
   width: 290px;
   height: 370px;
   text-align: left;
-
-  @media all and (max-width: $breakpoint) {
+  
+  @media all and (min-width: 991px) and (max-width: 1090px){
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  @media all and (max-width: 990px) {
     margin: 50px 0;
   }
 
@@ -107,7 +112,7 @@
   }
 }
 
-@media all and (max-width: $breakpoint) {
+@media all and (max-width: 990px) {
    #block-fb-likebox-0.block-fb-likebox {
      background-color: $purple;
      text-align: center;
@@ -121,7 +126,7 @@
 // background image block
 .fb-twit-cal-bgimage {
   position: absolute;
-  top: 415px;
+  top: 456px;
   z-index: -10;
   margin-bottom: 100px;
   margin-right: -50%;
@@ -129,6 +134,10 @@
   width: 200%;
   height: 500px;
   overflow: hidden;
+  
+  @media all and (max-width: 990px) {
+    display: none;
+  }
 
   img {
     height: auto !important;
@@ -147,12 +156,16 @@
   margin-left: 30px;
   font-family: $avenir-condensed;
   min-height: 387px;
+  
+  @media all and (max-width: 1090px) {
+     //margin-left: 10px;
+  }
 
-  @media all and (max-width: $breakpoint) {
+  @media all and (max-width: 920px) {
     background: #e5e5e5;
     width: 110%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     margin: 0 -5%;
     box-sizing: content-box;
   }
@@ -163,8 +176,9 @@
     padding: 16px;
     min-height: 387px;
 
-    @media all and (max-width: $breakpoint) {
-       width: 280px;
+    @media all and (max-width: 990px) {
+       //width: 280px;
+       width: 290px;
        margin: 0 auto;
      }
 
@@ -202,6 +216,7 @@
 
           a {
             color: #ce9bc0;
+            //color: #513e79;
           }
         }
 
@@ -218,11 +233,11 @@
 
   font-family: $avenir;
 
-  @media all and (max-width: $breakpoint) {
+  @media all and (max-width: 990px) {
     background: #5e5e5e;
     width: 110%;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
     margin: 0 -5%;
     box-sizing: content-box;
   }
@@ -232,8 +247,9 @@
     height: 385px;
     max-height: 390px;
 
-    @media all and (max-width: $breakpoint) {
-      width: 280px;
+    @media all and (max-width: 990px) {
+      //width: 280px;
+      width: 290px;
       margin: 0 auto;
     }
 
