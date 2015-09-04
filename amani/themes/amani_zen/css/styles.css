@@ -1068,7 +1068,16 @@ body {
   height: 370px;
   text-align: left;
 }
-@media all and (max-width: 768px) {
+@media all and (min-width: 991px) and (max-width: 1090px) {
+  /* line 82, ../sass/components/_front-page-blocks.scss */
+  #block-views-front-page-tweets-block,
+  #block-fb-likebox-0.block-fb-likebox,
+  #block-views-calendar-of-events-block-3 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media all and (max-width: 990px) {
   /* line 82, ../sass/components/_front-page-blocks.scss */
   #block-views-front-page-tweets-block,
   #block-fb-likebox-0.block-fb-likebox,
@@ -1076,21 +1085,21 @@ body {
     margin: 50px 0;
   }
 }
-/* line 96, ../sass/components/_front-page-blocks.scss */
+/* line 101, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .view,
 #block-fb-likebox-0.block-fb-likebox .view,
 #block-views-calendar-of-events-block-3 .view {
   padding: 10px;
 }
 
-/* line 104, ../sass/components/_front-page-blocks.scss */
+/* line 109, ../sass/components/_front-page-blocks.scss */
 #block-fb-likebox-0.block-fb-likebox iframe {
   height: 386.5px !important;
   min-height: 386.5px !important;
 }
 
-@media all and (max-width: 768px) {
-  /* line 111, ../sass/components/_front-page-blocks.scss */
+@media all and (max-width: 990px) {
+  /* line 116, ../sass/components/_front-page-blocks.scss */
   #block-fb-likebox-0.block-fb-likebox {
     background-color: #784580;
     text-align: center;
@@ -1100,10 +1109,10 @@ body {
     box-sizing: content-box;
   }
 }
-/* line 122, ../sass/components/_front-page-blocks.scss */
+/* line 127, ../sass/components/_front-page-blocks.scss */
 .fb-twit-cal-bgimage {
   position: absolute;
-  top: 415px;
+  top: 456px;
   z-index: -10;
   margin-bottom: 100px;
   margin-right: -50%;
@@ -1112,61 +1121,67 @@ body {
   height: 500px;
   overflow: hidden;
 }
-/* line 133, ../sass/components/_front-page-blocks.scss */
+@media all and (max-width: 990px) {
+  /* line 127, ../sass/components/_front-page-blocks.scss */
+  .fb-twit-cal-bgimage {
+    display: none;
+  }
+}
+/* line 142, ../sass/components/_front-page-blocks.scss */
 .fb-twit-cal-bgimage img {
   height: auto !important;
   width: 100% !important;
 }
 @media all and (max-width: 768px) {
-  /* line 139, ../sass/components/_front-page-blocks.scss */
+  /* line 148, ../sass/components/_front-page-blocks.scss */
   .fb-twit-cal-bgimage {
     opacity: 0;
   }
 }
 
-/* line 146, ../sass/components/_front-page-blocks.scss */
+/* line 155, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block {
   margin-left: 30px;
   font-family: "Avenir Next Condensed", sans-serif;
   min-height: 387px;
 }
-@media all and (max-width: 768px) {
-  /* line 146, ../sass/components/_front-page-blocks.scss */
+@media all and (max-width: 920px) {
+  /* line 155, ../sass/components/_front-page-blocks.scss */
   #block-views-front-page-tweets-block {
     background: #e5e5e5;
     width: 110%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     margin: 0 -5%;
     box-sizing: content-box;
   }
 }
-/* line 160, ../sass/components/_front-page-blocks.scss */
+/* line 173, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block {
   text-transform: uppercase;
   background: rgba(0, 0, 0, 0.4);
   padding: 16px;
   min-height: 387px;
 }
-@media all and (max-width: 768px) {
-  /* line 160, ../sass/components/_front-page-blocks.scss */
+@media all and (max-width: 990px) {
+  /* line 173, ../sass/components/_front-page-blocks.scss */
   #block-views-front-page-tweets-block .home-page-twitter-block {
-    width: 280px;
+    width: 290px;
     margin: 0 auto;
   }
 }
-/* line 171, ../sass/components/_front-page-blocks.scss */
+/* line 185, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-header {
   margin-bottom: 16.5px;
   color: white;
   font-size: 1.5em;
   letter-spacing: 2px;
 }
-/* line 177, ../sass/components/_front-page-blocks.scss */
+/* line 191, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-header * {
   display: inline-block;
 }
-/* line 181, ../sass/components/_front-page-blocks.scss */
+/* line 195, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-header::before {
   content: "";
   background: url("../images/icon-twitter.png") 100%;
@@ -1177,54 +1192,54 @@ body {
   margin-right: 10px;
   margin-bottom: 5px;
 }
-/* line 195, ../sass/components/_front-page-blocks.scss */
+/* line 209, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-content .views-row {
   color: white;
   margin-bottom: 20px;
 }
-/* line 199, ../sass/components/_front-page-blocks.scss */
+/* line 213, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-content .views-row .views-field-text {
   display: block;
   letter-spacing: 1.2px;
 }
-/* line 203, ../sass/components/_front-page-blocks.scss */
+/* line 217, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-content .views-row .views-field-text a {
   color: #ce9bc0;
 }
-/* line 208, ../sass/components/_front-page-blocks.scss */
+/* line 223, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block .home-page-twitter-block .view-content .views-row .views-field-created-time {
   font-size: 0.5em;
 }
 
-/* line 217, ../sass/components/_front-page-blocks.scss */
+/* line 232, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 {
   font-family: "Avenir", sans-serif;
 }
-@media all and (max-width: 768px) {
-  /* line 217, ../sass/components/_front-page-blocks.scss */
+@media all and (max-width: 990px) {
+  /* line 232, ../sass/components/_front-page-blocks.scss */
   #block-views-calendar-of-events-block-3 {
     background: #5e5e5e;
     width: 110%;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
     margin: 0 -5%;
     box-sizing: content-box;
   }
 }
-/* line 230, ../sass/components/_front-page-blocks.scss */
+/* line 245, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events {
   background: rgba(0, 0, 0, 0.4);
   height: 385px;
   max-height: 390px;
 }
-@media all and (max-width: 768px) {
-  /* line 230, ../sass/components/_front-page-blocks.scss */
+@media all and (max-width: 990px) {
+  /* line 245, ../sass/components/_front-page-blocks.scss */
   #block-views-calendar-of-events-block-3 .view-calendar-of-events {
-    width: 280px;
+    width: 290px;
     margin: 0 auto;
   }
 }
-/* line 240, ../sass/components/_front-page-blocks.scss */
+/* line 256, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .view-header {
   color: white;
   font-size: 1.5em;
@@ -1233,11 +1248,11 @@ body {
   letter-spacing: 2px;
   padding: 6px;
 }
-/* line 248, ../sass/components/_front-page-blocks.scss */
+/* line 264, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .view-header * {
   display: inline-block;
 }
-/* line 252, ../sass/components/_front-page-blocks.scss */
+/* line 268, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .view-header::before {
   content: "";
   background: url("../images/icon-cal.png") 100%;
@@ -1248,89 +1263,89 @@ body {
   margin-right: 10px;
   margin-bottom: 5px;
 }
-/* line 263, ../sass/components/_front-page-blocks.scss */
+/* line 279, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .view-header p {
   margin: 0;
 }
-/* line 269, ../sass/components/_front-page-blocks.scss */
+/* line 285, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar table {
   border-collapse: separate;
   border-spacing: 5px 7px;
   min-height: 290px;
 }
-/* line 275, ../sass/components/_front-page-blocks.scss */
+/* line 291, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .month-view .full td .inner div.day {
   width: 28px;
   margin-top: auto;
 }
-/* line 280, ../sass/components/_front-page-blocks.scss */
+/* line 296, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar tr, #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar td {
   vertical-align: bottom;
 }
-/* line 284, ../sass/components/_front-page-blocks.scss */
+/* line 300, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .month-view .full tr.single-day .no-entry,
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .month-view .full tr.single-day .no-entry .inner {
   height: 20px !important;
 }
-/* line 290, ../sass/components/_front-page-blocks.scss */
+/* line 306, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar * {
   background: transparent;
   color: white;
 }
-/* line 294, ../sass/components/_front-page-blocks.scss */
+/* line 310, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar th {
   background: rgba(255, 255, 255, 0.3);
 }
-/* line 297, ../sass/components/_front-page-blocks.scss */
+/* line 313, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar th.days {
   border: none;
   font-weight: 300;
 }
-/* line 302, ../sass/components/_front-page-blocks.scss */
+/* line 318, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar tr.single-day {
   display: none;
 }
-/* line 307, ../sass/components/_front-page-blocks.scss */
+/* line 323, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .date-box td {
   border: 0;
   background: rgba(0, 0, 0, 0.7);
   padding: 0;
 }
-/* line 312, ../sass/components/_front-page-blocks.scss */
+/* line 328, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .date-box td .day {
   text-align: right;
 }
-/* line 321, ../sass/components/_front-page-blocks.scss */
+/* line 337, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .date-nav-wrapper .date-nav {
   margin-bottom: -38px;
 }
-/* line 325, ../sass/components/_front-page-blocks.scss */
+/* line 341, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .date-nav-wrapper .date-heading {
   color: white;
   font-size: 0.7em;
 }
-/* line 329, ../sass/components/_front-page-blocks.scss */
+/* line 345, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .date-nav-wrapper .date-heading h3 {
   font-family: "Avenir Next Condensed", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
 }
-/* line 334, ../sass/components/_front-page-blocks.scss */
+/* line 350, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .date-nav-wrapper .date-heading h3 .month {
   color: #ce9bc0;
   font-size: 1.5em;
   line-height: 40px;
 }
-/* line 343, ../sass/components/_front-page-blocks.scss */
+/* line 359, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .pager {
   list-style-type: none;
   color: white;
 }
-/* line 347, ../sass/components/_front-page-blocks.scss */
+/* line 363, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .pager li {
   background: none;
 }
-/* line 350, ../sass/components/_front-page-blocks.scss */
+/* line 366, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .pager li a {
   font-weight: 100;
   font-size: 3em;
@@ -1338,18 +1353,18 @@ body {
   font-family: "Avenir", sans-serif;
 }
 
-/* line 363, ../sass/components/_front-page-blocks.scss */
+/* line 379, ../sass/components/_front-page-blocks.scss */
 #block-views-news-and-events-block-1 {
   margin-top: 80px;
   float: left;
 }
 @media all and (max-width: 768px) {
-  /* line 363, ../sass/components/_front-page-blocks.scss */
+  /* line 379, ../sass/components/_front-page-blocks.scss */
   #block-views-news-and-events-block-1 {
     margin-top: 40px;
   }
 }
-/* line 371, ../sass/components/_front-page-blocks.scss */
+/* line 387, ../sass/components/_front-page-blocks.scss */
 #block-views-news-and-events-block-1 h2 {
   font-size: 28px;
   font-family: "Avenir Next Condensed", sans-serif;
@@ -1357,17 +1372,17 @@ body {
   text-transform: uppercase;
 }
 @media all and (max-width: 768px) {
-  /* line 371, ../sass/components/_front-page-blocks.scss */
+  /* line 387, ../sass/components/_front-page-blocks.scss */
   #block-views-news-and-events-block-1 h2 {
     margin-bottom: 40px;
   }
 }
 
-/* line 382, ../sass/components/_front-page-blocks.scss */
+/* line 398, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events {
   text-align: left;
 }
-/* line 384, ../sass/components/_front-page-blocks.scss */
+/* line 400, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row {
   width: 45%;
   margin: 0 2% 20px;
@@ -1375,13 +1390,13 @@ body {
   vertical-align: top;
 }
 @media all and (max-width: 768px) {
-  /* line 384, ../sass/components/_front-page-blocks.scss */
+  /* line 400, ../sass/components/_front-page-blocks.scss */
   .view-news-and-events .views-row {
     width: 100%;
     margin: 0 0 20px;
   }
 }
-/* line 395, ../sass/components/_front-page-blocks.scss */
+/* line 411, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-field-image {
   float: left;
   margin-right: 15px;
@@ -1391,25 +1406,25 @@ body {
   position: relative;
 }
 @media all and (max-width: 768px) {
-  /* line 395, ../sass/components/_front-page-blocks.scss */
+  /* line 411, ../sass/components/_front-page-blocks.scss */
   .view-news-and-events .views-row .views-field-field-image {
     width: 160px;
     height: 120px;
   }
 }
-/* line 407, ../sass/components/_front-page-blocks.scss */
+/* line 423, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-field-image img {
   border: #fdfeff solid 5px;
   box-shadow: 1px 1px 1px #e6e7e8;
 }
 @media all and (max-width: 768px) {
-  /* line 407, ../sass/components/_front-page-blocks.scss */
+  /* line 423, ../sass/components/_front-page-blocks.scss */
   .view-news-and-events .views-row .views-field-field-image img {
     width: 150px;
     height: 110px;
   }
 }
-/* line 417, ../sass/components/_front-page-blocks.scss */
+/* line 433, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-field-image:before {
   content: "";
   background: url(../images/photo-shadow-left.png) no-repeat 0 0;
@@ -1420,7 +1435,7 @@ body {
   bottom: -6px;
   left: 0;
 }
-/* line 427, ../sass/components/_front-page-blocks.scss */
+/* line 443, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-field-image:after {
   content: "";
   background: url(../images/photo-shadow-right.png) no-repeat 0 0;
@@ -1431,21 +1446,21 @@ body {
   bottom: -6px;
   right: 0;
 }
-/* line 439, ../sass/components/_front-page-blocks.scss */
+/* line 455, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-body {
   display: table;
 }
-/* line 443, ../sass/components/_front-page-blocks.scss */
+/* line 459, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-title {
   margin-bottom: 5px;
 }
-/* line 447, ../sass/components/_front-page-blocks.scss */
+/* line 463, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-title a {
   font-family: "Avenir Next Condensed", sans-serif;
   color: #ce9bc0;
   font-size: 16px;
 }
-/* line 453, ../sass/components/_front-page-blocks.scss */
+/* line 469, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-title-1 a {
   font-family: "Avenir Next Condensed", sans-serif;
   display: block;
@@ -1454,12 +1469,12 @@ body {
   margin-top: 5px;
 }
 @media all and (max-width: 768px) {
-  /* line 453, ../sass/components/_front-page-blocks.scss */
+  /* line 469, ../sass/components/_front-page-blocks.scss */
   .view-news-and-events .views-row .views-field-title-1 a {
     margin-left: 175px;
   }
 }
-/* line 463, ../sass/components/_front-page-blocks.scss */
+/* line 479, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .views-row .views-field-title-1 a:before {
   content: ">>";
   font-family: "Avenir", sans-serif;
@@ -1590,7 +1605,7 @@ body {
     color: white;
     display: block;
     margin: 0 20px 0 0;
-    padding: 10px 0 15px 0;
+    padding: 12px 0 13px 0;
     text-transform: uppercase;
     text-align: left;
   }
@@ -2750,7 +2765,7 @@ tr.selected td {
 /* line 808, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1439328429');
+  background-image: url('../images/progress.gif?1440018546');
 }
 
 @media all and (max-width: 768px) {
@@ -3167,7 +3182,7 @@ tr.selected td {
 }
 /* line 61, ../sass/_mixins.scss */
 .form-submit:hover, .form-submit:focus {
-  background-color: #5b595c;
+  background-color: #5a595c;
 }
 
 /* line 12, ../sass/theme/_layout.scss */
@@ -3234,9 +3249,9 @@ body {
 /* line 65, ../sass/theme/_layout.scss */
 footer > .block-menu {
   float: left;
-  width: 33.33333%;
+  width: 58.33333%;
   margin-left: 0%;
-  margin-right: -33.33333%;
+  margin-right: -58.33333%;
   margin-bottom: 0;
 }
 @media screen and (max-width: 768px) {
@@ -3244,81 +3259,89 @@ footer > .block-menu {
   footer > .block-menu {
     float: none;
     margin: 0;
-    width: 40%;
+    float: left;
+    width: 58.33333%;
+    margin-left: 0%;
+    margin-right: -58.33333%;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 65, ../sass/theme/_layout.scss */
+  footer > .block-menu {
+    float: none;
+    margin: 0;
+    float: left;
+    width: 41.66667%;
+    margin-left: 0%;
+    margin-right: -41.66667%;
   }
 }
 
-/* line 77, ../sass/theme/_layout.scss */
+/* line 83, ../sass/theme/_layout.scss */
 #block-bean-amani-powered-by {
   float: left;
   width: 33.33333%;
-  margin-left: 66.66667%;
-  margin-right: -100%;
+  margin-left: 0%;
+  margin-right: -33.33333%;
   text-align: right;
 }
-@media screen and (max-width: 570px) {
-  /* line 77, ../sass/theme/_layout.scss */
+@media screen and (max-width: 580px) {
+  /* line 83, ../sass/theme/_layout.scss */
   #block-bean-amani-powered-by {
     clear: both;
-    float: none;
     margin: 0;
     width: 100%;
     text-align: center;
   }
 }
 
-/* line 90, ../sass/theme/_layout.scss */
+/* line 96, ../sass/theme/_layout.scss */
 footer {
   position: relative;
+  width: 100%;
 }
-/* line 92, ../sass/theme/_layout.scss */
+/* line 99, ../sass/theme/_layout.scss */
 footer .menu {
   float: left;
   position: relative;
   margin: 0 50px 0 0;
 }
-@media screen and (max-width: 939px) {
-  /* line 92, ../sass/theme/_layout.scss */
-  footer .menu {
-    margin-bottom: 15px;
-  }
-}
-@media screen and (max-width: 768px) {
-  /* line 92, ../sass/theme/_layout.scss */
+@media screen and (max-width: 640px) {
+  /* line 99, ../sass/theme/_layout.scss */
   footer .menu {
     float: none;
     margin: 0 0 15px 0 !important;
   }
 }
-/* line 106, ../sass/theme/_layout.scss */
+/* line 109, ../sass/theme/_layout.scss */
 footer .menu li {
   position: relative;
   text-indent: 20px;
   margin-bottom: 15px;
 }
-/* line 111, ../sass/theme/_layout.scss */
+/* line 114, ../sass/theme/_layout.scss */
 footer .menu li:before {
   content: "\f078";
   font-family: amani-icons;
   margin-right: 8px;
   font-size: 11px;
 }
-@media screen and (max-width: 570px) {
-  /* line 106, ../sass/theme/_layout.scss */
+@media screen and (max-width: 580px) {
+  /* line 109, ../sass/theme/_layout.scss */
   footer .menu li {
     text-indent: 0;
   }
 }
-/* line 122, ../sass/theme/_layout.scss */
+/* line 125, ../sass/theme/_layout.scss */
 footer .menu li:last-child {
   margin-bottom: 0;
 }
-/* line 126, ../sass/theme/_layout.scss */
+/* line 129, ../sass/theme/_layout.scss */
 footer .menu a {
   transition: all 0.3s;
   font-size: 12px;
 }
-/* line 130, ../sass/theme/_layout.scss */
+/* line 133, ../sass/theme/_layout.scss */
 footer .menu a:before {
   position: absolute;
   content: '';
@@ -3326,46 +3349,49 @@ footer .menu a:before {
   left: 0;
 }
 
-/* line 141, ../sass/theme/_layout.scss */
+/* line 144, ../sass/theme/_layout.scss */
 footer > .block-menu {
   margin-right: 0;
 }
 
-/* line 145, ../sass/theme/_layout.scss */
+/* line 148, ../sass/theme/_layout.scss */
 footer .block-menu ul.menu {
   margin-right: 50px;
 }
 
-/* line 149, ../sass/theme/_layout.scss */
+/* line 152, ../sass/theme/_layout.scss */
 footer .field-label {
   display: none;
 }
 
-/* line 153, ../sass/theme/_layout.scss */
+/* line 156, ../sass/theme/_layout.scss */
 .region-footer .block.block-bean {
   display: inline-block;
-  margin: 0 20px;
+  margin: 20px 20px 0 0;
   float: right;
+  position: absolute;
+  bottom: 3px;
+  right: 0;
 }
 
-/* line 159, ../sass/theme/_layout.scss */
-footer #block-bean-img1,
-footer .bean-a-project-by- a {
-  margin-top: 15px;
+/* line 165, ../sass/theme/_layout.scss */
+footer #block-bean-img2 {
+  right: 110px;
+  bottom: 2px;
 }
 
-/* line 164, ../sass/theme/_layout.scss */
+/* line 170, ../sass/theme/_layout.scss */
 .peacegeeks-logo {
   margin: 0 0 20px 50px;
 }
 @media screen and (max-width: 570px) {
-  /* line 164, ../sass/theme/_layout.scss */
+  /* line 170, ../sass/theme/_layout.scss */
   .peacegeeks-logo {
     margin-left: 0;
   }
 }
 
-/* line 172, ../sass/theme/_layout.scss */
+/* line 178, ../sass/theme/_layout.scss */
 .footer-legal {
   background-color: #533058;
   border-top: 1px solid #67486b;
@@ -3375,7 +3401,7 @@ footer .bean-a-project-by- a {
   text-transform: uppercase;
   width: 100%;
 }
-/* line 181, ../sass/theme/_layout.scss */
+/* line 187, ../sass/theme/_layout.scss */
 .footer-legal div {
   margin: 0 auto;
   width: 75%;

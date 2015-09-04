@@ -63,24 +63,30 @@ body {
 
 footer {
   > .block-menu {
-    @include zen-grid-item(4, 1); // main menu in footer
+    @include zen-grid-item(7, 1); // main menu in footer
     margin-bottom: 0;
 
     @media screen and (max-width: $breakpoint) {
       float: none;
       margin: 0;
-      width: 40%;
+      @include zen-grid-item(7, 1);
+    }
+    
+    @media screen and (max-width: 640px) {
+      float: none;
+      margin: 0;
+      @include zen-grid-item(5, 1);
     }
   }
 }
 
 #block-bean-amani-powered-by {
-  @include zen-grid-item(4, 9); // amani and peace geeks logos
+  @include zen-grid-item(4, 1); // amani and peace geeks logos
   text-align: right;
 
-  @media screen and (max-width: 570px) {
+  @media screen and (max-width: 580px) {
     clear: both;
-    float: none;
+    //float: none;
     margin: 0;
     width: 100%;
     text-align: center;
@@ -89,16 +95,13 @@ footer {
 
 footer {
   position: relative;
+  width: 100%;
   .menu {
     float: left;
     position: relative;
     margin: 0 50px 0 0;
 
-    @media screen and (max-width: 939px) {
-      margin-bottom: 15px;
-    }
-
-    @media screen and (max-width: $breakpoint) {
+    @media screen and (max-width: 640px) {
       float: none;
       margin: 0 0 15px 0 !important;
     }
@@ -115,7 +118,7 @@ footer {
         font-size: 11px;
       }
 
-      @media screen and (max-width: 570px) {
+      @media screen and (max-width: 580px) {
         text-indent: 0;
       }
 
@@ -152,13 +155,16 @@ footer .field-label {
 
 .region-footer .block.block-bean {
   display: inline-block;
-  margin: 0 20px;
+  margin: 20px 20px 0 0;
   float: right;
+  position: absolute;
+  bottom: 3px;
+  right: 0;
 }
 
-footer #block-bean-img1,
-footer .bean-a-project-by- a {
-  margin-top: 15px;
+footer #block-bean-img2 {
+  right: 110px;
+  bottom: 2px;
 }
 
 .peacegeeks-logo {
