@@ -180,7 +180,7 @@ else{ ?>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_people_link)):
                                 print ($node->field_people_link[und][0][url]);
                             endif;?>"><?php print t('People Still Displaced');?></a></span>  </div>
-                    <div class="views-field views-field-field-text">
+                    <div class="views-field views-field-field-text long-text">
                         <div class="field-content">
                             <?php if(!empty($node->field_people_displaced)){
                                 $nn1 = number_format($node->field_people_displaced[und][0][value] , 2 , '.' , ',' );
@@ -283,7 +283,7 @@ else{ ?>
 
                             }?>
                             <?php if(!empty($node->field_paid_amount)){
-                                  
+
                                 $nn1 = number_format($node->field_paid_amount[und][0][value] , 2 , '.' , ',' );
                                 print '/'. str_replace(".00", "", (string)$nn1);
                                 if(!empty($node->field_paid_amount_suffix)){

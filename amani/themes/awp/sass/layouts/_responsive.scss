@@ -450,6 +450,9 @@ $zen-auto-include-item-base: false;
             width: 20%;
             top: 45px;
             font-size: 3vw;
+            &.long-text{
+              font-size: 3vw;
+            }
             [dir="rtl"] &{
               float: right;
               right: -32%;
