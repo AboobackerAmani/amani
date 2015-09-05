@@ -419,18 +419,20 @@ function webform_references_term_autocomplete($vid, $string = '') {
  */
 function _webform_references_get_term_list($vid, $sort_by = 'name', $order = 'ASC') {
     global $language;
-    print_r($language->language);
     $result = db_select('taxonomy_term_data', 't')
     ->fields('t', array('tid', 'name'))
     ->condition('t.vid', $vid)
-        ->condition('t.language',  $language->language)
 
         ->orderBy($sort_by, $order)
+    ->addTag('translatable')
+    ->addTag('term_access')
     ->execute()
     ->fetchAll();
   $term_list = array();
   foreach ($result as $term) {
-      print_r($term);
+      $s=taxonomy_term_load($term->tid);
+      print_r($s);
+      exit();
     $term_list[$term->tid] = $term->name;
   }
     //exit();
