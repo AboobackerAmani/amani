@@ -133,12 +133,16 @@ else{ ?>
                             </a></div>  </div>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_trucks_link)){
                                 print ($node->field_trucks_link[und][0][url]);
-                            }?>"><?php print t('Trucks Delivered vs. Needed');?></a></span>  </div>
-                    <div class="views-field views-field-field-text">        <div class="field-content">    <?php if(!empty($node->field_trucks_delivered)){
+                            }?>"><?php print t('Trucks Delivered vs. Needed');?></a></span>
+                    </div>
+                    <div class="views-field views-field-field-text">
+                        <div class="field-content">    <?php if(!empty($node->field_trucks_delivered)){
                                 print $node->field_trucks_delivered[und][0][value];
                             }?> /      <?php if(!empty($node->field_trucks_needed)){
                                 print $node->field_trucks_needed[und][0][value];
-                            }?> </div>  </div>
+                            }?>
+                        </div>
+                    </div>
                     <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_trucks_link)){
                                 print ($node->field_trucks_link[und][0][url]);
                             }?>"><?php print t('Read More');?></a></span>  </div>
@@ -174,15 +178,30 @@ else{ ?>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_people_link)):
                                 print ($node->field_people_link[und][0][url]);
                             endif;?>"><?php print t('People Still Displaced');?></a></span>  </div>
-                    <div class="views-field views-field-field-text">        <div class="field-content">    <?php if(!empty($node->field_people_displaced)):
+                    <div class="views-field views-field-field-text">
+                        <div class="field-content">
+                            <?php if(!empty($node->field_people_displaced)){
                                 print $node->field_people_displaced[und][0][value];
-                            endif;?>
+                            if(!empty($node->field_people_still_1_suffix)){
+                                print $node->field_people_still_1_suffix[und][0][value];
+                            }
+
+                            }?>
+                            <?php if(!empty($node->field_people_displaced_2)){
+                                print '/ '. $node->field_people_displaced_2[und][0][value];
+                                if(!empty($node->field_people_still_2_suffix)){
+                                    print $node->field_people_still_2_suffix[und][0][value];
+                                }
+
+
+                            }?>
                             <div class="comments">
                                 <?php if(!empty($node->field_people_comment)):
                                     print $node->field_people_comment[und][0][value];
                                 endif;?>
                             </div>
-                        </div>  </div>
+                        </div>
+                    </div>
                     <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_people_link)):
                                 print ($node->field_people_link[und][0][url]);
                             endif;?>"><?php print t('Read More');?></a></span>  </div>
