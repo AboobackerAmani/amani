@@ -426,8 +426,6 @@ function _webform_references_get_term_list($vid, $sort_by = 'name', $order = 'AS
         ->condition('t.language',  $language->language)
 
         ->orderBy($sort_by, $order)
-    ->addTag('translatable')
-    ->addTag('term_access')
     ->execute()
     ->fetchAll();
   $term_list = array();
