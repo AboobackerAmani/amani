@@ -422,7 +422,6 @@ function _webform_references_get_term_list($vid, $sort_by = 'name', $order = 'AS
     $result = db_select('taxonomy_term_data', 't')
     ->fields('t', array('tid', 'name'))
     ->condition('t.vid', $vid)
-      ->condition('t.language', $language->language)
 
       ->orderBy($sort_by, $order)
     ->addTag('translatable')
@@ -431,8 +430,10 @@ function _webform_references_get_term_list($vid, $sort_by = 'name', $order = 'AS
     ->fetchAll();
   $term_list = array();
   foreach ($result as $term) {
+      print_r($term);
     $term_list[$term->tid] = $term->name;
   }
+    exit();
   return $term_list;
 }
 
