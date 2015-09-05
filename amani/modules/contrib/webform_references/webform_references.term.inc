@@ -430,10 +430,9 @@ function _webform_references_get_term_list($vid, $sort_by = 'name', $order = 'AS
     ->fetchAll();
   $term_list = array();
   foreach ($result as $term) {
-      $s=taxonomy_term_load($term->tid);
-      print_r($s);
-      exit();
-    $term_list[$term->tid] = $term->name;
+
+      $term = i18n_taxonomy_localize_terms(taxonomy_term_load($term->tid));
+      $term_list[$term->tid] = $term->name;
   }
     //exit();
   return $term_list;
