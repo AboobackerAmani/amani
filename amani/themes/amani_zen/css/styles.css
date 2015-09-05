@@ -1682,6 +1682,127 @@ body {
   font-size: 18px;
 }
 
+/*
+  Map page
+*/
+/* line 7, ../sass/components/_map_page.scss */
+.page-incident-reports #main {
+  padding-top: 0;
+}
+/* line 9, ../sass/components/_map_page.scss */
+.page-incident-reports .incident-report-filter-reset,
+.page-incident-reports .element-invisible,
+.page-incident-reports .breadcrumb,
+.page-incident-reports h1#page-title {
+  display: none;
+}
+/* line 17, ../sass/components/_map_page.scss */
+.page-incident-reports .leaflet-google-layer {
+  width: 100% !important;
+}
+/* line 21, ../sass/components/_map_page.scss */
+.page-incident-reports #content {
+  margin-right: 0;
+  width: 100%;
+}
+/* line 26, ../sass/components/_map_page.scss */
+.page-incident-reports #content {
+  padding: 0;
+}
+/* line 29, ../sass/components/_map_page.scss */
+.page-incident-reports .region-sidebar-second {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  position: relative;
+}
+/* line 37, ../sass/components/_map_page.scss */
+.page-incident-reports .sidebars .block-incident-map {
+  width: 350px;
+  background-color: white;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+  opacity: 0.85;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  top: -700px;
+}
+/* line 46, ../sass/components/_map_page.scss */
+.page-incident-reports .sidebars .block-incident-map h3 {
+  font-family: "Avenir Next Condensed", sans-serif;
+  line-height: 1;
+  color: #533058;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: #e6e7e8 solid 1px;
+}
+/* line 58, ../sass/components/_map_page.scss */
+.page-incident-reports .sidebars .block-incident-map label {
+  font-weight: normal;
+  margin: 3px 0;
+}
+/* line 62, ../sass/components/_map_page.scss */
+.page-incident-reports .sidebars .block-incident-map label .null {
+  margin-left: 3px;
+}
+/* line 66, ../sass/components/_map_page.scss */
+.page-incident-reports #block-incident-map-field-incident-severity {
+  top: -485px;
+  padding-top: 0;
+}
+/* line 72, ../sass/components/_map_page.scss */
+.page-incident-reports .timeline-filter-chart {
+  background-color: #784580;
+  height: 140px;
+}
+/* line 76, ../sass/components/_map_page.scss */
+.page-incident-reports .timeline-filter-chart .foreground.bar {
+  fill: #fff;
+}
+/* line 79, ../sass/components/_map_page.scss */
+.page-incident-reports .timeline-filter-chart .axis path, .page-incident-reports .timeline-filter-chart .axis line {
+  stroke: #fff;
+}
+/* line 83, ../sass/components/_map_page.scss */
+.page-incident-reports .timeline-filter-chart .axis text {
+  fill: #ce9bc0;
+}
+/* line 89, ../sass/components/_map_page.scss */
+.page-incident-reports #block-views-incident-reports-latest {
+  margin: 0 30px;
+}
+/* line 92, ../sass/components/_map_page.scss */
+.page-incident-reports #block-views-incident-reports-latest h2 {
+  font-family: "Avenir Next Condensed", sans-serif;
+  font-size: 28px;
+  line-height: 1;
+  color: #ce9bc0;
+  text-align: center;
+  margin: 40px 0;
+}
+/* line 101, ../sass/components/_map_page.scss */
+.page-incident-reports #block-views-incident-reports-latest .views-row {
+  width: 31%;
+  border: 1px solid #cccccc;
+  display: inline-block;
+  margin: 12px 1%;
+  padding: 10px;
+  vertical-align: top;
+  min-height: 120px;
+}
+/* line 112, ../sass/components/_map_page.scss */
+.page-incident-reports #block-views-incident-reports-latest .views-field-title a {
+  color: #ce9bc0;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+/* line 118, ../sass/components/_map_page.scss */
+.page-incident-reports #block-views-incident-reports-latest .views-field-field-incident-date {
+  color: #ccc;
+}
+
 /**
  * @file
  * Style for menus.
