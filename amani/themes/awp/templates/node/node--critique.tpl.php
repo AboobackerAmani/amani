@@ -183,8 +183,10 @@ else{ ?>
                     <div class="views-field views-field-field-text">
                         <div class="field-content">
                             <?php if(!empty($node->field_people_displaced)){
-                                print number_format($node->field_people_displaced[und][0][value] , 2 , '.' , ',' );
-                            if(!empty($node->field_people_still_1_suffix)){
+                                $nn1 = number_format($node->field_people_displaced[und][0][value] , 2 , '.' , ',' );
+                                print str_replace(".00", "", (string)$nn1);
+
+                                if(!empty($node->field_people_still_1_suffix)){
                                 print $node->field_people_still_1_suffix[und][0][value];
                             }
 
