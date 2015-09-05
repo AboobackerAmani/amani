@@ -419,6 +419,7 @@ function webform_references_term_autocomplete($vid, $string = '') {
  */
 function _webform_references_get_term_list($vid, $sort_by = 'name', $order = 'ASC') {
     global $language;
+    print_r($language->language);
     $result = db_select('taxonomy_term_data', 't')
     ->fields('t', array('tid', 'name'))
     ->condition('t.vid', $vid)
