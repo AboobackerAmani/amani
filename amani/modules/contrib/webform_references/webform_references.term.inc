@@ -433,7 +433,7 @@ function _webform_references_get_term_list($vid, $sort_by = 'name', $order = 'AS
       print_r($term);
     $term_list[$term->tid] = $term->name;
   }
-    exit();
+    //exit();
   return $term_list;
 }
 
