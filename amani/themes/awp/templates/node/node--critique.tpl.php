@@ -189,6 +189,8 @@ else{ ?>
                             }?>
                             <?php if(!empty($node->field_people_displaced_2)){
                                 print '/ '. $node->field_people_displaced_2[und][0][value];
+                                print_r($node->field_people_displaced_2);
+                                exit();
                                 if(!empty($node->field_people_still_2_suffix)){
                                     print $node->field_people_still_2_suffix[und][0][value];
                                 }
