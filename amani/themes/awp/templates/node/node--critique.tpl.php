@@ -183,19 +183,14 @@ else{ ?>
                     <div class="views-field views-field-field-text">
                         <div class="field-content">
                             <?php if(!empty($node->field_people_displaced)){
-                                //print $node->field_people_displaced[und][0][value];
-                                print_r($content);
-                                exit();
-                                print render($content['field_people_displaced']);
-
-
-                                if(!empty($node->field_people_still_1_suffix)){
+                                print number_format($node->field_people_displaced[und][0][value] , 2 , '.' , ',' );
+                            if(!empty($node->field_people_still_1_suffix)){
                                 print $node->field_people_still_1_suffix[und][0][value];
                             }
 
                             }?>
                             <?php if(!empty($node->field_people_displaced_2)){
-                                print '/ '. $node->field_people_displaced_2[und][0][value];
+                                print '/ '. number_format($node->field_people_displaced_2[und][0][value] , 2 , '.' , ',' );
                                 if(!empty($node->field_people_still_2_suffix)){
                                     print $node->field_people_still_2_suffix[und][0][value];
                                 }
