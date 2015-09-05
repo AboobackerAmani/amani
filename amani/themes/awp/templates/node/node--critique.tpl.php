@@ -184,7 +184,7 @@ else{ ?>
                         <div class="field-content">
                             <?php if(!empty($node->field_people_displaced)){
                                 //print $node->field_people_displaced[und][0][value];
-                                print_r($content['field_people_displaced']);
+                                print_r($content);
                                 exit();
                                 print render($content['field_people_displaced']);
 
