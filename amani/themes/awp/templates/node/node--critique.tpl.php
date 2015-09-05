@@ -192,7 +192,8 @@ else{ ?>
 
                             }?>
                             <?php if(!empty($node->field_people_displaced_2)){
-                                print '/'. number_format($node->field_people_displaced_2[und][0][value] , 2 , '.' , ',' );
+                                $nn1 = number_format($node->field_people_displaced_2[und][0][value] , 2 , '.' , ',' );
+                                print '/'. str_replace(".00", "", (string)$nn1);
                                 if(!empty($node->field_people_still_2_suffix)){
                                     print $node->field_people_still_2_suffix[und][0][value];
                                 }
@@ -227,9 +228,12 @@ else{ ?>
                     <div class="views-field views-field-field-text">
                         <div class="field-content">  <?php if(!empty($node->field_home_rebuilt)):
                                 print $node->field_home_rebuilt[und][0][value];
-                                print number_format($node->field_home_rebuilt[und][0][value] , 2 , '.' , ',' );
+                                $nn1 = number_format($node->field_home_rebuilt[und][0][value] , 2 , '.' , ',' );
+                                print str_replace(".00", "", (string)$nn1);
                             endif;?> <?php if(!empty($node->field_home_destroyed)):
-                                print '/'. number_format($node->field_home_destroyed[und][0][value] , 2 , '.' , ',' );
+
+                                $nn1 = number_format($node->field_home_destroyed[und][0][value] , 2 , '.' , ',' );
+                                print '/'.  str_replace(".00", "", (string)$nn1);
                             endif;?> </div>  </div>
                     <div class="views-field views-field-title-1">        <span class="field-content"><a href="    <?php if(!empty($node->field_home_link)):
                                 print ($node->field_home_link[und][0][url]);
@@ -271,14 +275,17 @@ else{ ?>
                     <div class="views-field views-field-field-text">
                         <div class="field-content">
                             <?php if(!empty($node->field_pledged_amount)){
-                                print number_format($node->field_pledged_amount[und][0][value] , 2 , '.' , ',' );
+                                $nn1 = number_format($node->field_pledged_amount[und][0][value] , 2 , '.' , ',' );
+                                print str_replace(".00", "", (string)$nn1);
                                 if(!empty($node->field_pledged_amount_suffix)){
                                     print $node->field_pledged_amount_suffix[und][0][value];
                                 }
 
                             }?>
                             <?php if(!empty($node->field_paid_amount)){
-                                print '/'. number_format($node->field_paid_amount[und][0][value] , 2 , '.' , ',' );
+                                  
+                                $nn1 = number_format($node->field_paid_amount[und][0][value] , 2 , '.' , ',' );
+                                print '/'. str_replace(".00", "", (string)$nn1);
                                 if(!empty($node->field_paid_amount_suffix)){
                                     print $node->field_paid_amount_suffix[und][0][value];
                                 }
