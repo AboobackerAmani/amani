@@ -136,11 +136,13 @@ else{ ?>
                             }?>"><?php print t('Trucks Delivered vs. Needed');?></a></span>
                     </div>
                     <div class="views-field views-field-field-text">
-                        <div class="field-content">    <?php if(!empty($node->field_trucks_delivered)){
+                        <div class="field-content">
+                            <?php if(!empty($node->field_trucks_delivered)){
                                 print $node->field_trucks_delivered[und][0][value];
-                            }?> /      <?php if(!empty($node->field_trucks_needed)){
-                                print $node->field_trucks_needed[und][0][value];
-                            }?>
+                                if(!empty($node->field_trucks_suffix)){
+                                    print $node->field_trucks_suffix[und][0][value];
+                                }
+                            }?>   <?php ?>
                         </div>
                     </div>
                     <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_trucks_link)){
@@ -251,7 +253,8 @@ else{ ?>
                 <!-------------------------------- Pledged Amount -------------------------------->
                 <div class="views-row views-row-2 views-row-even views-row-first  row-pledged">
 
-                    <div class="views-field views-field-field-image">        <div class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
+                    <div class="views-field views-field-field-image">
+                        <div class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
                                 print ($node->field_pledged_link[und][0][url]);
                             endif;?>">
 
@@ -262,11 +265,25 @@ else{ ?>
                     <div class="views-field views-field-title">        <span class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
                                 print ($node->field_pledged_link[und][0][url]);
                             endif;?>"><?php print t('Amount pledged and paid');?> </a></span>  </div>
-                    <div class="views-field views-field-field-text">        <div class="field-content">   <?php if(!empty($node->field_pledged_amount)):
+                    <div class="views-field views-field-field-text">
+                        <div class="field-content">
+                            <?php if(!empty($node->field_pledged_amount)){
                                 print $node->field_pledged_amount[und][0][value];
-                            endif;?> /               <?php if(!empty($node->field_paid_amount)):
-                                print $node->field_paid_amount[und][0][value];
-                            endif;?></div>  </div>
+                                if(!empty($node->field_pledged_amount_suffix)){
+                                    print $node->field_pledged_amount_suffix[und][0][value];
+                                }
+
+                            }?>
+                            <?php if(!empty($node->field_paid_amount)){
+                                print '/ '. $node->field_paid_amount[und][0][value];
+                                if(!empty($node->field_paid_amount_suffix)){
+                                    print $node->field_paid_amount_suffix[und][0][value];
+                                }
+
+
+                            }?>
+                        </div>
+                    </div>
                     <div class="views-field views-field-title-1">        <span class="field-content"><a href=" <?php if(!empty($node->field_pledged_link)):
                                 print ($node->field_pledged_link[und][0][url]);
                             endif;?>"><?php print t('Read More');?></a></span>  </div>
