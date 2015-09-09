@@ -257,6 +257,39 @@ Drupal.behaviors.paragraphs_adjustments = {
 		$(this).attr('href','/currentopenings');
 	
 	});
+	
+	
+
+// Code to control collapse and expansion of blocks on FAQ page
+
+	$('.view-display-id-faq_page .views-field-body').each(function() {
+	
+		$(this).hide();
+	});
+	
+	/*$('.view-display-id-current_openings_page .views-field-field-opportunity-tags').each(function() {
+	
+		$(this).hide();
+	});*/
+	
+
+	
+	$('.view-display-id-faq_page .views-field-title').click(function() {
+		
+		$(this).parent().find('.views-field-body').toggle('fast');
+		//$(this).parent().find('.views-field-field-opportunity-tags').toggle('fast');
+		var labelcheck = $(this).find('.views-label').html();
+		if (labelcheck == '+') {
+				$(this).find('.views-label').html('-');
+			}
+			else if (labelcheck == '-') {
+				$(this).find('.views-label').html('+');
+			}
+		
+	
+	});
+	
+	
 
 // Set anchorlink and other boxes to same height
 
