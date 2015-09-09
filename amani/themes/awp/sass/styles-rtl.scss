@@ -1466,4 +1466,13 @@
   .media-gallery-media > .field-items > .field-item{
     float: right;
   }
+
+  .node-type-article{
+    .view-id-article_sidebar{
+      border-left: 0px solid;
+      border-right: 1px solid #000;
+      padding: 0 10px;
+    }
+  }
+
 }
