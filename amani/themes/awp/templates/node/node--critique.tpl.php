@@ -224,7 +224,7 @@ else{ ?>
                             </a></div>  </div>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="    <?php if(!empty($node->field_home_link)):
                                 print ($node->field_home_link[und][0][url]);
-                            endif;?>"><?php print t('Homes repaired and rebuilt with aid');?> </a></span>  </div>
+                            endif;?>"><?php print t('Homes rebuilt with aid');?> </a></span>  </div>
                     <div class="views-field views-field-field-text">
                         <div class="field-content">  <?php if(!empty($node->field_home_rebuilt)):
                                 print $node->field_home_rebuilt[und][0][value];
@@ -312,7 +312,7 @@ else{ ?>
                             </a></div>  </div>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_temperature_link)):
                                 print ($node->field_temperature_link[und][0][url]);
-                            endif;?>"><?php print t('Average Temperature');?></a></span>  </div>
+                            endif;?>"><?php print t('Low and High Temperature');?></a></span>  </div>
                     <div class="views-field views-field-field-text big">
                         <div class="field-content"><?php if(!empty($node->field_temperature_min)):
                                 print $node->field_temperature_min[und][0][value];
