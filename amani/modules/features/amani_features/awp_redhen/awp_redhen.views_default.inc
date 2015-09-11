@@ -166,17 +166,12 @@ function awp_redhen_views_default_views() {
   $handler->display->display_options['fields']['field_organization']['table'] = 'field_data_field_organization';
   $handler->display->display_options['fields']['field_organization']['field'] = 'field_organization';
   $handler->display->display_options['fields']['field_organization']['element_label_colon'] = FALSE;
-  /* Field: Contact: Subscribe */
-  $handler->display->display_options['fields']['field_subscribe']['id'] = 'field_subscribe';
-  $handler->display->display_options['fields']['field_subscribe']['table'] = 'field_data_field_subscribe';
-  $handler->display->display_options['fields']['field_subscribe']['field'] = 'field_subscribe';
-  $handler->display->display_options['fields']['field_subscribe']['element_label_colon'] = FALSE;
-  /* Field: Contact: Aid Watch Engagement */
-  $handler->display->display_options['fields']['field_aid_watch_engagement']['id'] = 'field_aid_watch_engagement';
-  $handler->display->display_options['fields']['field_aid_watch_engagement']['table'] = 'field_data_field_aid_watch_engagement';
-  $handler->display->display_options['fields']['field_aid_watch_engagement']['field'] = 'field_aid_watch_engagement';
-  $handler->display->display_options['fields']['field_aid_watch_engagement']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_aid_watch_engagement']['delta_offset'] = '0';
+  /* Field: Field: Mobile */
+  $handler->display->display_options['fields']['field_phone']['id'] = 'field_phone';
+  $handler->display->display_options['fields']['field_phone']['table'] = 'field_data_field_phone';
+  $handler->display->display_options['fields']['field_phone']['field'] = 'field_phone';
+  $handler->display->display_options['fields']['field_phone']['label'] = 'Phone';
+  $handler->display->display_options['fields']['field_phone']['element_label_colon'] = FALSE;
   /* Field: Contact: Contact ID */
   $handler->display->display_options['fields']['contact_id']['id'] = 'contact_id';
   $handler->display->display_options['fields']['contact_id']['table'] = 'redhen_contact';
@@ -184,6 +179,7 @@ function awp_redhen_views_default_views() {
   $handler->display->display_options['fields']['contact_id']['label'] = '';
   $handler->display->display_options['fields']['contact_id']['exclude'] = TRUE;
   $handler->display->display_options['fields']['contact_id']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['contact_id']['separator'] = '';
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -202,6 +198,7 @@ function awp_redhen_views_default_views() {
   $handler->display->display_options['filters']['combine']['exposed'] = TRUE;
   $handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
   $handler->display->display_options['filters']['combine']['expose']['label'] = 'Search';
+  $handler->display->display_options['filters']['combine']['expose']['description'] = 'Searches on First Name, Last Name, Email & Organization';
   $handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
   $handler->display->display_options['filters']['combine']['expose']['identifier'] = 'combine';
   $handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
@@ -216,6 +213,7 @@ function awp_redhen_views_default_views() {
     'first_name' => 'first_name',
     'last_name' => 'last_name',
     'redhen_contact_email' => 'redhen_contact_email',
+    'field_organization' => 'field_organization',
   );
   /* Filter criterion: Contact: Aid Watch Engagement (field_aid_watch_engagement) (translated) */
   $handler->display->display_options['filters']['field_aid_watch_engagement_value_i18n']['id'] = 'field_aid_watch_engagement_value_i18n';
@@ -295,7 +293,8 @@ function awp_redhen_views_default_views() {
 
   /* Display: Data export */
   $handler = $view->new_display('views_data_export', 'Data export', 'views_data_export_1');
-  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Contact: First name */
@@ -326,17 +325,11 @@ function awp_redhen_views_default_views() {
   $handler->display->display_options['fields']['field_organization']['table'] = 'field_data_field_organization';
   $handler->display->display_options['fields']['field_organization']['field'] = 'field_organization';
   $handler->display->display_options['fields']['field_organization']['element_label_colon'] = FALSE;
-  /* Field: Contact: Subscribe */
-  $handler->display->display_options['fields']['field_subscribe']['id'] = 'field_subscribe';
-  $handler->display->display_options['fields']['field_subscribe']['table'] = 'field_data_field_subscribe';
-  $handler->display->display_options['fields']['field_subscribe']['field'] = 'field_subscribe';
-  $handler->display->display_options['fields']['field_subscribe']['element_label_colon'] = FALSE;
-  /* Field: Contact: Aid Watch Engagement */
-  $handler->display->display_options['fields']['field_aid_watch_engagement']['id'] = 'field_aid_watch_engagement';
-  $handler->display->display_options['fields']['field_aid_watch_engagement']['table'] = 'field_data_field_aid_watch_engagement';
-  $handler->display->display_options['fields']['field_aid_watch_engagement']['field'] = 'field_aid_watch_engagement';
-  $handler->display->display_options['fields']['field_aid_watch_engagement']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_aid_watch_engagement']['delta_offset'] = '0';
+  /* Field: Field: Mobile */
+  $handler->display->display_options['fields']['field_phone']['id'] = 'field_phone';
+  $handler->display->display_options['fields']['field_phone']['table'] = 'field_data_field_phone';
+  $handler->display->display_options['fields']['field_phone']['field'] = 'field_phone';
+  $handler->display->display_options['fields']['field_phone']['element_label_colon'] = FALSE;
   $handler->display->display_options['path'] = 'redhen-contacts.csv';
   $handler->display->display_options['displays'] = array(
     'page' => 'page',
