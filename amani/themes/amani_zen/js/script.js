@@ -86,6 +86,14 @@ Drupal.behaviors.paragraphs_adjustments = {
 	});
 	
 
+// Rewrite all hashtag links to go to search results page with tag as search keyword
+
+	$('a[href^="/tags/"]').each(function() {
+	
+		var thetag = $(this).text();
+		$(this).attr('href', '/search/node/' + thetag);
+		
+	});
 
 	
 // Set proper alignment for callout block on Structure pages if it's last callout block on the page
