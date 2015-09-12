@@ -2722,14 +2722,15 @@ div.breadcrumb {
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 16px;
+    display: none;
   }
-  /* line 612, ../sass/theme/_layout.scss */
+  /* line 613, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-row {
     display: block;
     float: left;
     width: 100%;
   }
-  /* line 618, ../sass/theme/_layout.scss */
+  /* line 619, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-column {
     display: block;
     float: left;
@@ -2739,11 +2740,11 @@ div.breadcrumb {
     padding: 2em .2em;
     margin-bottom: 2em;
   }
-  /* line 626, ../sass/theme/_layout.scss */
+  /* line 627, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-column.views-column-last {
     margin-right: 0;
   }
-  /* line 631, ../sass/theme/_layout.scss */
+  /* line 632, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-field-field-image {
     display: table-cell;
     vertical-align: middle;
@@ -2751,14 +2752,14 @@ div.breadcrumb {
     height: 160px;
     text-align: center;
   }
-  /* line 637, ../sass/theme/_layout.scss */
+  /* line 638, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-field-field-image img {
     height: auto;
     max-width: 190px;
     margin: 0 auto;
     display: inline-block;
   }
-  /* line 645, ../sass/theme/_layout.scss */
+  /* line 646, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-field-title {
     display: none;
     text-align: center;
@@ -2766,7 +2767,7 @@ div.breadcrumb {
     font-weight: 400;
     font-size: 1em;
   }
-  /* line 653, ../sass/theme/_layout.scss */
+  /* line 654, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-field-field-short-sponsor-info {
     display: none;
     text-align: center;
@@ -2774,7 +2775,7 @@ div.breadcrumb {
     font-weight: 400;
     font-size: 1em;
   }
-  /* line 660, ../sass/theme/_layout.scss */
+  /* line 661, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-exposed-form {
     display: block;
     width: 752px;
@@ -2782,14 +2783,14 @@ div.breadcrumb {
     background: #E6E6E6;
     margin-bottom: 2em;
   }
-  /* line 666, ../sass/theme/_layout.scss */
+  /* line 667, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-exposed-form #edit-field-partner-type-tid-wrapper > label {
     text-transform: uppercase;
     display: block;
     width: 100%;
     margin-bottom: 1em;
   }
-  /* line 674, ../sass/theme/_layout.scss */
+  /* line 675, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-exposed-form .form-item {
     display: inline-block;
     background: white;
@@ -2798,19 +2799,19 @@ div.breadcrumb {
     padding: .4em 1em;
     margin-right: 4px;
   }
-  /* line 681, ../sass/theme/_layout.scss */
+  /* line 682, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-exposed-form .form-item:hover {
     background: #59C2ED;
   }
-  /* line 686, ../sass/theme/_layout.scss */
+  /* line 687, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-exposed-form .form-item input[type="radio"] {
     display: none;
   }
-  /* line 690, ../sass/theme/_layout.scss */
+  /* line 691, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-exposed-form .form-item label {
     cursor: pointer;
   }
-  /* line 703, ../sass/theme/_layout.scss */
+  /* line 704, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_3 {
     padding-right: 3000px;
     margin-right: -3000px;
@@ -2824,13 +2825,12 @@ div.breadcrumb {
     float: left;
     margin-bottom: -201px;
   }
-  /* line 717, ../sass/theme/_layout.scss */
+  /* line 718, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_3 h3 {
     font-size: 1.4em;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 20px;
-    display: none;
   }
   /* line 725, ../sass/theme/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_3 .views-field-field-image {
