@@ -230,6 +230,14 @@ Drupal.behaviors.paragraphs_adjustments = {
 	
 	});
 	
+	$('.paragraphs-item-paragraph-text-with-header-text').each(function() {
+		var parablockbox = $(this).find('.field-name-field-class-for-this-box .field-item');
+		var parablockclass = parablockbox.html();
+		$(this).parent().addClass(parablockclass);
+		parablockbox.hide();
+	
+	});
+	
 	
 
 // Code to control collapse and expansion of blocks on current openings page

@@ -6431,17 +6431,26 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding-bottom: 2em;
   }
   /* line 3100, ../sass/theme/_page_specific.scss */
+  body.products-amani .product-features-highlight-box {
+    padding-left: 3000px;
+    padding-right: 3000px;
+    margin-left: -3000px;
+    margin-right: -3000px;
+    background: #E6E6E6;
+    padding-top: 3em;
+  }
+  /* line 3109, ../sass/theme/_page_specific.scss */
   body.products-amani .amani-product-page-bottom {
     display: block;
     width: 100%;
     margin-top: 5em !important;
   }
-  /* line 3106, ../sass/theme/_page_specific.scss */
+  /* line 3115, ../sass/theme/_page_specific.scss */
   body.products-amani #example-amani-site {
     border: 1px solid #ccc;
     margin-bottom: -2em;
   }
-  /* line 3111, ../sass/theme/_page_specific.scss */
+  /* line 3120, ../sass/theme/_page_specific.scss */
   body.products-amani .feature-grey-full-bg-box {
     padding-left: 3000px;
     padding-right: 3000px;
@@ -6452,13 +6461,13 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding-bottom: 2em;
     margin-bottom: 3em !important;
   }
-  /* line 3123, ../sass/theme/_page_specific.scss */
+  /* line 3132, ../sass/theme/_page_specific.scss */
   body.products-amani .image-float-left .field-name-field-images {
     float: left;
     padding-left: 0;
     padding-right: 2em;
   }
-  /* line 3130, ../sass/theme/_page_specific.scss */
+  /* line 3139, ../sass/theme/_page_specific.scss */
   body.products-amani a#apply-today-button {
     display: block;
     float: left;
@@ -6473,13 +6482,13 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 4px;
     margin-top: 20px;
   }
-  /* line 3143, ../sass/theme/_page_specific.scss */
+  /* line 3152, ../sass/theme/_page_specific.scss */
   body.products-amani a#apply-today-button span {
     font-weight: 300;
     display: block;
     padding-top: 4px;
   }
-  /* line 3150, ../sass/theme/_page_specific.scss */
+  /* line 3159, ../sass/theme/_page_specific.scss */
   body.products-amani a#faq-button {
     display: block;
     float: left;
@@ -6496,7 +6505,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   }
 
   /* FAQ Page */
-  /* line 3173, ../sass/theme/_page_specific.scss */
+  /* line 3182, ../sass/theme/_page_specific.scss */
   body.page-faq h3 {
     color: #F09416;
     text-transform: uppercase;
