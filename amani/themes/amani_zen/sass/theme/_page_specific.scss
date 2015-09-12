@@ -3124,6 +3124,42 @@
 				padding-right:2em;
 			}
 		}
+		
+		a#apply-today-button {
+			display:block;
+			float:left;
+			background:$orange;
+			color:white;
+			font-weight:600;
+			padding:20px;
+			height:120px;
+			width:320px;
+			margin-right:20px;
+			font-size:18px;
+			margin-bottom:4px;
+			margin-top:50px;
+			span {
+				font-weight:300;
+				display:block;
+				padding-top:4px;
+			}	
+		}
+	
+		a#faq-button {
+			display:block;
+			float:left;
+			background:$grey;
+			color:white;
+			font-weight:600;
+			padding:20px;
+			height:120px;
+			width:332px;
+			margin-right:0;
+			font-size:18px;
+			margin-bottom:4px;
+			margin-top:50px;
+			
+		}
 	
 	}
 	
