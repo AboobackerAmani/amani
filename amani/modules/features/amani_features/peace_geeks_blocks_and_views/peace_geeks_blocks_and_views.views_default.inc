@@ -108,6 +108,11 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Global: Random */
+  $handler->display->display_options['sorts']['random']['id'] = 'random';
+  $handler->display->display_options['sorts']['random']['table'] = 'views';
+  $handler->display->display_options['sorts']['random']['field'] = 'random';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -123,6 +128,13 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'team' => 'team',
+  );
+  /* Filter criterion: Content: Volunteer? (field_is_volunteer) */
+  $handler->display->display_options['filters']['field_is_volunteer_value']['id'] = 'field_is_volunteer_value';
+  $handler->display->display_options['filters']['field_is_volunteer_value']['table'] = 'field_data_field_is_volunteer';
+  $handler->display->display_options['filters']['field_is_volunteer_value']['field'] = 'field_is_volunteer_value';
+  $handler->display->display_options['filters']['field_is_volunteer_value']['value'] = array(
+    1 => '1',
   );
 
   /* Display: Area of Focus */
@@ -2037,11 +2049,22 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Qualifications */
+  $handler->display->display_options['fields']['field_qualifications']['id'] = 'field_qualifications';
+  $handler->display->display_options['fields']['field_qualifications']['table'] = 'field_data_field_qualifications';
+  $handler->display->display_options['fields']['field_qualifications']['field'] = 'field_qualifications';
+  $handler->display->display_options['fields']['field_qualifications']['label'] = '';
+  $handler->display->display_options['fields']['field_qualifications']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_qualifications']['element_label_colon'] = FALSE;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['text'] = '[body]
+
+[field_qualifications]';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_opportunity_tags']['id'] = 'field_opportunity_tags';
@@ -2107,6 +2130,9 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('<div id="current-openings-bottom-text">If you don\'t see a suitable opening here please feel free to submit a general application.</div>
 <a id="current-openings-general-application" href="/generalapplication">Apply with<span>general application</span></a>'),
     t('+'),
+    t('[body]
+
+[field_qualifications]'),
     t('<h3>Current Openings</h3>'),
     t('Current Openings Block'),
   );
@@ -2542,7 +2568,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'header text';
-  $handler->display->display_options['header']['area']['content'] = '<h2>We are a team made up of skilled individuals from a variety of backgrounds, including: law, design, accounting, marketing and more. Meet our team.</h2>';
+  $handler->display->display_options['header']['area']['content'] = '<h2>Tech Wizards, Marketing Gurus, Legal Eagles and more. We are all PeaceGeeks.</h2>';
   $handler->display->display_options['header']['area']['format'] = 'wysiwyg_advanced';
   /* Field: Content: Photo */
   $handler->display->display_options['fields']['field_team_image']['id'] = 'field_team_image';
@@ -2769,12 +2795,12 @@ function peace_geeks_blocks_and_views_views_default_views() {
   );
   $handler->display->display_options['filters']['field_team_member_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_team_member_type_tid']['vocabulary'] = 'team_member_type';
-  /* Filter criterion: Content: Volunteer? (field_is_volunteer) */
-  $handler->display->display_options['filters']['field_is_volunteer_value']['id'] = 'field_is_volunteer_value';
-  $handler->display->display_options['filters']['field_is_volunteer_value']['table'] = 'field_data_field_is_volunteer';
-  $handler->display->display_options['filters']['field_is_volunteer_value']['field'] = 'field_is_volunteer_value';
-  $handler->display->display_options['filters']['field_is_volunteer_value']['value'] = array(
-    0 => '0',
+  /* Filter criterion: Content: Display on Team Page? (field_display_on_team_page) */
+  $handler->display->display_options['filters']['field_display_on_team_page_value']['id'] = 'field_display_on_team_page_value';
+  $handler->display->display_options['filters']['field_display_on_team_page_value']['table'] = 'field_data_field_display_on_team_page';
+  $handler->display->display_options['filters']['field_display_on_team_page_value']['field'] = 'field_display_on_team_page_value';
+  $handler->display->display_options['filters']['field_display_on_team_page_value']['value'] = array(
+    1 => '1',
   );
   $handler->display->display_options['path'] = 'team';
 
@@ -3010,7 +3036,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('header text'),
-    t('<h2>We are a team made up of skilled individuals from a variety of backgrounds, including: law, design, accounting, marketing and more. Meet our team.</h2>'),
+    t('<h2>Tech Wizards, Marketing Gurus, Legal Eagles and more. We are all PeaceGeeks.</h2>'),
     t('Read more'),
     t('Team member type (field_team_member_type)'),
     t('Page'),
@@ -3807,13 +3833,6 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'partner' => 'partner',
-  );
-  /* Filter criterion: Content: Display on Supporters Page? (field_display_on_supporters_page) */
-  $handler->display->display_options['filters']['field_display_on_supporters_page_value']['id'] = 'field_display_on_supporters_page_value';
-  $handler->display->display_options['filters']['field_display_on_supporters_page_value']['table'] = 'field_data_field_display_on_supporters_page';
-  $handler->display->display_options['filters']['field_display_on_supporters_page_value']['field'] = 'field_display_on_supporters_page_value';
-  $handler->display->display_options['filters']['field_display_on_supporters_page_value']['value'] = array(
-    1 => '1',
   );
   /* Filter criterion: Content: Featured Sponsor (field_featured_sponsor) */
   $handler->display->display_options['filters']['field_featured_sponsor_value']['id'] = 'field_featured_sponsor_value';

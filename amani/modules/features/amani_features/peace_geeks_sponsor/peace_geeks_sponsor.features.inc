@@ -53,7 +53,7 @@ function peace_geeks_sponsor_image_default_styles() {
 function peace_geeks_sponsor_node_info() {
   $items = array(
     'sponsor' => array(
-      'name' => t('Sponsor'),
+      'name' => t('Sponsor OLD to be deleted'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

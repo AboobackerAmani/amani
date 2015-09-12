@@ -53,22 +53,23 @@ function peace_geeks_project_partners_image_default_styles() {
   // Exported image style: project_partners_page_image.
   $styles['project_partners_page_image'] = array(
     'name' => 'project_partners_page_image',
-    'label' => 'Project Partners Page Image (752 x 570)',
+    'label' => 'Project Partners Page Image (752px wide)',
     'effects' => array(
-      21 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
+      22 => array(
+        'label' => 'Scale',
+        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
+        'effect callback' => 'image_scale_effect',
+        'dimensions callback' => 'image_scale_dimensions',
+        'form callback' => 'image_scale_form',
+        'summary theme' => 'image_scale_summary',
         'module' => 'image',
-        'name' => 'image_scale_and_crop',
+        'name' => 'image_scale',
         'data' => array(
           'width' => '752',
-          'height' => '570',
+          'height' => '',
+          'upscale' => 1,
         ),
-        'weight' => '2',
+        'weight' => '1',
       ),
     ),
   );

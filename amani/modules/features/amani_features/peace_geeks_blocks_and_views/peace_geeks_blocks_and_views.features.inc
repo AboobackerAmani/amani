@@ -311,7 +311,7 @@ function peace_geeks_blocks_and_views_image_default_styles() {
     'name' => 'team_profile_photo_node',
     'label' => 'Team Profile Photo Node (274 x 348)',
     'effects' => array(
-      20 => array(
+      24 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
