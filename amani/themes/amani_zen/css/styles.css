@@ -6407,6 +6407,17 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   body.page-faq .view-display-id-faq_page ol li.views-row.views-row-last {
     margin-bottom: 6em;
   }
+
+  /* Products - Amani */
+  /* line 3080, ../sass/theme/_page_specific.scss */
+  body.products-amani #amani-globalfeatures {
+    text-align: center;
+    margin-top: 3em;
+  }
+  /* line 3084, ../sass/theme/_page_specific.scss */
+  body.products-amani #amani-globalfeatures tr:nth-child(even) td {
+    padding-bottom: 2em;
+  }
 }
 /* Styling for administrative/editor stuff */
 /* line 3, ../sass/theme/_admin_interface.scss */
