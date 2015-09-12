@@ -6426,26 +6426,30 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
 
   /* Products - Amani */
   /* line 3088, ../sass/theme/_page_specific.scss */
+  body.products-amani #main {
+    padding-bottom: 6em;
+  }
+  /* line 3090, ../sass/theme/_page_specific.scss */
   body.products-amani #amani-globalfeatures {
     text-align: center;
     margin-top: 3em;
   }
-  /* line 3092, ../sass/theme/_page_specific.scss */
+  /* line 3094, ../sass/theme/_page_specific.scss */
   body.products-amani #amani-globalfeatures tr:nth-child(even) td {
     padding-bottom: 2em;
   }
-  /* line 3098, ../sass/theme/_page_specific.scss */
+  /* line 3100, ../sass/theme/_page_specific.scss */
   body.products-amani .amani-product-page-bottom {
     display: block;
     width: 100%;
     margin-top: 5em !important;
   }
-  /* line 3104, ../sass/theme/_page_specific.scss */
+  /* line 3106, ../sass/theme/_page_specific.scss */
   body.products-amani #example-amani-site {
     border: 1px solid #ccc;
     margin-bottom: -2em;
   }
-  /* line 3109, ../sass/theme/_page_specific.scss */
+  /* line 3111, ../sass/theme/_page_specific.scss */
   body.products-amani .feature-grey-full-bg-box {
     padding-left: 3000px;
     padding-right: 3000px;
@@ -6456,13 +6460,13 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding-bottom: 2em;
     margin-bottom: 3em !important;
   }
-  /* line 3121, ../sass/theme/_page_specific.scss */
+  /* line 3123, ../sass/theme/_page_specific.scss */
   body.products-amani .image-float-left .field-name-field-images {
     float: left;
     padding-left: 0;
     padding-right: 2em;
   }
-  /* line 3128, ../sass/theme/_page_specific.scss */
+  /* line 3130, ../sass/theme/_page_specific.scss */
   body.products-amani a#apply-today-button {
     display: block;
     float: left;
@@ -6475,15 +6479,15 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-right: 20px;
     font-size: 18px;
     margin-bottom: 4px;
-    margin-top: 50px;
+    margin-top: 20px;
   }
-  /* line 3141, ../sass/theme/_page_specific.scss */
+  /* line 3143, ../sass/theme/_page_specific.scss */
   body.products-amani a#apply-today-button span {
     font-weight: 300;
     display: block;
     padding-top: 4px;
   }
-  /* line 3148, ../sass/theme/_page_specific.scss */
+  /* line 3150, ../sass/theme/_page_specific.scss */
   body.products-amani a#faq-button {
     display: block;
     float: left;
@@ -6496,7 +6500,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-right: 0;
     font-size: 18px;
     margin-bottom: 4px;
-    margin-top: 50px;
+    margin-top: 20px;
   }
 }
 /* Styling for administrative/editor stuff */
