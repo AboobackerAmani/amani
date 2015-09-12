@@ -222,6 +222,15 @@ Drupal.behaviors.paragraphs_adjustments = {
 	
 	});
 	
+	$('.paragraphs-item-simple-text-with-right-side-imag').each(function() {
+		var imgblockbox = $(this).find('.field-name-field-class-for-this-box .field-item');
+		var imgblockclass = imgblockbox.html();
+		$(this).parent().addClass(imgblockclass);
+		imgblockbox.hide();
+	
+	});
+	
+	
 
 // Code to control collapse and expansion of blocks on current openings page
 

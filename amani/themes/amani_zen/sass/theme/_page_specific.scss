@@ -3103,6 +3103,26 @@
 		
 		#example-amani-site {
 			border:1px solid #ccc;
+			margin-bottom:-2em;
+		}
+		
+		.feature-grey-full-bg-box {
+			padding-left:3000px;
+			padding-right:3000px;
+			margin-left:-3000px;
+			margin-right:-3000px;
+			background:$soft-grey;
+			margin-top:-2em !important;
+			padding-bottom:2em;
+			margin-bottom:3em !important;
+		}
+		
+		.image-float-left {
+			.field-name-field-images {
+				float:left;
+				padding-left:0;
+				padding-right:2em;
+			}
 		}
 	
 	}
