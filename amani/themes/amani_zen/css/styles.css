@@ -1450,7 +1450,40 @@ div[id*="block-menu-menu-social-media"] li {
     background: #59C2ED;
     float: left;
   }
+  /* line 216, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_latest_project .views-field-field-project-tags {
+    padding: 10px 20px 0 20px;
+  }
   /* line 218, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_latest_project .views-field-field-project-tags ol {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -4px;
+  }
+  /* line 223, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_latest_project .views-field-field-project-tags ol li {
+    list-style-type: none;
+    display: block;
+    float: left;
+    margin-right: 6px;
+    margin-bottom: 4px;
+  }
+  /* line 229, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_latest_project .views-field-field-project-tags ol li a {
+    display: inline-block;
+    background: white;
+    padding: 4px 10px;
+    color: #9a9a9a;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  /* line 237, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_latest_project .views-field-field-project-tags ol li a:before {
+    content: "#";
+  }
+  /* line 247, ../sass/components/_blocks.scss */
   body.front #content .block-views .view-display-id-front_volunteer {
     position: relative;
     display: inline-block;
@@ -1461,7 +1494,40 @@ div[id*="block-menu-menu-social-media"] li {
     background: #474F5E;
     float: left;
   }
-  /* line 230, ../sass/components/_blocks.scss */
+  /* line 258, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_volunteer .views-field-field-amani-tags {
+    padding: 10px 20px 0 20px;
+  }
+  /* line 260, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_volunteer .views-field-field-amani-tags ol {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -4px;
+  }
+  /* line 265, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_volunteer .views-field-field-amani-tags ol li {
+    list-style-type: none;
+    display: block;
+    float: left;
+    margin-right: 6px;
+    margin-bottom: 4px;
+  }
+  /* line 271, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_volunteer .views-field-field-amani-tags ol li a {
+    display: inline-block;
+    background: white;
+    padding: 4px 10px;
+    color: #9a9a9a;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  /* line 279, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_volunteer .views-field-field-amani-tags ol li a:before {
+    content: "#";
+  }
+  /* line 288, ../sass/components/_blocks.scss */
   body.front #content .block-views .view-display-id-front_latest_news {
     background: #474F5E;
     position: relative;
@@ -1472,7 +1538,7 @@ div[id*="block-menu-menu-social-media"] li {
     margin-right: 22px;
     height: 500px;
   }
-  /* line 242, ../sass/components/_blocks.scss */
+  /* line 300, ../sass/components/_blocks.scss */
   body.front #content .block-views .view-display-id-front_latest_event {
     background: #474F5E;
     position: relative;
@@ -1483,7 +1549,40 @@ div[id*="block-menu-menu-social-media"] li {
     margin-top: 20px;
     height: 500px;
   }
-  /* line 254, ../sass/components/_blocks.scss */
+  /* line 311, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_latest_event .views-field-field-tags {
+    padding: 10px 20px 0 20px;
+  }
+  /* line 313, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_latest_event .views-field-field-tags ol {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -4px;
+  }
+  /* line 318, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_latest_event .views-field-field-tags ol li {
+    list-style-type: none;
+    display: block;
+    float: left;
+    margin-right: 6px;
+    margin-bottom: 4px;
+  }
+  /* line 324, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_latest_event .views-field-field-tags ol li a {
+    display: inline-block;
+    background: white;
+    padding: 4px 10px;
+    color: #9a9a9a;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  /* line 332, ../sass/components/_blocks.scss */
+  body.front #content .block-views .view-display-id-front_latest_event .views-field-field-tags ol li a:before {
+    content: "#";
+  }
+  /* line 341, ../sass/components/_blocks.scss */
   body.front #content .block-views .view-display-id-front_areas_of_focus {
     background: #59C2ED;
     position: relative;
@@ -1494,7 +1593,7 @@ div[id*="block-menu-menu-social-media"] li {
     margin-top: -130px;
     padding-top: .8em;
   }
-  /* line 266, ../sass/components/_blocks.scss */
+  /* line 353, ../sass/components/_blocks.scss */
   body.front #content .block-views .view-display-id-current_volunteer_opps {
     background: #F09416;
     display: inline-block;
@@ -1505,7 +1604,7 @@ div[id*="block-menu-menu-social-media"] li {
     height: 120px;
   }
 }
-/* line 283, ../sass/components/_blocks.scss */
+/* line 370, ../sass/components/_blocks.scss */
 #block-search-form {
   display: inline-block;
   float: right;
@@ -1513,7 +1612,7 @@ div[id*="block-menu-menu-social-media"] li {
   margin-top: -4px;
 }
 @media all and (min-width: 768px) {
-  /* line 283, ../sass/components/_blocks.scss */
+  /* line 370, ../sass/components/_blocks.scss */
   #block-search-form {
     margin-top: 0;
     width: auto;
@@ -1526,7 +1625,7 @@ div[id*="block-menu-menu-social-media"] li {
 #block-search-form:hover .contextual-links-wrapper {
   display: none;
 }
-/* line 300, ../sass/components/_blocks.scss */
+/* line 387, ../sass/components/_blocks.scss */
 #block-search-form .form-text {
   background-color: #E6E6E6;
   font-size: 12px;
@@ -1537,7 +1636,7 @@ div[id*="block-menu-menu-social-media"] li {
   padding: 6px 10px;
   width: 170px;
 }
-/* line 310, ../sass/components/_blocks.scss */
+/* line 397, ../sass/components/_blocks.scss */
 #block-search-form .form-actions {
   display: none;
 }
@@ -1580,7 +1679,7 @@ div[id*="block-menu-menu-social-media"] li {
 }*/
 /* Events blocks */
 @media all and (min-width: 768px) {
-  /* line 362, ../sass/components/_blocks.scss */
+  /* line 449, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second, body.section-events aside.sidebars .region-sidebar-second {
     display: block;
     float: right;
@@ -1593,101 +1692,101 @@ div[id*="block-menu-menu-social-media"] li {
     /* End Calendar Styling */
     /* Other Events block styling */
   }
-  /* line 374, ../sass/components/_blocks.scss */
+  /* line 461, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views.first, body.section-events aside.sidebars .region-sidebar-second .block-views.first {
     border-bottom: none;
     margin-top: -4px;
   }
-  /* line 377, ../sass/components/_blocks.scss */
+  /* line 464, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views.first h2.block-title, body.section-events aside.sidebars .region-sidebar-second .block-views.first h2.block-title {
     display: none;
   }
-  /* line 381, ../sass/components/_blocks.scss */
+  /* line 468, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views.first .view-header, body.section-events aside.sidebars .region-sidebar-second .block-views.first .view-header {
     width: 260px;
     display: block;
     height: 32px;
   }
-  /* line 387, ../sass/components/_blocks.scss */
+  /* line 474, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views.first .view-content, body.section-events aside.sidebars .region-sidebar-second .block-views.first .view-content {
     width: 260px;
     display: block;
     padding-bottom: 20px;
   }
-  /* line 394, ../sass/components/_blocks.scss */
+  /* line 481, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views.first .calendar-calendar table, body.section-events aside.sidebars .region-sidebar-second .block-views.first .calendar-calendar table {
     border: 1px solid #cfcfcf;
     background: #E6E6E6;
   }
-  /* line 397, ../sass/components/_blocks.scss */
+  /* line 484, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views.first .calendar-calendar table thead, body.section-events aside.sidebars .region-sidebar-second .block-views.first .calendar-calendar table thead {
     background: #474F5E;
   }
-  /* line 399, ../sass/components/_blocks.scss */
+  /* line 486, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views.first .calendar-calendar table thead tr, body.section-events aside.sidebars .region-sidebar-second .block-views.first .calendar-calendar table thead tr {
     background: #474F5E;
   }
-  /* line 401, ../sass/components/_blocks.scss */
+  /* line 488, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views.first .calendar-calendar table thead tr th, body.section-events aside.sidebars .region-sidebar-second .block-views.first .calendar-calendar table thead tr th {
     background: #474F5E;
     color: #9a9a9a;
     font-weight: 300;
     font-size: 11px;
   }
-  /* line 409, ../sass/components/_blocks.scss */
+  /* line 496, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views.first .calendar-calendar table tr, body.section-events aside.sidebars .region-sidebar-second .block-views.first .calendar-calendar table tr {
     border: 1px solid #cfcfcf;
     height: 28px;
     background: #E6E6E6;
   }
-  /* line 413, ../sass/components/_blocks.scss */
+  /* line 500, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views.first .calendar-calendar table tr td, body.section-events aside.sidebars .region-sidebar-second .block-views.first .calendar-calendar table tr td {
     border: 1px solid #cfcfcf;
     text-align: center;
     font-size: 11px;
     color: #414042;
   }
-  /* line 418, ../sass/components/_blocks.scss */
+  /* line 505, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views.first .calendar-calendar table tr td.empty, body.section-events aside.sidebars .region-sidebar-second .block-views.first .calendar-calendar table tr td.empty {
     background: #E6E6E6;
   }
-  /* line 427, ../sass/components/_blocks.scss */
+  /* line 514, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views.first ul.pager li, body.section-events aside.sidebars .region-sidebar-second .block-views.first ul.pager li {
     list-style-type: none;
     padding: 0;
     margin: 0;
     background: #59C2ED;
   }
-  /* line 432, ../sass/components/_blocks.scss */
+  /* line 519, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views.first ul.pager li a, body.section-events aside.sidebars .region-sidebar-second .block-views.first ul.pager li a {
     color: white;
     font-weight: 300;
     font-size: 30px;
   }
-  /* line 441, ../sass/components/_blocks.scss */
+  /* line 528, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views.first .date-heading, body.section-events aside.sidebars .region-sidebar-second .block-views.first .date-heading {
     display: block;
     background: #59C2ED;
     color: white;
     height: 33px;
   }
-  /* line 446, ../sass/components/_blocks.scss */
+  /* line 533, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views.first .date-heading h3, body.section-events aside.sidebars .region-sidebar-second .block-views.first .date-heading h3 {
     font-weight: 300;
     color: white;
     font-size: 20px;
   }
-  /* line 450, ../sass/components/_blocks.scss */
+  /* line 537, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views.first .date-heading h3 a, body.section-events aside.sidebars .region-sidebar-second .block-views.first .date-heading h3 a {
     color: white;
   }
-  /* line 461, ../sass/components/_blocks.scss */
+  /* line 548, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views, body.section-events aside.sidebars .region-sidebar-second .block-views {
     display: block;
     width: 260px;
     border-bottom: 1px solid #9a9a9a;
   }
-  /* line 463, ../sass/components/_blocks.scss */
+  /* line 550, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views h2, body.section-events aside.sidebars .region-sidebar-second .block-views h2 {
     font-size: 16px;
     color: #59C2ED;
@@ -1700,31 +1799,31 @@ div[id*="block-menu-menu-social-media"] li {
     padding-right: 20px;
     padding-top: 20px;
   }
-  /* line 480, ../sass/components/_blocks.scss */
+  /* line 567, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views.last, body.section-events aside.sidebars .region-sidebar-second .block-views.last {
     border-bottom: none;
   }
-  /* line 484, ../sass/components/_blocks.scss */
+  /* line 571, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views ol, body.section-events aside.sidebars .region-sidebar-second .block-views ol {
     display: block;
     padding-top: 10px;
   }
-  /* line 487, ../sass/components/_blocks.scss */
+  /* line 574, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views ol li, body.section-events aside.sidebars .region-sidebar-second .block-views ol li {
     list-style-type: none;
     display: block;
     padding-bottom: 30px;
   }
-  /* line 491, ../sass/components/_blocks.scss */
+  /* line 578, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views ol li.views-row-last, body.section-events aside.sidebars .region-sidebar-second .block-views ol li.views-row-last {
     padding-bottom: 10px;
   }
-  /* line 497, ../sass/components/_blocks.scss */
+  /* line 584, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views .view.upcoming-events-side-block, body.section-event aside.sidebars .region-sidebar-second .block-views .view.facts-block, body.section-events aside.sidebars .region-sidebar-second .block-views .view.upcoming-events-side-block, body.section-events aside.sidebars .region-sidebar-second .block-views .view.facts-block {
     padding: 10px 20px;
     display: block;
   }
-  /* line 503, ../sass/components/_blocks.scss */
+  /* line 590, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views .view.upcoming-events-side-block .views-field-title a, body.section-events aside.sidebars .region-sidebar-second .block-views .view.upcoming-events-side-block .views-field-title a {
     color: #414042;
     font-size: 14px;
@@ -1732,24 +1831,24 @@ div[id*="block-menu-menu-social-media"] li {
     line-height: 18px;
     padding: 0;
   }
-  /* line 510, ../sass/components/_blocks.scss */
+  /* line 597, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views .view.upcoming-events-side-block .views-field-field-event-date, body.section-events aside.sidebars .region-sidebar-second .block-views .view.upcoming-events-side-block .views-field-field-event-date {
     color: #59C2ED;
     font-size: 11px;
     margin: 0;
   }
-  /* line 517, ../sass/components/_blocks.scss */
+  /* line 604, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views .view.upcoming-events-side-block ol li, body.section-events aside.sidebars .region-sidebar-second .block-views .view.upcoming-events-side-block ol li {
     padding-bottom: 20px;
   }
-  /* line 524, ../sass/components/_blocks.scss */
+  /* line 611, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views .view.facts-block .views-field-title, body.section-events aside.sidebars .region-sidebar-second .block-views .view.facts-block .views-field-title {
     color: #F09416;
     font-size: 30px;
     font-weight: 600;
     line-height: 30px;
   }
-  /* line 531, ../sass/components/_blocks.scss */
+  /* line 618, ../sass/components/_blocks.scss */
   body.section-event aside.sidebars .region-sidebar-second .block-views .view.facts-block .views-field-body, body.section-events aside.sidebars .region-sidebar-second .block-views .view.facts-block .views-field-body {
     font-size: 14px;
     color: #9a9a9a;
@@ -1759,7 +1858,7 @@ div[id*="block-menu-menu-social-media"] li {
 }
 /* News blocks */
 @media all and (min-width: 768px) {
-  /* line 558, ../sass/components/_blocks.scss */
+  /* line 645, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second, body.node-type-article aside.sidebars .region-sidebar-second {
     display: block;
     float: right;
@@ -1769,7 +1868,7 @@ div[id*="block-menu-menu-social-media"] li {
     background: #E6E6E6;
     padding: 0;
   }
-  /* line 567, ../sass/components/_blocks.scss */
+  /* line 654, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second a#likeusfacebook, body.node-type-article aside.sidebars .region-sidebar-second a#likeusfacebook {
     display: block;
     width: 180px;
@@ -1778,13 +1877,13 @@ div[id*="block-menu-menu-social-media"] li {
     height: 70px;
     margin: 14px auto 30px auto;
   }
-  /* line 576, ../sass/components/_blocks.scss */
+  /* line 663, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-block, body.node-type-article aside.sidebars .region-sidebar-second .block-block {
     display: block;
     width: 260px;
     border-bottom: 1px solid #9a9a9a;
   }
-  /* line 577, ../sass/components/_blocks.scss */
+  /* line 664, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-block h2, body.node-type-article aside.sidebars .region-sidebar-second .block-block h2 {
     font-size: 16px;
     color: #59C2ED;
@@ -1797,13 +1896,13 @@ div[id*="block-menu-menu-social-media"] li {
     padding-right: 20px;
     padding-top: 20px;
   }
-  /* line 595, ../sass/components/_blocks.scss */
+  /* line 682, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views, body.node-type-article aside.sidebars .region-sidebar-second .block-views {
     display: block;
     width: 260px;
     border-bottom: 1px solid #9a9a9a;
   }
-  /* line 597, ../sass/components/_blocks.scss */
+  /* line 684, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views h2, body.node-type-article aside.sidebars .region-sidebar-second .block-views h2 {
     font-size: 16px;
     color: #59C2ED;
@@ -1816,31 +1915,31 @@ div[id*="block-menu-menu-social-media"] li {
     padding-right: 20px;
     padding-top: 20px;
   }
-  /* line 614, ../sass/components/_blocks.scss */
+  /* line 701, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views.last, body.node-type-article aside.sidebars .region-sidebar-second .block-views.last {
     border-bottom: none;
   }
-  /* line 618, ../sass/components/_blocks.scss */
+  /* line 705, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views ol, body.node-type-article aside.sidebars .region-sidebar-second .block-views ol {
     display: block;
     padding-top: 10px;
   }
-  /* line 621, ../sass/components/_blocks.scss */
+  /* line 708, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views ol li, body.node-type-article aside.sidebars .region-sidebar-second .block-views ol li {
     list-style-type: none;
     display: block;
     padding-bottom: 30px;
   }
-  /* line 625, ../sass/components/_blocks.scss */
+  /* line 712, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views ol li.views-row-last, body.node-type-article aside.sidebars .region-sidebar-second .block-views ol li.views-row-last {
     padding-bottom: 10px;
   }
-  /* line 633, ../sass/components/_blocks.scss */
+  /* line 720, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view {
     padding: 10px 20px;
     display: block;
   }
-  /* line 637, ../sass/components/_blocks.scss */
+  /* line 724, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view .views-field-title a, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view .views-field-title a {
     color: #414042;
     font-size: 14px;
@@ -1848,19 +1947,19 @@ div[id*="block-menu-menu-social-media"] li {
     line-height: 18px;
     padding: 0;
   }
-  /* line 647, ../sass/components/_blocks.scss */
+  /* line 734, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view ol li, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view ol li {
     padding-bottom: 16px;
   }
-  /* line 649, ../sass/components/_blocks.scss */
+  /* line 736, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view ol li.views-row-last, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view ol li.views-row-last {
     padding-bottom: 6px;
   }
-  /* line 657, ../sass/components/_blocks.scss */
+  /* line 744, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-news_categories_block .views-field-name, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-news_categories_block .views-field-name {
     margin: 0;
   }
-  /* line 659, ../sass/components/_blocks.scss */
+  /* line 746, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-news_categories_block .views-field-name a, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-news_categories_block .views-field-name a {
     color: #414042;
     font-size: 14px;
@@ -1868,7 +1967,7 @@ div[id*="block-menu-menu-social-media"] li {
     line-height: 18px;
     padding: 0;
   }
-  /* line 669, ../sass/components/_blocks.scss */
+  /* line 756, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock {
     padding: 20px;
     background: #E6E6E6;
@@ -1877,19 +1976,19 @@ div[id*="block-menu-menu-social-media"] li {
     float: left;
     color: #9a9a9a;
   }
-  /* line 678, ../sass/components/_blocks.scss */
+  /* line 765, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock a, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock a {
     color: #F09416;
   }
-  /* line 681, ../sass/components/_blocks.scss */
+  /* line 768, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock h2.block-title, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock h2.block-title {
     display: none;
   }
-  /* line 688, ../sass/components/_blocks.scss */
+  /* line 775, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .view-header, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .view-header {
     padding-bottom: 1em;
   }
-  /* line 690, ../sass/components/_blocks.scss */
+  /* line 777, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .view-header a, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .view-header a {
     color: #9a9a9a;
     font-style: italic;
@@ -1897,7 +1996,7 @@ div[id*="block-menu-menu-social-media"] li {
     font-weight: normal;
     font-size: 1.1em;
   }
-  /* line 699, ../sass/components/_blocks.scss */
+  /* line 786, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .views-row, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .views-row {
     display: block;
     width: 100%;
@@ -1905,11 +2004,11 @@ div[id*="block-menu-menu-social-media"] li {
     margin-bottom: 1em;
     padding-bottom: 1em;
   }
-  /* line 708, ../sass/components/_blocks.scss */
+  /* line 795, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .views-field-created-time a, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .views-field-created-time a {
     color: #9a9a9a;
   }
-  /* line 715, ../sass/components/_blocks.scss */
+  /* line 802, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .view-footer a, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .view-footer a {
     color: #414042;
     display: block;
@@ -1919,7 +2018,7 @@ div[id*="block-menu-menu-social-media"] li {
     padding: 10px 6px 6px 8px;
     text-align: right;
   }
-  /* line 724, ../sass/components/_blocks.scss */
+  /* line 811, ../sass/components/_blocks.scss */
   body.section-news aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .view-footer #front-twitter-logo-block, body.node-type-article aside.sidebars .region-sidebar-second .block-views .view-display-id-pg_twitter_sideblock .view-footer #front-twitter-logo-block {
     display: block;
     background: url(../images/twitter-bird-small.png) bottom right no-repeat;

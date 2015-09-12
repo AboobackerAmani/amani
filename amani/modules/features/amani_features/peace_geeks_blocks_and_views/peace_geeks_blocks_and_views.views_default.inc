@@ -79,6 +79,40 @@ function peace_geeks_blocks_and_views_views_default_views() {
 
   /* Display: Latest Project */
   $handler = $view->new_display('block', 'Latest Project', 'front_latest_project');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Project Image */
+  $handler->display->display_options['fields']['field_project_image']['id'] = 'field_project_image';
+  $handler->display->display_options['fields']['field_project_image']['table'] = 'field_data_field_project_image';
+  $handler->display->display_options['fields']['field_project_image']['field'] = 'field_project_image';
+  $handler->display->display_options['fields']['field_project_image']['label'] = '';
+  $handler->display->display_options['fields']['field_project_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_project_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_project_image']['settings'] = array(
+    'image_style' => 'latest_project_front',
+    'image_link' => 'content',
+  );
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="front-above-titles">Latest Project</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Project Tags */
+  $handler->display->display_options['fields']['field_project_tags']['id'] = 'field_project_tags';
+  $handler->display->display_options['fields']['field_project_tags']['table'] = 'field_data_field_project_tags';
+  $handler->display->display_options['fields']['field_project_tags']['field'] = 'field_project_tags';
+  $handler->display->display_options['fields']['field_project_tags']['label'] = '';
+  $handler->display->display_options['fields']['field_project_tags']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_project_tags']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_project_tags']['multi_type'] = 'ol';
 
   /* Display: Volunteer */
   $handler = $view->new_display('block', 'Volunteer', 'front_volunteer');
@@ -108,6 +142,14 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Tags */
+  $handler->display->display_options['fields']['field_amani_tags']['id'] = 'field_amani_tags';
+  $handler->display->display_options['fields']['field_amani_tags']['table'] = 'field_data_field_amani_tags';
+  $handler->display->display_options['fields']['field_amani_tags']['field'] = 'field_amani_tags';
+  $handler->display->display_options['fields']['field_amani_tags']['label'] = '';
+  $handler->display->display_options['fields']['field_amani_tags']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_amani_tags']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_amani_tags']['multi_type'] = 'ol';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Global: Random */
   $handler->display->display_options['sorts']['random']['id'] = 'random';
@@ -255,6 +297,14 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Field: Tags */
+  $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
+  $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
+  $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
+  $handler->display->display_options['fields']['field_tags']['label'] = '';
+  $handler->display->display_options['fields']['field_tags']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_tags']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_tags']['multi_type'] = 'ol';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
