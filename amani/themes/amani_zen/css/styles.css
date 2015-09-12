@@ -6408,15 +6408,29 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 6em;
   }
 
+  /* line 3075, ../sass/theme/_page_specific.scss */
+  .large-blue-text {
+    color: #59C2ED;
+    line-height: 1.4em;
+    font-size: 3em;
+    font-weight: 300;
+    text-align: center;
+  }
+
   /* Products - Amani */
-  /* line 3080, ../sass/theme/_page_specific.scss */
+  /* line 3088, ../sass/theme/_page_specific.scss */
   body.products-amani #amani-globalfeatures {
     text-align: center;
     margin-top: 3em;
   }
-  /* line 3084, ../sass/theme/_page_specific.scss */
+  /* line 3092, ../sass/theme/_page_specific.scss */
   body.products-amani #amani-globalfeatures tr:nth-child(even) td {
     padding-bottom: 2em;
+  }
+  /* line 3098, ../sass/theme/_page_specific.scss */
+  body.products-amani .amani-product-page-bottom {
+    display: block;
+    width: 100%;
   }
 }
 /* Styling for administrative/editor stuff */
