@@ -2462,6 +2462,28 @@
 	
 		h1#page-title {display:none;}
 		
+		#amani-globalfeatures {
+			text-align:center;
+			margin-top:3em;
+			position:relative;
+			tr:nth-child(even) {
+				td {
+					padding-bottom: 4em;
+					line-height: 1.4em;
+					padding-left: .3em;
+					padding-right: .3em;
+					font-size: .9em;
+					vertical-align:top;
+					padding-top:.8em;
+				}
+			}
+			tr:nth-child(4) {
+				td {
+					padding-bottom:0em;
+				}
+			}
+		}
+		
 		.anchor-link-to-box {
 			float:left !important;
 			position:relative;
@@ -3097,11 +3119,13 @@
 					padding-left: .3em;
 					padding-right: .3em;
 					font-size: .9em;
+					vertical-align:top;
+					padding-top:.8em;
 				}
 			}
 			tr:nth-child(4) {
 				td {
-					padding-bottom:2em;
+					padding-bottom:0em;
 				}
 			}
 		}
