@@ -2466,12 +2466,18 @@
 			text-align:center;
 			margin-top:3em;
 			position:relative;
+			table-layout:fixed;
+			tr {
+				td {
+					width:188px;
+				}
+			}
 			tr:nth-child(even) {
 				td {
 					padding-bottom: 4em;
 					line-height: 1.4em;
-					padding-left: .3em;
-					padding-right: .3em;
+					padding-left: .6em;
+					padding-right: .6em;
 					font-size: .9em;
 					vertical-align:top;
 					padding-top:.8em;
@@ -3113,12 +3119,18 @@
 			text-align:center;
 			margin-top:3em;
 			margin-bottom:2em;
+			table-layout:fixed;
+			tr {
+				td {
+					width:188px;
+				}
+			}
 			tr:nth-child(even) {
 				td {
 					padding-bottom: 4em;
 					line-height: 1.4em;
-					padding-left: .3em;
-					padding-right: .3em;
+					padding-left: .6em;
+					padding-right: .6em;
 					font-size: .9em;
 					vertical-align:top;
 					padding-top:.8em;
