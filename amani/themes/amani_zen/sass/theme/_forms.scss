@@ -98,3 +98,136 @@ body.section-volunteer-application {
 	}
 
 }
+
+
+/* Partner Application Form */
+
+#partner-application-form {
+		
+		display:block;
+		float:left;
+		padding-bottom:6em;
+		border-top:2px solid #ccc;
+		padding-top:2em;
+		margin-top:3em;
+		
+		h2 {
+			font-weight:600;
+			text-transform:uppercase;
+			font-size:1.2em;
+			color:$blue;
+			letter-spacing:2px;
+			display:block;
+			float:left;
+			width:100%;
+			margin-bottom:.6em;
+		}
+		
+		input[type="submit"] {
+			background:$blue;
+			color:white;
+			text-align:left;
+			padding:1em 2em 2em 2em;
+			width:100%;
+			font-size:1.2em;
+			border:0;
+			display:block;
+			float:left;
+			margin-top:2em;
+		}
+		
+		.sf-form-required {
+			color:$blue;
+		}
+		
+		.sf-form-required-div {
+			display:block;
+			float:left;
+			width:100%;
+			margin-top:-3.8em;
+			margin-bottom:3em;
+		}
+		
+		.sf-form-text {
+			
+		}
+		
+		input[type="checkbox"] {
+			display:block;
+			height:1em;
+			width:1em;
+		}
+		
+		input {
+			border:none;
+			padding:.6em;
+			width:100%;
+			margin-bottom:.4em;
+		}
+		
+		select {
+			border:none;
+			padding:.6em;
+			width:100%;
+			margin-bottom:.4em;
+		}
+		
+		textarea {
+			border:none;
+			padding:.6em;
+			width:100%;
+			margin-bottom:.4em;
+		}
+	
+		.sf-form-box {
+		
+			input[type="text"] {
+				display:block;
+				width:100%;
+				padding:.6em;
+			}
+			
+			background:$soft-grey;
+			padding:2em 2em;
+			font-size:1.1em;
+			line-height:1.5em;
+			display:block;
+			float:left;
+			width:100%;
+			margin-bottom:4em;
+			
+			
+			
+			label {
+				font-weight:300;
+				font-size:1em;
+				display:block;
+				width:100%;
+				float:left;
+				margin-top:1em;
+			}
+		
+		}
+	
+}
+
+body.section-partner-application {
+
+	p {
+		font-size:1.1em;
+		line-height:1.5em;
+	}
+	
+	h1#page-title {
+		margin-top:0;
+		font-weight:300;
+		color:$blue;
+		font-size:3em;
+		line-height:30px;
+	}
+	
+	
+
+	
+
+}
