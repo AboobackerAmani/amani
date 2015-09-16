@@ -112,7 +112,7 @@ else{ ?>
                                 <img class="hover-img" typeof="foaf:Image" src="<?php print $theme_path.'calendar-w.png';?>" width="104" height="91" alt="">
 
                             </a></div>  </div>
-                    <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_days_link)){print ($node->field_days_link[und][0][url]);}?>"><?php print t('Days Since Ceasefire');?></a></span>  </div>
+                    <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_days_link)){print ($node->field_days_link[und][0][url]);}?>"><?php print t('Days since ceasefire');?></a></span>  </div>
                     <div class="views-field views-field-field-text big">        <div class="field-content"><?php print floor($number_days);?></div>  </div>
                     <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_days_link)){ print ($node->field_days_link[und][0][url]);}?>"><?php print t('Read More');?></a></span>  </div>
                 </div>
@@ -179,7 +179,7 @@ else{ ?>
                             </a></div>  </div>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_people_link)):
                                 print ($node->field_people_link[und][0][url]);
-                            endif;?>"><?php print t('People Still Displaced');?></a></span>  </div>
+                            endif;?>"><?php print t('People still displaced');?></a></span>  </div>
                     <div class="views-field views-field-field-text long-text">
                         <div class="field-content">
                             <?php if(!empty($node->field_people_displaced)){
@@ -312,7 +312,7 @@ else{ ?>
                             </a></div>  </div>
                     <div class="views-field views-field-title">        <span class="field-content"><a href="<?php if(!empty($node->field_temperature_link)):
                                 print ($node->field_temperature_link[und][0][url]);
-                            endif;?>"><?php print t('Low and High Temperature');?></a></span>  </div>
+                            endif;?>"><?php print t('Low and high temperature');?></a></span>  </div>
                     <div class="views-field views-field-field-text big">
                         <div class="field-content"><?php if(!empty($node->field_temperature_min)):
                                 print $node->field_temperature_min[und][0][value];
@@ -323,7 +323,7 @@ else{ ?>
 
                     <div class="views-field views-field-title-1">        <span class="field-content"><a href="<?php if(!empty($node->field_temperature_link)):
                                 print ($node->field_temperature_link[und][0][url]);
-                            endif;?>"><?php print t('Read More');?></a></span>  </div>
+                                endif;?>"><?php print t('Read More');?></a></span>  </div>
                 </div>
 
 
