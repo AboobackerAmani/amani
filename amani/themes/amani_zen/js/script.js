@@ -599,7 +599,16 @@ Drupal.behaviors.paragraphs_adjustments = {
 
 
 
+// Put form labels inline into input boxes
 
+ /*$("#partner-application-form :input").each(function(index, elem) {
+    var eId = $(elem).attr("id");
+    var label = null;
+    if (eId && (label = $(elem).parents("form").find("label[for="+eId+"]")).length == 1) {
+        $(elem).attr("placeholder", $(label).html());
+        $(label).hide();
+    }
+ });*/
 
 	
     }
