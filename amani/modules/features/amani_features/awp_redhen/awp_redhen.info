@@ -1,0 +1,17 @@
+name = AWP: Redhen
+description = Redhen configuration for aidwatch palestine
+core = 7.x
+package = AWP
+php = 5.2.4
+dependencies[] = redhen
+dependencies[] = redhen_contact
+dependencies[] = redhen_dedupe
+dependencies[] = redhen_fields
+dependencies[] = redhen_membership
+dependencies[] = redhen_org
+dependencies[] = redhen_relation
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[views_view][] = redhen_contact
+mtime = 1442008899
