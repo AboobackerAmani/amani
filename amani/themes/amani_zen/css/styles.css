@@ -6788,18 +6788,17 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   }
 }
 /* Styling for administrative/editor stuff */
-/* line 3, ../sass/theme/_admin_interface.scss */
-ul.tabs-primary {
-  position: absolute;
-  top: -30px;
+/* line 5, ../sass/theme/_admin_interface.scss */
+body.admin-menu ul.tabs-primary {
+  padding-top: 2em;
 }
-/* line 7, ../sass/theme/_admin_interface.scss */
-ul.tabs-primary li {
+/* line 8, ../sass/theme/_admin_interface.scss */
+body.admin-menu ul.tabs-primary li {
   display: inline;
   padding-right: 10px;
 }
-/* line 10, ../sass/theme/_admin_interface.scss */
-ul.tabs-primary li a {
+/* line 11, ../sass/theme/_admin_interface.scss */
+body.admin-menu ul.tabs-primary li a {
   font-weight: bold;
 }
 

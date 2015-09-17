@@ -1,14 +1,17 @@
 /* Styling for administrative/editor stuff */
 
-ul.tabs-primary {
+body.admin-menu {
+
+	ul.tabs-primary {
 	
-	position:absolute;
-	top:-30px;
-	li {
-		display:inline;
-		padding-right:10px;
-		a {
-			font-weight:bold;
+		padding-top:2em;
+		li {
+			display:inline;
+			padding-right:10px;
+			a {
+				font-weight:bold;
+			}
 		}
 	}
 }
+
