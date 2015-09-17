@@ -2514,6 +2514,10 @@
 			}
 		}
 		
+		.project-box.anchor-link-to-box {
+			padding-top:3em;
+		}
+		
 		.anchor-link-to-box {
 			float:left !important;
 			position:relative;
@@ -2526,7 +2530,7 @@
 				.field-type-link-field .field-item {
 					position:relative;
 					a {
-						width:234px;
+						width:214px;
 						display:block;
 						height:140px;
 						background:$soft-grey;
@@ -2535,10 +2539,10 @@
 						color:$blue;
 						text-transform:uppercase;
 						letter-spacing:1px;
-						padding:20px 0 0 0;
-						text-indent:20px;
+						padding:20px 0 0 20px;
 						font-weight:600;
 						margin-bottom:3em;
+						line-height:1.2em;
 					}
 				}
 				
