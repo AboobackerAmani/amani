@@ -204,7 +204,7 @@
 	
 	body.page-news {
 		
-		#main {padding-top:50px;}
+		#main {padding-top:50px;padding-bottom:6em;}
 		
 		#content {
 			width:686px;
@@ -230,11 +230,11 @@
 							display:block;
 							float:left;
 							width:325px;
-							height:480px;
+							height:490px;
 							background:$soft-grey;
 							margin-right:16px;
 							margin-bottom:34px;
-							
+							position:relative;
 							&:nth-child(even) {
 								margin-right:0;
 							}
@@ -244,16 +244,16 @@
 				
 				.views-field-title {
 					display:block;
-					height:72px;
 					width:286px;
 					float:left;
+					padding-bottom:8px;
 					a {
 						font-size:1.6em;
-						line-height:1.4em;
+						line-height:1.2em;
 						color:black;
 						display:block;
 						width:100%;
-						padding:10px 20px 20px 20px;
+						padding:10px 20px 4px 20px;
 						font-weight:600;
 					}
 				}
@@ -265,7 +265,7 @@
 					display:block;
 					padding:0 20px 20px 20px;
 					width:286px;
-					margin-top:8px;
+					margin-top:0;
 					float:left;
 				}
 				
@@ -275,14 +275,19 @@
 					font-size:1.1em;
 					color:$text-grey;
 					padding-left:20px;
+					position:absolute;
+					bottom:26px;
 				}
 				
 				.views-field-comment-count {
-					display:block;
+					display:none;
 					float:left;
 					font-size:1.1em;
 					color:$text-grey;
 					padding-left:20px;
+					position:absolute;
+					bottom:26px;
+					right:40px;
 					&:before {
 						content:"|";
 						padding-right:20px;
