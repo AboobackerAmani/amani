@@ -843,9 +843,12 @@ div.breadcrumb {
 				display:block;
 				position:relative;
 				z-index:10;
+				height:306px;
+				margin-bottom:1em;
 				&:hover {
 					background:$blue;
 					z-index:10;
+					height:306px;
 				}
 				img {
 					&:hover {

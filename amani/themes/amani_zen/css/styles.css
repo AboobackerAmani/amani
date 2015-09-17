@@ -2957,17 +2957,20 @@ div.breadcrumb {
     display: block;
     position: relative;
     z-index: 10;
+    height: 306px;
+    margin-bottom: 1em;
   }
-  /* line 846, ../sass/theme/_layout.scss */
+  /* line 848, ../sass/theme/_layout.scss */
   body.page-team .views-responsive-grid .views-field-field-team-image:hover {
     background: #59C2ED;
     z-index: 10;
+    height: 306px;
   }
-  /* line 851, ../sass/theme/_layout.scss */
+  /* line 854, ../sass/theme/_layout.scss */
   body.page-team .views-responsive-grid .views-field-field-team-image img:hover {
     opacity: 0;
   }
-  /* line 857, ../sass/theme/_layout.scss */
+  /* line 860, ../sass/theme/_layout.scss */
   body.page-team .views-responsive-grid .views-field-field-team-title {
     padding: .4em 1em;
     text-transform: uppercase;
@@ -2982,12 +2985,12 @@ div.breadcrumb {
     letter-spacing: 1px;
     text-align: center;
   }
-  /* line 871, ../sass/theme/_layout.scss */
+  /* line 874, ../sass/theme/_layout.scss */
   body.page-team .views-responsive-grid .views-field-field-team-title span.field-content {
     opacity: 0;
     display: block;
   }
-  /* line 879, ../sass/theme/_layout.scss */
+  /* line 882, ../sass/theme/_layout.scss */
   body.page-team .views-responsive-grid .views-field-field-team-bio {
     padding: .2em 1em .4em 1em;
   }
