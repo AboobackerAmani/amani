@@ -6802,6 +6802,130 @@ body.admin-menu ul.tabs-primary li a {
   font-weight: bold;
 }
 
+/* line 21, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin h1#page-title {
+  margin-top: 0;
+  font-weight: 300;
+  color: #59C2ED;
+  font-size: 3em;
+  line-height: 30px;
+  margin-bottom: 1.2em;
+}
+/* line 30, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin h2 {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  font-weight: 600;
+}
+/* line 36, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin #content {
+  float: left;
+  width: 70%;
+  margin-left: 0%;
+  margin-right: -70%;
+}
+/* line 42, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin #content table {
+  text-align: left;
+  width: 96%;
+}
+/* line 47, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin #content table thead th {
+  font-weight: 600;
+}
+/* line 52, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin #content table tbody {
+  border-top: 2px solid #9a9a9a;
+}
+/* line 56, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin #content table tr.odd {
+  background: #efefef;
+}
+/* line 59, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin #content table tr td {
+  padding: .2em;
+}
+/* line 66, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin .views-exposed-form {
+  display: block;
+  float: left;
+  padding-bottom: 4em;
+}
+/* line 70, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin .views-exposed-form label {
+  font-weight: 600;
+}
+/* line 73, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin .views-exposed-form .views-exposed-widget {
+  display: block;
+  float: left;
+  width: 100%;
+}
+/* line 79, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin .views-exposed-form select {
+  width: 180px;
+}
+/* line 83, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin .views-exposed-form input[type="submit"] {
+  background: #59C2ED;
+  color: white;
+  text-align: left;
+  padding: .6em;
+  font-size: 1.2em;
+  border: 0;
+  display: block;
+  float: left;
+  margin-top: 2em;
+  width: 180px;
+}
+/* line 94, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin .views-exposed-form input[type="submit"]:hover {
+  opacity: 0.9;
+}
+/* line 100, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin .node-type-list {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  font-weight: 600;
+}
+/* line 106, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin ul {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+/* line 113, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin .sidebars .region-sidebar-second {
+  float: left;
+  width: 30%;
+  margin-left: 70%;
+  margin-right: 130%;
+}
+/* line 120, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin .sidebars .block {
+  background: #efefef;
+  padding: 2em;
+  margin-bottom: 2em;
+}
+/* line 125, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin .sidebars .block a:after {
+  content: " »";
+}
+/* line 133, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin ul.pager {
+  float: left;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 7em;
+}
+/* line 139, ../sass/theme/_admin_interface.scss */
+body.page-amani-content-admin ul.pager li {
+  list-style-type: none;
+  display: inline;
+  float: left;
+  padding-right: 1em;
+}
+
 /* Comment styling */
 /* line 4, ../sass/theme/_comments.scss */
 h3.comment-title a {
