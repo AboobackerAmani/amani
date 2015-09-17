@@ -1190,12 +1190,13 @@
 					#partner-profile-label {
 						display:block;
 						float:left;
+						width:66%;
 					}
 					
 					#parter-profile-name {
 						display:block;
 						float:left;
-						max-width:90%;
+						width:66%;
 						padding-bottom:1em;
 					}
 					
@@ -1214,6 +1215,9 @@
 						padding: 2.6em 1em 1em 1em;
 						line-height: 1.2em;
 						z-index: 20;
+						.field-content {
+							padding-top:1em;
+						}
 					}
 					
 					.views-field-nothing {
