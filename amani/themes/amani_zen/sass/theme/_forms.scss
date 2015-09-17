@@ -22,6 +22,90 @@ textarea.form-textarea {
 }
 
 
+
+/* Contact Form */
+
+body.section-contact {
+	
+	h1#page-title {
+		margin-top:0;
+		font-weight:300;
+		color:$blue;
+		font-size:3em;
+		line-height:30px;
+		margin-bottom:1.2em;
+	}
+	
+	h2 {
+		font-weight:600;
+		text-transform:uppercase;
+		font-size:1.2em;
+		color:$blue;
+		letter-spacing:2px;
+		display:block;
+		float:left;
+		width:100%;
+		margin-bottom:.6em;
+	}
+	
+	#block-amani-global-site-contact-info {
+		@include zen-grid-item(5,1);
+		margin-top:8em;
+		margin-bottom:6em;
+	}
+	
+	#contact-site-form {
+		input[type="text"] {
+			display:block;
+			width:100%;
+			padding:.6em;
+		}
+		
+		background:$soft-grey;
+		padding:2em 2em;
+		font-size:1.1em;
+		line-height:1.5em;
+		display:block;
+		float:left;
+		width:100%;
+		margin-bottom:4em;
+		position:relative;
+		
+		
+		label {
+			font-weight:300;
+			font-size:1em;
+			display:block;
+			width:100%;
+			float:left;
+			margin-top:1em;
+		}
+	}
+	
+	input[type="submit"] {
+		background:$blue;
+		color:white;
+		text-align:left;
+		padding:1em 2em 2em 2em;
+		width:100%;
+		font-size:1.2em;
+		border:0;
+		display:block;
+		float:left;
+		margin-top:2em;
+		position:absolute;
+		bottom:-100px;
+		left:0;
+		&:hover {
+			opacity:0.9;
+		}
+	}
+	
+	
+}
+
+
+
 /* Volunteer Application Form */
 
 body.section-volunteer-application {
