@@ -64,10 +64,12 @@
 	#header #block-system-main-menu > ul.menu > li:not(.is-active-trail) > ul.menu {
 		display:none;
 		z-index:10;
+		transition: all 0.5s ease;
 
 	}
 	
 	#header #block-system-main-menu > ul.menu > li:not(.is-active-trail) {
+		
 		&:hover {
 			ul.menu {
 				display:block;
@@ -144,7 +146,7 @@
 			  -webkit-font-smoothing: antialiased;
 			  -moz-osx-font-smoothing: grayscale;
 			  /*border-right: 1px solid $text-black;*/
-			  height:40px;
+			  height:19px;
 			  display:inline-block;
 			  &.active-trail {
 			  	font-weight:bold;

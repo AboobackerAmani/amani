@@ -59,8 +59,40 @@
 			}
 			
 			#views_slideshow_controls_text_peace_geeks_front_page_slideshow-block {
-				display:none;
+				
 			}
+				#views_slideshow_controls_text_previous_peace_geeks_front_page_slideshow-block a{
+					position:absolute;
+					left:0;
+					top:200px;
+					color:white;
+					display:block;
+					z-index:100;
+					font-size:0;
+					&:before {
+						content:'<';
+						font-size:3em;
+					}
+				}
+				
+				#views_slideshow_controls_text_pause_peace_geeks_front_page_slideshow-block {
+					display:none;
+				}
+				
+				#views_slideshow_controls_text_next_peace_geeks_front_page_slideshow-block a {
+		position:absolute;
+		right:0;
+		top:200px;
+		color:white;
+		display:block;
+					z-index:100;
+					font-size:0;
+					&:after {
+						content:'>';
+						font-size:3em;
+					}				
+				}
+			
 		}
 	
 
