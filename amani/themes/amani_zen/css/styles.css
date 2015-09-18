@@ -1136,7 +1136,7 @@ body.not-logged-in #page {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     /*border-right: 1px solid $text-black;*/
-    height: 19px;
+    height: 40px;
     display: inline-block;
   }
   /* line 151, ../sass/components/_menus.scss */
@@ -1153,6 +1153,7 @@ body.not-logged-in #page {
     display: block;
     position: absolute;
     top: 34px;
+    height: 19px;
     width: 100%;
     text-align: center;
     padding: 1em;
