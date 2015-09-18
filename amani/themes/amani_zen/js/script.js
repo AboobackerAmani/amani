@@ -598,10 +598,26 @@ Drupal.behaviors.paragraphs_adjustments = {
 	});
 
 
+// Show/hide submenu items on hover 
+
+/*	$('#block-system-main-menu > ul.menu > li:not(.active-trail)').hover(
+	
+		function() {
+	
+			$(this).find('ul.menu').show();
+
+		},
+		
+		function() {
+		
+			$(this).find('ul.menu').hide();
+		
+		});
+	
 
 // Put form labels inline into input boxes
 
- /*$("#partner-application-form :input").each(function(index, elem) {
+/* $("#partner-application-form :input").each(function(index, elem) {
     var eId = $(elem).attr("id");
     var label = null;
     if (eId && (label = $(elem).parents("form").find("label[for="+eId+"]")).length == 1) {
