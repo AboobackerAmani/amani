@@ -16,9 +16,10 @@
 Drupal.behaviors.banner_adjustments = {
   attach: function(context, settings) {
 
-    if (!$('.field-name-field-header-text .field-item').length) {
+    if ( (!$('.field-name-field-header-text .field-item').length) && (!$('.field-name-field-banner-text .field-item').length)) {
     	
     	//$('.field-name-field-banner-text').css('padding-top','1em');
+    	$('.field-name-field-banner-image').css('margin-top','0');
     	
     }
     
