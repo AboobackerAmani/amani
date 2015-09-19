@@ -5611,7 +5611,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-top: 2em;
   }
   /* line 1943, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .views-exposed-form .form-item .form-item {
+  body.node-type-structure.projectsmainpage .views-exposed-form .form-radios .form-item {
     display: inline-block;
     background: white;
     font-weight: 300;
@@ -5622,15 +5622,15 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     cursor: pointer;
   }
   /* line 1952, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .views-exposed-form .form-item .form-item input[type="checkbox"] {
+  body.node-type-structure.projectsmainpage .views-exposed-form .form-radios .form-item input[type="radio"] {
     display: none;
   }
   /* line 1955, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .views-exposed-form .form-item .form-item.highlight {
+  body.node-type-structure.projectsmainpage .views-exposed-form .form-radios .form-item.highlight {
     background: #59C2ED;
   }
   /* line 1958, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .views-exposed-form .form-item .form-item label {
+  body.node-type-structure.projectsmainpage .views-exposed-form .form-radios .form-item label {
     cursor: pointer;
   }
   /* line 1962, ../sass/theme/_page_specific.scss */
@@ -5683,20 +5683,20 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-top: 50px;
   }
   /* line 2016, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-projects_by_type_block .view-header h3 {
+  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-all_projects_block .view-header h3 {
     font-size: 1.4em;
   }
   /* line 2019, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-projects_by_type_block .view-header p {
+  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-all_projects_block .view-header p {
     font-size: 1.1em;
     line-height: 1.5em;
   }
   /* line 2028, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-projects_by_type_block div.item-list ul.pager.pager-load-more li {
+  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-all_projects_block div.item-list ul.pager.pager-load-more li {
     list-style-type: none;
   }
   /* line 2030, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-projects_by_type_block div.item-list ul.pager.pager-load-more li a {
+  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-all_projects_block div.item-list ul.pager.pager-load-more li a {
     display: block;
     float: left;
     width: 194px;
@@ -5707,13 +5707,13 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-size: 18px;
   }
   /* line 2039, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-projects_by_type_block div.item-list ul.pager.pager-load-more li a:after {
+  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-all_projects_block div.item-list ul.pager.pager-load-more li a:after {
     content: "projects";
     font-weight: 300;
     display: block;
   }
   /* line 2049, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-projects_by_type_block .view-content .views-row {
+  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-all_projects_block .view-content .views-row {
     display: block;
     float: left;
     width: 234px;
@@ -5724,15 +5724,15 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     position: relative;
   }
   /* line 2058, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-projects_by_type_block .view-content .views-row:nth-child(3n) {
+  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-all_projects_block .view-content .views-row:nth-child(3n) {
     margin-right: 0;
   }
   /* line 2066, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-projects_by_type_block .view-content .views-row .views-field-title {
+  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-all_projects_block .view-content .views-row .views-field-title {
     padding: 10px 20px;
   }
   /* line 2068, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-projects_by_type_block .view-content .views-row .views-field-title a {
+  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-all_projects_block .view-content .views-row .views-field-title a {
     color: #59C2ED;
     font-size: 16px;
     line-height: 20px;
@@ -5740,7 +5740,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-weight: 600;
   }
   /* line 2077, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-projects_by_type_block .view-content .views-row .views-field-field-project-date {
+  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-all_projects_block .view-content .views-row .views-field-field-project-date {
     padding: 10px 20px;
     color: #59C2ED;
     font-size: 16px;
@@ -5748,18 +5748,18 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-weight: 300;
   }
   /* line 2088, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-projects_by_type_block .view-content .views-row .views-field-field-project-tags {
+  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-all_projects_block .view-content .views-row .views-field-field-project-tags {
     padding: 10px 20px 0 20px;
   }
   /* line 2090, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-projects_by_type_block .view-content .views-row .views-field-field-project-tags ol {
+  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-all_projects_block .view-content .views-row .views-field-field-project-tags ol {
     display: block;
     position: absolute;
     bottom: 0;
     margin-bottom: -4px;
   }
   /* line 2095, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-projects_by_type_block .view-content .views-row .views-field-field-project-tags ol li {
+  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-all_projects_block .view-content .views-row .views-field-field-project-tags ol li {
     list-style-type: none;
     display: block;
     float: left;
@@ -5767,7 +5767,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 4px;
   }
   /* line 2101, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-projects_by_type_block .view-content .views-row .views-field-field-project-tags ol li a {
+  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-all_projects_block .view-content .views-row .views-field-field-project-tags ol li a {
     display: inline-block;
     background: white;
     padding: 4px 10px;
@@ -5777,7 +5777,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-weight: normal;
   }
   /* line 2109, ../sass/theme/_page_specific.scss */
-  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-projects_by_type_block .view-content .views-row .views-field-field-project-tags ol li a:before {
+  body.node-type-structure.projectsmainpage .view-peace-geeks-projects.view-display-id-all_projects_block .view-content .views-row .views-field-field-project-tags ol li a:before {
     content: "#";
   }
 
