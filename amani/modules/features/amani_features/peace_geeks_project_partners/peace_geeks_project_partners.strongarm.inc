@@ -99,7 +99,7 @@ function peace_geeks_project_partners_strongarm() {
           'weight' => '2',
         ),
         'metatags' => array(
-          'weight' => '6',
+          'weight' => '5',
         ),
         'title' => array(
           'weight' => '0',
