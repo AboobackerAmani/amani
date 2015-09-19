@@ -18,7 +18,7 @@ Drupal.behaviors.banner_adjustments = {
 
     if (!$('.field-name-field-header-text .field-item').length) {
     	
-    	$('.field-name-field-banner-text').css('padding-top','1em');
+    	//$('.field-name-field-banner-text').css('padding-top','1em');
     	
     }
     
