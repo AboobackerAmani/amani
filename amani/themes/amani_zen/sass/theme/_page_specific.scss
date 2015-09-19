@@ -1075,8 +1075,9 @@
 	body.node-type-project-partners {
 	
 		#main {
-			padding-top:50px;
+			padding-top:0;
 			padding-bottom:7em;
+			margin-top:-50px;
 		}
 	
 		a#apply-today-button {
@@ -1146,7 +1147,7 @@
 				.field-content {
 					  display: block;
 					  float: left;
-					  margin-top: 40px;
+					  margin-top: -40px;
 					  z-index: 30;
 					  position: relative;
 					  color: white;
@@ -1218,7 +1219,7 @@
 			
 		}
 		
-		#main {padding-top:50px;}
+		
 		
 		h1#page-title {display:none;}
 		
