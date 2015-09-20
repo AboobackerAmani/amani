@@ -6834,6 +6834,18 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding-right: 2em;
   }
   /* line 3175, ../sass/theme/_page_specific.scss */
+  body.products-amani #page-bottom-buttons {
+    display: block;
+    float: left;
+    width: 100%;
+  }
+  /* line 3181, ../sass/theme/_page_specific.scss */
+  body.products-amani .products-footer {
+    display: block;
+    float: left;
+    width: 100%;
+  }
+  /* line 3187, ../sass/theme/_page_specific.scss */
   body.products-amani a#apply-today-button {
     display: block;
     float: left;
@@ -6842,19 +6854,19 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-weight: 600;
     padding: 20px;
     height: 120px;
-    width: 320px;
-    margin-right: 20px;
+    width: 194px;
+    margin-right: 0;
     font-size: 18px;
     margin-bottom: 4px;
     margin-top: 20px;
   }
-  /* line 3188, ../sass/theme/_page_specific.scss */
+  /* line 3200, ../sass/theme/_page_specific.scss */
   body.products-amani a#apply-today-button span {
     font-weight: 300;
     display: block;
     padding-top: 4px;
   }
-  /* line 3195, ../sass/theme/_page_specific.scss */
+  /* line 3207, ../sass/theme/_page_specific.scss */
   body.products-amani a#faq-button {
     display: block;
     float: left;
@@ -6863,15 +6875,30 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-weight: 600;
     padding: 20px;
     height: 120px;
-    width: 332px;
-    margin-right: 0;
+    width: 194px;
+    margin-right: 20px;
+    font-size: 18px;
+    margin-bottom: 4px;
+    margin-top: 20px;
+  }
+  /* line 3223, ../sass/theme/_page_specific.scss */
+  body.products-amani a#documentation-button {
+    display: block;
+    float: left;
+    background: #474F5E;
+    color: white;
+    font-weight: 600;
+    padding: 20px;
+    height: 120px;
+    width: 194px;
+    margin-right: 20px;
     font-size: 18px;
     margin-bottom: 4px;
     margin-top: 20px;
   }
 
   /* FAQ Page */
-  /* line 3218, ../sass/theme/_page_specific.scss */
+  /* line 3246, ../sass/theme/_page_specific.scss */
   body.page-faq h3 {
     color: #F09416;
     text-transform: uppercase;
