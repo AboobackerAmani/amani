@@ -3,65 +3,101 @@
 	body.front #banner {
 		padding-top:40px;
 	}
+		#views_slideshow_cycle_teaser_section_peace_geeks_front_page_slideshow-block {
+			width:100% !important;
+		}
 		
-		.view-peace-geeks-front-page-slideshow {
-			width:1200px;
+		
+		
+		.views-slideshow-cycle-main-frame-row {
 			display:block;
-			margin:0 auto;
-			position: relative;
-			margin-top:41px;
-			z-index:40;
+			width:100% !important;
+			padding-top:41px;
+			position:absolute !important;
+			top: auto !important;
+			left: auto !important;
+			
+			.view-content {
+				display:block;
+				height:400px;
+			}
 			
 			.views-field-field-image {
 				display:block;
 				z-index:10;
-				position: relative;
+				width:100%;
+				height:400px;
+				float:left;
+				overflow:hidden;
+				margin-top:-400px;
+				/*position: relative;
 				padding-left:3000px;
 				margin-left:-3000px;
 				padding-right:3000px;
 				margin-right:-3000px;
 				height:400px;
 				background:$soft-grey;
-				overflow:hidden;
+				overflow:hidden;*/
 				img {
-					
+					width:100%;
+					height:auto;
+					min-width:1200px;
+					min-height:400px;
 				}
 			}
 			
 			.views-field-field-description {
+				width:1200px;
 				display:block;
-				background:$orange;
-				color: white;
-				  font-weight: 600;
-				  font-size: 2.2em;
-				  position: relative;
-				  float: left;
-				  margin-top:-328px;
-				  margin-left: 120px;
-				  width: 350px;
-				  height: 328px;
-				  padding: 1.6em 1em 1em 1em;
-				  line-height: 1.2em;
-				  z-index:20
+				margin:0 auto;
+				position: relative;
+				.field-content {
+						display:block;
+						background:$orange;
+						color: white;
+						font-weight: 600;
+					  font-size: 2.2em;
+					  position: relative;
+					  float: left;
+					  margin-top:60px;
+					  margin-left: 120px;
+					  width: 350px;
+					  height: 340px;
+					  padding: 1.6em 1em 1em 1em;
+					  line-height: 1.2em;
+					  z-index:20;
+				  }
 			}
 			
 			.views-field-title {
-				  display: block;
-				  float: left;
-				  margin-top: -310px;
-				  z-index: 30;
-				  position: relative;
-				  color: white;
-				  font-style: italic;
-				  font-size: 1.2em;
-				  margin-left: 146px;
+				width:1200px;
+				display:block;
+				margin:0 auto;
+				position: relative;
+				.field-content {
+					  display: block;
+					  float: left;
+					  margin-top: 80px;
+					  z-index: 30;
+					  position: relative;
+					  color: white;
+					  font-style: italic;
+					  font-size: 1.2em;
+					  margin-left: -320px;
+				}
 				  
 			}
 			
-			#views_slideshow_controls_text_peace_geeks_front_page_slideshow-block {
-				
+			
+			
+		}
+	
+		#views_slideshow_controls_text_peace_geeks_front_page_slideshow-block {
+				display:none;
 			}
-				#views_slideshow_controls_text_previous_peace_geeks_front_page_slideshow-block a{
+			
+			
+				/*#views_slideshow_controls_text_previous_peace_geeks_front_page_slideshow-block a{
 					position:absolute;
 					left:0;
 					top:200px;
@@ -76,26 +112,22 @@
 				}
 				
 				#views_slideshow_controls_text_pause_peace_geeks_front_page_slideshow-block {
-					display:none;
+					display:block;
 				}
 				
 				#views_slideshow_controls_text_next_peace_geeks_front_page_slideshow-block a {
-		position:absolute;
-		right:0;
-		top:200px;
-		color:white;
-		display:block;
+					position:absolute;
+					right:0;
+					top:200px;
+					color:white;
+					display:block;
 					z-index:100;
 					font-size:0;
 					&:after {
 						content:'>';
 						font-size:3em;
 					}				
-				}
-			
-		}
-	
-
+				}*/
 
 
 }

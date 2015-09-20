@@ -3021,30 +3021,59 @@ div.breadcrumb {
     padding-top: 40px;
   }
 
-  /* line 7, ../sass/theme/_slide_style.scss */
-  .view-peace-geeks-front-page-slideshow {
+  /* line 6, ../sass/theme/_slide_style.scss */
+  #views_slideshow_cycle_teaser_section_peace_geeks_front_page_slideshow-block {
+    width: 100% !important;
+  }
+
+  /* line 12, ../sass/theme/_slide_style.scss */
+  .views-slideshow-cycle-main-frame-row {
+    display: block;
+    width: 100% !important;
+    padding-top: 41px;
+    position: absolute !important;
+    top: auto !important;
+    left: auto !important;
+  }
+  /* line 20, ../sass/theme/_slide_style.scss */
+  .views-slideshow-cycle-main-frame-row .view-content {
+    display: block;
+    height: 400px;
+  }
+  /* line 25, ../sass/theme/_slide_style.scss */
+  .views-slideshow-cycle-main-frame-row .views-field-field-image {
+    display: block;
+    z-index: 10;
+    width: 100%;
+    height: 400px;
+    float: left;
+    overflow: hidden;
+    margin-top: -400px;
+    /*position: relative;
+    padding-left:3000px;
+    margin-left:-3000px;
+    padding-right:3000px;
+    margin-right:-3000px;
+    height:400px;
+    background:$soft-grey;
+    overflow:hidden;*/
+  }
+  /* line 41, ../sass/theme/_slide_style.scss */
+  .views-slideshow-cycle-main-frame-row .views-field-field-image img {
+    width: 100%;
+    height: auto;
+    min-width: 1200px;
+    min-height: 400px;
+  }
+  /* line 49, ../sass/theme/_slide_style.scss */
+  .views-slideshow-cycle-main-frame-row .views-field-field-description {
     width: 1200px;
     display: block;
     margin: 0 auto;
     position: relative;
-    margin-top: 41px;
-    z-index: 40;
   }
-  /* line 15, ../sass/theme/_slide_style.scss */
-  .view-peace-geeks-front-page-slideshow .views-field-field-image {
-    display: block;
-    z-index: 10;
-    position: relative;
-    padding-left: 3000px;
-    margin-left: -3000px;
-    padding-right: 3000px;
-    margin-right: -3000px;
-    height: 400px;
-    background: #E6E6E6;
-    overflow: hidden;
-  }
-  /* line 31, ../sass/theme/_slide_style.scss */
-  .view-peace-geeks-front-page-slideshow .views-field-field-description {
+  /* line 54, ../sass/theme/_slide_style.scss */
+  .views-slideshow-cycle-main-frame-row .views-field-field-description .field-content {
     display: block;
     background: #F09416;
     color: white;
@@ -3052,60 +3081,70 @@ div.breadcrumb {
     font-size: 2.2em;
     position: relative;
     float: left;
-    margin-top: -328px;
+    margin-top: 60px;
     margin-left: 120px;
     width: 350px;
-    height: 328px;
+    height: 340px;
     padding: 1.6em 1em 1em 1em;
     line-height: 1.2em;
     z-index: 20;
   }
-  /* line 48, ../sass/theme/_slide_style.scss */
-  .view-peace-geeks-front-page-slideshow .views-field-title {
+  /* line 72, ../sass/theme/_slide_style.scss */
+  .views-slideshow-cycle-main-frame-row .views-field-title {
+    width: 1200px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+  }
+  /* line 77, ../sass/theme/_slide_style.scss */
+  .views-slideshow-cycle-main-frame-row .views-field-title .field-content {
     display: block;
     float: left;
-    margin-top: -310px;
+    margin-top: 80px;
     z-index: 30;
     position: relative;
     color: white;
     font-style: italic;
     font-size: 1.2em;
-    margin-left: 146px;
+    margin-left: -320px;
   }
-  /* line 64, ../sass/theme/_slide_style.scss */
-  .view-peace-geeks-front-page-slideshow #views_slideshow_controls_text_previous_peace_geeks_front_page_slideshow-block a {
-    position: absolute;
-    left: 0;
-    top: 200px;
-    color: white;
-    display: block;
-    z-index: 100;
-    font-size: 0;
-  }
-  /* line 72, ../sass/theme/_slide_style.scss */
-  .view-peace-geeks-front-page-slideshow #views_slideshow_controls_text_previous_peace_geeks_front_page_slideshow-block a:before {
-    content: '<';
-    font-size: 3em;
-  }
-  /* line 78, ../sass/theme/_slide_style.scss */
-  .view-peace-geeks-front-page-slideshow #views_slideshow_controls_text_pause_peace_geeks_front_page_slideshow-block {
+
+  /* line 95, ../sass/theme/_slide_style.scss */
+  #views_slideshow_controls_text_peace_geeks_front_page_slideshow-block {
     display: none;
   }
-  /* line 82, ../sass/theme/_slide_style.scss */
-  .view-peace-geeks-front-page-slideshow #views_slideshow_controls_text_next_peace_geeks_front_page_slideshow-block a {
-    position: absolute;
-    right: 0;
-    top: 200px;
-    color: white;
-    display: block;
-    z-index: 100;
-    font-size: 0;
+
+  /*#views_slideshow_controls_text_previous_peace_geeks_front_page_slideshow-block a{
+  	position:absolute;
+  	left:0;
+  	top:200px;
+  	color:white;
+  	display:block;
+  	z-index:100;
+  	font-size:0;
+  	&:before {
+  		content:'<';
+  		font-size:3em;
+  	}
   }
-  /* line 90, ../sass/theme/_slide_style.scss */
-  .view-peace-geeks-front-page-slideshow #views_slideshow_controls_text_next_peace_geeks_front_page_slideshow-block a:after {
-    content: '>';
-    font-size: 3em;
+  
+  #views_slideshow_controls_text_pause_peace_geeks_front_page_slideshow-block {
+  	display:block;
   }
+  
+  #views_slideshow_controls_text_next_peace_geeks_front_page_slideshow-block a {
+  	position:absolute;
+  	right:0;
+  	top:200px;
+  	color:white;
+  	display:block;
+  	z-index:100;
+  	font-size:0;
+  	&:after {
+  		content:'>';
+  		font-size:3em;
+  	}				
+  }*/
 }
 /* line 1, ../sass/theme/_forms.scss */
 .form-textarea,
