@@ -1929,6 +1929,8 @@
 			margin-bottom:2em;
 			position:relative;
 			float:left;
+			min-height:50px;
+			
 			&:before {
 				content:"Filter Your Search";
 				display:block;
@@ -1939,6 +1941,32 @@
 				font-size:12px;
 				font-weight:600;
 			}
+			
+			.expandhide {
+				right:20px;
+				position:absolute;
+				cursor:pointer;
+				top:18px;
+			}
+			
+			fieldset.collapsible {
+				border: 0;
+				width: 100%;
+				display: block;
+				float: left;
+				position: relative;
+				legend {
+					font-size:12px;
+					font-weight:600;
+					position:absolute;
+					right:0;
+					top:0;
+					a {
+						color:$text-black;
+					}
+				}
+			}
+			
 			.views-exposed-widgets {
 				margin-top:2em;
 				.views-exposed-widget > label {

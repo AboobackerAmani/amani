@@ -272,7 +272,28 @@ Drupal.behaviors.paragraphs_adjustments = {
 
 
 
+// Code to control collapse and expansion of filters on Projects page
+
+	$('body.projectsmainpage .views-exposed-form .views-exposed-widgets').hide().one(); 
 	
+
+	$('body.projectsmainpage .views-exposed-form .views-exposed-widgets').before('<div class="expandhide">Expand</div>').one();
+	
+	$('body.projectsmainpage .views-exposed-form .expandhide').click(function() {
+		
+		$('body.projectsmainpage .views-exposed-form .views-exposed-widgets').toggle('fast');
+		//$(this).parent().find('.views-field-field-opportunity-tags').toggle('fast');
+		var expandcheck = $('body.projectsmainpage .views-exposed-form .expandhide').html();
+		console.log(expandcheck);
+		if (expandcheck == 'Expand') {
+				$('body.projectsmainpage .views-exposed-form .expandhide').html('Hide');
+			}
+			else if (expandcheck == 'Hide') {
+				$('body.projectsmainpage .views-exposed-form .expandhide').html('Expand');
+			}
+		
+	
+	});
 	
 	
 
