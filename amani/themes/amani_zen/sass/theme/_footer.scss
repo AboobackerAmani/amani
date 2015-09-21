@@ -25,14 +25,26 @@
      display:block;
      position:relative;
      z-index:2000;
+     div {
+     	margin-left:2px;
+     }
 }
 
 #scroll-icon {
 	&:before {
-		content:"\f106";
+		/*content:"\f106";
 		font-family:$fontawesome;
 		display:block;
-		font-size:2em;
+		font-size:2em;*/
+		content:"";
+		display:block;
+		position:relative;
+		width:24px;
+		height:12px;
+		background:url(../images/icons/up-arrow.png) top left no-repeat;
+		margin-left:31px;
+		margin-bottom:4px;
+		margin-top:4px;
 	}
 }
 

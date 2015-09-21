@@ -204,7 +204,7 @@ div.breadcrumb {
 		.paragraphs-item-light-grey-text-box {
 		
 			display:block;
-			width:330px;
+			width:340px;
 			background:$soft-grey;
 			padding:3em 2em;
 			float:left;
@@ -339,15 +339,20 @@ div.breadcrumb {
 				}
 				&.shorterlinkbox {
 					&:after {
-						content:"\f178";
+						
+						/*content:"\f178";
 						color:white;
 						font-family:$fontawesome;
+						font-size:2em;*/
+						content:"";
 						display:block;
 						float:right;
 						position:relative;
-						margin-top:50px;
-						font-size:2em;
-						padding-right:.2em;
+						margin-top:46px;
+						padding-right:0;
+						width:12px;
+						height:24px;
+						background:url(../images/icons/right-arrow.png) top left no-repeat;
 					}
 				}
 			}
