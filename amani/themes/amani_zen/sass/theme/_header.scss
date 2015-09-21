@@ -80,7 +80,7 @@ div[id*="block-menu-menu-social-media"] {
   a {
     color: $font-color;
     @include ss-icon('circle');
-    @include link-hover-color(tint($primary-color, 50%));
+    @include link-hover-color(tint($blue, 0%));
     @include font-size(20px);
   }
 }
