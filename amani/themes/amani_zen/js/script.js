@@ -274,10 +274,10 @@ Drupal.behaviors.paragraphs_adjustments = {
 
 // Code to control collapse and expansion of filters on Projects page
 
-	$('body.projectsmainpage .views-exposed-form .views-exposed-widgets').hide().one(); 
+	$('body.projectsmainpage .views-exposed-form .views-exposed-widgets').hide(); 
 	
 
-	$('body.projectsmainpage .views-exposed-form .views-exposed-widgets').before('<div class="expandhide">Expand</div>').one();
+	$('body.projectsmainpage .views-exposed-form .views-exposed-widgets').before('<div class="expandhide">Expand</div>');
 	
 	$('body.projectsmainpage .views-exposed-form .expandhide').click(function() {
 		
