@@ -547,6 +547,7 @@ div.breadcrumb {
 			.view-id-supporters.view-display-id-block_1 {
 				 display:block;
 				 margin-top:-3em;
+				 position:relative;
 				.views-row {
 					display:block;
 					float:left;
@@ -561,8 +562,20 @@ div.breadcrumb {
 					background:$soft-grey;
 					padding:2em .2em;
 					margin-bottom:2em;
+					height:210px;
 					&.views-column-last {
 						margin-right:0;
+					}
+					&:hover {
+						.views-field-field-short-sponsor-info {
+							display:block;
+							
+					
+						}
+						
+						.views-field-field-image {
+							display:none;
+						}
 					}
 				}
 				
@@ -578,6 +591,36 @@ div.breadcrumb {
 						margin:0 auto;
 						display:inline-block;
 					}
+					
+				}
+				
+				.views-field-field-short-sponsor-info {
+					display:none;
+					text-align:center;
+					text-transform:lowercase;
+					font-weight:600;
+					font-size:1em;
+					width:234px;
+					height:210px;
+					background:$blue;
+					z-index:200;
+					position:relative;
+					padding:5em 2em 2em 2em;
+					margin-top:-26px;
+					margin-left:-2px;
+					color:$text-black;
+					.sponsor-info {
+						
+					}
+					.sponsor-title {
+						text-transform:uppercase;
+					}
+					a.visit-sponsor {
+						display:block;
+						color:$text-black;
+						text-decoration:underline;
+						margin-top:1em;
+					}
 				}
 				
 				.views-field-title {
@@ -586,15 +629,10 @@ div.breadcrumb {
 					text-transform:uppercase;
 					font-weight:400;
 					font-size:1em;
+					
 				}
 				
-				.views-field-field-short-sponsor-info {
-					display:none;
-					text-align:center;
-					text-transform:lowercase;
-					font-weight:400;
-					font-size:1em;
-				}
+				
 				
 				
 			}
@@ -625,13 +663,25 @@ div.breadcrumb {
 				.views-column {
 					display:block;
 					float:left;
-					width:242px;
+					width:235px;
 					margin-right:1em;
 					background:$soft-grey;
 					padding:2em .2em;
 					margin-bottom:2em;
+					height:210px;
 					&.views-column-last {
 						margin-right:0;
+					}
+					&:hover {
+						.views-field-field-short-sponsor-info {
+							display:block;
+							
+					
+						}
+						
+						.views-field-field-image {
+							display:none;
+						}
 					}
 				}
 				
@@ -661,8 +711,29 @@ div.breadcrumb {
 					display:none;
 					text-align:center;
 					text-transform:lowercase;
-					font-weight:400;
+					font-weight:600;
 					font-size:1em;
+					width:234px;
+					height:210px;
+					background:$blue;
+					z-index:200;
+					position:relative;
+					padding:5em 2em 2em 2em;
+					margin-top:-26px;
+					margin-left:-2px;
+					color:$text-black;
+					.sponsor-info {
+						
+					}
+					.sponsor-title {
+						text-transform:uppercase;
+					}
+					a.visit-sponsor {
+						display:block;
+						color:$text-black;
+						text-decoration:underline;
+						margin-top:1em;
+					}
 				}
 				.views-exposed-form {
 					display:block;
