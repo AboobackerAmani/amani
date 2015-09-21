@@ -3372,7 +3372,21 @@ body.section-volunteer-application form p label {
 }
 
 /* Partner Application Form */
-/* line 199, ../sass/theme/_forms.scss */
+/* line 203, ../sass/theme/_forms.scss */
+body.section-partner-application #top-scroll:before {
+  content: "";
+  display: block;
+  float: right;
+  position: relative;
+  margin-top: -140px;
+  padding-right: 0;
+  margin-right: -305px;
+  width: 12px;
+  height: 24px;
+  background: url(../images/icons/right-arrow.png) top left no-repeat;
+}
+
+/* line 219, ../sass/theme/_forms.scss */
 #partner-application-form {
   display: block;
   float: left;
@@ -3381,7 +3395,7 @@ body.section-volunteer-application form p label {
   padding-top: 2em;
   margin-top: 3em;
 }
-/* line 208, ../sass/theme/_forms.scss */
+/* line 228, ../sass/theme/_forms.scss */
 #partner-application-form h2 {
   font-weight: 600;
   text-transform: uppercase;
@@ -3393,7 +3407,7 @@ body.section-volunteer-application form p label {
   width: 100%;
   margin-bottom: .6em;
 }
-/* line 220, ../sass/theme/_forms.scss */
+/* line 240, ../sass/theme/_forms.scss */
 #partner-application-form input[type="submit"] {
   background: #59C2ED;
   color: white;
@@ -3406,11 +3420,11 @@ body.section-volunteer-application form p label {
   float: left;
   margin-top: 2em;
 }
-/* line 233, ../sass/theme/_forms.scss */
+/* line 255, ../sass/theme/_forms.scss */
 #partner-application-form .sf-form-required {
   color: #59C2ED;
 }
-/* line 237, ../sass/theme/_forms.scss */
+/* line 259, ../sass/theme/_forms.scss */
 #partner-application-form .sf-form-required-div {
   display: block;
   float: left;
@@ -3418,34 +3432,34 @@ body.section-volunteer-application form p label {
   margin-top: -3.8em;
   margin-bottom: 3em;
 }
-/* line 249, ../sass/theme/_forms.scss */
+/* line 271, ../sass/theme/_forms.scss */
 #partner-application-form input[type="checkbox"] {
   display: block;
   height: 1em;
   width: 1em;
 }
-/* line 255, ../sass/theme/_forms.scss */
+/* line 277, ../sass/theme/_forms.scss */
 #partner-application-form input {
   border: none;
   padding: .6em;
   width: 100%;
   margin-bottom: .4em;
 }
-/* line 262, ../sass/theme/_forms.scss */
+/* line 284, ../sass/theme/_forms.scss */
 #partner-application-form select {
   border: none;
   padding: .6em;
   width: 100%;
   margin-bottom: .4em;
 }
-/* line 269, ../sass/theme/_forms.scss */
+/* line 291, ../sass/theme/_forms.scss */
 #partner-application-form textarea {
   border: none;
   padding: .6em;
   width: 100%;
   margin-bottom: .4em;
 }
-/* line 276, ../sass/theme/_forms.scss */
+/* line 298, ../sass/theme/_forms.scss */
 #partner-application-form .sf-form-box {
   background: #E6E6E6;
   padding: 2em 2em;
@@ -3456,13 +3470,13 @@ body.section-volunteer-application form p label {
   width: 100%;
   margin-bottom: 4em;
 }
-/* line 278, ../sass/theme/_forms.scss */
+/* line 300, ../sass/theme/_forms.scss */
 #partner-application-form .sf-form-box input[type="text"] {
   display: block;
   width: 100%;
   padding: .6em;
 }
-/* line 295, ../sass/theme/_forms.scss */
+/* line 317, ../sass/theme/_forms.scss */
 #partner-application-form .sf-form-box label {
   font-weight: 300;
   font-size: 1em;
@@ -3472,12 +3486,12 @@ body.section-volunteer-application form p label {
   margin-top: 1em;
 }
 
-/* line 310, ../sass/theme/_forms.scss */
+/* line 332, ../sass/theme/_forms.scss */
 body.section-partner-application p {
   font-size: 1.1em;
   line-height: 1.5em;
 }
-/* line 315, ../sass/theme/_forms.scss */
+/* line 337, ../sass/theme/_forms.scss */
 body.section-partner-application h1#page-title {
   margin-top: 0;
   font-weight: 300;

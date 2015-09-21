@@ -196,6 +196,26 @@ body.section-volunteer-application {
 
 /* Partner Application Form */
 
+body.section-partner-application {
+	
+	#top-scroll {
+		
+		&:before {
+			content:"";
+			display:block;
+			float:right;
+			position:relative;
+			margin-top:-140px;
+			padding-right:0;
+			margin-right:-305px;
+			width:12px;
+			height:24px;
+			background:url(../images/icons/right-arrow.png) top left no-repeat;
+		}
+	
+	}
+}
+
 #partner-application-form {
 		
 		display:block;
@@ -228,7 +248,9 @@ body.section-volunteer-application {
 			display:block;
 			float:left;
 			margin-top:2em;
+			
 		}
+		
 		
 		.sf-form-required {
 			color:$blue;
