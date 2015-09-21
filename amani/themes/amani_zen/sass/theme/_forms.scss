@@ -21,13 +21,15 @@ textarea.form-textarea {
 	border:4px solid $soft-grey;
 }
 
+
 select.form-select {
-	width:auto;
+	width:100%;
 	font-style:italic;
 	background:white;
 	font-size:1em;
 	border:1px solid $text-grey;
 	padding:.2em .6em;
+	border-radius:0;
 }
 
 /* Contact Form */
