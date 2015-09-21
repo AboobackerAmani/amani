@@ -348,6 +348,19 @@
 		  	height:270px;
 		  	margin-top:-130px;
 		  	padding-top:.8em;
+		  	&:after {
+				content:"";
+				display:block;
+				float:right;
+				position:absolute;
+				margin-top:34px;
+				padding-right:10px;
+				width:12px;
+				height:24px;
+				background:url(../images/icons/right-arrow.png) top left no-repeat;
+				bottom:20px;
+				right:10px;
+			}
 		}
 		
 		.view-display-id-current_volunteer_opps {
@@ -359,6 +372,17 @@
 			margin-left:20px;
 			width:676px;
 			height:120px;
+			&:after {
+				content:"";
+				display:block;
+				float:right;
+				position:relative;
+				margin-top:4px;
+				padding-right:20px;
+				width:12px;
+				height:24px;
+				background:url(../images/icons/right-arrow.png) top left no-repeat;
+			}
 		}
 	
 	}
