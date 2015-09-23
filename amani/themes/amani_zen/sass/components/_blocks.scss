@@ -58,6 +58,19 @@
 		margin-right:30px;
 	}
 	
+	/* IE Conditional */
+	
+	.ie9above {
+		#block-search-form {
+			top:-77px;
+		}
+		
+		#block-menu-menu-social-media {
+			top:-72px;
+		}
+	}
+	
+	
 	.paragraphs-item-pull-quote {
 		display:block;
 		float:left;
