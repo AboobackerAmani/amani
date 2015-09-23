@@ -49,6 +49,25 @@
  */
 
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+   /* IE10+ specific styles go here */
+   
+   
+		#block-search-form {
+			top:-77px;
+			width:160px;
+			margin-right:10px;
+		}
+		
+		#block-menu-menu-social-media {
+			top:-72px;
+		}
+	
+	
+}
+
+
+
 @media all and (min-width: $breakpoint) {
 
 	.float-left-half-width {
@@ -60,17 +79,7 @@
 	
 	/* IE Conditional */
 	
-	.ie9above {
-		#block-search-form {
-			top:-77px;
-			width:160px;
-			margin-right:10px;
-		}
-		
-		#block-menu-menu-social-media {
-			top:-72px;
-		}
-	}
+	
 	
 	
 	.paragraphs-item-pull-quote {
