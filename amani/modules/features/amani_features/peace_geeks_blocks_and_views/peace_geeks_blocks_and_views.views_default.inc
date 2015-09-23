@@ -331,7 +331,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="front-above-titles">Get Involved</div>
-<div class="views-field-title"><a href="/volunteer-opportunities">Current Volunteer Opportunities</a></div>';
+<div class="views-field-title"><a href="/currentopenings">Current Volunteer Opportunities</a></div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -422,7 +422,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('<div class="front-above-titles">Latest Event</div>'),
     t('Volunteer Opportunities'),
     t('<div class="front-above-titles">Get Involved</div>
-<div class="views-field-title"><a href="/volunteer-opportunities">Current Volunteer Opportunities</a></div>'),
+<div class="views-field-title"><a href="/currentopenings">Current Volunteer Opportunities</a></div>'),
     t('Featured Partner'),
     t('<div class="front-above-titles">Featured Partner</div>'),
   );
