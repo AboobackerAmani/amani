@@ -2502,7 +2502,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="file-download-line"><a href="[uri]" class="file-download">Download</a> | <a href="[uri]?width=500&height=500" class="file-viewonline colorbox">View Online</a></div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="file-download-line"><a href="[uri]" class="file-download">Download</a>  <a href="[uri]?width=500&height=500" class="file-viewonline colorbox">View Online</a></div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -2545,6 +2545,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('Media Resources Download'),
     t('Annual Report Download'),
     t('<h3>Annual Report Download</h3>'),
+    t('<div class="file-download-line"><a href="[uri]" class="file-download">Download</a>  <a href="[uri]?width=500&height=500" class="file-viewonline colorbox">View Online</a></div>'),
   );
   $export['peace_geeks_resources'] = $view;
 
