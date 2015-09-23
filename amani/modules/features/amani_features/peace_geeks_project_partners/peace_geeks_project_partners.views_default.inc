@@ -508,6 +508,13 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['fields']['field_image_attribution']['field'] = 'field_image_attribution';
   $handler->display->display_options['fields']['field_image_attribution']['label'] = '';
   $handler->display->display_options['fields']['field_image_attribution']['element_label_colon'] = FALSE;
+  /* Field: Field: Image Attribution Link */
+  $handler->display->display_options['fields']['field_image_attribution_link']['id'] = 'field_image_attribution_link';
+  $handler->display->display_options['fields']['field_image_attribution_link']['table'] = 'field_data_field_image_attribution_link';
+  $handler->display->display_options['fields']['field_image_attribution_link']['field'] = 'field_image_attribution_link';
+  $handler->display->display_options['fields']['field_image_attribution_link']['label'] = '';
+  $handler->display->display_options['fields']['field_image_attribution_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image_attribution_link']['click_sort_column'] = 'url';
   /* Field: Field: Banner Image */
   $handler->display->display_options['fields']['field_banner_image']['id'] = 'field_banner_image';
   $handler->display->display_options['fields']['field_banner_image']['table'] = 'field_data_field_banner_image';

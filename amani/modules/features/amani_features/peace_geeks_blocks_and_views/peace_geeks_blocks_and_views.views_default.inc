@@ -461,6 +461,13 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['field_image_attribution']['field'] = 'field_image_attribution';
   $handler->display->display_options['fields']['field_image_attribution']['label'] = '';
   $handler->display->display_options['fields']['field_image_attribution']['element_label_colon'] = FALSE;
+  /* Field: Field: Image Attribution Link */
+  $handler->display->display_options['fields']['field_image_attribution_link']['id'] = 'field_image_attribution_link';
+  $handler->display->display_options['fields']['field_image_attribution_link']['table'] = 'field_data_field_image_attribution_link';
+  $handler->display->display_options['fields']['field_image_attribution_link']['field'] = 'field_image_attribution_link';
+  $handler->display->display_options['fields']['field_image_attribution_link']['label'] = '';
+  $handler->display->display_options['fields']['field_image_attribution_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image_attribution_link']['click_sort_column'] = 'url';
   /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
@@ -2129,7 +2136,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['content'] = '<div id="current-openings-bottom-text">If you don\'t see a suitable opening here please feel free to submit a general application.</div>
+  $handler->display->display_options['footer']['area']['content'] = '<div id="current-openings-bottom-text">If you do not see a suitable opening above at this time, but still want to volunteer with PeaceGeeks, we encourage you to submit a General Application. If a suitable opportunity arises at a later date, our Talent Team will connect with you to schedule an interview.</div>
 <a id="current-openings-general-application" href="/volunteer-application">Apply with<span>general application</span></a>';
   $handler->display->display_options['footer']['area']['format'] = 'php_code';
   $handler->display->display_options['defaults']['fields'] = FALSE;
@@ -2233,7 +2240,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Current Openings Page'),
-    t('<div id="current-openings-bottom-text">If you don\'t see a suitable opening here please feel free to submit a general application.</div>
+    t('<div id="current-openings-bottom-text">If you do not see a suitable opening above at this time, but still want to volunteer with PeaceGeeks, we encourage you to submit a General Application. If a suitable opportunity arises at a later date, our Talent Team will connect with you to schedule an interview.</div>
 <a id="current-openings-general-application" href="/volunteer-application">Apply with<span>general application</span></a>'),
     t('+'),
     t('[body]
