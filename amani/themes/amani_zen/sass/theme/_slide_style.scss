@@ -8,6 +8,9 @@
 		}
 		
 		
+		.view-id-peace_geeks_front_page_slideshow view-display-id-block {
+			height:400px;
+		}
 		
 		.views-slideshow-cycle-main-frame-row {
 			display:block;
@@ -72,8 +75,10 @@
 			.views-field-field-image-attribution {
 				color:white;
 				position:absolute;
-				bottom:8px;
-				right:10px;
+				top:416px !important;
+				right:10px !important;
+				font-size:11px;
+				opacity:.7;
 			}
 			
 			.views-field-title {

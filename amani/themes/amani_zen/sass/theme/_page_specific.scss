@@ -1125,7 +1125,7 @@
 	body.node-type-project-partners {
 	
 		#main {
-			padding-top:0;
+			padding-top:50px;
 			padding-bottom:7em;
 			margin-top:0;
 		}
@@ -1178,6 +1178,8 @@
 			display:block;
 			width:100%;
 			padding-top:81px;
+			position:relative;
+			height:400px;
 			
 			.view-content {
 				
@@ -1205,7 +1207,16 @@
 					  font-size: 1.2em;
 					  margin-left:-320px;
 				}
-			}		
+			}	
+			
+			.views-field-field-image-attribution {
+				color:white;
+				position:absolute;
+				bottom:8px !important;
+				right:10px !important;
+				font-size:11px;
+				opacity:.7;
+			}	
 				
 				
 			#partner-profile-label {
