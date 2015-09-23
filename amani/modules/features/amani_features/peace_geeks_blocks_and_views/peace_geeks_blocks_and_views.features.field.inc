@@ -54,7 +54,7 @@ function peace_geeks_blocks_and_views_field_default_fields() {
             'image_style' => 'banner_image',
           ),
           'type' => 'image',
-          'weight' => '1',
+          'weight' => '4',
         ),
       ),
       'entity_type' => 'bean',
@@ -128,7 +128,7 @@ function peace_geeks_blocks_and_views_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '3',
+          'weight' => '1',
         ),
       ),
       'entity_type' => 'bean',
@@ -172,7 +172,7 @@ function peace_geeks_blocks_and_views_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '4',
+        'weight' => '5',
       ),
     ),
   );
@@ -261,6 +261,95 @@ function peace_geeks_blocks_and_views_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
+        'weight' => '4',
+      ),
+    ),
+  );
+
+  // Exported field: 'bean-banner-field_image_attribution'.
+  $fields['bean-banner-field_image_attribution'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_image_attribution',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'banner',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '3',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_image_attribution',
+      'label' => 'Image Attribution',
+      'required' => 0,
+      'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'php_code' => 'php_code',
+            'plain_text' => 'plain_text',
+            'wysiwyg_advanced' => 'wysiwyg_advanced',
+            'wysiwyg_public' => 'wysiwyg_public',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'php_code' => array(
+                'weight' => '11',
+              ),
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+              'wysiwyg_advanced' => array(
+                'weight' => '-10',
+              ),
+              'wysiwyg_public' => array(
+                'weight' => '-9',
+              ),
+            ),
+          ),
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
         'weight' => '3',
       ),
     ),
@@ -271,6 +360,7 @@ function peace_geeks_blocks_and_views_field_default_fields() {
   t('Banner Image');
   t('Banner Text');
   t('Header Text');
+  t('Image Attribution');
 
   return $fields;
 }

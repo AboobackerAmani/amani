@@ -399,9 +399,9 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
     'field_link' => 0,
-    'field_image' => 0,
-    'title' => 0,
     'field_description' => 0,
+    'title' => 0,
+    'field_image' => 0,
   );
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
@@ -410,9 +410,9 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
     'field_link' => 'field_link',
-    'field_image' => 0,
-    'title' => 0,
     'field_description' => 0,
+    'title' => 0,
+    'field_image' => 0,
   );
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['views_slideshow_pager_fields_hover'] = 1;
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['enable'] = 1;
@@ -437,6 +437,24 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['field_link']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
+  /* Field: Content: Description */
+  $handler->display->display_options['fields']['field_description']['id'] = 'field_description';
+  $handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
+  $handler->display->display_options['fields']['field_description']['field'] = 'field_description';
+  $handler->display->display_options['fields']['field_description']['label'] = '';
+  $handler->display->display_options['fields']['field_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_description']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_description']['settings'] = array(
+    'trim_length' => '300',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_link]';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
@@ -449,24 +467,6 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'banner_image',
     'image_link' => '',
-  );
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_link]';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Description */
-  $handler->display->display_options['fields']['field_description']['id'] = 'field_description';
-  $handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
-  $handler->display->display_options['fields']['field_description']['field'] = 'field_description';
-  $handler->display->display_options['fields']['field_description']['label'] = '';
-  $handler->display->display_options['fields']['field_description']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_description']['type'] = 'text_trimmed';
-  $handler->display->display_options['fields']['field_description']['settings'] = array(
-    'trim_length' => '300',
   );
   /* Sort criterion: Content: Display ranking (field_display_ranking) */
   $handler->display->display_options['sorts']['field_display_ranking_value']['id'] = 'field_display_ranking_value';
@@ -593,7 +593,6 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'News';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
-  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -601,13 +600,11 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'load_more';
+  $handler->display->display_options['pager']['type'] = 'infinite_scroll';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
-  $handler->display->display_options['pager']['options']['effects']['type'] = 'fade';
-  $handler->display->display_options['pager']['options']['effects']['speed'] = 'fast';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['style_options']['type'] = 'ol';
@@ -646,7 +643,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['alter']['max_length'] = '130';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '140';
   $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['preserve_tags'] = '<a>';
@@ -878,7 +875,6 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Events';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
-  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -962,13 +958,11 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
   $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'wysiwyg_advanced';
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'load_more';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
+  $handler->display->display_options['pager']['type'] = 'infinite_scroll';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '9';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
-  $handler->display->display_options['pager']['options']['effects']['type'] = 'fade';
-  $handler->display->display_options['pager']['options']['effects']['speed'] = 'fast';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['style_options']['type'] = 'ol';
@@ -989,6 +983,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['header']['view']['table'] = 'views';
   $handler->display->display_options['header']['view']['field'] = 'view';
   $handler->display->display_options['header']['view']['label'] = 'upcoming events view';
+  $handler->display->display_options['header']['view']['empty'] = TRUE;
   $handler->display->display_options['header']['view']['view_to_insert'] = 'peace_geeks_news_and_events:block_3';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Field: Lead Image */
@@ -1159,6 +1154,19 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<h2>Past Events</h2>';
   $handler->display->display_options['footer']['area']['format'] = 'php_code';
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = '<h2>Upcoming Events</h2>
+<p>&nbsp;</p>
+<p>Check back soon for upcoming events!</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Past Events</h2>';
+  $handler->display->display_options['empty']['area']['format'] = 'php_code';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
@@ -1498,11 +1506,32 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['max_length'] = '100';
   $handler->display->display_options['fields']['body']['alter']['preserve_tags'] = '<a>';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  /* Field: Content: YouTube Video */
+  $handler->display->display_options['fields']['field_youtube_video']['id'] = 'field_youtube_video';
+  $handler->display->display_options['fields']['field_youtube_video']['table'] = 'field_data_field_youtube_video';
+  $handler->display->display_options['fields']['field_youtube_video']['field'] = 'field_youtube_video';
+  $handler->display->display_options['fields']['field_youtube_video']['label'] = 'Event Video';
+  $handler->display->display_options['fields']['field_youtube_video']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_youtube_video']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_youtube_video']['click_sort_column'] = 'input';
+  $handler->display->display_options['fields']['field_youtube_video']['settings'] = array(
+    'youtube_size' => '640x480',
+    'youtube_width' => '',
+    'youtube_height' => '',
+    'youtube_autoplay' => 0,
+    'youtube_loop' => 0,
+    'youtube_showinfo' => 0,
+    'youtube_controls' => 0,
+    'youtube_autohide' => 0,
+    'youtube_iv_load_policy' => 0,
+  );
   /* Field: Global: View */
   $handler->display->display_options['fields']['view']['id'] = 'view';
   $handler->display->display_options['fields']['view']['table'] = 'views';
   $handler->display->display_options['fields']['view']['field'] = 'view';
   $handler->display->display_options['fields']['view']['label'] = 'Thank You To';
+  $handler->display->display_options['fields']['view']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['view']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['view']['view'] = 'peace_geeks_news_and_events';
   $handler->display->display_options['fields']['view']['display'] = 'event_thank_you_partners';
   $handler->display->display_options['fields']['view']['arguments'] = '!1';
@@ -1511,6 +1540,8 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['view_1']['table'] = 'views';
   $handler->display->display_options['fields']['view_1']['field'] = 'view';
   $handler->display->display_options['fields']['view_1']['label'] = 'Partnership With';
+  $handler->display->display_options['fields']['view_1']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['view_1']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['view_1']['view'] = 'peace_geeks_news_and_events';
   $handler->display->display_options['fields']['view_1']['display'] = 'event_partnership_with_partners';
   $handler->display->display_options['fields']['view_1']['arguments'] = '!1';
@@ -1970,7 +2001,6 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
-    t('Load more'),
     t('.'),
     t(','),
     t('Block'),
@@ -1990,6 +2020,12 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('Upcoming Events'),
     t('<h2>Upcoming Events</h2>'),
     t('<h2>Past Events</h2>'),
+    t('<h2>Upcoming Events</h2>
+<p>&nbsp;</p>
+<p>Check back soon for upcoming events!</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Past Events</h2>'),
     t('Start'),
     t('End'),
     t('Time'),
@@ -2005,6 +2041,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('Guest Speaker'),
     t('Date'),
     t('Venue'),
+    t('Event Video'),
     t('Thank You To'),
     t('Partnership With'),
     t('Time 2'),
@@ -2087,7 +2124,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<div id="current-openings-bottom-text">If you don\'t see a suitable opening here please feel free to submit a general application.</div>
-<a id="current-openings-general-application" href="/generalapplication">Apply with<span>general application</span></a>';
+<a id="current-openings-general-application" href="/volunteer-application">Apply with<span>general application</span></a>';
   $handler->display->display_options['footer']['area']['format'] = 'php_code';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
@@ -2145,13 +2182,26 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['path'] = '/currentopenings';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['path'] = '/currentopenings';
   $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
@@ -2178,7 +2228,7 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('Desc'),
     t('Current Openings Page'),
     t('<div id="current-openings-bottom-text">If you don\'t see a suitable opening here please feel free to submit a general application.</div>
-<a id="current-openings-general-application" href="/generalapplication">Apply with<span>general application</span></a>'),
+<a id="current-openings-general-application" href="/volunteer-application">Apply with<span>general application</span></a>'),
     t('+'),
     t('[body]
 
@@ -2783,6 +2833,53 @@ function peace_geeks_blocks_and_views_views_default_views() {
   );
   $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
   $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'wysiwyg_advanced';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Photo */
+  $handler->display->display_options['fields']['field_team_image']['id'] = 'field_team_image';
+  $handler->display->display_options['fields']['field_team_image']['table'] = 'field_data_field_team_image';
+  $handler->display->display_options['fields']['field_team_image']['field'] = 'field_team_image';
+  $handler->display->display_options['fields']['field_team_image']['label'] = '';
+  $handler->display->display_options['fields']['field_team_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_team_image']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_team_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_team_image']['settings'] = array(
+    'image_style' => 'team_profile_photo',
+    'image_link' => 'content',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Position */
+  $handler->display->display_options['fields']['field_team_title']['id'] = 'field_team_title';
+  $handler->display->display_options['fields']['field_team_title']['table'] = 'field_data_field_team_title';
+  $handler->display->display_options['fields']['field_team_title']['field'] = 'field_team_title';
+  $handler->display->display_options['fields']['field_team_title']['label'] = '';
+  $handler->display->display_options['fields']['field_team_title']['element_label_colon'] = FALSE;
+  /* Field: Content: Bio */
+  $handler->display->display_options['fields']['field_team_bio']['id'] = 'field_team_bio';
+  $handler->display->display_options['fields']['field_team_bio']['table'] = 'field_data_field_team_bio';
+  $handler->display->display_options['fields']['field_team_bio']['field'] = 'field_team_bio';
+  $handler->display->display_options['fields']['field_team_bio']['label'] = '';
+  $handler->display->display_options['fields']['field_team_bio']['alter']['max_length'] = '100';
+  $handler->display->display_options['fields']['field_team_bio']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_team_bio']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_team_bio']['alter']['preserve_tags'] = '<a>';
+  $handler->display->display_options['fields']['field_team_bio']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_team_bio']['settings'] = array(
+    'trim_length' => '100',
+  );
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['text'] = 'Read more';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -3711,6 +3808,55 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['header']['area']['label'] = 'title';
   $handler->display->display_options['header']['area']['content'] = '<h3>Sponsors</h3>';
   $handler->display->display_options['header']['area']['format'] = 'wysiwyg_advanced';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Field: Lead Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'sponsor_logo_small',
+    'image_link' => '',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Field: URL */
+  $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
+  $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['label'] = '';
+  $handler->display->display_options['fields']['field_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['alter']['text'] = '<a class="visit-sponsor" href="[field_link]" target="_blank">Visit website</a>';
+  $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_link']['type'] = 'link_plain';
+  /* Field: Content: Short Sponsor Info */
+  $handler->display->display_options['fields']['field_short_sponsor_info']['id'] = 'field_short_sponsor_info';
+  $handler->display->display_options['fields']['field_short_sponsor_info']['table'] = 'field_data_field_short_sponsor_info';
+  $handler->display->display_options['fields']['field_short_sponsor_info']['field'] = 'field_short_sponsor_info';
+  $handler->display->display_options['fields']['field_short_sponsor_info']['label'] = '';
+  $handler->display->display_options['fields']['field_short_sponsor_info']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_short_sponsor_info']['alter']['text'] = '<div class="sponsor-title">[title]</div>
+<div class="sponsor-info">[field_short_sponsor_info]</div>
+[field_link]';
+  $handler->display->display_options['fields']['field_short_sponsor_info']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -3797,12 +3943,62 @@ function peace_geeks_blocks_and_views_views_default_views() {
 
   /* Display: Featured Sponsors */
   $handler = $view->new_display('block', 'Featured Sponsors', 'block_1');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Field: Lead Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'sponsor_logo_small',
+    'image_link' => '',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Field: URL */
+  $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
+  $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['label'] = '';
+  $handler->display->display_options['fields']['field_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_link']['type'] = 'link_plain';
+  /* Field: Content: Short Sponsor Info */
+  $handler->display->display_options['fields']['field_short_sponsor_info']['id'] = 'field_short_sponsor_info';
+  $handler->display->display_options['fields']['field_short_sponsor_info']['table'] = 'field_data_field_short_sponsor_info';
+  $handler->display->display_options['fields']['field_short_sponsor_info']['field'] = 'field_short_sponsor_info';
+  $handler->display->display_options['fields']['field_short_sponsor_info']['label'] = '';
+  $handler->display->display_options['fields']['field_short_sponsor_info']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_short_sponsor_info']['alter']['text'] = '<div class="sponsor-title">[title]</div>
+<div class="sponsor-info">[field_short_sponsor_info]</div>
+<a class="visit-sponsor" href="[field_link]" target="_blank">Visit website</a>';
+  $handler->display->display_options['fields']['field_short_sponsor_info']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
 
   /* Display: All Sponsors */
   $handler = $view->new_display('block', 'All Sponsors', 'block_2');
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -3906,8 +4102,15 @@ function peace_geeks_blocks_and_views_views_default_views() {
     t('Select any filter and click on Apply to see results'),
     t('title'),
     t('<h3>Sponsors</h3>'),
+    t('<a class="visit-sponsor" href="[field_link]" target="_blank">Visit website</a>'),
+    t('<div class="sponsor-title">[title]</div>
+<div class="sponsor-info">[field_short_sponsor_info]</div>
+[field_link]'),
     t('Filter Your Search'),
     t('Featured Sponsors'),
+    t('<div class="sponsor-title">[title]</div>
+<div class="sponsor-info">[field_short_sponsor_info]</div>
+<a class="visit-sponsor" href="[field_link]" target="_blank">Visit website</a>'),
     t('All Sponsors'),
     t('Highlighted Sponsor'),
     t('Highlighted Sponsor:'),

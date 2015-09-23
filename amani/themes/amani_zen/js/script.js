@@ -299,11 +299,11 @@ Drupal.behaviors.paragraphs_adjustments = {
 
 // Change current openings block links to lead to currentopenings page 
 
-	$('.view-display-id-current_openings_block ol li .views-field-title a').each(function() {
+	/*$('.view-display-id-current_openings_block ol li .views-field-title a').each(function() {
 		
 		$(this).attr('href','/currentopenings');
 	
-	});
+	});*/
 	
 	
 
