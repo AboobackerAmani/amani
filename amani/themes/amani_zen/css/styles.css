@@ -3361,7 +3361,9 @@ select.form-select {
   font-size: 1em;
   border: 1px solid #9a9a9a;
   padding: .2em .6em;
-  border-radius: 0;
+  -moz-border-radius: 0 / 0;
+  -webkit-border-radius: 0 0;
+  border-radius: 0 / 0;
 }
 
 /* Contact Form */
@@ -3649,6 +3651,79 @@ body.section-partner-application h1#page-title {
   color: #59C2ED;
   font-size: 3em;
   line-height: 30px;
+}
+
+/* Become a corporate sponsor contact form */
+/* line 362, ../sass/theme/_forms.scss */
+body.becomesponsor .block-webform {
+  display: block;
+  float: left;
+  width: 752px;
+  margin-top: 30px;
+}
+/* line 369, ../sass/theme/_forms.scss */
+body.becomesponsor .block-webform .form-item {
+  display: inline-block;
+  margin-bottom: 10px;
+  float: left;
+}
+/* line 375, ../sass/theme/_forms.scss */
+body.becomesponsor .block-webform label {
+  display: none;
+}
+/* line 379, ../sass/theme/_forms.scss */
+body.becomesponsor .block-webform input {
+  border: 0;
+  background: #E6E6E6;
+  width: 100%;
+  display: block;
+  padding: 10px 20px;
+}
+/* line 387, ../sass/theme/_forms.scss */
+body.becomesponsor .block-webform div.webform-component--company {
+  display: block;
+  width: 752px;
+}
+/* line 392, ../sass/theme/_forms.scss */
+body.becomesponsor .block-webform div.webform-component--email-address {
+  display: block;
+  width: 752px;
+}
+/* line 397, ../sass/theme/_forms.scss */
+body.becomesponsor .block-webform div.webform-component--first-name {
+  display: block;
+  width: 370px;
+  margin-right: 10px;
+}
+/* line 403, ../sass/theme/_forms.scss */
+body.becomesponsor .block-webform div.webform-component--last-name {
+  display: block;
+  width: 372px;
+}
+/* line 408, ../sass/theme/_forms.scss */
+body.becomesponsor .block-webform div.form-textarea-wrapper {
+  display: block;
+  width: 752px;
+  margin-bottom: 20px;
+}
+/* line 414, ../sass/theme/_forms.scss */
+body.becomesponsor .block-webform textarea {
+  border: 0;
+  background: #E6E6E6;
+  width: 100%;
+  display: block;
+  padding: 10px 20px;
+  height: 210px;
+}
+/* line 423, ../sass/theme/_forms.scss */
+body.becomesponsor .block-webform input[type="submit"] {
+  width: auto;
+  background: #474F5E;
+  clear: both;
+  margin: 0 auto;
+  display: block;
+  padding: 14px 50px;
+  font-size: 17px;
 }
 
 /**

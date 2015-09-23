@@ -29,7 +29,7 @@ select.form-select {
 	font-size:1em;
 	border:1px solid $text-grey;
 	padding:.2em .6em;
-	border-radius:0;
+	@include border-radius(0, 0);
 }
 
 /* Contact Form */
@@ -351,8 +351,85 @@ body.section-partner-application {
 		line-height:30px;
 	}
 	
-	
 
+}
+
+
+/* Become a corporate sponsor contact form */
+
+body.becomesponsor {
+
+	.block-webform {
+		
+		display:block;
+		float:left;
+		width:752px;
+		margin-top:30px;
 	
+		.form-item {
+			display:inline-block;
+			margin-bottom:10px;
+			float:left;
+		}
+	
+		label {
+			display:none;
+		}
+		
+		input {
+			border:0;
+			background:$soft-grey;
+			width:100%;
+			display:block;
+			padding:10px 20px;
+		}
+		
+		div.webform-component--company {
+			display:block;
+			width:752px;
+		}
+		
+		div.webform-component--email-address {
+			display:block;
+			width:752px;
+		}
+		
+		div.webform-component--first-name {
+			display:block;
+			width:370px;
+			margin-right:10px;
+		}
+		
+		div.webform-component--last-name {
+			display:block;
+			width:372px;
+		}
+		
+		div.form-textarea-wrapper {
+			display:block;
+			width:752px;
+			margin-bottom:20px;
+		}
+		
+		textarea {
+			border:0;
+			background:$soft-grey;
+			width:100%;
+			display:block;
+			padding:10px 20px;
+			height:210px;
+		}
+		
+		input[type="submit"] {
+			width:auto;
+			background:$grey;
+			clear: both;
+			margin: 0 auto;
+			display: block;
+			padding: 14px 50px;
+			font-size: 17px;
+		}
+	
+	}
 
 }

@@ -617,6 +617,23 @@ Drupal.behaviors.paragraphs_adjustments = {
 	});
 
 
+
+// Put webform labels into input fields as placeholder text 
+
+	$('body.becomesponsor .block-webform .form-item label').each(function() {
+	
+		var thelabeltext = $(this).text();
+		
+		if ( $(this).next().is('input') ) {
+			$(this).next().attr('placeholder',thelabeltext);
+		}
+		
+		if ( $(this).next().is('div') ) {
+			$(this).next().find('textarea').attr('placeholder',thelabeltext);
+		}
+		
+	});
+
 // Show/hide submenu items on hover 
 
 /*	$('#block-system-main-menu > ul.menu > li:not(.active-trail)').hover(
