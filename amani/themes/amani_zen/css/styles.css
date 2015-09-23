@@ -3192,13 +3192,20 @@ div.breadcrumb {
     z-index: 20;
   }
   /* line 72, ../sass/theme/_slide_style.scss */
+  .views-slideshow-cycle-main-frame-row .views-field-field-image-attribution {
+    color: white;
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+  }
+  /* line 79, ../sass/theme/_slide_style.scss */
   .views-slideshow-cycle-main-frame-row .views-field-title {
     width: 1200px;
     display: none;
     margin: 0 auto;
     position: relative;
   }
-  /* line 77, ../sass/theme/_slide_style.scss */
+  /* line 84, ../sass/theme/_slide_style.scss */
   .views-slideshow-cycle-main-frame-row .views-field-title .field-content {
     display: block;
     float: left;
@@ -3211,7 +3218,7 @@ div.breadcrumb {
     margin-left: -320px;
   }
 
-  /* line 95, ../sass/theme/_slide_style.scss */
+  /* line 102, ../sass/theme/_slide_style.scss */
   #views_slideshow_controls_text_peace_geeks_front_page_slideshow-block {
     display: none;
   }
