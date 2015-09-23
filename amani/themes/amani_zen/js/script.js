@@ -262,9 +262,11 @@ Drupal.behaviors.paragraphs_adjustments = {
 		var labelcheck = $(this).find('.views-label').html();
 		if (labelcheck == '+') {
 				$(this).find('.views-label').html('-');
+				$(this).next().next().before('<a class="current-apply-button" href="/volunteer-application">Apply Now</a>');
 			}
 			else if (labelcheck == '-') {
 				$(this).find('.views-label').html('+');
+				$(this).parent().find('.current-apply-button').hide();
 			}
 		
 	
@@ -284,7 +286,6 @@ Drupal.behaviors.paragraphs_adjustments = {
 		$('body.projectsmainpage .views-exposed-form .views-exposed-widgets').toggle('fast');
 		//$(this).parent().find('.views-field-field-opportunity-tags').toggle('fast');
 		var expandcheck = $('body.projectsmainpage .views-exposed-form .expandhide').html();
-		console.log(expandcheck);
 		if (expandcheck == 'Expand') {
 				$('body.projectsmainpage .views-exposed-form .expandhide').html('Hide');
 			}
@@ -314,11 +315,7 @@ Drupal.behaviors.paragraphs_adjustments = {
 		$(this).hide();
 	});
 	
-	/*$('.view-display-id-current_openings_page .views-field-field-opportunity-tags').each(function() {
-	
-		$(this).hide();
-	});*/
-	
+
 
 	
 	$('.view-display-id-faq_page .views-field-title').click(function() {
