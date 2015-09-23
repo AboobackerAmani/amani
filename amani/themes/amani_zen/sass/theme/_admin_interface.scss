@@ -15,6 +15,18 @@ body.admin-menu {
 	}
 }
 
+ul.tabs-primary {
+	
+		padding-top:2em;
+		li {
+			display:inline;
+			padding-right:10px;
+			a {
+				font-weight:bold;
+			}
+		}
+	}
+
 #user-admin-page {
 	background:$text-black;
 	color:white;

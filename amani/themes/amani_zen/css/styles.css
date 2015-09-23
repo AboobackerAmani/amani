@@ -7349,6 +7349,20 @@ body.admin-menu ul.tabs-primary li a {
 }
 
 /* line 18, ../sass/theme/_admin_interface.scss */
+ul.tabs-primary {
+  padding-top: 2em;
+}
+/* line 21, ../sass/theme/_admin_interface.scss */
+ul.tabs-primary li {
+  display: inline;
+  padding-right: 10px;
+}
+/* line 24, ../sass/theme/_admin_interface.scss */
+ul.tabs-primary li a {
+  font-weight: bold;
+}
+
+/* line 30, ../sass/theme/_admin_interface.scss */
 #user-admin-page {
   background: #414042;
   color: white;
@@ -7360,7 +7374,7 @@ body.admin-menu ul.tabs-primary li a {
   left: 0;
 }
 
-/* line 31, ../sass/theme/_admin_interface.scss */
+/* line 43, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin h1#page-title {
   margin-top: 0;
   font-weight: 300;
@@ -7369,61 +7383,61 @@ body.page-amani-content-admin h1#page-title {
   line-height: 30px;
   margin-bottom: 1.2em;
 }
-/* line 40, ../sass/theme/_admin_interface.scss */
+/* line 52, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin h2 {
   font-size: 1.2em;
   line-height: 1.5em;
   font-weight: 600;
 }
-/* line 46, ../sass/theme/_admin_interface.scss */
+/* line 58, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin #content {
   float: left;
   width: 70%;
   margin-left: 0%;
   margin-right: -70%;
 }
-/* line 52, ../sass/theme/_admin_interface.scss */
+/* line 64, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin #content table {
   text-align: left;
   width: 96%;
 }
-/* line 57, ../sass/theme/_admin_interface.scss */
+/* line 69, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin #content table thead th {
   font-weight: 600;
 }
-/* line 62, ../sass/theme/_admin_interface.scss */
+/* line 74, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin #content table tbody {
   border-top: 2px solid #9a9a9a;
 }
-/* line 66, ../sass/theme/_admin_interface.scss */
+/* line 78, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin #content table tr.odd {
   background: #efefef;
 }
-/* line 69, ../sass/theme/_admin_interface.scss */
+/* line 81, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin #content table tr td {
   padding: .2em;
 }
-/* line 76, ../sass/theme/_admin_interface.scss */
+/* line 88, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin .views-exposed-form {
   display: block;
   float: left;
   padding-bottom: 4em;
 }
-/* line 80, ../sass/theme/_admin_interface.scss */
+/* line 92, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin .views-exposed-form label {
   font-weight: 600;
 }
-/* line 83, ../sass/theme/_admin_interface.scss */
+/* line 95, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin .views-exposed-form .views-exposed-widget {
   display: block;
   float: left;
   width: 100%;
 }
-/* line 89, ../sass/theme/_admin_interface.scss */
+/* line 101, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin .views-exposed-form select {
   width: 180px;
 }
-/* line 93, ../sass/theme/_admin_interface.scss */
+/* line 105, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin .views-exposed-form input[type="submit"] {
   background: #59C2ED;
   color: white;
@@ -7436,39 +7450,39 @@ body.page-amani-content-admin .views-exposed-form input[type="submit"] {
   margin-top: 2em;
   width: 180px;
 }
-/* line 104, ../sass/theme/_admin_interface.scss */
+/* line 116, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin .views-exposed-form input[type="submit"]:hover {
   opacity: 0.9;
 }
-/* line 110, ../sass/theme/_admin_interface.scss */
+/* line 122, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin .node-type-list {
   font-size: 1.2em;
   line-height: 1.5em;
   font-weight: 600;
 }
-/* line 116, ../sass/theme/_admin_interface.scss */
+/* line 128, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin ul {
   padding-left: 20px;
   padding-top: 20px;
 }
-/* line 123, ../sass/theme/_admin_interface.scss */
+/* line 135, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin .sidebars .region-sidebar-second {
   float: left;
   width: 30%;
   margin-left: 70%;
   margin-right: 130%;
 }
-/* line 130, ../sass/theme/_admin_interface.scss */
+/* line 142, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin .sidebars .block {
   background: #efefef;
   padding: 2em;
   margin-bottom: 2em;
 }
-/* line 135, ../sass/theme/_admin_interface.scss */
+/* line 147, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin .sidebars .block a:after {
   content: " »";
 }
-/* line 143, ../sass/theme/_admin_interface.scss */
+/* line 155, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin ul.pager {
   float: left;
   display: block;
@@ -7476,7 +7490,7 @@ body.page-amani-content-admin ul.pager {
   margin: 0 auto;
   padding-bottom: 7em;
 }
-/* line 149, ../sass/theme/_admin_interface.scss */
+/* line 161, ../sass/theme/_admin_interface.scss */
 body.page-amani-content-admin ul.pager li {
   list-style-type: none;
   display: inline;
