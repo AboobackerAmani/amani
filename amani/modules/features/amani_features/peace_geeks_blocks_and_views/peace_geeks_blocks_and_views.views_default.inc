@@ -455,6 +455,12 @@ function peace_geeks_blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['path'] = '[field_link]';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Field: Image Attribution */
+  $handler->display->display_options['fields']['field_image_attribution']['id'] = 'field_image_attribution';
+  $handler->display->display_options['fields']['field_image_attribution']['table'] = 'field_data_field_image_attribution';
+  $handler->display->display_options['fields']['field_image_attribution']['field'] = 'field_image_attribution';
+  $handler->display->display_options['fields']['field_image_attribution']['label'] = '';
+  $handler->display->display_options['fields']['field_image_attribution']['element_label_colon'] = FALSE;
   /* Field: Field: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';

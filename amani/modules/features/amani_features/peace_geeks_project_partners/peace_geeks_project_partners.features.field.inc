@@ -10,6 +10,90 @@
 function peace_geeks_project_partners_field_default_fields() {
   $fields = array();
 
+  // Exported field: 'node-project_partners-field_areas_of_focus_reference'.
+  $fields['node-project_partners-field_areas_of_focus_reference'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_areas_of_focus_reference',
+      'foreign keys' => array(
+        'node' => array(
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'entityreference',
+      'settings' => array(
+        'handler' => 'base',
+        'handler_settings' => array(
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+          'sort' => array(
+            'direction' => 'ASC',
+            'property' => 'title',
+            'type' => 'property',
+          ),
+          'target_bundles' => array(
+            'areas_of_focus' => 'areas_of_focus',
+          ),
+        ),
+        'target_type' => 'node',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'project_partners',
+      'default_value' => array(),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'entityreference',
+          'settings' => array(
+            'link' => FALSE,
+          ),
+          'type' => 'entityreference_label',
+          'weight' => 22,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_areas_of_focus_reference',
+      'label' => 'Areas of Focus Reference',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '22',
+      ),
+    ),
+  );
+
   // Exported field: 'node-project_partners-field_banner_image'.
   $fields['node-project_partners-field_banner_image'] = array(
     'field_config' => array(
@@ -179,7 +263,7 @@ function peace_geeks_project_partners_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '10',
+        'weight' => '11',
       ),
     ),
   );
@@ -272,7 +356,7 @@ function peace_geeks_project_partners_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '13',
+        'weight' => '14',
       ),
     ),
   );
@@ -434,7 +518,102 @@ function peace_geeks_project_partners_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '22',
+        'weight' => '23',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-project_partners-field_image_attribution'.
+  $fields['node-project_partners-field_image_attribution'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_image_attribution',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'project_partners',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 23,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_image_attribution',
+      'label' => 'Banner Image Attribution',
+      'required' => 0,
+      'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'php_code' => 'php_code',
+            'plain_text' => 'plain_text',
+            'wysiwyg_advanced' => 'wysiwyg_advanced',
+            'wysiwyg_public' => 'wysiwyg_public',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'php_code' => array(
+                'weight' => '11',
+              ),
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+              'wysiwyg_advanced' => array(
+                'weight' => '-10',
+              ),
+              'wysiwyg_public' => array(
+                'weight' => '-9',
+              ),
+            ),
+          ),
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '2',
       ),
     ),
   );
@@ -529,7 +708,7 @@ function peace_geeks_project_partners_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '7',
+        'weight' => '8',
       ),
     ),
   );
@@ -622,7 +801,7 @@ function peace_geeks_project_partners_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '12',
+        'weight' => '13',
       ),
     ),
   );
@@ -715,7 +894,7 @@ function peace_geeks_project_partners_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '17',
+        'weight' => '18',
       ),
     ),
   );
@@ -809,7 +988,7 @@ function peace_geeks_project_partners_field_default_fields() {
           'resolution' => '200x150',
         ),
         'type' => 'media_generic',
-        'weight' => '20',
+        'weight' => '21',
       ),
     ),
   );
@@ -904,79 +1083,7 @@ function peace_geeks_project_partners_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '4',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-project_partners-field_partner_theme'.
-  $fields['node-project_partners-field_partner_theme'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_partner_theme',
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'taxonomy',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'partner_theme',
-            'parent' => '0',
-          ),
-        ),
-        'options_list_callback' => 'i18n_taxonomy_allowed_values',
-      ),
-      'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'project_partners',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'i18n_taxonomy',
-          'settings' => array(),
-          'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => 21,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_partner_theme',
-      'label' => 'Partner Theme',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '21',
+        'weight' => '5',
       ),
     ),
   );
@@ -1069,7 +1176,7 @@ function peace_geeks_project_partners_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '16',
+        'weight' => '17',
       ),
     ),
   );
@@ -1165,7 +1272,7 @@ function peace_geeks_project_partners_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '6',
+        'weight' => '7',
       ),
     ),
   );
@@ -1242,7 +1349,7 @@ function peace_geeks_project_partners_field_default_fields() {
           ),
         ),
         'type' => 'addressfield_standard',
-        'weight' => '8',
+        'weight' => '9',
       ),
     ),
   );
@@ -1335,7 +1442,7 @@ function peace_geeks_project_partners_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '14',
+        'weight' => '15',
       ),
     ),
   );
@@ -1418,7 +1525,7 @@ function peace_geeks_project_partners_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '9',
+        'weight' => '10',
       ),
     ),
   );
@@ -1503,7 +1610,7 @@ function peace_geeks_project_partners_field_default_fields() {
           'type_settings' => array(),
         ),
         'type' => 'options_select',
-        'weight' => '18',
+        'weight' => '19',
       ),
     ),
   );
@@ -1578,7 +1685,7 @@ function peace_geeks_project_partners_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '19',
+        'weight' => '20',
       ),
     ),
   );
@@ -1763,7 +1870,7 @@ Prof.',
         'module' => 'name',
         'settings' => array(),
         'type' => 'name_widget',
-        'weight' => '15',
+        'weight' => '16',
       ),
     ),
   );
@@ -1856,14 +1963,16 @@ Prof.',
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '11',
+        'weight' => '12',
       ),
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Areas of Focus Reference');
   t('Banner Image');
+  t('Banner Image Attribution');
   t('Crisis Overview');
   t('Deliverables Summary');
   t('Display ranking');
@@ -1874,7 +1983,6 @@ Prof.',
   t('Partner Contributors');
   t('Partner Logo');
   t('Partner One Liner');
-  t('Partner Theme');
   t('Partner Website');
   t('PeaceGeeks Contributors');
   t('Projects Reference');

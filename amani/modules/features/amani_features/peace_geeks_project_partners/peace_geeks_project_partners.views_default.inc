@@ -475,23 +475,22 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Peace Geeks Project Partners';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_projects_reference_target_id']['id'] = 'field_projects_reference_target_id';
   $handler->display->display_options['relationships']['field_projects_reference_target_id']['table'] = 'field_data_field_projects_reference';
   $handler->display->display_options['relationships']['field_projects_reference_target_id']['field'] = 'field_projects_reference_target_id';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Field: Banner Image */
-  $handler->display->display_options['fields']['field_banner_image']['id'] = 'field_banner_image';
-  $handler->display->display_options['fields']['field_banner_image']['table'] = 'field_data_field_banner_image';
-  $handler->display->display_options['fields']['field_banner_image']['field'] = 'field_banner_image';
-  $handler->display->display_options['fields']['field_banner_image']['label'] = '';
-  $handler->display->display_options['fields']['field_banner_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_banner_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_banner_image']['settings'] = array(
-    'image_style' => 'banner_image',
-    'image_link' => '',
-  );
+  /* Field: Content: Partner One Liner */
+  $handler->display->display_options['fields']['field_partner_one_liner']['id'] = 'field_partner_one_liner';
+  $handler->display->display_options['fields']['field_partner_one_liner']['table'] = 'field_data_field_partner_one_liner';
+  $handler->display->display_options['fields']['field_partner_one_liner']['field'] = 'field_partner_one_liner';
+  $handler->display->display_options['fields']['field_partner_one_liner']['label'] = '';
+  $handler->display->display_options['fields']['field_partner_one_liner']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -503,12 +502,24 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Partner One Liner */
-  $handler->display->display_options['fields']['field_partner_one_liner']['id'] = 'field_partner_one_liner';
-  $handler->display->display_options['fields']['field_partner_one_liner']['table'] = 'field_data_field_partner_one_liner';
-  $handler->display->display_options['fields']['field_partner_one_liner']['field'] = 'field_partner_one_liner';
-  $handler->display->display_options['fields']['field_partner_one_liner']['label'] = '';
-  $handler->display->display_options['fields']['field_partner_one_liner']['element_label_colon'] = FALSE;
+  /* Field: Field: Image Attribution */
+  $handler->display->display_options['fields']['field_image_attribution']['id'] = 'field_image_attribution';
+  $handler->display->display_options['fields']['field_image_attribution']['table'] = 'field_data_field_image_attribution';
+  $handler->display->display_options['fields']['field_image_attribution']['field'] = 'field_image_attribution';
+  $handler->display->display_options['fields']['field_image_attribution']['label'] = '';
+  $handler->display->display_options['fields']['field_image_attribution']['element_label_colon'] = FALSE;
+  /* Field: Field: Banner Image */
+  $handler->display->display_options['fields']['field_banner_image']['id'] = 'field_banner_image';
+  $handler->display->display_options['fields']['field_banner_image']['table'] = 'field_data_field_banner_image';
+  $handler->display->display_options['fields']['field_banner_image']['field'] = 'field_banner_image';
+  $handler->display->display_options['fields']['field_banner_image']['label'] = '';
+  $handler->display->display_options['fields']['field_banner_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_banner_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_banner_image']['settings'] = array(
+    'image_style' => 'banner_image',
+    'image_link' => '',
+  );
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
@@ -1202,7 +1213,7 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['bef'] = array(
     'general' => array(
       'allow_secondary' => 0,
-      'secondary_label' => 'Advanced options',
+      'secondary_label' => 'Expand',
       'collapsible_label' => NULL,
       'combine_rewrite' => NULL,
       'reset_label' => NULL,
@@ -1309,57 +1320,6 @@ function peace_geeks_project_partners_views_default_views() {
       'filter_rewrite_values' => NULL,
     ),
     'field_project_type_tid' => array(
-      'bef_format' => 'bef',
-      'more_options' => array(
-        'bef_select_all_none' => FALSE,
-        'bef_collapsible' => 0,
-        'is_secondary' => 0,
-        'any_label' => 'All',
-        'bef_filter_description' => '',
-        'tokens' => array(
-          'available' => array(
-            0 => 'global_types',
-            1 => 'vocabulary',
-            'secondary_label' => NULL,
-            'collapsible_label' => NULL,
-            'combine_rewrite' => NULL,
-            'reset_label' => NULL,
-            'bef_filter_description' => NULL,
-            'any_label' => NULL,
-            'filter_rewrite_values' => NULL,
-          ),
-          'secondary_label' => NULL,
-          'collapsible_label' => NULL,
-          'combine_rewrite' => NULL,
-          'reset_label' => NULL,
-          'bef_filter_description' => NULL,
-          'any_label' => NULL,
-          'filter_rewrite_values' => NULL,
-        ),
-        'rewrite' => array(
-          'filter_rewrite_values' => '',
-          'secondary_label' => NULL,
-          'collapsible_label' => NULL,
-          'combine_rewrite' => NULL,
-          'reset_label' => NULL,
-          'bef_filter_description' => NULL,
-          'any_label' => NULL,
-        ),
-        'secondary_label' => NULL,
-        'collapsible_label' => NULL,
-        'combine_rewrite' => NULL,
-        'reset_label' => NULL,
-        'filter_rewrite_values' => NULL,
-      ),
-      'secondary_label' => NULL,
-      'collapsible_label' => NULL,
-      'combine_rewrite' => NULL,
-      'reset_label' => NULL,
-      'bef_filter_description' => NULL,
-      'any_label' => NULL,
-      'filter_rewrite_values' => NULL,
-    ),
-    'field_partner_theme_tid' => array(
       'bef_format' => 'bef',
       'more_options' => array(
         'bef_select_all_none' => FALSE,
@@ -1530,6 +1490,26 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['filters']['field_proj_partners_location_country']['table'] = 'field_data_field_proj_partners_location';
   $handler->display->display_options['filters']['field_proj_partners_location_country']['field'] = 'field_proj_partners_location_country';
   $handler->display->display_options['filters']['field_proj_partners_location_country']['relationship'] = 'reverse_field_projects_reference_node';
+  $handler->display->display_options['filters']['field_proj_partners_location_country']['value'] = array(
+    'BI' => 'BI',
+    'CM' => 'CM',
+    'GA' => 'GA',
+    'IN' => 'IN',
+    'ID' => 'ID',
+    'JO' => 'JO',
+    'KE' => 'KE',
+    'LR' => 'LR',
+    'NP' => 'NP',
+    'NG' => 'NG',
+    'PS' => 'PS',
+    'PH' => 'PH',
+    'SL' => 'SL',
+    'SS' => 'SS',
+    'SD' => 'SD',
+    'SY' => 'SY',
+    'UG' => 'UG',
+    'VU' => 'VU',
+  );
   $handler->display->display_options['filters']['field_proj_partners_location_country']['group'] = 1;
   $handler->display->display_options['filters']['field_proj_partners_location_country']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_proj_partners_location_country']['expose']['operator_id'] = 'field_proj_partners_location_country_op';
@@ -1544,6 +1524,7 @@ function peace_geeks_project_partners_views_default_views() {
     6 => 0,
     4 => 0,
   );
+  $handler->display->display_options['filters']['field_proj_partners_location_country']['expose']['reduce'] = TRUE;
   /* Filter criterion: Content: Project Type (field_project_type) */
   $handler->display->display_options['filters']['field_project_type_tid']['id'] = 'field_project_type_tid';
   $handler->display->display_options['filters']['field_project_type_tid']['table'] = 'field_data_field_project_type';
@@ -1564,26 +1545,6 @@ function peace_geeks_project_partners_views_default_views() {
   );
   $handler->display->display_options['filters']['field_project_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_project_type_tid']['vocabulary'] = 'project_type';
-  /* Filter criterion: Content: Partner Theme (field_partner_theme) */
-  $handler->display->display_options['filters']['field_partner_theme_tid']['id'] = 'field_partner_theme_tid';
-  $handler->display->display_options['filters']['field_partner_theme_tid']['table'] = 'field_data_field_partner_theme';
-  $handler->display->display_options['filters']['field_partner_theme_tid']['field'] = 'field_partner_theme_tid';
-  $handler->display->display_options['filters']['field_partner_theme_tid']['relationship'] = 'reverse_field_projects_reference_node';
-  $handler->display->display_options['filters']['field_partner_theme_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_partner_theme_tid']['expose']['operator_id'] = 'field_partner_theme_tid_op';
-  $handler->display->display_options['filters']['field_partner_theme_tid']['expose']['label'] = 'Partner Theme';
-  $handler->display->display_options['filters']['field_partner_theme_tid']['expose']['operator'] = 'field_partner_theme_tid_op';
-  $handler->display->display_options['filters']['field_partner_theme_tid']['expose']['identifier'] = 'field_partner_theme_tid';
-  $handler->display->display_options['filters']['field_partner_theme_tid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    5 => 0,
-    6 => 0,
-    4 => 0,
-  );
-  $handler->display->display_options['filters']['field_partner_theme_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_partner_theme_tid']['vocabulary'] = 'partner_theme';
   $handler->display->display_options['block_description'] = 'PG All Projects Block';
   $translatables['peace_geeks_projects'] = array(
     t('Master'),
@@ -1666,11 +1627,11 @@ function peace_geeks_project_partners_views_default_views() {
     t('Partner Projects Categories List'),
     t('PG Partner Projects Categories List'),
     t('All Projects Block'),
+    t('Expand'),
     t('All Recent Years'),
     t('Project Year'),
     t('Partner Country'),
     t('Project Service'),
-    t('Partner Theme'),
     t('PG All Projects Block'),
   );
   $export['peace_geeks_projects'] = $view;
