@@ -3735,12 +3735,27 @@ body.node-type-structure.donatepage #IATS_PaymentSectionDiv input {
   border: 0;
   padding: 4px 8px;
   width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
 }
-/* line 434, ../sass/theme/_forms.scss */
+/* line 436, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage #IATS_PaymentSectionDiv label {
   font-weight: normal;
 }
-/* line 440, ../sass/theme/_forms.scss */
+/* line 441, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage #IATS_PaymentSectionDiv textarea {
+  width: 100%;
+  border: 0;
+}
+/* line 448, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .IATS_PaymentFrequencyItemDiv input {
+  float: left;
+}
+/* line 449, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .IATS_PaymentFrequencyItemDiv label {
+  float: left;
+}
+/* line 452, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .IATS_PaymentSectionTitle {
   position: absolute;
   top: -34px;
@@ -3750,7 +3765,7 @@ body.node-type-structure.donatepage .IATS_PaymentSectionTitle {
   font-size: 16px;
   letter-spacing: 1px;
 }
-/* line 450, ../sass/theme/_forms.scss */
+/* line 462, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage #IATS_ProcessAction_Button {
   font-size: 28px;
   border: 0;
@@ -3762,14 +3777,14 @@ body.node-type-structure.donatepage #IATS_ProcessAction_Button {
   width: 350px;
   margin-left: 220px;
 }
-/* line 462, ../sass/theme/_forms.scss */
+/* line 474, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .IATS_Action {
   margin-left: 0;
   padding-left: 0;
   position: relative;
   z-index: 10;
 }
-/* line 469, ../sass/theme/_forms.scss */
+/* line 481, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage #other-giving {
   font-size: 28px;
   border: 0;
@@ -3788,72 +3803,72 @@ body.node-type-structure.donatepage #other-giving {
   border: 1px solid #F09416;
   margin-bottom: 50px;
 }
-/* line 488, ../sass/theme/_forms.scss */
+/* line 500, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .other-giving-block {
   display: block;
   z-index: 100;
 }
-/* line 493, ../sass/theme/_forms.scss */
+/* line 505, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .IATS_SecureDataDiv {
   display: none;
 }
-/* line 497, ../sass/theme/_forms.scss */
+/* line 509, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .donate-top-text {
   margin-top: 0 !important;
 }
-/* line 499, ../sass/theme/_forms.scss */
+/* line 511, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .donate-top-text .field-name-field-large-header-text {
   margin-bottom: 20px;
 }
-/* line 504, ../sass/theme/_forms.scss */
+/* line 516, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .donate-thank-you {
   display: block;
   float: left;
   width: 400px;
   margin-right: 40px;
 }
-/* line 509, ../sass/theme/_forms.scss */
+/* line 521, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .donate-thank-you .field-name-field-large-header-text {
   margin-bottom: 20px;
 }
-/* line 514, ../sass/theme/_forms.scss */
+/* line 526, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .giving-with-confidence {
   display: block;
   float: left;
   width: 280px;
   margin-top: 90px !important;
 }
-/* line 519, ../sass/theme/_forms.scss */
+/* line 531, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .giving-with-confidence a {
   width: 270px;
   margin-top: 56px !important;
   height: 120px;
   line-height: 1.2em;
 }
-/* line 524, ../sass/theme/_forms.scss */
+/* line 536, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .giving-with-confidence a.shofterlinkbox:after {
   margin-top: 76px;
 }
 
 /* Become a corporate sponsor contact form */
-/* line 536, ../sass/theme/_forms.scss */
+/* line 548, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform {
   display: block;
   float: left;
   width: 752px;
   margin-top: 30px;
 }
-/* line 543, ../sass/theme/_forms.scss */
+/* line 555, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform .form-item {
   display: inline-block;
   margin-bottom: 10px;
   float: left;
 }
-/* line 549, ../sass/theme/_forms.scss */
+/* line 561, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform label {
   display: none;
 }
-/* line 553, ../sass/theme/_forms.scss */
+/* line 565, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform input {
   border: 0;
   background: #E6E6E6;
@@ -3861,34 +3876,34 @@ body.becomesponsor .block-webform input {
   display: block;
   padding: 10px 20px;
 }
-/* line 561, ../sass/theme/_forms.scss */
+/* line 573, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--company {
   display: block;
   width: 752px;
 }
-/* line 566, ../sass/theme/_forms.scss */
+/* line 578, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--email-address {
   display: block;
   width: 752px;
 }
-/* line 571, ../sass/theme/_forms.scss */
+/* line 583, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--first-name {
   display: block;
   width: 370px;
   margin-right: 10px;
 }
-/* line 577, ../sass/theme/_forms.scss */
+/* line 589, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--last-name {
   display: block;
   width: 372px;
 }
-/* line 582, ../sass/theme/_forms.scss */
+/* line 594, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.form-textarea-wrapper {
   display: block;
   width: 752px;
   margin-bottom: 20px;
 }
-/* line 588, ../sass/theme/_forms.scss */
+/* line 600, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform textarea {
   border: 0;
   background: #E6E6E6;
@@ -3897,7 +3912,7 @@ body.becomesponsor .block-webform textarea {
   padding: 10px 20px;
   height: 210px;
 }
-/* line 597, ../sass/theme/_forms.scss */
+/* line 609, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform input[type="submit"] {
   width: auto;
   background: #474F5E;
