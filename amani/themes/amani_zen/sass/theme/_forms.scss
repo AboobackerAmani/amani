@@ -393,8 +393,9 @@ body.node-type-structure.donatepage {
 		background:$soft-grey;
 		font-size:2.4em;
 		line-height:1.4em;
-		padding:20px;
-		color:$text-grey;
+		padding:20px 20px 0 20px;
+		color:$text-black;
+		font-weight:300;
 		
 	}
 	
@@ -469,6 +470,19 @@ body.node-type-structure.donatepage {
 		float:left;
 		width:350px;
 		margin-left:220px;
+	}
+	
+	.IATS_AmountItemDiv {
+		float:left;
+		margin-right:10px;
+		background:white;
+		width:220px;
+		padding:1em;
+	}
+	
+	.IATS_RadioAmtLabel {
+		font-weight:300;
+		font-size:22px;
 	}
 	
 	.IATS_Action {
