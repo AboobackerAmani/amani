@@ -355,6 +355,180 @@ body.section-partner-application {
 }
 
 
+/* Donation page */
+
+body.node-type-structure.donatepage {
+	
+	.paragraphs-items-field-paragraphs {
+		margin-top:0;
+	}
+	
+	#main {padding-top:50px;}
+
+	.IATS_Div {
+		display:block;
+		float:left;
+		width:752px !important;
+		position:relative;
+		z-index:10;
+	}
+	
+	.IATS_EventTitle {
+		display:none;
+	}
+	
+	.IATS_AmountSectionTitle {
+		position: absolute;
+		top: -34px;
+		left: 0;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 16px;
+		letter-spacing: 1px;
+	}
+	
+	.IATS_EventDescription {
+		display:block;
+		float:left;
+		background:$soft-grey;
+		font-size:2.4em;
+		line-height:1.4em;
+		padding:20px;
+		color:$text-grey;
+		
+	}
+	
+	.IATS_AmountDiv {
+		background:$soft-grey;
+		display:block;
+		float:left;
+		width:100%;
+		font-size:14px;
+		padding:20px;
+	}
+	
+	.IATS_PaymentSectionNote {
+		display:none;
+	}
+	
+	#IATS_PaymentSectionDiv {
+		display:block;
+		float:left;
+		width:100%;
+		padding:20px;
+		background:$soft-grey;
+		font-size:14px;
+		margin-top:60px;
+		position:relative;
+		
+		.IATS_PaymentItemDiv {
+			position:relative;
+		}
+		
+		input {
+			border:0;
+			padding:4px 8px;
+			width:100%;
+		}
+		
+		label {
+			font-weight:normal;
+			
+		}
+	}
+	
+	.IATS_PaymentSectionTitle {
+		position: absolute;
+		top: -34px;
+		left: 0;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 16px;
+		letter-spacing: 1px;
+	}
+	
+	#IATS_ProcessAction_Button {
+		font-size:28px;
+		border:0;
+		background:$blue;
+		padding:20px 0;
+		color:white;
+		display:block;
+		float:left;
+		width:350px;
+		margin-left:220px;
+	}
+	
+	.IATS_Action {
+		margin-left:0;
+		padding-left:0;
+		position:relative;
+		z-index:10;
+	}
+	
+	#other-giving {
+		font-size:28px;
+		border:0;
+		background:white;
+		padding: 30px 0 20px 0;
+		color: $orange;
+		display: block;
+		float: left;
+		width: 350px;
+		text-align: center;
+		margin-top: -30px;
+		margin-left: 222px;
+		height: 28px;
+		z-index:100;
+		font-weight:300;
+		border:1px solid $orange;
+		margin-bottom:50px;
+	}
+	
+	.other-giving-block {
+		display:block;
+		z-index:100;
+	}
+	
+	.IATS_SecureDataDiv {
+		display:none;
+	}
+	
+	.donate-top-text {
+		margin-top:0 !important;
+		.field-name-field-large-header-text {
+			margin-bottom:20px;
+		}
+	}
+	
+	.donate-thank-you {
+		display:block;
+		float:left;
+		width:400px;
+		margin-right:40px;
+		.field-name-field-large-header-text {
+			margin-bottom:20px;
+		}
+	}
+	
+	.giving-with-confidence {
+		display:block;
+		float:left;
+		width:280px;
+		margin-top:90px !important;
+		a {
+			width: 270px;
+			margin-top: 56px !important;
+			height: 120px;
+			line-height:1.2em;
+			&.shofterlinkbox:after {
+				margin-top:76px;
+			}
+		}
+	}
+
+}
+
 /* Become a corporate sponsor contact form */
 
 body.becomesponsor {

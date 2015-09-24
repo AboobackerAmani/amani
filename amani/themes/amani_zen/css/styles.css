@@ -3661,25 +3661,199 @@ body.section-partner-application h1#page-title {
   line-height: 30px;
 }
 
-/* Become a corporate sponsor contact form */
+/* Donation page */
 /* line 362, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .paragraphs-items-field-paragraphs {
+  margin-top: 0;
+}
+/* line 366, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage #main {
+  padding-top: 50px;
+}
+/* line 368, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .IATS_Div {
+  display: block;
+  float: left;
+  width: 752px !important;
+  position: relative;
+  z-index: 10;
+}
+/* line 376, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .IATS_EventTitle {
+  display: none;
+}
+/* line 380, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .IATS_AmountSectionTitle {
+  position: absolute;
+  top: -34px;
+  left: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+/* line 390, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .IATS_EventDescription {
+  display: block;
+  float: left;
+  background: #E6E6E6;
+  font-size: 2.4em;
+  line-height: 1.4em;
+  padding: 20px;
+  color: #9a9a9a;
+}
+/* line 401, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .IATS_AmountDiv {
+  background: #E6E6E6;
+  display: block;
+  float: left;
+  width: 100%;
+  font-size: 14px;
+  padding: 20px;
+}
+/* line 410, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .IATS_PaymentSectionNote {
+  display: none;
+}
+/* line 414, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage #IATS_PaymentSectionDiv {
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 20px;
+  background: #E6E6E6;
+  font-size: 14px;
+  margin-top: 60px;
+  position: relative;
+}
+/* line 424, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage #IATS_PaymentSectionDiv .IATS_PaymentItemDiv {
+  position: relative;
+}
+/* line 428, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage #IATS_PaymentSectionDiv input {
+  border: 0;
+  padding: 4px 8px;
+  width: 100%;
+}
+/* line 434, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage #IATS_PaymentSectionDiv label {
+  font-weight: normal;
+}
+/* line 440, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .IATS_PaymentSectionTitle {
+  position: absolute;
+  top: -34px;
+  left: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+/* line 450, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage #IATS_ProcessAction_Button {
+  font-size: 28px;
+  border: 0;
+  background: #59C2ED;
+  padding: 20px 0;
+  color: white;
+  display: block;
+  float: left;
+  width: 350px;
+  margin-left: 220px;
+}
+/* line 462, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .IATS_Action {
+  margin-left: 0;
+  padding-left: 0;
+  position: relative;
+  z-index: 10;
+}
+/* line 469, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage #other-giving {
+  font-size: 28px;
+  border: 0;
+  background: white;
+  padding: 30px 0 20px 0;
+  color: #F09416;
+  display: block;
+  float: left;
+  width: 350px;
+  text-align: center;
+  margin-top: -30px;
+  margin-left: 222px;
+  height: 28px;
+  z-index: 100;
+  font-weight: 300;
+  border: 1px solid #F09416;
+  margin-bottom: 50px;
+}
+/* line 488, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .other-giving-block {
+  display: block;
+  z-index: 100;
+}
+/* line 493, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .IATS_SecureDataDiv {
+  display: none;
+}
+/* line 497, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .donate-top-text {
+  margin-top: 0 !important;
+}
+/* line 499, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .donate-top-text .field-name-field-large-header-text {
+  margin-bottom: 20px;
+}
+/* line 504, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .donate-thank-you {
+  display: block;
+  float: left;
+  width: 400px;
+  margin-right: 40px;
+}
+/* line 509, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .donate-thank-you .field-name-field-large-header-text {
+  margin-bottom: 20px;
+}
+/* line 514, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .giving-with-confidence {
+  display: block;
+  float: left;
+  width: 280px;
+  margin-top: 90px !important;
+}
+/* line 519, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .giving-with-confidence a {
+  width: 270px;
+  margin-top: 56px !important;
+  height: 120px;
+  line-height: 1.2em;
+}
+/* line 524, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .giving-with-confidence a.shofterlinkbox:after {
+  margin-top: 76px;
+}
+
+/* Become a corporate sponsor contact form */
+/* line 536, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform {
   display: block;
   float: left;
   width: 752px;
   margin-top: 30px;
 }
-/* line 369, ../sass/theme/_forms.scss */
+/* line 543, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform .form-item {
   display: inline-block;
   margin-bottom: 10px;
   float: left;
 }
-/* line 375, ../sass/theme/_forms.scss */
+/* line 549, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform label {
   display: none;
 }
-/* line 379, ../sass/theme/_forms.scss */
+/* line 553, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform input {
   border: 0;
   background: #E6E6E6;
@@ -3687,34 +3861,34 @@ body.becomesponsor .block-webform input {
   display: block;
   padding: 10px 20px;
 }
-/* line 387, ../sass/theme/_forms.scss */
+/* line 561, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--company {
   display: block;
   width: 752px;
 }
-/* line 392, ../sass/theme/_forms.scss */
+/* line 566, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--email-address {
   display: block;
   width: 752px;
 }
-/* line 397, ../sass/theme/_forms.scss */
+/* line 571, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--first-name {
   display: block;
   width: 370px;
   margin-right: 10px;
 }
-/* line 403, ../sass/theme/_forms.scss */
+/* line 577, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--last-name {
   display: block;
   width: 372px;
 }
-/* line 408, ../sass/theme/_forms.scss */
+/* line 582, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.form-textarea-wrapper {
   display: block;
   width: 752px;
   margin-bottom: 20px;
 }
-/* line 414, ../sass/theme/_forms.scss */
+/* line 588, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform textarea {
   border: 0;
   background: #E6E6E6;
@@ -3723,7 +3897,7 @@ body.becomesponsor .block-webform textarea {
   padding: 10px 20px;
   height: 210px;
 }
-/* line 423, ../sass/theme/_forms.scss */
+/* line 597, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform input[type="submit"] {
   width: auto;
   background: #474F5E;

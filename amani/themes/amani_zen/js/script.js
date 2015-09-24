@@ -634,6 +634,7 @@ Drupal.behaviors.paragraphs_adjustments = {
 		
 	});
 
+
 // Show/hide submenu items on hover 
 
 /*	$('#block-system-main-menu > ul.menu > li:not(.active-trail)').hover(
