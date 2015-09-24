@@ -1,0 +1,58 @@
+<?php 
+
+/**
+ * Implments hook_menu().
+ */
+function amani_sms_menu() {
+  $items['sms'] = array(
+    'page callback' => 'amani_sms_endpoint',
+    'access callback' => TRUE,
+  );
+
+  return $items;
+}
+
+/**
+ * Gets the messages(SMSs) sent by SMSsync and fill the Description and Date of Report fields in Map Record Content Type.
+ *
+ */
+function amani_sms_endpoint() {
+
+  $error = NULL;
+  $secret = NULL;
+  // Set success to false as the default success status
+  $success = true;
+
+  $inputJSON = file_get_contents('php://input');
+  $entity = entity_create('node', array('type' =>'incident_report'));
+  $entity->title = "SMS Report";
+  $decoded_message = json_decode($inputJSON);  
+  $entity->field_description = array(LANGUAGE_NONE => array(0 => array('value' => $decoded_message->message)));
+  $entity->status = 0; // not published by default
+  $entity->field_map_filter='sms';
+  $entity->field_phone = array(LANGUAGE_NONE => array(0 => array('value' => $decoded_message->from)));
+  #$entity->field_incident_date = array(LANGUAGE_NONE => array(0 => array('value' => date('Y-m-d H:i:s', strtotime($decoded_message->sent_timestamp)))));
+  $entity->field_incident_date = array(LANGUAGE_NONE => array(0 => array('value' => date('Y-m-d H:i:s'))));
+  #$entity->field_incident_date = array(LANGUAGE_NONE => array(0 => array('value' => date('Y-m-d H:i:s', strtotime($decoded_message->sent_timestamp)), 'timezone' => 'UTC', 'timezone_db' => 'UTC', 'date_type' => 'datetime')));
+  $secret = $decoded_message->secret;
+
+  if (( $secret == '123456'))
+  {
+    $success = true;
+    entity_save('node', $entity);
+  } else {
+    $success = false;
+    $error = "The secret value sent from the device does not match the one on the server";
+    header("HTTP/1.1 403 The secret value sent from the device does not match the one on the server", true, 403);
+  }
+
+  $response = array(
+    'payload' => array(
+      'success' => $success,
+      'error'   => $error
+    )
+  );
+
+  return drupal_json_output($response);
+}
+
