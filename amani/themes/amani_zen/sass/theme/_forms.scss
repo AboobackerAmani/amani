@@ -683,21 +683,32 @@ body.node-type-structure.donatepage {
 		width:100%;
 		margin-right:0;
 		margin-bottom:0 !important;
+		z-index:10;
+		position:relative;
 		.field-name-field-large-header-text {
-			margin-bottom:20px;
+			margin-bottom:40px;
+			text-align:center;
+			width:752px;
+		}
+		
+		.field-name-field-paragraph-text {
+			width:400px;
 		}
 	}
 	
 	.giving-with-confidence {
 		display:block;
-		float:left;
-		width:280px;
-		margin-top:0 !important;
+		float:right !important;
+		width:auto;
+		margin-top: -132px !important;
+		z-index:200;
+		position:relative;
 		a {
-			width: 270px;
-			margin-top: 56px !important;
+			width: 240px;
 			height: 120px;
 			line-height:1.2em;
+			z-index:1000;
+			position:relative;
 			&.shofterlinkbox:after {
 				margin-top:76px;
 			}

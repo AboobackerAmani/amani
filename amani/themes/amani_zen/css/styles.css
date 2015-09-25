@@ -4019,49 +4019,60 @@ body.node-type-structure.donatepage .donate-thank-you {
   width: 100%;
   margin-right: 0;
   margin-bottom: 0 !important;
+  z-index: 10;
+  position: relative;
 }
-/* line 686, ../sass/theme/_forms.scss */
+/* line 688, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .donate-thank-you .field-name-field-large-header-text {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  width: 752px;
 }
-/* line 691, ../sass/theme/_forms.scss */
+/* line 694, ../sass/theme/_forms.scss */
+body.node-type-structure.donatepage .donate-thank-you .field-name-field-paragraph-text {
+  width: 400px;
+}
+/* line 699, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .giving-with-confidence {
   display: block;
-  float: left;
-  width: 280px;
-  margin-top: 0 !important;
+  float: right !important;
+  width: auto;
+  margin-top: -132px !important;
+  z-index: 200;
+  position: relative;
 }
-/* line 696, ../sass/theme/_forms.scss */
+/* line 706, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .giving-with-confidence a {
-  width: 270px;
-  margin-top: 56px !important;
+  width: 240px;
   height: 120px;
   line-height: 1.2em;
+  z-index: 1000;
+  position: relative;
 }
-/* line 701, ../sass/theme/_forms.scss */
+/* line 712, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .giving-with-confidence a.shofterlinkbox:after {
   margin-top: 76px;
 }
 
 /* Become a corporate sponsor contact form */
-/* line 713, ../sass/theme/_forms.scss */
+/* line 724, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform {
   display: block;
   float: left;
   width: 752px;
   margin-top: 30px;
 }
-/* line 720, ../sass/theme/_forms.scss */
+/* line 731, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform .form-item {
   display: inline-block;
   margin-bottom: 10px;
   float: left;
 }
-/* line 726, ../sass/theme/_forms.scss */
+/* line 737, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform label {
   display: none;
 }
-/* line 730, ../sass/theme/_forms.scss */
+/* line 741, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform input {
   border: 0;
   background: #E6E6E6;
@@ -4069,34 +4080,34 @@ body.becomesponsor .block-webform input {
   display: block;
   padding: 10px 20px;
 }
-/* line 738, ../sass/theme/_forms.scss */
+/* line 749, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--company {
   display: block;
   width: 752px;
 }
-/* line 743, ../sass/theme/_forms.scss */
+/* line 754, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--email-address {
   display: block;
   width: 752px;
 }
-/* line 748, ../sass/theme/_forms.scss */
+/* line 759, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--first-name {
   display: block;
   width: 370px;
   margin-right: 10px;
 }
-/* line 754, ../sass/theme/_forms.scss */
+/* line 765, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--last-name {
   display: block;
   width: 372px;
 }
-/* line 759, ../sass/theme/_forms.scss */
+/* line 770, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.form-textarea-wrapper {
   display: block;
   width: 752px;
   margin-bottom: 20px;
 }
-/* line 765, ../sass/theme/_forms.scss */
+/* line 776, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform textarea {
   border: 0;
   background: #E6E6E6;
@@ -4105,7 +4116,7 @@ body.becomesponsor .block-webform textarea {
   padding: 10px 20px;
   height: 210px;
 }
-/* line 774, ../sass/theme/_forms.scss */
+/* line 785, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform input[type="submit"] {
   width: auto;
   background: #474F5E;
