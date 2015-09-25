@@ -7482,26 +7482,38 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     display: block;
     float: left;
     position: relative;
-    padding-left: 3000px;
+    /*padding-left: 3000px;
     margin-left: -3000px;
     padding-right: 3000px;
     margin-right: -3000px;
-    background: #E6E6E6;
+    background:$soft-grey;*/
     margin-bottom: -71px;
     margin-top: 3em;
   }
-  /* line 3119, ../sass/theme/_page_specific.scss */
+  /* line 3118, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.ourproducts .view-display-id-random_partner_quotes:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: -9998px;
+    height: 100%;
+    z-index: -1;
+    border-right: 9999px solid #E6E6E6;
+    box-shadow: 9999px 0px 0px 0px #E6E6E6;
+  }
+  /* line 3131, ../sass/theme/_page_specific.scss */
   body.node-type-structure.ourproducts #proj-testimonial-author {
     font-size: 16px;
     color: #9a9a9a;
     font-style: italic;
     text-align: right;
   }
-  /* line 3126, ../sass/theme/_page_specific.scss */
+  /* line 3138, ../sass/theme/_page_specific.scss */
   body.node-type-structure.ourproducts .paragraphs-item-link-block-blue a {
     width: 304px;
   }
-  /* line 3128, ../sass/theme/_page_specific.scss */
+  /* line 3140, ../sass/theme/_page_specific.scss */
   body.node-type-structure.ourproducts .paragraphs-item-link-block-blue a:after {
     content: "";
     display: block;
@@ -7513,20 +7525,20 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 3141, ../sass/theme/_page_specific.scss */
+  /* line 3153, ../sass/theme/_page_specific.scss */
   body.node-type-structure.ourproducts .amani-text {
     margin-top: 0 !important;
     display: block;
     width: 344px;
     margin-right: 20px;
   }
-  /* line 3146, ../sass/theme/_page_specific.scss */
+  /* line 3158, ../sass/theme/_page_specific.scss */
   body.node-type-structure.ourproducts .amani-text p {
     font-size: 1.3em;
     line-height: 1.5em;
     font-weight: 300;
   }
-  /* line 3153, ../sass/theme/_page_specific.scss */
+  /* line 3165, ../sass/theme/_page_specific.scss */
   body.node-type-structure.ourproducts .service-text {
     margin-top: 0 !important;
     display: block;
@@ -7534,13 +7546,13 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-right: 0;
     margin-left: 8px;
   }
-  /* line 3159, ../sass/theme/_page_specific.scss */
+  /* line 3171, ../sass/theme/_page_specific.scss */
   body.node-type-structure.ourproducts .service-text p {
     font-size: 1.3em;
     line-height: 1.5em;
     font-weight: 300;
   }
-  /* line 3166, ../sass/theme/_page_specific.scss */
+  /* line 3178, ../sass/theme/_page_specific.scss */
   body.node-type-structure.ourproducts .views-field-field-proj-partners-testimonial {
     display: block;
     float: left;
@@ -7550,7 +7562,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding-top: 3em;
     padding-bottom: 8em;
   }
-  /* line 3176, ../sass/theme/_page_specific.scss */
+  /* line 3188, ../sass/theme/_page_specific.scss */
   body.node-type-structure.ourproducts .views-field-field-proj-partners-testimonial:before {
     content: "“";
     font-size: 5em;
@@ -7561,7 +7573,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 16px;
     margin-top: 30px;
   }
-  /* line 3186, ../sass/theme/_page_specific.scss */
+  /* line 3198, ../sass/theme/_page_specific.scss */
   body.node-type-structure.ourproducts .views-field-field-proj-partners-testimonial .field-content p {
     font-size: 2.8em;
     color: #59C2ED;
@@ -7570,26 +7582,26 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     font-weight: 300;
     float: left;
   }
-  /* line 3193, ../sass/theme/_page_specific.scss */
+  /* line 3205, ../sass/theme/_page_specific.scss */
   body.node-type-structure.ourproducts .views-field-field-proj-partners-testimonial .field-content p:after {
     content: "”";
     display: inline;
   }
 
   /* Services page */
-  /* line 3207, ../sass/theme/_page_specific.scss */
+  /* line 3219, ../sass/theme/_page_specific.scss */
   body.node-type-structure.servicespage .paragraphs-item-light-grey-text-box {
     height: 320px;
   }
-  /* line 3210, ../sass/theme/_page_specific.scss */
+  /* line 3222, ../sass/theme/_page_specific.scss */
   body.node-type-structure.servicespage .paragraphs-item-light-grey-text-box .field-name-field-box-title {
     line-height: 1em;
   }
-  /* line 3215, ../sass/theme/_page_specific.scss */
+  /* line 3227, ../sass/theme/_page_specific.scss */
   body.node-type-structure.servicespage .paragraphs-item-link-block-blue {
     margin-top: 3em;
   }
-  /* line 3217, ../sass/theme/_page_specific.scss */
+  /* line 3229, ../sass/theme/_page_specific.scss */
   body.node-type-structure.servicespage .paragraphs-item-link-block-blue a:after {
     content: "";
     display: block;
@@ -7601,11 +7613,11 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 3230, ../sass/theme/_page_specific.scss */
+  /* line 3242, ../sass/theme/_page_specific.scss */
   body.node-type-structure.servicespage .paragraphs-item-link-block-grey {
     margin-top: 3em;
   }
-  /* line 3232, ../sass/theme/_page_specific.scss */
+  /* line 3244, ../sass/theme/_page_specific.scss */
   body.node-type-structure.servicespage .paragraphs-item-link-block-grey a:after {
     content: "";
     display: block;
@@ -7619,15 +7631,15 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   }
 
   /* FAQ */
-  /* line 3252, ../sass/theme/_page_specific.scss */
+  /* line 3264, ../sass/theme/_page_specific.scss */
   body.page-faq #main {
     padding-bottom: 4em;
   }
-  /* line 3256, ../sass/theme/_page_specific.scss */
+  /* line 3268, ../sass/theme/_page_specific.scss */
   body.page-faq h3 {
     margin-bottom: 2em;
   }
-  /* line 3260, ../sass/theme/_page_specific.scss */
+  /* line 3272, ../sass/theme/_page_specific.scss */
   body.page-faq h1#page-title {
     font-weight: 300;
     font-size: 3em;
@@ -7638,7 +7650,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 1.6em;
     color: #59C2ED;
   }
-  /* line 3273, ../sass/theme/_page_specific.scss */
+  /* line 3285, ../sass/theme/_page_specific.scss */
   body.page-faq .view-display-id-faq_page .views-field-title {
     color: #414042;
     font-weight: 600;
@@ -7648,7 +7660,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     line-height: 1.6em;
     cursor: pointer;
   }
-  /* line 3281, ../sass/theme/_page_specific.scss */
+  /* line 3293, ../sass/theme/_page_specific.scss */
   body.page-faq .view-display-id-faq_page .views-field-title .views-label {
     padding-right: 10px;
     font-size: 1.8em;
@@ -7656,7 +7668,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     float: right;
     font-weight: 600;
   }
-  /* line 3292, ../sass/theme/_page_specific.scss */
+  /* line 3304, ../sass/theme/_page_specific.scss */
   body.page-faq .view-display-id-faq_page ol li.views-row {
     list-style-type: none;
     display: block;
@@ -7667,12 +7679,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 1.4em;
     padding: 40px 20px 20px 20px;
   }
-  /* line 3301, ../sass/theme/_page_specific.scss */
+  /* line 3313, ../sass/theme/_page_specific.scss */
   body.page-faq .view-display-id-faq_page ol li.views-row.views-row-last {
     margin-bottom: 6em;
   }
 
-  /* line 3312, ../sass/theme/_page_specific.scss */
+  /* line 3324, ../sass/theme/_page_specific.scss */
   .large-blue-text {
     color: #59C2ED;
     line-height: 1.4em;
@@ -7682,22 +7694,22 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   }
 
   /* Products - Amani */
-  /* line 3325, ../sass/theme/_page_specific.scss */
+  /* line 3337, ../sass/theme/_page_specific.scss */
   body.products-amani #main {
     padding-bottom: 6em;
   }
-  /* line 3327, ../sass/theme/_page_specific.scss */
+  /* line 3339, ../sass/theme/_page_specific.scss */
   body.products-amani #amani-globalfeatures {
     text-align: center;
     margin-top: 3em;
     margin-bottom: 2em;
     table-layout: fixed;
   }
-  /* line 3333, ../sass/theme/_page_specific.scss */
+  /* line 3345, ../sass/theme/_page_specific.scss */
   body.products-amani #amani-globalfeatures tr td {
     width: 188px;
   }
-  /* line 3338, ../sass/theme/_page_specific.scss */
+  /* line 3350, ../sass/theme/_page_specific.scss */
   body.products-amani #amani-globalfeatures tr:nth-child(even) td {
     padding-bottom: 4em;
     line-height: 1.4em;
@@ -7707,11 +7719,11 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     vertical-align: top;
     padding-top: .8em;
   }
-  /* line 3349, ../sass/theme/_page_specific.scss */
+  /* line 3361, ../sass/theme/_page_specific.scss */
   body.products-amani #amani-globalfeatures tr:nth-child(4) td {
     padding-bottom: 4em;
   }
-  /* line 3355, ../sass/theme/_page_specific.scss */
+  /* line 3367, ../sass/theme/_page_specific.scss */
   body.products-amani .product-features-highlight-box {
     padding-left: 3000px;
     padding-right: 3000px;
@@ -7722,20 +7734,20 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding-bottom: 2em;
     margin-bottom: 4em !important;
   }
-  /* line 3368, ../sass/theme/_page_specific.scss */
+  /* line 3380, ../sass/theme/_page_specific.scss */
   body.products-amani .amani-product-page-bottom {
     display: block;
     width: 100%;
     margin-top: 5em !important;
   }
-  /* line 3374, ../sass/theme/_page_specific.scss */
+  /* line 3386, ../sass/theme/_page_specific.scss */
   body.products-amani #example-amani-site {
     border: 1px solid #ccc;
     margin-bottom: -2em;
     width: 752px !important;
     height: auto !important;
   }
-  /* line 3381, ../sass/theme/_page_specific.scss */
+  /* line 3393, ../sass/theme/_page_specific.scss */
   body.products-amani .feature-grey-full-bg-box {
     padding-left: 3000px;
     padding-right: 3000px;
@@ -7746,25 +7758,25 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     padding-bottom: 2em;
     margin-bottom: 3em !important;
   }
-  /* line 3393, ../sass/theme/_page_specific.scss */
+  /* line 3405, ../sass/theme/_page_specific.scss */
   body.products-amani .image-float-left .field-name-field-images {
     float: left;
     padding-left: 0;
     padding-right: 2em;
   }
-  /* line 3400, ../sass/theme/_page_specific.scss */
+  /* line 3412, ../sass/theme/_page_specific.scss */
   body.products-amani #page-bottom-buttons {
     display: block;
     float: left;
     width: 100%;
   }
-  /* line 3406, ../sass/theme/_page_specific.scss */
+  /* line 3418, ../sass/theme/_page_specific.scss */
   body.products-amani .products-footer {
     display: block;
     float: left;
     width: 100%;
   }
-  /* line 3412, ../sass/theme/_page_specific.scss */
+  /* line 3424, ../sass/theme/_page_specific.scss */
   body.products-amani a#apply-today-button {
     display: block;
     float: left;
@@ -7779,13 +7791,13 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 4px;
     margin-top: 20px;
   }
-  /* line 3425, ../sass/theme/_page_specific.scss */
+  /* line 3437, ../sass/theme/_page_specific.scss */
   body.products-amani a#apply-today-button span {
     font-weight: 300;
     display: block;
     padding-top: 4px;
   }
-  /* line 3430, ../sass/theme/_page_specific.scss */
+  /* line 3442, ../sass/theme/_page_specific.scss */
   body.products-amani a#apply-today-button:after {
     content: "";
     display: block;
@@ -7797,7 +7809,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 3443, ../sass/theme/_page_specific.scss */
+  /* line 3455, ../sass/theme/_page_specific.scss */
   body.products-amani a#faq-button {
     display: block;
     float: left;
@@ -7812,7 +7824,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 4px;
     margin-top: 20px;
   }
-  /* line 3456, ../sass/theme/_page_specific.scss */
+  /* line 3468, ../sass/theme/_page_specific.scss */
   body.products-amani a#faq-button:after {
     content: "";
     display: block;
@@ -7824,7 +7836,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 3470, ../sass/theme/_page_specific.scss */
+  /* line 3482, ../sass/theme/_page_specific.scss */
   body.products-amani a#documentation-button {
     display: block;
     float: left;
@@ -7839,7 +7851,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     margin-bottom: 4px;
     margin-top: 20px;
   }
-  /* line 3483, ../sass/theme/_page_specific.scss */
+  /* line 3495, ../sass/theme/_page_specific.scss */
   body.products-amani a#documentation-button:after {
     content: "";
     display: block;
@@ -7853,7 +7865,7 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   }
 
   /* FAQ Page */
-  /* line 3504, ../sass/theme/_page_specific.scss */
+  /* line 3516, ../sass/theme/_page_specific.scss */
   body.page-faq h3 {
     color: #F09416;
     text-transform: uppercase;
@@ -7863,43 +7875,43 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
   }
 
   /* Other Ways to Give page */
-  /* line 3519, ../sass/theme/_page_specific.scss */
+  /* line 3531, ../sass/theme/_page_specific.scss */
   body.node-type-structure.otherwaystogive #main {
     padding-top: 50px;
   }
-  /* line 3521, ../sass/theme/_page_specific.scss */
+  /* line 3533, ../sass/theme/_page_specific.scss */
   body.node-type-structure.otherwaystogive .paragraphs-items-field-paragraphs {
     margin-top: 0;
   }
-  /* line 3525, ../sass/theme/_page_specific.scss */
+  /* line 3537, ../sass/theme/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-top-box {
     margin-top: 0 !important;
   }
-  /* line 3529, ../sass/theme/_page_specific.scss */
+  /* line 3541, ../sass/theme/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item-first {
     padding-top: 30px;
     border-top: 1px solid #9a9a9a;
     border-bottom: 1px solid #9a9a9a;
     padding-bottom: 20px;
   }
-  /* line 3536, ../sass/theme/_page_specific.scss */
+  /* line 3548, ../sass/theme/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item {
     width: 100%;
     position: relative;
     border-bottom: 1px solid #9a9a9a;
     padding-bottom: 20px;
   }
-  /* line 3545, ../sass/theme/_page_specific.scss */
+  /* line 3557, ../sass/theme/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item.other-ways-question .field-name-field-header-text {
     text-transform: none;
   }
-  /* line 3550, ../sass/theme/_page_specific.scss */
+  /* line 3562, ../sass/theme/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item .field-name-field-header-text {
     cursor: pointer;
     position: relative;
     width: 752px;
   }
-  /* line 3554, ../sass/theme/_page_specific.scss */
+  /* line 3566, ../sass/theme/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item .field-name-field-header-text:after {
     content: "";
     display: block;
@@ -7911,12 +7923,12 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     height: 24px;
     background: url(../images/icons/grey-arrow-down.png) top left no-repeat;
   }
-  /* line 3569, ../sass/theme/_page_specific.scss */
+  /* line 3581, ../sass/theme/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-question-first {
     padding-top: 30px;
     border-top: 1px solid #9a9a9a;
   }
-  /* line 3574, ../sass/theme/_page_specific.scss */
+  /* line 3586, ../sass/theme/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-questions-header {
     margin-bottom: -30px !important;
     margin-top: 40px !important;

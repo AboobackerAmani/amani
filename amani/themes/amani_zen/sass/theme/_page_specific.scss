@@ -3107,13 +3107,25 @@
 			display: block;
 			float: left;
 			position: relative;
-			padding-left: 3000px;
+			/*padding-left: 3000px;
 			margin-left: -3000px;
 			padding-right: 3000px;
 			margin-right: -3000px;
-			background:$soft-grey;
+			background:$soft-grey;*/
 			margin-bottom:-71px;
 			margin-top:3em;
+			
+			&:before {
+				content: "";
+				position: absolute;
+				display: block;
+				top: 0px;
+				left: -9998px;
+				height:100%;
+				z-index: -1;
+				border-right: 9999px solid $soft-grey;
+				box-shadow: 9999px 0px 0px 0px $soft-grey;
+			  }
 		}
 		
 		#proj-testimonial-author {
