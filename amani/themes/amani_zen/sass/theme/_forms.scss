@@ -680,8 +680,9 @@ body.node-type-structure.donatepage {
 	.donate-thank-you {
 		display:block;
 		float:left;
-		width:400px;
-		margin-right:40px;
+		width:100%;
+		margin-right:0;
+		margin-bottom:0 !important;
 		.field-name-field-large-header-text {
 			margin-bottom:20px;
 		}
@@ -691,7 +692,7 @@ body.node-type-structure.donatepage {
 		display:block;
 		float:left;
 		width:280px;
-		margin-top:90px !important;
+		margin-top:0 !important;
 		a {
 			width: 270px;
 			margin-top: 56px !important;

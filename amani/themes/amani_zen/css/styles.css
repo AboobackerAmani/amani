@@ -4016,51 +4016,52 @@ body.node-type-structure.donatepage .donate-top-text .field-name-field-large-hea
 body.node-type-structure.donatepage .donate-thank-you {
   display: block;
   float: left;
-  width: 400px;
-  margin-right: 40px;
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: 0 !important;
 }
-/* line 685, ../sass/theme/_forms.scss */
+/* line 686, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .donate-thank-you .field-name-field-large-header-text {
   margin-bottom: 20px;
 }
-/* line 690, ../sass/theme/_forms.scss */
+/* line 691, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .giving-with-confidence {
   display: block;
   float: left;
   width: 280px;
-  margin-top: 90px !important;
+  margin-top: 0 !important;
 }
-/* line 695, ../sass/theme/_forms.scss */
+/* line 696, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .giving-with-confidence a {
   width: 270px;
   margin-top: 56px !important;
   height: 120px;
   line-height: 1.2em;
 }
-/* line 700, ../sass/theme/_forms.scss */
+/* line 701, ../sass/theme/_forms.scss */
 body.node-type-structure.donatepage .giving-with-confidence a.shofterlinkbox:after {
   margin-top: 76px;
 }
 
 /* Become a corporate sponsor contact form */
-/* line 712, ../sass/theme/_forms.scss */
+/* line 713, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform {
   display: block;
   float: left;
   width: 752px;
   margin-top: 30px;
 }
-/* line 719, ../sass/theme/_forms.scss */
+/* line 720, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform .form-item {
   display: inline-block;
   margin-bottom: 10px;
   float: left;
 }
-/* line 725, ../sass/theme/_forms.scss */
+/* line 726, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform label {
   display: none;
 }
-/* line 729, ../sass/theme/_forms.scss */
+/* line 730, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform input {
   border: 0;
   background: #E6E6E6;
@@ -4068,34 +4069,34 @@ body.becomesponsor .block-webform input {
   display: block;
   padding: 10px 20px;
 }
-/* line 737, ../sass/theme/_forms.scss */
+/* line 738, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--company {
   display: block;
   width: 752px;
 }
-/* line 742, ../sass/theme/_forms.scss */
+/* line 743, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--email-address {
   display: block;
   width: 752px;
 }
-/* line 747, ../sass/theme/_forms.scss */
+/* line 748, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--first-name {
   display: block;
   width: 370px;
   margin-right: 10px;
 }
-/* line 753, ../sass/theme/_forms.scss */
+/* line 754, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--last-name {
   display: block;
   width: 372px;
 }
-/* line 758, ../sass/theme/_forms.scss */
+/* line 759, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.form-textarea-wrapper {
   display: block;
   width: 752px;
   margin-bottom: 20px;
 }
-/* line 764, ../sass/theme/_forms.scss */
+/* line 765, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform textarea {
   border: 0;
   background: #E6E6E6;
@@ -4104,7 +4105,7 @@ body.becomesponsor .block-webform textarea {
   padding: 10px 20px;
   height: 210px;
 }
-/* line 773, ../sass/theme/_forms.scss */
+/* line 774, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform input[type="submit"] {
   width: auto;
   background: #474F5E;
