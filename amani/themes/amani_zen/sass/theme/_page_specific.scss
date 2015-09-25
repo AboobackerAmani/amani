@@ -2206,13 +2206,24 @@
 			display: block;
 			z-index: 10;
 			position: relative;
-			padding-left: 3000px;
+			/*padding-left: 3000px;
 			margin-left: -3000px;
 			padding-right: 3000px;
-			margin-right: -3000px;
+			margin-right: -3000px;*/
 			height: 430px;
-			background: #E6E6E6;
-			overflow: hidden;
+			background: $soft-grey;
+			
+			&:before {
+				content: "";
+				position: absolute;
+				display: block;
+				top: 0px;
+				left: -9998px;
+				height:100%;
+				z-index: -1;
+				border-right: 9999px solid $soft-grey;
+				box-shadow: 9999px 0px 0px 0px $soft-grey;
+			  }
 			
 			.view-content {
 				width:980px;
@@ -2227,7 +2238,7 @@
 			
 			.views-field-title {
 				margin-left:300px;
-				margin-top:50px;
+				padding-top:50px;
 				.views-label {
 					display:block;
 					font-size:18px;
