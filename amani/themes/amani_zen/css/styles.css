@@ -7834,6 +7834,66 @@ div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social
     letter-spacing: 2px;
     font-size: 1.4em;
   }
+
+  /* Other Ways to Give page */
+  /* line 3519, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.otherwaystogive #main {
+    padding-top: 50px;
+  }
+  /* line 3521, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.otherwaystogive .paragraphs-items-field-paragraphs {
+    margin-top: 0;
+  }
+  /* line 3525, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.otherwaystogive .other-ways-top-box {
+    margin-top: 0 !important;
+  }
+  /* line 3529, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.otherwaystogive .other-ways-item-first {
+    padding-top: 30px;
+    border-top: 1px solid #9a9a9a;
+    border-bottom: 1px solid #9a9a9a;
+    padding-bottom: 20px;
+  }
+  /* line 3536, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.otherwaystogive .other-ways-item {
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #9a9a9a;
+    padding-bottom: 20px;
+  }
+  /* line 3545, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.otherwaystogive .other-ways-item.other-ways-question .field-name-field-header-text {
+    text-transform: none;
+  }
+  /* line 3550, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.otherwaystogive .other-ways-item .field-name-field-header-text {
+    cursor: pointer;
+    position: relative;
+    width: 752px;
+  }
+  /* line 3554, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.otherwaystogive .other-ways-item .field-name-field-header-text:after {
+    content: "";
+    display: block;
+    float: right;
+    position: relative;
+    margin-top: -15px;
+    padding-right: 20px;
+    width: 12px;
+    height: 24px;
+    background: url(../images/icons/grey-arrow-down.png) top left no-repeat;
+  }
+  /* line 3569, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.otherwaystogive .other-ways-question-first {
+    padding-top: 30px;
+    border-top: 1px solid #9a9a9a;
+  }
+  /* line 3574, ../sass/theme/_page_specific.scss */
+  body.node-type-structure.otherwaystogive .other-ways-questions-header {
+    margin-bottom: -30px !important;
+    margin-top: 40px !important;
+  }
 }
 /* Styling for administrative/editor stuff */
 /* line 5, ../sass/theme/_admin_interface.scss */

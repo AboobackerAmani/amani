@@ -3511,5 +3511,74 @@
 	
 	}
 	
+	
+	/* Other Ways to Give page */
+	
+	body.node-type-structure.otherwaystogive {
+	
+		#main {padding-top:50px;}
+	
+		.paragraphs-items-field-paragraphs {
+			margin-top:0;
+		}
+		
+		.other-ways-top-box {
+			margin-top:0 !important;
+		}
+	
+		.other-ways-item-first {
+			padding-top:30px;
+			border-top:1px solid $text-grey;
+			border-bottom:1px solid $text-grey;
+			padding-bottom:20px;
+		}
+		
+		.other-ways-item {
+		
+			width:100%;
+			position:relative;
+			
+			border-bottom:1px solid $text-grey;
+			padding-bottom:20px;
+			
+			&.other-ways-question {
+				.field-name-field-header-text {
+					text-transform:none;
+				}
+			}
+			
+			.field-name-field-header-text {
+				cursor:pointer;
+				position:relative;
+				width:752px;
+				&:after {
+					content: "";
+					display: block;
+					float: right;
+					position: relative;
+					margin-top: -15px;
+					padding-right: 20px;
+					width: 12px;
+					height: 24px;
+					background: url(../images/icons/grey-arrow-down.png) top left no-repeat;
+				}
+			}
+			
+		}
+		
+		.other-ways-question-first {
+			padding-top:30px;
+			border-top:1px solid $text-grey;
+		}
+		
+		.other-ways-questions-header {
+			margin-bottom:-30px !important;
+			margin-top:40px !important;
+		}
+		
+		
+	
+	}
+	
 
 }

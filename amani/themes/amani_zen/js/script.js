@@ -333,6 +333,24 @@ Drupal.behaviors.paragraphs_adjustments = {
 	
 	});
 	
+
+// Code to control collapse and expansion of blocks on Other Ways to Give page
+
+	$('body.otherwaystogive .other-ways-item .field-name-field-paragraph-text').each(function() {
+	
+		$(this).hide();
+	});
+	
+
+
+	
+	$('body.otherwaystogive .other-ways-item .field-name-field-header-text').click(function() {
+		
+		$(this).next().toggle('fast');
+		
+		
+	
+	});
 	
 
 // Set anchorlink and other boxes to same height
