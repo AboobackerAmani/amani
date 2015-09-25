@@ -803,17 +803,30 @@ div.breadcrumb {
 			
 			.view-id-supporters.view-display-id-block_3 {
 			
-				padding-right: 3000px;
+				  /*padding-right: 3000px;
 				  margin-right: -3000px;
 				  background: #E6E6E6;
 				  padding-left: 3000px;
-				  margin-left: -3000px;
+				  margin-left: -3000px;*/
 				  padding-top: 1em;
 				  padding-bottom: 7em;
 				  clear: both;
 				  display: block;
 				  float: left;
 				  margin-bottom:-201px;
+				  position:relative;
+				  
+				  &:before {
+					content: "";
+					position: absolute;
+					display: block;
+					top: 0px;
+					left: -9998px;
+					height:100%;
+					z-index: -1;
+					border-right: 9999px solid $soft-grey;
+					box-shadow: 9999px 0px 0px 0px $soft-grey;
+				  }
 			
 				h3 {
 					font-size: 1.4em;
