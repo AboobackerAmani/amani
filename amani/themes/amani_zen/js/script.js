@@ -166,6 +166,7 @@ Drupal.behaviors.paragraphs_adjustments = {
 		
 		if (backcolour == 'PG Blue') {
 			$(this).css('background','#59C2ED');
+			$(this).addClass('bluebackground');
 			$(this).css('color','white');
 		}
 		

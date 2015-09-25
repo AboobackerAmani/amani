@@ -183,6 +183,13 @@ div.breadcrumb {
 				border-right: 9999px solid $soft-grey;
 				box-shadow: 9999px 0px 0px 0px $soft-grey;
 			  }
+			  
+			  &.bluebackground {
+			  	&:before {
+			  		border-right: 9999px solid $blue;
+					box-shadow: 9999px 0px 0px 0px $blue;
+			  	}
+			  }
 			
 			.field-name-field-header-text {
 				font-size:1.4em;
