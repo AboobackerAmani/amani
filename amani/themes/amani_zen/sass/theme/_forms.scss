@@ -99,26 +99,29 @@ body.section-contact {
 			float:left;
 			margin-top:1em;
 		}
+		
+		input[type="submit"] {
+			background:$blue;
+			color:white;
+			text-align:left;
+			padding:1em 2em 2em 2em;
+			width:100%;
+			font-size:1.2em;
+			border:0;
+			display:block;
+			float:left;
+			margin-top:2em;
+			position:absolute;
+			bottom:-100px;
+			left:0;
+			&:hover {
+				opacity:0.9;
+			}
+		}
+	
 	}
 	
-	input[type="submit"] {
-		background:$blue;
-		color:white;
-		text-align:left;
-		padding:1em 2em 2em 2em;
-		width:100%;
-		font-size:1.2em;
-		border:0;
-		display:block;
-		float:left;
-		margin-top:2em;
-		position:absolute;
-		bottom:-100px;
-		left:0;
-		&:hover {
-			opacity:0.9;
-		}
-	}
+	
 	
 	
 }
