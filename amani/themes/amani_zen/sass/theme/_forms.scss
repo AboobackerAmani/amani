@@ -717,6 +717,57 @@ body.node-type-structure.donatepage {
 
 }
 
+
+/* Newsletter signup form */
+
+#block-mailchimp-signup-newsletter-signup-form {
+	
+	display:block;
+	position:absolute;
+	top:40px;
+	right:0;
+	width:350px;
+	
+	.mailchimp-signup-subscribe-form-description {
+		margin-bottom:6px;
+	}
+	
+	#edit-submit {
+		background:$orange;
+		margin-left:10px;
+	}
+	
+	.form-item {
+		display:inline-block;
+		float:left;
+		label {
+			font-weight:300;
+			display:none;
+		}
+		
+		input {
+			border:0;
+			margin-bottom:6px;
+		}
+		
+		input#edit-mergevars-email {
+			width:341px;
+		}
+		
+		input#edit-mergevars-fname {
+			width:130px;
+			margin-right:10px;
+		}
+		
+		input#edit-mergevars-lname {
+			width:130px;
+		}
+		
+		
+	}
+}
+
+
 /* Become a corporate sponsor contact form */
 
 body.becomesponsor {

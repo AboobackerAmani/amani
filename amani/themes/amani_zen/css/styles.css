@@ -4054,25 +4054,72 @@ body.node-type-structure.donatepage .giving-with-confidence a.shofterlinkbox:aft
   margin-top: 76px;
 }
 
+/* Newsletter signup form */
+/* line 723, ../sass/theme/_forms.scss */
+#block-mailchimp-signup-newsletter-signup-form {
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 350px;
+}
+/* line 731, ../sass/theme/_forms.scss */
+#block-mailchimp-signup-newsletter-signup-form .mailchimp-signup-subscribe-form-description {
+  margin-bottom: 6px;
+}
+/* line 735, ../sass/theme/_forms.scss */
+#block-mailchimp-signup-newsletter-signup-form #edit-submit {
+  background: #F09416;
+  margin-left: 10px;
+}
+/* line 740, ../sass/theme/_forms.scss */
+#block-mailchimp-signup-newsletter-signup-form .form-item {
+  display: inline-block;
+  float: left;
+}
+/* line 743, ../sass/theme/_forms.scss */
+#block-mailchimp-signup-newsletter-signup-form .form-item label {
+  font-weight: 300;
+  display: none;
+}
+/* line 748, ../sass/theme/_forms.scss */
+#block-mailchimp-signup-newsletter-signup-form .form-item input {
+  border: 0;
+  margin-bottom: 6px;
+}
+/* line 753, ../sass/theme/_forms.scss */
+#block-mailchimp-signup-newsletter-signup-form .form-item input#edit-mergevars-email {
+  width: 341px;
+}
+/* line 757, ../sass/theme/_forms.scss */
+#block-mailchimp-signup-newsletter-signup-form .form-item input#edit-mergevars-fname {
+  width: 130px;
+  margin-right: 10px;
+}
+/* line 762, ../sass/theme/_forms.scss */
+#block-mailchimp-signup-newsletter-signup-form .form-item input#edit-mergevars-lname {
+  width: 130px;
+}
+
 /* Become a corporate sponsor contact form */
-/* line 724, ../sass/theme/_forms.scss */
+/* line 775, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform {
   display: block;
   float: left;
   width: 752px;
   margin-top: 30px;
 }
-/* line 731, ../sass/theme/_forms.scss */
+/* line 782, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform .form-item {
   display: inline-block;
   margin-bottom: 10px;
   float: left;
 }
-/* line 737, ../sass/theme/_forms.scss */
+/* line 788, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform label {
   display: none;
 }
-/* line 741, ../sass/theme/_forms.scss */
+/* line 792, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform input {
   border: 0;
   background: #E6E6E6;
@@ -4080,34 +4127,34 @@ body.becomesponsor .block-webform input {
   display: block;
   padding: 10px 20px;
 }
-/* line 749, ../sass/theme/_forms.scss */
+/* line 800, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--company {
   display: block;
   width: 752px;
 }
-/* line 754, ../sass/theme/_forms.scss */
+/* line 805, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--email-address {
   display: block;
   width: 752px;
 }
-/* line 759, ../sass/theme/_forms.scss */
+/* line 810, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--first-name {
   display: block;
   width: 370px;
   margin-right: 10px;
 }
-/* line 765, ../sass/theme/_forms.scss */
+/* line 816, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.webform-component--last-name {
   display: block;
   width: 372px;
 }
-/* line 770, ../sass/theme/_forms.scss */
+/* line 821, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform div.form-textarea-wrapper {
   display: block;
   width: 752px;
   margin-bottom: 20px;
 }
-/* line 776, ../sass/theme/_forms.scss */
+/* line 827, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform textarea {
   border: 0;
   background: #E6E6E6;
@@ -4116,7 +4163,7 @@ body.becomesponsor .block-webform textarea {
   padding: 10px 20px;
   height: 210px;
 }
-/* line 785, ../sass/theme/_forms.scss */
+/* line 836, ../sass/theme/_forms.scss */
 body.becomesponsor .block-webform input[type="submit"] {
   width: auto;
   background: #474F5E;

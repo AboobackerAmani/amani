@@ -652,7 +652,23 @@ Drupal.behaviors.paragraphs_adjustments = {
 		}
 		
 	});
-
+	
+	// Mailchimp version
+	
+	
+	$('#block-mailchimp-signup-newsletter-signup-form .form-item label').each(function() {
+	
+		var maillabeltext = $(this).text();
+		
+		if ( $(this).next().is('input') ) {
+			$(this).next().attr('placeholder',maillabeltext);
+		}
+		
+		if ( $(this).next().is('div') ) {
+			$(this).next().find('textarea').attr('placeholder',maillabeltext);
+		}
+		
+	});
 
 // Show/hide submenu items on hover 
 
