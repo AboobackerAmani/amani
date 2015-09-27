@@ -4260,7 +4260,41 @@ body.becomesponsor .block-webform input[type="submit"] {
   font-size: 14px;
 }
 
-/* line 85, ../sass/theme/_footer.scss */
+/* line 89, ../sass/theme/_footer.scss */
+#footer #block-menu-menu-amani-main-menu ul {
+  margin-bottom: 0;
+}
+/* line 92, ../sass/theme/_footer.scss */
+#footer #block-menu-menu-amani-main-menu ul li {
+  float: none;
+  display: block;
+}
+/* line 98, ../sass/theme/_footer.scss */
+#footer #block-menu-menu-amani-main-menu div[id*="block-menu-menu-social-media"] {
+  width: 80%;
+  float: left;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 0;
+  position: relative;
+  right: auto;
+  left: -3px;
+  top: 0;
+}
+/* line 108, ../sass/theme/_footer.scss */
+#footer #block-menu-menu-amani-main-menu div[id*="block-menu-menu-social-media"] a {
+  color: #fff;
+  font-size: 16px;
+}
+/* line 113, ../sass/theme/_footer.scss */
+#footer #block-menu-menu-amani-main-menu div[id*="block-menu-menu-social-media"] ul li {
+  display: inline;
+  width: auto;
+  clear: none;
+  float: left;
+}
+
+/* line 124, ../sass/theme/_footer.scss */
 #footer {
   background-color: #474F5E;
   color: #fff;
@@ -4283,12 +4317,12 @@ body.becomesponsor .block-webform input[type="submit"] {
   clear: both;
 }
 @media all and (min-width: 20px) {
-  /* line 85, ../sass/theme/_footer.scss */
+  /* line 124, ../sass/theme/_footer.scss */
   #footer {
     padding-top: 40px;
   }
 }
-/* line 102, ../sass/theme/_footer.scss */
+/* line 141, ../sass/theme/_footer.scss */
 #footer:before {
   content: "";
   position: absolute;
@@ -4300,7 +4334,7 @@ body.becomesponsor .block-webform input[type="submit"] {
   border-right: 9999px solid #474F5E;
   box-shadow: 9999px 0px 0px 0px #474F5E;
 }
-/* line 114, ../sass/theme/_footer.scss */
+/* line 153, ../sass/theme/_footer.scss */
 #footer a {
   color: #fff;
 }
@@ -4308,7 +4342,7 @@ body.becomesponsor .block-webform input[type="submit"] {
 #footer a:focus, #footer a:hover, #footer a:active {
   color: #1696ca;
 }
-/* line 119, ../sass/theme/_footer.scss */
+/* line 158, ../sass/theme/_footer.scss */
 #footer div[id*="block-menu-menu-meta"],
 #footer div[id*="block-search-form"] {
   position: absolute !important;
@@ -4317,11 +4351,11 @@ body.becomesponsor .block-webform input[type="submit"] {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
-/* line 125, ../sass/theme/_footer.scss */
+/* line 164, ../sass/theme/_footer.scss */
 #footer #block-bean-amani-powered-by {
   width: 30%;
 }
-/* line 129, ../sass/theme/_footer.scss */
+/* line 168, ../sass/theme/_footer.scss */
 #footer #block-bean-amani-powered-by .field-item > img {
   position: absolute !important;
   height: 1px;
@@ -4329,23 +4363,23 @@ body.becomesponsor .block-webform input[type="submit"] {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
-/* line 135, ../sass/theme/_footer.scss */
+/* line 174, ../sass/theme/_footer.scss */
 #footer #block-menu-menu-amani-main-menu {
   width: 70%;
 }
-/* line 139, ../sass/theme/_footer.scss */
+/* line 178, ../sass/theme/_footer.scss */
 #footer #block-menu-menu-amani-main-menu li {
   width: 10em;
   display: inline-block;
   float: left;
 }
-/* line 144, ../sass/theme/_footer.scss */
+/* line 183, ../sass/theme/_footer.scss */
 #footer #block-menu-menu-amani-main-menu li a {
   font-size: 14px;
   font-size: 1.07692rem;
   letter-spacing: 0.5px;
 }
-/* line 149, ../sass/theme/_footer.scss */
+/* line 188, ../sass/theme/_footer.scss */
 #footer #block-menu-menu-amani-main-menu li:nth-child(2n+1) {
   clear: left;
 }
@@ -4456,23 +4490,6 @@ div[id*="block-menu-menu-social-media"] a {
 /* line 63, ../sass/_mixins.scss */
 div[id*="block-menu-menu-social-media"] a:focus, div[id*="block-menu-menu-social-media"] a:hover, div[id*="block-menu-menu-social-media"] a:active {
   color: #59c2ed;
-}
-
-/* line 89, ../sass/theme/_header.scss */
-#footer div[id*="block-menu-menu-social-media"] {
-  width: 70%;
-  float: right;
-  text-align: left;
-  margin-top: 20px;
-  margin-left: 0;
-  position: relative;
-  right: auto;
-  left: -3px;
-  top: 0;
-}
-/* line 99, ../sass/theme/_header.scss */
-#footer div[id*="block-menu-menu-social-media"] a {
-  color: #fff;
 }
 
 /**

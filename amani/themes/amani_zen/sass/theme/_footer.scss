@@ -78,9 +78,48 @@
 		color:$dark-blue-text;
 		font-size:14px;
 	}
+	
+	
 
 }
 
+#footer {
+	#block-menu-menu-amani-main-menu {
+	
+		ul {
+			margin-bottom:0;
+			
+			li {
+				float:none;
+				display:block;
+			}
+		}
+	
+		  div[id*="block-menu-menu-social-media"] {
+			width: 80%;
+			float: left;
+			text-align: left;
+			margin-top: 20px;
+			margin-left: 0;
+			position: relative;
+			right: auto;
+			left: -3px;
+			top: 0;
+				a {
+					color: $white;
+					font-size:16px;
+				}
+				ul {
+					li {
+						display:inline;
+						width:auto;
+						clear:none;
+						float:left;
+					}
+				}
+		  }
+	}
+}
 
 #footer {
   @include zen-grid-container;

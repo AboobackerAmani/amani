@@ -669,6 +669,13 @@ Drupal.behaviors.paragraphs_adjustments = {
 		}
 		
 	});
+	
+	
+// Copy top social icons to footer
+
+	$('#block-menu-menu-social-media').clone().insertAfter('#footer ul.menu');
+	
+	
 
 // Show/hide submenu items on hover 
 
