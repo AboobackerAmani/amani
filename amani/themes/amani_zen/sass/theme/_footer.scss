@@ -48,6 +48,39 @@
 	}
 }
 
+.region.region-bottom {
+
+	background:$dark-blue;
+	position:relative;
+	
+	&:before {
+		content: "";
+		position: absolute;
+		display: block;
+		top: 0px;
+		left: -9998px;
+		height: 100%;
+		z-index: -1;
+		border-right: 9999px solid $dark-blue;
+		box-shadow: 9999px 0px 0px 0px $dark-blue;
+	}
+	
+	.block {
+		width:960px;
+		padding:10px;
+		margin:0 auto;
+	}
+	
+	#copyright-footer {
+		display:block;
+		margin-left:30%;
+		color:$dark-blue-text;
+		font-size:14px;
+	}
+
+}
+
+
 #footer {
   @include zen-grid-container;
   background-color: $grey;
