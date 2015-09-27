@@ -746,7 +746,6 @@ body.not-logged-in #page {
 .region-bottom {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
@@ -4231,10 +4230,11 @@ body.becomesponsor .block-webform input[type="submit"] {
 
 /* line 51, ../sass/theme/_footer.scss */
 .region.region-bottom {
+  max-width: 1200px;
   background: #323842;
   position: relative;
 }
-/* line 56, ../sass/theme/_footer.scss */
+/* line 57, ../sass/theme/_footer.scss */
 .region.region-bottom:before {
   content: "";
   position: absolute;
@@ -4246,13 +4246,13 @@ body.becomesponsor .block-webform input[type="submit"] {
   border-right: 9999px solid #323842;
   box-shadow: 9999px 0px 0px 0px #323842;
 }
-/* line 68, ../sass/theme/_footer.scss */
+/* line 69, ../sass/theme/_footer.scss */
 .region.region-bottom .block {
   width: 960px;
   padding: 10px;
   margin: 0 auto;
 }
-/* line 74, ../sass/theme/_footer.scss */
+/* line 75, ../sass/theme/_footer.scss */
 .region.region-bottom #copyright-footer {
   display: block;
   margin-left: 30%;
@@ -4260,7 +4260,7 @@ body.becomesponsor .block-webform input[type="submit"] {
   font-size: 14px;
 }
 
-/* line 84, ../sass/theme/_footer.scss */
+/* line 85, ../sass/theme/_footer.scss */
 #footer {
   background-color: #474F5E;
   color: #fff;
@@ -4283,12 +4283,12 @@ body.becomesponsor .block-webform input[type="submit"] {
   clear: both;
 }
 @media all and (min-width: 20px) {
-  /* line 84, ../sass/theme/_footer.scss */
+  /* line 85, ../sass/theme/_footer.scss */
   #footer {
     padding-top: 40px;
   }
 }
-/* line 101, ../sass/theme/_footer.scss */
+/* line 102, ../sass/theme/_footer.scss */
 #footer:before {
   content: "";
   position: absolute;
@@ -4300,7 +4300,7 @@ body.becomesponsor .block-webform input[type="submit"] {
   border-right: 9999px solid #474F5E;
   box-shadow: 9999px 0px 0px 0px #474F5E;
 }
-/* line 113, ../sass/theme/_footer.scss */
+/* line 114, ../sass/theme/_footer.scss */
 #footer a {
   color: #fff;
 }
@@ -4308,7 +4308,7 @@ body.becomesponsor .block-webform input[type="submit"] {
 #footer a:focus, #footer a:hover, #footer a:active {
   color: #1696ca;
 }
-/* line 118, ../sass/theme/_footer.scss */
+/* line 119, ../sass/theme/_footer.scss */
 #footer div[id*="block-menu-menu-meta"],
 #footer div[id*="block-search-form"] {
   position: absolute !important;
@@ -4317,11 +4317,11 @@ body.becomesponsor .block-webform input[type="submit"] {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
-/* line 124, ../sass/theme/_footer.scss */
+/* line 125, ../sass/theme/_footer.scss */
 #footer #block-bean-amani-powered-by {
   width: 30%;
 }
-/* line 128, ../sass/theme/_footer.scss */
+/* line 129, ../sass/theme/_footer.scss */
 #footer #block-bean-amani-powered-by .field-item > img {
   position: absolute !important;
   height: 1px;
@@ -4329,23 +4329,23 @@ body.becomesponsor .block-webform input[type="submit"] {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
-/* line 134, ../sass/theme/_footer.scss */
+/* line 135, ../sass/theme/_footer.scss */
 #footer #block-menu-menu-amani-main-menu {
   width: 70%;
 }
-/* line 138, ../sass/theme/_footer.scss */
+/* line 139, ../sass/theme/_footer.scss */
 #footer #block-menu-menu-amani-main-menu li {
   width: 10em;
   display: inline-block;
   float: left;
 }
-/* line 143, ../sass/theme/_footer.scss */
+/* line 144, ../sass/theme/_footer.scss */
 #footer #block-menu-menu-amani-main-menu li a {
   font-size: 14px;
   font-size: 1.07692rem;
   letter-spacing: 0.5px;
 }
-/* line 148, ../sass/theme/_footer.scss */
+/* line 149, ../sass/theme/_footer.scss */
 #footer #block-menu-menu-amani-main-menu li:nth-child(2n+1) {
   clear: left;
 }
