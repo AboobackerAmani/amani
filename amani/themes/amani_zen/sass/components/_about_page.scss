@@ -1,0 +1,17 @@
+.view-about-page {
+  padding: 30px 0;
+  @include breakpoint(768px) {
+    padding: 30px 100px;
+  }
+  .views-field-body {
+    h2 {
+      color: #d39cc3;
+      border-top: 3px solid #d39cc3;
+      text-transform: uppercase;
+      font-family: $avenir-condensed;
+      font-size: 30px;
+      margin-top: 2em;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -929,6 +929,27 @@ body {
   }
 }
 /* Component (SMACSS module) rules */
+/* line 1, ../sass/components/_about_page.scss */
+.view-about-page {
+  padding: 30px 0;
+}
+@media (min-width: 768px) {
+  /* line 1, ../sass/components/_about_page.scss */
+  .view-about-page {
+    padding: 30px 100px;
+  }
+}
+/* line 7, ../sass/components/_about_page.scss */
+.view-about-page .views-field-body h2 {
+  color: #d39cc3;
+  border-top: 3px solid #d39cc3;
+  text-transform: uppercase;
+  font-family: "Avenir Next Condensed", sans-serif;
+  font-size: 30px;
+  margin-top: 2em;
+  margin-bottom: 0;
+}
+
 /**
  * @file
  * Style for drupal blocks.
@@ -2886,7 +2907,7 @@ tr.selected td {
 /* line 808, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1440018546');
+  background-image: url('../images/progress.gif?1443462806');
 }
 
 @media all and (max-width: 768px) {
@@ -3303,7 +3324,7 @@ tr.selected td {
 }
 /* line 61, ../sass/_mixins.scss */
 .form-submit:hover, .form-submit:focus {
-  background-color: #5a595c;
+  background-color: #5b595c;
 }
 
 /* line 12, ../sass/theme/_layout.scss */
