@@ -1,14 +1,18 @@
 .view-team {
   .view-filters {
     background-color: #f7f6f5;
-    padding: 5px 30px 10px;
+    padding: 5px 10px 10px;
     margin: 10px 0 25px;
     justify-content: center;
     width: 100%;
-    display: flex;
+    display: block;
+    @include border-top-left-radius(3px);
+    @include border-top-right-radius(3px);
+    @include box-shadow(0px 2px 1px 0px rgba(black,0.24));
     @include breakpoint(768px) {
-      width: 888px;
+      display: flex;
       margin: 10px auto 25px;
+      padding: 5px 30px 10px;
     }
     label {
       text-transform: uppercase;
@@ -16,13 +20,36 @@
       font-size: 12px;
       color: #ce9bc0;
     }
+    .views-exposed-widget {
+      padding-right: 0;
+      @include breakpoint(768px) {
+        padding-right: 1em;
+      }
+    }
+    .views-widget-filter-keys,
+    .views-widget-filter-field_team_member_type_tid {
+      display: block;
+      clear: both;
+      width: 100%;
+      @include breakpoint(768px) {
+        display: inline-block;
+        width: inherit;
+        clear: none;
+      }
+    }
     .form-type-textfield input,
     .form-type-select select {
       width: 100%;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      @include border-radius(3px);
       @include breakpoint(768px) {
-        width: 250px;
+        width: 330px;
         height: 28px;
       }
+    }
+    .ajax-progress {
+      position: absolute;
     }
     // .views-submit-button {
     //   .form-submit {
@@ -46,6 +73,7 @@
       flex-grow: 1;
       // max-width: 370px;
       border-top: 3px solid #ce9bc0;
+      padding-top: 20px;
       @include breakpoint(768px) {
         width: 30%;
         margin: 20px 15px 0;
@@ -56,6 +84,9 @@
         &.views-row-last,
         &:nth-child(3n+3) {
           margin-right: 0;
+        }
+        &.views-row-first.views-row-last {
+          max-width: 30%;
         }
       }
       .views-field-field-team-image {
@@ -79,6 +110,9 @@
         color: #ce9bc0;
         font-family: $avenir-condensed;
         font-size: 18px;
+      }
+      .views-field-field-team-bio {
+        margin-top: 20px;
       }
       .views-field-view-node {
         a {
