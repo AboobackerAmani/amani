@@ -1,0 +1,51 @@
+/*
+  Partners page
+*/
+.page-partners {
+  .view-partners {
+    .view-content {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      .views-row {
+        width: 100%;
+        flex-grow: 1;
+        @include breakpoint(768px) {
+          width: 30%;
+          margin: 20px 15px;
+          &.views-row-first,
+          &:nth-child(3n+4) {
+            margin-left: 0;
+          }
+          &.views-row-last,
+          &:nth-child(3n+3) {
+            margin-right: 0;
+          }
+          &.views-row-first.views-row-last {
+            max-width: 30%;
+          }
+        }
+        .views-field-title {
+          a {
+            display: block;
+            border-top: 3px solid #d29ec2;
+            color: #d29ec2;
+            text-transform: uppercase;
+            padding-top: 3px;
+            font-family: $avenir-condensed;
+            font-size: 16px;
+          }
+        }
+        .views-field-field-image {
+          text-align: center;
+          padding-top: 22px;
+          padding-bottom: 22px;
+          img {
+            max-width: 264px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
