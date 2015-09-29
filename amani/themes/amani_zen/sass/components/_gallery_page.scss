@@ -1,0 +1,22 @@
+.node-type-media-gallery {
+  .node-media-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    .links {
+      display: none;
+    }
+  }
+  .media-gallery-item {
+    border: none;
+    margin-bottom: 7%;
+  }
+  .field-items {
+    .field-item {
+      width: 50% !important;
+      @include breakpoint(768px) {
+        width: 33.3% !important;
+      }
+    }
+  }
+}

@@ -1502,6 +1502,32 @@ body {
   margin-right: 5px;
 }
 
+/* line 2, ../sass/components/_gallery_page.scss */
+.node-type-media-gallery .node-media-gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+/* line 6, ../sass/components/_gallery_page.scss */
+.node-type-media-gallery .node-media-gallery .links {
+  display: none;
+}
+/* line 10, ../sass/components/_gallery_page.scss */
+.node-type-media-gallery .media-gallery-item {
+  border: none;
+  margin-bottom: 7%;
+}
+/* line 15, ../sass/components/_gallery_page.scss */
+.node-type-media-gallery .field-items .field-item {
+  width: 50% !important;
+}
+@media (min-width: 768px) {
+  /* line 15, ../sass/components/_gallery_page.scss */
+  .node-type-media-gallery .field-items .field-item {
+    width: 33.3% !important;
+  }
+}
+
 /* line 7, ../sass/components/_header.scss */
 .region-header {
   margin: 20px auto 0;
