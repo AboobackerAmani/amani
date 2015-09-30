@@ -1,0 +1,202 @@
+/*
+  Program page and node page
+*/
+
+
+.page-programs,
+.node-type-project { 
+  #content {
+    width: 100%;
+    margin: 0;
+    @include breakpoint(768px) {
+      @include zen-grid-item(8, 1);
+    }
+  }
+  
+  .sidebars {
+    width: 100%;
+    margin: 0;
+    @include breakpoint(768px) {
+      @include zen-grid-item(4, 1);
+      margin: 0;
+      float: right;
+    }
+  }
+  
+  .region-sidebar-second {
+    margin: 0;
+    width: 100%;
+  }
+  
+  //main content
+  #content .view-content {
+    margin-top: 40px;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    
+    .views-row {
+      width: 100%;
+      flex-grow: 1;
+      -webkit-flex-grow: 1;
+      // max-width: 370px;
+      border-top: 3px solid $purple-primary;
+      padding-bottom: 20px;
+      
+      @include breakpoint(768px) {
+        width: 48%;
+        margin: 0 15px 20px;
+        &.views-row-first,
+        &:nth-child(2n+1) {
+          margin-left: 0;
+        }
+        &.views-row-last,
+        &:nth-child(2n+2) {
+          margin-right: 0;
+        }
+        &.views-row-first.views-row-last {
+          max-width: 50%;
+        }
+      }
+    }
+    
+    .views-field-title {
+      font-family: $avenir-condensed;
+      font-size: 16px;
+      font-weight: $fw-normal;
+      margin-bottom: 30px;
+      padding-top: 4px;
+      
+      a {
+        color: $purple-primary;
+        text-transform: uppercase;
+        line-height: 1.5;
+        letter-spacing: 1px;
+      }
+    }
+    
+    .views-field-field-image {
+      height: 250px;
+      overflow-y: hidden;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    
+    .views-field-body {
+      color: $grey-darker;
+      line-height: 1.8;
+      margin-top: 10px;
+    }
+    
+    .views-field-title-1 a {
+      font-family: $avenir-condensed;
+      color: $purple;
+    }
+    
+  }
+  
+  //side bar
+  .sidebars {
+    
+    .view-content {
+      border-bottom: 3px solid $purple-alt;
+    }
+    
+    h2.block-title {
+      font-family: $avenir-condensed;
+      font-size: 16px;
+      font-weight: $fw-normal;
+      letter-spacing: 1px;
+      line-height: 1.5;
+      color: $purple-alt;
+      border-bottom: 3px solid $purple-alt;
+      margin-top: 40px;
+    }
+    
+    //Get involved block
+    .view-get-involved .views-row {
+      margin: 10px 0 10px 40px;
+      border-bottom: 1px solid $purple-alt;
+      padding-bottom: 20px;
+      
+      &.views-row-last {
+        border-bottom: 0;
+        margin-bottom: 0;
+      }
+      
+      .views-field-title a {
+        font-family: $avenir-condensed;
+        font-size: 16px;
+        font-weight: $fw-normal;
+        letter-spacing: 1px;
+        color: $purple-primary;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+        
+        &:before {
+          content: ">> ";
+          color: $purple-alt;
+          font-size: 10px;
+          margin-left: -19px;
+        }
+      }
+      
+      .views-field-field-image img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//Other Projects and Campaigns block of note page
+.node-type-project {
+  .sidebars {
+    border: 1px solid $purple-primary;
+    box-sizing: border-box;
+    padding: 10px 0 80px;
+    
+    .view-content {
+      border-bottom: 0;
+    }
+    
+    h2.block-title  {
+      font-size: 18px;
+      border-bottom: 3px solid $purple-primary;
+    }
+    
+    .views-field-title {
+      padding: 15px 0;
+      a {
+        font-family: $avenir-condensed;
+        font-size: 16px;
+        font-weight: $fw-normal;
+        letter-spacing: 1px;
+        color: $purple-primary;
+        text-transform: uppercase;
+      }
+    } 
+    
+    .views-row  {
+      border-bottom: 3px solid $purple-primary;
+      padding-bottom: 20px;
+      
+      .views-field-field-image {
+        margin-bottom: 10px;
+        
+        img {
+          width: 100%;
+        }
+      }
+      
+      .views-field-body {
+        color: $grey-medium;
+        line-height: 1.8;
+      }
+    }
+  }
+}
