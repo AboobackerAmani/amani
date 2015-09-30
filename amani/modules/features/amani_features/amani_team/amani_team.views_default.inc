@@ -131,7 +131,7 @@ function amani_team_views_default_views() {
   $handler->display->display_options['filters']['keys']['group'] = 1;
   $handler->display->display_options['filters']['keys']['exposed'] = TRUE;
   $handler->display->display_options['filters']['keys']['expose']['operator_id'] = 'keys_op';
-  $handler->display->display_options['filters']['keys']['expose']['label'] = 'Search';
+  $handler->display->display_options['filters']['keys']['expose']['label'] = 'Search Name';
   $handler->display->display_options['filters']['keys']['expose']['operator'] = 'keys_op';
   $handler->display->display_options['filters']['keys']['expose']['identifier'] = 'keys';
   $handler->display->display_options['filters']['keys']['expose']['remember_roles'] = array(
@@ -152,7 +152,7 @@ function amani_team_views_default_views() {
   $handler->display->display_options['filters']['field_team_member_type_tid']['field'] = 'field_team_member_type_tid';
   $handler->display->display_options['filters']['field_team_member_type_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['operator_id'] = 'field_team_member_type_tid_op';
-  $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['label'] = 'Team member type (field_team_member_type)';
+  $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['label'] = 'Filter by Team';
   $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['operator'] = 'field_team_member_type_tid_op';
   $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['identifier'] = 'field_team_member_type_tid';
   $handler->display->display_options['filters']['field_team_member_type_tid']['expose']['remember_roles'] = array(
@@ -188,8 +188,8 @@ function amani_team_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Read more'),
-    t('Search'),
-    t('Team member type (field_team_member_type)'),
+    t('Search Name'),
+    t('Filter by Team'),
     t('Page'),
   );
   $export['team'] = $view;
