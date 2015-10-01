@@ -41,7 +41,14 @@
     padding: 20px;
     position: absolute;
     right: 0;
+    left: 0;
+    margin: 0 auto;
     top: -700px;
+    @include breakpoint(768px) {
+       right: 0;
+       left: auto;
+       margin-right: 0;
+    }
     
     h3 {
       font-family: $avenir-condensed;
@@ -100,13 +107,22 @@
     
     .views-row {
       //@include zen-grid-item(4, 1);
-      width: 31%;
+      width: 47%;
       border: 1px solid #cccccc;
       display: inline-block;
       margin: 12px 1%;
       padding: 10px;
       vertical-align: top;
       min-height: 120px;
+      
+      @include breakpoint(768px) {
+       width: 31%;
+       margin: 12px 1%;
+      }
+      
+      @media (max-width:480px) {
+        width: 100%;
+      }
     }
     
     .views-field-title a {
