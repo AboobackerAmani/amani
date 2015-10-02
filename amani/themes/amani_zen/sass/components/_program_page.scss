@@ -40,8 +40,8 @@
     
     .views-row {
       width: 100%;
-      //flex-grow: 1;
-      //-webkit-flex-grow: 1;
+      flex-grow: 0;
+      -webkit-flex-grow: 0;
       border-top: 3px solid $purple-primary;
       padding-bottom: 20px;
       
@@ -59,6 +59,14 @@
         &.views-row-first.views-row-last {
           max-width: 50%;
         }
+      }
+    }
+    @media (max-width: 1169px) {
+      .views-row {
+        flex-grow: 1;
+        -webkit-flex-grow: 1;
+        margin-left: 0;
+        width: 100%;
       }
     }
     
