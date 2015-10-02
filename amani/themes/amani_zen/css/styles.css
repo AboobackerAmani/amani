@@ -3085,8 +3085,6 @@ tr.selected td {
 .page-programs #content .view-content .views-row,
 .node-type-project #content .view-content .views-row {
   width: 100%;
-  flex-grow: 1;
-  -webkit-flex-grow: 1;
   border-top: 3px solid #ce9bc0;
   padding-bottom: 20px;
 }
@@ -3097,25 +3095,25 @@ tr.selected td {
     width: 48%;
     margin: 0 15px 20px;
   }
-  /* line 52, ../sass/components/_program_page.scss */
+  /* line 51, ../sass/components/_program_page.scss */
   .page-programs #content .view-content .views-row.views-row-first, .page-programs #content .view-content .views-row:nth-child(2n+1),
   .node-type-project #content .view-content .views-row.views-row-first,
   .node-type-project #content .view-content .views-row:nth-child(2n+1) {
     margin-left: 0;
   }
-  /* line 56, ../sass/components/_program_page.scss */
+  /* line 55, ../sass/components/_program_page.scss */
   .page-programs #content .view-content .views-row.views-row-last, .page-programs #content .view-content .views-row:nth-child(2n+2),
   .node-type-project #content .view-content .views-row.views-row-last,
   .node-type-project #content .view-content .views-row:nth-child(2n+2) {
     margin-right: 0;
   }
-  /* line 60, ../sass/components/_program_page.scss */
+  /* line 59, ../sass/components/_program_page.scss */
   .page-programs #content .view-content .views-row.views-row-first.views-row-last,
   .node-type-project #content .view-content .views-row.views-row-first.views-row-last {
     max-width: 50%;
   }
 }
-/* line 66, ../sass/components/_program_page.scss */
+/* line 65, ../sass/components/_program_page.scss */
 .page-programs #content .view-content .views-field-title,
 .node-type-project #content .view-content .views-field-title {
   font-family: "Avenir Next Condensed", sans-serif;
@@ -3124,7 +3122,7 @@ tr.selected td {
   margin-bottom: 30px;
   padding-top: 4px;
 }
-/* line 73, ../sass/components/_program_page.scss */
+/* line 72, ../sass/components/_program_page.scss */
 .page-programs #content .view-content .views-field-title a,
 .node-type-project #content .view-content .views-field-title a {
   color: #ce9bc0;
@@ -3132,37 +3130,37 @@ tr.selected td {
   line-height: 1.5;
   letter-spacing: 1px;
 }
-/* line 81, ../sass/components/_program_page.scss */
+/* line 80, ../sass/components/_program_page.scss */
 .page-programs #content .view-content .views-field-field-image,
 .node-type-project #content .view-content .views-field-field-image {
   height: 250px;
   overflow-y: hidden;
 }
-/* line 84, ../sass/components/_program_page.scss */
+/* line 83, ../sass/components/_program_page.scss */
 .page-programs #content .view-content .views-field-field-image img,
 .node-type-project #content .view-content .views-field-field-image img {
   width: 100%;
   height: auto;
 }
-/* line 90, ../sass/components/_program_page.scss */
+/* line 89, ../sass/components/_program_page.scss */
 .page-programs #content .view-content .views-field-body,
 .node-type-project #content .view-content .views-field-body {
   color: #282828;
   line-height: 1.8;
   margin-top: 10px;
 }
-/* line 96, ../sass/components/_program_page.scss */
+/* line 95, ../sass/components/_program_page.scss */
 .page-programs #content .view-content .views-field-title-1 a,
 .node-type-project #content .view-content .views-field-title-1 a {
   font-family: "Avenir Next Condensed", sans-serif;
   color: #784580;
 }
-/* line 106, ../sass/components/_program_page.scss */
+/* line 105, ../sass/components/_program_page.scss */
 .page-programs .sidebars .view-content,
 .node-type-project .sidebars .view-content {
   border-bottom: 3px solid #513e79;
 }
-/* line 110, ../sass/components/_program_page.scss */
+/* line 109, ../sass/components/_program_page.scss */
 .page-programs .sidebars h2.block-title,
 .node-type-project .sidebars h2.block-title {
   font-family: "Avenir Next Condensed", sans-serif;
@@ -3172,22 +3170,22 @@ tr.selected td {
   line-height: 1.5;
   color: #513e79;
   border-bottom: 3px solid #513e79;
-  margin-top: 40px;
+  margin-top: 35px;
 }
-/* line 122, ../sass/components/_program_page.scss */
+/* line 121, ../sass/components/_program_page.scss */
 .page-programs .sidebars .view-get-involved .views-row,
 .node-type-project .sidebars .view-get-involved .views-row {
   margin: 10px 0 10px 40px;
   border-bottom: 1px solid #513e79;
   padding-bottom: 20px;
 }
-/* line 127, ../sass/components/_program_page.scss */
+/* line 126, ../sass/components/_program_page.scss */
 .page-programs .sidebars .view-get-involved .views-row.views-row-last,
 .node-type-project .sidebars .view-get-involved .views-row.views-row-last {
   border-bottom: 0;
   margin-bottom: 0;
 }
-/* line 132, ../sass/components/_program_page.scss */
+/* line 131, ../sass/components/_program_page.scss */
 .page-programs .sidebars .view-get-involved .views-row .views-field-title a,
 .node-type-project .sidebars .view-get-involved .views-row .views-field-title a {
   font-family: "Avenir Next Condensed", sans-serif;
@@ -3198,40 +3196,51 @@ tr.selected td {
   text-transform: uppercase;
   padding-bottom: 10px;
 }
-/* line 141, ../sass/components/_program_page.scss */
+/* line 140, ../sass/components/_program_page.scss */
 .page-programs .sidebars .view-get-involved .views-row .views-field-title a:before,
 .node-type-project .sidebars .view-get-involved .views-row .views-field-title a:before {
   content: ">> ";
   color: #513e79;
   font-size: 10px;
   margin-left: -19px;
+  position: relative;
+  top: -2px;
 }
-/* line 149, ../sass/components/_program_page.scss */
+/* line 150, ../sass/components/_program_page.scss */
 .page-programs .sidebars .view-get-involved .views-row .views-field-field-image img,
 .node-type-project .sidebars .view-get-involved .views-row .views-field-field-image img {
   width: 100%;
+  margin: 5px 0;
+}
+/* line 155, ../sass/components/_program_page.scss */
+.page-programs .sidebars .view-get-involved .views-row .views-more-link,
+.node-type-project .sidebars .view-get-involved .views-row .views-more-link {
+  font-family: "Avenir Next Condensed",sans-serif;
+  clear: both;
+  display: block;
+  color: #784580;
 }
 
-/* line 158, ../sass/components/_program_page.scss */
+/* line 167, ../sass/components/_program_page.scss */
 .node-type-project .sidebars {
   border: 1px solid #ce9bc0;
   box-sizing: border-box;
   padding: 10px 0 80px;
 }
-/* line 163, ../sass/components/_program_page.scss */
+/* line 172, ../sass/components/_program_page.scss */
 .node-type-project .sidebars .view-content {
   border-bottom: 0;
 }
-/* line 167, ../sass/components/_program_page.scss */
+/* line 176, ../sass/components/_program_page.scss */
 .node-type-project .sidebars h2.block-title {
   font-size: 18px;
   border-bottom: 3px solid #ce9bc0;
 }
-/* line 172, ../sass/components/_program_page.scss */
+/* line 181, ../sass/components/_program_page.scss */
 .node-type-project .sidebars .views-field-title {
   padding: 15px 0;
 }
-/* line 174, ../sass/components/_program_page.scss */
+/* line 183, ../sass/components/_program_page.scss */
 .node-type-project .sidebars .views-field-title a {
   font-family: "Avenir Next Condensed", sans-serif;
   font-size: 16px;
@@ -3240,20 +3249,20 @@ tr.selected td {
   color: #ce9bc0;
   text-transform: uppercase;
 }
-/* line 184, ../sass/components/_program_page.scss */
+/* line 193, ../sass/components/_program_page.scss */
 .node-type-project .sidebars .views-row {
   border-bottom: 3px solid #ce9bc0;
   padding-bottom: 20px;
 }
-/* line 188, ../sass/components/_program_page.scss */
+/* line 197, ../sass/components/_program_page.scss */
 .node-type-project .sidebars .views-row .views-field-field-image {
   margin-bottom: 10px;
 }
-/* line 191, ../sass/components/_program_page.scss */
+/* line 200, ../sass/components/_program_page.scss */
 .node-type-project .sidebars .views-row .views-field-field-image img {
   width: 100%;
 }
-/* line 196, ../sass/components/_program_page.scss */
+/* line 205, ../sass/components/_program_page.scss */
 .node-type-project .sidebars .views-row .views-field-body {
   color: #474f5e;
   line-height: 1.8;
