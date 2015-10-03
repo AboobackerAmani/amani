@@ -211,14 +211,18 @@ $tabs-border: $soft-grey;
  * Use 10 grid columns for larger screens.
 */
 
-//$zen-column-count: 10; 
+//$zen-column-count: 10;
 //$zen-gutter-width: 10px;
 
 
 //break points
 $breakpoint:  20px /*768px*/;
 
-//container 
+$phone: 767px;
+$tablet: 959px;
+$desktop:1281px;
+
+//container
 $container: 752px;
 
 

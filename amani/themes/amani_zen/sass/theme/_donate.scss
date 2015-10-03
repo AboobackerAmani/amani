@@ -2,7 +2,7 @@
  * @file
  * Donation button
  */
- 
+
 #content.column {
   position: relative;
   height: 100%;
@@ -12,11 +12,15 @@
 @media all and (min-width: $breakpoint) {
 
 #block-bean-donate {
-  position: fixed; 
+  position: fixed;
   right: 0;
   top: 116px;
   z-index: 99;
-    
+
+  @media (min-width: $phone) and (max-width: $tablet) {
+    top: 240px;
+  }
+
   .field-item > a {
     background-color: $orange;
     /*-webkit-box-shadow: 3px 8px 5px 0px rgba(224,221,224,1);

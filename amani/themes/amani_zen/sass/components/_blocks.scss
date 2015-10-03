@@ -49,21 +49,21 @@
  */
 
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
    /* IE10+ specific styles go here */
-   
-   
+
+
 		#block-search-form {
 			top:-77px !important;
 			width:160px !important;
 			margin-right:10px !important;
 		}
-		
+
 		#block-menu-menu-social-media {
 			top:-72px;
 		}
-	
-	
+
+
 }
 
 
@@ -76,12 +76,12 @@
 		width:358px;
 		margin-right:30px;
 	}
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 	.paragraphs-item-pull-quote {
 		display:block;
 		float:left;
@@ -92,9 +92,9 @@
 		padding-top:3em;
 		border-top:1px solid $blue;
 		border-bottom:1px solid $blue;
-		
+
 		.field-name-field-the-quote {
-			
+
 			&:before {
 					content:"“";
 					font-size:5em;
@@ -105,7 +105,7 @@
 					margin-bottom:16px;
 					margin-top:30px;
 			}
-			
+
 			.field-item {
 				font-size:2.8em;
 				color:$blue;
@@ -113,25 +113,25 @@
 				margin-bottom:20px;
 				font-weight:300;
 				float:left;
-				
+
 				&:after {
 					content:"”";
 					display:inline;
 				}
 			}
 		}
-		
+
 		.field-name-field-person-quoted {
 			font-size:16px;
 			color:$text-grey;
 			font-style:italic;
 		}
 	}
-	
+
 	.field-name-field-class-for-this-box {
 		display:none;
 	}
-	
+
 	.float-right-half-width {
 		display:block;
 		float:right;
@@ -157,8 +157,8 @@
 				height:330px;
 				width:260px;
 				overflow:scroll;
-			}	
-			
+			}
+
 			.view-header {
 				padding-bottom:1em;
 				a {
@@ -169,7 +169,7 @@
 					font-size:1.1em;
 				}
 			}
-			
+
 			.views-row {
 				display:block;
 				width:100%;
@@ -177,13 +177,13 @@
 				margin-bottom:1em;
 				padding-bottom:1em;
 			}
-			
+
 			.views-field-created-time {
 				a {
 					color:$text-grey;
 				}
 			}
-			
+
 			.view-footer {
 				display:block;
 				width:100%;
@@ -195,19 +195,19 @@
 					height:50px;
 					background-size:40px;
 				}
-			}	
+			}
 		}
 
 	body.front #content .block-views {
-	
+
 		a {
 			color:white;
 		}
-		
+
 		color:white;
 		display:block;
 		float:left;
-		
+
 		.front-above-titles {
 			font-weight:300;
 			font-size:1.1em;
@@ -215,9 +215,9 @@
 			display:block;
 			padding:1em 0 .2em 1.6em;
 		}
-		
-		
-		
+
+
+
 		.views-field-title {
 			font-weight:600;
 			font-size:2em;
@@ -226,9 +226,9 @@
 			padding-left:1em;
 			padding-right:1em;
 		}
-	
+
 		.view-display-id-front_latest_project {
-			
+
 			position:relative;
 		  	display: inline-block;
 		  	width: 648px;
@@ -236,7 +236,7 @@
 		 	margin-right:22px;
 		 	background:$blue;
 		 	float:left;
-		 	
+
 		 	.views-field-field-project-tags {
 				padding:10px 20px 0 20px;
 				ol {
@@ -265,19 +265,23 @@
 					}
 				}
 			}
-		
+
 		}
-		
+
 		.view-display-id-featured_partner_front_block {
-			
+
 			position:relative;
-		  	display: inline-block;
-		  	width: 648px;
+		  display: inline-block;
+		 	width: 648px;
 		 	height: 444px;
 		 	margin-right:22px;
 		 	background:$blue;
 		 	float:left;
-		 	
+
+		 	@media (min-width: $phone) and (max-width: $tablet) {
+    		//width: calc(100% - 327px);
+  		}
+
 		 	.views-field-field-tags {
 				padding:10px 20px 0 20px;
 				ol {
@@ -306,11 +310,11 @@
 					}
 				}
 			}
-		
+
 		}
-		
+
 		.view-display-id-front_volunteer {
-			
+
 			position: relative;
 		  	display: inline-block;
 		  	width: 264px;
@@ -319,7 +323,7 @@
 		  	margin-right:20px;
 		  	background:$grey;
 		  	float:left;
-		  	
+
 		  	.views-field-field-amani-tags {
 				padding:10px 20px 0 20px;
 				ol {
@@ -349,9 +353,9 @@
 				}
 			}
 		}
-	
+
 		.view-display-id-front_latest_news {
-		
+
 			background:$grey;
 			position: relative;
 		  	display: inline-block;
@@ -361,9 +365,9 @@
 		  	margin-right:22px;
 		  	height:500px;
 		}
-		
+
 		.view-display-id-front_latest_event {
-		
+
 			background:$grey;
 			position: relative;
 		  	display: inline-block;
@@ -372,7 +376,7 @@
 		  	padding-bottom:3em;
 		  	margin-top:20px;
 		  	height:500px;
-		  	
+
 		  	.views-field-field-tags {
 				padding:10px 20px 0 20px;
 				ol {
@@ -402,9 +406,9 @@
 				}
 			}
 		}
-		
+
 		.view-display-id-front_areas_of_focus {
-			
+
 			background:$blue;
 			position: relative;
 		  	display: inline-block;
@@ -427,9 +431,9 @@
 				right:10px;
 			}
 		}
-		
+
 		.view-display-id-current_volunteer_opps {
-			
+
 			background:$orange;
 			display:inline-block;
 			float:left;
@@ -449,7 +453,7 @@
 				background:url(../images/icons/right-arrow.png) top left no-repeat;
 			}
 		}
-	
+
 	}
 
 }
@@ -489,7 +493,7 @@
 
 
 
-/* Twitter Block 
+/* Twitter Block
 #block-views-front_page_tweets-block  {
   .view-header {
     display: none;
@@ -532,7 +536,7 @@
 @media all and (min-width: $breakpoint) {
 
 	body.section-event, body.section-events {
-	
+
 		aside.sidebars {
 			.region-sidebar-second {
 				display:block;
@@ -542,29 +546,29 @@
 				margin-right:0;
 				background:$soft-grey;
 				padding:0;
-				
-				
+
+
 				/* Calendar styling */
-				
+
 				.block-views.first {
 					border-bottom:none;
 					margin-top:-4px;
 					h2.block-title {
 						display:none;
 					}
-					
+
 					.view-header {
 						width:260px;
 						display:block;
 						height:32px;
 					}
-					
+
 					.view-content {
 						width:260px;
 						display:block;
 						padding-bottom:20px;
 					}
-					
+
 					.calendar-calendar {
 						table {
 							border:1px solid $border-grey;
@@ -579,13 +583,13 @@
 										font-weight:300;
 										font-size:11px;
 									}
-								}	
+								}
 							}
 							tr {
 								border:1px solid $border-grey;
 								height:28px;
 								background:$soft-grey;
-								td {	
+								td {
 									border:1px solid $border-grey;
 									text-align:center;
 									font-size:11px;
@@ -593,11 +597,11 @@
 									&.empty {
 										background:$soft-grey;
 									}
-								}	
-							}	
-						}	
+								}
+							}
+						}
 					}
-					
+
 					ul.pager {
 						li {
 							list-style-type:none;
@@ -611,8 +615,8 @@
 							}
 						}
 					}
-					
-										
+
+
 					.date-heading {
 						display:block;
 						background:$blue;
@@ -629,12 +633,12 @@
 					}
 				}
 				/* End Calendar Styling */
-				
-				
+
+
 				/* Other Events block styling */
-				
+
 				.block-views {
-				
+
 					h2 {
 						font-size:16px;
 						color:$blue;
@@ -647,15 +651,15 @@
 						padding-right:20px;
 						padding-top:20px;
 					}
-					
+
 					display:block;
 					width:260px;
 					border-bottom:1px solid $text-grey;
-					
+
 					&.last {
 						border-bottom:none;
 					}
-					
+
 					ol {
 						display:block;
 						padding-top:10px;
@@ -668,12 +672,12 @@
 							}
 						}
 					}
-					
+
 					.view.upcoming-events-side-block, .view.facts-block {
 						padding:10px 20px;
 						display:block;
 					}
-					
+
 					.view.upcoming-events-side-block {
 						.views-field-title a {
 							color:$text-black;
@@ -687,14 +691,14 @@
 							font-size:11px;
 							margin:0;
 						}
-						
+
 						ol {
 							li {
 								padding-bottom:20px;
 							}
 						}
 					}
-					
+
 					.view.facts-block {
 						.views-field-title {
 							color:$orange;
@@ -702,7 +706,7 @@
 							font-weight:600;
 							line-height:30px;
 						}
-						
+
 						.views-field-body {
 							font-size:14px;
 							color:$text-grey;
@@ -710,13 +714,13 @@
 							padding-top:6px;
 						}
 					}
-					
-					
+
+
 				}
 			}
 		}
-	
-	
+
+
 	}
 
 }
@@ -733,7 +737,7 @@
 @media all and (min-width: $breakpoint) {
 
 	body.section-news, body.node-type-article {
-	
+
 		aside.sidebars {
 			.region-sidebar-second {
 				display:block;
@@ -743,7 +747,7 @@
 				margin-right:0;
 				background:$soft-grey;
 				padding:0;
-				
+
 				a#likeusfacebook {
 					display:block;
 					width:180px;
@@ -752,7 +756,7 @@
 					height:70px;
 					margin:14px auto 30px auto;
 				}
-				
+
 				.block-block {
 					h2 {
 						font-size:16px;
@@ -766,14 +770,14 @@
 						padding-right:20px;
 						padding-top:20px;
 					}
-					
+
 					display:block;
 					width:260px;
 					border-bottom:1px solid $text-grey;
 				}
-				
+
 				.block-views {
-				
+
 					h2 {
 						font-size:16px;
 						color:$blue;
@@ -786,15 +790,15 @@
 						padding-right:20px;
 						padding-top:20px;
 					}
-					
+
 					display:block;
 					width:260px;
 					border-bottom:1px solid $text-grey;
-					
+
 					&.last {
 						border-bottom:none;
 					}
-					
+
 					ol {
 						display:block;
 						padding-top:10px;
@@ -807,13 +811,13 @@
 							}
 						}
 					}
-					
 
-					
+
+
 					.view {
 						padding:10px 20px;
 						display:block;
-						
+
 						.views-field-title a {
 							color:$text-black;
 							font-size:14px;
@@ -821,8 +825,8 @@
 							line-height:18px;
 							padding:0;
 						}
-						
-						
+
+
 						ol {
 							li {
 								padding-bottom:16px;
@@ -832,7 +836,7 @@
 							}
 						}
 					}
-					
+
 					.view-display-id-news_categories_block {
 						.views-field-name {
 							margin:0;
@@ -845,10 +849,10 @@
 							}
 						}
 					}
-					
+
 					.view-display-id-pg_twitter_sideblock {
-									
-				
+
+
 						padding:20px;
 						background:$soft-grey;
 						font-size:1em;
@@ -862,9 +866,9 @@
 							display:none;
 						}
 						.view-content {
-							
-						}	
-			
+
+						}
+
 						.view-header {
 							padding-bottom:1em;
 							a {
@@ -875,7 +879,7 @@
 								font-size:1.1em;
 							}
 						}
-			
+
 						.views-row {
 							display:block;
 							width:100%;
@@ -883,15 +887,15 @@
 							margin-bottom:1em;
 							padding-bottom:1em;
 						}
-			
+
 						.views-field-created-time {
 							a {
 								color:$text-grey;
 							}
 						}
-			
+
 						.view-footer {
-							
+
 							a {
 								color:$text-black;
 								display:block;
@@ -909,16 +913,16 @@
 								background-position:0 0;
 								height:24px;
 							}
-						}	
+						}
 					}
-					
-					
-					
+
+
+
 				}
 			}
 		}
-	
-	
+
+
 	}
 
 }

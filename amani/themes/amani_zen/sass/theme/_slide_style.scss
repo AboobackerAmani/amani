@@ -1,4 +1,4 @@
-@media all and (min-width: $breakpoint) {
+
 
 	body.front #banner {
 		padding-top:40px;
@@ -6,12 +6,12 @@
 		#views_slideshow_cycle_teaser_section_peace_geeks_front_page_slideshow-block {
 			width:100% !important;
 		}
-		
-		
+
+
 		.view-id-peace_geeks_front_page_slideshow view-display-id-block {
 			height:400px;
 		}
-		
+
 		.views-slideshow-cycle-main-frame-row {
 			display:block;
 			width:100% !important;
@@ -19,12 +19,12 @@
 			position:absolute !important;
 			top: auto !important;
 			left: auto !important;
-			
+
 			.view-content {
 				display:block;
 				height:400px;
 			}
-			
+
 			.views-field-field-image {
 				display:block;
 				z-index:10;
@@ -48,7 +48,7 @@
 					min-height:400px;
 				}
 			}
-			
+
 			.views-field-field-description {
 				width:1200px;
 				display:block;
@@ -69,9 +69,13 @@
 					  padding: 1.6em 1em 1em 1em;
 					  line-height: 1.2em;
 					  z-index:20;
+
+				    @media (min-width: $phone) and (max-width: $tablet) {
+						    margin-left:20px;
+						}
 				  }
 			}
-			
+
 			.views-field-field-image-attribution {
 				color:white;
 				position:absolute;
@@ -80,7 +84,7 @@
 				font-size:11px;
 				opacity:.7;
 			}
-			
+
 			.views-field-field-image-attribution-link a {
 				color:white;
 				position:absolute;
@@ -89,7 +93,7 @@
 				font-size:11px;
 				opacity:.7;
 			}
-			
+
 			.views-field-title {
 				width:1200px;
 				display:none;
@@ -106,18 +110,18 @@
 					  font-size: 1.2em;
 					  margin-left: -320px;
 				}
-				  
+
 			}
-			
-			
-			
+
+
+
 		}
-	
+
 		#views_slideshow_controls_text_peace_geeks_front_page_slideshow-block {
 				display:none;
 			}
-			
-			
+
+
 				/*#views_slideshow_controls_text_previous_peace_geeks_front_page_slideshow-block a{
 					position:absolute;
 					left:0;
@@ -131,11 +135,11 @@
 						font-size:3em;
 					}
 				}
-				
+
 				#views_slideshow_controls_text_pause_peace_geeks_front_page_slideshow-block {
 					display:block;
 				}
-				
+
 				#views_slideshow_controls_text_next_peace_geeks_front_page_slideshow-block a {
 					position:absolute;
 					right:0;
@@ -147,8 +151,6 @@
 					&:after {
 						content:'>';
 						font-size:3em;
-					}				
+					}
 				}*/
 
-
-}
