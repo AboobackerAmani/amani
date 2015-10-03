@@ -68,6 +68,7 @@
       margin: 0;
       border-bottom: 1px solid $purple-primary;
       padding: 0;
+      position: relative;
 
       a {
         background-color: $purple;
@@ -93,6 +94,36 @@
     
     li.last {
       border-bottom: 0;
+    }
+    
+    li > ul{
+      position: absolute;
+      left: -15px;
+      
+       > li {
+        background-color: #f1f1f1; 
+        display: block;
+        clear: both;
+        
+        a {
+          border-top: 5px solid #f1f1f1;
+          margin-right: 0;
+          padding-left: 15px;
+          padding-right: 15px;
+          color: #d19fc0;
+          white-space: nowrap;
+          min-width: 190px;
+          outline: none;
+          
+          &.active,
+          &:hover,
+          &:focus {
+            border-top: 5px solid #513e79;
+            color: #513e79;
+            outline: none;
+          }
+        }
+      }
     }
   }
 }
