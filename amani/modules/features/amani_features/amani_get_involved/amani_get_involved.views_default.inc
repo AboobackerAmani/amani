@@ -197,6 +197,16 @@ function amani_get_involved_views_default_views() {
 	  'image_style' => 'large',
 	  'image_link' => 'content',
 	);
+	/* Field: Content: Body */
+	$handler->display->display_options['fields']['body']['id'] = 'body';
+	$handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+	$handler->display->display_options['fields']['body']['field'] = 'body';
+	$handler->display->display_options['fields']['body']['label'] = '';
+	$handler->display->display_options['fields']['body']['alter']['max_length'] = '250';
+	$handler->display->display_options['fields']['body']['alter']['more_link'] = TRUE;
+	$handler->display->display_options['fields']['body']['alter']['more_link_text'] = '(more)';
+	$handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
+	$handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
 	$translatables['get_involved'] = array(
 	  t('Master'),
 	  t('Get Involved'),
@@ -212,6 +222,7 @@ function amani_get_involved_views_default_views() {
 	  t('<span id="[nid]">[title]</span>'),
 	  t('Block'),
 	  t('<h3>[title]</h3>'),
+	  t('(more)'),
 	);
   $export['get_involved'] = $view;
 

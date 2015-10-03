@@ -40,9 +40,8 @@
     
     .views-row {
       width: 100%;
-      flex-grow: 1;
-      -webkit-flex-grow: 1;
-      // max-width: 370px;
+      flex-grow: 0;
+      -webkit-flex-grow: 0;
       border-top: 3px solid $purple-primary;
       padding-bottom: 20px;
       
@@ -60,6 +59,14 @@
         &.views-row-first.views-row-last {
           max-width: 50%;
         }
+      }
+    }
+    @media (max-width: 1169px) {
+      .views-row {
+        flex-grow: 1;
+        -webkit-flex-grow: 1;
+        margin-left: 0;
+        width: 100%;
       }
     }
     
@@ -115,7 +122,7 @@
       line-height: 1.5;
       color: $purple-alt;
       border-bottom: 3px solid $purple-alt;
-      margin-top: 40px;
+      margin-top: 35px;
     }
     
     //Get involved block
@@ -143,11 +150,21 @@
           color: $purple-alt;
           font-size: 10px;
           margin-left: -19px;
+          position: relative;
+          top: -2px;
         }
       }
       
       .views-field-field-image img {
         width: 100%;
+        margin: 5px 0;
+      }
+      
+      .views-more-link {
+        font-family: "Avenir Next Condensed",sans-serif;
+        clear: both;
+        display: block;
+        color: $purple;
       }
     }
   }
