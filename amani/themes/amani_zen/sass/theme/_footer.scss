@@ -1,7 +1,7 @@
  /**
  * Footer
  */
- 
+
 #footer-wrapper {
 	display:block;
 	width:100%;
@@ -23,8 +23,10 @@
      padding-top:10px;
      letter-spacing:2px;
      display:block;
-     position:relative;
+     position:absolute;
      z-index:2000;
+     bottom:180px;
+     left:50%;
      div {
      	margin-left:2px;
      }
@@ -49,11 +51,11 @@
 }
 
 .region.region-bottom {
-	
+
 	max-width: 1200px;
 	background:$dark-blue;
 	position:relative;
-	
+
 	&:before {
 		content: "";
 		position: absolute;
@@ -65,36 +67,36 @@
 		border-right: 9999px solid $dark-blue;
 		box-shadow: 9999px 0px 0px 0px $dark-blue;
 	}
-	
+
 	.block {
 		width:960px;
 		padding:10px;
 		margin:0 auto;
 	}
-	
+
 	#copyright-footer {
 		display:block;
 		margin-left:30%;
 		color:$dark-blue-text;
 		font-size:14px;
 	}
-	
-	
+
+
 
 }
 
 #footer {
 	#block-menu-menu-amani-main-menu {
-	
+
 		ul {
 			margin-bottom:0;
-			
+
 			li {
 				float:none;
 				display:block;
 			}
 		}
-	
+
 		  div[id*="block-menu-menu-social-media"] {
 			width: 80%;
 			float: left;
