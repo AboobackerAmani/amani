@@ -1014,12 +1014,24 @@ body {
   height: 82%;
   display: block;
 }
-/* line 19, ../sass/components/_contact_page.scss */
+@media all and (max-width: 768px) {
+  /* line 8, ../sass/components/_contact_page.scss */
+  .page-contact #page:before {
+    height: 92%;
+  }
+}
+/* line 23, ../sass/components/_contact_page.scss */
 .page-contact #main {
   max-width: 1280px;
   margin: 0 auto;
 }
-/* line 24, ../sass/components/_contact_page.scss */
+@media all and (max-width: 768px) {
+  /* line 23, ../sass/components/_contact_page.scss */
+  .page-contact #main {
+    padding-top: 0;
+  }
+}
+/* line 31, ../sass/components/_contact_page.scss */
 .page-contact #content,
 .page-contact .sidebars {
   float: left;
@@ -1028,17 +1040,114 @@ body {
   margin-right: -50%;
   margin: 20px 0;
 }
-/* line 30, ../sass/components/_contact_page.scss */
+@media all and (max-width: 768px) {
+  /* line 31, ../sass/components/_contact_page.scss */
+  .page-contact #content,
+  .page-contact .sidebars {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+/* line 42, ../sass/components/_contact_page.scss */
 .page-contact .sidebars .region-sidebar-second {
   float: left;
   margin: 0;
   width: 100%;
 }
-/* line 37, ../sass/components/_contact_page.scss */
+@media all and (max-width: 768px) {
+  /* line 48, ../sass/components/_contact_page.scss */
+  .page-contact .contact-form {
+    margin: 0 auto;
+    width: 90%;
+    position: relative;
+    z-index: 9;
+  }
+}
+/* line 56, ../sass/components/_contact_page.scss */
 .page-contact .contact-form label {
   font-family: "Avenir Next Condensed", sans-serif;
   font-size: 18px;
   color: #513e79;
+  padding-bottom: 5px;
+}
+/* line 62, ../sass/components/_contact_page.scss */
+.page-contact .contact-form input, .page-contact .contact-form textarea {
+  background-color: #e9d5ef;
+  -webkit-box-shadow: inset 1px 1px 3px 0px #999999;
+  -moz-box-shadow: inset 1px 1px 3px 0px #999999;
+  box-shadow: inset 1px 1px 3px 0px #999999;
+}
+/* line 68, ../sass/components/_contact_page.scss */
+.page-contact .contact-form .form-actions {
+  text-align: right;
+}
+/* line 70, ../sass/components/_contact_page.scss */
+.page-contact .contact-form .form-actions input {
+  font-family: "Avenir Next Condensed", sans-serif;
+  font-size: 14;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #d19fc0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 15px 30px 10px;
+}
+/* line 85, ../sass/components/_contact_page.scss */
+.page-contact .block-amani-global {
+  padding: 15px;
+  width: 90%;
+  margin-left: 10%;
+  margin-top: 40px;
+  background-color: #fff;
+  -webkit-box-shadow: -2px 2px 3px 0px #cccccc;
+  -moz-box-shadow: -2px 2px 3px 0px #cccccc;
+  box-shadow: -2px 2px 3px 0px #cccccc;
+}
+@media all and (max-width: 768px) {
+  /* line 85, ../sass/components/_contact_page.scss */
+  .page-contact .block-amani-global {
+    width: 100%;
+    margin: 40px auto 20px;
+  }
+}
+/* line 100, ../sass/components/_contact_page.scss */
+.page-contact .block-amani-global h2.block-title {
+  font-family: "Avenir Next Condensed", sans-serif;
+  color: #513e79;
+  line-height: 1.6;
+  border-bottom: 1px solid #d19fc0;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+/* line 110, ../sass/components/_contact_page.scss */
+.page-contact .block-amani-global #contact_form_site_info p {
+  background: url("../images/icons/icn-contact-addr.png") no-repeat 0 0;
+  background-size: 16px 16px;
+  padding-left: 25px;
+  margin-top: 10px;
+  color: #d19fc0;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+/* line 119, ../sass/components/_contact_page.scss */
+.page-contact .block-amani-global #contact_form_site_info p.telephone {
+  background: url("../images/icons/icn-contact-phone.png") no-repeat 0 2px;
+  background-size: 12px 16px;
+}
+/* line 123, ../sass/components/_contact_page.scss */
+.page-contact .block-amani-global #contact_form_site_info p.email {
+  background: url("../images/icons/icn-contact-email.png") no-repeat 0 4px;
+  background-size: 16px 14px;
+}
+
+@media all and (max-width: 768px) {
+  /* line 132, ../sass/components/_contact_page.scss */
+  .sidebar-second.page-contact #content {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 /**
@@ -1665,64 +1774,53 @@ body {
 #block-menu-menu-amani-main-menu ul.menu li.last {
   border-bottom: 0;
 }
-/* line 99, ../sass/components/_header.scss */
-#block-menu-menu-amani-main-menu ul.menu li > ul {
-  position: absolute;
-  left: -15px;
-}
 /* line 103, ../sass/components/_header.scss */
-#block-menu-menu-amani-main-menu ul.menu li > ul > li {
+#block-menu-menu-amani-main-menu ul.menu ul li a {
+  border-top: 1px solid #d19fc0;
   background-color: #f1f1f1;
-  display: block;
-  clear: both;
+  color: #d19fc0;
 }
 /* line 108, ../sass/components/_header.scss */
-#block-menu-menu-amani-main-menu ul.menu li > ul > li a {
-  border-top: 5px solid #f1f1f1;
-  margin-right: 0;
-  padding-left: 15px;
-  padding-right: 15px;
-  color: #d19fc0;
-  white-space: nowrap;
-  min-width: 190px;
-  outline: none;
-}
-/* line 118, ../sass/components/_header.scss */
-#block-menu-menu-amani-main-menu ul.menu li > ul > li a.active, #block-menu-menu-amani-main-menu ul.menu li > ul > li a:hover, #block-menu-menu-amani-main-menu ul.menu li > ul > li a:focus {
-  border-top: 5px solid #513e79;
+#block-menu-menu-amani-main-menu ul.menu ul li a.active, #block-menu-menu-amani-main-menu ul.menu ul li a:hover, #block-menu-menu-amani-main-menu ul.menu ul li a:focus {
+  border-top: 1px solid #513e79;
   color: #513e79;
-  outline: none;
+  text-decoration: none;
+}
+/* line 119, ../sass/components/_header.scss */
+#block-menu-menu-amani-main-menu ul.menu ul li.first {
+  float: left;
+  margin-top: 0;
 }
 
 @media all and (min-width: 768px) {
-  /* line 134, ../sass/components/_header.scss */
+  /* line 128, ../sass/components/_header.scss */
   .region-header {
     padding: 0 10px;
   }
 
-  /* line 138, ../sass/components/_header.scss */
+  /* line 132, ../sass/components/_header.scss */
   #mobile-toggle {
     display: none;
   }
 
-  /* line 141, ../sass/components/_header.scss */
+  /* line 135, ../sass/components/_header.scss */
   #block-menu-menu-amani-main-menu {
     display: table;
   }
-  /* line 145, ../sass/components/_header.scss */
+  /* line 139, ../sass/components/_header.scss */
   #block-menu-menu-amani-main-menu ul.menu li {
     display: inline-block;
     width: auto;
     margin-bottom: 0;
     border-bottom: 0;
   }
-  /* line 152, ../sass/components/_header.scss */
+  /* line 146, ../sass/components/_header.scss */
   #block-menu-menu-amani-main-menu ul.menu li.first {
     margin-top: 0;
     width: auto;
     float: none;
   }
-  /* line 158, ../sass/components/_header.scss */
+  /* line 152, ../sass/components/_header.scss */
   #block-menu-menu-amani-main-menu ul.menu li a {
     background-color: transparent;
     border-top: 5px solid #513e79;
@@ -1733,19 +1831,47 @@ body {
     text-transform: uppercase;
     text-align: left;
   }
-  /* line 168, ../sass/components/_header.scss */
+  /* line 162, ../sass/components/_header.scss */
   #block-menu-menu-amani-main-menu ul.menu li a.active, #block-menu-menu-amani-main-menu ul.menu li a:hover, #block-menu-menu-amani-main-menu ul.menu li a:focus {
     border-top: 5px solid #d19fc0;
     color: #d19fc0;
     text-decoration: none;
   }
+  /* line 171, ../sass/components/_header.scss */
+  #block-menu-menu-amani-main-menu ul.menu li > ul {
+    position: absolute;
+    left: -15px;
+  }
+  /* line 175, ../sass/components/_header.scss */
+  #block-menu-menu-amani-main-menu ul.menu li > ul > li {
+    background-color: #f1f1f1;
+    display: block;
+    clear: both;
+  }
+  /* line 180, ../sass/components/_header.scss */
+  #block-menu-menu-amani-main-menu ul.menu li > ul > li a {
+    border-top: 5px solid #f1f1f1;
+    margin-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #d19fc0;
+    white-space: nowrap;
+    min-width: 190px;
+    outline: none;
+  }
+  /* line 190, ../sass/components/_header.scss */
+  #block-menu-menu-amani-main-menu ul.menu li > ul > li a.active, #block-menu-menu-amani-main-menu ul.menu li > ul > li a:hover, #block-menu-menu-amani-main-menu ul.menu li > ul > li a:focus {
+    border-top: 5px solid #513e79;
+    color: #513e79;
+    outline: none;
+  }
 }
-/* line 181, ../sass/components/_header.scss */
+/* line 205, ../sass/components/_header.scss */
 .primary-nav-wrapper {
   background-color: #513e79;
 }
 
-/* line 192, ../sass/components/_header.scss */
+/* line 216, ../sass/components/_header.scss */
 .block-search {
   border: 2px solid white;
   position: absolute !important;
@@ -1758,7 +1884,7 @@ body {
   transition: width 0.4s ease-in-out;
 }
 @media all and (max-width: 768px) {
-  /* line 192, ../sass/components/_header.scss */
+  /* line 216, ../sass/components/_header.scss */
   .block-search {
     -webkit-transition: width 0.4s ease-out;
     -moz-transition: width 0.4s ease-out;
@@ -1767,37 +1893,37 @@ body {
     left: 15px;
   }
 }
-/* line 212, ../sass/components/_header.scss */
+/* line 236, ../sass/components/_header.scss */
 .block-search:hover {
   width: 136px;
 }
-/* line 216, ../sass/components/_header.scss */
+/* line 240, ../sass/components/_header.scss */
 .block-search .form-text {
   background-color: transparent;
 }
-/* line 221, ../sass/components/_header.scss */
+/* line 245, ../sass/components/_header.scss */
 .block-search .form-actions {
   position: absolute;
   top: 0;
   right: 0;
 }
-/* line 228, ../sass/components/_header.scss */
+/* line 252, ../sass/components/_header.scss */
 .block-search input[type="text"] {
   color: white;
   padding-right: 25px;
 }
-/* line 232, ../sass/components/_header.scss */
+/* line 256, ../sass/components/_header.scss */
 .block-search input[type="text"]::-webkit-input-placeholder,
 .block-search input[type="text"] #placeholder {
   color: white;
 }
-/* line 238, ../sass/components/_header.scss */
+/* line 262, ../sass/components/_header.scss */
 .block-search input[type="submit"] {
   background-color: transparent;
   text-indent: -9999px;
   padding: 6px 15px;
 }
-/* line 244, ../sass/components/_header.scss */
+/* line 268, ../sass/components/_header.scss */
 .block-search .search-icon {
   position: absolute;
   top: 5px;
@@ -3298,7 +3424,7 @@ tr.selected td {
 /* line 163, ../sass/components/_program_page.scss */
 .page-programs .sidebars .view-get-involved .views-row .views-more-link,
 .node-type-project .sidebars .view-get-involved .views-row .views-more-link {
-  font-family: "Avenir Next Condensed",sans-serif;
+  font-family: "Avenir Next Condensed", sans-serif;
   clear: both;
   display: block;
   color: #784580;

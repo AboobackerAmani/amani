@@ -24,16 +24,7 @@ function amani_get_involved_context_default_contexts() {
     ),
   );
   $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views-get_involved-block_1' => array(
-          'module' => 'views',
-          'delta' => 'get_involved-block_1',
-          'region' => 'content',
-          'weight' => '-41',
-        ),
-      ),
-    ),
+    
   );
   $context->condition_mode = 0;
 
