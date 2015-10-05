@@ -159,9 +159,22 @@ function amani_global_site_contact_info() {
   if ($content) {
     $output .= '<div id="contact_form_site_info">';
     foreach ($content as $item => $value) {
-      $output .= '<p>';
+		$class = '';
+		if ($item === 'T') {
+			$class = 'telephone';
+		}
+		if ($item === 'E') {
+			$class = "email";
+		}
+		if (!empty($class)) {
+			$output .= '<p class="' . $class . '">';
+		}
+		else {
+			$output .= '<p>';
+		}
+      
       // Dont show our address label
-      if ($item != 'Address') {  $output .= t($item . ': '); }
+      if ($item != 'Address' && $item != 'T' && $item != 'E') {  $output .= t($item . ': '); }
       $output .= nl2br(t($value)) . '</p>';
     }
     $output .= render($map);

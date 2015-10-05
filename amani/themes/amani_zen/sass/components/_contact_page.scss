@@ -1,0 +1,137 @@
+//Contact Page
+
+.page-contact {
+  #page {
+    max-width: none;
+    position: relative;
+    
+    &:before {
+      content: "";
+      background-color: #f5f5f5;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 82%;
+      display: block;
+      
+      @media all and (max-width: $breakpoint) {
+        height: 92%;
+      }
+    }
+  } 
+  
+  #main {
+    max-width: 1280px;
+    margin: 0 auto;
+    @media all and (max-width: $breakpoint) {
+      padding-top: 0;
+    }
+  }
+  
+  #content,
+  .sidebars {
+    @include zen-grid-item(6, 1);
+    margin: 20px 0;
+    
+    @media all and (max-width: $breakpoint) {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  
+  .sidebars .region-sidebar-second {
+    float: left;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .contact-form {
+     @media all and (max-width: $breakpoint) {
+      margin: 0 auto;
+      width: 90%;
+      position: relative;
+      z-index: 9;
+    }
+    
+    label {
+      font-family: $avenir-condensed;
+      font-size: 18px;
+      color: $purple-alt;
+      padding-bottom: 5px;
+    }
+    input, textarea {
+      background-color: #e9d5ef;
+      -webkit-box-shadow: inset 1px 1px 3px 0px rgba(153,153,153,1);
+      -moz-box-shadow: inset 1px 1px 3px 0px rgba(153,153,153,1);
+      box-shadow: inset 1px 1px 3px 0px rgba(153,153,153,1);
+    }
+    .form-actions {
+      text-align: right;
+      input {
+        font-family: $avenir-condensed;
+        font-size: 14;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background-color: #d19fc0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        padding: 15px 30px 10px;
+      }
+    }
+  }
+  
+  .block-amani-global {
+    padding: 15px;
+    width: 90%;
+    margin-left: 10%;
+    margin-top: 40px;
+    background-color: #fff;
+    -webkit-box-shadow: -2px 2px 3px 0px rgba(204,204,204,1);
+    -moz-box-shadow: -2px 2px 3px 0px rgba(204,204,204,1);
+    box-shadow: -2px 2px 3px 0px rgba(204,204,204,1);
+    
+    @media all and (max-width: $breakpoint) {
+      width: 100%;
+      margin: 40px auto 20px;
+    }
+    
+    h2.block-title {
+      font-family: $avenir-condensed;
+      color: $purple-alt;
+      line-height: 1.6;
+      border-bottom: 1px solid #d19fc0;
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+    
+    #contact_form_site_info{
+      p {
+        background: url("../images/icons/icn-contact-addr.png") no-repeat 0 0;
+        background-size: 16px 16px;
+        padding-left: 25px;
+        margin-top: 10px;
+        color: #d19fc0;
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+      p.telephone {
+        background: url("../images/icons/icn-contact-phone.png") no-repeat 0 2px;
+        background-size: 12px 16px;
+      }
+      p.email {
+        background: url("../images/icons/icn-contact-email.png") no-repeat 0 4px;
+        background-size: 16px 14px;
+      }
+    }
+  }
+  
+}
+
+.sidebar-second.page-contact #content {
+  @media all and (max-width: $breakpoint) {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

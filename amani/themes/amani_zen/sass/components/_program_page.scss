@@ -35,8 +35,8 @@
     display: -webkit-flex;
     flex-flow: row wrap;
     -webkit-flex-flow: row wrap;
-    justify-content: space-between;
-    -webkit-justify-content: space-between;
+    //justify-content: space-between;
+    //-webkit-justify-content: space-between;
     
     .views-row {
       width: 100%;
@@ -161,7 +161,7 @@
       }
       
       .views-more-link {
-        font-family: "Avenir Next Condensed",sans-serif;
+        font-family: $avenir-condensed;
         clear: both;
         display: block;
         color: $purple;

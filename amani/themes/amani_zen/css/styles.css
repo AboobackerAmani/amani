@@ -1014,12 +1014,24 @@ body {
   height: 82%;
   display: block;
 }
-/* line 19, ../sass/components/_contact_page.scss */
+@media all and (max-width: 768px) {
+  /* line 8, ../sass/components/_contact_page.scss */
+  .page-contact #page:before {
+    height: 92%;
+  }
+}
+/* line 23, ../sass/components/_contact_page.scss */
 .page-contact #main {
   max-width: 1280px;
   margin: 0 auto;
 }
-/* line 24, ../sass/components/_contact_page.scss */
+@media all and (max-width: 768px) {
+  /* line 23, ../sass/components/_contact_page.scss */
+  .page-contact #main {
+    padding-top: 0;
+  }
+}
+/* line 31, ../sass/components/_contact_page.scss */
 .page-contact #content,
 .page-contact .sidebars {
   float: left;
@@ -1028,17 +1040,114 @@ body {
   margin-right: -50%;
   margin: 20px 0;
 }
-/* line 30, ../sass/components/_contact_page.scss */
+@media all and (max-width: 768px) {
+  /* line 31, ../sass/components/_contact_page.scss */
+  .page-contact #content,
+  .page-contact .sidebars {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+/* line 42, ../sass/components/_contact_page.scss */
 .page-contact .sidebars .region-sidebar-second {
   float: left;
   margin: 0;
   width: 100%;
 }
-/* line 37, ../sass/components/_contact_page.scss */
+@media all and (max-width: 768px) {
+  /* line 48, ../sass/components/_contact_page.scss */
+  .page-contact .contact-form {
+    margin: 0 auto;
+    width: 90%;
+    position: relative;
+    z-index: 9;
+  }
+}
+/* line 56, ../sass/components/_contact_page.scss */
 .page-contact .contact-form label {
   font-family: "Avenir Next Condensed", sans-serif;
   font-size: 18px;
   color: #513e79;
+  padding-bottom: 5px;
+}
+/* line 62, ../sass/components/_contact_page.scss */
+.page-contact .contact-form input, .page-contact .contact-form textarea {
+  background-color: #e9d5ef;
+  -webkit-box-shadow: inset 1px 1px 3px 0px #999999;
+  -moz-box-shadow: inset 1px 1px 3px 0px #999999;
+  box-shadow: inset 1px 1px 3px 0px #999999;
+}
+/* line 68, ../sass/components/_contact_page.scss */
+.page-contact .contact-form .form-actions {
+  text-align: right;
+}
+/* line 70, ../sass/components/_contact_page.scss */
+.page-contact .contact-form .form-actions input {
+  font-family: "Avenir Next Condensed", sans-serif;
+  font-size: 14;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #d19fc0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 15px 30px 10px;
+}
+/* line 85, ../sass/components/_contact_page.scss */
+.page-contact .block-amani-global {
+  padding: 15px;
+  width: 90%;
+  margin-left: 10%;
+  margin-top: 40px;
+  background-color: #fff;
+  -webkit-box-shadow: -2px 2px 3px 0px #cccccc;
+  -moz-box-shadow: -2px 2px 3px 0px #cccccc;
+  box-shadow: -2px 2px 3px 0px #cccccc;
+}
+@media all and (max-width: 768px) {
+  /* line 85, ../sass/components/_contact_page.scss */
+  .page-contact .block-amani-global {
+    width: 100%;
+    margin: 40px auto 20px;
+  }
+}
+/* line 100, ../sass/components/_contact_page.scss */
+.page-contact .block-amani-global h2.block-title {
+  font-family: "Avenir Next Condensed", sans-serif;
+  color: #513e79;
+  line-height: 1.6;
+  border-bottom: 1px solid #d19fc0;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+/* line 110, ../sass/components/_contact_page.scss */
+.page-contact .block-amani-global #contact_form_site_info p {
+  background: url("../images/icons/icn-contact-addr.png") no-repeat 0 0;
+  background-size: 16px 16px;
+  padding-left: 25px;
+  margin-top: 10px;
+  color: #d19fc0;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+/* line 119, ../sass/components/_contact_page.scss */
+.page-contact .block-amani-global #contact_form_site_info p.telephone {
+  background: url("../images/icons/icn-contact-phone.png") no-repeat 0 2px;
+  background-size: 12px 16px;
+}
+/* line 123, ../sass/components/_contact_page.scss */
+.page-contact .block-amani-global #contact_form_site_info p.email {
+  background: url("../images/icons/icn-contact-email.png") no-repeat 0 4px;
+  background-size: 16px 14px;
+}
+
+@media all and (max-width: 768px) {
+  /* line 132, ../sass/components/_contact_page.scss */
+  .sidebar-second.page-contact #content {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 /**
@@ -3166,8 +3275,6 @@ tr.selected td {
   display: -webkit-flex;
   flex-flow: row wrap;
   -webkit-flex-flow: row wrap;
-  justify-content: space-between;
-  -webkit-justify-content: space-between;
 }
 /* line 41, ../sass/components/_program_page.scss */
 .page-programs #content .view-content .views-row,
@@ -3315,7 +3422,7 @@ tr.selected td {
 /* line 163, ../sass/components/_program_page.scss */
 .page-programs .sidebars .view-get-involved .views-row .views-more-link,
 .node-type-project .sidebars .view-get-involved .views-row .views-more-link {
-  font-family: "Avenir Next Condensed",sans-serif;
+  font-family: "Avenir Next Condensed", sans-serif;
   clear: both;
   display: block;
   color: #784580;
@@ -3731,28 +3838,29 @@ tr.selected td {
   /* line 5, ../sass/components/_team_page.scss */
   .view-team .view-filters {
     display: flex;
+    display: -webkit-flex;
     margin: 10px auto 25px;
     padding: 5px 30px 10px;
   }
 }
-/* line 20, ../sass/components/_team_page.scss */
+/* line 21, ../sass/components/_team_page.scss */
 .view-team .view-filters label {
   text-transform: uppercase;
   font-family: "Avenir Next Condensed", sans-serif;
   font-size: 12px;
   color: #ce9bc0;
 }
-/* line 26, ../sass/components/_team_page.scss */
+/* line 27, ../sass/components/_team_page.scss */
 .view-team .view-filters .views-exposed-widget {
   padding-right: 0;
 }
 @media (min-width: 768px) {
-  /* line 26, ../sass/components/_team_page.scss */
+  /* line 27, ../sass/components/_team_page.scss */
   .view-team .view-filters .views-exposed-widget {
     padding-right: 1em;
   }
 }
-/* line 32, ../sass/components/_team_page.scss */
+/* line 33, ../sass/components/_team_page.scss */
 .view-team .view-filters .views-widget-filter-keys,
 .view-team .view-filters .views-widget-filter-field_team_member_type_tid {
   display: block;
@@ -3760,7 +3868,7 @@ tr.selected td {
   width: 100%;
 }
 @media (min-width: 768px) {
-  /* line 32, ../sass/components/_team_page.scss */
+  /* line 33, ../sass/components/_team_page.scss */
   .view-team .view-filters .views-widget-filter-keys,
   .view-team .view-filters .views-widget-filter-field_team_member_type_tid {
     display: inline-block;
@@ -3768,7 +3876,7 @@ tr.selected td {
     clear: none;
   }
 }
-/* line 43, ../sass/components/_team_page.scss */
+/* line 44, ../sass/components/_team_page.scss */
 .view-team .view-filters .form-type-textfield input,
 .view-team .view-filters .form-type-select select {
   width: 100%;
@@ -3779,87 +3887,91 @@ tr.selected td {
   border-radius: 3px;
 }
 @media (min-width: 768px) {
-  /* line 43, ../sass/components/_team_page.scss */
+  /* line 44, ../sass/components/_team_page.scss */
   .view-team .view-filters .form-type-textfield input,
   .view-team .view-filters .form-type-select select {
     width: 330px;
     height: 28px;
   }
 }
-/* line 54, ../sass/components/_team_page.scss */
+/* line 55, ../sass/components/_team_page.scss */
 .view-team .view-filters .ajax-progress {
   position: absolute;
 }
-/* line 70, ../sass/components/_team_page.scss */
+/* line 71, ../sass/components/_team_page.scss */
 .view-team .view-content {
   display: flex;
+  display: -webkit-flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  -webkit-flex-flow: row wrap;
 }
-/* line 74, ../sass/components/_team_page.scss */
+/* line 78, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row {
   width: 100%;
-  flex-grow: 1;
+  flex-grow: 0;
+  -webkit-flex-grow: 0;
   border-top: 3px solid #ce9bc0;
   padding-top: 20px;
 }
 @media (min-width: 768px) {
-  /* line 74, ../sass/components/_team_page.scss */
+  /* line 78, ../sass/components/_team_page.scss */
   .view-team .view-content .views-row {
-    width: 30%;
-    margin: 20px 15px 0;
+    width: 32%;
+    margin: 20px 2% 0 0;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
   }
-  /* line 83, ../sass/components/_team_page.scss */
+  /* line 91, ../sass/components/_team_page.scss */
   .view-team .view-content .views-row.views-row-first, .view-team .view-content .views-row:nth-child(3n+4) {
     margin-left: 0;
   }
-  /* line 87, ../sass/components/_team_page.scss */
+  /* line 95, ../sass/components/_team_page.scss */
   .view-team .view-content .views-row.views-row-last, .view-team .view-content .views-row:nth-child(3n+3) {
     margin-right: 0;
   }
-  /* line 91, ../sass/components/_team_page.scss */
+  /* line 99, ../sass/components/_team_page.scss */
   .view-team .view-content .views-row.views-row-first.views-row-last {
-    max-width: 30%;
+    max-width: 2%;
   }
 }
-/* line 95, ../sass/components/_team_page.scss */
+/* line 103, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-field-team-image {
   height: 246px;
   overflow: hidden;
 }
-/* line 98, ../sass/components/_team_page.scss */
+/* line 106, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-field-team-image img {
   height: auto;
   width: 100%;
 }
-/* line 103, ../sass/components/_team_page.scss */
+/* line 111, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-title {
   margin-top: 22px;
 }
-/* line 105, ../sass/components/_team_page.scss */
+/* line 113, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-title a {
   color: #ce9bc0;
   font-family: "Avenir Next Condensed", sans-serif;
   font-size: 24px;
   line-height: 1em;
 }
-/* line 112, ../sass/components/_team_page.scss */
+/* line 120, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-field-team-title {
   color: #ce9bc0;
   font-family: "Avenir Next Condensed", sans-serif;
   font-size: 18px;
 }
-/* line 117, ../sass/components/_team_page.scss */
+/* line 125, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-field-team-bio {
   margin-top: 20px;
 }
-/* line 121, ../sass/components/_team_page.scss */
+/* line 129, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-view-node a {
   display: block;
   color: #ce9bc0;
   padding: 10px 0;
 }
-/* line 125, ../sass/components/_team_page.scss */
+/* line 133, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-view-node a:before {
   content: ">";
   margin-right: 5px;
