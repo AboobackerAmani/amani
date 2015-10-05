@@ -95,36 +95,30 @@
     li.last {
       border-bottom: 0;
     }
-    
-    li > ul{
-      position: absolute;
-      left: -15px;
+  }
+  
+  ul.menu ul {
+    li {
       
-       > li {
+      a {
+        border-top: 1px solid #d19fc0;
         background-color: #f1f1f1; 
-        display: block;
-        clear: both;
+        color: #d19fc0;
         
-        a {
-          border-top: 5px solid #f1f1f1;
-          margin-right: 0;
-          padding-left: 15px;
-          padding-right: 15px;
-          color: #d19fc0;
-          white-space: nowrap;
-          min-width: 190px;
-          outline: none;
-          
-          &.active,
-          &:hover,
-          &:focus {
-            border-top: 5px solid #513e79;
-            color: #513e79;
-            outline: none;
-          }
+        &.active,
+        &:hover,
+        &:focus {
+          border-top: 1px solid $purple-alt;
+          color: $purple-alt;
+          text-decoration: none;
         }
       }
     }
+  }
+  
+  ul.menu ul li.first {
+     float: left;
+     margin-top: 0;
   }
 }
 
@@ -157,7 +151,7 @@
       
       li a {
         background-color: transparent;
-        border-top: 5px solid #513e79;
+        border-top: 5px solid $purple-alt;
         color: white;
         display: block;
         margin: 0 20px 0 0;
@@ -171,6 +165,36 @@
           border-top: 5px solid #d19fc0;
           color: #d19fc0;
           text-decoration: none;
+        }
+      }
+      
+      li > ul{
+        position: absolute;
+        left: -15px;
+
+         > li {
+          background-color: #f1f1f1; 
+          display: block;
+          clear: both;
+
+          a {
+            border-top: 5px solid #f1f1f1;
+            margin-right: 0;
+            padding-left: 15px;
+            padding-right: 15px;
+            color: #d19fc0;
+            white-space: nowrap;
+            min-width: 190px;
+            outline: none;
+
+            &.active,
+            &:hover,
+            &:focus {
+              border-top: 5px solid #513e79;
+              color: #513e79;
+              outline: none;
+            }
+          }
         }
       }
     }
