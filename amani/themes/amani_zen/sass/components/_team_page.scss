@@ -14,6 +14,7 @@
     @include box-shadow(0px 2px 1px 0px rgba(black,0.24));
     @include breakpoint(768px) {
       display: flex;
+      display: -webkit-flex;
       margin: 10px auto 25px;
       padding: 5px 30px 10px;
     }
@@ -69,17 +70,24 @@
   }
   .view-content {
     display: flex;
+    display: -webkit-flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    -webkit-flex-flow: row wrap;
+    //justify-content: space-between;
+    //-webkit-justify-content: space-between;
     .views-row {
       width: 100%;
-      flex-grow: 1;
+      flex-grow: 0;
+       -webkit-flex-grow: 0;
       // max-width: 370px;
       border-top: 3px solid #ce9bc0;
       padding-top: 20px;
       @include breakpoint(768px) {
-        width: 30%;
-        margin: 20px 15px 0;
+        width: 32%;
+        margin: 20px 2% 0 0;
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+        
         &.views-row-first,
         &:nth-child(3n+4) {
           margin-left: 0;
@@ -89,7 +97,7 @@
           margin-right: 0;
         }
         &.views-row-first.views-row-last {
-          max-width: 30%;
+          max-width: 2%;
         }
       }
       .views-field-field-team-image {
