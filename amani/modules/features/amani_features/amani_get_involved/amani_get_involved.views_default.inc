@@ -20,8 +20,8 @@ function amani_get_involved_views_default_views() {
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
+	/* Display: Master */
+	$handler = $view->new_display('default', 'Master', 'default');
 	$handler->display->display_options['title'] = 'Get Involved';
 	$handler->display->display_options['use_more_always'] = FALSE;
 	$handler->display->display_options['access']['type'] = 'perm';
@@ -29,6 +29,7 @@ function amani_get_involved_views_default_views() {
 	$handler->display->display_options['query']['type'] = 'views_query';
 	$handler->display->display_options['exposed_form']['type'] = 'basic';
 	$handler->display->display_options['pager']['type'] = 'none';
+	$handler->display->display_options['pager']['options']['offset'] = '0';
 	$handler->display->display_options['style_plugin'] = 'default';
 	$handler->display->display_options['row_plugin'] = 'fields';
 	/* No results behavior: Global: Text area */
@@ -70,6 +71,10 @@ function amani_get_involved_views_default_views() {
 	$handler->display->display_options['sorts']['field_weight_value']['id'] = 'field_weight_value';
 	$handler->display->display_options['sorts']['field_weight_value']['table'] = 'field_data_field_weight';
 	$handler->display->display_options['sorts']['field_weight_value']['field'] = 'field_weight_value';
+	/* Sort criterion: Content: Updated date */
+	$handler->display->display_options['sorts']['changed']['id'] = 'changed';
+	$handler->display->display_options['sorts']['changed']['table'] = 'node';
+	$handler->display->display_options['sorts']['changed']['field'] = 'changed';
 	/* Filter criterion: Content: Published */
 	$handler->display->display_options['filters']['status']['id'] = 'status';
 	$handler->display->display_options['filters']['status']['table'] = 'node';
@@ -135,6 +140,15 @@ function amani_get_involved_views_default_views() {
 	$handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
 	$handler->display->display_options['fields']['body']['alter']['preserve_tags'] = '<a>';
 	$handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+	$handler->display->display_options['defaults']['sorts'] = FALSE;
+	/* Sort criterion: Content: Weight (field_weight) */
+	$handler->display->display_options['sorts']['field_weight_value']['id'] = 'field_weight_value';
+	$handler->display->display_options['sorts']['field_weight_value']['table'] = 'field_data_field_weight';
+	$handler->display->display_options['sorts']['field_weight_value']['field'] = 'field_weight_value';
+	/* Sort criterion: Content: Updated date */
+	$handler->display->display_options['sorts']['changed']['id'] = 'changed';
+	$handler->display->display_options['sorts']['changed']['table'] = 'node';
+	$handler->display->display_options['sorts']['changed']['field'] = 'changed';
 	$handler->display->display_options['path'] = 'get-involved';
 
 	/* Display: Block */

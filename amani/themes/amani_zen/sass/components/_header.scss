@@ -98,6 +98,7 @@
   }
   
   ul.menu ul {
+    display: none;
     li {
       
       a {
@@ -119,6 +120,10 @@
   ul.menu ul li.first {
      float: left;
      margin-top: 0;
+  }
+   
+  ul.menu li:hover > ul{
+    display: block;
   }
 }
 
