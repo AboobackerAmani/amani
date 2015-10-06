@@ -44,6 +44,7 @@
       -webkit-flex-grow: 0;
       border-top: 3px solid $purple-primary;
       padding-bottom: 20px;
+      margin: 0 0 20px 0;
       
       @include breakpoint(768px) {
         width: 48%;
@@ -66,6 +67,7 @@
         flex-grow: 1;
         -webkit-flex-grow: 1;
         margin-left: 0;
+        margin-right: 0;
         width: 100%;
       }
     }
@@ -109,7 +111,6 @@
   
   //side bar
   .sidebars {
-    
     .view-content {
       border-bottom: 3px solid $purple-alt;
     }
@@ -170,12 +171,84 @@
   }
 }
 
-//Other Projects and Campaigns block of note page
+//Program node page with Activites
+.node-project.node-by-viewer {
+  color: #5d5c5c;
+  .file-image {
+    width: 100%;
+    max-height: 400px;
+    overflow-y: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  
+  .field-name-body {
+    margin-top: 30px;
+  }
+}
+
+#block-views-activities-block {
+  margin-top: 25px;
+  border-top: solid 2px $purple-alt;
+  
+  h2.block-title {
+    font-family: $avenir-condensed;
+    font-size: 36px;
+    color: $purple-alt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 25px 0 15px;
+  }
+  .view-activities {
+    .view-content {margin-top: 0;}
+    .views-row .views-field-field-image {
+      height: auto;
+    }
+    .views-row .views-field-title {
+      margin: 10px 0;
+      text-align: center;
+      a {
+        color: $purple-alt;
+      }
+    }
+    .views-row .views-field-body {
+      color: #5d5c5c;
+    }
+    .views-row .views-field-title-1 {
+      text-align: right;
+      
+      a {
+        margin-top: 10px;
+        // font-family: $avenir-condensed;
+        //         font-size: 12;
+        //         font-weight: 300;
+        //         text-transform: uppercase;
+        //         letter-spacing: 1px;
+        //         background-color: #d19fc0;
+        //         padding: 5px 20px;
+        //         color: white;
+      }
+    }
+  }
+}
+
+
+
+
+
+//Other Projects and Campaigns block of node page
 .node-type-project {
   .sidebars {
-    border: 1px solid $purple-primary;
+    padding: 0 15px;
     box-sizing: border-box;
-    padding: 10px 0 80px;
+    margin-top: 20px;
+    
+    .region-sidebar-second {
+      border: 1px solid $purple-primary;
+      box-sizing: border-box;
+      padding: 10px 15px 80px;
+    }
     
     .view-content {
       border-bottom: 0;
