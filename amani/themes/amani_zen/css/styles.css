@@ -1774,53 +1774,61 @@ body {
 #block-menu-menu-amani-main-menu ul.menu li.last {
   border-bottom: 0;
 }
-/* line 103, ../sass/components/_header.scss */
+/* line 100, ../sass/components/_header.scss */
+#block-menu-menu-amani-main-menu ul.menu ul {
+  display: none;
+}
+/* line 104, ../sass/components/_header.scss */
 #block-menu-menu-amani-main-menu ul.menu ul li a {
   border-top: 1px solid #d19fc0;
   background-color: #f1f1f1;
   color: #d19fc0;
 }
-/* line 108, ../sass/components/_header.scss */
+/* line 109, ../sass/components/_header.scss */
 #block-menu-menu-amani-main-menu ul.menu ul li a.active, #block-menu-menu-amani-main-menu ul.menu ul li a:hover, #block-menu-menu-amani-main-menu ul.menu ul li a:focus {
   border-top: 1px solid #513e79;
   color: #513e79;
   text-decoration: none;
 }
-/* line 119, ../sass/components/_header.scss */
+/* line 120, ../sass/components/_header.scss */
 #block-menu-menu-amani-main-menu ul.menu ul li.first {
   float: left;
   margin-top: 0;
 }
+/* line 125, ../sass/components/_header.scss */
+#block-menu-menu-amani-main-menu ul.menu li:hover > ul {
+  display: block;
+}
 
 @media all and (min-width: 768px) {
-  /* line 128, ../sass/components/_header.scss */
+  /* line 133, ../sass/components/_header.scss */
   .region-header {
     padding: 0 10px;
   }
 
-  /* line 132, ../sass/components/_header.scss */
+  /* line 137, ../sass/components/_header.scss */
   #mobile-toggle {
     display: none;
   }
 
-  /* line 135, ../sass/components/_header.scss */
+  /* line 140, ../sass/components/_header.scss */
   #block-menu-menu-amani-main-menu {
     display: table;
   }
-  /* line 139, ../sass/components/_header.scss */
+  /* line 144, ../sass/components/_header.scss */
   #block-menu-menu-amani-main-menu ul.menu li {
     display: inline-block;
     width: auto;
     margin-bottom: 0;
     border-bottom: 0;
   }
-  /* line 146, ../sass/components/_header.scss */
+  /* line 151, ../sass/components/_header.scss */
   #block-menu-menu-amani-main-menu ul.menu li.first {
     margin-top: 0;
     width: auto;
     float: none;
   }
-  /* line 152, ../sass/components/_header.scss */
+  /* line 157, ../sass/components/_header.scss */
   #block-menu-menu-amani-main-menu ul.menu li a {
     background-color: transparent;
     border-top: 5px solid #513e79;
@@ -1831,24 +1839,24 @@ body {
     text-transform: uppercase;
     text-align: left;
   }
-  /* line 162, ../sass/components/_header.scss */
+  /* line 167, ../sass/components/_header.scss */
   #block-menu-menu-amani-main-menu ul.menu li a.active, #block-menu-menu-amani-main-menu ul.menu li a:hover, #block-menu-menu-amani-main-menu ul.menu li a:focus {
     border-top: 5px solid #d19fc0;
     color: #d19fc0;
     text-decoration: none;
   }
-  /* line 171, ../sass/components/_header.scss */
+  /* line 176, ../sass/components/_header.scss */
   #block-menu-menu-amani-main-menu ul.menu li > ul {
     position: absolute;
     left: -15px;
   }
-  /* line 175, ../sass/components/_header.scss */
+  /* line 180, ../sass/components/_header.scss */
   #block-menu-menu-amani-main-menu ul.menu li > ul > li {
     background-color: #f1f1f1;
     display: block;
     clear: both;
   }
-  /* line 180, ../sass/components/_header.scss */
+  /* line 185, ../sass/components/_header.scss */
   #block-menu-menu-amani-main-menu ul.menu li > ul > li a {
     border-top: 5px solid #f1f1f1;
     margin-right: 0;
@@ -1859,19 +1867,19 @@ body {
     min-width: 190px;
     outline: none;
   }
-  /* line 190, ../sass/components/_header.scss */
+  /* line 195, ../sass/components/_header.scss */
   #block-menu-menu-amani-main-menu ul.menu li > ul > li a.active, #block-menu-menu-amani-main-menu ul.menu li > ul > li a:hover, #block-menu-menu-amani-main-menu ul.menu li > ul > li a:focus {
     border-top: 5px solid #513e79;
     color: #513e79;
     outline: none;
   }
 }
-/* line 205, ../sass/components/_header.scss */
+/* line 210, ../sass/components/_header.scss */
 .primary-nav-wrapper {
   background-color: #513e79;
 }
 
-/* line 216, ../sass/components/_header.scss */
+/* line 221, ../sass/components/_header.scss */
 .block-search {
   border: 2px solid white;
   position: absolute !important;
@@ -1884,7 +1892,7 @@ body {
   transition: width 0.4s ease-in-out;
 }
 @media all and (max-width: 768px) {
-  /* line 216, ../sass/components/_header.scss */
+  /* line 221, ../sass/components/_header.scss */
   .block-search {
     -webkit-transition: width 0.4s ease-out;
     -moz-transition: width 0.4s ease-out;
@@ -1893,37 +1901,37 @@ body {
     left: 15px;
   }
 }
-/* line 236, ../sass/components/_header.scss */
+/* line 241, ../sass/components/_header.scss */
 .block-search:hover {
   width: 136px;
 }
-/* line 240, ../sass/components/_header.scss */
+/* line 245, ../sass/components/_header.scss */
 .block-search .form-text {
   background-color: transparent;
 }
-/* line 245, ../sass/components/_header.scss */
+/* line 250, ../sass/components/_header.scss */
 .block-search .form-actions {
   position: absolute;
   top: 0;
   right: 0;
 }
-/* line 252, ../sass/components/_header.scss */
+/* line 257, ../sass/components/_header.scss */
 .block-search input[type="text"] {
   color: white;
   padding-right: 25px;
 }
-/* line 256, ../sass/components/_header.scss */
+/* line 261, ../sass/components/_header.scss */
 .block-search input[type="text"]::-webkit-input-placeholder,
 .block-search input[type="text"] #placeholder {
   color: white;
 }
-/* line 262, ../sass/components/_header.scss */
+/* line 267, ../sass/components/_header.scss */
 .block-search input[type="submit"] {
   background-color: transparent;
   text-indent: -9999px;
   padding: 6px 15px;
 }
-/* line 268, ../sass/components/_header.scss */
+/* line 273, ../sass/components/_header.scss */
 .block-search .search-icon {
   position: absolute;
   top: 5px;
@@ -3811,6 +3819,66 @@ tr.selected td {
 /* line 307, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download .field-name-field-link a {
   color: white;
+}
+
+/*
+  Take action landing page and node page
+*/
+/* line 8, ../sass/components/_take-action_page.scss */
+.page-get-involved .view-content .views-row {
+  padding-left: 100px;
+  padding-bottom: 50px;
+}
+/* line 12, ../sass/components/_take-action_page.scss */
+.page-get-involved .view-content .views-row .views-field-title a {
+  font-family: "Avenir Next Condensed", sans-serif;
+  font-size: 22px;
+  color: #513e79;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/* line 21, ../sass/components/_take-action_page.scss */
+.page-get-involved .view-content .views-row .views-field-body {
+  margin-top: 10px;
+}
+/* line 26, ../sass/components/_take-action_page.scss */
+.page-get-involved .view-content img {
+  display: none;
+}
+/* line 31, ../sass/components/_take-action_page.scss */
+.page-get-involved .view-get-involved {
+  margin-top: 20px;
+}
+/* line 36, ../sass/components/_take-action_page.scss */
+.page-get-involved .views-row.views-row-first {
+  background: url("../images/icons/icn-involved-suggestion.png") no-repeat 0 0;
+  background-size: 67px 68px;
+}
+/* line 42, ../sass/components/_take-action_page.scss */
+.page-get-involved .views-row:nth-child(2) {
+  background: url("../images/icons/icn-involved-report.png") no-repeat 10px 0;
+  background-size: 55px 67px;
+}
+/* line 48, ../sass/components/_take-action_page.scss */
+.page-get-involved .views-row:nth-child(3) {
+  background: url("../images/icons/icn-involved-volunteer.png") no-repeat 15px 0;
+  background-size: 42px 69px;
+}
+/* line 54, ../sass/components/_take-action_page.scss */
+.page-get-involved .views-row.views-row-last {
+  background: url("../images/icons/icn-involved-donate.png") no-repeat 7px 0;
+  background-size: 63px 70px;
+}
+
+/* line 64, ../sass/components/_take-action_page.scss */
+.node-get-involved .field-name-field-image {
+  float: left;
+  margin-right: 25px;
+}
+/* line 69, ../sass/components/_take-action_page.scss */
+.node-get-involved .field-name-body {
+  display: table;
 }
 
 /*
