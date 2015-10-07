@@ -102,9 +102,12 @@
       margin-top: 10px;
     }
     
-    .views-field-title-1 a {
-      font-family: $avenir-condensed;
-      color: $purple;
+    .views-field-title-1 {
+    text-align: right;
+      a {
+        font-family: $avenir-condensed;
+        color: $purple;
+      }
     }
     
   }
@@ -128,7 +131,7 @@
     
     //Get involved block
     .view-get-involved .views-row {
-      margin: 10px 0 10px 40px;
+      margin: 10px 0;
       border-bottom: 1px solid $purple-alt;
       padding-bottom: 20px;
       
@@ -146,14 +149,14 @@
         text-transform: uppercase;
         padding-bottom: 10px;
         
-        &:before {
-          content: ">> ";
-          color: $purple-alt;
-          font-size: 10px;
-          margin-left: -19px;
-          position: relative;
-          top: -2px;
-        }
+        // &:before {
+        //           content: ">> ";
+        //           color: $purple-alt;
+        //           font-size: 10px;
+        //           margin-left: -19px;
+        //           position: relative;
+        //           top: -2px;
+        //         }
       }
       
       .views-field-field-image img {
@@ -166,6 +169,7 @@
         clear: both;
         display: block;
         color: $purple;
+        text-align: right;
       }
     }
   }
