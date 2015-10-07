@@ -4068,10 +4068,6 @@ tr.selected td {
   .view-team .view-content .views-row.views-row-last, .view-team .view-content .views-row:nth-child(3n+3) {
     margin-right: 0;
   }
-  /* line 99, ../sass/components/_team_page.scss */
-  .view-team .view-content .views-row.views-row-first.views-row-last {
-    max-width: 2%;
-  }
 }
 /* line 103, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-field-team-image {
@@ -4114,6 +4110,26 @@ tr.selected td {
 .view-team .view-content .views-row .views-field-view-node a:before {
   content: ">";
   margin-right: 5px;
+}
+/* line 144, ../sass/components/_team_page.scss */
+.view-team .view-team .view-content h3 {
+  font-family: "Avenir Next Condensed", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1;
+  color: #784580;
+  text-transform: uppercase;
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: 2.5em;
+}
+/* line 157, ../sass/components/_team_page.scss */
+.view-team .view-team .view-content .views-field-field-team-member-type a {
+  font-family: "Avenir Next Condensed", sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  color: #999;
 }
 
 /**
