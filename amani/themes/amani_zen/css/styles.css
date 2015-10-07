@@ -4442,14 +4442,14 @@ footer .field-label {
   margin: 20px 20px 0 0;
   float: right;
   position: absolute;
-  bottom: 3px;
+  bottom: 5px;
   right: 0;
 }
 
 /* line 177, ../sass/theme/_layout.scss */
 footer #block-bean-img2 {
   right: 110px;
-  bottom: 2px;
+  bottom: 5px;
 }
 
 /* line 182, ../sass/theme/_layout.scss */
@@ -4477,6 +4477,25 @@ footer #block-bean-img2 {
 .footer-legal div {
   margin: 0 auto;
   width: 75%;
+}
+
+/* line 206, ../sass/theme/_layout.scss */
+#footer ul.menu li ul.menu {
+  display: none;
+}
+/* line 210, ../sass/theme/_layout.scss */
+#footer ul.menu {
+  margin-top: 5px;
+}
+/* line 212, ../sass/theme/_layout.scss */
+#footer ul.menu li {
+  display: inline-block;
+  float: left;
+  width: 150px;
+}
+/* line 217, ../sass/theme/_layout.scss */
+#footer ul.menu li:nth-child(2n+1) {
+  clear: left;
 }
 
 /* line 6, ../sass/theme/_slideshow.scss */

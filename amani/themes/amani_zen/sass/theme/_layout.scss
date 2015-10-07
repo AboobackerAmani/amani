@@ -170,13 +170,13 @@ footer .field-label {
   margin: 20px 20px 0 0;
   float: right;
   position: absolute;
-  bottom: 3px;
+  bottom: 5px;
   right: 0;
 }
 
 footer #block-bean-img2 {
   right: 110px;
-  bottom: 2px;
+  bottom: 5px;
 }
 
 .peacegeeks-logo {
@@ -199,6 +199,24 @@ footer #block-bean-img2 {
   div {
     margin: 0 auto;
     width: 75%; // strange bug with text align on the parent not correctly centering the text
+  }
+}
 
+#footer {
+  ul.menu li ul.menu {
+    display: none;
+  }
+  
+  ul.menu {
+    margin-top: 5px;
+    li {
+      display: inline-block;
+      float: left;
+      width: 150px;
+
+      &:nth-child(2n+1) {
+        clear: left;
+      }
+    }
   }
 }
