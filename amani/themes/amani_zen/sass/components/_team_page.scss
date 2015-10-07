@@ -97,7 +97,7 @@
           margin-right: 0;
         }
         &.views-row-first.views-row-last {
-          max-width: 2%;
+         // max-width: 2%;
         }
       }
       .views-field-field-team-image {
@@ -135,6 +135,30 @@
             margin-right: 5px;
           }
         }
+      }
+    }
+  }
+  
+  .view-team {
+    .view-content {
+      h3 {
+        font-family: $avenir-condensed;
+        font-size: 30px;
+        font-weight: $fw-semi-bold;
+        letter-spacing: 1px;
+        line-height: 1;
+        color: $purple;
+        text-transform: uppercase;
+        width: 100%;
+        margin-bottom: 0;
+        margin-top: 2.5em;
+      }
+      
+      .views-field-field-team-member-type a {
+        font-family: $avenir-condensed;
+        font-style: italic;
+        font-size: 16px;
+        color: #999;
       }
     }
   }
