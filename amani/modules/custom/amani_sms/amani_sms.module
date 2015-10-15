@@ -1,4 +1,10 @@
-<?php 
+<?php
+/**
+ * @file
+ * Module for the sms
+ */
+
+require_once('amani_sms.support.inc');
 
 /**
  * Implments hook_menu().
@@ -8,8 +14,45 @@ function amani_sms_menu() {
     'page callback' => 'amani_sms_endpoint',
     'access callback' => TRUE,
   );
+  
+  $items['admin/settings/amani_sms'] = array(
+    'title' => 'Amani SMS Module settings',
+    'description' => 'Configurate your Amanui SMS module',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('amani_sms_settings_form'),
+    'access arguments' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+  );
 
   return $items;
+}
+
+/**
+ * Form that deals with the settings of the module.
+ */
+function amani_sms_settings_form($form, &$form_state) {
+  $form['secret'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Set secret'),
+    '#default_value' => '123456',
+    'maxlength' => 20,
+    '#description' => t("Set a secret to prevent spam"),
+  );
+  
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Submit'),
+  );
+  
+  return $form;
+}
+
+function amani_sms_settings_form_validate($form, &$form_state) {
+  // Validation logic.
+}
+
+function amani_sms_settings_form_submit($form, &$form_state) {
+  // Submission logic.
 }
 
 /**
@@ -17,42 +60,48 @@ function amani_sms_menu() {
  *
  */
 function amani_sms_endpoint() {
-
   $error = NULL;
   $secret = NULL;
   // Set success to false as the default success status
-  $success = true;
+  $success = TRUE;
 
   $inputJSON = file_get_contents('php://input');
+  $decoded_message = json_decode($inputJSON);  
+  
+  // $message = amani_sms_support_sort_message($decoded_message->message);
+  
   $entity = entity_create('node', array('type' =>'incident_report'));
   $entity->title = "SMS Report";
-  $decoded_message = json_decode($inputJSON);  
+  
   $entity->field_description = array(LANGUAGE_NONE => array(0 => array('value' => $decoded_message->message)));
   $entity->status = 0; // not published by default
   $entity->field_map_filter='sms';
   $entity->field_phone = array(LANGUAGE_NONE => array(0 => array('value' => $decoded_message->from)));
-  #$entity->field_incident_date = array(LANGUAGE_NONE => array(0 => array('value' => date('Y-m-d H:i:s', strtotime($decoded_message->sent_timestamp)))));
+  
   $entity->field_incident_date = array(LANGUAGE_NONE => array(0 => array('value' => date('Y-m-d H:i:s'))));
-  #$entity->field_incident_date = array(LANGUAGE_NONE => array(0 => array('value' => date('Y-m-d H:i:s', strtotime($decoded_message->sent_timestamp)), 'timezone' => 'UTC', 'timezone_db' => 'UTC', 'date_type' => 'datetime')));
   $secret = $decoded_message->secret;
 
-  if (( $secret == '123456'))
-  {
-    $success = true;
+  #$entity->field_incident_date = array(LANGUAGE_NONE => array(0 => array('value' => date('Y-m-d H:i:s', strtotime($decoded_message->sent_timestamp)))));
+  #$entity->field_incident_date = array(LANGUAGE_NONE => array(0 => array('value' => date('Y-m-d H:i:s', strtotime($decoded_message->sent_timestamp)), 'timezone' => 'UTC', 'timezone_db' => 'UTC', 'date_type' => 'datetime')));
+
+  if ($secret == "123456") {
+    $success = TRUE;
     entity_save('node', $entity);
-  } else {
+  }
+  
+  else {
     $success = false;
-    $error = "The secret value sent from the device does not match the one on the server";
+    $error = "The secret value sent from the device does not match the one on the server. The secret is: " . $secret;
     header("HTTP/1.1 403 The secret value sent from the device does not match the one on the server", true, 403);
   }
 
   $response = array(
     'payload' => array(
       'success' => $success,
-      'error'   => $error
+      'error'   => $error,
+      'message' => $decoded_message->message,
     )
   );
 
   return drupal_json_output($response);
 }
-
