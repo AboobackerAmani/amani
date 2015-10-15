@@ -9,7 +9,7 @@
   *
   * Returns TRUE when the node is successfully created.
   */
-function amani_sms_support_create_node($content, $title, $secret) {
+function amani_sms_support_create_node($message, $secret, $title = 'SMS Report') {
   global $user;
   
   $values = array(
@@ -19,13 +19,19 @@ function amani_sms_support_create_node($content, $title, $secret) {
     'promote' => 0, // promote is FALSE by default
   );
   
+  $content = amani_sms_support_sort_message($message);
+  
   $entity = entity_create('node', $values);
-  $ewrapper = entity_metadata_wrapper('node', $entity);
-  $ewrapper->title->set($title);
+  $entity->title = $title;
+  
+  $entity->field_description = array(LANGUAGE_NONE => array(0 => array('value' => $decoded_message->message)));
+  $entity->status = 0; // not published by default
+  $entity->field_map_filter='sms';
+  $entity->field_phone = array(LANGUAGE_NONE => array(0 => array('value' => $decoded_message->from)));
+  $entity->field_incident_date = array(LANGUAGE_NONE => array(0 => array('value' => date('Y-m-d H:i:s'))));
   
   if ($secret == '123456') {
     entity_save('node', $entity);
-    $ewrapper->save();
     return TRUE;
   }
   
@@ -54,13 +60,16 @@ function amani_sms_support_sort_message($message) {
   while ($message) {
     if (strpos($message, '*')) {
       $report[$i] = strstr($message, '*', TRUE);
+      $message = substr($message, 6);
+      $i++;
     }
     
-    
-    
-    $message = substr($message, 6);
+    // Only one report left
+    else {
+      $report[$i] = $message;
+      $message = NULL;
+    }
   }
-  
   
   return array(
     'organization' => $organization,
