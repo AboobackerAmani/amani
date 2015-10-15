@@ -1,9 +1,5 @@
 <?php
 
-ini_set('display_startup_errors',1);
-ini_set('display_errors',1);
-error_reporting(-1);
-
 /**
  * @file
  * Module for the sms
@@ -48,7 +44,7 @@ function amani_sms_endpoint() {
 
   $parsed_msg = amani_sms_support_sort_message($decoded_message->message);
   foreach ($parsed_msg['messages'] as $code) {
-    $success = $success && amani_sms_support_create_node($parsed_msg['organization'], $code, $decoded_message->from, $parsed_msg['date'], $decoded_message->secret);
+    $success = $success && amani_sms_support_create_node($parsed_msg['organization'], $code, $decoded_message->from, $parsed_msg['date'], $decoded_message->secret, $decoded_message->message);
   }
 
   if (!$success) {

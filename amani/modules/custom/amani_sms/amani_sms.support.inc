@@ -5,17 +5,17 @@
  */
  
 
- 
+
 /**
   * Creates the node
   *
   * Returns TRUE when the node is successfully created.
   */
-function amani_sms_support_create_node($title, $msg_code, $msg_from, $msg_date, $secret) {
+function amani_sms_support_create_node($title, $msg_code, $msg_from, $msg_date, $secret, $raw_message) {
   $entity = entity_create('node', array('type' =>'incident_report'));
   $entity->title = $title;
   
-  $entity->field_description = array(LANGUAGE_NONE => array(0 => array('value' => 'description')));
+  $entity->field_description = array(LANGUAGE_NONE => array(0 => array('value' => $raw_message)));
   $entity->status = 0; // not published by default
   $entity->field_map_filter='sms';
   $entity->field_phone = array(LANGUAGE_NONE => array(0 => array('value' => $msg_from)));
@@ -40,9 +40,8 @@ function amani_sms_support_sort_message($message) {
 
   $message_split = explode(' ', $message);
 
-  // parse out the message
+  // parse out the message code
   $code_messages = explode('*', $message_split[2]);
-
 
   $parsed_message['organization'] = $message_split[0];
   $parsed_message['date'] = DateTime::createFromFormat('d-m-y', implode('-', str_split($message_split[1], 2)))->getTimestamp();
