@@ -44,6 +44,10 @@ function amani_sms_support_create_node($message, $secret, $title = 'SMS Report')
  * Sorts the message
  */
 function amani_sms_support_sort_message($message) {
+  /*
+  Sample $message: CEPO-RB 120415 *FD10R*MH27I
+  */
+  
   $organization = NULL;
   $date = NULL;
   $report = array();
@@ -78,9 +82,11 @@ function amani_sms_support_sort_message($message) {
   );
 }
 
-/*
+/**
+ * Fetches the vid and tid of the respective field.
+ */
+function amani_sms_support_fetch_id($name, $field_machine_name) {
+  $query = db_select();
+}
 
-CEPO-RB 120415 *FD10R*MH27I
-
-*/
 
