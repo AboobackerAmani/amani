@@ -3,8 +3,6 @@
  * @file
  * Supporting file
  */
- 
-
 
 /**
   * Creates the node
@@ -53,13 +51,24 @@ function amani_sms_support_sort_message($message) {
 /**
  * Parses the report and assigns it with appropriate tids
  */
-function amani_sms_support_fill_filter($report) {
+function amani_sms_support_assign_tid($report) {
   $output = array();
+  
+  if (!($report[4])) {
+    return $output;
+  }
+  
+  $report_array = array(
+    $report[0],
+    $report[1],
+    $report[2] . $report[3],
+    $report[4],
+  );
   
   for ($i = 0; $i < 4; $i++) {
     $map_filter = "Map Filter #$i";
     $vid = amani_sms_fetch_vid($map_filter);
-    $tid = amani_sms_support_fetch_tid($report[$i], $vid);
+    $tid = amani_sms_support_fetch_tid($report_array[$i], $vid);
     
     $output[$map_filter] = $tid;
   }
@@ -88,6 +97,7 @@ function amani_sms_support_fetch_tid($name, $filter_vid) {
 function amani_sms_support_fetch_vid($filter_name) {
   $query = db_select('taxonomy_vocabulary', 'v')
     ->condition('v.name', $filter_name)
+    ->condition('v.module', 'taxonomy')
     ->fields('v', array('vid'))
     ->execute();
   
