@@ -51,10 +51,47 @@ function amani_sms_support_sort_message($message) {
 }
 
 /**
- * Fetches the vid and tid of the respective field.
+ * Parses the report and assigns it with appropriate tids
  */
-function amani_sms_support_fetch_id($name, $field_machine_name) {
-  $query = db_select();
+function amani_sms_support_fill_filter($report) {
+  $output = array();
+  
+  for ($i = 0; $i < 4; $i++) {
+    $map_filter = "Map Filter #$i";
+    $vid = amani_sms_fetch_vid($map_filter);
+    $tid = amani_sms_support_fetch_tid($report[$i], $vid);
+    
+    $output[$map_filter] = $tid;
+  }
+
+  return $output;
 }
 
+/**
+ * Fetches the tid of the respective term.
+ */
+function amani_sms_support_fetch_tid($name, $filter_vid) {
+  $query = db_select('', 't')
+    ->condition('t.name', $name)
+    ->condition('t.vid', $filter_vid)
+    ->fields('t', array('tid'))
+    ->execute();
+  
+  $output = $query->fetchField();
+  
+  return $output;
+}
 
+/**
+ * Fetches the vid of the respective field.
+ */
+function amani_sms_support_fetch_vid($filter_name) {
+  $query = db_select('taxonomy_vocabulary', 'v')
+    ->condition('v.name', $filter_name)
+    ->fields('v', array('vid'))
+    ->execute();
+  
+  $output = $query->fetchField();
+  
+  return $output;
+}
