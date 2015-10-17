@@ -366,7 +366,7 @@
 		
 		#content {
 			width:100%;
-			float:left;
+			float:none;
 		}
 		
 		h1#page-title {
@@ -389,10 +389,10 @@
 							list-style-type:none;
 							display:block;
 							float:left;
-							width:210px;
-							height:434px;
+							width:100%;
+							height:auto;
 							background:$soft-grey;
-							margin-right:18px;
+							margin-right:0;
 							margin-bottom:34px;
 							position:relative;
 							
@@ -400,6 +400,13 @@
 								margin-right:0;
 							}
 						}
+					}
+				}
+				
+				.views-field-field-image {
+					img {
+						width:100%;
+						height:auto;
 					}
 				}
 				
@@ -424,6 +431,7 @@
 						padding:.4em 1em;
 						margin-right:4px;
 						cursor:pointer;
+						margin-bottom:10px;
 						&:hover {
 							background:$blue;
 						}
@@ -440,14 +448,14 @@
 				
 				.views-field-title {
 					display:block;
-					width:170px;
-					float:left;
+					width:90%;
+					float:none;
 					padding-left:20px;
 					padding-right:20px;
 					padding-top:10px;
 					padding-bottom:20px;
 					a {
-						font-size:1.1em;
+						font-size:1.4em;
 						line-height:1.3em;
 						color:$blue;
 						display:block;
@@ -462,22 +470,20 @@
 					color:$text-grey;
 					display:block;
 					padding:0 20px 4px 20px;
-					float:left;
-					position:absolute;
-					bottom:0;
-					margin-bottom:10px;
+					float:none;
+					position:relative;
+					padding-top:1em;
+					padding-bottom:2em;
 				}
 				
 				.views-field-title-1 {
 					display:block;
-					width:100%;
-					float:left;
+					width:90%;
+					float:none;
 					padding-left:20px;
-					position:absolute;
-					bottom:0;
-					margin-bottom:46px;
+					position:relative;
 					a {
-						font-size:1em;
+						font-size:1.2em;
 						color:$text-grey;
 						display:inline-block;
 						font-weight:400;
@@ -490,7 +496,7 @@
 								
 				.views-field-comment-count {
 					display:block;
-					float:right;
+					float:none;
 					font-size:1em;
 					color:$text-grey;
 					padding-right:20px;
@@ -518,7 +524,7 @@
 					h2 {
 						margin-top:1em;
 						display:block;
-						float:left;
+						float:none;
 						width:100%;
 						
 					}
@@ -532,10 +538,10 @@
 							list-style-type:none;
 							display:block;
 							float:left;
-							width:324px;
-							height:620px;
+							width:100%;
+							height:auto;
 							background:$soft-grey;
-							margin-right:18px;
+							margin-right:0;
 							margin-bottom:34px;
 							position:relative;
 							
@@ -548,9 +554,9 @@
 				
 				.views-field-title {
 					display:block;
-					height:82px;
-					width:100%;
-					float:left;
+					height:auto;
+					width:90%;
+					float:none;
 					padding:10px 20px 20px 20px;
 					margin-bottom:10px;
 					a {
@@ -570,8 +576,8 @@
 					color:$text-black;
 					display:block;
 					padding:0 20px 4px 20px;
-					width:286px;
-					float:left;
+					width:100%;
+					float:none;
 					position:relative;
 					margin-bottom:0;
 					span.views-label {
@@ -586,9 +592,9 @@
 					color:$text-black;
 					display:block;
 					padding:0 20px 4px 20px;
-					width:286px;
+					width:100%;
 					margin-top:2px;
-					float:left;
+					float:none;
 					position:relative;
 					span.views-label {
 						float:left;
@@ -602,9 +608,9 @@
 					color:$text-black;
 					display:block;
 					padding:0 20px 4px 20px;
-					width:286px;
+					width:100%;
 					margin-top:2px;
-					float:left;
+					float:none;
 					position:relative;
 					span.views-label {
 						float:left;
@@ -615,7 +621,7 @@
 				
 				.views-field-title-1 {
 					display:block;
-					float:left;
+					float:none;
 					padding-top:24px;
 					padding-left:20px;
 					width:auto;
@@ -634,10 +640,10 @@
 				
 				.views-field-field-registration-link {
 					display:block;
-					position:absolute;
+					position:relative;
 					margin-bottom:28px;
-					bottom:0;
-					margin-left:200px;
+					margin-top:20px;
+					margin-left:20px;
 					a {
 						font-size:1.2em;
 						color:white;
@@ -649,7 +655,7 @@
 				
 				.views-field-comment-count {
 					display:block;
-					float:left;
+					float:none;
 					font-size:1.1em;
 					color:$text-grey;
 					padding-left:20px;
@@ -667,7 +673,7 @@
 			ul.pager {
 				display:block;
 				float:left;
-				width:662px;
+				width:100%;
 			}
 			
 			.date-nav-wrapper ul.pager {
@@ -676,7 +682,7 @@
 			
 			ul.pager.pager-load-more {
 				display:block;
-				margin-left:380px;
+				margin-left:0;
 				
 				li {
 					list-style-type:none;
