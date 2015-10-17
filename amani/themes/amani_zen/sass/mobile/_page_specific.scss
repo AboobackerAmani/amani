@@ -257,9 +257,9 @@
 						li {
 							list-style-type:none;
 							display:block;
-							float:left;
-							width:325px;
-							height:490px;
+							float:none;
+							width:100%;
+							height:auto;
 							background:$soft-grey;
 							margin-right:16px;
 							margin-bottom:34px;
@@ -271,10 +271,17 @@
 					}
 				}
 				
+				.views-field-field-image {
+					img {
+						width:100%;
+						height:auto;
+					}
+				}
+				
 				.views-field-title {
 					display:block;
-					width:286px;
-					float:left;
+					width:100%;
+					float:none;
 					padding-bottom:8px;
 					a {
 						font-size:1.6em;
@@ -293,24 +300,24 @@
 					line-height:1.4em;
 					display:block;
 					padding:0 20px 20px 20px;
-					width:286px;
+					width:100%;
 					margin-top:0;
-					float:left;
+					float:none;
 				}
 				
 				.views-field-created {
 					display:block;
-					float:left;
+					float:none;
 					font-size:1.1em;
 					color:$text-grey;
 					padding-left:20px;
-					position:absolute;
-					bottom:26px;
+					position:relative;
+					padding-bottom:2em;
 				}
 				
 				.views-field-comment-count {
 					display:none;
-					float:left;
+					float:none;
 					font-size:1.1em;
 					color:$text-grey;
 					padding-left:20px;
@@ -326,13 +333,13 @@
 			
 			ul.pager {
 				display:block;
-				float:left;
-				width:662px;
+				float:none;
+				width:100%;
 			}
 			
 			ul.pager.pager-load-more {
 				display:block;
-				margin-left:380px;
+				margin-left:0;
 				
 				li {
 					list-style-type:none;
