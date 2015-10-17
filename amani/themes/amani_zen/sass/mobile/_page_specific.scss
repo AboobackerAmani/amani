@@ -1,0 +1,3622 @@
+/* Overrides for pages based on body classes */
+
+
+@media all and (max-width: $breakpoint) {
+
+	/* Programs page */
+	
+	body.programspage {
+
+		.paragraphs-item-paragraph-text-with-anchor {
+			border-top:0;
+			padding-top:2em;
+		}
+		
+		.programsorangeblock {
+			display:block;
+			width:231px;
+			float:right !important;
+			margin-top:0 !important;
+			margin-bottom:0 !important;
+			.paragraphs-item-link-block-grey {
+				margin-top:0 !important;
+				a {
+					width:186px;
+					background:$orange;
+					height:308px !important;
+					margin-top:0 !important;
+					line-height:1.4em;
+					&.shorterlinkbox:after {
+						margin-top:226px !important;
+					}
+				}
+				
+			}
+		}
+		
+		#peaceprojects {
+			
+		}
+		
+		.linkboxtall {
+			display:block;
+			width:231px;
+			float:right !important;
+			margin-top:0 !important;
+			margin-bottom:0 !important;
+			margin-right:5em;
+			.paragraphs-item-link-block-grey {
+				margin-top:0 !important;
+				a {
+					width:186px;
+					height:342px !important;
+					margin-top:0 !important;
+					line-height:1.4em;
+					&.shorterlinkbox:after {
+						margin-top:316px !important;
+					}
+				}
+				
+			}
+		}
+		
+		.paragraphs-item-divider-line {
+			margin-top:3em;
+			hr {
+				width:110%;
+				margin-left:-5%;
+				margin-top:1em;
+			}
+		}
+		
+		/* News card */
+		
+		.view-peace-geeks-news-and-events.view-display-id-block_2 {
+			display:block;
+			float:left;
+			margin-top:-2em;
+			background:$orange;
+			color:white;
+			padding-bottom:2em;
+			height:384px;
+			margin-left:5em;
+			width:340px;
+			a {
+				color:white;
+			}
+			
+			.views-field-title {
+				font-size:1.7em;
+				line-height:1.4em;
+				padding:.4em 1em 1em 1em;
+				font-weight:600;
+				letter-spacing:0;
+				display:block;
+				width:100%;
+			}
+			
+			.views-field-created {
+				display:block;
+				float:left;
+				padding-left:1.4em;
+				font-size:1.2em;
+				font-weight:300;
+			}
+			
+			.views-field-comment-count {
+				display:block;
+				float:right;
+				padding-right:1.4em;
+				font-size:1.2em;
+				font-weight:300;
+			}
+			
+		}
+		
+		
+		div.darkbackground.anchor-link-to-box div.paragraphs-item-light-grey-text-box-with-link-to a.anchorlink {
+			margin-right:0;
+		}
+		div.paragraphs-item-light-grey-text-box-with-link-to {
+			
+			a.anchorlink {
+				color:white;
+				text-align:left;
+				padding-top:.8em;
+				padding-left:1em;
+				background:$blue;
+				height:100px !important;
+				width:296px;
+				margin-bottom:1.8em;
+				&.darkbackground {
+					background:$grey;
+					margin-right:0;
+				}
+				&:after {
+					content:"";
+					display:block;
+					float:right;
+					position:relative;
+					margin-top:100px;
+					margin-right:-10px;
+					width:24px;
+					height:12px;
+					background:url(../images/icons/down-arrow.png) top left no-repeat;
+				}
+			}
+			
+						
+		}
+	
+	}
+
+	
+	/* Current Projects page */
+	
+	body.currentprojects {
+	
+	
+	
+	}
+	
+	
+	
+	/* Past Projects page */
+
+	body.pastprojects {
+	
+	
+	
+	
+	}
+
+
+	/* Front page content */
+	
+	body.front.node-type-structure .paragraphs-items-field-paragraphs {
+		/*margin-top:0;*/
+	}
+	
+	body.front {
+	
+		#content {
+			width:100%;
+			padding-right:10px;
+			padding-left:10px;
+		}
+		
+		.block-views {
+			.views-field-field-anchor-to-link-to {
+				display:none;
+			}
+		}
+		
+		.paragraphs-item-special-event-callout-box {
+			display:block;
+			width:100%;
+			padding:2em 3em;
+			color:white;
+			background:$grey;
+			&:after {
+					content:"";
+					display:block;
+					float:right;
+					position:relative;
+					margin-top:-18px;
+					padding-right:0;
+					width:12px;
+					height:24px;
+					background:url(../images/icons/right-arrow.png) top left no-repeat;
+					margin-right:-22px;
+				}
+			.field-name-field-callout-title {
+				font-size:1.1em;
+				font-style:italic;
+			}
+			.field-name-field-callout-text {
+				font-size:1.8em;
+				line-height:1.4em;
+			}
+			.field-name-field-callout-link {
+				display:none;
+			}
+			.field-name-field-callout-active- {
+				display:none;
+			}
+		}
+	
+	}
+
+	
+	
+	/* News section */
+	
+	body.page-news {
+		
+		#main {padding-top:50px;padding-bottom:6em;}
+		
+		#content {
+			width:100%;
+			float:left;
+			display:block;
+			margin-top:-20px;
+		}
+		
+		h1#page-title {
+			display:none;
+		}
+		
+		.view-peace-geeks-news-and-events {
+			
+			&.view-display-id-page {
+				
+				.view-content {
+					
+					ol {
+						
+						li {
+							list-style-type:none;
+							display:block;
+							float:left;
+							width:325px;
+							height:490px;
+							background:$soft-grey;
+							margin-right:16px;
+							margin-bottom:34px;
+							position:relative;
+							&:nth-child(even) {
+								margin-right:0;
+							}
+						}
+					}
+				}
+				
+				.views-field-title {
+					display:block;
+					width:286px;
+					float:left;
+					padding-bottom:8px;
+					a {
+						font-size:1.6em;
+						line-height:1.2em;
+						color:black;
+						display:block;
+						width:100%;
+						padding:10px 20px 4px 20px;
+						font-weight:600;
+					}
+				}
+				
+				.views-field-body {
+					font-size:1.2em;
+					color:$text-black;
+					line-height:1.4em;
+					display:block;
+					padding:0 20px 20px 20px;
+					width:286px;
+					margin-top:0;
+					float:left;
+				}
+				
+				.views-field-created {
+					display:block;
+					float:left;
+					font-size:1.1em;
+					color:$text-grey;
+					padding-left:20px;
+					position:absolute;
+					bottom:26px;
+				}
+				
+				.views-field-comment-count {
+					display:none;
+					float:left;
+					font-size:1.1em;
+					color:$text-grey;
+					padding-left:20px;
+					position:absolute;
+					bottom:26px;
+					right:40px;
+					&:before {
+						content:"|";
+						padding-right:20px;
+					}
+				}
+			}
+			
+			ul.pager {
+				display:block;
+				float:left;
+				width:662px;
+			}
+			
+			ul.pager.pager-load-more {
+				display:block;
+				margin-left:380px;
+				
+				li {
+					list-style-type:none;
+					a {
+						color:$text-grey;
+						padding:14px 60px;
+						background:$soft-grey;
+						display:inline-block;
+						text-align:center;
+						margin-bottom:3em;
+						font-size:1.2em;
+					}
+				}
+			}
+		}
+	
+	}
+	
+	/* Events section */
+	
+	body.page-events {
+		
+		#main {padding-top:50px;padding-bottom:6em;}
+		
+		#content {
+			width:100%;
+			float:left;
+		}
+		
+		h1#page-title {
+			display:none;
+		}
+		
+		
+		
+		.view-peace-geeks-news-and-events {
+		
+			/* Past events */
+			
+			&.view-display-id-page_1 {
+				
+				.view-content {
+					
+					ol {
+						
+						li {
+							list-style-type:none;
+							display:block;
+							float:left;
+							width:210px;
+							height:434px;
+							background:$soft-grey;
+							margin-right:18px;
+							margin-bottom:34px;
+							position:relative;
+							
+							&:nth-child(3n) {
+								margin-right:0;
+							}
+						}
+					}
+				}
+				
+				.views-exposed-form {
+					display:block;
+					float:left;
+					width:100%;
+					background:$soft-grey;
+					padding:1em 2em;
+					margin-bottom:2em;
+					label {
+						text-transform:uppercase;
+						display:block;
+						margin-bottom:1em;
+						cursor:pointer;
+					}
+					.form-item {
+						display:inline-block;
+						background:white;
+						font-weight:300;
+						font-style:italic;
+						padding:.4em 1em;
+						margin-right:4px;
+						cursor:pointer;
+						&:hover {
+							background:$blue;
+						}
+						input[type="radio"] {
+							display:none;
+						}
+						label {
+							text-transform:none;
+							margin-bottom:0;
+							cursor:pointer;
+						}
+					}
+				}
+				
+				.views-field-title {
+					display:block;
+					width:170px;
+					float:left;
+					padding-left:20px;
+					padding-right:20px;
+					padding-top:10px;
+					padding-bottom:20px;
+					a {
+						font-size:1.1em;
+						line-height:1.3em;
+						color:$blue;
+						display:block;
+						width:100%;
+						font-weight:400;
+						text-transform:uppercase;
+					}
+				}
+				
+				.views-field-field-event-date {
+					font-size:1em;
+					color:$text-grey;
+					display:block;
+					padding:0 20px 4px 20px;
+					float:left;
+					position:absolute;
+					bottom:0;
+					margin-bottom:10px;
+				}
+				
+				.views-field-title-1 {
+					display:block;
+					width:100%;
+					float:left;
+					padding-left:20px;
+					position:absolute;
+					bottom:0;
+					margin-bottom:46px;
+					a {
+						font-size:1em;
+						color:$text-grey;
+						display:inline-block;
+						font-weight:400;
+						border:1px solid $text-grey;
+						padding:.2em .6em;
+						text-transform:none;
+						
+					}
+				}
+								
+				.views-field-comment-count {
+					display:block;
+					float:right;
+					font-size:1em;
+					color:$text-grey;
+					padding-right:20px;
+					margin-top:16px;
+					&:before {
+						content:"|";
+						padding-left:20px;
+					}
+				}
+			}
+			
+			/* Upcoming events */
+			
+			& .view-header .view-display-id-block_3  {
+				
+				h2 {
+					color:$blue;
+					font-weight:300;
+					font-size:2.4em;
+					margin-top:-14px;
+					margin-bottom:0;	
+				}
+				
+				.view-footer {
+					h2 {
+						margin-top:1em;
+						display:block;
+						float:left;
+						width:100%;
+						
+					}
+				}
+				
+				.view-content {
+					
+					ol {
+						
+						li {
+							list-style-type:none;
+							display:block;
+							float:left;
+							width:324px;
+							height:620px;
+							background:$soft-grey;
+							margin-right:18px;
+							margin-bottom:34px;
+							position:relative;
+							
+							&:nth-child(even) {
+								margin-right:0;
+							}
+						}
+					}
+				}
+				
+				.views-field-title {
+					display:block;
+					height:82px;
+					width:100%;
+					float:left;
+					padding:10px 20px 20px 20px;
+					margin-bottom:10px;
+					a {
+						font-size:1.6em;
+						line-height:1.1em;
+						color:black;
+						display:block;
+						width:100%;
+						
+						font-weight:600;
+						text-transform:none;
+					}
+				}
+				
+				.views-field-field-event-date {
+					font-size:1.2em;
+					color:$text-black;
+					display:block;
+					padding:0 20px 4px 20px;
+					width:286px;
+					float:left;
+					position:relative;
+					margin-bottom:0;
+					span.views-label {
+						float:left;
+						display:inline;
+						padding-right:6px;
+					}
+				}
+				
+				.views-field-field-event-date-1 {
+					font-size:1.2em;
+					color:$text-black;
+					display:block;
+					padding:0 20px 4px 20px;
+					width:286px;
+					margin-top:2px;
+					float:left;
+					position:relative;
+					span.views-label {
+						float:left;
+						display:inline;
+						padding-right:6px;
+					}
+				}
+				
+				.views-field-field-event-date-2 {
+					font-size:1.2em;
+					color:$text-black;
+					display:block;
+					padding:0 20px 4px 20px;
+					width:286px;
+					margin-top:2px;
+					float:left;
+					position:relative;
+					span.views-label {
+						float:left;
+						display:inline;
+						padding-right:6px;
+					}
+				}
+				
+				.views-field-title-1 {
+					display:block;
+					float:left;
+					padding-top:24px;
+					padding-left:20px;
+					width:auto;
+					position:absolute;
+					bottom:0;
+					margin-bottom:26px;
+					a {
+						font-size:1.2em;
+						color:$text-grey;
+						border:1px solid $text-grey;
+						padding:.2em 1em;
+						letter-spacing:1px;
+						font-weight:600;
+					}
+				}
+				
+				.views-field-field-registration-link {
+					display:block;
+					position:absolute;
+					margin-bottom:28px;
+					bottom:0;
+					margin-left:200px;
+					a {
+						font-size:1.2em;
+						color:white;
+						background:$orange;
+						padding:.2em 1em;
+						letter-spacing:1px;
+					}
+				}
+				
+				.views-field-comment-count {
+					display:block;
+					float:left;
+					font-size:1.1em;
+					color:$text-grey;
+					padding-left:20px;
+					width:100%;
+					padding-top:18px;
+					margin-top:0;
+					padding-right:0;
+					&:before {
+						content:"";
+						padding-right:0;
+					}
+				}
+			}
+			
+			ul.pager {
+				display:block;
+				float:left;
+				width:662px;
+			}
+			
+			.date-nav-wrapper ul.pager {
+				float:none;
+			}
+			
+			ul.pager.pager-load-more {
+				display:block;
+				margin-left:380px;
+				
+				li {
+					list-style-type:none;
+					a {
+						color:$text-grey;
+						padding:14px 60px;
+						background:$soft-grey;
+						display:inline-block;
+						text-align:center;
+						margin-bottom:3em;
+						font-size:1.2em;
+					}
+				}
+			}
+		}
+	
+	
+	}
+	
+	
+	/* Article pages */
+	
+	body.node-type-article {
+	
+		h1#page-title {
+			display:none;
+		}
+	
+		#main {
+			padding-top:50px;
+			padding-bottom:90px;
+		}
+	
+		#content {
+			width:100%;
+			float:left;
+			display:block;
+		}
+		
+		ol {
+			padding:1em 2em 1em 2em;
+			li {
+				
+			}
+		}
+		
+		aside.sidebars .region-sidebar-second {
+			ol {
+				padding:10px 0 0 0;
+				li {
+				
+				}
+			}
+		}
+		
+		.views-field-created {
+			color:$text-grey;
+		}
+		
+		.views-field-comment-count {
+			font-size:1.2em;
+			display:block;
+			width:100%;
+			border-top:2px solid $soft-grey;
+			padding-top:2em;
+			margin-top:2em;
+			margin-bottom:1em;
+		}
+	
+		.views-field-title {
+			a {
+				color:black;
+				font-size:1.8em;
+				line-height:1.4em;
+				padding-top:14px;
+				padding-bottom:18px;
+				font-weight:bold;
+				display:block;
+			}
+		}
+		
+		.views-field-name {
+			display:block;
+			margin-bottom:4px;
+			margin-top:18px;
+			.views-label {
+				text-transform:uppercase;
+				color:$text-grey;
+				
+			}
+			span.field-content {
+				a {
+					color:$text-grey;
+				}
+			}
+		}
+		
+		.views-field-field-tags {
+			display:block;
+			
+			margin-bottom:.6em;
+			.views-label {
+				text-transform:uppercase;
+				color:$text-grey;
+				display:inline;
+
+			}
+			div.field-content {
+				display:inline;
+				color:$text-grey;
+				a {
+					color:$text-grey;
+				}
+			}
+		}
+		
+		article.node-article {
+			.views-field-body {
+				font-size:1.1em;
+				line-height:1.6em;
+			}
+		}
+	
+	}
+	
+	
+	/* Event pages */
+	
+	body.node-type-event {
+	
+		h1#page-title {
+			display:none;
+		}
+	
+		#main {
+			padding-top:50px;
+			padding-bottom:90px;
+		}
+		
+		.views-field-field-youtube-video {
+			display:block;
+			float:left;
+			margin-top:1em;
+			margin-bottom:3em;
+			width:100%;
+			.views-label {
+				margin-bottom:14px;
+				text-transform:uppercase;
+				font-weight:600;
+				display:block;
+			}
+		}
+	
+		#content {
+			width:100%;
+			float:left;
+			display:block;
+		}
+		
+		.views-field-created {
+			color:$text-grey;
+			float:left;
+			width:100%;
+			display:block;
+		}
+		
+		.views-field-comment-count {
+			font-size:1.2em;
+			display:block;
+			width:100%;
+			border-top:2px solid $soft-grey;
+			padding-top:2em;
+			margin-top:2em;
+			margin-bottom:1em;
+		}
+		
+		.views-field-field-image {
+			float:left;
+			margin-right:20px;
+		}
+		
+		.views-field-name-1 {
+			a {
+				color:$blue;
+				font-size:1.8em;
+				line-height:1.4em;
+				padding-top:0;
+				padding-bottom:0;
+				font-weight:600;
+				display:block;
+			}
+		}
+		
+		.views-field-field-venue {
+			display:block;
+			margin-bottom:4px;
+			margin-top:18px;
+			font-size:1.1em;
+			width:100%;
+			.views-label {
+				display:inline;
+				font-weight:600;
+			}	
+			.field-content {
+				display:inline;
+			}
+		}
+		
+		.views-field-field-event-time {
+			display:block;
+			margin-bottom:4px;
+			margin-top:4px;
+			font-size:1.1em;
+			width:100%;
+			.views-label {
+				display:inline;
+				font-weight:600;
+			}	
+			.field-content {
+				display:inline;
+			}
+		}
+		
+		.views-field-field-event-date {
+			display:block;
+			margin-bottom:4px;
+			margin-top:18px;
+			font-size:1.1em;
+			width:100%;
+			.views-label {
+				display:inline;
+				font-weight:600;
+			}	
+			.field-content {
+				display:inline;
+			}
+		}
+		
+		.views-field-field-event-date-1 {
+			display:none;
+		}
+		
+		.views-field-field-guest-speaker {
+			display:block;
+			margin-bottom:4px;
+			margin-top:18px;
+			font-size:1.1em;
+			width:100%;
+			.views-label {
+				display:inline;
+				font-weight:600;
+			}	
+			.field-content {
+				display:inline;
+			}
+		}
+		
+		.views-field-view {
+			display:block;
+			float:left;
+			margin-bottom:4px;
+			margin-top:18px;
+			font-size:1em;
+			width:auto;
+			padding-right:40px;
+			margin-bottom:30px;
+			.views-row {
+				display:block;
+				float:left;
+			}
+			.views-label {
+				display:block;
+				font-weight:600;
+				margin-bottom:14px;
+				text-transform:uppercase;
+			}	
+			.field-content {
+				display:block;
+			}
+		}
+		
+		.views-field-view-1 {
+			display:block;
+			float:left;
+			margin-bottom:4px;
+			margin-top:18px;
+			font-size:1em;
+			width:auto;
+			margin-bottom:30px;
+			.views-row {
+				display:block;
+				float:left;
+			}
+			.views-label {
+				display:block;
+				font-weight:600;
+				margin-bottom:14px;
+				text-transform:uppercase;
+			}	
+			.field-content {
+				display:block;
+			}
+		}
+		
+		.views-field-field-registration-link {
+			a {
+				font-size: 1.2em;
+    			color: white;
+   				background: #F09416;
+    			padding: .2em 1em;
+    			letter-spacing: 1px;
+    			display:inline-block;
+    			margin-top:20px;
+			}
+		}
+	
+		.views-field-title {
+			a {
+				color:black;
+				font-size:1.8em;
+				line-height:1.2em;
+				padding-top:6px;
+				padding-bottom:6px;
+				font-weight:bold;
+				display:block;
+			}
+		}
+		
+		.views-field-name {
+			display:block;
+			margin-bottom:4px;
+			margin-top:18px;
+			float:left;
+			width:100%;
+			.views-label {
+				text-transform:uppercase;
+				color:$text-grey;
+				
+			}
+			span.field-content {
+				a {
+					color:$text-grey;
+				}
+			}
+		}
+		
+		.views-field-field-tags {
+			display:block;
+			float:left;
+			width:100%;
+			
+			margin-bottom:.6em;
+			.views-label {
+				text-transform:uppercase;
+				color:$text-grey;
+				display:inline;
+
+			}
+			div.field-content {
+				display:inline;
+				color:$text-grey;
+				a {
+					color:$text-grey;
+				}
+			}
+		}
+		
+		article.node-event {
+			.views-field-body {
+				font-size:1.1em;
+				line-height:1.6em;
+				display:block;
+				width:100%;
+				float:left;
+				padding-top:3em;
+				padding-bottom:2em;
+			}
+			
+			ul {
+				padding-left:30px;
+				li {
+				
+				}
+			}
+			
+			ol {
+				padding-left:30px;
+				li {
+				
+				}
+			}
+		}
+	
+	}
+	
+	
+	
+	/* Current Projects */
+	
+	body.currentprojects {
+	
+		#howcanyouhelp {
+			
+			display:block;
+			float:right;
+			position:absolute;
+			top:-41px;
+			right: 0;
+			height:213px;
+					
+			.field-name-field-header-text {
+				font-size:18px;
+				line-height:27px;
+			}
+			
+			
+		
+			a.orangeblock {
+				    color: white;
+					display: block;
+					float: left;
+					width: 190px;
+					font-weight: 600;
+					height: 100%;
+					background: $orange;
+					padding: 20px;
+					font-size: 18px;
+					line-height: 22px;
+				&:after {
+					content:"and become a PeaceGeek";
+					font-weight:300;
+					display:block;
+				}
+			}
+			
+			.rightarrow {
+				
+				content:"";
+				display:block;
+				float:right;
+				position:relative;
+				margin-top:202px;
+				padding-right:30px;
+				margin-left:-30px;
+				width:12px;
+				height:24px;
+				background:url(../images/icons/right-arrow.png) top left no-repeat;
+			
+			}
+		}
+	
+	
+	}
+	
+	/* Project Partners (Partner content type) node override */
+	
+	body.node-type-project-partners {
+	
+		#main {
+			padding-top:50px;
+			padding-bottom:7em;
+			margin-top:0;
+		}
+	
+		a#apply-today-button {
+			display:block;
+			float:left;
+			background:$grey;
+			color:white;
+			font-weight:600;
+			padding:20px;
+			height:120px;
+			width:300px;
+			margin-right:20px;
+			font-size:18px;
+			margin-bottom:4px;
+			margin-top:30px;
+			&:after {
+				content:"become a PeaceGeek!";
+				font-weight:300;
+				display:block;
+				padding-top:4px;
+				color:$soft-grey;
+			}	
+		}
+	
+		a#donate-button {
+			display:block;
+			float:left;
+			background:$orange;
+			color:white;
+			font-weight:600;
+			padding:20px;
+			height:120px;
+			width:300px;
+			margin-right:0;
+			font-size:18px;
+			margin-bottom:4px;
+			margin-top:30px;
+			&:after {
+				content:"to PeaceGeeks";
+				font-weight:300;
+				display:block;
+				padding-top:4px;
+			}	
+		}
+		
+		.view-id-peace_geeks_projects.view-display-id-project_partners_banner_block {
+		
+			display:block;
+			width:100%;
+			padding-top:81px;
+			position:relative;
+			height:400px;
+			
+			.view-content {
+				
+				display: block;
+				z-index: 10;
+				display:block;
+				height:400px;
+				
+			}
+					
+			.views-field-title {
+				width:1200px;
+				display:block;
+				margin:0 auto;
+				position: relative;
+				
+				.field-content {
+					  display: block;
+					  float: left;
+					  margin-top: 0;
+					  z-index: 30;
+					  position: relative;
+					  color: white;
+					  font-style: italic;
+					  font-size: 1.2em;
+					  margin-left:-320px;
+				}
+			}	
+			
+			.views-field-field-image-attribution {
+				color:white;
+				position:absolute;
+				bottom:22px !important;
+				right:10px !important;
+				font-size:11px;
+				opacity:.7;
+			}	
+			
+			.views-field-field-image-attribution-link a {
+				color:white;
+				position:absolute;
+				bottom:8px !important;
+				right:10px !important;
+				font-size:11px;
+				opacity:.7;
+			}	
+				
+				
+			#partner-profile-label {
+				display:none;
+				float:left;
+				width:66%;
+			}
+			
+			#parter-profile-name {
+				display:block;
+				float:left;
+				width:66%;
+				padding-bottom:1em;
+			}
+				
+			.views-field-field-partner-one-liner {
+			
+				width:1200px;
+				display:block;
+				margin:0 auto;
+				position: relative;
+				
+				.field-content {
+					display: block;
+					background: $blue;
+					color: white;
+					font-weight: 600;
+					font-size: 2.2em;
+					position: relative;
+					float: left;
+					margin-top: -21px;
+					margin-left: 120px;
+					width: 350px;
+					height: 340px;
+					padding: 3.2em 1em 1em 1em;
+					line-height: 1.2em;
+					z-index: 20;
+				}
+			}
+				
+			.views-field-field-banner-image {
+					display:block;
+					z-index:10;
+					width:100%;
+					height:400px;
+					float:left;
+					overflow:hidden;
+					margin-top:-400px;
+			
+				img {
+					width:100%;
+					height:auto;
+					min-width:1200px;
+					min-height:400px;
+				}
+		
+			}
+					
+
+				
+			
+		}
+		
+		
+		
+		h1#page-title {display:none;}
+		
+		.view-peace-geeks-projects.view-display-id-project_partners_node_override {
+		
+			.view-footer {
+					display:block;
+					float:left;
+				}
+			
+			.views-row {
+				
+				.views-label {
+					font-size:1.4em;
+					text-transform:uppercase;
+					color:$text-black;
+					font-weight:600;
+					display:block;
+					width:100%;
+					margin-bottom:16px;
+				}
+				
+				.views-field-field-image-caption {
+					display:block;
+					background:$blue;
+					width:100%;
+					float:left;
+					color:white;
+					height:60px;
+					margin-top:-25px;
+					padding:20px;
+					font-size:14px;
+					font-weight:300;
+					margin-bottom:40px !important;
+				}
+				
+				.views-field {
+					margin-bottom:20px;
+					display:block;
+					float:left;
+					h3 {
+						font-size:16px;
+						font-weight:600;
+						text-transform:uppercase;
+						margin-top:30px;
+						margin-bottom:10px;
+					}
+				}
+				
+				.views-field-field-peacegeeks-contributions {
+					border-top:1px solid $blue;
+					padding-top:20px;
+					margin-top:20px;
+					margin-bottom:-40px;
+					width:100%;
+				}
+				
+				.views-field-field-partner-contributions {
+					margin-top:50px;
+				}
+				
+				
+				.field-content {
+					p {
+						font-size:15px;
+						line-height:22px;
+						
+					}
+					
+					ul {
+						padding-left:20px;
+						padding-top:1em;
+						li {
+							font-size:1.1em;
+							padding-bottom:10px;
+						}
+					}
+				}
+				
+				.views-field-field-crisis-overview {
+					margin-bottom:40px;
+				}
+				
+				.views-field-field-what-they-do {
+					margin-bottom:40px;
+				}
+				
+				.views-field-field-our-impact {
+				
+				}
+				
+				.views-field-field-deliverables-summary {
+					margin-top:40px;
+					width:100%;
+					ul {
+						padding-left:0;
+						li {
+							display:inline-block;
+							background:$soft-grey;
+							color:$text-grey;
+							padding:.4em 1em;
+							margin-right:.4em;
+							margin-bottom:.8em;
+						}
+					}
+				}
+				
+				#proj-testimonial-author {
+					font-size:16px;
+					color:$text-grey;
+					font-style:italic;
+				}
+				
+				
+				
+				.views-field-field-proj-partners-testimonial {
+					display: block;
+					float: left;
+					width: 100%;
+					margin-bottom: 2em;
+					margin-top: 2em;
+					padding-bottom: 4em;
+					padding-top: 3em;
+					border-top: 1px solid $blue;
+					border-bottom: 1px solid $blue;
+					&:before {
+						content:"“";
+						font-size: 5em;
+						color: $blue;
+						line-height: 0;
+						font-weight: bold;
+						display: block;
+						margin-bottom: 16px;
+						margin-top: 30px;
+					}
+					.field-content p {
+						font-size: 2.8em;
+						color: $blue;
+						line-height: 1.4em;
+						margin-bottom: 20px;
+						font-weight: 300;
+						float: left;
+						&:after {
+							content:"”";
+							display:inline;
+						}
+					}
+				}
+			}
+			
+			/* Projects cards on partner page */
+		
+		.views-field-view {
+			margin-top:3em;
+		}
+		
+		.views-field-view .view-display-id-block_2 {
+			
+			
+			div.item-list {
+				ul.pager.pager-load-more {	
+					
+						li {
+							list-style-type:none;
+							a {
+								display:block;
+								float:left;
+								width:194px;
+								height:360px;
+								background:$blue;
+								padding:20px;
+								color:white;
+								font-size:18px;
+								&:after {
+									content:"projects";
+									font-weight:300;
+									display:block;
+								}
+							}
+						}
+					}
+			}
+	
+			.view-content .views-row {
+				display:block;
+				float:left;
+				width:234px;
+				height:380px;
+				margin-right:15px;
+				background:$soft-grey;
+				margin-bottom:20px;
+				position:relative;
+				&:nth-child(3n) {
+					margin-right:0;
+				}
+			
+				.views-field-field-image {
+				
+				}
+				
+				.views-field-field-project-date {
+					padding:10px 20px;
+					color:$blue;
+					font-size:16px;
+					line-height:20px;
+					font-weight:300;
+					.views-label {
+						color:$blue;
+						font-size:16px;
+						line-height:20px;
+						font-weight:300;
+						margin-bottom:0;
+						text-transform:none;
+					}
+				}
+			
+				.views-field-title {
+					padding:0 20px;
+					margin-bottom:0;
+					a {
+						color:$blue;
+						font-size:16px;
+						line-height:20px;
+						text-transform:uppercase;
+						font-weight:600;
+						letter-spacing:2px;
+					}
+				}
+			
+				
+			
+			
+			}
+	
+		
+			
+		
+		}
+		}
+	
+	}
+	
+	/* Partner cards */
+	
+	.view-peace-geeks-projects.view-display-id-block {
+		
+		margin-top:-4em;
+	
+		div.item-list {
+			ul.pager.pager-load-more {	
+					
+					li {
+						list-style-type:none;
+						a {
+							display:block;
+							float:left;
+							width:194px;
+							height:360px;
+							background:$blue;
+							padding:20px;
+							color:white;
+							font-size:18px;
+							&:after {
+								content:"current partners";
+								font-weight:300;
+								display:block;
+							}
+						}
+					}
+				}
+		}
+	
+		.views-row {
+			display:block;
+			float:left;
+			width:234px;
+			height:400px;
+			margin-right:15px;
+			background:$soft-grey;
+			margin-bottom:20px;
+			position:relative;
+			&:nth-child(3n) {
+				margin-right:0;
+			}
+			
+			.views-field-field-image {
+				
+			}
+			
+			.views-field-title {
+				padding:10px 20px;
+				a {
+					color:$blue;
+					font-size:16px;
+					line-height:20px;
+					text-transform:uppercase;
+					font-weight:600;
+				}
+			}
+			
+			.views-field-field-tags {
+				padding:10px 20px 0 20px;
+				ol {
+					display:block;
+					position:absolute;
+					bottom:0;
+					margin-bottom:-4px;
+					li {
+						list-style-type:none;
+						display:block;
+						float:left;
+						margin-right:6px;
+						margin-bottom:4px;
+						a {
+							display:inline-block;
+							background:white;
+							padding:4px 10px;
+							color:$text-grey;
+							font-style:italic;
+							font-size:12px;
+							font-weight:normal;
+							&:before {
+								content:"#";
+							}
+						}
+					}
+				}
+			}
+			
+			
+		}
+	
+	}
+	
+	
+	
+	
+	
+	/* Project node override */
+	
+	body.node-type-projects {
+	
+		#main {
+			padding-top:50px;
+			padding-bottom:7em;
+		}
+	
+		a#apply-today-button {
+			display:block;
+			float:left;
+			background:$grey;
+			color:white;
+			font-weight:600;
+			padding:20px;
+			height:120px;
+			width:320px;
+			margin-right:20px;
+			font-size:18px;
+			margin-bottom:4px;
+			margin-top:30px;
+			&:after {
+				content:"become a PeaceGeek!";
+				font-weight:300;
+				display:block;
+				padding-top:4px;
+				color:$soft-grey;
+			}	
+		}
+	
+		a#donate-button {
+			display:block;
+			float:left;
+			background:$orange;
+			color:white;
+			font-weight:600;
+			padding:20px;
+			height:120px;
+			width:310px;
+			margin-right:0;
+			font-size:18px;
+			margin-bottom:4px;
+			margin-top:30px;
+			&:after {
+				content:"to PeaceGeeks";
+				font-weight:300;
+				display:block;
+				padding-top:4px;
+			}	
+		}
+		
+		/* The banner image area */
+		
+		.view-id-peace_geeks_projects.view-display-id-block_1 {
+			display:block;
+			width:100%;
+			
+			
+			
+			.view-content {
+				
+				display: block;
+				z-index: 10;
+				position: relative;
+				padding-left: 3000px;
+				margin-left: -3000px;
+				padding-right: 3000px;
+				margin-right: -3000px;
+				height: 330px;
+				background: $blue;
+				overflow: hidden;
+				
+				.views-row {
+					display:block;
+					width:980px;
+					margin:0 auto;
+					height:330px;
+					position:relative;
+					padding:40px 20px;
+					
+					.views-field-view-node {
+						margin-top:10px;
+					}
+					a {
+						color:$text-black;
+						text-decoration:underline;
+					}
+					
+					.views-label {
+						display:inline;
+						float:left;
+						padding-right:6px;
+					}	
+					
+					.views-field {
+						display:block;
+						font-size:14px;
+						line-height:20px;
+						
+					}
+					
+					.views-field-field-proj-partners-location {
+						.locality-block {
+							display:inline;
+							float:left;
+						}
+						.country {
+							display:inline;
+							padding-left:6px;
+						}
+					}
+					
+					
+					
+					.views-field-field-proj-partners-url {
+						a {
+							color:$text-black;
+							font-weight:bold;
+							font-style:italic;
+							text-decoration:underline;
+							margin-top:8px;
+							display:block;
+						}
+					}
+					
+					.views-field-title-1 {
+						
+					}
+					
+					.views-field-field-project-date {
+						margin-top:10px;
+					}
+					
+					.views-field-title {
+						color:white;
+						font-size:2em;
+						font-weight:300;
+						letter-spacing:1px;
+						text-transform:uppercase;
+						display:block;
+						width:100%;
+						margin-bottom:12px;
+						margin-top:1em;
+						line-height:1.2em;
+						
+					}
+					
+					.views-field-field-partner-one-liner {
+						color:white;
+						font-size:36px;
+						line-height:44px;
+						font-weight:300;
+						display:none;
+					}
+					
+					.views-field-nothing {
+						h3 {
+							font-size:16px;
+							font-weight:600;
+							text-transform:uppercase;
+							margin-top:40px;
+							margin-bottom:10px;
+							letter-spacing:1px;
+							color:$text-black;
+						}
+					}
+					
+					
+					
+					.views-field-field-project-tags {
+						display:block;
+						right:0;
+						width:100%;
+						position:absolute;
+						bottom:0;
+						margin-bottom:.6em;
+						.views-label {
+							text-transform:uppercase;
+							color:$text-grey;
+							display:inline;
+
+						}
+						
+						ol {
+							text-align:right;
+							margin:0 0 -5px 0;
+							li {
+								list-style-type:none;
+								display:inline;
+								a {
+									background:$soft-grey;
+									color:$text-black;
+									font-style:italic;
+									padding:4px 14px;
+									margin-left:8px;
+									text-decoration:none;
+									&:before {
+										content:"#";
+									}
+								}
+							}
+						}
+						
+					}
+				}
+			}
+		}
+		
+		#main {padding-top:50px;}
+		
+		h1#page-title {display:none;}
+		
+		
+		/* The main node content area */
+		
+		.view-peace-geeks-projects.view-display-id-project_node_override {
+			
+		
+		
+			
+			.view-footer {
+				width:752px;
+				float:left;
+				display:block;
+				margin-top:2em;
+			}
+			
+			.views-row {
+				
+				.views-label {
+					font-size:1.4em;
+					text-transform:uppercase;
+					color:$text-black;
+					font-weight:600;
+					display:block;
+					width:100%;
+					margin-bottom:16px;
+				}
+				
+				.views-field-field-image-caption {
+					display:block;
+					background:$blue;
+					width:100%;
+					float:left;
+					color:white;
+					height:60px;
+					margin-top:-25px;
+					padding:20px;
+					font-size:14px;
+					font-weight:300;
+					margin-bottom:40px !important;
+				}
+				
+				.views-field-field-project-image {
+					margin-bottom:4em;
+				}
+				
+				.views-field {
+					margin-bottom:20px;
+					display:block;
+					float:left;
+					h3 {
+						font-size:16px;
+						font-weight:600;
+						text-transform:uppercase;
+						margin-top:30px;
+						margin-bottom:10px;
+					}
+				}
+				
+				.views-field-field-peacegeeks-contributions {
+					border-top:1px solid $blue;
+					padding-top:20px;
+					margin-top:20px;
+					margin-bottom:-40px;
+					width:100%;
+				}
+				
+				
+				.field-content {
+					font-size:15px;
+						line-height:22px;
+					p {
+						font-size:15px;
+						line-height:22px;
+						
+					}
+				}
+			}
+		}
+	
+	}
+	
+	
+	/* Projects landing page at /projects */
+	
+	body.node-type-structure.projectsmainpage {
+	
+		h1#page-title {display:none;}
+		
+		h2.element-invisible {display:none;}
+		
+		#main {padding-bottom:6em;}
+		
+		.view-peace-geeks-projects {
+			.view-footer {
+				display:block;
+				width:100%;
+				float:left;
+			}
+		}
+		
+		.views-exposed-form {
+			display:block;
+			width:100%;
+			background:$soft-grey;
+			padding:1em 2em;
+			margin-bottom:2em;
+			position:relative;
+			float:left;
+			min-height:50px;
+			
+			&:before {
+				content:"Filter Your Search";
+				display:block;
+				position:absolute;
+				margin-top:4px;
+				text-transform:uppercase;
+				letter-spacing:1px;
+				font-size:12px;
+				font-weight:600;
+			}
+			
+			.expandhide {
+				right:20px;
+				position:absolute;
+				cursor:pointer;
+				top:18px;
+			}
+			
+			fieldset.collapsible {
+				border: 0;
+				width: 100%;
+				display: block;
+				float: left;
+				position: relative;
+				legend {
+					font-size:12px;
+					font-weight:600;
+					position:absolute;
+					right:0;
+					top:0;
+					a {
+						color:$text-black;
+					}
+				}
+			}
+			
+			.views-exposed-widgets {
+				margin-top:2em;
+				.views-exposed-widget > label {
+					font-weight:300;
+					font-style:italic;
+					margin-bottom:10px;
+					margin-top:2em;
+				}
+			}
+			.form-radios .form-item {
+				display: inline-block;
+				background: white;
+				font-weight: 300;
+				font-style: italic;
+				padding: .4em 1em;
+				margin-right: 4px;
+				margin-bottom:8px;
+				cursor: pointer;
+				input[type="radio"] {
+					display:none;
+				}
+				&.highlight {
+					background:$blue;
+				}
+				label {
+					cursor:pointer;
+					font-weight:300;
+				}
+			}
+			input[type="submit"] {
+				background:$orange;
+			}
+			input[type="submit"]#edit-reset {
+				background:none;
+				color:$text-black;
+				position:absolute;
+				top:-10px;
+				right:110px;
+				font-weight:600;
+			}
+		}
+		
+		a#apply-today-button {
+			display:block;
+			float:left;
+			background:$orange;
+			color:white;
+			font-weight:600;
+			padding:20px;
+			height:120px;
+			width:100%;
+			margin-right:0;
+			font-size:18px;
+			margin-bottom:4px;
+			margin-top:50px;
+			span {
+				font-weight:300;
+				display:block;
+				padding-top:4px;
+			}	
+		}
+	
+		a#faq-button {
+			display:block;
+			float:left;
+			background:$grey;
+			color:white;
+			font-weight:600;
+			padding:20px;
+			height:120px;
+			width:100%;
+			margin-right:0;
+			font-size:18px;
+			margin-bottom:4px;
+			margin-top:50px;
+			
+		}
+		
+		/* Projects cards on all projects page */
+		
+		.view-peace-geeks-projects.view-display-id-all_projects_block {
+			
+			.view-header  {
+				h3 {
+					font-size:1.4em;
+				}
+				p {
+					font-size:1.1em;
+					line-height:1.5em;
+				}
+			}
+	
+			div.item-list {
+				ul.pager.pager-load-more {	
+						width:100%;
+						li {
+							list-style-type:none;
+							a {
+								display:block;
+								float:left;
+								width:90%;
+								height:auto;
+								background:$blue;
+								padding:20px;
+								color:white;
+								font-size:18px;
+								&:after {
+									content:"projects";
+									font-weight:300;
+									display:block;
+								}
+							}
+						}
+					}
+			}
+	
+			.view-content .views-row {
+				display:block;
+				float:left;
+				width:100%;
+				height:auto;
+				margin-right:0;
+				background:$soft-grey;
+				margin-bottom:20px;
+				position:relative;
+				&:nth-child(3n) {
+					margin-right:0;
+				}
+			
+				.views-field-field-image {
+				
+				}
+			
+				.views-field-title {
+					padding:10px 20px;
+					a {
+						color:$blue;
+						font-size:16px;
+						line-height:20px;
+						text-transform:uppercase;
+						font-weight:600;
+					}
+				}
+				
+				.views-field-field-project-date {
+					padding: 10px 20px;
+					color: $blue;
+					font-size: 16px;
+					line-height: 20px;
+					font-weight: 300;
+					.date-display-single {
+						
+					}
+				}
+			
+				.views-field-field-project-tags {
+					padding:10px 20px 0 20px;
+					ol {
+						display:block;
+						position:absolute;
+						bottom:0;
+						margin-bottom:-4px;
+						li {
+							list-style-type:none;
+							display:block;
+							float:left;
+							margin-right:6px;
+							margin-bottom:4px;
+							a {
+								display:inline-block;
+								background:white;
+								padding:4px 10px;
+								color:$text-grey;
+								font-style:italic;
+								font-size:12px;
+								font-weight:normal;
+								&:before {
+									content:"#";
+								}
+							}
+						}
+					}
+				}
+			
+			
+			}
+	
+		
+			
+		
+		}
+	
+	}
+	
+	
+	
+	/* Become a Volunteer */
+	
+	body.node-type-structure.becomevolunteer {
+	
+		#main {padding-top:50px;padding-bottom:6em;}
+		
+		.paragraphs-item-raw-block {
+			font-size:1.2em;
+			line-height:1.6em;
+			color:$text-black;
+			p {
+				margin-bottom:1em;
+			}
+		}
+		
+		.paragraphs-items-field-paragraphs {
+			margin-top:0;
+		}
+		
+		.view-display-id-meet_volunteer_block {
+			display: block;
+			z-index: 10;
+			position: relative;
+			/*padding-left: 3000px;
+			margin-left: -3000px;
+			padding-right: 3000px;
+			margin-right: -3000px;*/
+			height: 430px;
+			background: $soft-grey;
+			
+			&:before {
+				content: "";
+				position: absolute;
+				display: block;
+				top: 0px;
+				left: -9998px;
+				height:100%;
+				z-index: -1;
+				border-right: 9999px solid $soft-grey;
+				box-shadow: 9999px 0px 0px 0px $soft-grey;
+			  }
+			
+			.view-content {
+				width:980px;
+				margin-left:-114px;
+			}
+			
+			.views-field-field-team-image {
+				position:absolute;
+				bottom:0;
+				margin-bottom:-4px;
+			}
+			
+			.views-field-title {
+				margin-left:300px;
+				padding-top:50px;
+				.views-label {
+					display:block;
+					font-size:18px;
+					font-weight:600;
+					text-transform:uppercase;
+					letter-spacing:1px;
+					margin-bottom:16px;
+					
+				}
+				
+				.field-content {
+					font-size:28px;
+					font-weight:600;
+					color:$text-black;
+					margin-bottom:30px;
+					display:block;
+					
+				}
+			}
+			
+			.views-field-field-team-bio {
+				font-size:1.2em;
+				line-height:1.6em;
+				margin-left:300px;
+			}
+			
+			.views-field-field-amani-tags {
+				padding:10px 20px 0 20px;
+				ol {
+					display:block;
+					position:absolute;
+					bottom:0;
+					margin-bottom:-4px;
+					margin-left:300px;
+					li {
+						list-style-type:none;
+						display:block;
+						float:left;
+						margin-right:16px;
+						margin-bottom:4px;
+						a {
+							display:inline-block;
+							background:white;
+							padding:6px 20px;
+							color:$text-grey;
+							font-style:italic;
+							font-size:14px;
+							font-weight:normal;
+							&:before {
+								content:"#";
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		.view-display-id-current_openings_block {
+			
+			margin-top:-2em;
+			
+			.view-header h3 {
+				font-size:1.4em;
+				letter-spacing:1px;
+			}
+			
+			.views-field-title {
+				a {
+					color:$text-black;
+					font-size:1.4em;
+					line-height:24px;
+					text-transform:uppercase;
+					margin-bottom:14px;
+					display:block;
+					letter-spacing:1px;
+					font-weight:600;
+				}
+			}
+			
+			.views-field-body {
+				font-size:1.2em;
+				line-height:1.6em;
+				a {
+					color:$text-black;
+					width:206px;
+					display:block;
+					height:340px;
+				}	
+			}
+			
+			ol {
+				> li {
+					list-style-type:none;
+					
+						display:block;
+						margin-right:10px;
+						background:$soft-grey;
+						float:left;
+						width:204px;
+						height:430px;
+						padding:34px 20px;
+						position:relative;
+						
+						&:nth-child(3) {
+							margin-right:0;
+						}
+					
+				}
+			}	
+			
+			.views-field-field-opportunity-tags {
+				padding:0;
+				ul {
+					display:block;
+					position:absolute;
+					bottom:0;
+					margin-bottom:-4px;
+					li {
+						list-style-type:none;
+						display:block;
+						float:left;
+						margin-right:6px;
+						margin-bottom:4px;
+						margin-top:4px;
+						a {
+							display:inline-block;
+							background:white;
+							padding:6px 20px;
+							color:$text-grey;
+							font-style:italic;
+							font-size:13px;
+							font-weight:normal;
+							&:before {
+								content:"#";
+							}
+						}
+					}
+				}
+			}
+		
+		
+		}
+	
+		#volunteer-landing-buttons {
+		
+			display:block;
+			float:left;
+			width:752px;
+			margin-bottom:60px;
+			margin-top:-10px;
+			
+			#volunteer-general-app-link {
+				display:block;
+				float:left;
+				width:331px;
+				margin-right:10px;
+				background:$grey;
+				color:white;
+				font-weight:600;
+				font-size:18px;
+				margin-bottom:6px;
+				padding:10px 20px;
+				height:110px;
+				span {
+					display:block;
+					font-weight:300;
+				}
+				&:after {
+					content:"";
+					display:block;
+					float:right;
+					position:relative;
+					margin-top:24px;
+					padding-right:0;
+					width:12px;
+					height:24px;
+					background:url(../images/icons/right-arrow.png) top left no-repeat;
+				}
+			}
+			
+			#volunteer-current-openings-link {
+				display:block;
+				float:left;
+				width:331px;
+				margin-right:0;
+				background:$orange;
+				color:white;
+				font-weight:600;
+				font-size:18px;
+				margin-bottom:6px;
+				padding:10px 20px;
+				height:110px;
+				span {
+					display:block;
+					font-weight:300;
+				}
+				&:after {
+					content:"";
+					display:block;
+					float:right;
+					position:relative;
+					margin-top:24px;
+					padding-right:0;
+					width:12px;
+					height:24px;
+					background:url(../images/icons/right-arrow.png) top left no-repeat;
+				}
+			}
+		}
+	
+	}
+	
+	
+	/* Current Openings */
+	
+	body.page-currentopenings {
+	
+		#main {
+			padding-bottom:6em;
+		}
+	
+		h1#page-title {
+			font-weight:600;
+			font-size:1.6em;
+			margin-top:0;
+			text-transform:uppercase;
+			letter-spacing:1px;
+			margin-bottom:30px;
+		}
+		
+		.view-display-id-current_openings_page {
+			
+			.views-field-title {
+				margin-left:-40px;
+					color:$text-black;
+					font-weight:600;
+					font-size:26px;
+					display:block;
+					margin-bottom:16px;
+					cursor:pointer;
+					.views-label {
+						padding-right:24px;
+						font-size:36px;
+						display:block;
+						float:left;
+					}
+			}
+			
+			.current-apply-button {
+				    font-size: 1.1em;
+					color: white;
+					background-color: $orange;
+					padding: 4px 10px;
+					margin-bottom: 10px;
+					display: inline-block;
+					margin-top: 10px;
+			}
+			
+			.views-field-body {
+				font-size:1.2em;
+				line-height:1.6em;
+				margin-left:-8px;
+				margin-bottom:10px;
+			}
+			
+			.view-footer {
+				display:block;
+				float:left;
+				width:752px;
+				margin-top:80px;
+				margin-bottom:20px;
+			}
+			
+			#current-openings-general-application {
+				display:block;
+				float:left;
+				width:331px;
+				margin-right:0;
+				background:$orange;
+				color:white;
+				font-weight:600;
+				font-size:18px;
+				margin-bottom:10px;
+				padding:20px 20px 10px 20px;
+				height:110px;
+				span {
+					display:block;
+					font-weight:300;
+				}
+				&:after {
+					content:"";
+					display:block;
+					float:right;
+					position:relative;
+					margin-top:34px;
+					padding-right:0;
+					width:12px;
+					height:24px;
+					background:url(../images/icons/right-arrow.png) top left no-repeat;
+				}
+			}
+			
+			#current-openings-bottom-text {
+				display:block;
+				float:left;
+				width:341px;
+				margin-right:40px;
+				margin-bottom:6px;
+				height:110px;
+				font-size:1.2em;
+				line-height:1.6em;
+			}
+			
+			.views-field-field-opportunity-tags {
+				padding-top:30px;
+				ol {
+					display:block;
+					position:absolute;
+					bottom:0;
+					margin-bottom:-4px;
+					li {
+						list-style-type:none;
+						display:block;
+						float:left;
+						margin-right:6px;
+						margin-bottom:4px;
+						a {
+							display: inline-block;
+							background: white;
+							padding: 4px 10px;
+							color: $text-grey;
+							font-style: italic;
+							font-size: 14px;
+							font-weight: normal;
+							&:before {
+								content:"#";
+								font-style:italic;
+							}
+						}
+					}
+				}
+			}
+			
+			ol {
+				li.views-row {
+					list-style-type:none;
+					display: block;
+					z-index: 10;
+					position: relative;
+					padding-left: 3000px;
+					margin-left: -3000px;
+					padding-right: 3000px;
+					margin-right: -3000px;
+					background: #E6E6E6;
+					overflow: hidden;
+					margin-bottom:1em;
+					padding-top:40px;
+					padding-bottom:20px;
+				}
+			}
+		
+		
+		}
+	
+	}
+	
+	
+	/* Become a Corporate Sponsor */
+	
+	body.node-type-structure.becomesponsor {
+	
+		h1#page-title {display:none;}
+		
+		#amani-globalfeatures {
+			text-align:center;
+			margin-top:3em;
+			position:relative;
+			table-layout:fixed;
+			tr {
+				td {
+					width:188px;
+				}
+			}
+			tr:nth-child(even) {
+				td {
+					padding-bottom: 4em;
+					line-height: 1.4em;
+					padding-left: .6em;
+					padding-right: .6em;
+					font-size: .9em;
+					vertical-align:top;
+					padding-top:.8em;
+				}
+			}
+			tr:nth-child(4) {
+				td {
+					padding-bottom:0em;
+				}
+			}
+		}
+		
+		.spons-opp-box.anchor-link-to-box {
+			padding-top:3em;
+		}
+		
+		.anchor-link-to-box {
+			float:left !important;
+			position:relative;
+			
+			
+			.paragraphs-item-light-grey-text-box-with-link-to {
+				
+				padding:0;
+				
+				.field-type-link-field .field-item {
+					position:relative;
+					a {
+						width:214px;
+						display:block;
+						height:140px;
+						background:$soft-grey;
+						margin-right:16px;
+						text-align:left;
+						color:$blue;
+						text-transform:uppercase;
+						letter-spacing:1px;
+						padding:20px 0 0 20px;
+						font-weight:600;
+						margin-bottom:3em;
+						line-height:1.2em;
+					}
+				}
+				
+				
+				.field-name-field-image {
+					margin-bottom:-5px;
+				}
+			}
+
+		}
+		
+		.paragraphs-item-paragraph-text-with-anchor {
+			border-top:0;
+			padding-top:0;
+			
+			.field-name-field-image {
+				float:left;
+				margin-right:2em;
+			}
+			.field-name-field-header-text {
+				font-weight:bold;
+				text-transform:none;
+				font-size:24px;
+				color:$grey;
+				margin-bottom:40px;
+				
+				
+			}
+		}
+		
+		#peacetalk {
+			border-top:1px solid $blue;
+			padding-top:4em;
+			margin-bottom:-40px;
+			.field-name-field-image {
+				float:right;
+				margin-left:2em;
+			}
+		}
+		
+		#hackathon {
+			margin-top:-20px;
+		}
+		
+		#project {
+			margin-top:2em;
+		}
+				
+		.project-box {
+			&:before {
+				content: "Sponsorship Opportunities";
+				display: block;
+				float: left;
+				margin-top: -40px;
+				text-transform: uppercase;
+				font-size: 1.4em;
+				font-weight: 600;
+				position: absolute;
+				margin-bottom:40px;
+				width:300px;
+			}
+		}
+		
+		.hackathon-box {
+			float:left !important;
+			.paragraphs-item-light-grey-text-box-with-link-to {
+				padding:0;
+				a {
+
+					margin-right:0;
+				}
+			}
+
+		}
+		
+		
+		
+		#become-sponsor-buttons {
+		
+			width:752px;
+			margin-top:1em;
+			
+			#visit-sponsors-link {
+				display:block;
+				float:left;
+				width:331px;
+				margin-right:10px;
+				background:$grey;
+				color:white;
+				font-weight:600;
+				font-size:18px;
+				margin-bottom:6px;
+				padding:10px 20px;
+				height:110px;
+				span {
+					display:block;
+					font-weight:300;
+				}
+				&:after {
+					content:"";
+					display:block;
+					float:right;
+					position:relative;
+					margin-top:34px;
+					padding-right:0;
+					width:12px;
+					height:24px;
+					background:url(../images/icons/right-arrow.png) top left no-repeat;
+				}
+			}
+			
+			#download-sponsor-link {
+				display:block;
+				float:left;
+				width:331px;
+				margin-right:0;
+				background:$orange;
+				color:white;
+				font-weight:600;
+				font-size:18px;
+				margin-bottom:6px;
+				padding:10px 20px;
+				height:110px;
+				span {
+					display:block;
+					font-weight:300;
+				}
+				&:after {
+					content:"";
+					display:block;
+					float:right;
+					position:relative;
+					margin-top:34px;
+					padding-right:0;
+					width:12px;
+					height:24px;
+					background:url(../images/icons/right-arrow.png) top left no-repeat;
+				}
+			}
+			
+		}
+	
+	
+	}
+	
+	
+	/* Team - Node */
+	
+	body.node-type-team {
+	
+		h1#page-title {display:none;}
+	
+		.view-peace-geeks-team.view-display-id-team_node_override {
+			
+			.views-row {display:block;float:left;width:752px;}
+			
+			.views-field-field-team-image {
+				width:274px;
+				float:left;
+				display:block;
+				margin-right:2em;
+				margin-top:94px;
+			}
+			
+			.views-field-title {
+				font-size:3em;
+				color:$blue;
+				font-weight:300;
+				display:block;
+				width:444px;
+				margin-bottom:12px;
+				float:right;
+				line-height:28px;
+			}
+			
+			.views-field-field-team-title {
+				display:block;
+				font-style:italic;
+				font-size:1.3em;
+				font-weight:300;
+				width:444px;
+				float:right;
+			}
+			
+			.views-field-field-team-bio {
+				display:block;
+				font-size:1.1em;
+				line-height:1.6em;
+				width:444px;
+				border-bottom:2px solid $blue;
+				padding-bottom:1em;
+				margin-bottom:1em;
+				margin-top:2em;
+				float:right;
+			}
+			
+						
+			.views-field-field-email {
+				display:block;
+				float:right;
+				width:444px;
+				a {
+					color:$text-black;
+				}
+				span.views-label {
+					display:block;
+					float:left;
+					padding-right:8px;
+				}
+			}
+			
+			.views-field-nothing {
+				display:block;
+				float:right;
+				width:444px;
+				margin-bottom:10px;
+				font-weight:600;
+			}
+			
+			.views-field-field-facebook-link {
+				display:block;
+				float:right;
+				width:444px;
+				a {
+					color:$text-black;
+				}
+				span.views-label {
+					display:block;
+					float:left;
+					padding-right:8px;
+				}
+			}
+			
+			.views-field-field-twitter-link {
+				display:block;
+				float:right;
+				width:444px;
+				a {
+					color:$text-black;
+				}
+				span.views-label {
+					display:block;
+					float:left;
+					padding-right:8px;
+				}
+			}
+			
+			.views-field-field-github-link {
+				display:block;
+				float:right;
+				width:444px;
+				a {
+					color:$text-black;
+				}
+				span.views-label {
+					display:block;
+					float:left;
+					padding-right:8px;
+				}
+			}
+			
+			.views-field-field-linkedin-link {
+				display:block;
+				float:right;
+				width:444px;
+				a {
+					color:$text-black;
+				}
+				span.views-label {
+					display:block;
+					float:left;
+					padding-right:8px;
+				}
+			}
+		
+		}
+		
+		#content {
+			min-height:700px !important;
+			padding-bottom:6em;
+		}
+		
+		
+	
+	}
+	
+	
+	/* Where We Work */
+	
+	body.node-type-structure.wherewework {
+	
+		.paragraphs-item-paragraph-text-with-header-text {
+			.field-name-field-large-header-text {
+				margin-bottom:20px;
+				&:nth-child(2) {
+					margin-top:1em;
+				}
+			}
+		}
+		
+		#partner-apply {
+			display:block;
+			float:left;
+			width:100%;
+			margin-right:0;
+			background:$blue;
+			color:white;
+			font-weight:600;
+			font-size:18px;
+			margin-bottom:6px;
+			padding:20px 20px;
+			height:90px;
+			&:after {
+				content:"";
+				display:block;
+				float:right;
+				position:relative;
+				margin-top:22px;
+				padding-right:0;
+				width:12px;
+				height:24px;
+				background:url(../images/icons/right-arrow.png) top left no-repeat;
+			}
+			span {
+				display:block;
+				margin-top:4px;
+				font-weight:300;
+			}
+		}
+		
+		.paragraphs-item-add-a-view {
+			display:block;
+			width:$container;
+			float:left;
+			margin-top:-20px;
+			.field-name-field-view-title-text {
+				font-size:1.2em;
+				text-transform:uppercase;
+				color:$text-black;
+				letter-spacing:2px;
+				font-weight:600;
+				margin-bottom:16px;
+			}
+		}
+		
+		.view-display-id-region_country_name_blocks {
+		
+			display:block;
+			float:left;
+			width:$container;
+			h3 {
+				font-size:1.2em;
+				text-transform:uppercase;
+				color:$text-black;
+				letter-spacing:2px;
+				font-weight:600;
+				margin-bottom:14px;
+			}
+			ul {
+				
+				li {
+					list-style-type:none;
+					font-size:1.1em;
+					margin-bottom:10px;
+				}
+			}
+			
+			.view-content .item-list {
+				display:block;
+				float:left;
+				width:366px;
+				background:$soft-grey;
+				margin-right:20px;
+				padding:0 20px;
+				margin-bottom:20px;
+				&:nth-child(even) {
+					margin-right:0;
+				}
+			}
+		
+		}
+		
+		.view-display-id-country_image_cards {
+			.views-row {
+				position:relative;
+				display:block;
+				float:left;
+				margin-right:24px;
+				&.views-row-last {
+					margin-right:0;
+				}
+				.views-field-title {
+					position:absolute;
+					display:block;
+					color:white;
+					text-transform:uppercase;
+					letter-spacing:1px;
+					font-size:1.2em;
+					top:78px;
+					text-align:center;
+					width:100%;
+					font-weight:600;
+					padding:0 20px;
+					z-index:300;
+				}
+				.views-field-field-image {
+					position:relative;
+					float:left;
+					&:before {
+						content: "";
+						display: block;
+						position: absolute;
+						top: 0;
+						bottom: 4px;
+						left: 0;
+						right: 0;
+						background: rgba(71,79,94, 0.7);
+						-moz-transition: background .3s linear;
+						-webkit-transition: background .3s linear;
+						-o-transition: background .3s linear;
+						transition: background .3s linear;
+					}
+
+					img {
+					
+					}
+				}
+			}
+		}
+	
+	}
+	
+	
+	/* Products pages */
+	
+	body.node-type-structure.ourproducts {
+	
+		#main {
+			padding-bottom:0;
+		}
+		
+		#learn-more-partnership {
+			display:none;
+		}
+		
+		.view-display-id-random_partner_quotes {
+			display: block;
+			float: left;
+			position: relative;
+			/*padding-left: 3000px;
+			margin-left: -3000px;
+			padding-right: 3000px;
+			margin-right: -3000px;
+			background:$soft-grey;*/
+			margin-bottom:-71px;
+			margin-top:3em;
+			
+			&:before {
+				content: "";
+				position: absolute;
+				display: block;
+				top: 0px;
+				left: -9998px;
+				height:100%;
+				z-index: -1;
+				border-right: 9999px solid $soft-grey;
+				box-shadow: 9999px 0px 0px 0px $soft-grey;
+			  }
+		}
+		
+		#proj-testimonial-author {
+			font-size:16px;
+			color:$text-grey;
+			font-style:italic;
+			text-align:right;
+		}
+		
+		.paragraphs-item-link-block-blue a {
+			width:304px;
+			&:after {
+				content:"";
+				display:block;
+				float:right;
+				position:relative;
+				margin-top:116px;
+				padding-right:0;
+				width:12px;
+				height:24px;
+				background:url(../images/icons/right-arrow.png) top left no-repeat;
+			}
+		}
+		
+		.amani-text {
+			margin-top:0 !important;
+			display:block;
+			width:344px;
+			margin-right:20px;
+			p {
+				font-size:1.3em;
+				line-height:1.5em;
+				font-weight:300;
+			}
+		}
+		
+		.service-text {
+			margin-top:0 !important;
+			display:block;
+			width:344px;
+			margin-right:0;
+			margin-left:8px;
+			p {
+				font-size:1.3em;
+				line-height:1.5em;
+				font-weight:300;
+			}
+		}
+		
+		.views-field-field-proj-partners-testimonial {
+			
+			display: block;
+			float: left;
+			width: 100%;
+			margin-bottom: 2em;
+			margin-top: 2em;
+			padding-top: 3em;
+			padding-bottom:8em;
+
+			&:before {
+				content:"“";
+				font-size: 5em;
+				color: $blue;
+				line-height: 0;
+				font-weight: bold;
+				display: block;
+				margin-bottom: 16px;
+				margin-top: 30px;
+			}
+			.field-content p {
+				font-size: 2.8em;
+				color: $blue;
+				line-height: 1.4em;
+				margin-bottom: 20px;
+				font-weight: 300;
+				float: left;
+				&:after {
+					content:"”";
+					display:inline;
+				}
+			}
+		}
+	
+	
+	}
+	
+	
+	/* Partners overview */
+	
+	body.node-type-structure.partnersmain {
+		
+		.paragraphs-item-callout-box-full-width-grey {
+			height:330px;
+		}
+		
+	}
+	
+	
+	/* Services page */
+	
+	body.node-type-structure.servicespage {
+		.paragraphs-item-light-grey-text-box {
+			height:320px;
+			
+			.field-name-field-box-title {
+				line-height:1em;
+			}
+		}
+		
+		.paragraphs-item-link-block-blue {
+			margin-top:3em;
+			a:after {
+				content:"";
+				display:block;
+				float:right;
+				position:relative;
+				margin-top:116px;
+				padding-right:0;
+				width:12px;
+				height:24px;
+				background:url(../images/icons/right-arrow.png) top left no-repeat;
+			}
+		}
+		
+		.paragraphs-item-link-block-grey {
+			margin-top:3em;
+			a:after {
+				content:"";
+				display:block;
+				float:right;
+				position:relative;
+				margin-top:116px;
+				padding-right:0;
+				width:12px;
+				height:24px;
+				background:url(../images/icons/right-arrow.png) top left no-repeat;
+			}
+		}
+	}
+	
+	
+	
+	/* FAQ */
+	
+	body.page-faq {
+	
+		#main {
+			padding-bottom:4em;
+		}
+		
+		h3 {
+			margin-bottom:2em;
+		}
+	
+		h1#page-title {
+			font-weight:300;
+			font-size:3em;
+			line-height:1.4em;
+			margin-top:0;
+			text-transform:none;
+			letter-spacing:1px;
+			margin-bottom:1.6em;
+			color:$blue;
+		}
+		
+		.view-display-id-faq_page {
+			
+			.views-field-title {
+				color:$text-black;
+				font-weight:600;
+				display:block;
+				margin-bottom:16px;
+				font-size:1.2em;
+				line-height:1.6em;
+				cursor:pointer;
+				.views-label {
+					padding-right:10px;
+					font-size:1.8em;
+					display:block;
+					float:right;
+					font-weight:600;
+				}
+			}
+			
+
+			ol {
+				li.views-row {
+					list-style-type:none;
+					display: block;
+					z-index: 10;
+					position: relative;
+					background: #E6E6E6;
+					overflow: hidden;
+					margin-bottom:1.4em;
+					padding:40px 20px 20px 20px;
+					&.views-row-last {
+						margin-bottom:6em;
+					}
+				}
+			}
+		
+		
+		}
+	
+	}
+	
+	.large-blue-text {
+		color:$blue;
+		line-height:1.4em;
+		font-size:3em;
+		font-weight:300;
+		text-align:center;
+	}
+	
+	
+	/* Products - Amani */
+	
+	body.products-amani {
+	
+		#main {padding-bottom:6em;}
+	
+		#amani-globalfeatures {
+			text-align:center;
+			margin-top:3em;
+			margin-bottom:2em;
+			table-layout:fixed;
+			tr {
+				td {
+					width:188px;
+				}
+			}
+			tr:nth-child(even) {
+				td {
+					padding-bottom: 4em;
+					line-height: 1.4em;
+					padding-left: .6em;
+					padding-right: .6em;
+					font-size: .9em;
+					vertical-align:top;
+					padding-top:.8em;
+				}
+			}
+			tr:nth-child(4) {
+				td {
+					padding-bottom:4em;
+				}
+			}
+		}
+		
+		.product-features-highlight-box {
+			padding-left:3000px;
+			padding-right:3000px;
+			margin-left:-3000px;
+			margin-right:-3000px;
+			background:$soft-grey;
+			padding-top:3em;
+			padding-bottom:2em;
+			margin-bottom:4em !important;
+		}
+		
+		
+	
+		.amani-product-page-bottom {
+			display:block;
+			width:100%;
+			margin-top:5em !important;
+		}
+		
+		#example-amani-site {
+			border:1px solid #ccc;
+			margin-bottom:-2em;
+			width:752px !important;
+			height:auto !important;
+		}
+		
+		.feature-grey-full-bg-box {
+			padding-left:3000px;
+			padding-right:3000px;
+			margin-left:-3000px;
+			margin-right:-3000px;
+			background:$soft-grey;
+			margin-top:-2em !important;
+			padding-bottom:2em;
+			margin-bottom:3em !important;
+		}
+		
+		.image-float-left {
+			.field-name-field-images {
+				float:left;
+				padding-left:0;
+				padding-right:2em;
+			}
+		}
+		
+		#page-bottom-buttons {
+			display:block;
+			float:left;
+			width:100%;
+		}
+		
+		.products-footer {
+			display:block;
+			float:left;
+			width:100%;
+		}
+		
+		a#apply-today-button {
+			display:block;
+			float:left;
+			background:$orange;
+			color:white;
+			font-weight:600;
+			padding:20px;
+			height:120px;
+			width:194px;
+			margin-right:0;
+			font-size:18px;
+			margin-bottom:4px;
+			margin-top:20px;
+			span {
+				font-weight:300;
+				display:block;
+				padding-top:4px;
+			}	
+			&:after {
+				content:"";
+				display:block;
+				float:right;
+				position:relative;
+				margin-top:52px;
+				padding-right:0;
+				width:12px;
+				height:24px;
+				background:url(../images/icons/right-arrow.png) top left no-repeat;
+			}
+		}
+	
+		a#faq-button {
+			display:block;
+			float:left;
+			background:$grey;
+			color:white;
+			font-weight:600;
+			padding:20px;
+			height:120px;
+			width:194px;
+			margin-right:20px;
+			font-size:18px;
+			margin-bottom:4px;
+			margin-top:20px;
+			&:after {
+				content:"";
+				display:block;
+				float:right;
+				position:relative;
+				margin-top:92px;
+				padding-right:0;
+				width:12px;
+				height:24px;
+				background:url(../images/icons/right-arrow.png) top left no-repeat;
+			}
+			
+		}
+		
+		a#documentation-button {
+			display:block;
+			float:left;
+			background:$grey;
+			color:white;
+			font-weight:600;
+			padding:20px;
+			height:120px;
+			width:194px;
+			margin-right:20px;
+			font-size:18px;
+			margin-bottom:4px;
+			margin-top:20px;
+			&:after {
+				content:"";
+				display:block;
+				float:right;
+				position:relative;
+				margin-top:92px;
+				padding-right:0;
+				width:12px;
+				height:24px;
+				background:url(../images/icons/right-arrow.png) top left no-repeat;
+			}
+			
+		}
+	
+	}
+	
+	
+	/* FAQ Page */
+	
+	body.page-faq {
+		
+		h3 {
+			color:$orange;
+			text-transform:uppercase;
+			font-weight:600;
+			letter-spacing:2px;
+			font-size:1.4em;
+		}
+	
+	}
+	
+	
+	/* Other Ways to Give page */
+	
+	body.node-type-structure.otherwaystogive {
+	
+		#main {padding-top:50px;}
+	
+		.paragraphs-items-field-paragraphs {
+			margin-top:0;
+		}
+		
+		.other-ways-top-box {
+			margin-top:0 !important;
+		}
+	
+		.other-ways-item-first {
+			padding-top:30px;
+			border-top:1px solid $text-grey;
+			border-bottom:1px solid $text-grey;
+			padding-bottom:20px;
+		}
+		
+		.other-ways-item {
+		
+			width:100%;
+			position:relative;
+			
+			border-bottom:1px solid $text-grey;
+			padding-bottom:20px;
+			
+			&.other-ways-question {
+				.field-name-field-header-text {
+					text-transform:none;
+				}
+			}
+			
+			.field-name-field-header-text {
+				cursor:pointer;
+				position:relative;
+				width:752px;
+				&:after {
+					content: "";
+					display: block;
+					float: right;
+					position: relative;
+					margin-top: -15px;
+					padding-right: 20px;
+					width: 12px;
+					height: 24px;
+					background: url(../images/icons/grey-arrow-down.png) top left no-repeat;
+				}
+			}
+			
+		}
+		
+		.other-ways-question-first {
+			padding-top:30px;
+			border-top:1px solid $text-grey;
+		}
+		
+		.other-ways-questions-header {
+			margin-bottom:-30px !important;
+			margin-top:40px !important;
+		}
+		
+		
+	
+	}
+	
+
+}

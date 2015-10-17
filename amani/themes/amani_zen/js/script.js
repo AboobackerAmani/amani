@@ -383,7 +383,6 @@ Drupal.behaviors.paragraphs_adjustments = {
 		var divBHeights = $('.view-display-id-region_country_name_blocks .item-list').map(function() {
 			
 			heght = $(this).height();
-			console.log(heght);
 			return $(this).height();
 		
 		}).get();

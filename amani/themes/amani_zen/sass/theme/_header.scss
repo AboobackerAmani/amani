@@ -2,87 +2,85 @@
 * Header
 */
 
-//logo
-#header {
-  #logo img {
-    width: 120px;
-    //screen bigger than 768px
-    @media all and (min-width: $breakpoint) {
-      width: auto;
-      margin-left:-10px;
-    }
-  }
+@media all and (min-width: $breakpoint) {
+ 
+	//logo
+	#header {
+	  #logo img {
+		width: 120px;
+   
+		  width: auto;
+		  margin-left:-10px;
+	
+	  }
+
+	}
+
+	.region-header {
+	  width: 100%;
+		position: initial;
+		top: auto;
+		left: auto;
+		padding: 0;
+	  
+	}
+
+	#header {
+	  width: 980px;
+	  z-index: 9;
+	  background-color: #fff;
+
+	  #name-and-slogan {display:none;}
+
+	  .header__secondary-menu,
+	  #block-menu-menu-meta {
+		@include element-invisible;
+	  }
+	}
+
+	#navigation {
+	  ul {
+		list-style-type: none;
+	  }
+	  li {
+		float: left;
+	  }
+	}
+
+
+	// Main Navigation
+	#navigation {
+
+	  li {
+		background-color: transparent;
+		border-color: $grey;
+	  }
+
+	  a {
+		padding: 0 16px;
+		@include font-size(16px);
+		font-weight: $fw-light;
+		line-height: 16px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: $grey;
+		border: none;
+		&:hover, &.active {
+		  background-color: transparent;
+		  text-shadow: 0 0 $grey; // emulate bold font to avoid bumping
+		}
+	  }
+	}
+
+	// Social Media
+	div[id*="block-menu-menu-social-media"] {
+	  a {
+		color: $font-color;
+		@include ss-icon('circle');
+		@include link-hover-color(tint($blue, 0%));
+		@include font-size(20px);
+	  }
+	}
 
 }
-
-.region-header {
-  width: 100%;
-  position: absolute;
-  top: 70px;
-  padding: 0 10px;
-  @media all and (min-width: $breakpoint) {
-    position: initial;
-    top: auto;
-    left: auto;
-    padding: 0;
-  }
-}
-
-#header {
-  width: 980px;
-  z-index: 9;
-  background-color: #fff;
-
-  #name-and-slogan {display:none;}
-
-  .header__secondary-menu,
-  #block-menu-menu-meta {
-    @include element-invisible;
-  }
-}
-
-#navigation {
-  ul {
-    list-style-type: none;
-  }
-  li {
-    float: left;
-  }
-}
-
-
-// Main Navigation
-#navigation {
-
-  li {
-    background-color: transparent;
-    border-color: $grey;
-  }
-
-  a {
-    padding: 0 16px;
-    @include font-size(16px);
-    font-weight: $fw-light;
-    line-height: 16px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: $grey;
-    border: none;
-    &:hover, &.active {
-      background-color: transparent;
-      text-shadow: 0 0 $grey; // emulate bold font to avoid bumping
-    }
-  }
-}
-
-// Social Media
-div[id*="block-menu-menu-social-media"] {
-  a {
-    color: $font-color;
-    @include ss-icon('circle');
-    @include link-hover-color(tint($blue, 0%));
-    @include font-size(20px);
-  }
-}
-
 

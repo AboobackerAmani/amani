@@ -3,83 +3,71 @@
  * Style for drupal blocks.
  */
 
+/**
+ * Style by region
+ */
 
+
+@media all and (max-width: $breakpoint) {
+
+
+// Header
+.region-header {
+
+  .block {
+
+    .block-title { @include element-invisible(); }
+  }
+}
+
+// Footer
+.region-footer {
+
+  .block {
+    float: left;
+
+    .block-title { @include element-invisible(); }
+  }
+}
+
+/**
+ * Style by type
+ */
+
+// Blocks menu
+.block-menu {
+
+  ul.menu {
+    margin: 0 0 rhythm(1) 0;
+    padding: 0;
+
+    li {
+      list-style: none outside none;
+      margin-bottom: .3em;
+    }
+  }
+}
 
 /**
  * Unique blocks
  */
 
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
-   /* IE10+ specific styles go here */
-   
-   
-		#block-search-form {
-			top:-77px !important;
-			width:160px !important;
-			margin-right:10px !important;
-		}
-		
-		#block-menu-menu-social-media {
-			top:-72px;
-		}
-	
-	
-}
 
 
 
-@media all and (min-width: $breakpoint) {
+
 
 	.float-left-half-width {
 		display:block;
-		float:left;
-		width:358px;
+		float:none;
+		width:100%;
 		margin-right:30px;
 	}
 	
 	
 	
-		/**
-	 * Style by region
-	 */
-
-	// Header
-	.region-header {
-
-	  .block {
-
-		.block-title { @include element-invisible(); }
-	  }
-	}
-
-	// Footer
-	.region-footer {
-
-	  .block {
-		float: left;
-
-		.block-title { @include element-invisible(); }
-	  }
-	}
-
-	/**
-	 * Style by type
-	 */
-
-	// Blocks menu
-	.block-menu {
-
-	  ul.menu {
-		margin: 0 0 rhythm(1) 0;
-		padding: 0;
-
-		li {
-		  list-style: none outside none;
-		  margin-bottom: .3em;
-		}
-	  }
-	}	
+	
 	
 	
 	.paragraphs-item-pull-quote {
@@ -134,18 +122,18 @@
 	
 	.float-right-half-width {
 		display:block;
-		float:right;
-		width:358px;
+		float:none;
+		width:100%;
 	}
 
 	body.front #content #block-views-peace-geeks-twitter-block {
-			width:290px;
-			height:444px;
+			width:100%;
+			height:auto;
 			padding:1.4em;
 			background:$soft-grey;
 			font-size:1em;
 			display:block;
-			float:left;
+			float:none;
 			color:$text-grey;
 			a {
 				color:$orange;
@@ -154,8 +142,8 @@
 				display:none;
 			}
 			.view-content {
-				height:330px;
-				width:260px;
+				height:300px;
+				width:100%;
 				overflow:scroll;
 			}	
 			
@@ -206,7 +194,7 @@
 		
 		color:white;
 		display:block;
-		float:left;
+		float:none;
 		
 		.front-above-titles {
 			font-weight:300;
@@ -231,9 +219,9 @@
 			
 			position:relative;
 		  	display: inline-block;
-		  	width: 648px;
-		 	height: 444px;
-		 	margin-right:22px;
+		  	width: 100%;
+		 	height: auto;
+		 	margin-right:0;
 		 	background:$blue;
 		 	float:left;
 		 	
@@ -271,12 +259,25 @@
 		.view-display-id-featured_partner_front_block {
 			
 			position:relative;
-		  	display: inline-block;
-		  	width: 648px;
-		 	height: 444px;
-		 	margin-right:22px;
+		  	display: block;
+		  	width: 100%;
+		 	height: auto;
+		 	margin-right:0;
 		 	background:$blue;
-		 	float:left;
+		 	float:none;
+		 	margin-bottom:20px;
+		 	
+		 	.views-field-title {
+		  		padding-bottom:2em;
+		  	}
+		  	
+		  	.views-field-field-banner-image {
+		  		img {
+		  			max-width:100%;
+		  			width:100%;
+		  			height:auto;
+		  		}
+		  	}
 		 	
 		 	.views-field-field-tags {
 				padding:10px 20px 0 20px;
@@ -313,12 +314,24 @@
 			
 			position: relative;
 		  	display: inline-block;
-		  	width: 264px;
-		  	height: 350px;
+		  	width: 100%;
+		  	height: auto;
 		  	margin-top:20px;
-		  	margin-right:20px;
+		  	margin-right:0;
 		  	background:$grey;
 		  	float:left;
+		  	
+		  	.views-field-field-team-image {
+		  		img {
+		  			max-width:100%;
+		  			width:100%;
+		  			height:auto;
+		  		}
+		  	}	
+		  	
+		  	.views-field-title {
+		  		padding-bottom:2em;
+		  	}
 		  	
 		  	.views-field-field-amani-tags {
 				padding:10px 20px 0 20px;
@@ -356,10 +369,23 @@
 			position: relative;
 		  	display: inline-block;
 		  	float:left;
-		  	width:364px;
+		  	width:100%;
 		  	margin-top:20px;
-		  	margin-right:22px;
-		  	height:500px;
+		  	margin-right:0;
+		  	height:auto;
+		  	
+		  	.views-field-title {
+		  		padding-bottom:1em;
+		  	}
+		  	
+		  	.views-field-field-image {
+		  		img {
+		  			max-width:100%;
+		  			width:100%;
+		  			height:auto;
+		  		}
+		  	}	
+		  	
 		}
 		
 		.view-display-id-front_latest_event {
@@ -368,10 +394,22 @@
 			position: relative;
 		  	display: inline-block;
 		  	float:left;
-		  	width:290px;
+		  	width:100%;
 		  	padding-bottom:3em;
 		  	margin-top:20px;
-		  	height:500px;
+		  	height:auto;
+		  	
+		  	.views-field-title {
+		  		padding-bottom:1em;
+		  	}
+		  	
+		  	.views-field-field-image {
+		  		img {
+		  			max-width:100%;
+		  			width:100%;
+		  			height:auto;
+		  		}
+		  	}	
 		  	
 		  	.views-field-field-tags {
 				padding:10px 20px 0 20px;
@@ -409,10 +447,11 @@
 			position: relative;
 		  	display: inline-block;
 		  	float:left;
-		  	width:264px;
-		  	height:270px;
-		  	margin-top:-130px;
+		  	width:100%;
+		  	height:auto;
+		  	margin-top:20px;
 		  	padding-top:.8em;
+		  	padding-bottom:2em;
 		  	&:after {
 				content:"";
 				display:block;
@@ -423,7 +462,7 @@
 				width:12px;
 				height:24px;
 				background:url(../images/icons/right-arrow.png) top left no-repeat;
-				bottom:20px;
+				bottom:30px;
 				right:10px;
 			}
 		}
@@ -434,16 +473,17 @@
 			display:inline-block;
 			float:left;
 			margin-top:20px;
-			margin-left:20px;
-			width:676px;
-			height:120px;
+			margin-left:0;
+			width:100%;
+			height:auto;
 			&:after {
 				content:"";
 				display:block;
 				float:right;
 				position:relative;
-				margin-top:4px;
+				margin-top:-26px;
 				padding-right:20px;
+				padding-bottom:2em;
 				width:12px;
 				height:24px;
 				background:url(../images/icons/right-arrow.png) top left no-repeat;
@@ -451,87 +491,42 @@
 		}
 	
 	}
-	
-		// Search form
-	#block-search-form {
-	  display: inline-block;
-	  float: right;
-	  text-align: right;
-	  margin-top: -4px;
 
-	  //screen bigger than 768px
-	  @media all and (min-width: $breakpoint) {
+
+
+
+// Search form
+	#block-search-form {
+	  	display: none;
+	  	float: right;
+	  	text-align: right;
 		margin-top: 0;
 		width: auto;
 		position: absolute;
 		top: 24px;
 		right: 0;
-	  }
+	  
+	  	.form-text {
+			background-color: $soft-grey;
+			@include font-size(12px);
+			font-weight: normal;
+			height: 24px;
+			padding:0 4px;
+			width: 170px;
+	  	}
 
-	  @include hide-contextual-links();
-
-	  .form-text {
-		background-color: $soft-grey;
-		@include font-size(12px);
-		font-weight: normal;
-		height: 24px;
-		padding:0 4px;
-		width: 170px;
-	  }
-
-	  .form-actions {
-		display: none;
-	  }
+	 	 .form-actions {
+			display: none;
+	  	}
 	}
 
-}
 
 
-
-
-
-
-/* Twitter Block 
-#block-views-front_page_tweets-block  {
-  .view-header {
-    display: none;
-  }
-
-  .field-content.message_text {
-    font-family: 'Open Sans Semi Bold';
-  }
-
-  .field-content.twitter_date {
-    font-family: 'Open Sans Light Italic';
-  }
-
-  li.views-row {
-    margin: 0;
-    list-style-type: none;
-    padding: 0;
-    border-bottom: 2px solid;
-  }
-
-  .block-title {
-    font-size: 18px;
-    color: #5B616F;
-  }
-}
-
-.region.region-twitter {
-  position: relative;
-  display: inline-block;
-  width: 285px;
-  height: 350px;
-  margin-bottom: 10px;
-  background-color: rgb(230, 230, 230);
-  padding: 20px;
-}*/
 
 
 /* Events blocks */
 
-@media all and (min-width: $breakpoint) {
+
 
 	body.section-event, body.section-events {
 	
@@ -539,7 +534,7 @@
 			.region-sidebar-second {
 				display:block;
 				float:right;
-				width:260px;
+				width:100%;
 				margin-left:0;
 				margin-right:0;
 				background:$soft-grey;
@@ -556,13 +551,13 @@
 					}
 					
 					.view-header {
-						width:260px;
+						width:100%;
 						display:block;
 						height:32px;
 					}
 					
 					.view-content {
-						width:260px;
+						width:100%;
 						display:block;
 						padding-bottom:20px;
 					}
@@ -651,7 +646,7 @@
 					}
 					
 					display:block;
-					width:260px;
+					width:100%;
 					border-bottom:1px solid $text-grey;
 					
 					&.last {
@@ -720,21 +715,18 @@
 	
 	
 	}
-	
-	/* Disqus */
 
-	#block-disqus-disqus-comments {
-		margin-top:4em;
-	}
 
+
+
+/* Disqus */
+
+#block-disqus-disqus-comments {
+	margin-top:4em;
 }
-
-
-
 
 /* News blocks */
 
-@media all and (min-width: $breakpoint) {
 
 	body.section-news, body.node-type-article {
 	
@@ -742,7 +734,7 @@
 			.region-sidebar-second {
 				display:block;
 				float:right;
-				width:260px;
+				width:100%;
 				margin-left:0;
 				margin-right:0;
 				background:$soft-grey;
@@ -750,10 +742,10 @@
 				
 				a#likeusfacebook {
 					display:block;
-					width:180px;
+					width:100%;
 					padding:20px;
 					background:url(../images/facebook-peacegeeks.png) top left no-repeat;
-					height:70px;
+					height:auto;
 					margin:14px auto 30px auto;
 				}
 				
@@ -772,7 +764,7 @@
 					}
 					
 					display:block;
-					width:260px;
+					width:100%;
 					border-bottom:1px solid $text-grey;
 				}
 				
@@ -792,7 +784,7 @@
 					}
 					
 					display:block;
-					width:260px;
+					width:100%;
 					border-bottom:1px solid $text-grey;
 					
 					&.last {
