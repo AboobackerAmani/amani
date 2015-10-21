@@ -172,11 +172,19 @@ footer .field-label {
   position: absolute;
   bottom: 5px;
   right: 0;
+  
+  @media (max-width: $breakpoint) {
+    bottom: -8px;
+  }
 }
 
-footer #block-bean-img2 {
+footer .block.block-bean.odd {
   right: 110px;
   bottom: 5px;
+  
+  @media (max-width: $breakpoint) {
+    bottom: -8px;
+  }
 }
 
 .peacegeeks-logo {

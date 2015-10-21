@@ -4565,25 +4565,37 @@ footer .field-label {
   bottom: 5px;
   right: 0;
 }
+@media (max-width: 768px) {
+  /* line 168, ../sass/theme/_layout.scss */
+  .region-footer .block.block-bean {
+    bottom: -8px;
+  }
+}
 
-/* line 177, ../sass/theme/_layout.scss */
-footer #block-bean-img2 {
+/* line 181, ../sass/theme/_layout.scss */
+footer .block.block-bean.odd {
   right: 110px;
   bottom: 5px;
 }
+@media (max-width: 768px) {
+  /* line 181, ../sass/theme/_layout.scss */
+  footer .block.block-bean.odd {
+    bottom: -8px;
+  }
+}
 
-/* line 182, ../sass/theme/_layout.scss */
+/* line 190, ../sass/theme/_layout.scss */
 .peacegeeks-logo {
   margin: 0 0 20px 50px;
 }
 @media screen and (max-width: 570px) {
-  /* line 182, ../sass/theme/_layout.scss */
+  /* line 190, ../sass/theme/_layout.scss */
   .peacegeeks-logo {
     margin-left: 0;
   }
 }
 
-/* line 190, ../sass/theme/_layout.scss */
+/* line 198, ../sass/theme/_layout.scss */
 .footer-legal {
   background-color: #533058;
   border-top: 1px solid #67486b;
@@ -4593,27 +4605,27 @@ footer #block-bean-img2 {
   text-transform: uppercase;
   width: 100%;
 }
-/* line 199, ../sass/theme/_layout.scss */
+/* line 207, ../sass/theme/_layout.scss */
 .footer-legal div {
   margin: 0 auto;
   width: 75%;
 }
 
-/* line 206, ../sass/theme/_layout.scss */
+/* line 214, ../sass/theme/_layout.scss */
 #footer ul.menu li ul.menu {
   display: none;
 }
-/* line 210, ../sass/theme/_layout.scss */
+/* line 218, ../sass/theme/_layout.scss */
 #footer ul.menu {
   margin-top: 5px;
 }
-/* line 212, ../sass/theme/_layout.scss */
+/* line 220, ../sass/theme/_layout.scss */
 #footer ul.menu li {
   display: inline-block;
   float: left;
   width: 150px;
 }
-/* line 217, ../sass/theme/_layout.scss */
+/* line 225, ../sass/theme/_layout.scss */
 #footer ul.menu li:nth-child(2n+1) {
   clear: left;
 }
