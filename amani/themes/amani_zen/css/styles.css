@@ -3657,6 +3657,23 @@ tr.selected td {
   line-height: 1.8;
 }
 
+/* line 301, ../sass/components/_program_page.scss */
+.node-type-project .node-project .field-type-image {
+  margin-bottom: 30px;
+  overflow-y: hidden;
+  height: 400px;
+}
+@media (max-width: 1280px) {
+  /* line 301, ../sass/components/_program_page.scss */
+  .node-type-project .node-project .field-type-image {
+    height: auto;
+  }
+}
+/* line 309, ../sass/components/_program_page.scss */
+.node-type-project .node-project .field-type-image img {
+  width: 100%;
+}
+
 /*
   Resources page and node page
 */

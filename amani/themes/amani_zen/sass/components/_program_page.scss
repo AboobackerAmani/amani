@@ -294,3 +294,21 @@
     }
   }
 }
+
+//Node page
+.node-type-project {
+  .node-project {
+    .field-type-image {
+      margin-bottom: 30px;
+      overflow-y: hidden;
+      height: 400px;
+      @media (max-width: $max-width) {
+        height: auto;
+      }
+      
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
