@@ -14,20 +14,22 @@
 		
 		.programsorangeblock {
 			display:block;
-			width:231px;
-			float:right !important;
+			width:100%;
+			
+			float:left !important;
 			margin-top:0 !important;
 			margin-bottom:0 !important;
 			.paragraphs-item-link-block-grey {
 				margin-top:0 !important;
 				a {
-					width:186px;
+					width:90%;
 					background:$orange;
-					height:308px !important;
+					padding:1em;
+					height:auto !important;
 					margin-top:0 !important;
 					line-height:1.4em;
 					&.shorterlinkbox:after {
-						margin-top:226px !important;
+						margin-top:6px !important;
 					}
 				}
 				
@@ -40,20 +42,20 @@
 		
 		.linkboxtall {
 			display:block;
-			width:231px;
-			float:right !important;
+			width:100%;
+			float:left !important;
 			margin-top:0 !important;
 			margin-bottom:0 !important;
-			margin-right:5em;
+			margin-right:0;
 			.paragraphs-item-link-block-grey {
 				margin-top:0 !important;
 				a {
-					width:186px;
-					height:342px !important;
+					width:90%;
+					height:70px !important;
 					margin-top:0 !important;
 					line-height:1.4em;
 					&.shorterlinkbox:after {
-						margin-top:316px !important;
+						margin-top:6px !important;
 					}
 				}
 				
@@ -78,9 +80,9 @@
 			background:$orange;
 			color:white;
 			padding-bottom:2em;
-			height:384px;
-			margin-left:5em;
-			width:340px;
+			height:auto;
+			margin-left:0;
+			width:100%;
 			a {
 				color:white;
 			}
@@ -113,11 +115,16 @@
 			
 		}
 		
+		div.darkbackground.anchor-link-to-box  {
+			float:none !important;
+		}
 		
 		div.darkbackground.anchor-link-to-box div.paragraphs-item-light-grey-text-box-with-link-to a.anchorlink {
 			margin-right:0;
 		}
 		div.paragraphs-item-light-grey-text-box-with-link-to {
+			float:none;
+			width:100%;
 			
 			a.anchorlink {
 				color:white;
@@ -126,7 +133,7 @@
 				padding-left:1em;
 				background:$blue;
 				height:100px !important;
-				width:296px;
+				width:80%;
 				margin-bottom:1.8em;
 				&.darkbackground {
 					background:$grey;
@@ -1084,14 +1091,24 @@
 	
 	body.currentprojects {
 	
+		.paragraphs-item-callout-box-full-width-grey {
+			padding-bottom:10em;
+		}
+	
+		#hacky-id {
+				width:100% !important;
+				float:none !important;
+			}
+	
 		#howcanyouhelp {
 			
 			display:block;
-			float:right;
-			position:absolute;
-			top:-41px;
+			float:left;
+			position:relative;
+			top:1em;
 			right: 0;
 			height:213px;
+			width:100%;
 					
 			.field-name-field-header-text {
 				font-size:18px;
@@ -1104,16 +1121,18 @@
 				    color: white;
 					display: block;
 					float: left;
-					width: 190px;
+					width: 100%;
 					font-weight: 600;
 					height: 100%;
 					background: $orange;
-					padding: 20px;
+					padding: 1em 0;
+					text-indent:1em;
 					font-size: 18px;
 					line-height: 22px;
 				&:after {
 					content:"and become a PeaceGeek";
 					font-weight:300;
+					text-indent:1em;
 					display:block;
 				}
 			}
@@ -1563,7 +1582,7 @@
 						a {
 							display:block;
 							float:left;
-							width:194px;
+							width:100%;
 							height:360px;
 							background:$blue;
 							padding:20px;
@@ -1582,25 +1601,31 @@
 		.views-row {
 			display:block;
 			float:left;
-			width:234px;
-			height:400px;
-			margin-right:15px;
+			width:100%;
+			height:auto;
+			margin-right:0;
 			background:$soft-grey;
-			margin-bottom:20px;
+			margin-bottom:2em;
 			position:relative;
 			&:nth-child(3n) {
 				margin-right:0;
 			}
 			
-			.views-field-field-image {
-				
+			
+			
+			.views-field-field-proj-partners-image {
+				img {
+					width:100%;
+					height:auto;
+				}
 			}
 			
 			.views-field-title {
 				padding:10px 20px;
+				margin-bottom:3em;
 				a {
 					color:$blue;
-					font-size:16px;
+					font-size:1.4em;
 					line-height:20px;
 					text-transform:uppercase;
 					font-weight:600;
@@ -1867,7 +1892,7 @@
 		
 			
 			.view-footer {
-				width:752px;
+				width:100%;
 				float:left;
 				display:block;
 				margin-top:2em;
@@ -2332,17 +2357,20 @@
 					display:block;
 					letter-spacing:1px;
 					font-weight:600;
+					padding-left:1em;
 				}
 			}
 			
 			.views-field-body {
 				font-size:1.2em;
 				line-height:1.6em;
+				padding-left:1em;
 				a {
 					color:$text-black;
-					width:206px;
+					width:100%;
 					display:block;
-					height:340px;
+					height:auto;
+					padding-bottom:2em;
 				}	
 			}
 			
@@ -2351,14 +2379,14 @@
 					list-style-type:none;
 					
 						display:block;
-						margin-right:10px;
+						margin-right:0;
 						background:$soft-grey;
 						float:left;
-						width:204px;
-						height:430px;
-						padding:34px 20px;
+						width:100%;
+						height:auto;
+						padding:34px 0;
 						position:relative;
-						
+						margin-bottom:2em;
 						&:nth-child(3) {
 							margin-right:0;
 						}
@@ -2367,7 +2395,8 @@
 			}	
 			
 			.views-field-field-opportunity-tags {
-				padding:0;
+				padding:0 0 0 1em;
+				
 				ul {
 					display:block;
 					position:absolute;
@@ -2403,22 +2432,23 @@
 		
 			display:block;
 			float:left;
-			width:752px;
+			width:100%;
 			margin-bottom:60px;
 			margin-top:-10px;
 			
 			#volunteer-general-app-link {
 				display:block;
 				float:left;
-				width:331px;
+				width:100%;
 				margin-right:10px;
 				background:$grey;
 				color:white;
 				font-weight:600;
 				font-size:18px;
 				margin-bottom:6px;
-				padding:10px 20px;
+				padding:10px 0;
 				height:110px;
+				text-indent:20px;
 				span {
 					display:block;
 					font-weight:300;
@@ -2429,7 +2459,7 @@
 					float:right;
 					position:relative;
 					margin-top:24px;
-					padding-right:0;
+					padding-right:20px;
 					width:12px;
 					height:24px;
 					background:url(../images/icons/right-arrow.png) top left no-repeat;
@@ -2439,14 +2469,15 @@
 			#volunteer-current-openings-link {
 				display:block;
 				float:left;
-				width:331px;
+				width:100%;
 				margin-right:0;
 				background:$orange;
 				color:white;
 				font-weight:600;
 				font-size:18px;
 				margin-bottom:6px;
-				padding:10px 20px;
+				padding:10px 0;
+				text-indent:20px;
 				height:110px;
 				span {
 					display:block;
@@ -2458,7 +2489,7 @@
 					float:right;
 					position:relative;
 					margin-top:24px;
-					padding-right:0;
+					padding-right:20px;
 					width:12px;
 					height:24px;
 					background:url(../images/icons/right-arrow.png) top left no-repeat;
@@ -2489,7 +2520,7 @@
 		.view-display-id-current_openings_page {
 			
 			.views-field-title {
-				margin-left:-40px;
+				margin-left:0;
 					color:$text-black;
 					font-weight:600;
 					font-size:26px;
@@ -2517,14 +2548,14 @@
 			.views-field-body {
 				font-size:1.2em;
 				line-height:1.6em;
-				margin-left:-8px;
+				margin-left:20px;
 				margin-bottom:10px;
 			}
 			
 			.view-footer {
 				display:block;
 				float:left;
-				width:752px;
+				width:100%;
 				margin-top:80px;
 				margin-bottom:20px;
 			}
@@ -2532,14 +2563,15 @@
 			#current-openings-general-application {
 				display:block;
 				float:left;
-				width:331px;
+				width:100%;
 				margin-right:0;
 				background:$orange;
 				color:white;
 				font-weight:600;
 				font-size:18px;
 				margin-bottom:10px;
-				padding:20px 20px 10px 20px;
+				padding:20px 0 10px 0;
+				text-indent:20px;
 				height:110px;
 				span {
 					display:block;
@@ -2551,7 +2583,7 @@
 					float:right;
 					position:relative;
 					margin-top:34px;
-					padding-right:0;
+					padding-right:20px;
 					width:12px;
 					height:24px;
 					background:url(../images/icons/right-arrow.png) top left no-repeat;
@@ -2561,8 +2593,8 @@
 			#current-openings-bottom-text {
 				display:block;
 				float:left;
-				width:341px;
-				margin-right:40px;
+				width:100%;
+				margin-right:0;
 				margin-bottom:6px;
 				height:110px;
 				font-size:1.2em;
@@ -2611,7 +2643,7 @@
 					margin-right: -3000px;
 					background: #E6E6E6;
 					overflow: hidden;
-					margin-bottom:1em;
+					margin-bottom:3em;
 					padding-top:40px;
 					padding-bottom:20px;
 				}
@@ -2765,7 +2797,7 @@
 		
 		#become-sponsor-buttons {
 		
-			width:752px;
+			width:100%;
 			margin-top:1em;
 			
 			#visit-sponsors-link {
@@ -2840,14 +2872,18 @@
 	
 		.view-peace-geeks-team.view-display-id-team_node_override {
 			
-			.views-row {display:block;float:left;width:752px;}
+			.views-row {display:block;float:none;width:100%;}
 			
 			.views-field-field-team-image {
-				width:274px;
-				float:left;
+				width:100%;
+				float:none;
 				display:block;
-				margin-right:2em;
-				margin-top:94px;
+				margin-right:0;
+				margin-top:0;
+				img {
+					width:100%;
+					height:auto;
+				}
 			}
 			
 			.views-field-title {
@@ -2855,10 +2891,11 @@
 				color:$blue;
 				font-weight:300;
 				display:block;
-				width:444px;
+				width:100%;
 				margin-bottom:12px;
-				float:right;
+				float:none;
 				line-height:28px;
+				margin-top:.6em;
 			}
 			
 			.views-field-field-team-title {
@@ -2866,97 +2903,97 @@
 				font-style:italic;
 				font-size:1.3em;
 				font-weight:300;
-				width:444px;
-				float:right;
+				width:100%;
+				float:none;
 			}
 			
 			.views-field-field-team-bio {
 				display:block;
 				font-size:1.1em;
 				line-height:1.6em;
-				width:444px;
+				width:100%;
 				border-bottom:2px solid $blue;
 				padding-bottom:1em;
 				margin-bottom:1em;
 				margin-top:2em;
-				float:right;
+				float:none;
 			}
 			
 						
 			.views-field-field-email {
 				display:block;
-				float:right;
-				width:444px;
+				float:none;
+				width:100%;
 				a {
 					color:$text-black;
 				}
 				span.views-label {
 					display:block;
-					float:left;
+					float:none;
 					padding-right:8px;
 				}
 			}
 			
 			.views-field-nothing {
 				display:block;
-				float:right;
-				width:444px;
+				float:none;
+				width:100%;
 				margin-bottom:10px;
 				font-weight:600;
 			}
 			
 			.views-field-field-facebook-link {
 				display:block;
-				float:right;
-				width:444px;
+				float:none;
+				width:100%;
 				a {
 					color:$text-black;
 				}
 				span.views-label {
 					display:block;
-					float:left;
+					float:none;
 					padding-right:8px;
 				}
 			}
 			
 			.views-field-field-twitter-link {
 				display:block;
-				float:right;
-				width:444px;
+				float:none;
+				width:100%;
 				a {
 					color:$text-black;
 				}
 				span.views-label {
 					display:block;
-					float:left;
+					float:none;
 					padding-right:8px;
 				}
 			}
 			
 			.views-field-field-github-link {
 				display:block;
-				float:right;
-				width:444px;
+				float:none;
+				width:100%;
 				a {
 					color:$text-black;
 				}
 				span.views-label {
 					display:block;
-					float:left;
+					float:none;
 					padding-right:8px;
 				}
 			}
 			
 			.views-field-field-linkedin-link {
 				display:block;
-				float:right;
-				width:444px;
+				float:none;
+				width:100%;
 				a {
 					color:$text-black;
 				}
 				span.views-label {
 					display:block;
-					float:left;
+					float:none;
 					padding-right:8px;
 				}
 			}
@@ -2996,7 +3033,8 @@
 			font-weight:600;
 			font-size:18px;
 			margin-bottom:6px;
-			padding:20px 20px;
+			padding:20px 0;
+			text-indent:1em;
 			height:90px;
 			&:after {
 				content:"";
@@ -3004,7 +3042,7 @@
 				float:right;
 				position:relative;
 				margin-top:22px;
-				padding-right:0;
+				padding-right:20px;
 				width:12px;
 				height:24px;
 				background:url(../images/icons/right-arrow.png) top left no-repeat;
@@ -3018,11 +3056,11 @@
 		
 		.paragraphs-item-add-a-view {
 			display:block;
-			width:$container;
+			width:100%;
 			float:left;
 			margin-top:-20px;
 			.field-name-field-view-title-text {
-				font-size:1.2em;
+				font-size:1.4em;
 				text-transform:uppercase;
 				color:$text-black;
 				letter-spacing:2px;
@@ -3035,7 +3073,7 @@
 		
 			display:block;
 			float:left;
-			width:$container;
+			width:100%;
 			h3 {
 				font-size:1.2em;
 				text-transform:uppercase;
@@ -3056,10 +3094,10 @@
 			.view-content .item-list {
 				display:block;
 				float:left;
-				width:366px;
+				width:100%;
 				background:$soft-grey;
-				margin-right:20px;
-				padding:0 20px;
+				margin-right:0;
+				padding:0 0 0 20px;
 				margin-bottom:20px;
 				&:nth-child(even) {
 					margin-right:0;
@@ -3073,7 +3111,9 @@
 				position:relative;
 				display:block;
 				float:left;
-				margin-right:24px;
+				margin-right:0;
+				width:100%;
+				margin-bottom:1em;
 				&.views-row-last {
 					margin-right:0;
 				}
@@ -3082,9 +3122,9 @@
 					display:block;
 					color:white;
 					text-transform:uppercase;
-					letter-spacing:1px;
-					font-size:1.2em;
-					top:78px;
+					letter-spacing:2px;
+					font-size:1.8em;
+					top:178px;
 					text-align:center;
 					width:100%;
 					font-weight:600;
@@ -3094,6 +3134,11 @@
 				.views-field-field-image {
 					position:relative;
 					float:left;
+					width:100%;
+					img {
+						width:100%;
+						height:auto;
+					}
 					&:before {
 						content: "";
 						display: block;
@@ -3164,14 +3209,15 @@
 		}
 		
 		.paragraphs-item-link-block-blue a {
-			width:304px;
+			width:100%;
+			height:120px;
 			&:after {
 				content:"";
 				display:block;
 				float:right;
 				position:relative;
-				margin-top:116px;
-				padding-right:0;
+				margin-top:100px;
+				padding-right:20px;
 				width:12px;
 				height:24px;
 				background:url(../images/icons/right-arrow.png) top left no-repeat;
@@ -3181,8 +3227,8 @@
 		.amani-text {
 			margin-top:0 !important;
 			display:block;
-			width:344px;
-			margin-right:20px;
+			width:100%;
+			margin-right:0;
 			p {
 				font-size:1.3em;
 				line-height:1.5em;
@@ -3193,9 +3239,9 @@
 		.service-text {
 			margin-top:0 !important;
 			display:block;
-			width:344px;
+			width:100%;
 			margin-right:0;
-			margin-left:8px;
+			margin-left:0;
 			p {
 				font-size:1.3em;
 				line-height:1.5em;
@@ -3256,7 +3302,8 @@
 	
 	body.node-type-structure.servicespage {
 		.paragraphs-item-light-grey-text-box {
-			height:320px;
+			height:auto;
+			width:100%;
 			
 			.field-name-field-box-title {
 				line-height:1em;
@@ -3270,8 +3317,8 @@
 				display:block;
 				float:right;
 				position:relative;
-				margin-top:116px;
-				padding-right:0;
+				margin-top:0;
+				padding-right:1em;
 				width:12px;
 				height:24px;
 				background:url(../images/icons/right-arrow.png) top left no-repeat;
@@ -3285,8 +3332,8 @@
 				display:block;
 				float:right;
 				position:relative;
-				margin-top:116px;
-				padding-right:0;
+				margin-top:0;
+				padding-right:1em;
 				width:12px;
 				height:24px;
 				background:url(../images/icons/right-arrow.png) top left no-repeat;
@@ -3425,7 +3472,7 @@
 		#example-amani-site {
 			border:1px solid #ccc;
 			margin-bottom:-2em;
-			width:752px !important;
+			width:100% !important;
 			height:auto !important;
 		}
 		
@@ -3601,7 +3648,7 @@
 			.field-name-field-header-text {
 				cursor:pointer;
 				position:relative;
-				width:752px;
+				width:100%;
 				&:after {
 					content: "";
 					display: block;

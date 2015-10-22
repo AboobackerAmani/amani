@@ -87,6 +87,10 @@
 
 #footer {
 	#block-menu-menu-amani-main-menu {
+		
+		width:100%;
+		float:none;
+		margin-top:2em;
 	
 		ul {
 			margin-bottom:0;
@@ -165,7 +169,8 @@
   //Logo in footer
   #block-bean-amani-powered-by {
     //@include zen-grid-item(3,1);
-    width: 30%;
+    width: 100%;
+    float:none;
 
     .field-item > img {
        @include element-invisible;
@@ -175,10 +180,10 @@
   //Footer menu
   #block-menu-menu-amani-main-menu {
     //@include zen-grid-item(7,4);
-    width: 70%;
+    width: 100%;
 
     li {
-      width: 10em;
+      width: 100%;
       display: inline-block;
       float: left;
 
@@ -189,6 +194,7 @@
 
       &:nth-child(2n+1) {
         clear: left;
+        width:100%;
       }
     }
   }
