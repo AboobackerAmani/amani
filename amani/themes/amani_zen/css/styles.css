@@ -10673,7 +10673,7 @@ form.comment-form #edit-preview {
   body.node-type-structure.donatepage .IATS_Div {
     display: block;
     float: left;
-    width: 752px !important;
+    width: 100% !important;
     position: relative;
     z-index: 10;
   }
@@ -10993,7 +10993,7 @@ form.comment-form #edit-preview {
   body.node-type-structure.donatepage .donate-thank-you .field-name-field-large-header-text {
     margin-bottom: 40px;
     text-align: center;
-    width: 752px;
+    width: 100%;
   }
   /* line 699, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .donate-thank-you .field-name-field-paragraph-text {
@@ -11074,7 +11074,7 @@ form.comment-form #edit-preview {
   body.becomesponsor .block-webform {
     display: block;
     float: left;
-    width: 752px;
+    width: 100%;
     margin-top: 30px;
   }
   /* line 788, ../sass/mobile/_forms.scss */
@@ -11098,28 +11098,28 @@ form.comment-form #edit-preview {
   /* line 806, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform div.webform-component--company {
     display: block;
-    width: 752px;
+    width: 100%;
   }
   /* line 811, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform div.webform-component--email-address {
     display: block;
-    width: 752px;
+    width: 100%;
   }
   /* line 816, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform div.webform-component--first-name {
     display: block;
-    width: 370px;
-    margin-right: 10px;
+    width: 100%;
+    margin-right: 0;
   }
   /* line 822, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform div.webform-component--last-name {
     display: block;
-    width: 372px;
+    width: 100%;
   }
   /* line 827, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform div.form-textarea-wrapper {
     display: block;
-    width: 752px;
+    width: 100%;
     margin-bottom: 20px;
   }
   /* line 833, ../sass/mobile/_forms.scss */
@@ -14280,35 +14280,46 @@ form.comment-form #edit-preview {
   }
   /* line 2707, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .anchor-link-to-box .paragraphs-item-light-grey-text-box-with-link-to .field-type-link-field .field-item a {
-    width: 214px;
+    width: 100%;
     display: block;
-    height: 140px;
+    height: auto;
     background: #E6E6E6;
-    margin-right: 16px;
+    margin-right: 0;
     text-align: left;
     color: #59C2ED;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 20px 0 0 20px;
+    padding: 20px 0 30px 0;
     font-weight: 600;
     margin-bottom: 3em;
     line-height: 1.2em;
+    text-indent: 1em;
   }
-  /* line 2725, ../sass/mobile/_page_specific.scss */
+  /* line 2726, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .anchor-link-to-box .paragraphs-item-light-grey-text-box-with-link-to .field-name-field-image {
     margin-bottom: -5px;
   }
-  /* line 2732, ../sass/mobile/_page_specific.scss */
+  /* line 2728, ../sass/mobile/_page_specific.scss */
+  body.node-type-structure.becomesponsor .anchor-link-to-box .paragraphs-item-light-grey-text-box-with-link-to .field-name-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 2737, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .paragraphs-item-paragraph-text-with-anchor {
     border-top: 0;
     padding-top: 0;
   }
-  /* line 2736, ../sass/mobile/_page_specific.scss */
+  /* line 2741, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .paragraphs-item-paragraph-text-with-anchor .field-name-field-image {
-    float: left;
-    margin-right: 2em;
+    float: none;
+    margin-right: 0;
   }
-  /* line 2740, ../sass/mobile/_page_specific.scss */
+  /* line 2744, ../sass/mobile/_page_specific.scss */
+  body.node-type-structure.becomesponsor .paragraphs-item-paragraph-text-with-anchor .field-name-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 2749, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .paragraphs-item-paragraph-text-with-anchor .field-name-field-header-text {
     font-weight: bold;
     text-transform: none;
@@ -14316,26 +14327,31 @@ form.comment-form #edit-preview {
     color: #474F5E;
     margin-bottom: 40px;
   }
-  /* line 2751, ../sass/mobile/_page_specific.scss */
+  /* line 2760, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #peacetalk {
     border-top: 1px solid #59C2ED;
     padding-top: 4em;
     margin-bottom: -40px;
   }
-  /* line 2755, ../sass/mobile/_page_specific.scss */
+  /* line 2764, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #peacetalk .field-name-field-image {
-    float: right;
-    margin-left: 2em;
+    float: none;
+    margin-left: 0;
   }
-  /* line 2761, ../sass/mobile/_page_specific.scss */
+  /* line 2767, ../sass/mobile/_page_specific.scss */
+  body.node-type-structure.becomesponsor #peacetalk .field-name-field-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 2774, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #hackathon {
     margin-top: -20px;
   }
-  /* line 2765, ../sass/mobile/_page_specific.scss */
+  /* line 2778, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #project {
     margin-top: 2em;
   }
-  /* line 2770, ../sass/mobile/_page_specific.scss */
+  /* line 2783, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .project-box:before {
     content: "Sponsorship Opportunities";
     display: block;
@@ -14348,98 +14364,100 @@ form.comment-form #edit-preview {
     margin-bottom: 40px;
     width: 300px;
   }
-  /* line 2784, ../sass/mobile/_page_specific.scss */
+  /* line 2797, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .hackathon-box {
     float: left !important;
   }
-  /* line 2786, ../sass/mobile/_page_specific.scss */
+  /* line 2799, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .hackathon-box .paragraphs-item-light-grey-text-box-with-link-to {
     padding: 0;
   }
-  /* line 2788, ../sass/mobile/_page_specific.scss */
+  /* line 2801, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .hackathon-box .paragraphs-item-light-grey-text-box-with-link-to a {
     margin-right: 0;
   }
-  /* line 2798, ../sass/mobile/_page_specific.scss */
+  /* line 2811, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons {
     width: 100%;
     margin-top: 1em;
   }
-  /* line 2803, ../sass/mobile/_page_specific.scss */
+  /* line 2816, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #visit-sponsors-link {
     display: block;
     float: left;
-    width: 331px;
+    width: 100%;
     margin-right: 10px;
     background: #474F5E;
     color: white;
     font-weight: 600;
     font-size: 18px;
-    margin-bottom: 6px;
-    padding: 10px 20px;
+    margin-bottom: 26px;
+    padding: 10px 0;
+    text-indent: 20px;
     height: 110px;
   }
-  /* line 2815, ../sass/mobile/_page_specific.scss */
+  /* line 2829, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #visit-sponsors-link span {
     display: block;
     font-weight: 300;
   }
-  /* line 2819, ../sass/mobile/_page_specific.scss */
+  /* line 2833, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #visit-sponsors-link:after {
     content: "";
     display: block;
     float: right;
     position: relative;
     margin-top: 34px;
-    padding-right: 0;
+    padding-right: 20px;
     width: 12px;
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 2832, ../sass/mobile/_page_specific.scss */
+  /* line 2846, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #download-sponsor-link {
     display: block;
     float: left;
-    width: 331px;
+    width: 100%;
     margin-right: 0;
     background: #F09416;
     color: white;
     font-weight: 600;
     font-size: 18px;
     margin-bottom: 6px;
-    padding: 10px 20px;
+    padding: 10px 0;
+    text-indent: 20px;
     height: 110px;
   }
-  /* line 2844, ../sass/mobile/_page_specific.scss */
+  /* line 2859, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #download-sponsor-link span {
     display: block;
     font-weight: 300;
   }
-  /* line 2848, ../sass/mobile/_page_specific.scss */
+  /* line 2863, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #download-sponsor-link:after {
     content: "";
     display: block;
     float: right;
     position: relative;
     margin-top: 34px;
-    padding-right: 0;
+    padding-right: 20px;
     width: 12px;
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
 
   /* Team - Node */
-  /* line 2871, ../sass/mobile/_page_specific.scss */
+  /* line 2886, ../sass/mobile/_page_specific.scss */
   body.node-type-team h1#page-title {
     display: none;
   }
-  /* line 2875, ../sass/mobile/_page_specific.scss */
+  /* line 2890, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-row {
     display: block;
     float: none;
     width: 100%;
   }
-  /* line 2877, ../sass/mobile/_page_specific.scss */
+  /* line 2892, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-team-image {
     width: 100%;
     float: none;
@@ -14447,12 +14465,12 @@ form.comment-form #edit-preview {
     margin-right: 0;
     margin-top: 0;
   }
-  /* line 2883, ../sass/mobile/_page_specific.scss */
+  /* line 2898, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-team-image img {
     width: 100%;
     height: auto;
   }
-  /* line 2889, ../sass/mobile/_page_specific.scss */
+  /* line 2904, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-title {
     font-size: 3em;
     color: #59C2ED;
@@ -14464,7 +14482,7 @@ form.comment-form #edit-preview {
     line-height: 28px;
     margin-top: .6em;
   }
-  /* line 2901, ../sass/mobile/_page_specific.scss */
+  /* line 2916, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-team-title {
     display: block;
     font-style: italic;
@@ -14473,7 +14491,7 @@ form.comment-form #edit-preview {
     width: 100%;
     float: none;
   }
-  /* line 2910, ../sass/mobile/_page_specific.scss */
+  /* line 2925, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-team-bio {
     display: block;
     font-size: 1.1em;
@@ -14485,23 +14503,23 @@ form.comment-form #edit-preview {
     margin-top: 2em;
     float: none;
   }
-  /* line 2923, ../sass/mobile/_page_specific.scss */
+  /* line 2938, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-email {
     display: block;
     float: none;
     width: 100%;
   }
-  /* line 2927, ../sass/mobile/_page_specific.scss */
+  /* line 2942, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-email a {
     color: #414042;
   }
-  /* line 2930, ../sass/mobile/_page_specific.scss */
+  /* line 2945, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-email span.views-label {
     display: block;
     float: none;
     padding-right: 8px;
   }
-  /* line 2937, ../sass/mobile/_page_specific.scss */
+  /* line 2952, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-nothing {
     display: block;
     float: none;
@@ -14509,86 +14527,86 @@ form.comment-form #edit-preview {
     margin-bottom: 10px;
     font-weight: 600;
   }
-  /* line 2945, ../sass/mobile/_page_specific.scss */
+  /* line 2960, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-facebook-link {
     display: block;
     float: none;
     width: 100%;
   }
-  /* line 2949, ../sass/mobile/_page_specific.scss */
+  /* line 2964, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-facebook-link a {
     color: #414042;
   }
-  /* line 2952, ../sass/mobile/_page_specific.scss */
+  /* line 2967, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-facebook-link span.views-label {
     display: block;
     float: none;
     padding-right: 8px;
   }
-  /* line 2959, ../sass/mobile/_page_specific.scss */
+  /* line 2974, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-twitter-link {
     display: block;
     float: none;
     width: 100%;
   }
-  /* line 2963, ../sass/mobile/_page_specific.scss */
+  /* line 2978, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-twitter-link a {
     color: #414042;
   }
-  /* line 2966, ../sass/mobile/_page_specific.scss */
+  /* line 2981, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-twitter-link span.views-label {
     display: block;
     float: none;
     padding-right: 8px;
   }
-  /* line 2973, ../sass/mobile/_page_specific.scss */
+  /* line 2988, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-github-link {
     display: block;
     float: none;
     width: 100%;
   }
-  /* line 2977, ../sass/mobile/_page_specific.scss */
+  /* line 2992, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-github-link a {
     color: #414042;
   }
-  /* line 2980, ../sass/mobile/_page_specific.scss */
+  /* line 2995, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-github-link span.views-label {
     display: block;
     float: none;
     padding-right: 8px;
   }
-  /* line 2987, ../sass/mobile/_page_specific.scss */
+  /* line 3002, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-linkedin-link {
     display: block;
     float: none;
     width: 100%;
   }
-  /* line 2991, ../sass/mobile/_page_specific.scss */
+  /* line 3006, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-linkedin-link a {
     color: #414042;
   }
-  /* line 2994, ../sass/mobile/_page_specific.scss */
+  /* line 3009, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-linkedin-link span.views-label {
     display: block;
     float: none;
     padding-right: 8px;
   }
-  /* line 3003, ../sass/mobile/_page_specific.scss */
+  /* line 3018, ../sass/mobile/_page_specific.scss */
   body.node-type-team #content {
     min-height: 700px !important;
     padding-bottom: 6em;
   }
 
   /* Where We Work */
-  /* line 3018, ../sass/mobile/_page_specific.scss */
+  /* line 3033, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .paragraphs-item-paragraph-text-with-header-text .field-name-field-large-header-text {
     margin-bottom: 20px;
   }
-  /* line 3020, ../sass/mobile/_page_specific.scss */
+  /* line 3035, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .paragraphs-item-paragraph-text-with-header-text .field-name-field-large-header-text:nth-child(2) {
     margin-top: 1em;
   }
-  /* line 3026, ../sass/mobile/_page_specific.scss */
+  /* line 3041, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework #partner-apply {
     display: block;
     float: left;
@@ -14603,7 +14621,7 @@ form.comment-form #edit-preview {
     text-indent: 1em;
     height: 90px;
   }
-  /* line 3039, ../sass/mobile/_page_specific.scss */
+  /* line 3054, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework #partner-apply:after {
     content: "";
     display: block;
@@ -14615,20 +14633,20 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 3050, ../sass/mobile/_page_specific.scss */
+  /* line 3065, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework #partner-apply span {
     display: block;
     margin-top: 4px;
     font-weight: 300;
   }
-  /* line 3057, ../sass/mobile/_page_specific.scss */
+  /* line 3072, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .paragraphs-item-add-a-view {
     display: block;
     width: 100%;
     float: left;
     margin-top: -20px;
   }
-  /* line 3062, ../sass/mobile/_page_specific.scss */
+  /* line 3077, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .paragraphs-item-add-a-view .field-name-field-view-title-text {
     font-size: 1.4em;
     text-transform: uppercase;
@@ -14637,13 +14655,13 @@ form.comment-form #edit-preview {
     font-weight: 600;
     margin-bottom: 16px;
   }
-  /* line 3072, ../sass/mobile/_page_specific.scss */
+  /* line 3087, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-region_country_name_blocks {
     display: block;
     float: left;
     width: 100%;
   }
-  /* line 3077, ../sass/mobile/_page_specific.scss */
+  /* line 3092, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-region_country_name_blocks h3 {
     font-size: 1.2em;
     text-transform: uppercase;
@@ -14652,13 +14670,13 @@ form.comment-form #edit-preview {
     font-weight: 600;
     margin-bottom: 14px;
   }
-  /* line 3087, ../sass/mobile/_page_specific.scss */
+  /* line 3102, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-region_country_name_blocks ul li {
     list-style-type: none;
     font-size: 1.1em;
     margin-bottom: 10px;
   }
-  /* line 3094, ../sass/mobile/_page_specific.scss */
+  /* line 3109, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-region_country_name_blocks .view-content .item-list {
     display: block;
     float: left;
@@ -14668,11 +14686,11 @@ form.comment-form #edit-preview {
     padding: 0 0 0 20px;
     margin-bottom: 20px;
   }
-  /* line 3102, ../sass/mobile/_page_specific.scss */
+  /* line 3117, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-region_country_name_blocks .view-content .item-list:nth-child(even) {
     margin-right: 0;
   }
-  /* line 3110, ../sass/mobile/_page_specific.scss */
+  /* line 3125, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-country_image_cards .views-row {
     position: relative;
     display: block;
@@ -14681,11 +14699,11 @@ form.comment-form #edit-preview {
     width: 100%;
     margin-bottom: 1em;
   }
-  /* line 3117, ../sass/mobile/_page_specific.scss */
+  /* line 3132, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-country_image_cards .views-row.views-row-last {
     margin-right: 0;
   }
-  /* line 3120, ../sass/mobile/_page_specific.scss */
+  /* line 3135, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-country_image_cards .views-row .views-field-title {
     position: absolute;
     display: block;
@@ -14700,18 +14718,18 @@ form.comment-form #edit-preview {
     padding: 0 20px;
     z-index: 300;
   }
-  /* line 3134, ../sass/mobile/_page_specific.scss */
+  /* line 3149, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-country_image_cards .views-row .views-field-field-image {
     position: relative;
     float: left;
     width: 100%;
   }
-  /* line 3138, ../sass/mobile/_page_specific.scss */
+  /* line 3153, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-country_image_cards .views-row .views-field-field-image img {
     width: 100%;
     height: auto;
   }
-  /* line 3142, ../sass/mobile/_page_specific.scss */
+  /* line 3157, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-country_image_cards .views-row .views-field-field-image:before {
     content: "";
     display: block;
@@ -14728,15 +14746,15 @@ form.comment-form #edit-preview {
   }
 
   /* Products pages */
-  /* line 3171, ../sass/mobile/_page_specific.scss */
+  /* line 3186, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts #main {
     padding-bottom: 0;
   }
-  /* line 3175, ../sass/mobile/_page_specific.scss */
+  /* line 3190, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts #learn-more-partnership {
     display: none;
   }
-  /* line 3179, ../sass/mobile/_page_specific.scss */
+  /* line 3194, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .view-display-id-random_partner_quotes {
     display: block;
     float: left;
@@ -14749,7 +14767,7 @@ form.comment-form #edit-preview {
     margin-bottom: -71px;
     margin-top: 3em;
   }
-  /* line 3191, ../sass/mobile/_page_specific.scss */
+  /* line 3206, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .view-display-id-random_partner_quotes:before {
     content: "";
     position: absolute;
@@ -14761,19 +14779,19 @@ form.comment-form #edit-preview {
     border-right: 9999px solid #E6E6E6;
     box-shadow: 9999px 0px 0px 0px #E6E6E6;
   }
-  /* line 3204, ../sass/mobile/_page_specific.scss */
+  /* line 3219, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts #proj-testimonial-author {
     font-size: 16px;
     color: #9a9a9a;
     font-style: italic;
     text-align: right;
   }
-  /* line 3211, ../sass/mobile/_page_specific.scss */
+  /* line 3226, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .paragraphs-item-link-block-blue a {
     width: 100%;
     height: 120px;
   }
-  /* line 3214, ../sass/mobile/_page_specific.scss */
+  /* line 3229, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .paragraphs-item-link-block-blue a:after {
     content: "";
     display: block;
@@ -14785,20 +14803,20 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 3227, ../sass/mobile/_page_specific.scss */
+  /* line 3242, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .amani-text {
     margin-top: 0 !important;
     display: block;
     width: 100%;
     margin-right: 0;
   }
-  /* line 3232, ../sass/mobile/_page_specific.scss */
+  /* line 3247, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .amani-text p {
     font-size: 1.3em;
     line-height: 1.5em;
     font-weight: 300;
   }
-  /* line 3239, ../sass/mobile/_page_specific.scss */
+  /* line 3254, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .service-text {
     margin-top: 0 !important;
     display: block;
@@ -14806,13 +14824,13 @@ form.comment-form #edit-preview {
     margin-right: 0;
     margin-left: 0;
   }
-  /* line 3245, ../sass/mobile/_page_specific.scss */
+  /* line 3260, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .service-text p {
     font-size: 1.3em;
     line-height: 1.5em;
     font-weight: 300;
   }
-  /* line 3252, ../sass/mobile/_page_specific.scss */
+  /* line 3267, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .views-field-field-proj-partners-testimonial {
     display: block;
     float: left;
@@ -14822,7 +14840,7 @@ form.comment-form #edit-preview {
     padding-top: 3em;
     padding-bottom: 8em;
   }
-  /* line 3262, ../sass/mobile/_page_specific.scss */
+  /* line 3277, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .views-field-field-proj-partners-testimonial:before {
     content: "“";
     font-size: 5em;
@@ -14833,7 +14851,7 @@ form.comment-form #edit-preview {
     margin-bottom: 16px;
     margin-top: 30px;
   }
-  /* line 3272, ../sass/mobile/_page_specific.scss */
+  /* line 3287, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .views-field-field-proj-partners-testimonial .field-content p {
     font-size: 2.8em;
     color: #59C2ED;
@@ -14842,33 +14860,33 @@ form.comment-form #edit-preview {
     font-weight: 300;
     float: left;
   }
-  /* line 3279, ../sass/mobile/_page_specific.scss */
+  /* line 3294, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .views-field-field-proj-partners-testimonial .field-content p:after {
     content: "”";
     display: inline;
   }
 
   /* Partners overview */
-  /* line 3294, ../sass/mobile/_page_specific.scss */
+  /* line 3309, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.partnersmain .paragraphs-item-callout-box-full-width-grey {
     height: 330px;
   }
 
   /* Services page */
-  /* line 3304, ../sass/mobile/_page_specific.scss */
+  /* line 3319, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.servicespage .paragraphs-item-light-grey-text-box {
     height: auto;
     width: 100%;
   }
-  /* line 3308, ../sass/mobile/_page_specific.scss */
+  /* line 3323, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.servicespage .paragraphs-item-light-grey-text-box .field-name-field-box-title {
     line-height: 1em;
   }
-  /* line 3313, ../sass/mobile/_page_specific.scss */
+  /* line 3328, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.servicespage .paragraphs-item-link-block-blue {
     margin-top: 3em;
   }
-  /* line 3315, ../sass/mobile/_page_specific.scss */
+  /* line 3330, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.servicespage .paragraphs-item-link-block-blue a:after {
     content: "";
     display: block;
@@ -14880,11 +14898,11 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 3328, ../sass/mobile/_page_specific.scss */
+  /* line 3343, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.servicespage .paragraphs-item-link-block-grey {
     margin-top: 3em;
   }
-  /* line 3330, ../sass/mobile/_page_specific.scss */
+  /* line 3345, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.servicespage .paragraphs-item-link-block-grey a:after {
     content: "";
     display: block;
@@ -14898,15 +14916,15 @@ form.comment-form #edit-preview {
   }
 
   /* FAQ */
-  /* line 3350, ../sass/mobile/_page_specific.scss */
+  /* line 3365, ../sass/mobile/_page_specific.scss */
   body.page-faq #main {
     padding-bottom: 4em;
   }
-  /* line 3354, ../sass/mobile/_page_specific.scss */
+  /* line 3369, ../sass/mobile/_page_specific.scss */
   body.page-faq h3 {
     margin-bottom: 2em;
   }
-  /* line 3358, ../sass/mobile/_page_specific.scss */
+  /* line 3373, ../sass/mobile/_page_specific.scss */
   body.page-faq h1#page-title {
     font-weight: 300;
     font-size: 3em;
@@ -14917,7 +14935,7 @@ form.comment-form #edit-preview {
     margin-bottom: 1.6em;
     color: #59C2ED;
   }
-  /* line 3371, ../sass/mobile/_page_specific.scss */
+  /* line 3386, ../sass/mobile/_page_specific.scss */
   body.page-faq .view-display-id-faq_page .views-field-title {
     color: #414042;
     font-weight: 600;
@@ -14927,7 +14945,7 @@ form.comment-form #edit-preview {
     line-height: 1.6em;
     cursor: pointer;
   }
-  /* line 3379, ../sass/mobile/_page_specific.scss */
+  /* line 3394, ../sass/mobile/_page_specific.scss */
   body.page-faq .view-display-id-faq_page .views-field-title .views-label {
     padding-right: 10px;
     font-size: 1.8em;
@@ -14935,7 +14953,7 @@ form.comment-form #edit-preview {
     float: right;
     font-weight: 600;
   }
-  /* line 3390, ../sass/mobile/_page_specific.scss */
+  /* line 3405, ../sass/mobile/_page_specific.scss */
   body.page-faq .view-display-id-faq_page ol li.views-row {
     list-style-type: none;
     display: block;
@@ -14946,12 +14964,12 @@ form.comment-form #edit-preview {
     margin-bottom: 1.4em;
     padding: 40px 20px 20px 20px;
   }
-  /* line 3399, ../sass/mobile/_page_specific.scss */
+  /* line 3414, ../sass/mobile/_page_specific.scss */
   body.page-faq .view-display-id-faq_page ol li.views-row.views-row-last {
     margin-bottom: 6em;
   }
 
-  /* line 3410, ../sass/mobile/_page_specific.scss */
+  /* line 3425, ../sass/mobile/_page_specific.scss */
   .large-blue-text {
     color: #59C2ED;
     line-height: 1.4em;
@@ -14961,22 +14979,22 @@ form.comment-form #edit-preview {
   }
 
   /* Products - Amani */
-  /* line 3423, ../sass/mobile/_page_specific.scss */
+  /* line 3438, ../sass/mobile/_page_specific.scss */
   body.products-amani #main {
     padding-bottom: 6em;
   }
-  /* line 3425, ../sass/mobile/_page_specific.scss */
+  /* line 3440, ../sass/mobile/_page_specific.scss */
   body.products-amani #amani-globalfeatures {
     text-align: center;
     margin-top: 3em;
     margin-bottom: 2em;
     table-layout: fixed;
   }
-  /* line 3431, ../sass/mobile/_page_specific.scss */
+  /* line 3446, ../sass/mobile/_page_specific.scss */
   body.products-amani #amani-globalfeatures tr td {
     width: 188px;
   }
-  /* line 3436, ../sass/mobile/_page_specific.scss */
+  /* line 3451, ../sass/mobile/_page_specific.scss */
   body.products-amani #amani-globalfeatures tr:nth-child(even) td {
     padding-bottom: 4em;
     line-height: 1.4em;
@@ -14986,11 +15004,11 @@ form.comment-form #edit-preview {
     vertical-align: top;
     padding-top: .8em;
   }
-  /* line 3447, ../sass/mobile/_page_specific.scss */
+  /* line 3462, ../sass/mobile/_page_specific.scss */
   body.products-amani #amani-globalfeatures tr:nth-child(4) td {
     padding-bottom: 4em;
   }
-  /* line 3453, ../sass/mobile/_page_specific.scss */
+  /* line 3468, ../sass/mobile/_page_specific.scss */
   body.products-amani .product-features-highlight-box {
     padding-left: 3000px;
     padding-right: 3000px;
@@ -15001,20 +15019,20 @@ form.comment-form #edit-preview {
     padding-bottom: 2em;
     margin-bottom: 4em !important;
   }
-  /* line 3466, ../sass/mobile/_page_specific.scss */
+  /* line 3481, ../sass/mobile/_page_specific.scss */
   body.products-amani .amani-product-page-bottom {
     display: block;
     width: 100%;
     margin-top: 5em !important;
   }
-  /* line 3472, ../sass/mobile/_page_specific.scss */
+  /* line 3487, ../sass/mobile/_page_specific.scss */
   body.products-amani #example-amani-site {
     border: 1px solid #ccc;
     margin-bottom: -2em;
     width: 100% !important;
     height: auto !important;
   }
-  /* line 3479, ../sass/mobile/_page_specific.scss */
+  /* line 3494, ../sass/mobile/_page_specific.scss */
   body.products-amani .feature-grey-full-bg-box {
     padding-left: 3000px;
     padding-right: 3000px;
@@ -15025,25 +15043,25 @@ form.comment-form #edit-preview {
     padding-bottom: 2em;
     margin-bottom: 3em !important;
   }
-  /* line 3491, ../sass/mobile/_page_specific.scss */
+  /* line 3506, ../sass/mobile/_page_specific.scss */
   body.products-amani .image-float-left .field-name-field-images {
     float: left;
     padding-left: 0;
     padding-right: 2em;
   }
-  /* line 3498, ../sass/mobile/_page_specific.scss */
+  /* line 3513, ../sass/mobile/_page_specific.scss */
   body.products-amani #page-bottom-buttons {
     display: block;
     float: left;
     width: 100%;
   }
-  /* line 3504, ../sass/mobile/_page_specific.scss */
+  /* line 3519, ../sass/mobile/_page_specific.scss */
   body.products-amani .products-footer {
     display: block;
     float: left;
     width: 100%;
   }
-  /* line 3510, ../sass/mobile/_page_specific.scss */
+  /* line 3525, ../sass/mobile/_page_specific.scss */
   body.products-amani a#apply-today-button {
     display: block;
     float: left;
@@ -15058,13 +15076,13 @@ form.comment-form #edit-preview {
     margin-bottom: 4px;
     margin-top: 20px;
   }
-  /* line 3523, ../sass/mobile/_page_specific.scss */
+  /* line 3538, ../sass/mobile/_page_specific.scss */
   body.products-amani a#apply-today-button span {
     font-weight: 300;
     display: block;
     padding-top: 4px;
   }
-  /* line 3528, ../sass/mobile/_page_specific.scss */
+  /* line 3543, ../sass/mobile/_page_specific.scss */
   body.products-amani a#apply-today-button:after {
     content: "";
     display: block;
@@ -15076,7 +15094,7 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 3541, ../sass/mobile/_page_specific.scss */
+  /* line 3556, ../sass/mobile/_page_specific.scss */
   body.products-amani a#faq-button {
     display: block;
     float: left;
@@ -15091,7 +15109,7 @@ form.comment-form #edit-preview {
     margin-bottom: 4px;
     margin-top: 20px;
   }
-  /* line 3554, ../sass/mobile/_page_specific.scss */
+  /* line 3569, ../sass/mobile/_page_specific.scss */
   body.products-amani a#faq-button:after {
     content: "";
     display: block;
@@ -15103,7 +15121,7 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 3568, ../sass/mobile/_page_specific.scss */
+  /* line 3583, ../sass/mobile/_page_specific.scss */
   body.products-amani a#documentation-button {
     display: block;
     float: left;
@@ -15118,7 +15136,7 @@ form.comment-form #edit-preview {
     margin-bottom: 4px;
     margin-top: 20px;
   }
-  /* line 3581, ../sass/mobile/_page_specific.scss */
+  /* line 3596, ../sass/mobile/_page_specific.scss */
   body.products-amani a#documentation-button:after {
     content: "";
     display: block;
@@ -15132,7 +15150,7 @@ form.comment-form #edit-preview {
   }
 
   /* FAQ Page */
-  /* line 3602, ../sass/mobile/_page_specific.scss */
+  /* line 3617, ../sass/mobile/_page_specific.scss */
   body.page-faq h3 {
     color: #F09416;
     text-transform: uppercase;
@@ -15142,43 +15160,43 @@ form.comment-form #edit-preview {
   }
 
   /* Other Ways to Give page */
-  /* line 3617, ../sass/mobile/_page_specific.scss */
+  /* line 3632, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive #main {
     padding-top: 50px;
   }
-  /* line 3619, ../sass/mobile/_page_specific.scss */
+  /* line 3634, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .paragraphs-items-field-paragraphs {
     margin-top: 0;
   }
-  /* line 3623, ../sass/mobile/_page_specific.scss */
+  /* line 3638, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-top-box {
     margin-top: 0 !important;
   }
-  /* line 3627, ../sass/mobile/_page_specific.scss */
+  /* line 3642, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item-first {
     padding-top: 30px;
     border-top: 1px solid #9a9a9a;
     border-bottom: 1px solid #9a9a9a;
     padding-bottom: 20px;
   }
-  /* line 3634, ../sass/mobile/_page_specific.scss */
+  /* line 3649, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item {
     width: 100%;
     position: relative;
     border-bottom: 1px solid #9a9a9a;
     padding-bottom: 20px;
   }
-  /* line 3643, ../sass/mobile/_page_specific.scss */
+  /* line 3658, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item.other-ways-question .field-name-field-header-text {
     text-transform: none;
   }
-  /* line 3648, ../sass/mobile/_page_specific.scss */
+  /* line 3663, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item .field-name-field-header-text {
     cursor: pointer;
     position: relative;
     width: 100%;
   }
-  /* line 3652, ../sass/mobile/_page_specific.scss */
+  /* line 3667, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item .field-name-field-header-text:after {
     content: "";
     display: block;
@@ -15190,12 +15208,12 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/grey-arrow-down.png) top left no-repeat;
   }
-  /* line 3667, ../sass/mobile/_page_specific.scss */
+  /* line 3682, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-question-first {
     padding-top: 30px;
     border-top: 1px solid #9a9a9a;
   }
-  /* line 3672, ../sass/mobile/_page_specific.scss */
+  /* line 3687, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-questions-header {
     margin-bottom: -30px !important;
     margin-top: 40px !important;

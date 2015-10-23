@@ -2705,25 +2705,30 @@
 				.field-type-link-field .field-item {
 					position:relative;
 					a {
-						width:214px;
+						width:100%;
 						display:block;
-						height:140px;
+						height:auto;
 						background:$soft-grey;
-						margin-right:16px;
+						margin-right:0;
 						text-align:left;
 						color:$blue;
 						text-transform:uppercase;
 						letter-spacing:1px;
-						padding:20px 0 0 20px;
+						padding:20px 0 30px 0;
 						font-weight:600;
 						margin-bottom:3em;
 						line-height:1.2em;
+						text-indent:1em;
 					}
 				}
 				
 				
 				.field-name-field-image {
 					margin-bottom:-5px;
+					img {
+						width:100%;
+						height:auto;
+					}
 				}
 			}
 
@@ -2734,8 +2739,12 @@
 			padding-top:0;
 			
 			.field-name-field-image {
-				float:left;
-				margin-right:2em;
+				float:none;
+				margin-right:0;
+				img {
+					width:100%;
+					height:auto;
+				}
 			}
 			.field-name-field-header-text {
 				font-weight:bold;
@@ -2753,8 +2762,12 @@
 			padding-top:4em;
 			margin-bottom:-40px;
 			.field-name-field-image {
-				float:right;
-				margin-left:2em;
+				float:none;
+				margin-left:0;
+				img {
+					width:100%;
+					height:auto;
+				}
 			}
 		}
 		
@@ -2803,14 +2816,15 @@
 			#visit-sponsors-link {
 				display:block;
 				float:left;
-				width:331px;
+				width:100%;
 				margin-right:10px;
 				background:$grey;
 				color:white;
 				font-weight:600;
 				font-size:18px;
-				margin-bottom:6px;
-				padding:10px 20px;
+				margin-bottom:26px;
+				padding:10px 0;
+				text-indent:20px;
 				height:110px;
 				span {
 					display:block;
@@ -2822,7 +2836,7 @@
 					float:right;
 					position:relative;
 					margin-top:34px;
-					padding-right:0;
+					padding-right:20px;
 					width:12px;
 					height:24px;
 					background:url(../images/icons/right-arrow.png) top left no-repeat;
@@ -2832,14 +2846,15 @@
 			#download-sponsor-link {
 				display:block;
 				float:left;
-				width:331px;
+				width:100%;
 				margin-right:0;
 				background:$orange;
 				color:white;
 				font-weight:600;
 				font-size:18px;
 				margin-bottom:6px;
-				padding:10px 20px;
+				padding:10px 0;
+				text-indent:20px;
 				height:110px;
 				span {
 					display:block;
@@ -2851,7 +2866,7 @@
 					float:right;
 					position:relative;
 					margin-top:34px;
-					padding-right:0;
+					padding-right:20px;
 					width:12px;
 					height:24px;
 					background:url(../images/icons/right-arrow.png) top left no-repeat;
