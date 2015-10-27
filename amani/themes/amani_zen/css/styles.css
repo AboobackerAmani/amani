@@ -15042,13 +15042,15 @@ form.comment-form #edit-preview {
   }
   /* line 3493, ../sass/mobile/_page_specific.scss */
   body.products-amani .product-features-highlight-box {
-    background: #E6E6E6;
-    padding-top: 3em;
-    padding-bottom: 2em;
     margin-bottom: 4em !important;
     clear: both;
   }
-  /* line 3501, ../sass/mobile/_page_specific.scss */
+  /* line 3498, ../sass/mobile/_page_specific.scss */
+  body.products-amani .product-features-highlight-box .paragraphs-item-paragraph-text-with-header-text {
+    padding-top: 3em;
+    padding-bottom: 2em;
+  }
+  /* line 3503, ../sass/mobile/_page_specific.scss */
   body.products-amani .product-features-highlight-box .paragraphs-item-paragraph-text-with-header-text:before {
     content: "";
     position: absolute;
@@ -15060,21 +15062,21 @@ form.comment-form #edit-preview {
     border-right: 9999px solid #E6E6E6;
     box-shadow: 9999px 0px 0px 0px #E6E6E6;
   }
-  /* line 3516, ../sass/mobile/_page_specific.scss */
+  /* line 3519, ../sass/mobile/_page_specific.scss */
   body.products-amani .amani-product-page-bottom {
     display: block;
     width: 100%;
     margin-top: 5em !important;
     clear: both;
   }
-  /* line 3523, ../sass/mobile/_page_specific.scss */
+  /* line 3526, ../sass/mobile/_page_specific.scss */
   body.products-amani #example-amani-site {
     border: 1px solid #ccc;
     margin-bottom: -2em;
     width: 100% !important;
     height: auto !important;
   }
-  /* line 3530, ../sass/mobile/_page_specific.scss */
+  /* line 3533, ../sass/mobile/_page_specific.scss */
   body.products-amani .feature-grey-full-bg-box {
     padding-left: 3000px;
     padding-right: 3000px;
@@ -15085,26 +15087,26 @@ form.comment-form #edit-preview {
     padding-bottom: 2em;
     margin-bottom: 3em !important;
   }
-  /* line 3542, ../sass/mobile/_page_specific.scss */
+  /* line 3545, ../sass/mobile/_page_specific.scss */
   body.products-amani .image-float-left .field-name-field-images {
     float: none;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
   }
-  /* line 3550, ../sass/mobile/_page_specific.scss */
+  /* line 3553, ../sass/mobile/_page_specific.scss */
   body.products-amani #page-bottom-buttons {
     display: block;
     float: left;
     width: 100%;
   }
-  /* line 3556, ../sass/mobile/_page_specific.scss */
+  /* line 3559, ../sass/mobile/_page_specific.scss */
   body.products-amani .products-footer {
     display: block;
     float: left;
     width: 100%;
   }
-  /* line 3562, ../sass/mobile/_page_specific.scss */
+  /* line 3565, ../sass/mobile/_page_specific.scss */
   body.products-amani a#apply-today-button {
     display: block;
     float: left;
@@ -15120,13 +15122,13 @@ form.comment-form #edit-preview {
     margin-bottom: 4px;
     margin-top: 20px;
   }
-  /* line 3576, ../sass/mobile/_page_specific.scss */
+  /* line 3579, ../sass/mobile/_page_specific.scss */
   body.products-amani a#apply-today-button span {
     font-weight: 300;
     display: block;
     padding-top: 4px;
   }
-  /* line 3581, ../sass/mobile/_page_specific.scss */
+  /* line 3584, ../sass/mobile/_page_specific.scss */
   body.products-amani a#apply-today-button:after {
     content: "";
     display: block;
@@ -15138,7 +15140,7 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 3594, ../sass/mobile/_page_specific.scss */
+  /* line 3597, ../sass/mobile/_page_specific.scss */
   body.products-amani a#faq-button {
     display: block;
     float: left;
@@ -15154,7 +15156,7 @@ form.comment-form #edit-preview {
     margin-bottom: 4px;
     margin-top: 20px;
   }
-  /* line 3608, ../sass/mobile/_page_specific.scss */
+  /* line 3611, ../sass/mobile/_page_specific.scss */
   body.products-amani a#faq-button:after {
     content: "";
     display: block;
@@ -15166,7 +15168,7 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 3622, ../sass/mobile/_page_specific.scss */
+  /* line 3625, ../sass/mobile/_page_specific.scss */
   body.products-amani a#documentation-button {
     display: block;
     float: left;
@@ -15182,7 +15184,7 @@ form.comment-form #edit-preview {
     margin-bottom: 4px;
     margin-top: 20px;
   }
-  /* line 3636, ../sass/mobile/_page_specific.scss */
+  /* line 3639, ../sass/mobile/_page_specific.scss */
   body.products-amani a#documentation-button:after {
     content: "";
     display: block;
@@ -15196,7 +15198,7 @@ form.comment-form #edit-preview {
   }
 
   /* FAQ Page */
-  /* line 3657, ../sass/mobile/_page_specific.scss */
+  /* line 3660, ../sass/mobile/_page_specific.scss */
   body.page-faq h3 {
     color: #F09416;
     text-transform: uppercase;
@@ -15206,43 +15208,43 @@ form.comment-form #edit-preview {
   }
 
   /* Other Ways to Give page */
-  /* line 3672, ../sass/mobile/_page_specific.scss */
+  /* line 3675, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive #main {
     padding-top: 50px;
   }
-  /* line 3674, ../sass/mobile/_page_specific.scss */
+  /* line 3677, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .paragraphs-items-field-paragraphs {
     margin-top: 0;
   }
-  /* line 3678, ../sass/mobile/_page_specific.scss */
+  /* line 3681, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-top-box {
     margin-top: 0 !important;
   }
-  /* line 3682, ../sass/mobile/_page_specific.scss */
+  /* line 3685, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item-first {
     padding-top: 30px;
     border-top: 1px solid #9a9a9a;
     border-bottom: 1px solid #9a9a9a;
     padding-bottom: 20px;
   }
-  /* line 3689, ../sass/mobile/_page_specific.scss */
+  /* line 3692, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item {
     width: 100%;
     position: relative;
     border-bottom: 1px solid #9a9a9a;
     padding-bottom: 20px;
   }
-  /* line 3698, ../sass/mobile/_page_specific.scss */
+  /* line 3701, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item.other-ways-question .field-name-field-header-text {
     text-transform: none;
   }
-  /* line 3703, ../sass/mobile/_page_specific.scss */
+  /* line 3706, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item .field-name-field-header-text {
     cursor: pointer;
     position: relative;
     width: 100%;
   }
-  /* line 3707, ../sass/mobile/_page_specific.scss */
+  /* line 3710, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item .field-name-field-header-text:after {
     content: "";
     display: block;
@@ -15254,12 +15256,12 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/grey-arrow-down.png) top left no-repeat;
   }
-  /* line 3722, ../sass/mobile/_page_specific.scss */
+  /* line 3725, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-question-first {
     padding-top: 30px;
     border-top: 1px solid #9a9a9a;
   }
-  /* line 3727, ../sass/mobile/_page_specific.scss */
+  /* line 3730, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-questions-header {
     margin-bottom: -30px !important;
     margin-top: 40px !important;
