@@ -2685,9 +2685,11 @@
 			margin-top:3em;
 			position:relative;
 			table-layout:fixed;
+			width:100% !important;
 			tr {
+				width:100%;
 				td {
-					width:188px;
+					width:100%;
 				}
 			}
 			tr:nth-child(even) {
