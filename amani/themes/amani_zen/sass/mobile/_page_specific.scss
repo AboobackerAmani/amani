@@ -2690,6 +2690,7 @@
 				width:100%;
 				td {
 					width:100%;
+					vertical-align:top;
 					img {
 						width:80%;
 						height:auto;
@@ -3461,11 +3462,18 @@
 		#amani-globalfeatures {
 			text-align:center;
 			margin-top:3em;
-			margin-bottom:2em;
+			position:relative;
 			table-layout:fixed;
+			width:100% !important;
 			tr {
+				width:100%;
 				td {
-					width:188px;
+					width:100%;
+					vertical-align:top;
+					img {
+						width:80%;
+						height:auto;
+					}	
 				}
 			}
 			tr:nth-child(even) {
@@ -3474,16 +3482,12 @@
 					line-height: 1.4em;
 					padding-left: .6em;
 					padding-right: .6em;
-					font-size: .9em;
+					font-size: .8em;
 					vertical-align:top;
 					padding-top:.8em;
 				}
 			}
-			tr:nth-child(4) {
-				td {
-					padding-bottom:4em;
-				}
-			}
+			
 		}
 		
 		.product-features-highlight-box {
@@ -3495,6 +3499,7 @@
 			padding-top:3em;
 			padding-bottom:2em;
 			margin-bottom:4em !important;
+			clear:both;
 		}
 		
 		
@@ -3503,6 +3508,7 @@
 			display:block;
 			width:100%;
 			margin-top:5em !important;
+			clear:both;
 		}
 		
 		#example-amani-site {
@@ -3525,9 +3531,10 @@
 		
 		.image-float-left {
 			.field-name-field-images {
-				float:left;
+				float:none;
+				width:100%;
 				padding-left:0;
-				padding-right:2em;
+				padding-right:0;
 			}
 		}
 		
@@ -3549,9 +3556,10 @@
 			background:$orange;
 			color:white;
 			font-weight:600;
-			padding:20px;
+			padding:20px 0;
 			height:120px;
-			width:194px;
+			width:100%;
+			text-indent:20px;
 			margin-right:0;
 			font-size:18px;
 			margin-bottom:4px;
@@ -3567,7 +3575,7 @@
 				float:right;
 				position:relative;
 				margin-top:52px;
-				padding-right:0;
+				padding-right:20px;
 				width:12px;
 				height:24px;
 				background:url(../images/icons/right-arrow.png) top left no-repeat;
@@ -3580,9 +3588,10 @@
 			background:$grey;
 			color:white;
 			font-weight:600;
-			padding:20px;
+			padding:20px 0;
+			text-indent:20px;
 			height:120px;
-			width:194px;
+			width:100%;
 			margin-right:20px;
 			font-size:18px;
 			margin-bottom:4px;
@@ -3593,7 +3602,7 @@
 				float:right;
 				position:relative;
 				margin-top:92px;
-				padding-right:0;
+				padding-right:20px;
 				width:12px;
 				height:24px;
 				background:url(../images/icons/right-arrow.png) top left no-repeat;
@@ -3607,9 +3616,10 @@
 			background:$grey;
 			color:white;
 			font-weight:600;
-			padding:20px;
+			padding:20px 0;
 			height:120px;
-			width:194px;
+			width:100%;
+			text-indent:20px;
 			margin-right:20px;
 			font-size:18px;
 			margin-bottom:4px;
@@ -3620,7 +3630,7 @@
 				float:right;
 				position:relative;
 				margin-top:92px;
-				padding-right:0;
+				padding-right:20px;
 				width:12px;
 				height:24px;
 				background:url(../images/icons/right-arrow.png) top left no-repeat;
