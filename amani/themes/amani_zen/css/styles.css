@@ -14270,19 +14270,20 @@ form.comment-form #edit-preview {
   body.node-type-structure.becomesponsor #amani-globalfeatures tr td {
     width: 100%;
   }
-  /* line 2696, ../sass/mobile/_page_specific.scss */
+  /* line 2693, ../sass/mobile/_page_specific.scss */
+  body.node-type-structure.becomesponsor #amani-globalfeatures tr td img {
+    width: 80%;
+    height: auto;
+  }
+  /* line 2700, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #amani-globalfeatures tr:nth-child(even) td {
     padding-bottom: 4em;
     line-height: 1.4em;
     padding-left: .6em;
     padding-right: .6em;
-    font-size: .9em;
+    font-size: .8em;
     vertical-align: top;
     padding-top: .8em;
-  }
-  /* line 2707, ../sass/mobile/_page_specific.scss */
-  body.node-type-structure.becomesponsor #amani-globalfeatures tr:nth-child(4) td {
-    padding-bottom: 0em;
   }
   /* line 2713, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .spons-opp-box.anchor-link-to-box {
@@ -14305,7 +14306,7 @@ form.comment-form #edit-preview {
   body.node-type-structure.becomesponsor .anchor-link-to-box .paragraphs-item-light-grey-text-box-with-link-to .field-type-link-field .field-item a {
     width: 100%;
     display: block;
-    height: auto;
+    height: auto !important;
     background: #E6E6E6;
     margin-right: 0;
     text-align: left;
