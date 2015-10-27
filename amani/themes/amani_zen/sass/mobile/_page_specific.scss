@@ -3491,15 +3491,24 @@
 		}
 		
 		.product-features-highlight-box {
-			padding-left:3000px;
-			padding-right:3000px;
-			margin-left:-3000px;
-			margin-right:-3000px;
+
 			background:$soft-grey;
 			padding-top:3em;
 			padding-bottom:2em;
 			margin-bottom:4em !important;
 			clear:both;
+			
+			.paragraphs-item-paragraph-text-with-header-text:before {
+				content: "";
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: -9998px;
+    height: 100%;
+    z-index: -1;
+    border-right: 9999px solid #E6E6E6;
+    box-shadow: 9999px 0px 0px 0px #E6E6E6;
+			}
 		}
 		
 		
