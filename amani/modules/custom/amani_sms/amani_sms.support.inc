@@ -22,7 +22,8 @@ function amani_sms_support_create_node($title, $msg_code, $msg_from, $msg_date, 
 
   // Not sure why we have three secrets?
   // This uses the 'original secret' variable.
-  if ($secret == variable_get('amani_sms_ori_secret', NULL)) {
+  $system_secret = variable_get('amani_sms_ori_secret', NULL);
+  if ($system_secret && $secret == $system_secret) {
     entity_save('node', $entity);
     return TRUE;
   }
