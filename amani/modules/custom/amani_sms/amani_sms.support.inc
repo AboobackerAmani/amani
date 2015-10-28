@@ -20,7 +20,9 @@ function amani_sms_support_create_node($title, $msg_code, $msg_from, $msg_date, 
 
   $entity->field_incident_date = array(LANGUAGE_NONE => array(0 => array('value' => date('Y-m-d H:i:s', $msg_date))));
 
-  if ($secret == "123456") {
+  // Not sure why we have three secrets?
+  // This uses the 'original secret' variable.
+  if ($secret == variable_get('amani_sms_ori_secret', NULL)) {
     entity_save('node', $entity);
     return TRUE;
   }

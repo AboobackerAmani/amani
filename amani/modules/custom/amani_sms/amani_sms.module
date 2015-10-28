@@ -16,7 +16,7 @@ function amani_sms_menu() {
     'page callback' => 'amani_sms_endpoint',
     'access callback' => TRUE,
   );
-  
+
   $items['admin/settings/amani_sms'] = array(
     'title' => 'Amani SMS Module settings',
     'description' => 'Configurate your Amanui SMS module',
@@ -40,7 +40,7 @@ function amani_sms_endpoint() {
   $success = TRUE;
 
   $inputJSON = file_get_contents('php://input');
-  $decoded_message = json_decode($inputJSON);  
+  $decoded_message = json_decode($inputJSON);
 
   $parsed_msg = amani_sms_support_sort_message($decoded_message->message);
   foreach ($parsed_msg['messages'] as $code) {

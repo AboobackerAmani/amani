@@ -12,7 +12,6 @@ Amani.IncidentReports = LF.Plugin.extend({
 
     enable: function (map) {
         var url = this.options['source-url'];
-
         this._toggle = Amani.toggle({ name: 'markerclusterer' }).addTo(map),
         this._toggle.on('toggle', this._render, this);
 
