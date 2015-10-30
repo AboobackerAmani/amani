@@ -1122,6 +1122,7 @@ footer {
 /* line 4, ../sass/components/_contact_page.scss */
 .page-contact #page {
   max-width: none;
+  padding: 0;
   position: relative;
 }
 /* line 8, ../sass/components/_contact_page.scss */
@@ -1140,18 +1141,18 @@ footer {
     height: 92%;
   }
 }
-/* line 23, ../sass/components/_contact_page.scss */
+/* line 21, ../sass/components/_contact_page.scss */
 .page-contact #main {
-  max-width: 1280px;
+  max-width: 1040px;
   margin: 0 auto;
 }
 @media all and (max-width: 768px) {
-  /* line 23, ../sass/components/_contact_page.scss */
+  /* line 21, ../sass/components/_contact_page.scss */
   .page-contact #main {
     padding-top: 0;
   }
 }
-/* line 31, ../sass/components/_contact_page.scss */
+/* line 28, ../sass/components/_contact_page.scss */
 .page-contact #content,
 .page-contact .sidebars {
   float: left;
@@ -1161,21 +1162,21 @@ footer {
   margin: 20px 0;
 }
 @media all and (max-width: 768px) {
-  /* line 31, ../sass/components/_contact_page.scss */
+  /* line 28, ../sass/components/_contact_page.scss */
   .page-contact #content,
   .page-contact .sidebars {
     width: 100%;
     margin: 0 auto;
   }
 }
-/* line 42, ../sass/components/_contact_page.scss */
+/* line 37, ../sass/components/_contact_page.scss */
 .page-contact .sidebars .region-sidebar-second {
   float: left;
   margin: 0;
   width: 100%;
 }
 @media all and (max-width: 768px) {
-  /* line 48, ../sass/components/_contact_page.scss */
+  /* line 42, ../sass/components/_contact_page.scss */
   .page-contact .contact-form {
     margin: 0 auto;
     width: 90%;
@@ -1183,25 +1184,28 @@ footer {
     z-index: 9;
   }
 }
-/* line 56, ../sass/components/_contact_page.scss */
+/* line 49, ../sass/components/_contact_page.scss */
 .page-contact .contact-form label {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 18px;
   color: #513e79;
   padding-bottom: 5px;
 }
-/* line 62, ../sass/components/_contact_page.scss */
+/* line 55, ../sass/components/_contact_page.scss */
 .page-contact .contact-form input, .page-contact .contact-form textarea {
-  background-color: #e9d5ef;
-  -webkit-box-shadow: inset 1px 1px 3px 0px #999999;
-  -moz-box-shadow: inset 1px 1px 3px 0px #999999;
-  box-shadow: inset 1px 1px 3px 0px #999999;
+  background-color: none;
+  border: 1px solid #ccc;
+}
+/* line 59, ../sass/components/_contact_page.scss */
+.page-contact .contact-form input[type="text"]:focus,
+.page-contact .contact-form input[type="email"]:focus,
+.page-contact .contact-form input[type="password"]:focus,
+.page-contact .contact-form select:focus,
+.page-contact .contact-form textarea:focus {
+  outline: none;
+  border-color: #513e79;
 }
 /* line 68, ../sass/components/_contact_page.scss */
-.page-contact .contact-form .form-actions {
-  text-align: right;
-}
-/* line 70, ../sass/components/_contact_page.scss */
 .page-contact .contact-form .form-actions input {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 14;
@@ -1214,7 +1218,7 @@ footer {
   box-shadow: none;
   padding: 15px 30px 10px;
 }
-/* line 85, ../sass/components/_contact_page.scss */
+/* line 82, ../sass/components/_contact_page.scss */
 .page-contact .block-amani-global {
   padding: 15px;
   width: 90%;
@@ -1226,13 +1230,13 @@ footer {
   box-shadow: -2px 2px 3px 0px #cccccc;
 }
 @media all and (max-width: 768px) {
-  /* line 85, ../sass/components/_contact_page.scss */
+  /* line 82, ../sass/components/_contact_page.scss */
   .page-contact .block-amani-global {
     width: 100%;
     margin: 40px auto 20px;
   }
 }
-/* line 100, ../sass/components/_contact_page.scss */
+/* line 95, ../sass/components/_contact_page.scss */
 .page-contact .block-amani-global h2.block-title {
   font-family: "Open Sans Condensed", sans-serif;
   color: #513e79;
@@ -1241,7 +1245,7 @@ footer {
   margin-left: 16px;
   margin-right: 16px;
 }
-/* line 110, ../sass/components/_contact_page.scss */
+/* line 104, ../sass/components/_contact_page.scss */
 .page-contact .block-amani-global #contact_form_site_info p {
   background: url("../images/icons/icn-contact-addr.png") no-repeat 0 0;
   background-size: 16px 16px;
@@ -1251,19 +1255,19 @@ footer {
   margin-left: 16px;
   margin-right: 16px;
 }
-/* line 119, ../sass/components/_contact_page.scss */
+/* line 113, ../sass/components/_contact_page.scss */
 .page-contact .block-amani-global #contact_form_site_info p.telephone {
   background: url("../images/icons/icn-contact-phone.png") no-repeat 0 2px;
   background-size: 12px 16px;
 }
-/* line 123, ../sass/components/_contact_page.scss */
+/* line 117, ../sass/components/_contact_page.scss */
 .page-contact .block-amani-global #contact_form_site_info p.email {
   background: url("../images/icons/icn-contact-email.png") no-repeat 0 4px;
   background-size: 16px 14px;
 }
 
 @media all and (max-width: 768px) {
-  /* line 132, ../sass/components/_contact_page.scss */
+  /* line 125, ../sass/components/_contact_page.scss */
   .sidebar-second.page-contact #content {
     width: 100%;
     margin: 0 auto;
@@ -3581,14 +3585,14 @@ tr.selected td {
 /*
   Program page and node page
 */
-/* line 8, ../sass/components/_program_page.scss */
+/* line 7, ../sass/components/_program_page.scss */
 .page-programs #content,
 .node-type-project #content {
   width: 100%;
   margin: 0;
 }
 @media (min-width: 768px) {
-  /* line 8, ../sass/components/_program_page.scss */
+  /* line 7, ../sass/components/_program_page.scss */
   .page-programs #content,
   .node-type-project #content {
     float: left;
@@ -3597,14 +3601,14 @@ tr.selected td {
     margin-right: -66.66667%;
   }
 }
-/* line 16, ../sass/components/_program_page.scss */
+/* line 14, ../sass/components/_program_page.scss */
 .page-programs .sidebars,
 .node-type-project .sidebars {
   width: 100%;
   margin: 0;
 }
 @media (min-width: 768px) {
-  /* line 16, ../sass/components/_program_page.scss */
+  /* line 14, ../sass/components/_program_page.scss */
   .page-programs .sidebars,
   .node-type-project .sidebars {
     float: left;
@@ -3615,13 +3619,13 @@ tr.selected td {
     float: right;
   }
 }
-/* line 26, ../sass/components/_program_page.scss */
+/* line 23, ../sass/components/_program_page.scss */
 .page-programs .region-sidebar-second,
 .node-type-project .region-sidebar-second {
   margin: 0;
   width: 100%;
 }
-/* line 32, ../sass/components/_program_page.scss */
+/* line 28, ../sass/components/_program_page.scss */
 .page-programs #content .view-content,
 .node-type-project #content .view-content {
   margin-top: 40px;
@@ -3630,7 +3634,7 @@ tr.selected td {
   flex-flow: row wrap;
   -webkit-flex-flow: row wrap;
 }
-/* line 41, ../sass/components/_program_page.scss */
+/* line 36, ../sass/components/_program_page.scss */
 .page-programs #content .view-content .views-row,
 .node-type-project #content .view-content .views-row {
   width: 100%;
@@ -3641,32 +3645,32 @@ tr.selected td {
   margin: 0 0 20px 0;
 }
 @media (min-width: 768px) {
-  /* line 41, ../sass/components/_program_page.scss */
+  /* line 36, ../sass/components/_program_page.scss */
   .page-programs #content .view-content .views-row,
   .node-type-project #content .view-content .views-row {
     width: 45%;
     margin: 0 15px 20px;
   }
-  /* line 52, ../sass/components/_program_page.scss */
+  /* line 46, ../sass/components/_program_page.scss */
   .page-programs #content .view-content .views-row.views-row-first, .page-programs #content .view-content .views-row:nth-child(2n+1),
   .node-type-project #content .view-content .views-row.views-row-first,
   .node-type-project #content .view-content .views-row:nth-child(2n+1) {
     margin-left: 0;
   }
-  /* line 56, ../sass/components/_program_page.scss */
+  /* line 50, ../sass/components/_program_page.scss */
   .page-programs #content .view-content .views-row.views-row-last, .page-programs #content .view-content .views-row:nth-child(2n+2),
   .node-type-project #content .view-content .views-row.views-row-last,
   .node-type-project #content .view-content .views-row:nth-child(2n+2) {
     margin-right: 0;
   }
-  /* line 60, ../sass/components/_program_page.scss */
+  /* line 54, ../sass/components/_program_page.scss */
   .page-programs #content .view-content .views-row.views-row-first.views-row-last,
   .node-type-project #content .view-content .views-row.views-row-first.views-row-last {
     max-width: 50%;
   }
 }
 @media (max-width: 1169px) {
-  /* line 66, ../sass/components/_program_page.scss */
+  /* line 60, ../sass/components/_program_page.scss */
   .page-programs #content .view-content .views-row,
   .node-type-project #content .view-content .views-row {
     flex-grow: 1;
@@ -3676,17 +3680,24 @@ tr.selected td {
     width: 100%;
   }
 }
-/* line 75, ../sass/components/_program_page.scss */
+/* line 68, ../sass/components/_program_page.scss */
 .page-programs #content .view-content .views-field-title,
 .node-type-project #content .view-content .views-field-title {
   font-family: "Open Sans Condensed", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   height: 50px;
   padding-top: 4px;
 }
-/* line 83, ../sass/components/_program_page.scss */
+@media (min-width: 768px) {
+  /* line 68, ../sass/components/_program_page.scss */
+  .page-programs #content .view-content .views-field-title,
+  .node-type-project #content .view-content .views-field-title {
+    font-size: 16px;
+  }
+}
+/* line 79, ../sass/components/_program_page.scss */
 .page-programs #content .view-content .views-field-title a,
 .node-type-project #content .view-content .views-field-title a {
   color: #ce9bc0;
@@ -3694,118 +3705,207 @@ tr.selected td {
   line-height: 1.5;
   letter-spacing: 1px;
 }
-/* line 91, ../sass/components/_program_page.scss */
+/* line 86, ../sass/components/_program_page.scss */
 .page-programs #content .view-content .views-field-field-image,
 .node-type-project #content .view-content .views-field-field-image {
   height: 250px;
   overflow-y: hidden;
 }
-/* line 94, ../sass/components/_program_page.scss */
+/* line 89, ../sass/components/_program_page.scss */
 .page-programs #content .view-content .views-field-field-image img,
 .node-type-project #content .view-content .views-field-field-image img {
   width: 100%;
   height: auto;
 }
-/* line 100, ../sass/components/_program_page.scss */
+/* line 94, ../sass/components/_program_page.scss */
 .page-programs #content .view-content .views-field-body,
 .node-type-project #content .view-content .views-field-body {
   color: #282828;
   line-height: 1.8;
-  margin-top: 10px;
+  margin: 10px 0;
 }
-/* line 106, ../sass/components/_program_page.scss */
+/* line 99, ../sass/components/_program_page.scss */
 .page-programs #content .view-content .views-field-title-1,
 .node-type-project #content .view-content .views-field-title-1 {
-  text-align: right;
+  text-align: center;
 }
-/* line 108, ../sass/components/_program_page.scss */
+@media (min-width: 768px) {
+  /* line 99, ../sass/components/_program_page.scss */
+  .page-programs #content .view-content .views-field-title-1,
+  .node-type-project #content .view-content .views-field-title-1 {
+    text-align: right;
+  }
+}
+/* line 105, ../sass/components/_program_page.scss */
 .page-programs #content .view-content .views-field-title-1 a,
 .node-type-project #content .view-content .views-field-title-1 a {
   font-family: "Open Sans Condensed", sans-serif;
-  color: #784580;
+  display: inline-block;
+  width: 60px;
+  padding: 11px 40px 8px 40px;
+  background: #ce9bc0;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
 }
-/* line 118, ../sass/components/_program_page.scss */
+/* line 114, ../sass/components/_program_page.scss */
+.page-programs #content .view-content .views-field-title-1 a:hover,
+.node-type-project #content .view-content .views-field-title-1 a:hover {
+  background: #784580;
+}
+@media (min-width: 768px) {
+  /* line 105, ../sass/components/_program_page.scss */
+  .page-programs #content .view-content .views-field-title-1 a,
+  .node-type-project #content .view-content .views-field-title-1 a {
+    padding: 0;
+    background: none;
+    text-transform: none;
+    color: #ce9bc0;
+    font-size: 13px;
+  }
+  /* line 123, ../sass/components/_program_page.scss */
+  .page-programs #content .view-content .views-field-title-1 a:hover,
+  .node-type-project #content .view-content .views-field-title-1 a:hover {
+    background: none;
+  }
+}
+/* line 132, ../sass/components/_program_page.scss */
 .page-programs .sidebars .view-content,
 .node-type-project .sidebars .view-content {
   border-bottom: 3px solid #513e79;
 }
-/* line 122, ../sass/components/_program_page.scss */
+/* line 135, ../sass/components/_program_page.scss */
 .page-programs .sidebars h2.block-title,
 .node-type-project .sidebars h2.block-title {
+  padding: 0 0 30px;
+  border-bottom: 3px solid #513e79;
+  text-align: center;
+  text-transform: uppercase;
   font-family: "Open Sans Condensed", sans-serif;
-  font-size: 16px;
+  font-size: 26px;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 1.5;
   color: #513e79;
-  border-bottom: 3px solid #513e79;
-  margin-top: 35px;
 }
-/* line 134, ../sass/components/_program_page.scss */
+@media (min-width: 768px) {
+  /* line 135, ../sass/components/_program_page.scss */
+  .page-programs .sidebars h2.block-title,
+  .node-type-project .sidebars h2.block-title {
+    margin-top: 35px;
+    padding: 0;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 3px solid #513e79;
+  }
+}
+/* line 155, ../sass/components/_program_page.scss */
 .page-programs .sidebars .view-get-involved .views-row,
 .node-type-project .sidebars .view-get-involved .views-row {
   margin: 10px 0;
   border-bottom: 1px solid #513e79;
   padding-bottom: 20px;
 }
-/* line 139, ../sass/components/_program_page.scss */
+/* line 159, ../sass/components/_program_page.scss */
 .page-programs .sidebars .view-get-involved .views-row.views-row-last,
 .node-type-project .sidebars .view-get-involved .views-row.views-row-last {
   border-bottom: 0;
   margin-bottom: 0;
 }
-/* line 144, ../sass/components/_program_page.scss */
+/* line 163, ../sass/components/_program_page.scss */
+.page-programs .sidebars .view-get-involved .views-row .views-field-title,
+.node-type-project .sidebars .view-get-involved .views-row .views-field-title {
+  margin: 0 0 15px;
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  /* line 163, ../sass/components/_program_page.scss */
+  .page-programs .sidebars .view-get-involved .views-row .views-field-title,
+  .node-type-project .sidebars .view-get-involved .views-row .views-field-title {
+    font-size: 16px;
+  }
+}
+/* line 170, ../sass/components/_program_page.scss */
 .page-programs .sidebars .view-get-involved .views-row .views-field-title a,
 .node-type-project .sidebars .view-get-involved .views-row .views-field-title a {
   font-family: "Open Sans Condensed", sans-serif;
-  font-size: 16px;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #ce9bc0;
+  color: #784580;
   text-transform: uppercase;
-  padding-bottom: 10px;
 }
-/* line 163, ../sass/components/_program_page.scss */
+/* line 186, ../sass/components/_program_page.scss */
 .page-programs .sidebars .view-get-involved .views-row .views-field-field-image img,
 .node-type-project .sidebars .view-get-involved .views-row .views-field-field-image img {
   width: 100%;
   margin: 5px 0;
 }
-/* line 168, ../sass/components/_program_page.scss */
+/* line 190, ../sass/components/_program_page.scss */
 .page-programs .sidebars .view-get-involved .views-row .views-more-link,
 .node-type-project .sidebars .view-get-involved .views-row .views-more-link {
   font-family: "Open Sans Condensed", sans-serif;
-  clear: both;
   display: block;
-  color: #784580;
-  text-align: right;
+  width: 60px;
+  margin: 10px auto 0 auto;
+  text-align: center;
+  padding: 11px 40px 8px 40px;
+  background: #ce9bc0;
+  clear: both;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+/* line 202, ../sass/components/_program_page.scss */
+.page-programs .sidebars .view-get-involved .views-row .views-more-link:hover,
+.node-type-project .sidebars .view-get-involved .views-row .views-more-link:hover {
+  background: #784580;
+}
+@media (min-width: 768px) {
+  /* line 190, ../sass/components/_program_page.scss */
+  .page-programs .sidebars .view-get-involved .views-row .views-more-link,
+  .node-type-project .sidebars .view-get-involved .views-row .views-more-link {
+    width: auto;
+    padding: 0;
+    margin: 0;
+    display: block;
+    text-align: right;
+    background: none;
+    text-transform: none;
+    color: #ce9bc0;
+    font-size: 13px;
+  }
+  /* line 215, ../sass/components/_program_page.scss */
+  .page-programs .sidebars .view-get-involved .views-row .views-more-link:hover,
+  .node-type-project .sidebars .view-get-involved .views-row .views-more-link:hover {
+    background: none;
+  }
 }
 
-/* line 180, ../sass/components/_program_page.scss */
+/* line 225, ../sass/components/_program_page.scss */
 .node-project.node-by-viewer {
   color: #5d5c5c;
 }
-/* line 182, ../sass/components/_program_page.scss */
+/* line 227, ../sass/components/_program_page.scss */
 .node-project.node-by-viewer .file-image {
   width: 100%;
   max-height: 400px;
   overflow-y: hidden;
 }
-/* line 186, ../sass/components/_program_page.scss */
+/* line 231, ../sass/components/_program_page.scss */
 .node-project.node-by-viewer .file-image img {
   width: 100%;
 }
-/* line 191, ../sass/components/_program_page.scss */
+/* line 235, ../sass/components/_program_page.scss */
 .node-project.node-by-viewer .field-name-body {
   margin-top: 30px;
 }
 
-/* line 196, ../sass/components/_program_page.scss */
+/* line 240, ../sass/components/_program_page.scss */
 #block-views-activities-block {
   margin-top: 25px;
   border-top: solid 2px #513e79;
 }
-/* line 200, ../sass/components/_program_page.scss */
+/* line 243, ../sass/components/_program_page.scss */
 #block-views-activities-block h2.block-title {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 36px;
@@ -3814,62 +3914,62 @@ tr.selected td {
   letter-spacing: 1px;
   padding: 25px 0 15px;
 }
-/* line 209, ../sass/components/_program_page.scss */
+/* line 252, ../sass/components/_program_page.scss */
 #block-views-activities-block .view-activities .view-content {
   margin-top: 0;
 }
-/* line 210, ../sass/components/_program_page.scss */
+/* line 255, ../sass/components/_program_page.scss */
 #block-views-activities-block .view-activities .views-row .views-field-field-image {
   height: auto;
 }
-/* line 213, ../sass/components/_program_page.scss */
+/* line 258, ../sass/components/_program_page.scss */
 #block-views-activities-block .view-activities .views-row .views-field-title {
   margin: 10px 0;
   text-align: center;
 }
-/* line 216, ../sass/components/_program_page.scss */
+/* line 261, ../sass/components/_program_page.scss */
 #block-views-activities-block .view-activities .views-row .views-field-title a {
   color: #513e79;
 }
-/* line 220, ../sass/components/_program_page.scss */
+/* line 265, ../sass/components/_program_page.scss */
 #block-views-activities-block .view-activities .views-row .views-field-body {
   color: #5d5c5c;
 }
-/* line 223, ../sass/components/_program_page.scss */
+/* line 268, ../sass/components/_program_page.scss */
 #block-views-activities-block .view-activities .views-row .views-field-title-1 {
   text-align: right;
 }
-/* line 226, ../sass/components/_program_page.scss */
+/* line 270, ../sass/components/_program_page.scss */
 #block-views-activities-block .view-activities .views-row .views-field-title-1 a {
   margin-top: 10px;
 }
 
-/* line 247, ../sass/components/_program_page.scss */
+/* line 288, ../sass/components/_program_page.scss */
 .node-type-project .sidebars {
   padding: 0 15px;
   box-sizing: border-box;
   margin-top: 20px;
 }
-/* line 252, ../sass/components/_program_page.scss */
+/* line 292, ../sass/components/_program_page.scss */
 .node-type-project .sidebars .region-sidebar-second {
   border: 1px solid #ce9bc0;
   box-sizing: border-box;
   padding: 10px 15px 80px;
 }
-/* line 258, ../sass/components/_program_page.scss */
+/* line 297, ../sass/components/_program_page.scss */
 .node-type-project .sidebars .view-content {
   border-bottom: 0;
 }
-/* line 262, ../sass/components/_program_page.scss */
+/* line 300, ../sass/components/_program_page.scss */
 .node-type-project .sidebars h2.block-title {
   font-size: 18px;
   border-bottom: 3px solid #ce9bc0;
 }
-/* line 267, ../sass/components/_program_page.scss */
+/* line 304, ../sass/components/_program_page.scss */
 .node-type-project .sidebars .views-field-title {
   padding: 15px 0;
 }
-/* line 269, ../sass/components/_program_page.scss */
+/* line 306, ../sass/components/_program_page.scss */
 .node-type-project .sidebars .views-field-title a {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 16px;
@@ -3878,38 +3978,38 @@ tr.selected td {
   color: #ce9bc0;
   text-transform: uppercase;
 }
-/* line 279, ../sass/components/_program_page.scss */
+/* line 315, ../sass/components/_program_page.scss */
 .node-type-project .sidebars .views-row {
   border-bottom: 3px solid #ce9bc0;
   padding-bottom: 20px;
 }
-/* line 283, ../sass/components/_program_page.scss */
+/* line 318, ../sass/components/_program_page.scss */
 .node-type-project .sidebars .views-row .views-field-field-image {
   margin-bottom: 10px;
 }
-/* line 286, ../sass/components/_program_page.scss */
+/* line 320, ../sass/components/_program_page.scss */
 .node-type-project .sidebars .views-row .views-field-field-image img {
   width: 100%;
 }
-/* line 291, ../sass/components/_program_page.scss */
+/* line 324, ../sass/components/_program_page.scss */
 .node-type-project .sidebars .views-row .views-field-body {
   color: #474f5e;
   line-height: 1.8;
 }
 
-/* line 302, ../sass/components/_program_page.scss */
+/* line 335, ../sass/components/_program_page.scss */
 .node-type-project .node-project .field-type-image {
   margin-bottom: 30px;
   overflow-y: hidden;
   height: 400px;
 }
 @media (max-width: 1280px) {
-  /* line 302, ../sass/components/_program_page.scss */
+  /* line 335, ../sass/components/_program_page.scss */
   .node-type-project .node-project .field-type-image {
     height: auto;
   }
 }
-/* line 310, ../sass/components/_program_page.scss */
+/* line 343, ../sass/components/_program_page.scss */
 .node-type-project .node-project .field-type-image img {
   width: 100%;
 }
