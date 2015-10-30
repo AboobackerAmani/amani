@@ -106,7 +106,7 @@
         font-family: $open-sans-condensed;
         display: inline-block;
         width: 60px;
-        padding: 11px 40px 8px 40px;
+        padding: 9px 40px 9px 40px;
         background: $purple-primary;
         color: #fff;
         text-transform: uppercase;
@@ -222,6 +222,34 @@
 }
 
 //Program node page with Activites
+
+.node-project,
+.node-activity {
+  .field-type-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.node-activity .field-type-image {
+  margin: 0 0 20px;
+}
+
+.node-activity .field-name-field-program {
+  padding: 20px 0 0 0;
+  margin: 60px 0 20px;
+  border-top: 3px solid $purple-dark;
+  div {
+    display: inline-block;
+  }
+}
+
+.node-activity .field-name-field-program .field-label {
+  margin: 0 10px 0 0;
+  font-size: 18px;
+}
+
 .node-project.node-by-viewer {
   color: #5d5c5c;
   .file-image {
@@ -264,21 +292,6 @@
     }
     .views-row .views-field-body {
       color: #5d5c5c;
-    }
-    .views-row .views-field-title-1 {
-      text-align: right;
-      a {
-        margin-top: 10px;
-        // font-family: $open-sans-condensed;
-        //         font-size: 12;
-        //         font-weight: 300;
-        //         text-transform: uppercase;
-        //         letter-spacing: 1px;
-        //         background-color: #d19fc0;
-        //         padding: 5px 20px;
-        //         color: white;
-     
-      }
     }
   }
 }
@@ -333,13 +346,12 @@
 .node-type-project {
   .node-project {
     .field-type-image {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       overflow-y: hidden;
       height: 400px;
       @media (max-width: $max-width) {
         height: auto;
       }
-      
       img {
         width: 100%;
       }
