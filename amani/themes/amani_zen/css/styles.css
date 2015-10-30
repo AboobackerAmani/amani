@@ -1006,7 +1006,7 @@ body {
   max-width: none;
   position: relative;
 }
-/* line 8, ../sass/components/_contact_page.scss */
+/* line 7, ../sass/components/_contact_page.scss */
 .page-contact #page:before {
   content: "";
   background-color: #f5f5f5;
@@ -1017,23 +1017,23 @@ body {
   display: block;
 }
 @media all and (max-width: 768px) {
-  /* line 8, ../sass/components/_contact_page.scss */
+  /* line 7, ../sass/components/_contact_page.scss */
   .page-contact #page:before {
     height: 92%;
   }
 }
-/* line 23, ../sass/components/_contact_page.scss */
+/* line 20, ../sass/components/_contact_page.scss */
 .page-contact #main {
   max-width: 1280px;
   margin: 0 auto;
 }
 @media all and (max-width: 768px) {
-  /* line 23, ../sass/components/_contact_page.scss */
+  /* line 20, ../sass/components/_contact_page.scss */
   .page-contact #main {
     padding-top: 0;
   }
 }
-/* line 32, ../sass/components/_contact_page.scss */
+/* line 28, ../sass/components/_contact_page.scss */
 .page-contact #content,
 .page-contact .sidebars {
   float: left;
@@ -1043,21 +1043,21 @@ body {
   margin: 20px 0;
 }
 @media all and (max-width: 768px) {
-  /* line 32, ../sass/components/_contact_page.scss */
+  /* line 28, ../sass/components/_contact_page.scss */
   .page-contact #content,
   .page-contact .sidebars {
     width: 100%;
     margin: 0 auto;
   }
 }
-/* line 42, ../sass/components/_contact_page.scss */
+/* line 36, ../sass/components/_contact_page.scss */
 .page-contact .sidebars .region-sidebar-second {
   float: left;
   margin: 0;
   width: 100%;
 }
 @media all and (max-width: 768px) {
-  /* line 48, ../sass/components/_contact_page.scss */
+  /* line 41, ../sass/components/_contact_page.scss */
   .page-contact .contact-form {
     margin: 0 auto;
     width: 90%;
@@ -1065,25 +1065,28 @@ body {
     z-index: 9;
   }
 }
-/* line 56, ../sass/components/_contact_page.scss */
+/* line 48, ../sass/components/_contact_page.scss */
 .page-contact .contact-form label {
   font-family: "Avenir Next Condensed", sans-serif;
   font-size: 18px;
   color: #513e79;
   padding-bottom: 5px;
 }
-/* line 62, ../sass/components/_contact_page.scss */
+/* line 54, ../sass/components/_contact_page.scss */
 .page-contact .contact-form input, .page-contact .contact-form textarea {
-  background-color: #e9d5ef;
-  -webkit-box-shadow: inset 1px 1px 3px 0px #999999;
-  -moz-box-shadow: inset 1px 1px 3px 0px #999999;
-  box-shadow: inset 1px 1px 3px 0px #999999;
+  background-color: none;
+  border: 1px solid #ccc;
 }
-/* line 68, ../sass/components/_contact_page.scss */
-.page-contact .contact-form .form-actions {
-  text-align: right;
+/* line 62, ../sass/components/_contact_page.scss */
+.page-contact .contact-form input[type="text"]:focus,
+.page-contact .contact-form input[type="email"]:focus,
+.page-contact .contact-form input[type="password"]:focus,
+.page-contact .contact-form select:focus,
+.page-contact .contact-form textarea:focus {
+  outline: none;
+  border-color: #513e79;
 }
-/* line 70, ../sass/components/_contact_page.scss */
+/* line 67, ../sass/components/_contact_page.scss */
 .page-contact .contact-form .form-actions input {
   font-family: "Avenir Next Condensed", sans-serif;
   font-size: 14;
@@ -1096,7 +1099,7 @@ body {
   box-shadow: none;
   padding: 15px 30px 10px;
 }
-/* line 85, ../sass/components/_contact_page.scss */
+/* line 81, ../sass/components/_contact_page.scss */
 .page-contact .block-amani-global {
   padding: 15px;
   width: 90%;
@@ -1108,13 +1111,13 @@ body {
   box-shadow: -2px 2px 3px 0px #cccccc;
 }
 @media all and (max-width: 768px) {
-  /* line 85, ../sass/components/_contact_page.scss */
+  /* line 81, ../sass/components/_contact_page.scss */
   .page-contact .block-amani-global {
     width: 100%;
     margin: 40px auto 20px;
   }
 }
-/* line 100, ../sass/components/_contact_page.scss */
+/* line 94, ../sass/components/_contact_page.scss */
 .page-contact .block-amani-global h2.block-title {
   font-family: "Avenir Next Condensed", sans-serif;
   color: #513e79;
@@ -1123,7 +1126,7 @@ body {
   margin-left: 16px;
   margin-right: 16px;
 }
-/* line 110, ../sass/components/_contact_page.scss */
+/* line 103, ../sass/components/_contact_page.scss */
 .page-contact .block-amani-global #contact_form_site_info p {
   background: url("../images/icons/icn-contact-addr.png") no-repeat 0 0;
   background-size: 16px 16px;
@@ -1133,19 +1136,19 @@ body {
   margin-left: 16px;
   margin-right: 16px;
 }
-/* line 119, ../sass/components/_contact_page.scss */
+/* line 112, ../sass/components/_contact_page.scss */
 .page-contact .block-amani-global #contact_form_site_info p.telephone {
   background: url("../images/icons/icn-contact-phone.png") no-repeat 0 2px;
   background-size: 12px 16px;
 }
-/* line 123, ../sass/components/_contact_page.scss */
+/* line 116, ../sass/components/_contact_page.scss */
 .page-contact .block-amani-global #contact_form_site_info p.email {
   background: url("../images/icons/icn-contact-email.png") no-repeat 0 4px;
   background-size: 16px 14px;
 }
 
 @media all and (max-width: 768px) {
-  /* line 132, ../sass/components/_contact_page.scss */
+  /* line 124, ../sass/components/_contact_page.scss */
   .sidebar-second.page-contact #content {
     width: 100%;
     margin: 0 auto;
