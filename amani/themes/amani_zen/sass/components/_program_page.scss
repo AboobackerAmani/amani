@@ -47,7 +47,7 @@
       margin: 0 0 20px 0;
       
       @include breakpoint(768px) {
-        width: 48%;
+        width: 45%;
         margin: 0 15px 20px;
         &.views-row-first,
         &:nth-child(2n+1) {
@@ -73,10 +73,11 @@
     }
     
     .views-field-title {
-      font-family: $avenir-condensed;
+      font-family: $open-sans-condensed;
       font-size: 16px;
       font-weight: $fw-normal;
-      margin-bottom: 30px;
+      margin-bottom: 5px;
+      height: 50px;
       padding-top: 4px;
       
       a {
@@ -105,7 +106,7 @@
     .views-field-title-1 {
     text-align: right;
       a {
-        font-family: $avenir-condensed;
+        font-family: $open-sans-condensed;
         color: $purple;
       }
     }
@@ -119,7 +120,7 @@
     }
     
     h2.block-title {
-      font-family: $avenir-condensed;
+      font-family: $open-sans-condensed;
       font-size: 16px;
       font-weight: $fw-normal;
       letter-spacing: 1px;
@@ -141,7 +142,7 @@
       }
       
       .views-field-title a {
-        font-family: $avenir-condensed;
+        font-family: $open-sans-condensed;
         font-size: 16px;
         font-weight: $fw-normal;
         letter-spacing: 1px;
@@ -165,7 +166,7 @@
       }
       
       .views-more-link {
-        font-family: $avenir-condensed;
+        font-family: $open-sans-condensed;
         clear: both;
         display: block;
         color: $purple;
@@ -197,7 +198,7 @@
   border-top: solid 2px $purple-alt;
   
   h2.block-title {
-    font-family: $avenir-condensed;
+    font-family: $open-sans-condensed;
     font-size: 36px;
     color: $purple-alt;
     text-transform: uppercase;
@@ -224,7 +225,7 @@
       
       a {
         margin-top: 10px;
-        // font-family: $avenir-condensed;
+        // font-family: $open-sans-condensed;
         //         font-size: 12;
         //         font-weight: 300;
         //         text-transform: uppercase;
@@ -266,7 +267,7 @@
     .views-field-title {
       padding: 15px 0;
       a {
-        font-family: $avenir-condensed;
+        font-family: $open-sans-condensed;
         font-size: 16px;
         font-weight: $fw-normal;
         letter-spacing: 1px;

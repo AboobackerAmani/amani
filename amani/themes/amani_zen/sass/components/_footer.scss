@@ -1,0 +1,212 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// Footer
+//
+///////////////////////////////////////////////////////////////////////////////
+
+.footer-top {
+  background-color: $purple-dark;
+  border: 1px solid #67486b;
+  border-width: 1px 0;
+  height: 12px;
+}
+
+.footer-wrapper {
+  background-color: $purple;
+  border: 1px solid #84568b;
+  border-width: 1px 0;
+  color: $almost-white;
+  font-weight: $fw-light;
+  padding: 25px 0 17px 0;
+  @include zen-grid-container;
+
+  a {
+    color: $almost-white;
+    @include link-hover-color();
+    text-transform: uppercase;
+  }
+
+  .menu {
+    a {
+      color: $almost-white;
+      @include link-hover-color();
+    }
+  }
+}
+
+footer {
+  > .block-menu {
+    display: inline-block;
+    //@include zen-grid-item(7, 1); // main menu in footer
+    margin-bottom: 0;
+
+    // @media screen and (max-width: $breakpoint) {
+    //       float: none;
+    //       margin: 0;
+    //       @include zen-grid-item(7, 1);
+    //     }
+    //     
+    //     @media screen and (max-width: 640px) {
+    //       float: none;
+    //       margin: 0;
+    //       @include zen-grid-item(5, 1);
+    //     }
+  }
+}
+
+#block-bean-amani-powered-by {
+  @include zen-grid-item(4, 1); // amani and peace geeks logos
+  text-align: right;
+
+  @media screen and (max-width: 580px) {
+    clear: both;
+    //float: none;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  .menu {
+    float: left;
+    position: relative;
+    margin: 0 15px 0 0;
+
+    @media screen and (max-width: 640px) {
+      float: none;
+      margin: 0 0 15px 0 !important;
+    }
+
+    li {
+      position:relative;
+      //text-indent: 20px;
+      margin-bottom: 10px;
+      
+      &:before { 
+        //content: "\f078";
+        //font-family: amani-icons;
+        //margin-right: 8px;
+        //font-size: 11px;
+      }
+
+      @media screen and (max-width: 580px) {
+        text-indent: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      font-family: $open-sans-condensed;
+      transition: all 0.3s;
+      font-size: 14px;
+      leeter-spacing: 1px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        top: 3px;
+        left:0;
+        // @include icons-sprite(grey-right-arrow);
+      }
+    }
+    a.active {color: $white;}
+  }
+}
+
+footer > .block-menu {
+  margin-right: 0;
+}
+
+footer .block-menu ul.menu {
+  margin-right: 15px;
+}
+
+footer .field-label {
+  display: none;
+}
+
+.region-footer .block.block-bean {
+  display: inline-block;
+  margin: 0 20px 0 0;
+  float: right;
+ 
+}
+
+footer #block-bean-img1 {
+  margin-top: 16px;
+}
+
+.peacegeeks-logo {
+  margin: 0 0 20px 50px;
+
+  @media screen and (max-width: 570px) {
+    margin-left: 0;
+  }
+}
+
+.footer-legal {
+  font-family: $open-sans-condensed;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background-color: $purple-dark;
+  border-top: 1px solid #67486b;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+
+  div {
+    margin: 0 auto;
+    width: 75%; // strange bug with text align on the parent not correctly centering the text
+  }
+}
+
+#footer {
+  ul.menu li ul.menu {
+    display: none;
+  }
+  
+  ul.menu {
+    li {
+      display: inline-block;
+      float: left;
+      min-width:80px;
+      margin-right: 30px;
+
+      &:nth-child(2n+1) {
+        clear: left;
+      }
+    }
+  }
+}
+
+//social media 
+#footer {
+  div[id*="block-menu-menu-social-media"] {
+    @media all and (max-width: 600px) {
+      float: left;
+      margin-bottom: 10px;
+    }
+    ul.menu li {
+      display: block;
+      float: none;
+    }
+    
+    .social-media-facebook:before,
+    .social-media-twitter:before {
+      content: "\e802";
+      font-family: amani-icons;
+      margin-right: 10px;
+    }
+    .social-media-twitter:before {
+      content: "\e804";
+    }
+  }
+}
+

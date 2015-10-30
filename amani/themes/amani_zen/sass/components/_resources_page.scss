@@ -4,7 +4,7 @@
 
 // resources page view
 .resources-page-view {
-  font-family: $avenir-condensed;
+  font-family: $open-sans-condensed;
 
   .view-filters {
     float: right;
@@ -117,7 +117,7 @@
       }
       
       @include breakpoint(1200px) {
-        margin-right: 20px;
+        margin-right: 15px;
       }
 
       .views-field {
@@ -179,7 +179,7 @@
 
 // node type resource page
 .node-type-resource #content {
-  font-family: $avenir-condensed;
+  font-family: $open-sans-condensed;
   width: 840px;
   margin: auto;
 
@@ -203,7 +203,7 @@
       h3 {
         display: inline-block;
         margin-right: 5px;
-        font-family: $avenir;
+        font-family: $open-sans;
       }
 
       .social-menu {
@@ -251,13 +251,13 @@
       }
 
       .field-name-body {
-        font-family: $avenir;
+        font-family: $open-sans;
         line-height: 30px;
       }
 
       .field-name-field-amani-tags {
         .field-label {
-          font-family: $avenir;
+          font-family: $open-sans;
           margin-bottom: 5px;
         }
 
@@ -275,7 +275,7 @@
       }
 
       .file-download {
-        font-family: $avenir;
+        font-family: $open-sans;
         background: #ebebeb;
         padding: 40px;
         margin: 0 auto;

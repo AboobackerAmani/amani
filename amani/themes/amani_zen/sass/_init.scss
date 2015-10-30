@@ -49,7 +49,7 @@ $legacy-support-for-ie8: true;
 // use in the normalize.scss file.
 // @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
 
-$base-font-size:   13px; // The font size set on the root html element.
+$base-font-size:   16px; // The font size set on the root html element.
 $base-line-height: 20px; // This line-height determines the basic unit of vertical rhythm.
 
 $h1-font-size: 2.15 * $base-font-size; // 28px
@@ -87,8 +87,8 @@ $open-sans:       "Open Sans", sans-serif;
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
-$base-font-family: $open-sans; // The font family set on the html element.
-$font-body:        $open-sans;
+//$base-font-family: $open-sans; // The font family set on the html element.
+//$font-body:        $source-sans-pro;
 $font-monospace:   $courier;
 $icon-font: 'SSSocial';
 
@@ -103,7 +103,6 @@ $fw-extra-bold: 800;
 // Colors, etc.
 //
 $blue: #59c2ed;
-
 $orange: #f09416;
 
 $grey-clear: #e6e7e8;
@@ -127,6 +126,17 @@ $error-text-color: #db2c2c;
 
 $link-color: $blue;
 $link-color-hover: darken($blue, 20%);
+
+//Update color scheme
+$silver-chalice-2: #ababab;
+$undefinedebb: #f7f5f5;
+$kimberly: #8579a1;
+$butterfly-bush: #513d79;
+$voodoo-2: #77457f;
+$voodoo-3: #532f57;
+$melanie: #dba6c6;
+$lilac: #b186af;
+
 
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 20px;
@@ -167,24 +177,45 @@ $breakpoint: 768px;
 
 
 // include custom fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic,700,700italic,300,300italic);
+
+$open-sans:           "Open Sans", sans-serif;
+$open-sans-condensed: "Open Sans Condensed", sans-serif;
+$source-sans-pro:     "Source Sans Pro", sans-serif;
+
+$base-font-family:    $source-sans-pro;
+$font-body:           $source-sans-pro;
+
 @font-face {
-  font-family: 'Avenir';
-  src: url('../fonts/AvenirNextLTPro-Regular.eot');
-	src: url('../fonts/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/AvenirNextLTPro-Regular.woff') format('woff'),
-		url('../fonts/AvenirNextLTPro-Regular.ttf')  format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-  font-family: 'Avenir Next Condensed';
-  src: url('../fonts/AvenirNextLTPro-Cn.eot');
-	src: url('../fonts/AvenirNextLTPro-Cn.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/AvenirNextLTPro-Cn.woff') format('woff'),
-		url('../fonts/AvenirNextLTPro-Cn.ttf')  format('truetype');
-	font-weight: normal;
-	font-style: normal;
+   font-family: 'amani-icons';
+   src: url('../icons/fonts/amani-icons.eot');
+   src: url('../icons/fonts/amani-icons.eot?#iefix') format('embedded-opentype'),
+        url('../icons/fonts/amani-icons.woff') format('woff'),
+        url('../icons/fonts/amani-icons.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-$avenir:           "Avenir", sans-serif;
-$avenir-condensed: "Avenir Next Condensed", sans-serif;
+// @font-face {
+//   font-family: 'Avenir';
+//   src: url('../fonts/AvenirNextLTPro-Regular.eot');
+//  src: url('../fonts/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
+//    url('../fonts/AvenirNextLTPro-Regular.woff') format('woff'),
+//    url('../fonts/AvenirNextLTPro-Regular.ttf')  format('truetype');
+//  font-weight: normal;
+//  font-style: normal;
+// }
+// @font-face {
+//   font-family: 'Avenir Next Condensed';
+//   src: url('../fonts/AvenirNextLTPro-Cn.eot');
+//  src: url('../fonts/AvenirNextLTPro-Cn.eot?#iefix') format('embedded-opentype'),
+//    url('../fonts/AvenirNextLTPro-Cn.woff') format('woff'),
+//    url('../fonts/AvenirNextLTPro-Cn.ttf')  format('truetype');
+//  font-weight: normal;
+//  font-style: normal;
+// }
+// 
+// $avenir:           "Avenir", sans-serif;
+// $avenir-condensed: "Avenir Next Condensed", sans-serif;
