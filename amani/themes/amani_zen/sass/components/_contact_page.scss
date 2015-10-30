@@ -102,21 +102,35 @@
     }
     #contact_form_site_info {
       p {
-        background: url("../images/icons/icn-contact-addr.png") no-repeat 0 0;
+        position: relative;
         background-size: 16px 16px;
-        padding-left: 25px;
+        padding-left: 30px;
         margin-top: 10px;
-        color: #d19fc0;
+        color: $purple-primary;
         margin-left: 16px;
         margin-right: 16px;
+        &:before {
+          position: absolute;
+          top: 2px;
+          left: 0;
+          content: "\e901";
+          font-family: amani-icons;
+          font-size: 16px;
+          color: lighten($purple-primary, 10);
+          display: block;
+          height: 16px;
+          width: 16px;
+        }
       }
       p.telephone {
-        background: url("../images/icons/icn-contact-phone.png") no-repeat 0 2px;
-        background-size: 12px 16px;
+        &:before {
+          content: "\e902";
+        }
       }
       p.email {
-        background: url("../images/icons/icn-contact-email.png") no-repeat 0 4px;
-        background-size: 16px 14px;
+        &:before {
+          content: "\e800";
+        }
       }
     }
   }
