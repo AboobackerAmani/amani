@@ -6,11 +6,15 @@
 
 .region-header {
   margin: 20px auto 0;
-  max-width: $max-width;
+  max-width: 1040px;
   padding: 0;
   position: relative;
   z-index: 999;
   
+  
+  @media all and (min-width: $breakpoint) and (max-width: $max-width) {
+    padding: 0 15px;
+  }
   .block-title { display: none; }
 }
 
@@ -73,7 +77,7 @@
       a {
         background-color: $purple;
         display: block;
-        font-family: $avenir-condensed;
+        font-family: $open-sans-condensed;
         font-size: 18px;
         padding: 14px;
         color: $white;
@@ -131,7 +135,7 @@
 //screen bigger than 768px
 @media all and (min-width: $breakpoint) {
   .region-header { 
-    padding: 0 10px;
+    //padding: 0 10px;
   }
   
   #mobile-toggle {
@@ -221,7 +225,7 @@
 .block-search {
   border: 2px solid white;
   position: absolute !important;
-  top: 9px;
+  top: 8px;
   right: 92px;
   width: 36px;
   -webkit-transition: width 0.4s ease-in-out;
@@ -236,6 +240,7 @@
     transition: width 0.4s ease-out;
   
     left: 15px;
+    //left: 0;
   }
 
   &:hover {

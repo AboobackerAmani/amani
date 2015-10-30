@@ -51,7 +51,7 @@
     }
     
     h3 {
-      font-family: $avenir-condensed;
+      font-family: $open-sans-condensed;
       line-height: 1;
       //color: $purple-primary;
       color: $purple-dark;
@@ -94,10 +94,10 @@
   
   //Latest Mappping
   #block-views-incident-reports-latest {
-    margin: 0 30px;
+    margin: 0 -1%;
     
     h2 {
-      font-family: $avenir-condensed;
+      font-family: $open-sans-condensed;
       font-size: 28px;
       line-height: 1;
       color: $purple-primary;
@@ -116,7 +116,7 @@
       min-height: 120px;
       
       @include breakpoint(768px) {
-       width: 31%;
+       width: 31.1%;
        margin: 12px 1%;
       }
       

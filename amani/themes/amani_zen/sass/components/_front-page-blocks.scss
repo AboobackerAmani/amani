@@ -26,8 +26,8 @@
       }
     }
     @media all and (min-width: 960px) {
-      padding-left: 5%;
-      padding-right: 5%;
+      padding-left: 3%;
+      padding-right: 3%;
     }
 
     .views-field-title {
@@ -35,7 +35,7 @@
       font-weight: 400;
       font-size: 1.5em;
       //font-family: $base-font-family;
-      font-family: $avenir-condensed;
+      font-family: $open-sans-condensed;
       margin-top: 15px;
       margin-bottom: 30px;
     }
@@ -44,7 +44,7 @@
       margin-top: 40px;
 
       span {
-        font-family: $avenir-condensed;
+        font-family: $open-sans-condensed;
         text-transform: uppercase;
         border: 1px solid #333;
         border-radius: 1px;
@@ -56,7 +56,7 @@
 
           .more-arrow {
             border: 0;
-            font-family: $avenir;
+            font-family: $open-sans;
             font-size: 10px;
             padding-left: 5px;
             color: $purple-primary;
@@ -84,7 +84,7 @@
 #block-views-calendar-of-events-block-3 {
   display: inline-block;
   vertical-align: top;
-  margin: 100px 30px 30px 30px;
+  margin: 100px 20px 30px;
   width: 290px;
   height: 370px;
   text-align: left;
@@ -153,8 +153,8 @@
 
 // Twitter block
 #block-views-front-page-tweets-block {
-  margin-left: 30px;
-  font-family: $avenir-condensed;
+  margin-left: 20px;
+  font-family: $open-sans-condensed;
   min-height: 387px;
   
   @media all and (max-width: 1090px) {
@@ -231,7 +231,7 @@
 // calendar block
 #block-views-calendar-of-events-block-3 {
 
-  font-family: $avenir;
+  font-family: $open-sans;
 
   @media all and (max-width: 990px) {
     background: #5e5e5e;
@@ -257,7 +257,7 @@
       color: white;
       font-size: 1.5em;
       text-transform: uppercase;
-      font-family: $avenir-condensed;
+      font-family: $open-sans-condensed;
       letter-spacing: 2px;
       padding: 6px;
 
@@ -343,7 +343,7 @@
         font-size: 0.7em;
 
         h3 {
-          font-family: $avenir-condensed;
+          font-family: $open-sans-condensed;
           text-transform: uppercase;;
           font-weight: 400;
 
@@ -367,7 +367,7 @@
           font-weight: 100;
           font-size: 3em;
           outline: none;
-          font-family: $avenir;
+          font-family: $open-sans;
         }
       }
 
@@ -386,7 +386,7 @@
 
   h2 {
     font-size: 28px;
-    font-family: $avenir-condensed;
+    font-family: $open-sans-condensed;
     margin-bottom: 50px;
     text-transform: uppercase;
     @media all and (max-width: $breakpoint) {
@@ -397,15 +397,20 @@
 
 .view-news-and-events {
   text-align: left;
+  .views-row-odd {
+    margin-right: 2%;
+  }
+  .views-row-even {
+    margin-left: 2%;
+  }
   .views-row {
-    width: 45%;
-    margin: 0 2% 20px;
+    width: 47%;
+    margin-bottom: 20px;
     display: inline-block;
     vertical-align: top;
 
     @media all and (max-width: $breakpoint) {
       width: 100%;
-      margin: 0 0 20px;
     }
 
     .views-field-field-image {
@@ -461,13 +466,13 @@
     }
 
     .views-field-title a {
-      font-family: $avenir-condensed;
+      font-family: $open-sans-condensed;
       color: $purple-primary;
       font-size: 16px;
     }
 
     .views-field-title-1 a {
-      font-family: $avenir-condensed;
+      font-family: $open-sans-condensed;
       display: block;
       color: $purple-primary;
       margin-left: 220px;
@@ -478,7 +483,7 @@
 
       &:before {
         content: ">>";
-        font-family: $avenir;
+        font-family: $open-sans;
         margin-right: 5px;
       }
     }

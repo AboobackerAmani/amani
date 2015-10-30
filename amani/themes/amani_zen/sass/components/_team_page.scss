@@ -20,7 +20,7 @@
     }
     label {
       text-transform: uppercase;
-      font-family: $avenir-condensed;
+      font-family: $open-sans-condensed;
       font-size: 12px;
       color: #ce9bc0;
     }
@@ -112,14 +112,14 @@
         margin-top: 22px;
         a {
           color: #ce9bc0;
-          font-family: $avenir-condensed;
+          font-family: $open-sans-condensed;
           font-size: 24px;
           line-height: 1em;
         }
       }
       .views-field-field-team-title {
         color: #ce9bc0;
-        font-family: $avenir-condensed;
+        font-family: $open-sans-condensed;
         font-size: 18px;
       }
       .views-field-field-team-bio {
@@ -139,27 +139,26 @@
     }
   }
   
-  .view-team {
-    .view-content {
-      h3 {
-        font-family: $avenir-condensed;
-        font-size: 30px;
-        font-weight: $fw-semi-bold;
-        letter-spacing: 1px;
-        line-height: 1;
-        color: $purple;
-        text-transform: uppercase;
-        width: 100%;
-        margin-bottom: 0;
-        margin-top: 2.5em;
-      }
-      
-      .views-field-field-team-member-type a {
-        font-family: $avenir-condensed;
-        font-style: italic;
-        font-size: 16px;
-        color: #999;
-      }
+  
+  .view-content {
+    h3 {
+      font-family: $open-sans-condensed;
+      font-size: 30px;
+      font-weight: $fw-semi-bold;
+      letter-spacing: 1px;
+      line-height: 1;
+      color: $purple;
+      text-transform: uppercase;
+      width: 100%;
+      margin-bottom: 0;
+      margin-top: 2.5em;
+    }
+    
+    .views-field-field-team-member-type a {
+      font-family: $open-sans-condensed;
+      font-style: italic;
+      font-size: 16px;
+      color: #999;
     }
   }
 }

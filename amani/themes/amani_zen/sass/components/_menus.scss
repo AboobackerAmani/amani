@@ -36,7 +36,7 @@
   top: 10px;
   //screen bigger than 768px
   @media all and (min-width: $breakpoint) {
-    right: 0;
+    //right: 0;
   }
 
   @include hide-contextual-links();
@@ -50,28 +50,44 @@
   li {
     display: inline-block;
     list-style: none outside none;
-    margin-left: 0.3em;
+    margin-left: 7px;
+    position: relative;
     
     a {
       text-indent: -999em;
-      margin-right: 5px;
+      margin-right: 7px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 30px;
+      width: 30px;
       &:hover {
         border-top: 0;
       }
     }
     
     &.social-media-facebook a { 
-      background: url(../images/icons/icn-facebook-30.png) no-repeat 0 0;
-      height: 30px;
-      width: 30px;
-      display: inline-block;
+      //background: url(../images/icons/icn-facebook-30.png) no-repeat 0 0;
     }
     
     &.social-media-twitter a { 
-      background: url(../images/icons/icn-twitter-30.png) no-repeat 0 0;
+      //background: url(../images/icons/icn-twitter-30.png) no-repeat 0 0;
+    }
+    
+    &.social-media-facebook:before,
+    &.social-media-twitter:before {
+      content: "\e802";
+      font-family: amani-icons;
+      font-size: 28px;
+      color: white;
+      display: block;
       height: 30px;
       width: 30px;
-      display: inline-block;
+      margin-top: 4px;
+    }
+    
+    &.social-media-twitter:before {
+      content: "\e804";
     }
   }
 }

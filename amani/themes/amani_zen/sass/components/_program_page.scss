@@ -41,7 +41,7 @@
       padding-bottom: 20px;
       margin: 0 0 20px 0;
       @include breakpoint(768px) {
-        width: 48%;
+        width: 45%;
         margin: 0 15px 20px;
         &.views-row-first,
         &:nth-child(2n+1) {
@@ -66,10 +66,11 @@
       }
     }
     .views-field-title {
-      font-family: $avenir-condensed;
+      font-family: $open-sans-condensed;
       font-size: 20px;
       font-weight: $fw-normal;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+      height: 50px;
       padding-top: 4px;
       @include breakpoint(768px) {
         font-size: 16px;
@@ -102,11 +103,11 @@
       }
 
       a {
+        font-family: $open-sans-condensed;
         display: inline-block;
         width: 60px;
         padding: 11px 40px 8px 40px;
         background: $purple-primary;
-        font-family: $avenir-condensed;
         color: #fff;
         text-transform: uppercase;
         font-size: 18px;
@@ -136,7 +137,7 @@
       border-bottom: 3px solid $purple-alt;
       text-align: center;
       text-transform: uppercase;
-      font-family: $avenir-condensed;
+      font-family: $open-sans-condensed;
       font-size: 26px;
       font-weight: $fw-normal;
       letter-spacing: 1px;
@@ -167,7 +168,7 @@
         }
       }
       .views-field-title a {
-        font-family: $avenir-condensed;
+        font-family: $open-sans-condensed;
         font-weight: $fw-normal;
         letter-spacing: 1px;
         color: $purple;
@@ -187,13 +188,14 @@
         margin: 5px 0;
       }
       .views-more-link {
+        font-family: $open-sans-condensed;
         display: block;
         width: 60px;
         margin: 10px auto 0 auto;
         text-align: center;
         padding: 11px 40px 8px 40px;
         background: $purple-primary;
-        font-family: $avenir-condensed;
+        clear: both;
         color: #fff;
         text-transform: uppercase;
         font-size: 18px;
@@ -239,7 +241,7 @@
   margin-top: 25px;
   border-top: solid 2px $purple-alt;
   h2.block-title {
-    font-family: $avenir-condensed;
+    font-family: $open-sans-condensed;
     font-size: 36px;
     color: $purple-alt;
     text-transform: uppercase;
@@ -267,7 +269,7 @@
       text-align: right;
       a {
         margin-top: 10px;
-        // font-family: $avenir-condensed;
+        // font-family: $open-sans-condensed;
         //         font-size: 12;
         //         font-weight: 300;
         //         text-transform: uppercase;
@@ -302,7 +304,7 @@
     .views-field-title {
       padding: 15px 0;
       a {
-        font-family: $avenir-condensed;
+        font-family: $open-sans-condensed;
         font-size: 16px;
         font-weight: $fw-normal;
         letter-spacing: 1px;
@@ -322,6 +324,24 @@
       .views-field-body {
         color: $grey-medium;
         line-height: 1.8;
+      }
+    }
+  }
+}
+
+//Node page
+.node-type-project {
+  .node-project {
+    .field-type-image {
+      margin-bottom: 30px;
+      overflow-y: hidden;
+      height: 400px;
+      @media (max-width: $max-width) {
+        height: auto;
+      }
+      
+      img {
+        width: 100%;
       }
     }
   }
