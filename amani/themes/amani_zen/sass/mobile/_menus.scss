@@ -11,7 +11,7 @@
 // Mobile version first
 #mobile-toggle {
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 20px;
   display: block;
   text-indent: 100%;
@@ -19,23 +19,72 @@
   overflow: hidden;
   width: 25px;
   height: 30px;
-  background-image: url('../images/mobile-menu-toggle.png') no-repeat center center;
+  background: url('../images/mobile-menu-toggle.png') no-repeat center center;
   display: block;
   z-index: 999;
 }
 
-#main-submenu-backline {
+/* Sliding mobile menu */
+
+#mm-blocker {
+	background:white !important;
+	opacity:0 !important;
+}
+
+
+.mm-page {
+	background:white !important;
+	opacity:1;
+}
+
+html.mm-opened .mm-page {
+	box-shadow:none;
+}
+
+#mmenu_left {
+	border-right:1px solid $blue;
+}
+
+.mmenu-nav.mm-basic {
+	background:white !important;
+	color:$text-black;
+	text-shadow:none;
+	
+	[class^="icon-"] {
+		display:none;
+	}
+	
+	> .mm-list li {
+		border-top:none;
+		border-bottom:1px solid $text-grey;
+	}
+	
+	> .mm-header {
+		height:20px;
+		background:white;
+		border-color:white;
+	}
+	
+	> .mm-list li.mmenu-expanded .mmenu-block-expanded {
+		background:white;
+		color:white;
+	}
+}
+
+/*#main-submenu-backline {
 	height:47px;
 	position:absolute;
 	width:100%;
 	background:$grey;
 	top:133px;
-}	
+}	*/
 
 
 
   #block-system-main-menu {
+  	display:none;
     ul.menu {
+    	display:none;
       margin-top: 5px;
       margin-bottom: 0;
       border-top: 2px solid $grey;
@@ -64,9 +113,7 @@
 
 
 
-
-//desktop menu
-// Main navigation
+/*
 #navigation {
   @include element-invisible;
 
@@ -94,9 +141,8 @@
 
     &:last-child { border-right: 0 none; }
   }
-}
+} */
 
-// Social Media
 div[id*="block-menu-menu-social-media"] {
   display: none;
   margin-left: 40px;
