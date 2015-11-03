@@ -2016,30 +2016,80 @@ footer #block-bean-img1 {
   margin-right: 5px;
 }
 
-/*
-  Gallery page
-*/
-/* line 5, ../sass/components/_gallery_page.scss */
+/* line 3, ../sass/components/_gallery_page.scss */
+.page-gallery .breadcrumb {
+  margin: 0 0 1em;
+}
+
+/* line 7, ../sass/components/_gallery_page.scss */
+.media-gallery-collection {
+  margin: 0 0 60px;
+}
+
+/* line 11, ../sass/components/_gallery_page.scss */
+.mg-col .mg-gallery.mg-teaser {
+  margin: 0 auto;
+  float: none;
+}
+
+/* line 16, ../sass/components/_gallery_page.scss */
+.mg-col-4 .mg-gallery {
+  width: 100% !important;
+}
+@media (min-width: 768px) {
+  /* line 16, ../sass/components/_gallery_page.scss */
+  .mg-col-4 .mg-gallery {
+    width: 50% !important;
+  }
+}
+
+/* line 23, ../sass/components/_gallery_page.scss */
+.node-media-gallery .stack-image {
+  display: none;
+}
+
+/* line 27, ../sass/components/_gallery_page.scss */
+.node-media-gallery.node-teaser .media-gallery-thumb {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+/* line 32, ../sass/components/_gallery_page.scss */
+.media-gallery-thumb {
+  display: block;
+}
+
+/* line 36, ../sass/components/_gallery_page.scss */
+.media-collection-item-wrapper {
+  padding: 0;
+}
+
+/* line 40, ../sass/components/_gallery_page.scss */
+.vocabulary-gallery-collections {
+  display: none;
+}
+
+/* line 47, ../sass/components/_gallery_page.scss */
 .node-type-media-gallery .node-media-gallery {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
-/* line 9, ../sass/components/_gallery_page.scss */
+/* line 51, ../sass/components/_gallery_page.scss */
 .node-type-media-gallery .node-media-gallery .links {
   display: none;
 }
-/* line 13, ../sass/components/_gallery_page.scss */
+/* line 55, ../sass/components/_gallery_page.scss */
 .node-type-media-gallery .media-gallery-item {
   border: none;
   margin-bottom: 7%;
 }
-/* line 18, ../sass/components/_gallery_page.scss */
+/* line 60, ../sass/components/_gallery_page.scss */
 .node-type-media-gallery .field-items .field-item {
   width: 50% !important;
 }
 @media (min-width: 768px) {
-  /* line 18, ../sass/components/_gallery_page.scss */
+  /* line 60, ../sass/components/_gallery_page.scss */
   .node-type-media-gallery .field-items .field-item {
     width: 33.3% !important;
   }

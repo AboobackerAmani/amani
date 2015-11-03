@@ -1,6 +1,48 @@
-/*
-  Gallery page
-*/
+// Gallery Landing page
+
+.page-gallery .breadcrumb {
+  margin: 0 0 1em;
+}
+
+.media-gallery-collection {
+  margin: 0 0 60px;
+}
+
+.mg-col .mg-gallery.mg-teaser {
+  margin: 0 auto;
+  float: none;
+}
+
+.mg-col-4 .mg-gallery {
+  width: 100% !important;
+  @include breakpoint(768px) {
+    width: 50% !important;
+  }
+}
+
+.node-media-gallery .stack-image {
+  display: none;
+}
+
+.node-media-gallery.node-teaser .media-gallery-thumb {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.media-gallery-thumb {
+  display: block;
+}
+
+.media-collection-item-wrapper {
+  padding: 0;
+}
+
+.vocabulary-gallery-collections {
+  display: none;
+}
+
+// Gallery page
+
 .node-type-media-gallery {
   .node-media-gallery {
     display: flex;
