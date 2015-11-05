@@ -76,6 +76,7 @@ footer {
   // See the note about $zen-auto-include-item-base above.
   @media all and (max-width: 1024px) {
     @include zen-grid-item-base();
+    padding: 0 30px;
   }
 }
 
