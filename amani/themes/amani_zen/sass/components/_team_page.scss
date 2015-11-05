@@ -127,19 +127,12 @@
       }
       .views-field-view-node {
         a {
-          display: block;
-          color: #ce9bc0;
-          padding: 10px 0;
-          &:before {
-            content: ">";
-            margin-right: 5px;
-          }
+          @include readmore;
         }
       }
     }
   }
-  
-  
+   
   .view-content {
     h3 {
       font-family: $open-sans-condensed;
