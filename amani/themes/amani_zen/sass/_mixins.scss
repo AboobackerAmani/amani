@@ -117,3 +117,27 @@
     @content;
   }
 }
+
+//Read  More text link
+@mixin readmore {
+  font-family: $open-sans-condensed;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $purple-primary;
+  letter-spacing: 0.5px;
+  display: block;
+  padding: 10px 0;
+  
+  &:after {
+    content: "\f101";
+    font-family: amani-icons;
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+    color: $purple-primary;
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+  }
+}

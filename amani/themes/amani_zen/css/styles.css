@@ -2469,12 +2469,14 @@ footer #block-bean-img1 {
 .page-incident-reports #block-views-incident-reports-latest h2 {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 28px;
-  line-height: 1;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 1px;
   color: #ce9bc0;
   text-align: center;
   margin: 40px 0;
 }
-/* line 108, ../sass/components/_map_page.scss */
+/* line 111, ../sass/components/_map_page.scss */
 .page-incident-reports #block-views-incident-reports-latest .views-row {
   width: 47%;
   border: 1px solid #cccccc;
@@ -2485,25 +2487,25 @@ footer #block-bean-img1 {
   min-height: 120px;
 }
 @media (min-width: 768px) {
-  /* line 108, ../sass/components/_map_page.scss */
+  /* line 111, ../sass/components/_map_page.scss */
   .page-incident-reports #block-views-incident-reports-latest .views-row {
     width: 31.1%;
     margin: 12px 1%;
   }
 }
 @media (max-width: 480px) {
-  /* line 108, ../sass/components/_map_page.scss */
+  /* line 111, ../sass/components/_map_page.scss */
   .page-incident-reports #block-views-incident-reports-latest .views-row {
     width: 100%;
   }
 }
-/* line 128, ../sass/components/_map_page.scss */
+/* line 131, ../sass/components/_map_page.scss */
 .page-incident-reports #block-views-incident-reports-latest .views-field-title a {
   color: #ce9bc0;
   text-transform: uppercase;
   font-size: 16px;
 }
-/* line 134, ../sass/components/_map_page.scss */
+/* line 137, ../sass/components/_map_page.scss */
 .page-incident-reports #block-views-incident-reports-latest .views-field-field-incident-date {
   color: #ccc;
 }
@@ -4659,16 +4661,28 @@ tr.selected td {
 }
 /* line 129, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-view-node a {
-  display: block;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
   color: #ce9bc0;
+  letter-spacing: 0.5px;
+  display: block;
   padding: 10px 0;
 }
-/* line 133, ../sass/components/_team_page.scss */
-.view-team .view-content .views-row .views-field-view-node a:before {
-  content: ">";
-  margin-right: 5px;
+/* line 132, ../sass/_mixins.scss */
+.view-team .view-content .views-row .views-field-view-node a:after {
+  content: "\f101";
+  font-family: amani-icons;
+  font-size: 16px;
+  font-weight: normal;
+  display: inline-block;
+  color: #ce9bc0;
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
 }
-/* line 144, ../sass/components/_team_page.scss */
+/* line 137, ../sass/components/_team_page.scss */
 .view-team .view-content h3 {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 30px;
@@ -4681,7 +4695,7 @@ tr.selected td {
   margin-bottom: 0;
   margin-top: 2.5em;
 }
-/* line 157, ../sass/components/_team_page.scss */
+/* line 150, ../sass/components/_team_page.scss */
 .view-team .view-content .views-field-field-team-member-type a {
   font-family: "Open Sans Condensed", sans-serif;
   font-style: italic;
