@@ -15,12 +15,13 @@
     margin-bottom: 2em;
     .views-field-title {
       border-bottom: 3px solid #d39cc3;
-      margin-bottom: 1.5em;
+      margin-bottom: 30px;
       a {
         color: #d39cc3;
         text-transform: uppercase;
         font-family: $open-sans-condensed;
         font-size: 28px;
+        font-weight: bold;
         line-height: 1.5;
         margin-top: 1.5em;
         margin-bottom: 0;
@@ -39,6 +40,9 @@
     }
     .views-field-body {
       margin-top: 1.5em;
+      p:last-child {
+         margin-bottom: 0;
+       }
     }
   }
   
@@ -92,7 +96,7 @@
     margin-bottom: 2em;
     
     .views-field-title {
-      margin-bottom: 3em;
+      margin-bottom: 30px;
     }
     
     .views-field-field-image {
