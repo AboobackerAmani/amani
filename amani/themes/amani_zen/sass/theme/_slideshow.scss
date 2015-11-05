@@ -72,11 +72,11 @@
     @include font-size(13px);
     text-transform: uppercase;
     max-width: 150px;
-    background-color: rgba(81,62,121,0.8);
+    background-color: rgba(71,79,94,0.9);
     @include breakpoint($desktop) {
       @include font-size(18px);
       padding: 15px 30px;
-      background-color: rgba(81,62,121,0.23);
+      background-color: rgba(71,79,94,0.85);
     }
   }
 
