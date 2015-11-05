@@ -40,9 +40,9 @@
     width: 100%;
   }
   .contact-form {
+    width: 100%;
     @media all and (max-width: $breakpoint) {
       margin: 0 auto;
-      width: 90%;
       position: relative;
       z-index: 9;
     }
@@ -56,6 +56,13 @@
       background-color: none;
       border: 1px solid #ccc;
     }
+    
+    @media all and (min-width: $breakpoint) {
+      textarea {
+        height: 200px;
+      }
+    }
+    
     input[type="text"]:focus,
     input[type="email"]:focus,
     input[type="password"]:focus,
@@ -81,8 +88,8 @@
   }
   .block-amani-global {
     padding: 15px;
-    width: 90%;
-    margin-left: 10%;
+    width: 95%;
+    margin-left: 5%;
     margin-top: 40px;
     background-color: #fff;
     -webkit-box-shadow: -2px 2px 3px 0px rgba(204, 204, 204, 1);
@@ -133,6 +140,9 @@
         }
       }
     }
+  }
+  .contact_form_map-processed  {
+    height: 350px !important;
   }
 }
 
