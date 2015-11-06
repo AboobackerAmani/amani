@@ -9,15 +9,22 @@
     margin: 0;
     @include breakpoint(768px) {
       @include zen-grid-item(8, 1);
+      padding-right: 15px;
     }
   }
   .sidebars {
     width: 100%;
     margin: 0;
+    
     @include breakpoint(768px) {
       @include zen-grid-item(4, 1);
       margin: 0;
       float: right;
+    }
+    
+    @media (min-width: $desktop) {
+      padding-left: 15px;
+      box-sizing: border-box;
     }
   }
   .region-sidebar-second {
@@ -41,8 +48,8 @@
       padding-bottom: 20px;
       margin: 0 0 20px 0;
       @include breakpoint(768px) {
-        width: 45%;
-        margin: 0 15px 20px;
+        width: 48%;
+        margin: 0 2% 20px;
         &.views-row-first,
         &:nth-child(2n+1) {
           margin-left: 0;
@@ -253,6 +260,7 @@
 .node-project.node-by-viewer {
   color: #5d5c5c;
   .file-image {
+    border-top: 3px solid $purple;
     width: 100%;
     max-height: 400px;
     overflow-y: hidden;
@@ -275,6 +283,10 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 25px 0 15px;
+    
+    @media (max-width: $breakpoint) {
+      text-align: center;
+    }
   }
   .view-activities {
     .view-content {
@@ -299,13 +311,20 @@
 //Other Projects and Campaigns block of node page
 .node-type-project {
   .sidebars {
-    padding: 0 15px;
+    padding: 0 0 0 15px;
+    
+    @media (max-width: $breakpoint) {
+      padding: 0 30px;
+    }
     box-sizing: border-box;
     margin-top: 20px;
     .region-sidebar-second {
       border: 1px solid $purple-primary;
       box-sizing: border-box;
       padding: 10px 15px 80px;
+      @media (max-width: $breakpoint) {
+        padding: 20px 30px;
+      }
     }
     .view-content {
       border-bottom: 0;
@@ -313,6 +332,10 @@
     h2.block-title {
       font-size: 18px;
       border-bottom: 3px solid $purple-primary;
+      @media (max-width: $breakpoint) {
+        font-size: 28px;
+        padding-bottom: 15px;
+      }
     }
     .views-field-title {
       padding: 15px 0;
@@ -328,8 +351,18 @@
     .views-row {
       border-bottom: 3px solid $purple-primary;
       padding-bottom: 20px;
+      
+      @media (max-width: $breakpoint) {
+        &.views-row-last {
+          border-bottom: none;
+        }
+      }
       .views-field-field-image {
         margin-bottom: 10px;
+        @media (max-width: $breakpoint) {
+          margin-left: -30px;
+          margin-right: -30px;
+        }
         img {
           width: 100%;
         }
@@ -351,6 +384,9 @@
       height: 400px;
       @media (max-width: $max-width) {
         height: auto;
+      }
+      @media (max-width: $breakpoint) {
+        margin: 0 -30px;
       }
       img {
         width: 100%;

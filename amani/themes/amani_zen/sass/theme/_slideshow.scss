@@ -78,6 +78,9 @@
       padding: 15px 30px;
       background-color: rgba(71,79,94,0.85);
     }
+    &:hover {
+      @include opacity(0.7);
+    }
   }
 
   .title a,
@@ -107,5 +110,20 @@
         margin: 0 0 0 40px;
       }
     }
+  }
+}
+
+//mobile 
+@media (max-width: $desktop) {
+  .slideshow {
+    max-height: 300px;
+    overflow: hidden;
+    
+    .button a {
+      top: 50%;
+    }
+  }
+  .views-slideshow-cycle-main-frame-row img {
+    max-width: none;
   }
 }

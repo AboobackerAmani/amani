@@ -118,8 +118,8 @@
      background-color: $purple;
      text-align: center;
      padding: 50px 0 70px;
-     margin: 0  -5%;
-     width: 110%;
+     margin: 0  -12%;
+     width: 124%;
      box-sizing: content-box;
    }
 }
@@ -157,6 +157,7 @@
   margin-left: 20px;
   font-family: $open-sans-condensed;
   min-height: 387px;
+  height: 336px;
   
   @media all and (max-width: 1090px) {
      //margin-left: 10px;
@@ -164,10 +165,10 @@
 
   @media all and (max-width: 920px) {
     background: #e5e5e5;
-    width: 110%;
+    width: 124%;
     padding-top: 50px;
     padding-bottom: 50px;
-    margin: 0 -5%;
+    margin: 0 -12%;
     box-sizing: content-box;
   }
 
@@ -175,7 +176,7 @@
     text-transform: uppercase;
     background: rgba(0,0,0,0.4);
     padding: 16px;
-    min-height: 387px;
+    min-height: 385px;
 
     @media all and (max-width: 990px) {
        //width: 280px;
@@ -236,10 +237,10 @@
 
   @media all and (max-width: 990px) {
     background: #5e5e5e;
-    width: 110%;
+    width: 124%;
     padding-top: 50px;
     padding-bottom: 70px;
-    margin: 0 -5%;
+    margin: 0 -12%;
     box-sizing: content-box;
   }
 
@@ -412,6 +413,7 @@
 
     @media all and (max-width: $breakpoint) {
       width: 100%;
+      margin-left: 0;
     }
 
     .views-field-field-image {
@@ -425,6 +427,12 @@
         width: 160px;
         height: 120px;
       }
+      
+      @media all and (max-width: 480px) {
+        width: 100%;
+        height: auto;
+        float: none;
+      }
 
       img {
         border: $almost-white solid 5px;
@@ -433,6 +441,11 @@
         @media all and (max-width: $breakpoint) {
           width: 150px;
           height: 110px;
+        }
+        @media all and (max-width: 480px) {
+          width: 100%;
+          height: auto;
+          margin-left: -10px;
         }
       }
 
@@ -445,6 +458,9 @@
         display: block;
         bottom: -6px;
         left: 0;
+        @media all and (max-width: 480px) {
+          display: none;
+        }
       }
       &:after {
         content: "";
@@ -455,6 +471,9 @@
         display: block;
         bottom: -6px;
         right: 0;
+        @media all and (max-width: 480px) {
+          display: none;
+        }
       }
     }
 
@@ -473,19 +492,13 @@
     }
 
     .views-field-title-1 a {
-      font-family: $open-sans-condensed;
-      display: block;
-      color: $purple-primary;
-      margin-left: 220px;
-      margin-top: 5px;
+      @include readmore;
+      margin-left: 225px;
       @media all and (max-width: $breakpoint) {
-        margin-left: 175px;
+        margin-left: 176px;
       }
-
-      &:before {
-        content: ">>";
-        font-family: $open-sans;
-        margin-right: 5px;
+      @media all and (max-width: 480px) {
+        margin-left: 0;
       }
     }
   }
