@@ -207,6 +207,8 @@
     }
 
     .view-content {
+      height: 310px;
+      overflow-y: auto;
 
       .views-row {
         color: white;
@@ -503,3 +505,38 @@
     }
   }
 }
+
+//Pagination
+.pager {
+  font-family: $open-sans-condensed;
+  text-transform: uppercase;
+  
+  li {
+    background-color: $purple-extra-light;
+    padding: 0 1em;
+    margin: 0 3px;
+    &.pager-first,
+    &.pager-previous,
+    &.pager-next,
+    &.pager-last {
+      background-color: transparent;
+    }
+    &.pager-current {
+      background-color: $purple-dark;
+    }
+  }
+  a {
+    color: $purple;
+  }
+  li.pager-current {
+    color: $white;
+    font-weight: normal;
+  }
+}
+
+.view-news-and-events .pager {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid $grey-clear;
+}
+
