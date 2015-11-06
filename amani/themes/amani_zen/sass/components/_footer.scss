@@ -132,13 +132,9 @@ footer .field-label {
 
 .region-footer .block.block-bean {
   display: inline-block;
-  margin: 0 20px 0 0;
+  margin: 10px 0 0 40px;
   float: right;
  
-}
-
-footer #block-bean-img1 {
-  margin-top: 16px;
 }
 
 .peacegeeks-logo {
@@ -189,10 +185,6 @@ footer #block-bean-img1 {
 //social media 
 #footer {
   div[id*="block-menu-menu-social-media"] {
-    @media all and (max-width: 600px) {
-      float: left;
-      margin-bottom: 10px;
-    }
     ul.menu li {
       display: block;
       float: none;
@@ -206,6 +198,61 @@ footer #block-bean-img1 {
     }
     .social-media-twitter:before {
       content: "\e804";
+    }
+    
+    @media all and (max-width: 640px) {
+      width: 50%;
+      float: right;
+      text-align: right;
+      
+      ul.menu {margin-bottom: 0 !important;}
+      
+      ul.menu li {
+        display: inline-block;
+        text-align: right;
+        margin: 0;
+        &.social-media-twitter {
+          margin: 0 0 0 30px;
+        }
+      }
+    }
+  }
+  
+  #block-bean-img2 {
+    margin-left: 0;
+  }
+  
+  @media all and (max-width: 640px) {
+    div[id*="block-menu-menu-amani-main-menu"] {
+      ul.menu li {
+        margin-right: 20px;
+      }
+    }
+    .block-bean {
+      margin-left: 30px;
+      
+      img {
+        height: 50px;
+        width: auto;
+      }
+    }
+  }
+  
+  @media all and (max-width: 480px) {
+    div[id*="block-menu-menu-amani-main-menu"] {
+      width: 20%;
+    }
+    
+    div[id*="block-menu-menu-social-media"] {
+      width: 70%;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      ul.menu li.social-media-twitter {
+        margin: 0 0 0 10px;
+      }
+    }
+    .block-bean {
+      margin-left: 15px;
     }
   }
 }
