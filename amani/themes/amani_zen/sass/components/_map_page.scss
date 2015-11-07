@@ -43,7 +43,7 @@
     right: 0;
     left: 0;
     margin: 0 auto;
-    top: -700px;
+    top: -703px;
     @include breakpoint(768px) {
        right: 0;
        left: auto;
@@ -73,6 +73,10 @@
   #block-incident-map-field-incident-severity {
     top: -485px;
     padding-top: 0;
+    
+    h3 {
+      padding-top: 15px;
+    }
   }
   
   //Chart bar
@@ -125,6 +129,7 @@
       
       @media (max-width:480px) {
         width: 100%;
+        margin: 12px 0;
       }
     }
     
