@@ -355,7 +355,7 @@ div.breadcrumb {
 				padding:1em 0 1em 0;
 				display:block;
 				font-size:1.6em;
-				height:auto;
+				height:auto !important;
 				float:none;
 				text-indent:1em;
 				&:after {
@@ -381,7 +381,7 @@ div.breadcrumb {
 						display:block;
 						float:right;
 						position:relative;
-						margin-top:26px;
+						margin-top:0;
 						padding-right:20px;
 						width:12px;
 						height:24px;
@@ -912,7 +912,7 @@ div.breadcrumb {
 		h1#page-title {display:block;}
 		
 		h2 {
-			font-size:3em;
+			font-size:2.2em;
 			line-height:1.4em;
 			color:$blue;
 			font-weight:300;

@@ -8674,7 +8674,7 @@ form.comment-form #edit-preview {
     padding: 1em 0 1em 0;
     display: block;
     font-size: 1.6em;
-    height: auto;
+    height: auto !important;
     float: none;
     text-indent: 1em;
   }
@@ -8700,7 +8700,7 @@ form.comment-form #edit-preview {
     display: block;
     float: right;
     position: relative;
-    margin-top: 26px;
+    margin-top: 0;
     padding-right: 20px;
     width: 12px;
     height: 24px;
@@ -9198,7 +9198,7 @@ form.comment-form #edit-preview {
   }
   /* line 914, ../sass/mobile/_layout.scss */
   body.page-team h2 {
-    font-size: 3em;
+    font-size: 2.2em;
     line-height: 1.4em;
     color: #59C2ED;
     font-weight: 300;
@@ -11152,7 +11152,7 @@ form.comment-form #edit-preview {
   /* line 12, ../sass/mobile/_menus.scss */
   #mobile-toggle {
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 20px;
     display: block;
     text-indent: 100%;
