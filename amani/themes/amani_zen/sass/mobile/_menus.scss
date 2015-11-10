@@ -119,8 +119,9 @@ html.mm-opened .mm-page {
       		background:$grey;
       		width:100%;
       		display:inline-block;
-      		padding:4px 0;
-      		text-indent:6px;
+      		padding:12px 0;
+      		text-indent:8px;
+      		font-size:16px;
       	}
       }
       
@@ -141,7 +142,7 @@ html.mm-opened .mm-page {
 			  }
 			  
 			a {
-			  @include font-size(14px);
+			  font-size:16px;
 			  font-weight: 200;
 			  letter-spacing: 1px;
 			  line-height: 14px;
@@ -151,7 +152,7 @@ html.mm-opened .mm-page {
 			  width:100%;
 			  border-bottom: 1px solid $soft-blue;
 			  background-color: $white;
-			  padding: 8px 0 5px;
+			  padding:12px 0;
 			  margin: 0;
 			  text-align: left;
 			  text-indent:20px;
