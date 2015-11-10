@@ -49,6 +49,9 @@ h1#page-title {
 .mm-page {
 	background:white !important;
 	opacity:1;
+	position:absolute;
+	width:100%;
+	overflow-x:hidden;
 }
 
 html.mm-opened .mm-page {
