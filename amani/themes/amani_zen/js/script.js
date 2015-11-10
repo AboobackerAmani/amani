@@ -674,7 +674,16 @@ Drupal.behaviors.paragraphs_adjustments = {
 
 	$('#block-menu-menu-social-media').once().clone().insertAfter('#footer ul.menu');
 	
+
+// Mobile menu toggle 
+
+	$('#block-system-main-menu').hide();
 	
+	$('#mobile-toggle').click(function() {
+	
+		$('#block-system-main-menu').slideToggle("slow");
+	
+	});	
 
 // Show/hide submenu items on hover 
 

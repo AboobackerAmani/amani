@@ -22,9 +22,10 @@
 			.paragraphs-item-link-block-grey {
 				margin-top:0 !important;
 				a {
-					width:90%;
+					width:100%;
 					background:$orange;
-					padding:1em;
+					padding:1em 0;
+					text-indent:1em;
 					height:auto !important;
 					margin-top:0 !important;
 					line-height:1.4em;
@@ -50,8 +51,8 @@
 			.paragraphs-item-link-block-grey {
 				margin-top:0 !important;
 				a {
-					width:90%;
-					height:70px !important;
+					width:100%;
+					height:auto !important;
 					margin-top:0 !important;
 					line-height:1.4em;
 					&.shorterlinkbox:after {
@@ -130,10 +131,10 @@
 				color:white;
 				text-align:left;
 				padding-top:.8em;
-				padding-left:1em;
+				text-indent:1em;
 				background:$blue;
 				height:100px !important;
-				width:80%;
+				width:100%;
 				margin-bottom:1.8em;
 				&.darkbackground {
 					background:$grey;
@@ -145,7 +146,7 @@
 					float:right;
 					position:relative;
 					margin-top:100px;
-					margin-right:-10px;
+					margin-right:20px;
 					width:24px;
 					height:12px;
 					background:url(../images/icons/down-arrow.png) top left no-repeat;

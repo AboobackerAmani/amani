@@ -22,6 +22,22 @@
   background: url('../images/mobile-menu-toggle.png') no-repeat center center;
   display: block;
   z-index: 999;
+  cursor:pointer;
+}
+
+h1#page-title {
+	font-weight: 300;
+    font-size: 3em;
+    line-height: 1.4em;
+    margin-top: 0;
+    text-transform: none;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    background: $blue;
+    color:white;
+    display:block;
+    padding:6px 0;
+    text-indent:10px;
 }
 
 /* Sliding mobile menu */
@@ -82,27 +98,65 @@ html.mm-opened .mm-page {
 
 
   #block-system-main-menu {
-  	display:none;
+  	display:block;
+  	padding-top:1em;
     ul.menu {
-    	display:none;
-      margin-top: 5px;
-      margin-bottom: 0;
-      border-top: 2px solid $grey;
+    	display:block;
+		margin-top: 5px;
+		margin-bottom: 0;
+		
+		> ul {
+			display:block;
+			margin-top: 5px;
+			margin-bottom: 0;
+		}
+      
+      > li {
+      	a {
+      		text-transform:uppercase;
+      		color:white;
+      		background:$grey;
+      		width:100%;
+      		display:inline-block;
+      		padding:4px 0;
+      		text-indent:6px;
+      	}
+      }
       
       li {
-		  border-bottom: 1px solid $soft-blue;
-		  background-color: $white;
-		  padding: 8px 0 5px;
-		  margin: 0;
-		  text-align: center;
+		 
+		  text-align: left;
 		}
-		a {
-		  @include font-size(14px);
-		  font-weight: 200;
-		  letter-spacing: 1px;
-		  line-height: 14px;
-		  color: $grey;
-		  text-transform: uppercase;
+		
+		ul li {
+		
+			&.last {
+			
+				margin-bottom:26px;
+			
+				a {
+			  		border-bottom:none;
+			  	}
+			  }
+			  
+			a {
+			  @include font-size(14px);
+			  font-weight: 200;
+			  letter-spacing: 1px;
+			  line-height: 14px;
+			  color: $grey;
+			  text-transform: uppercase;
+			  display:inline-block;
+			  width:100%;
+			  border-bottom: 1px solid $soft-blue;
+			  background-color: $white;
+			  padding: 8px 0 5px;
+			  margin: 0;
+			  text-align: left;
+			  text-indent:20px;
+			  
+			  
+			}
 		}
     }
     
