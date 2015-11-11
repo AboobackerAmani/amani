@@ -1,0 +1,209 @@
+/*
+  Events and News Landing page, node page
+*/
+
+
+.page-news-and-events {
+  #content {
+    width: 100%;
+    margin: 0;
+    @include breakpoint(768px) {
+      @include zen-grid-item(8, 1);
+      padding-right: 0;
+    }
+    .views-row {
+      width: 100%;
+      flex-grow: 0;
+      -webkit-flex-grow: 0;
+      padding-bottom: 20px;
+      margin: 0 0 20px 0;
+      @include breakpoint($breakpoint) {
+        width: 47.5%;
+      }
+      &.views-row-even {
+        margin-left: 1.75%;
+      }
+      &.views-row-odd {
+        margin-right: 1.75%;
+      }
+    }
+    
+    @media (max-width: $breakpoint) {
+      .views-row.views-row-even,
+      .views-row.views-row-odd {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+  .sidebars {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    @include breakpoint($breakpoint) {
+      @include zen-grid-item(4, 1);
+      margin: 0;
+      float: right;
+    }
+
+    @media (min-width: $desktop) {
+      padding-left: 15px;
+      box-sizing: border-box;
+    }
+  }
+  .region-sidebar-second {
+    margin: 0;
+    width: 100%;
+  }
+  
+  .view-news-and-events {
+   
+    .views-row .views-field-field-image {
+      float: none;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+      height: auto;
+      
+      @media (min-width: $breakpoint) and (max: 420px) {
+        height: 250px;
+        overflow-y: hidden;
+      }
+      &:before,
+      &:after {
+        display: none;
+      }
+      
+      img {
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        height: auto;
+        margin: 0;
+      }
+    }
+    
+    .views-field-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+      
+       a {
+        font-size: 28px;
+        line-height: 1.2;
+      }
+    }
+    
+    .views-field-title-1 {
+      text-align: left;
+      a {margin-left: 0;}
+    }
+  }
+  
+  
+  //Event Calendar block on tight sidebar
+  #block-views-calendar-of-events-block-3 {
+    background: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0 0 30px 0;
+    width: 100%;
+    
+    .view-calendar-of-events {
+      background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+      width: 100%;
+
+      .calendar-calendar th {
+        background: rgba(206,155,192, 0.4) none repeat scroll 0 0;
+      }
+      
+      .view-header {letter-spacing: 1.5px;}
+      
+      .view-header:before { 
+        background: none;
+        content: "\e900";
+        font-family: amani-icons;
+        margin-right: 0;
+      }
+            
+      .calendar-calendar .month-view .full td .inner div.day {
+        width: 26.5px;
+      }
+    }
+  } 
+  
+} 
+
+
+//Event List block on right sidebar
+#block-views-calendar-of-events-list {
+  background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+  padding: 16px;
+  margin: 0 0 30px 0;
+  
+  .block-title {
+    color: white;
+    font-family: "Open Sans Condensed",sans-serif;
+    font-size: 1.5em;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+    font-weight: normal;
+    border-bottom: 1px solid #fff;
+    &:before {
+      content: "\e900"; 
+      font-family: amani-icons;
+      margin-right: 5px;
+      display: inline-block;
+      height: 24px;
+      margin-bottom: 5px; 
+      vertical-align: middle;
+      width: 24px;
+    }
+  }
+  
+  table {
+    margin-top: 0;
+  }
+  
+  tr.even, tr.odd {
+    background-color: transparent;
+    margin-bottom: 10px;  
+    
+    td {
+      display: block;
+      width: 100%;
+      color: #fff;
+      &.views-field-field-event-date {
+        margin-top: 10px;
+      } 
+      &.views-field-title {
+        margin-bottom: 10px;
+        a {
+          color: $purple-primary;
+        }
+      }
+    }
+    td.views-field-title a {
+      color: $purple-primary;
+      text-transform: none;
+    }   
+  } 
+}
+
+
+//mobile 
+// 
+// @media (min-width: $breakpoint) and (max-width: $desktop) {
+//   .page-news-and-events {
+//     #content, #navigation, .region-header, .region-sidebar-first, .region-sidebar-second, footer {
+//       padding: 0;
+//     }
+//     
+//     #page {
+//       padding-left: 15px;
+//       padding-right: 15px;
+//     }
+//   }
+// }

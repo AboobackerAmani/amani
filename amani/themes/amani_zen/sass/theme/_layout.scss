@@ -16,7 +16,7 @@ body {
 #main {
   min-height: 300px;
   padding-bottom: 20px;
-  padding-top: 2em;
+  padding-top: 1.2em;
 }
 
 
@@ -29,7 +29,7 @@ body {
 //Page header
 h1.title {
   font-family: $open-sans-condensed;
-  font-size: 40px;
+  font-size: 28px;
   font-weight: $fw-semi-bold;
   letter-spacing: 1px;
   line-height: 1;
@@ -37,5 +37,10 @@ h1.title {
   text-transform: uppercase;
   text-align: center;
   margin: 1em 0;
+  padding-bottom: 20px;
+  
+  @include breakpoint($breakpoint) {
+    font-size: 40px;
+  }
 }
 

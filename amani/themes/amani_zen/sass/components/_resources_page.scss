@@ -93,9 +93,10 @@
     width: 100%;
     margin: 0;
     clear: both;
-    @include breakpoint(768px) {
+    @include breakpoint($breakpoint) {
       @include zen-grid-item(9, 1);
       clear: none;
+      margin-top: -12px;
     }
 
     .views-row {
