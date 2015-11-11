@@ -295,6 +295,7 @@
       .month-view .full td .inner div.day {
         width: 28px;
         margin-top: auto;
+        padding-top: 20px;
       }
 
       tr, td {
@@ -332,6 +333,10 @@
           .day {
             text-align: right;
           }
+          
+          a {
+            color: $purple-primary;
+          }
         }
       }
     }
@@ -353,7 +358,7 @@
 
           .month {
             color: #ce9bc0;
-            font-size: 1.5em;
+            //font-size: 1.5em;
             line-height: 40px;
           }
         }
@@ -378,6 +383,13 @@
     }
   }
 }
+.view-calendar-of-events {
+  .single-day,
+  .multi-day {
+    display: none;
+  }
+}
+
 
 //News list
 #block-views-news-and-events-block-1 {
@@ -434,6 +446,7 @@
         width: 100%;
         height: auto;
         float: none;
+        margin-right: 0;
       }
 
       img {
@@ -447,7 +460,7 @@
         @media all and (max-width: 480px) {
           width: 100%;
           height: auto;
-          margin-left: -10px;
+          margin-left: -5x;
         }
       }
 
@@ -481,6 +494,7 @@
 
     .views-field-body {
       display: table;
+      margin-top: 15px;
     }
 
     .views-field-title {
@@ -491,6 +505,8 @@
       font-family: $open-sans-condensed;
       color: $purple-primary;
       font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
     }
 
     .views-field-title-1 a {
@@ -512,7 +528,7 @@
   text-transform: uppercase;
   
   li {
-    background-color: $purple-extra-light;
+    background-color: $melanie;
     padding: 0 1em;
     margin: 0 3px;
     &.pager-first,
@@ -522,7 +538,7 @@
       background-color: transparent;
     }
     &.pager-current {
-      background-color: $purple-dark;
+      background-color: $voodoo-3;
     }
   }
   a {

@@ -91,8 +91,6 @@
       }
     }
     .views-field-field-image {
-      height: 250px;
-      overflow-y: hidden;
       img {
         width: 100%;
         height: auto;
@@ -105,7 +103,7 @@
     }
     .views-field-title-1 {
       text-align: center;
-      @include breakpoint(768px) {
+      @include breakpoint($breakpoint) {
         text-align: right;
       }
 
@@ -121,7 +119,7 @@
         &:hover {
           background: $purple;
         }
-        @include breakpoint(768px) {
+        @include breakpoint($breakpoint) {
           padding: 0;
           background: none;
           text-transform: none;
@@ -150,7 +148,7 @@
       letter-spacing: 1px;
       line-height: 1.5;
       color: $purple-alt;
-      @include breakpoint(768px) {
+      @include breakpoint($breakpoint) {
         margin-top: 35px;
         padding: 0;
         text-align: left;
@@ -170,7 +168,7 @@
       .views-field-title {
         margin: 0 0 15px;
         font-size: 20px;
-        @include breakpoint(768px) {
+        @include breakpoint($breakpoint) {
           font-size: 16px;
         }
       }
@@ -209,7 +207,7 @@
         &:hover {
           background: $purple;
         }
-        @include breakpoint(768px) {
+        @include breakpoint($breakpoint) {
           width: auto;
           padding: 0;
           margin: 0;
