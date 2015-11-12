@@ -32,11 +32,11 @@ function amani_block_and_views_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
-        'views-calendar_of_events-calendar' => array(
+        'views-calendar_of_events-block_3' => array(
           'module' => 'views',
-          'delta' => 'calendar_of_events-calendar',
+          'delta' => 'calendar_of_events-block_3',
           'region' => 'sidebar_second',
-          'weight' => '-9',
+          'weight' => '-7',
         ),
       ),
     ),
