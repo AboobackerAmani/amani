@@ -23,9 +23,7 @@ function amani_get_involved_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array(
-    
-  );
+  $context->reactions = array();
   $context->condition_mode = 0;
 
   // Translatables

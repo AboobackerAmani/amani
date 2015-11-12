@@ -104,6 +104,9 @@ function amani_about_strongarm() {
         'path' => array(
           'weight' => '6',
         ),
+        'language' => array(
+          'weight' => '0',
+        ),
       ),
       'display' => array(
         'language' => array(
