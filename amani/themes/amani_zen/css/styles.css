@@ -4849,20 +4849,41 @@ tr.selected td {
   padding: 0 0 50px;
   clear: both;
 }
-/* line 18, ../sass/components/_take-action_page.scss */
+@media (max-width: 480px) {
+  /* line 14, ../sass/components/_take-action_page.scss */
+  .page-get-involved .view-content .views-row {
+    text-align: center;
+  }
+}
+/* line 21, ../sass/components/_take-action_page.scss */
 .page-get-involved .view-content .views-row .views-field-field-image {
   display: inline-block;
   float: left;
   width: 100px;
   padding-bottom: 50px;
 }
-/* line 24, ../sass/components/_take-action_page.scss */
+@media (max-width: 480px) {
+  /* line 21, ../sass/components/_take-action_page.scss */
+  .page-get-involved .view-content .views-row .views-field-field-image {
+    float: none;
+    width: 70px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+}
+/* line 34, ../sass/components/_take-action_page.scss */
 .page-get-involved .view-content .views-row .views-field-field-image img {
   width: auto;
-  height: 69px;
+  height: 70px;
   margin-right: 20px;
 }
-/* line 31, ../sass/components/_take-action_page.scss */
+@media (max-width: 480px) {
+  /* line 34, ../sass/components/_take-action_page.scss */
+  .page-get-involved .view-content .views-row .views-field-field-image img {
+    margin-right: 0;
+  }
+}
+/* line 44, ../sass/components/_take-action_page.scss */
 .page-get-involved .view-content .views-row .views-field-title a {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 22px;
@@ -4871,28 +4892,34 @@ tr.selected td {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-/* line 40, ../sass/components/_take-action_page.scss */
+/* line 53, ../sass/components/_take-action_page.scss */
 .page-get-involved .view-content .views-row .views-field-body {
   margin-top: 10px;
   margin-left: 100px;
 }
-/* line 48, ../sass/components/_take-action_page.scss */
+@media (max-width: 480px) {
+  /* line 53, ../sass/components/_take-action_page.scss */
+  .page-get-involved .view-content .views-row .views-field-body {
+    margin-left: 0;
+  }
+}
+/* line 65, ../sass/components/_take-action_page.scss */
 .page-get-involved .view-get-involved {
   margin-top: 20px;
 }
 
-/* line 55, ../sass/components/_take-action_page.scss */
+/* line 72, ../sass/components/_take-action_page.scss */
 .node-get-involved {
   width: 100%;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
-  /* line 55, ../sass/components/_take-action_page.scss */
+  /* line 72, ../sass/components/_take-action_page.scss */
   .node-get-involved {
     width: 80%;
   }
 }
-/* line 61, ../sass/components/_take-action_page.scss */
+/* line 78, ../sass/components/_take-action_page.scss */
 .node-get-involved .field-name-field-image {
   float: left;
   width: 144px;
@@ -4900,14 +4927,14 @@ tr.selected td {
   margin-right: 30px;
 }
 @media (max-width: 480px) {
-  /* line 61, ../sass/components/_take-action_page.scss */
+  /* line 78, ../sass/components/_take-action_page.scss */
   .node-get-involved .field-name-field-image {
     float: none;
     text-align: center;
     margin: 0 auto 20px;
   }
 }
-/* line 74, ../sass/components/_take-action_page.scss */
+/* line 91, ../sass/components/_take-action_page.scss */
 .node-get-involved .field-name-body {
   display: table;
 }
