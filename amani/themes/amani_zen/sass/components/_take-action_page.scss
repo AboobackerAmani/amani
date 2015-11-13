@@ -5,9 +5,28 @@
 
 .page-get-involved {
   .view-content {
+    width: 100%;
+    margin: 0 auto;
+    @include breakpoint($breakpoint) {
+      width: 80%;
+    }
+   
     .views-row {
-      padding-left: 100px;
-      padding-bottom: 50px;
+      padding: 0 0 50px;
+      clear: both;
+      
+      .views-field-field-image {
+        display: inline-block;
+        float: left;
+        width: 100px;
+        padding-bottom: 50px;
+        
+        img {
+          width: auto;
+          height:69px;
+          margin-right: 20px;
+        }
+      }
       
       .views-field-title a {
         font-family: $open-sans-condensed;
@@ -20,50 +39,36 @@
       
       .views-field-body {
         margin-top: 10px;
+        margin-left: 100px;
       }
     }
-    
-    img {
-      display: none;
-    }
+     
   }
   
   .view-get-involved {
     margin-top: 20px;
   }
-  
-  //Make a Suggestion
-  .views-row.views-row-first {
-    background: url("../images/icons/icn-involved-suggestion.png") no-repeat 0 0;
-    background-size: 67px 68px;
-  }
-  
-  //Report an issue
-  .views-row:nth-child(2) {
-    background: url("../images/icons/icn-involved-report.png") no-repeat 10px 0;
-    background-size: 55px 67px;
-  }
-  
-  //Volunteer with CEPO
-  .views-row:nth-child(3) {
-    background: url("../images/icons/icn-involved-volunteer.png") no-repeat 15px 0;
-    background-size: 42px 69px;
-  }
-  
-  //Donate to CEPO
-  .views-row.views-row-last {
-    background: url("../images/icons/icn-involved-donate.png") no-repeat 7px 0;
-    background-size: 63px 70px;
-  }
-  
 }
 
 
 //Node page
 .node-get-involved {
+  width: 100%;
+  margin: 0 auto;
+  @include breakpoint($breakpoint) {
+    width: 80%;
+  }
   .field-name-field-image {
     float: left;
-    margin-right: 25px;
+    width: 144px;
+    height: auto;
+    margin-right: 30px;
+    
+    @media (max-width: 480px) {
+      float: none;
+      text-align: center;
+      margin: 0 auto 20px;
+    }
   }
   
   .field-name-body {

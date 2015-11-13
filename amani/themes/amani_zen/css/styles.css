@@ -4833,12 +4833,36 @@ tr.selected td {
 /*
   Take action landing page and node page
 */
-/* line 8, ../sass/components/_take-action_page.scss */
+/* line 7, ../sass/components/_take-action_page.scss */
+.page-get-involved .view-content {
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  /* line 7, ../sass/components/_take-action_page.scss */
+  .page-get-involved .view-content {
+    width: 80%;
+  }
+}
+/* line 14, ../sass/components/_take-action_page.scss */
 .page-get-involved .view-content .views-row {
-  padding-left: 100px;
+  padding: 0 0 50px;
+  clear: both;
+}
+/* line 18, ../sass/components/_take-action_page.scss */
+.page-get-involved .view-content .views-row .views-field-field-image {
+  display: inline-block;
+  float: left;
+  width: 100px;
   padding-bottom: 50px;
 }
-/* line 12, ../sass/components/_take-action_page.scss */
+/* line 24, ../sass/components/_take-action_page.scss */
+.page-get-involved .view-content .views-row .views-field-field-image img {
+  width: auto;
+  height: 69px;
+  margin-right: 20px;
+}
+/* line 31, ../sass/components/_take-action_page.scss */
 .page-get-involved .view-content .views-row .views-field-title a {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 22px;
@@ -4847,45 +4871,43 @@ tr.selected td {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-/* line 21, ../sass/components/_take-action_page.scss */
+/* line 40, ../sass/components/_take-action_page.scss */
 .page-get-involved .view-content .views-row .views-field-body {
   margin-top: 10px;
+  margin-left: 100px;
 }
-/* line 26, ../sass/components/_take-action_page.scss */
-.page-get-involved .view-content img {
-  display: none;
-}
-/* line 31, ../sass/components/_take-action_page.scss */
+/* line 48, ../sass/components/_take-action_page.scss */
 .page-get-involved .view-get-involved {
   margin-top: 20px;
 }
-/* line 36, ../sass/components/_take-action_page.scss */
-.page-get-involved .views-row.views-row-first {
-  background: url("../images/icons/icn-involved-suggestion.png") no-repeat 0 0;
-  background-size: 67px 68px;
-}
-/* line 42, ../sass/components/_take-action_page.scss */
-.page-get-involved .views-row:nth-child(2) {
-  background: url("../images/icons/icn-involved-report.png") no-repeat 10px 0;
-  background-size: 55px 67px;
-}
-/* line 48, ../sass/components/_take-action_page.scss */
-.page-get-involved .views-row:nth-child(3) {
-  background: url("../images/icons/icn-involved-volunteer.png") no-repeat 15px 0;
-  background-size: 42px 69px;
-}
-/* line 54, ../sass/components/_take-action_page.scss */
-.page-get-involved .views-row.views-row-last {
-  background: url("../images/icons/icn-involved-donate.png") no-repeat 7px 0;
-  background-size: 63px 70px;
-}
 
-/* line 64, ../sass/components/_take-action_page.scss */
+/* line 55, ../sass/components/_take-action_page.scss */
+.node-get-involved {
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  /* line 55, ../sass/components/_take-action_page.scss */
+  .node-get-involved {
+    width: 80%;
+  }
+}
+/* line 61, ../sass/components/_take-action_page.scss */
 .node-get-involved .field-name-field-image {
   float: left;
-  margin-right: 25px;
+  width: 144px;
+  height: auto;
+  margin-right: 30px;
 }
-/* line 69, ../sass/components/_take-action_page.scss */
+@media (max-width: 480px) {
+  /* line 61, ../sass/components/_take-action_page.scss */
+  .node-get-involved .field-name-field-image {
+    float: none;
+    text-align: center;
+    margin: 0 auto 20px;
+  }
+}
+/* line 74, ../sass/components/_take-action_page.scss */
 .node-get-involved .field-name-body {
   display: table;
 }
