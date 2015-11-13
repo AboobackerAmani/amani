@@ -14,6 +14,9 @@
     .views-row {
       padding: 0 0 50px;
       clear: both;
+      @media (max-width: 480px) {
+        text-align: center;
+      }
       
       .views-field-field-image {
         display: inline-block;
@@ -21,10 +24,20 @@
         width: 100px;
         padding-bottom: 50px;
         
+        @media (max-width: 480px) {
+          float: none;
+          width: 70px;
+          margin: 0 auto;
+          padding-bottom: 20px;
+        }
+        
         img {
           width: auto;
-          height:69px;
+          height:70px;
           margin-right: 20px;
+          @media (max-width: 480px) {
+           margin-right: 0;
+          }
         }
       }
       
@@ -40,6 +53,10 @@
       .views-field-body {
         margin-top: 10px;
         margin-left: 100px;
+        
+        @media (max-width: 480px) {
+          margin-left: 0;
+        }
       }
     }
      
