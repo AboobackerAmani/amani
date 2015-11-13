@@ -289,7 +289,7 @@ function amani_get_involved_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'imagefield_crop',
+        'module' => 'image',
         'settings' => array(
           'collapsible' => '2',
           'croparea' => '500x500',
@@ -299,7 +299,7 @@ function amani_get_involved_field_default_fields() {
           'progress_indicator' => 'throbber',
           'resolution' => '207x160',
         ),
-        'type' => 'imagefield_crop_widget',
+        'type' => 'image_image',
         'weight' => '1',
       ),
     ),
