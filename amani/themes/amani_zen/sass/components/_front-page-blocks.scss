@@ -528,8 +528,7 @@
   text-transform: uppercase;
   
   li {
-    background-color: $melanie;
-    padding: 0 1em;
+    padding: 0;
     margin: 0 3px;
     &.pager-first,
     &.pager-previous,
@@ -539,10 +538,15 @@
     }
     &.pager-current {
       background-color: $voodoo-3;
+      padding: 0 1em;
     }
   }
   a {
     color: $purple;
+  }
+  li.pager-item a {
+    background-color: $melanie;
+    padding: 0 1em;
   }
   li.pager-current {
     color: $white;
@@ -550,6 +554,47 @@
   }
 }
 
+//mobile version
+@media (max-width: 640px) {
+  .pager {
+    li.pager-item a,
+    li.pager-current {
+      padding: 0 0.5em;
+    }
+    
+    li.pager-first a,
+    li.pager-previous a,
+    li.pager-next a,
+    li.pager-last a {
+      position: relative;
+      display: inline-block;
+      font-size: 0;
+      height: 20px;
+      width: 15px;
+      vertical-align: top;
+      
+      &:before {
+        content: "\f100";
+        font-family: amani-icons;
+        font-size: 18px;
+        width: 15px;
+        height: 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    li.pager-previous a:before {
+      content: "\f104";
+    }
+    li.pager-next a:before {
+      content: "\f105";
+    }
+    li.pager-last a:before {
+      content: "\f101";
+    }
+  }
+}
 .view-news-and-events .pager {
   margin-top: 20px;
   padding-top: 20px;
