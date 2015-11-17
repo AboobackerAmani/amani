@@ -1282,9 +1282,13 @@ footer {
 .page-contact .contact_form_map-processed {
   height: 350px !important;
 }
+/* line 149, ../sass/components/_contact_page.scss */
+.page-contact span.form-required {
+  color: #DBA6C6;
+}
 
 @media all and (max-width: 768px) {
-  /* line 151, ../sass/components/_contact_page.scss */
+  /* line 154, ../sass/components/_contact_page.scss */
   .sidebar-second.page-contact #content {
     width: 100%;
     margin: 0 auto;
@@ -3832,7 +3836,7 @@ tr.selected td {
 /* line 809, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1440018546');
+  background-image: url('../images/progress.gif?1443462806');
 }
 
 @media all and (max-width: 768px) {
@@ -5324,7 +5328,7 @@ tr.selected td {
 }
 /* line 61, ../sass/_mixins.scss */
 .form-submit:hover, .form-submit:focus {
-  background-color: #5a595c;
+  background-color: #5b595c;
 }
 
 /* line 12, ../sass/theme/_layout.scss */
