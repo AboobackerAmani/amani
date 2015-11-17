@@ -535,6 +535,11 @@
     &.pager-next,
     &.pager-last {
       background-color: transparent;
+      padding: 0 1em;
+      
+      @media (max-width: 480px) {
+        padding: 0;
+      }
     }
     &.pager-current {
       background-color: $voodoo-3;
