@@ -28,11 +28,12 @@
       }
     }
     &:nth-child(2n+1) {
-      float: left;
-      clear: left;
+      float: right;
+      clear: right;
     }
     &:nth-child(2n) {
-      float: right;
+      float: left;
+      clear: left;
     }
     
     .views-field-field-image {
@@ -90,23 +91,23 @@
       }
     }
   }
-  
-  .views-row-2  {
-    width: 100%;
-    margin-bottom: 2em;
-    
-    .views-field-title {
-      margin-bottom: 30px;
-    }
-    
-    .views-field-field-image {
-      width: 48%;
-      float: left; 
-      @media (max-width: $breakpoint) {
-        width: 100%;
-      }
-      margin-right: 30px;
-      img {width: 100%;}
-    }
-  }
+    // 
+    // .views-row-2  {
+    //   width: 100%;
+    //   margin-bottom: 2em;
+    //   
+    //   .views-field-title {
+    //     margin-bottom: 30px;
+    //   }
+    //   
+    //   .views-field-field-image {
+    //     width: 48%;
+    //     float: left; 
+    //     @media (max-width: $breakpoint) {
+    //       width: 100%;
+    //     }
+    //     margin-right: 30px;
+    //     img {width: 100%;}
+    //   }
+    // }
 }
