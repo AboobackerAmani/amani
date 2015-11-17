@@ -2188,34 +2188,41 @@ footer .field-label {
 /* line 533, ../sass/components/_front-page-blocks.scss */
 .pager li.pager-first, .pager li.pager-previous, .pager li.pager-next, .pager li.pager-last {
   background-color: transparent;
+  padding: 0 1em;
 }
-/* line 539, ../sass/components/_front-page-blocks.scss */
+@media (max-width: 480px) {
+  /* line 533, ../sass/components/_front-page-blocks.scss */
+  .pager li.pager-first, .pager li.pager-previous, .pager li.pager-next, .pager li.pager-last {
+    padding: 0;
+  }
+}
+/* line 544, ../sass/components/_front-page-blocks.scss */
 .pager li.pager-current {
   background-color: #532f57;
   padding: 0 1em;
 }
-/* line 544, ../sass/components/_front-page-blocks.scss */
+/* line 549, ../sass/components/_front-page-blocks.scss */
 .pager a {
   color: #784580;
 }
-/* line 547, ../sass/components/_front-page-blocks.scss */
+/* line 552, ../sass/components/_front-page-blocks.scss */
 .pager li.pager-item a {
   background-color: #dba6c6;
   padding: 0 1em;
 }
-/* line 551, ../sass/components/_front-page-blocks.scss */
+/* line 556, ../sass/components/_front-page-blocks.scss */
 .pager li.pager-current {
   color: #fff;
   font-weight: normal;
 }
 
 @media (max-width: 640px) {
-  /* line 560, ../sass/components/_front-page-blocks.scss */
+  /* line 565, ../sass/components/_front-page-blocks.scss */
   .pager li.pager-item a,
   .pager li.pager-current {
     padding: 0 0.5em;
   }
-  /* line 565, ../sass/components/_front-page-blocks.scss */
+  /* line 570, ../sass/components/_front-page-blocks.scss */
   .pager li.pager-first a,
   .pager li.pager-previous a,
   .pager li.pager-next a,
@@ -2227,7 +2234,7 @@ footer .field-label {
     width: 15px;
     vertical-align: top;
   }
-  /* line 576, ../sass/components/_front-page-blocks.scss */
+  /* line 581, ../sass/components/_front-page-blocks.scss */
   .pager li.pager-first a:before,
   .pager li.pager-previous a:before,
   .pager li.pager-next a:before,
@@ -2241,20 +2248,20 @@ footer .field-label {
     left: 0;
     top: 0;
   }
-  /* line 587, ../sass/components/_front-page-blocks.scss */
+  /* line 592, ../sass/components/_front-page-blocks.scss */
   .pager li.pager-previous a:before {
     content: "\f104";
   }
-  /* line 590, ../sass/components/_front-page-blocks.scss */
+  /* line 595, ../sass/components/_front-page-blocks.scss */
   .pager li.pager-next a:before {
     content: "\f105";
   }
-  /* line 593, ../sass/components/_front-page-blocks.scss */
+  /* line 598, ../sass/components/_front-page-blocks.scss */
   .pager li.pager-last a:before {
     content: "\f101";
   }
 }
-/* line 598, ../sass/components/_front-page-blocks.scss */
+/* line 603, ../sass/components/_front-page-blocks.scss */
 .view-news-and-events .pager {
   margin-top: 20px;
   padding-top: 20px;
