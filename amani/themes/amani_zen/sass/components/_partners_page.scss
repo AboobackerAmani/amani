@@ -57,9 +57,6 @@
   .node-partner {
     width: 100%;
     margin: 0 auto;
-    @include breakpoint($breakpoint) {
-      width: 80%;
-    }
   }
   .field-type-image {
     display: block;

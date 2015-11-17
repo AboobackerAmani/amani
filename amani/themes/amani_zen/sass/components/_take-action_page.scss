@@ -7,9 +7,6 @@
   .view-content {
     width: 100%;
     margin: 0 auto;
-    @include breakpoint($breakpoint) {
-      width: 80%;
-    }
    
     .views-row {
       padding: 0 0 50px;
@@ -72,9 +69,6 @@
 .node-get-involved {
   width: 100%;
   margin: 0 auto;
-  @include breakpoint($breakpoint) {
-    width: 80%;
-  }
   .field-name-field-image {
     float: left;
     width: 144px;
