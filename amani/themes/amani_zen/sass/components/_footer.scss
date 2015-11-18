@@ -279,14 +279,17 @@ footer .field-label {
   }
 }
 
+//footer logos for mobile
 @media (max-width: 480px) {
-  #block-bean-img1 {
+  #block-bean-img1,
+  #block-bean-project-by-pg {
     margin-right: 20%;
     margin-left: 15px;
     width: 25%;
     text-align: center;
   }
-  #block-bean-img2 {
+  #block-bean-img2,
+  #block-bean-powered-by-amani {
     margin-left: 20%;
     margin-right: 15px;
     width: 25%;
