@@ -70,9 +70,13 @@
   }
   .field-name-field-programs {
     .field-label {
-      padding-bottom: 10px;
+      font-family: $open-sans-condensed;
+      text-transform: uppercase;
+      color: $purple-alt;
+      letter-spacing: 1px;
+      padding-top: 10px;
       margin-bottom: 15px;
-      border-bottom: 2px solid $purple-primary;
+      border-top: 2px solid $purple-primary;
     }
     .field-items a {
       color: $purple-primary;

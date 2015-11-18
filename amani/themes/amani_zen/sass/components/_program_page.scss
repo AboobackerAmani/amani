@@ -96,7 +96,7 @@
     .views-field-body {
       color: $grey-darker;
       line-height: 1.8;
-      margin: 10px 0;
+      margin: 10px 0 0;
     }
     .views-field-title-1 {
       a {
@@ -106,9 +106,6 @@
   }
   //side bar
   .sidebars {
-    .view-content {
-      //border-bottom: 3px solid $purple-alt;
-    }
     h2.block-title {
       padding: 0 0 30px;
       border-bottom: 3px solid $purple-alt;
@@ -146,6 +143,15 @@
     width: 100%;
     height: auto;
   }
+  
+  .field-label {
+    font-family: $open-sans-condensed;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $purple-alt;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
 }
 
 .node-activity .field-type-image {
@@ -155,21 +161,32 @@
 .node-activity .field-name-field-program {
   padding: 20px 0 0 0;
   margin: 60px 0 20px;
-  border-top: 3px solid $purple-dark;
+  border-top: 3px solid $purple-primary;
   div {
-    display: inline-block;
+    //display: inline-block;
+  }
+  
+  .field-item  {
+    display: block;
+    a {
+      color: $purple-primary;
+      &:hover {text-decoration: underline;}
+    }
   }
 }
 
-.node-activity .field-name-field-program .field-label {
-  margin: 0 10px 0 0;
-  font-size: 18px;
-}
+.node-activity.node-by-viewer {
+  a.forward-page,
+  .field-name-field-activity-map-record a {
+    color: $purple-primary;
+    &:hover {text-decoration: underline;}
+  }
+} 
 
 .node-project.node-by-viewer {
   color: #5d5c5c;
   .file-image {
-    border-top: 3px solid $purple;
+    border-top: 3px solid $purple-primary;
     width: 100%;
     max-height: 400px;
     overflow-y: hidden;
@@ -184,7 +201,7 @@
 
 #block-views-activities-block {
   margin-top: 25px;
-  border-top: solid 2px $purple-alt;
+  border-top: solid 2px $purple-primary;
   h2.block-title {
     font-family: $open-sans-condensed;
     font-size: 36px;
