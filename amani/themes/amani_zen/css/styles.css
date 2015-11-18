@@ -1246,8 +1246,9 @@ footer {
   border-bottom: 1px solid #d19fc0;
   margin-left: 16px;
   margin-right: 16px;
+  text-transform: uppercase;
 }
-/* line 113, ../sass/components/_contact_page.scss */
+/* line 114, ../sass/components/_contact_page.scss */
 .page-contact .block-amani-global #contact_form_site_info p {
   position: relative;
   background-size: 16px 16px;
@@ -1257,7 +1258,7 @@ footer {
   margin-left: 16px;
   margin-right: 16px;
 }
-/* line 121, ../sass/components/_contact_page.scss */
+/* line 122, ../sass/components/_contact_page.scss */
 .page-contact .block-amani-global #contact_form_site_info p:before {
   position: absolute;
   top: 2px;
@@ -1270,25 +1271,25 @@ footer {
   height: 16px;
   width: 16px;
 }
-/* line 135, ../sass/components/_contact_page.scss */
+/* line 136, ../sass/components/_contact_page.scss */
 .page-contact .block-amani-global #contact_form_site_info p.telephone:before {
   content: "\e902";
 }
-/* line 140, ../sass/components/_contact_page.scss */
+/* line 141, ../sass/components/_contact_page.scss */
 .page-contact .block-amani-global #contact_form_site_info p.email:before {
   content: "\e800";
 }
-/* line 146, ../sass/components/_contact_page.scss */
+/* line 147, ../sass/components/_contact_page.scss */
 .page-contact .contact_form_map-processed {
   height: 350px !important;
 }
-/* line 149, ../sass/components/_contact_page.scss */
+/* line 150, ../sass/components/_contact_page.scss */
 .page-contact span.form-required {
   color: #DBA6C6;
 }
 
 @media all and (max-width: 768px) {
-  /* line 154, ../sass/components/_contact_page.scss */
+  /* line 155, ../sass/components/_contact_page.scss */
   .sidebar-second.page-contact #content {
     width: 100%;
     margin: 0 auto;
@@ -3838,7 +3839,7 @@ tr.selected td {
 /* line 809, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1440018546');
+  background-image: url('../images/progress.gif?1443462806');
 }
 
 @media all and (max-width: 768px) {
@@ -5361,7 +5362,7 @@ tr.selected td {
 }
 /* line 61, ../sass/_mixins.scss */
 .form-submit:hover, .form-submit:focus {
-  background-color: #5a595c;
+  background-color: #5b595c;
 }
 
 /* line 12, ../sass/theme/_layout.scss */
