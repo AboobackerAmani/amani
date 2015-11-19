@@ -41,7 +41,10 @@
     &:nth-child(2n) {
       float: left;
       clear: left;
-      margin-right: 40px;
+      margin-right: 4%;
+      @media (max-width: $breakpoint) {
+        margin-right: 0;
+      }
     }
     
     .views-field-field-image {

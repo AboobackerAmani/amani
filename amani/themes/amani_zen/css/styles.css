@@ -1010,30 +1010,36 @@ footer {
 .view-about-page .views-row:nth-child(2n) {
   float: left;
   clear: left;
-  margin-right: 40px;
+  margin-right: 4%;
 }
-/* line 48, ../sass/components/_about_page.scss */
+@media (max-width: 768px) {
+  /* line 41, ../sass/components/_about_page.scss */
+  .view-about-page .views-row:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+/* line 51, ../sass/components/_about_page.scss */
 .view-about-page .views-row .views-field-field-image img {
   width: 100%;
 }
-/* line 50, ../sass/components/_about_page.scss */
+/* line 53, ../sass/components/_about_page.scss */
 .view-about-page .views-row .views-field-body {
   margin-top: 1.5em;
 }
-/* line 52, ../sass/components/_about_page.scss */
+/* line 55, ../sass/components/_about_page.scss */
 .view-about-page .views-row .views-field-body p:last-child {
   margin-bottom: 0;
 }
-/* line 58, ../sass/components/_about_page.scss */
+/* line 61, ../sass/components/_about_page.scss */
 .view-about-page .views-row-first {
   width: 100%;
 }
-/* line 61, ../sass/components/_about_page.scss */
+/* line 64, ../sass/components/_about_page.scss */
 .view-about-page .views-row-first .views-field-title {
   text-align: center;
   border-bottom: 0;
 }
-/* line 64, ../sass/components/_about_page.scss */
+/* line 67, ../sass/components/_about_page.scss */
 .view-about-page .views-row-first .views-field-title a {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 32px;
@@ -1045,24 +1051,24 @@ footer {
   text-align: center;
   margin: 1em 0;
 }
-/* line 77, ../sass/components/_about_page.scss */
+/* line 80, ../sass/components/_about_page.scss */
 .view-about-page .views-row-first .views-field-field-image {
   margin-top: 50px;
   height: 480px;
   overflow-y: hidden;
 }
 @media (max-width: 1280px) {
-  /* line 77, ../sass/components/_about_page.scss */
+  /* line 80, ../sass/components/_about_page.scss */
   .view-about-page .views-row-first .views-field-field-image {
     height: auto;
   }
 }
-/* line 85, ../sass/components/_about_page.scss */
+/* line 88, ../sass/components/_about_page.scss */
 .view-about-page .views-row-first .views-field-field-image img {
   width: 100%;
   image-position: center center;
 }
-/* line 92, ../sass/components/_about_page.scss */
+/* line 95, ../sass/components/_about_page.scss */
 .view-about-page .views-row-first .views-field-body h2 {
   color: #d39cc3;
   text-transform: uppercase;
