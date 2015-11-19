@@ -5,7 +5,9 @@
   .view-partners {
     .view-content {
       display: flex;
+      display: -webkit-flex;
       flex-flow: row wrap;
+      -webkit-flex-flow: row wrap;
       justify-content: space-between;
       .views-row {
         width: 100%;
