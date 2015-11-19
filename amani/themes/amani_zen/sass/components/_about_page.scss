@@ -4,6 +4,13 @@
 .view-about-page {
   padding: 30px 0;
   
+  .view-content {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+  }
+  
   .views-row {
     width: 48%;
     
@@ -34,6 +41,7 @@
     &:nth-child(2n) {
       float: left;
       clear: left;
+      margin-right: 40px;
     }
     
     .views-field-field-image {
