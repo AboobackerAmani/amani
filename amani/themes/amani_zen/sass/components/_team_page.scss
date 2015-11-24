@@ -159,3 +159,65 @@
     }
   }
 }
+
+//Team node page
+.node-team {
+  border-top: 3px solid $purple-primary;
+  padding-top: 20px;
+  
+  .field-name-field-team-image {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 15px;
+    float: none;
+    
+    img {width: 100%;}
+    
+    @include breakpoint($breakpoint) {
+      display: block;
+      margin-right: 20px;
+      float: left;
+      
+      img {width: auto;}
+    }
+  }
+  
+  .field-group-format  {
+    margin-left: 0;
+    
+    @include breakpoint($breakpoint) {
+      margin-left: 250px;
+    }
+  }
+  
+  .field-name-field-name {
+    font-family: $open-sans-condensed;
+    font-size: 24px;
+  }
+  
+  .field-name-field-team-title {
+    font-family: $open-sans-condensed;
+    font-style: italic;
+    color: $silver-chalice-2;
+    letter-spacing: 0.5px;
+  }
+  
+  .field-name-field-email {
+    margin-top: 20px;
+    
+    a {
+      color: $purple-primary;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .field-name-field-phone {
+    margin-bottom: 20px;
+    font-family: $open-sans-condensed;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+}
