@@ -987,12 +987,12 @@ footer {
 }
 /* line 23, ../sass/components/_about_page.scss */
 .view-about-page .views-row .views-field-title {
-  border-bottom: 3px solid #d39cc3;
+  border-bottom: 3px solid #ce9bc0;
   margin-bottom: 30px;
 }
 /* line 26, ../sass/components/_about_page.scss */
 .view-about-page .views-row .views-field-title a {
-  color: #d39cc3;
+  color: #ce9bc0;
   text-transform: uppercase;
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 28px;
@@ -1070,7 +1070,7 @@ footer {
 }
 /* line 95, ../sass/components/_about_page.scss */
 .view-about-page .views-row-first .views-field-body h2 {
-  color: #d39cc3;
+  color: #ce9bc0;
   text-transform: uppercase;
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 18px;
@@ -4080,6 +4080,65 @@ tr.selected td {
   text-transform: none;
 }
 
+/* line 196, ../sass/components/_news-events_page.scss */
+.node-article {
+  border-top: 3px solid #ce9bc0;
+  padding-top: 20px;
+}
+/* line 200, ../sass/components/_news-events_page.scss */
+.node-article .field-name-field-image {
+  display: block;
+  margin-right: 0;
+  margin-bottom: 15px;
+  float: none;
+}
+/* line 206, ../sass/components/_news-events_page.scss */
+.node-article .field-name-field-image img {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  /* line 200, ../sass/components/_news-events_page.scss */
+  .node-article .field-name-field-image {
+    display: block;
+    margin-right: 20px;
+    float: left;
+  }
+  /* line 213, ../sass/components/_news-events_page.scss */
+  .node-article .field-name-field-image img {
+    width: auto;
+  }
+}
+/* line 217, ../sass/components/_news-events_page.scss */
+.node-article .field-name-body {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  /* line 217, ../sass/components/_news-events_page.scss */
+  .node-article .field-name-body {
+    margin-left: 250px;
+  }
+}
+/* line 225, ../sass/components/_news-events_page.scss */
+.node-article ul.links {
+  display: block;
+  width: 100%;
+  border-top: 3px solid #ce9bc0;
+  margin-top: 10px;
+  padding-top: 5px;
+}
+/* line 231, ../sass/components/_news-events_page.scss */
+.node-article ul.links .comment_forbidden {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+/* line 233, ../sass/components/_news-events_page.scss */
+.node-article ul.links .comment_forbidden a {
+  color: #ce9bc0;
+}
+/* line 236, ../sass/components/_news-events_page.scss */
+.node-article ul.links .comment_forbidden a:hover {
+  text-decoration: underline;
+}
+
 /*
   Partners page
 */
@@ -5037,23 +5096,31 @@ tr.selected td {
   margin-top: 10px;
   margin-left: 100px;
 }
+/* line 54, ../sass/components/_take-action_page.scss */
+.page-get-involved .view-content .views-row .views-field-body a {
+  color: #ce9bc0;
+}
+/* line 57, ../sass/components/_take-action_page.scss */
+.page-get-involved .view-content .views-row .views-field-body a:hover {
+  text-decoration: underline;
+}
 @media (max-width: 480px) {
   /* line 50, ../sass/components/_take-action_page.scss */
   .page-get-involved .view-content .views-row .views-field-body {
     margin-left: 0;
   }
 }
-/* line 62, ../sass/components/_take-action_page.scss */
+/* line 70, ../sass/components/_take-action_page.scss */
 .page-get-involved .view-get-involved {
   margin-top: 20px;
 }
 
-/* line 69, ../sass/components/_take-action_page.scss */
+/* line 77, ../sass/components/_take-action_page.scss */
 .node-get-involved {
   width: 100%;
   margin: 0 auto;
 }
-/* line 72, ../sass/components/_take-action_page.scss */
+/* line 80, ../sass/components/_take-action_page.scss */
 .node-get-involved .field-name-field-image {
   float: left;
   width: 144px;
@@ -5061,16 +5128,24 @@ tr.selected td {
   margin-right: 30px;
 }
 @media (max-width: 480px) {
-  /* line 72, ../sass/components/_take-action_page.scss */
+  /* line 80, ../sass/components/_take-action_page.scss */
   .node-get-involved .field-name-field-image {
     float: none;
     text-align: center;
     margin: 0 auto 20px;
   }
 }
-/* line 85, ../sass/components/_take-action_page.scss */
+/* line 93, ../sass/components/_take-action_page.scss */
 .node-get-involved .field-name-body {
   display: table;
+}
+/* line 96, ../sass/components/_take-action_page.scss */
+.node-get-involved .field-name-body a {
+  color: #ce9bc0;
+}
+/* line 99, ../sass/components/_take-action_page.scss */
+.node-get-involved .field-name-body a:hover {
+  text-decoration: underline;
 }
 
 /*
@@ -5267,6 +5342,76 @@ tr.selected td {
   font-style: italic;
   font-size: 16px;
   color: #999;
+}
+
+/* line 164, ../sass/components/_team_page.scss */
+.node-team {
+  border-top: 3px solid #ce9bc0;
+  padding-top: 20px;
+}
+/* line 168, ../sass/components/_team_page.scss */
+.node-team .field-name-field-team-image {
+  display: block;
+  margin-right: 0;
+  margin-bottom: 15px;
+  float: none;
+}
+/* line 174, ../sass/components/_team_page.scss */
+.node-team .field-name-field-team-image img {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  /* line 168, ../sass/components/_team_page.scss */
+  .node-team .field-name-field-team-image {
+    display: block;
+    margin-right: 20px;
+    float: left;
+  }
+  /* line 181, ../sass/components/_team_page.scss */
+  .node-team .field-name-field-team-image img {
+    width: auto;
+  }
+}
+/* line 185, ../sass/components/_team_page.scss */
+.node-team .field-group-format {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  /* line 185, ../sass/components/_team_page.scss */
+  .node-team .field-group-format {
+    margin-left: 250px;
+  }
+}
+/* line 193, ../sass/components/_team_page.scss */
+.node-team .field-name-field-name {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 24px;
+}
+/* line 198, ../sass/components/_team_page.scss */
+.node-team .field-name-field-team-title {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-style: italic;
+  color: #ababab;
+  letter-spacing: 0.5px;
+}
+/* line 205, ../sass/components/_team_page.scss */
+.node-team .field-name-field-email {
+  margin-top: 20px;
+}
+/* line 208, ../sass/components/_team_page.scss */
+.node-team .field-name-field-email a {
+  color: #ce9bc0;
+}
+/* line 211, ../sass/components/_team_page.scss */
+.node-team .field-name-field-email a:hover {
+  text-decoration: underline;
+}
+/* line 217, ../sass/components/_team_page.scss */
+.node-team .field-name-field-phone {
+  margin-bottom: 20px;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 /**

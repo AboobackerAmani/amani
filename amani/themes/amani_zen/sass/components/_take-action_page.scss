@@ -51,6 +51,14 @@
         margin-top: 10px;
         margin-left: 100px;
         
+        a {
+          color: $purple-primary;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        
         @media (max-width: 480px) {
           margin-left: 0;
         }
@@ -84,5 +92,13 @@
   
   .field-name-body {
     display: table;
+    
+    a {
+      color: $purple-primary;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }

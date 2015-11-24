@@ -21,10 +21,10 @@
     float: left;
     margin-bottom: 2em;
     .views-field-title {
-      border-bottom: 3px solid #d39cc3;
+      border-bottom: 3px solid $purple-primary;
       margin-bottom: 30px;
       a {
-        color: #d39cc3;
+        color: $purple-primary;
         text-transform: uppercase;
         font-family: $open-sans-condensed;
         font-size: 28px;
@@ -93,7 +93,7 @@
     
     .views-field-body {
       h2 {
-        color: #d39cc3;
+        color: $purple-primary;
         text-transform: uppercase;
         font-family: $open-sans-condensed;
         font-size: 18px;
