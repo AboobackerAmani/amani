@@ -54,3 +54,13 @@
   font-size: 34px;
   color: $purple-primary;
 }
+
+.node-media-gallery {
+  a {
+    color: $purple-primary;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

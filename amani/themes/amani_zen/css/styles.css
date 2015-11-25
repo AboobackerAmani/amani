@@ -2356,6 +2356,15 @@ footer .field-label {
   color: #ce9bc0;
 }
 
+/* line 59, ../sass/components/_gallery_page.scss */
+.node-media-gallery a {
+  color: #ce9bc0;
+}
+/* line 62, ../sass/components/_gallery_page.scss */
+.node-media-gallery a:hover {
+  text-decoration: underline;
+}
+
 /* line 7, ../sass/components/_header.scss */
 .region-header {
   margin: 20px auto 0;
@@ -4149,32 +4158,34 @@ tr.selected td {
   flex-flow: row wrap;
   -webkit-flex-flow: row wrap;
   justify-content: space-between;
+  -webkit-justify-content: space-between;
 }
-/* line 12, ../sass/components/_partners_page.scss */
+/* line 14, ../sass/components/_partners_page.scss */
 .page-partners .view-partners .view-content .views-row {
   width: 100%;
   flex-grow: 1;
+  -webkit-flex-grow: 1;
 }
 @media (min-width: 768px) {
-  /* line 12, ../sass/components/_partners_page.scss */
+  /* line 14, ../sass/components/_partners_page.scss */
   .page-partners .view-partners .view-content .views-row {
     width: 30%;
     margin: 20px 15px;
   }
-  /* line 18, ../sass/components/_partners_page.scss */
+  /* line 21, ../sass/components/_partners_page.scss */
   .page-partners .view-partners .view-content .views-row.views-row-first, .page-partners .view-partners .view-content .views-row:nth-child(3n+4) {
     margin-left: 0;
   }
-  /* line 22, ../sass/components/_partners_page.scss */
+  /* line 25, ../sass/components/_partners_page.scss */
   .page-partners .view-partners .view-content .views-row.views-row-last, .page-partners .view-partners .view-content .views-row:nth-child(3n+3) {
     margin-right: 0;
   }
-  /* line 26, ../sass/components/_partners_page.scss */
+  /* line 29, ../sass/components/_partners_page.scss */
   .page-partners .view-partners .view-content .views-row.views-row-first.views-row-last {
     max-width: 30%;
   }
 }
-/* line 31, ../sass/components/_partners_page.scss */
+/* line 34, ../sass/components/_partners_page.scss */
 .page-partners .view-partners .view-content .views-row .views-field-title a {
   display: block;
   border-top: 3px solid #d29ec2;
@@ -4184,39 +4195,45 @@ tr.selected td {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 16px;
 }
-/* line 41, ../sass/components/_partners_page.scss */
+/* line 44, ../sass/components/_partners_page.scss */
 .page-partners .view-partners .view-content .views-row .views-field-field-image {
   text-align: center;
   padding-top: 22px;
   padding-bottom: 22px;
 }
-/* line 45, ../sass/components/_partners_page.scss */
+/* line 48, ../sass/components/_partners_page.scss */
 .page-partners .view-partners .view-content .views-row .views-field-field-image img {
   max-width: 264px;
   height: auto;
+}
+@media (min-width: 768px) and (max-width: 960px) {
+  /* line 48, ../sass/components/_partners_page.scss */
+  .page-partners .view-partners .view-content .views-row .views-field-field-image img {
+    max-width: 220px;
+  }
 }
 
 /*
   Partners node page
 */
-/* line 59, ../sass/components/_partners_page.scss */
+/* line 66, ../sass/components/_partners_page.scss */
 .node-type-partner .node-partner {
   width: 100%;
   margin: 0 auto;
 }
-/* line 63, ../sass/components/_partners_page.scss */
+/* line 70, ../sass/components/_partners_page.scss */
 .node-type-partner .field-type-image {
   display: block;
   margin: 0 auto;
   text-align: center;
 }
-/* line 68, ../sass/components/_partners_page.scss */
+/* line 75, ../sass/components/_partners_page.scss */
 .node-type-partner .field-name-body {
   margin-top: 30px;
   padding-top: 30px;
   border-top: 2px solid #ce9bc0;
 }
-/* line 74, ../sass/components/_partners_page.scss */
+/* line 81, ../sass/components/_partners_page.scss */
 .node-type-partner .field-name-field-programs .field-label {
   font-family: "Open Sans Condensed", sans-serif;
   text-transform: uppercase;
@@ -4226,13 +4243,13 @@ tr.selected td {
   margin-bottom: 15px;
   border-top: 2px solid #ce9bc0;
 }
-/* line 83, ../sass/components/_partners_page.scss */
+/* line 90, ../sass/components/_partners_page.scss */
 .node-type-partner .field-name-field-programs .field-items a {
   color: #ce9bc0;
   margin-bottom: 10px;
   display: block;
 }
-/* line 87, ../sass/components/_partners_page.scss */
+/* line 94, ../sass/components/_partners_page.scss */
 .node-type-partner .field-name-field-programs .field-items a:hover {
   text-decoration: underline;
 }
@@ -5145,6 +5162,19 @@ tr.selected td {
 }
 /* line 99, ../sass/components/_take-action_page.scss */
 .node-get-involved .field-name-body a:hover {
+  text-decoration: underline;
+}
+
+/* line 106, ../sass/components/_take-action_page.scss */
+.node-activity {
+  margin-bottom: 20px;
+}
+/* line 108, ../sass/components/_take-action_page.scss */
+.node-activity a {
+  color: #ce9bc0;
+}
+/* line 111, ../sass/components/_take-action_page.scss */
+.node-activity a:hover {
   text-decoration: underline;
 }
 

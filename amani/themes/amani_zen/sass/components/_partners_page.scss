@@ -9,9 +9,12 @@
       flex-flow: row wrap;
       -webkit-flex-flow: row wrap;
       justify-content: space-between;
+      -webkit-justify-content: space-between;
+      
       .views-row {
         width: 100%;
         flex-grow: 1;
+        -webkit-flex-grow: 1;
         @include breakpoint(768px) {
           width: 30%;
           margin: 20px 15px;
@@ -45,6 +48,10 @@
           img {
             max-width: 264px;
             height: auto;
+            
+            @media (min-width: $breakpoint) and (max-width: 960px) {
+              max-width: 220px;
+            }
           }
         }
       }

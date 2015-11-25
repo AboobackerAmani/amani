@@ -102,3 +102,14 @@
     }
   }
 }
+
+.node-activity {
+  margin-bottom: 20px;
+  a {
+    color: $purple-primary;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
