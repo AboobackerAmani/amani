@@ -26,7 +26,7 @@
   margin: 0 0 20px 0;
   @include breakpoint(768px) {
     width: 32% !important;
-    min-height: 400px;
+    //min-height: 400px;
     margin: 0 2% 3% 0;
     &:nth-child(3n) {
       margin-right: 0;
@@ -46,6 +46,25 @@
   border: 1px solid #ccc;
 }
 
+.node-media-gallery.node-teaser .meta-wrapper.hover {
+  display: block;
+  position: initial;
+  margin-top: -25px;
+  .slider,
+  .slider.meta-inner {
+    background: none;
+  }
+  
+  .media-title,
+  .media-description {
+    font-family: $open-sans-condensed;
+    color: $purple-primary;
+  }
+  .media-title {
+    font-size: 18px;
+  }
+}
+
 .media-collection-item-wrapper {
   padding: 0;
 }
@@ -60,7 +79,7 @@
     color: $purple-primary;
     
     &:hover {
-      text-decoration: underline;
+      //text-decoration: underline;
     }
   }
 }
