@@ -139,7 +139,108 @@
     }
     
     .views-field-field-incident-date {
-      color: #ccc;
+      color: $silver-chalice-2;
+    }
+  }
+}
+
+//Node page
+.node-incident-report {
+  border-top: 3px solid $purple-primary;
+  padding-top: 20px;
+  
+  .field-label {
+    font-family: $open-sans-condensed;
+  }
+  
+  .field-name-field-image {
+    float: none;
+    img {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    @include breakpoint($breakpoint) {
+      float: left;
+      img {
+        width: auto;
+      }
+    }
+  }
+  
+  .field-name-field-description {
+    margin-left: 0;
+    @include breakpoint($breakpoint) {
+      margin-left: 250px;
+    }
+  }
+  
+  .field-name-field-incident-date,
+  .field-name-field-incident-severity,
+  .field-name-field-incident-report-type,
+  .field-name-field-links {
+    margin-left: 0;
+    margin-bottom: 10px;
+    
+    @include breakpoint($breakpoint) {
+      margin-left: 250px;
+    }
+    .field-label,
+    .field-items {
+      display: inline-block;
+      
+      a {
+        color: $purple-primary;
+      }
+    }
+    
+    .date-display-single {
+      color: $silver-chalice-2;
+    }
+  }
+  
+  .field-name-field-incident-media {
+    margin-top: 20px;
+    
+    > .field-label {
+      margin-left: 0;
+      @include breakpoint($breakpoint) {
+        margin-left: 250px;
+      }
+      border-bottom: 1px solid $purple-primary;
+      margin-bottom: 20px;
+      padding-bottom: 5px;
+    }
+    .content img {
+      float: none;
+      width: 100%;
+      margin-bottom: 10px;
+      @include breakpoint($breakpoint) {
+        float: left;
+        margin-top: -45px;
+        width: auto;
+      }
+    }
+    
+    .content .field-name-media-description  {
+      margin-left: 0;
+      @include breakpoint($breakpoint) {
+        margin-left: 250px;
+      }
+    }
+  }
+  
+  .field-name-field-incident-geolocation {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    @include breakpoint($breakpoint) {
+      margin-left: 250px;
+    }
+
+    > .field-label {
+      border-bottom: 1px solid $purple-primary;
+      margin-bottom: 20px;
+      padding-bottom: 5px;
     }
   }
 }
