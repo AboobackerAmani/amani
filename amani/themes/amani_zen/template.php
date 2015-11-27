@@ -188,8 +188,8 @@ function amani_zen_form_alter(&$form, &$form_state, $form_id) {
  */
 function amani_zen_preprocess_date_views_pager(&$vars) {
   $datetime = DateTime::createFromFormat('l, F d, Y', $vars['nav_title']);
-  $month = $datetime->format('F');
-  $year = $datetime->format('Y');
+  $month = $datetime ? $datetime->format('F') : NULL;
+  $year = $datetime ? $datetime->format('Y') : NULL;
   $vars['nav_title'] = "<span class='month'>$month</span> - $year";
 
   $vars['mini'] = TRUE;
