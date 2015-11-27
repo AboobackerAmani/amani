@@ -257,9 +257,119 @@ function amani_sms_field_default_fields() {
     ),
   );
 
+  // Exported field: 'taxonomy_term-sms_location-field_sms_location'.
+  $fields['taxonomy_term-sms_location-field_sms_location'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_sms_location',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'bbox' => array(
+          0 => 'top',
+          1 => 'bottom',
+          2 => 'left',
+          3 => 'right',
+        ),
+        'bottom' => array(
+          0 => 'bottom',
+        ),
+        'centroid' => array(
+          0 => 'lat',
+          1 => 'lon',
+        ),
+        'geohash' => array(
+          0 => 'geohash',
+        ),
+        'lat' => array(
+          0 => 'lat',
+        ),
+        'left' => array(
+          0 => 'left',
+        ),
+        'lon' => array(
+          0 => 'lon',
+        ),
+        'right' => array(
+          0 => 'right',
+        ),
+        'top' => array(
+          0 => 'top',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'geofield',
+      'settings' => array(
+        'backend' => 'default',
+        'srid' => '4326',
+      ),
+      'translatable' => '0',
+      'type' => 'geofield',
+    ),
+    'field_instance' => array(
+      'bundle' => 'sms_location',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'geofield',
+          'settings' => array(
+            'data' => 'full',
+          ),
+          'type' => 'geofield_wkt',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'taxonomy_term',
+      'field_name' => 'field_sms_location',
+      'label' => 'Location',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'openlayers',
+        'settings' => array(
+          'allow_edit' => 0,
+          'data_storage' => 'single',
+          'delta_handling' => 'default',
+          'feature_types' => array(
+            'path' => 0,
+            'point' => 'point',
+            'polygon' => 0,
+          ),
+          'geocoder_field' => 'name',
+          'geocoder_handler' => 'google',
+          'handler_settings' => array(
+            'google' => array(
+              'all_results' => 0,
+              'geometry_type' => 'point',
+              'reject_results' => array(
+                'APPROXIMATE' => 0,
+                'GEOMETRIC_CENTER' => 0,
+                'RANGE_INTERPOLATED' => 0,
+                'ROOFTOP' => 0,
+              ),
+            ),
+          ),
+          'openlayers_map' => 'geofield_widget_map',
+          'use_geocoder' => 0,
+        ),
+        'type' => 'geofield_openlayers',
+        'weight' => '5',
+      ),
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Location');
   t('Map Record');
   t('Status');
 
