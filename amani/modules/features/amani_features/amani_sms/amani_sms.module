@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function amani_sms_menu() {
+  $items = array();
+
+  $items['amani/sms'] = array(
+    'title' => 'Amani SMS endpoint',
+    'page callback' => 'amani_sms_endpoint',
+    'access callback' => TRUE,
+    'file' => '/includes/amani_sms.admin.inc',
+  );
+
+  $items['admin/settings/amani-sms'] = array(
+    'title' => t('Amani SMS Configuration'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('amani_sms_settings_form'),
+    'access callback' => 'amani_sms_can_access_settings',
+    'file' => '/includes/amani_sms.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Access callback for admin form.
+ */
+function amani_sms_can_access_settings() {
+  global $user;
+  // If your user 1 or you have the administrator role.
+  return ($user->uid == 1 || (is_array($user->roles) && in_array('administrator', $user->roles)));
+}
