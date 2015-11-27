@@ -39,7 +39,7 @@ function amani_sms_settings_form() {
   // Date fieldset.
   $form['amani_sms_date'] = amani_sms_get_fs(
     t('Message position 2 - Date'),
-    t('Format MMDDYYY')
+    t('Format MMDDYYYY')
   );
   // Location fieldset and options.
   $form['amani_sms_location'] = amani_sms_get_fs(
