@@ -27,7 +27,7 @@ function amani_sms_settings_form() {
   );
   // Secret fieldset and options.
   $form['amani_sms_secret'] = amani_sms_get_fs(
-    t('Message position 1 - SMS Secret'),
+    t('SMS Secret'),
     t('Only messages providing the correct secret will be used to create records.')
   );
   $form['amani_sms_secret']['amani_sms_secret_value'] = array(
@@ -38,12 +38,12 @@ function amani_sms_settings_form() {
   );
   // Date fieldset.
   $form['amani_sms_date'] = amani_sms_get_fs(
-    t('Message position 2 - Date'),
+    t('Message position 1 - Date'),
     t('Format MMDDYYYY')
   );
   // Location fieldset and options.
   $form['amani_sms_location'] = amani_sms_get_fs(
-    t('Message position 3 - Location'),
+    t('Message position 2 - Location'),
     t('These values can be configured ' . l('here.', 'admin/structure/taxonomy/' . LOCATIONS_MACHINE_NAME))
   );
   if ($location_terms = amani_sms_get_terms_as_options(LOCATIONS_MACHINE_NAME)) {
@@ -51,7 +51,7 @@ function amani_sms_settings_form() {
   }
   // Filter 1 fieldset and options.
   $form['amani_sms_filter_1'] = amani_sms_get_fs(
-    t('Message position 4 - Map Filter #1'),
+    t('Message position 3 - Map Filter #1'),
     t('These values can be configured ' . l('here.', 'admin/structure/taxonomy/' . FILTER_1_MACHINE_NAME))
   );
   if ($filter_1_terms = amani_sms_get_terms_as_options(FILTER_1_MACHINE_NAME)) {
@@ -59,7 +59,7 @@ function amani_sms_settings_form() {
   }
   // Filter 2 fieldset and options.
   $form['amani_sms_filter_2'] = amani_sms_get_fs(
-    t('Message position 5 - Map Filter #2'),
+    t('Message position 4 - Map Filter #2'),
     t('These values can be configured ' . l('here.', 'admin/structure/taxonomy/' . FILTER_2_MACHINE_NAME))
   );
   if ($filter_2_terms = amani_sms_get_terms_as_options(FILTER_2_MACHINE_NAME)) {
@@ -67,7 +67,7 @@ function amani_sms_settings_form() {
   }
   // Filter 3 fieldset and options.
   $form['amani_sms_filter_3'] = amani_sms_get_fs(
-    t('Message position 6 - Map Filter #3'),
+    t('Message position 5 - Map Filter #3'),
     t('These values can be configured ' . l('here.', 'admin/structure/taxonomy/' . FILTER_3_MACHINE_NAME))
   );
   if ($filter_3_terms = amani_sms_get_terms_as_options(FILTER_3_MACHINE_NAME)) {
@@ -75,7 +75,7 @@ function amani_sms_settings_form() {
   }
   // Filter 4 fieldset and options.
   $form['amani_sms_filter_4'] = amani_sms_get_fs(
-    t('Message position 7 - Map Filter #4'),
+    t('Message position 6 - Map Filter #4'),
     t('These values can be configured ' . l('here.', 'admin/structure/taxonomy/' . FILTER_4_MACHINE_NAME))
   );
   if ($filter_4_terms = amani_sms_get_terms_as_options(FILTER_4_MACHINE_NAME)) {
@@ -83,7 +83,7 @@ function amani_sms_settings_form() {
   }
   // Description fieldset.
   $form['amani_sms_description'] = amani_sms_get_fs(
-    t('Message position 8 - Description'),
+    t('Message position 7 - Description'),
     t('Any tokens after this point will be mapped to the description field on the map record.')
   );
 
