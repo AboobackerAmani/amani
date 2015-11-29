@@ -27,7 +27,7 @@ function amani_sms_settings_form() {
   );
   // Secret fieldset and options.
   $form['amani_sms_secret'] = amani_sms_get_fs(
-    t('Message position 1 - SMS Secret'),
+    t('SMS Secret'),
     t('Only messages providing the correct secret will be used to create records.')
   );
   $form['amani_sms_secret']['amani_sms_secret_value'] = array(
@@ -38,8 +38,13 @@ function amani_sms_settings_form() {
   );
   // Date fieldset.
   $form['amani_sms_date'] = amani_sms_get_fs(
-    t('Message position 2 - Date'),
-    t('Format MMDDYYYY')
+    t('Message position 1 - Date'),
+    t('Format DDMMYYYY')
+  );
+  // Reporter fieldset and options.
+  $form['amani_sms_reporter'] = amani_sms_get_fs(
+    t('Message position 2 - Reporter'),
+    t('The reporter will be used to identify who sent the report.')
   );
   // Location fieldset and options.
   $form['amani_sms_location'] = amani_sms_get_fs(

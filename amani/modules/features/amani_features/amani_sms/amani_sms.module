@@ -10,7 +10,7 @@ function amani_sms_menu() {
     'title' => 'Amani SMS endpoint',
     'page callback' => 'amani_sms_endpoint',
     'access callback' => TRUE,
-    'file' => '/includes/amani_sms.admin.inc',
+    'file' => '/includes/amani_sms.callbacks.inc',
   );
 
   $items['admin/settings/amani-sms'] = array(

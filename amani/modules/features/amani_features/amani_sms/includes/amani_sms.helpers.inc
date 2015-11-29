@@ -14,7 +14,7 @@ function amani_sms_create_sms_submission($message) {
   // Create an Entity.
   $submission = entity_create('node', array('type' => 'sms_submission'));
   // Specify the author. TODO figure out whether anonymous is adequate?
-  $submission->uid = $user->uid;
+  // $submission->uid = $user->uid;
   // Create a Entity Wrapper of the new Entity. See https://www.drupal.org/documentation/entity-metadata-wrappers for more info.
   $submission_wrapper = entity_metadata_wrapper('node', $node);
   $submission_wrapper->body->set($message);
