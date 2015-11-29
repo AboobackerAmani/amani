@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * amani_service_advisor_source.field_group.inc
+ * amani_service_advisor_source_provider.field_group.inc
  */
 
 /**
  * Implements hook_field_group_info().
  */
-function amani_service_advisor_source_field_group_info() {
+function amani_service_advisor_source_provider_field_group_info() {
   $export = array();
 
   $field_group = new stdClass();
@@ -21,15 +21,15 @@ function amani_service_advisor_source_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Accessibility',
-    'weight' => '4',
+    'weight' => '7',
     'children' => array(
-      0 => 'field_service_referral_required',
-      1 => 'field_service_category',
-      2 => 'field_available_to_nationality',
-      3 => 'field_service_response_delay',
-      4 => 'field_service_intake_criteria',
-      5 => 'field_service_availability_day_a',
-      6 => 'field_service_registration_type',
+      0 => 'field_service_response_delay',
+      1 => 'field_service_intake_criteria',
+      2 => 'field_service_availability_day_a',
+      3 => 'field_service_registration_type',
+      4 => 'field_service_available_to_natio',
+      5 => 'field_referral_required_',
+      6 => 'field_referral_type_',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -54,15 +54,14 @@ function amani_service_advisor_source_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Properties',
-    'weight' => '3',
+    'weight' => '6',
     'children' => array(
-      0 => 'field_service_id',
-      1 => 'field_service_location_name',
-      2 => 'field_service_partner_name',
-      3 => 'field_serviceactivity_name',
-      4 => 'field_service_start_date',
-      5 => 'field_service_end_date',
-      6 => 'field_service_indicators',
+      0 => 'field_service_location_name',
+      1 => 'field_service_partner_name',
+      2 => 'field_serviceactivity_name',
+      3 => 'field_service_start_date',
+      4 => 'field_service_end_date',
+      5 => 'field_service_indicators',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
