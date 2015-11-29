@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * amani_service_advisor_source.strongarm.inc
+ * amani_service_advisor_source_provider.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function amani_service_advisor_source_strongarm() {
+function amani_service_advisor_source_provider_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
