@@ -114,8 +114,7 @@ function amani_sms_add_terms_fields(&$form, $terms, $fieldset) {
     $form[$fieldset][$key] = array(
       '#type' => 'textfield',
       '#title' => t('Term <i>' . $t->name . '</i> maps to message value:'),
-      '#maxlength' => 5,
-      '#size' => 5,
+      '#description' => t('Multiple values can be comma separated.'),
       '#default_value' => variable_get($key, NULL),
       '#required' => TRUE,
     );

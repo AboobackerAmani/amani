@@ -14,6 +14,10 @@ include_once('amani_sms.admin.inc');
 function amani_sms_process_sms($inputJSON) {
   // Parse the json.
   if ($inputJSON && $parsed_message = amani_sms_parse_message($inputJSON)) {
+    // If our secret is wrong.
+    if (!isset($parsed_message['secret']) || $parsed_message['secret'] != variable_get('amani_sms_secret_value')) {
+      return FALSE;
+    }
     // Create sms submission.
     $submission = entity_create('node', array('type' => 'sms_submission'));
     $sub_wrapper = entity_metadata_wrapper('node', $submission);
@@ -47,8 +51,6 @@ function amani_sms_parse_message($inputJSON) {
     $msg_text = array_slice($msg_parts, 7);
     // See amani_sms.admin.inc - use our config variable names as keys for
     // easier mapping to map record later.
-    // TODO we should only be setting values that are actually valid
-    // ie. check the admin settingg var.
     $parsed_message['message']['amani_sms_date']     = isset($msg_parts_slice[0]) ? $msg_parts_slice[0] : NULL;
     $parsed_message['message']['amani_sms_reporter'] = isset($msg_parts_slice[1]) ? $msg_parts_slice[1] : NULL;
     $parsed_message['message']['amani_sms_location'] = isset($msg_parts_slice[2]) ? $msg_parts_slice[2] : NULL;
@@ -95,6 +97,8 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
       $mr_wrapper->field_incident_geolocation->set($term->field_sms_location[LANGUAGE_NONE][0]);
       $sub_wrapper->field_sms_sub_status->set(1);
     } else {
+      // Unpublished map record.
+      $mr_wrapper->status->set(0);
       // Set needs review field on submission.
       $sub_wrapper->field_sms_sub_status->set(0);
     }
@@ -105,6 +109,8 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
       $mr_wrapper->field_incident_report_type->set($term->tid);
       $sub_wrapper->field_sms_sub_status->set(1);
     } else {
+      // Unpublished map record.
+      $mr_wrapper->status->set(0);
       // Set needs review field on submission.
       $sub_wrapper->field_sms_sub_status->set(0);
     }
@@ -115,6 +121,8 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
       $mr_wrapper->field_incident_severity->set($term->tid);
       $sub_wrapper->field_sms_sub_status->set(1);
     } else {
+      // Unpublished map record.
+      $mr_wrapper->status->set(0);
       // Set needs review field on submission.
       $sub_wrapper->field_sms_sub_status->set(0);
     }
@@ -125,6 +133,8 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
       $mr_wrapper->field_map_filter_3->set($term->tid);
       $sub_wrapper->field_sms_sub_status->set(1);
     } else {
+      // Unpublished map record.
+      $mr_wrapper->status->set(0);
       // Set needs review field on submission.
       $sub_wrapper->field_sms_sub_status->set(0);
     }
@@ -135,6 +145,8 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
       $mr_wrapper->field_map_filter_4->set($term->tid);
       $sub_wrapper->field_sms_sub_status->set(1);
     } else {
+      // Unpublished map record.
+      $mr_wrapper->status->set(0);
       // Set needs review field on submission.
       $sub_wrapper->field_sms_sub_status->set(0);
     }
@@ -153,9 +165,9 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
 }
 
 /**
- * Loop over terms in corresponding token vocab.
+ * Loop over terms in corresponding token (a token is a parsed value from a text message position) vocab.
  * From each term load the corresponding drupal variable and check expected value matches.
- * If we have a match, return the term id.
+ * If we have a match, return the term.
  */
 function amani_sms_token_to_term($token, $val) {
   $token_vocab = array(
@@ -169,7 +181,8 @@ function amani_sms_token_to_term($token, $val) {
   if (!is_null($terms)) {
     foreach ($terms as $t) {
       $var = variable_get($token . '_' . $t->tid, NULL);
-      if (!is_null($var) && $var == $val) {
+      $exploded = explode(',', trim($var));
+      if (!is_null($var) && (in_array($val, $exploded))) {
         return taxonomy_term_load($t->tid);
       }
     }
