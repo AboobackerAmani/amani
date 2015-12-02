@@ -34,21 +34,29 @@
       text-transform: uppercase;
       font-weight: 400;
       font-size: 1.5em;
-      //font-family: $base-font-family;
       font-family: $open-sans-condensed;
       margin-top: 15px;
       margin-bottom: 30px;
     }
 
+    .views-field-field-text .field-content {
+      line-height: 1.5;
+    }
+    
     .read_more_link {
       margin-top: 40px;
+      position: relative;
+      bottom: -20px;
+      @media all and (max-width: 768px) {
+        bottom: -5px;
+      }
 
       span {
         font-family: $open-sans-condensed;
         text-transform: uppercase;
-        border: 1px solid #333;
+        border: 2px solid $purple-dark;
         border-radius: 1px;
-        padding: 10px 25px 8px;
+        padding: 7px 25px 6px;
         cursor: pointer;
 
         a {
@@ -56,12 +64,6 @@
 
           .more-arrow {
             display: none;
-            // border: 0;
-            //             font-family: $open-sans;
-            //             font-size: 10px;
-            //             padding-left: 5px;
-            //             color: $purple-primary;
-            //             padding: 0;
           }
         }
 
@@ -85,7 +87,7 @@
 #block-views-calendar-of-events-block-3 {
   display: inline-block;
   vertical-align: top;
-  margin: 100px 20px 30px;
+  margin: 85px 20px 30px;
   width: 290px;
   height: 370px;
   text-align: left;
