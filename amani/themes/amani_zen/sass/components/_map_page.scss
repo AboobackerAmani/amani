@@ -34,6 +34,7 @@
   
   //Block overlay on Map
   .sidebars .block-incident-map {
+    //display: none;
     width: 350px;
     background-color: white;
     @include opacity(0.85);
@@ -47,6 +48,9 @@
        right: 0;
        left: auto;
        margin-right: 0;
+    }
+    @media (max-width: 360px) {
+      width: 320px;
     }
     
     h3 {
