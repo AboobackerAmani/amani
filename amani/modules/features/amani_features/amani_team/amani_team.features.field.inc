@@ -772,7 +772,7 @@ Prof.',
     ),
     'field_instance' => array(
       'bundle' => 'team',
-      'default_value' => NULL,
+      'default_value' => array(),
       'deleted' => '0',
       'description' => '',
       'display' => array(

@@ -5442,70 +5442,69 @@ tr.selected td {
 .view-team .view-filters .ajax-progress {
   position: absolute;
 }
-/* line 71, ../sass/components/_team_page.scss */
+/* line 59, ../sass/components/_team_page.scss */
 .view-team .view-content {
+  margin: 0 -1%;
   display: flex;
   display: -webkit-flex;
   flex-flow: row wrap;
   -webkit-flex-flow: row wrap;
+  margin-bottom: 20px;
 }
-/* line 78, ../sass/components/_team_page.scss */
+/* line 68, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row {
   width: 100%;
   flex-grow: 0;
   -webkit-flex-grow: 0;
-  border-top: 3px solid #ce9bc0;
-  padding-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
-  /* line 78, ../sass/components/_team_page.scss */
+  /* line 68, ../sass/components/_team_page.scss */
   .view-team .view-content .views-row {
-    width: 32%;
-    margin: 20px 2% 0 0;
+    width: 31.3%;
+    margin: 20px 1% 0 1%;
     justify-content: space-between;
     -webkit-justify-content: space-between;
   }
-  /* line 91, ../sass/components/_team_page.scss */
-  .view-team .view-content .views-row.views-row-first, .view-team .view-content .views-row:nth-child(3n+4) {
-    margin-left: 0;
-  }
-  /* line 95, ../sass/components/_team_page.scss */
-  .view-team .view-content .views-row.views-row-last, .view-team .view-content .views-row:nth-child(3n+3) {
-    margin-right: 0;
-  }
 }
-/* line 103, ../sass/components/_team_page.scss */
+/* line 84, ../sass/components/_team_page.scss */
+.view-team .view-content .views-row .views-field-field-team-member-type {
+  display: none;
+}
+/* line 87, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-field-team-image {
-  height: 246px;
+  max-height: 226px;
   overflow: hidden;
 }
-/* line 106, ../sass/components/_team_page.scss */
+/* line 90, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-field-team-image img {
   height: auto;
   width: 100%;
 }
-/* line 111, ../sass/components/_team_page.scss */
+/* line 95, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-title {
-  margin-top: 22px;
+  margin-top: 15px;
 }
-/* line 113, ../sass/components/_team_page.scss */
+/* line 97, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-title a {
   color: #ce9bc0;
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 24px;
   line-height: 1em;
 }
-/* line 120, ../sass/components/_team_page.scss */
+/* line 104, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-field-team-title {
   color: #ce9bc0;
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 18px;
 }
-/* line 125, ../sass/components/_team_page.scss */
+/* line 109, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-field-team-bio {
   margin-top: 20px;
 }
-/* line 129, ../sass/components/_team_page.scss */
+/* line 113, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-view-node a {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 14px;
@@ -5528,7 +5527,7 @@ tr.selected td {
   position: relative;
   top: 2px;
 }
-/* line 137, ../sass/components/_team_page.scss */
+/* line 122, ../sass/components/_team_page.scss */
 .view-team .view-content h3 {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 30px;
@@ -5538,14 +5537,24 @@ tr.selected td {
   color: #784580;
   text-transform: uppercase;
   width: 100%;
-  margin-bottom: 0;
-  margin-top: 2.5em;
+  margin: 10px 0;
+  margin-left: 1%;
 }
-/* line 149, ../sass/components/_team_page.scss */
+@media (min-width: 768px) {
+  /* line 122, ../sass/components/_team_page.scss */
+  .view-team .view-content h3 {
+    margin-top: 2.5em;
+  }
+}
+/* line 137, ../sass/components/_team_page.scss */
 .view-team .view-content h3 a:link, .view-team .view-content h3 a:visited {
-  color: #784580;
+  color: #ce9bc0;
 }
-/* line 154, ../sass/components/_team_page.scss */
+/* line 141, ../sass/components/_team_page.scss */
+.view-team .view-content h3:last-child {
+  display: none;
+}
+/* line 145, ../sass/components/_team_page.scss */
 .view-team .view-content .views-field-field-team-member-type a {
   font-family: "Open Sans Condensed", sans-serif;
   font-style: italic;
@@ -5553,74 +5562,127 @@ tr.selected td {
   color: #999;
 }
 
-/* line 164, ../sass/components/_team_page.scss */
+/* line 155, ../sass/components/_team_page.scss */
 .node-team {
   border-top: 3px solid #ce9bc0;
   padding-top: 20px;
 }
-/* line 168, ../sass/components/_team_page.scss */
+/* line 159, ../sass/components/_team_page.scss */
 .node-team .field-name-field-team-image {
   display: block;
   margin-right: 0;
   margin-bottom: 15px;
   float: none;
 }
-/* line 174, ../sass/components/_team_page.scss */
+/* line 165, ../sass/components/_team_page.scss */
 .node-team .field-name-field-team-image img {
   width: 100%;
 }
 @media (min-width: 768px) {
-  /* line 168, ../sass/components/_team_page.scss */
+  /* line 159, ../sass/components/_team_page.scss */
   .node-team .field-name-field-team-image {
     display: block;
     margin-right: 20px;
     float: left;
   }
-  /* line 181, ../sass/components/_team_page.scss */
+  /* line 172, ../sass/components/_team_page.scss */
   .node-team .field-name-field-team-image img {
     width: auto;
   }
 }
-/* line 185, ../sass/components/_team_page.scss */
+/* line 176, ../sass/components/_team_page.scss */
 .node-team .field-group-format {
   margin-left: 0;
 }
 @media (min-width: 768px) {
-  /* line 185, ../sass/components/_team_page.scss */
+  /* line 176, ../sass/components/_team_page.scss */
   .node-team .field-group-format {
     margin-left: 250px;
   }
 }
-/* line 193, ../sass/components/_team_page.scss */
+/* line 184, ../sass/components/_team_page.scss */
 .node-team .field-name-field-name {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 24px;
 }
-/* line 198, ../sass/components/_team_page.scss */
+/* line 189, ../sass/components/_team_page.scss */
+.node-team .field-name-field-team-member-type a,
 .node-team .field-name-field-team-title {
   font-family: "Open Sans Condensed", sans-serif;
   font-style: italic;
   color: #ababab;
   letter-spacing: 0.5px;
+  display: inline-block;
+  margin-top: 5px;
 }
-/* line 205, ../sass/components/_team_page.scss */
+/* line 198, ../sass/components/_team_page.scss */
+.node-team .field-name-field-team-member-type {
+  display: inline-block;
+}
+/* line 201, ../sass/components/_team_page.scss */
+.node-team .field-name-field-team-title {
+  font-style: normal;
+  color: #414042;
+}
+/* line 206, ../sass/components/_team_page.scss */
 .node-team .field-name-field-email {
   margin-top: 20px;
 }
-/* line 208, ../sass/components/_team_page.scss */
+/* line 209, ../sass/components/_team_page.scss */
 .node-team .field-name-field-email a {
   color: #ce9bc0;
 }
-/* line 211, ../sass/components/_team_page.scss */
+/* line 212, ../sass/components/_team_page.scss */
 .node-team .field-name-field-email a:hover {
   text-decoration: underline;
 }
-/* line 217, ../sass/components/_team_page.scss */
+/* line 218, ../sass/components/_team_page.scss */
 .node-team .field-name-field-phone {
   margin-bottom: 20px;
   font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 2px;
+}
+
+/* line 227, ../sass/components/_team_page.scss */
+.page-taxonomy-term .field-name-field-name a {
+  color: #414042;
+}
+/* line 230, ../sass/components/_team_page.scss */
+.page-taxonomy-term .field-name-field-team-bio {
+  margin-top: 20px;
+}
+/* line 233, ../sass/components/_team_page.scss */
+.page-taxonomy-term .node-readmore {
+  float: left;
+  margin-left: 10px;
+}
+/* line 236, ../sass/components/_team_page.scss */
+.page-taxonomy-term .node-readmore a {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 14px;
   font-weight: bold;
-  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ce9bc0;
+  letter-spacing: 0.5px;
+  display: block;
+  padding: 5px 0 10px;
+}
+/* line 132, ../sass/_mixins.scss */
+.page-taxonomy-term .node-readmore a:after {
+  content: "\f101";
+  font-family: amani-icons;
+  font-size: 16px;
+  font-weight: normal;
+  display: inline-block;
+  color: #ce9bc0;
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+
+/* line 243, ../sass/components/_team_page.scss */
+.page-taxonomy-term a.feed-icon {
+  display: none;
 }
 
 /**

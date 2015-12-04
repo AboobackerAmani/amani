@@ -51,8 +51,8 @@ function amani_team_views_default_views() {
   $handler->display->display_options['fields']['field_team_member_type']['table'] = 'field_data_field_team_member_type';
   $handler->display->display_options['fields']['field_team_member_type']['field'] = 'field_team_member_type';
   $handler->display->display_options['fields']['field_team_member_type']['label'] = '';
+  $handler->display->display_options['fields']['field_team_member_type']['alter']['text'] = '[field_team_member_type] ';
   $handler->display->display_options['fields']['field_team_member_type']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_team_member_type']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_team_member_type']['delta_offset'] = '0';
   /* Field: Content: Photo */
   $handler->display->display_options['fields']['field_team_image']['id'] = 'field_team_image';
@@ -187,6 +187,7 @@ function amani_team_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('[field_team_member_type] '),
     t('Read more'),
     t('Search Name'),
     t('Filter by Team'),
