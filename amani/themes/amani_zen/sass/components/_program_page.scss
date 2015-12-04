@@ -125,11 +125,13 @@
         border-bottom: 3px solid $purple-alt;
       }
     }
-    //Get involved block
-    .view-get-involved .views-row {
-      
-      .views-more-link {
-        @include readmore;
+    //Get involved block, Other programs & campaigns
+    .view-get-involved,
+    .view-programs-campaigns {
+       .views-row {
+        .views-more-link {
+          @include readmore;
+        }
       }
     }
   }

@@ -72,7 +72,7 @@ function amani_activity_views_default_views() {
   $handler->display->display_options['fields']['title_1']['field'] = 'title';
   $handler->display->display_options['fields']['title_1']['label'] = '';
   $handler->display->display_options['fields']['title_1']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title_1']['alter']['text'] = 'more';
+  $handler->display->display_options['fields']['title_1']['alter']['text'] = 'Read More';
   $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
@@ -130,6 +130,7 @@ function amani_activity_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
+    t('Read More'),
     t('Program activities'),
     t('All'),
   );
