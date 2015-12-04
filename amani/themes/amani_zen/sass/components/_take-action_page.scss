@@ -69,6 +69,10 @@
   
   .view-get-involved {
     margin-top: 20px;
+    
+    .views-more-link {
+      @include readmore;
+    }
   }
 }
 
