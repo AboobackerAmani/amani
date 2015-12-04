@@ -55,24 +55,14 @@
     .ajax-progress {
       position: absolute;
     }
-    // .views-submit-button {
-    //   .form-submit {
-    //     display: inline-block;
-    //     border: 1px solid #ce9bc0;
-    //     background-color: #ce9bc0;
-    //     color: white;
-    //     margin: 12px 0 0;
-    //     padding: 4px 0;
-    //     width: 120px;
-    //     text-transform: uppercase;
-    //   }
-    // }
   }
   .view-content {
+    margin: 0 -1%;
     display: flex;
     display: -webkit-flex;
     flex-flow: row wrap;
     -webkit-flex-flow: row wrap;
+    margin-bottom: 20px;
     //justify-content: space-between;
     //-webkit-justify-content: space-between;
     .views-row {
@@ -80,28 +70,22 @@
       flex-grow: 0;
        -webkit-flex-grow: 0;
       // max-width: 370px;
-      border-top: 3px solid #ce9bc0;
-      padding-top: 20px;
-      @include breakpoint(768px) {
-        width: 32%;
-        margin: 20px 2% 0 0;
+      //border-top: 3px solid #ce9bc0;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+      @include breakpoint($breakpoint) {
+        width: 31.3%;
+        margin: 20px 1% 0 1%;
         justify-content: space-between;
         -webkit-justify-content: space-between;
-        
-        &.views-row-first,
-        &:nth-child(3n+4) {
-          margin-left: 0;
-        }
-        &.views-row-last,
-        &:nth-child(3n+3) {
-          margin-right: 0;
-        }
-        &.views-row-first.views-row-last {
-         // max-width: 2%;
-        }
+      }
+      
+      .views-field-field-team-member-type {
+        display: none;
       }
       .views-field-field-team-image {
-        height: 246px;
+        max-height: 226px;
         overflow: hidden;
         img {
           height: auto;
@@ -109,7 +93,7 @@
         }
       }
       .views-field-title {
-        margin-top: 22px;
+        margin-top: 15px;
         a {
           color: #ce9bc0;
           font-family: $open-sans-condensed;
@@ -131,6 +115,7 @@
         }
       }
     }
+    
   }
    
   .view-content {
@@ -143,12 +128,18 @@
       color: $purple;
       text-transform: uppercase;
       width: 100%;
-      margin-bottom: 0;
-      margin-top: 2.5em;
+      margin: 10px 0;
+      margin-left: 1%;
+      @include breakpoint($breakpoint) {
+        margin-top: 2.5em;
+      }
       
       a:link, a:visited {
-        color: $purple;
+        color: $purple-primary;
       }
+    }
+    h3:last-child {
+      display: none;
     }
     
     .views-field-field-team-member-type a {
@@ -195,11 +186,21 @@
     font-size: 24px;
   }
   
+  .field-name-field-team-member-type a,
   .field-name-field-team-title {
     font-family: $open-sans-condensed;
     font-style: italic;
     color: $silver-chalice-2;
     letter-spacing: 0.5px;
+    display: inline-block;
+    margin-top: 5px;
+  }
+  .field-name-field-team-member-type {
+    display: inline-block;
+  }
+  .field-name-field-team-title {
+    font-style: normal;
+    color: $grey-dark;
   }
   
   .field-name-field-email {
@@ -217,7 +218,29 @@
   .field-name-field-phone {
     margin-bottom: 20px;
     font-family: $open-sans-condensed;
-    font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+  }
+}
+
+//Taxonomy term page
+.page-taxonomy-term {
+  .field-name-field-name a {
+    color: $grey-dark;
+  }
+  .field-name-field-team-bio {
+    margin-top: 20px;
+  }
+  .node-readmore {
+    float: left;
+    margin-left: 10px;
+     a {
+      @include readmore;
+    }
+  }
+}
+
+.page-taxonomy-term {
+  a.feed-icon {
+    display: none;
   }
 }
