@@ -84,6 +84,12 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
       $date = strtotime("{$month}/{$day}/{$yr}");
       $mr_wrapper->field_incident_date->set($date);
     }
+    else {
+      // Unpublished map record.
+      $mr_wrapper->status->set(0);
+      // Set needs review field on submission.
+      $sub_wrapper->field_sms_sub_status->set(0);
+    }
   }
   // Title
   $title = date('dmY');
