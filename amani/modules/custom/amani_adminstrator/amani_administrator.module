@@ -134,7 +134,8 @@ function amani_administrator_get_media_links() {
 function amani_administrator_get_main_menu_links() {
   $links = array();
   // Checking if the module exists is not entirely necessary
-  // drupal will not create a link to path that doenst exist.
+  // drupal will not create a link to path that doesn't exist.
+  $links['Home'] = '<front>';
   if (module_exists('amani_about')) {
     $links['About'] = 'about';
   }
