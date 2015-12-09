@@ -28,3 +28,16 @@ function amani_media_gallery_list_galleries() {
   module_load_include('inc', 'media_gallery', 'media_gallery.pages');
   return media_gallery_list_galleries(taxonomy_term_load($tids[0]->tid));
 }
+
+/**
+ * Preprocessor for media_gallery_meta.
+ */
+function amani_media_gallery_preprocess_media_gallery_meta(&$variables) {
+
+  // Add date to the gallery description.
+  $parts = explode('/', $variables['link_path']);
+  if (is_numeric($parts[1]) && $gallery_node = node_load($parts[1])) {
+    $date = format_date($gallery_node->created, 'custom', 'F j, Y');
+    $variables['description'] = $variables['description'] . ' | <span>Added ' . $date . '</span>';
+  }
+}
