@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Rename Galleries taxonomy term to Gallery.
+ */
+function amani_media_gallery_update_7100() {
+
+  $gallery_vocabulary = taxonomy_vocabulary_machine_name_load('gallery_collections');
+  $terms = entity_load('taxonomy_term', FALSE, array('vid' => $gallery_vocabulary->vid));
+  $galleries_term = reset($terms);
+  $galleries_term->name = 'Gallery';
+  taxonomy_term_save($galleries_term);
+}
