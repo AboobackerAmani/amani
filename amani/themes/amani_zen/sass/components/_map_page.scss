@@ -146,6 +146,16 @@
       color: $silver-chalice-2;
     }
   }
+  
+  .view-incident-reports {
+    .more-link {
+      margin-left: 10px;
+      text-align: left;
+      a {
+        @include readmore;
+      }
+    }
+  }
 }
 
 //Node page
@@ -161,7 +171,7 @@
     float: none;
     img {
       width: 100%;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     @include breakpoint($breakpoint) {
       float: left;
