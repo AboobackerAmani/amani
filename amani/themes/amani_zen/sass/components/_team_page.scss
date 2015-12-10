@@ -115,9 +115,42 @@
         }
       }
     }
-    
   }
-   
+  
+  //button style
+  .views-exposed-form {
+    .form-submit {
+      font-family: "Open Sans Condensed",sans-serif;
+      background: transparent;
+      border: 1px solid $purple-primary;
+      color:$purple-primary;
+      float: left;
+      font-size: 17px;
+      height: 30px;
+      letter-spacing: 1px;
+      line-height: 1;
+      margin: 20px 20px 0 0;
+      padding: 0;
+      text-transform: uppercase;
+      width: 120px; 
+      @include breakpoint($breakpoint) {
+        margin: 20px 0 0;
+      }
+    }
+    
+    .views-submit-button .form-submit {
+      background: $purple-primary;
+      color:$white;
+    }
+    
+    .views-reset-button .form-submit {
+      margin-right: 0;
+    }
+  }
+  .view-filters .views-exposed-widget.views-reset-button {
+    padding-right: 0;
+  }
+  
   .view-content {
     h3 {
       font-family: $open-sans-condensed;
