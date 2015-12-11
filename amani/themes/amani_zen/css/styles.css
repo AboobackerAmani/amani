@@ -2806,20 +2806,48 @@ footer .field-label {
 }
 /* line 139, ../sass/components/_map_page.scss */
 .page-incident-reports #block-views-incident-reports-latest .views-field-title a {
+  font-family: "Open Sans Condensed", sans-serif;
   color: #ce9bc0;
   text-transform: uppercase;
   font-size: 16px;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
 }
-/* line 145, ../sass/components/_map_page.scss */
+/* line 148, ../sass/components/_map_page.scss */
+.page-incident-reports #block-views-incident-reports-latest .views-field-field-description {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 8px;
+  clear: both;
+}
+/* line 153, ../sass/components/_map_page.scss */
+.page-incident-reports #block-views-incident-reports-latest .views-field-field-description .views-label {
+  display: none;
+}
+/* line 157, ../sass/components/_map_page.scss */
+.page-incident-reports #block-views-incident-reports-latest .views-field-field-description p {
+  margin-bottom: 8px;
+}
+/* line 162, ../sass/components/_map_page.scss */
 .page-incident-reports #block-views-incident-reports-latest .views-field-field-incident-date {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 14px;
   color: #ababab;
+  display: inline-block;
 }
-/* line 151, ../sass/components/_map_page.scss */
+/* line 169, ../sass/components/_map_page.scss */
+.page-incident-reports #block-views-incident-reports-latest .views-field-field-incident-address {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 14px;
+  color: #ce9bc0;
+  display: inline-block;
+  float: right;
+}
+/* line 179, ../sass/components/_map_page.scss */
 .page-incident-reports .view-incident-reports .more-link {
   margin-left: 10px;
   text-align: left;
 }
-/* line 154, ../sass/components/_map_page.scss */
+/* line 182, ../sass/components/_map_page.scss */
 .page-incident-reports .view-incident-reports .more-link a {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 14px;
@@ -2843,45 +2871,45 @@ footer .field-label {
   top: 2px;
 }
 
-/* line 162, ../sass/components/_map_page.scss */
+/* line 190, ../sass/components/_map_page.scss */
 .node-incident-report {
   border-top: 3px solid #ce9bc0;
   padding-top: 20px;
 }
-/* line 166, ../sass/components/_map_page.scss */
+/* line 194, ../sass/components/_map_page.scss */
 .node-incident-report .field-label {
   font-family: "Open Sans Condensed", sans-serif;
 }
-/* line 170, ../sass/components/_map_page.scss */
+/* line 198, ../sass/components/_map_page.scss */
 .node-incident-report .field-name-field-image {
   float: none;
 }
-/* line 172, ../sass/components/_map_page.scss */
+/* line 200, ../sass/components/_map_page.scss */
 .node-incident-report .field-name-field-image img {
   width: 100%;
   margin-bottom: 12px;
 }
 @media (min-width: 768px) {
-  /* line 170, ../sass/components/_map_page.scss */
+  /* line 198, ../sass/components/_map_page.scss */
   .node-incident-report .field-name-field-image {
     float: left;
   }
-  /* line 178, ../sass/components/_map_page.scss */
+  /* line 206, ../sass/components/_map_page.scss */
   .node-incident-report .field-name-field-image img {
     width: auto;
   }
 }
-/* line 184, ../sass/components/_map_page.scss */
+/* line 212, ../sass/components/_map_page.scss */
 .node-incident-report .field-name-field-description {
   margin-left: 0;
 }
 @media (min-width: 768px) {
-  /* line 184, ../sass/components/_map_page.scss */
+  /* line 212, ../sass/components/_map_page.scss */
   .node-incident-report .field-name-field-description {
     margin-left: 250px;
   }
 }
-/* line 191, ../sass/components/_map_page.scss */
+/* line 219, ../sass/components/_map_page.scss */
 .node-incident-report .field-name-field-incident-date,
 .node-incident-report .field-name-field-incident-severity,
 .node-incident-report .field-name-field-incident-report-type,
@@ -2890,7 +2918,7 @@ footer .field-label {
   margin-bottom: 10px;
 }
 @media (min-width: 768px) {
-  /* line 191, ../sass/components/_map_page.scss */
+  /* line 219, ../sass/components/_map_page.scss */
   .node-incident-report .field-name-field-incident-date,
   .node-incident-report .field-name-field-incident-severity,
   .node-incident-report .field-name-field-incident-report-type,
@@ -2898,7 +2926,7 @@ footer .field-label {
     margin-left: 250px;
   }
 }
-/* line 201, ../sass/components/_map_page.scss */
+/* line 229, ../sass/components/_map_page.scss */
 .node-incident-report .field-name-field-incident-date .field-label,
 .node-incident-report .field-name-field-incident-date .field-items,
 .node-incident-report .field-name-field-incident-severity .field-label,
@@ -2909,7 +2937,7 @@ footer .field-label {
 .node-incident-report .field-name-field-links .field-items {
   display: inline-block;
 }
-/* line 205, ../sass/components/_map_page.scss */
+/* line 233, ../sass/components/_map_page.scss */
 .node-incident-report .field-name-field-incident-date .field-label a,
 .node-incident-report .field-name-field-incident-date .field-items a,
 .node-incident-report .field-name-field-incident-severity .field-label a,
@@ -2920,18 +2948,18 @@ footer .field-label {
 .node-incident-report .field-name-field-links .field-items a {
   color: #ce9bc0;
 }
-/* line 210, ../sass/components/_map_page.scss */
+/* line 238, ../sass/components/_map_page.scss */
 .node-incident-report .field-name-field-incident-date .date-display-single,
 .node-incident-report .field-name-field-incident-severity .date-display-single,
 .node-incident-report .field-name-field-incident-report-type .date-display-single,
 .node-incident-report .field-name-field-links .date-display-single {
   color: #ababab;
 }
-/* line 215, ../sass/components/_map_page.scss */
+/* line 243, ../sass/components/_map_page.scss */
 .node-incident-report .field-name-field-incident-media {
   margin-top: 20px;
 }
-/* line 218, ../sass/components/_map_page.scss */
+/* line 246, ../sass/components/_map_page.scss */
 .node-incident-report .field-name-field-incident-media > .field-label {
   margin-left: 0;
   border-bottom: 1px solid #ce9bc0;
@@ -2939,48 +2967,48 @@ footer .field-label {
   padding-bottom: 5px;
 }
 @media (min-width: 768px) {
-  /* line 218, ../sass/components/_map_page.scss */
+  /* line 246, ../sass/components/_map_page.scss */
   .node-incident-report .field-name-field-incident-media > .field-label {
     margin-left: 250px;
   }
 }
-/* line 227, ../sass/components/_map_page.scss */
+/* line 255, ../sass/components/_map_page.scss */
 .node-incident-report .field-name-field-incident-media .content img {
   float: none;
   width: 100%;
   margin-bottom: 10px;
 }
 @media (min-width: 768px) {
-  /* line 227, ../sass/components/_map_page.scss */
+  /* line 255, ../sass/components/_map_page.scss */
   .node-incident-report .field-name-field-incident-media .content img {
     float: left;
     margin-top: -45px;
     width: auto;
   }
 }
-/* line 238, ../sass/components/_map_page.scss */
+/* line 266, ../sass/components/_map_page.scss */
 .node-incident-report .field-name-field-incident-media .content .field-name-media-description {
   margin-left: 0;
 }
 @media (min-width: 768px) {
-  /* line 238, ../sass/components/_map_page.scss */
+  /* line 266, ../sass/components/_map_page.scss */
   .node-incident-report .field-name-field-incident-media .content .field-name-media-description {
     margin-left: 250px;
   }
 }
-/* line 246, ../sass/components/_map_page.scss */
+/* line 274, ../sass/components/_map_page.scss */
 .node-incident-report .field-name-field-incident-geolocation {
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 0;
 }
 @media (min-width: 768px) {
-  /* line 246, ../sass/components/_map_page.scss */
+  /* line 274, ../sass/components/_map_page.scss */
   .node-incident-report .field-name-field-incident-geolocation {
     margin-left: 250px;
   }
 }
-/* line 254, ../sass/components/_map_page.scss */
+/* line 282, ../sass/components/_map_page.scss */
 .node-incident-report .field-name-field-incident-geolocation > .field-label {
   border-bottom: 1px solid #ce9bc0;
   margin-bottom: 20px;
