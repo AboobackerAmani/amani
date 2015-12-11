@@ -421,6 +421,9 @@
   }
   .views-row-even {
     margin-left: 2%;
+    @media (max-width: 480px) {
+      margin-left: 0;
+    }
   }
   .views-row {
     width: 47%;
@@ -455,6 +458,7 @@
       img {
         border: $almost-white solid 5px;
         box-shadow: 1px 1px 1px $grey-clear;
+        box-sizing: border-box;
 
         @media all and (max-width: $breakpoint) {
           width: 150px;
@@ -609,3 +613,25 @@
   border-top: 1px solid $grey-clear;
 }
 
+//Donate button
+.front #block-bean-donate {
+  position: absolute;
+  top: -20px;
+  right: 43px;
+  
+  @media (max-width: 960px) {
+    right: 0;
+  }
+  
+  @media (min-width: 480px) and (max-width: 768px) {
+    top: 40px;
+  }
+  
+  .entity-bean a {
+    @include btn;
+    line-height: 30px;
+    padding: 5px 50px;
+    background: $orange;
+    box-shadow: 1px 3px 5px #ccc;
+  }
+}
