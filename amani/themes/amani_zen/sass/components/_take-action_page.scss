@@ -107,6 +107,29 @@
   }
 }
 
+//Donate button
+.node-type-get-involved {
+  #block-bean-donate {
+    margin-left: 174px;
+    
+    @media (max-width: 480px) {
+      margin-left: 0;
+    }
+    
+    .entity-bean {
+      text-align: center;
+    }
+    .field-item a {
+      @include btn;
+      float: none;
+      line-height: 30px;
+      width: 120px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
 .node-activity {
   margin-bottom: 20px;
   a {
