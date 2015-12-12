@@ -2309,23 +2309,30 @@ footer .field-label {
 
 /* line 617, ../sass/components/_front-page-blocks.scss */
 .front #block-bean-donate {
-  position: absolute;
-  top: -20px;
-  right: 43px;
+  position: fixed;
+  top: 670px;
+  right: 0;
+  z-index: 999;
+}
+@media (max-width: 1300px) {
+  /* line 617, ../sass/components/_front-page-blocks.scss */
+  .front #block-bean-donate {
+    top: 620px;
+  }
+}
+@media (max-width: 1160px) {
+  /* line 617, ../sass/components/_front-page-blocks.scss */
+  .front #block-bean-donate {
+    top: 550px;
+  }
 }
 @media (max-width: 960px) {
   /* line 617, ../sass/components/_front-page-blocks.scss */
   .front #block-bean-donate {
-    right: 0;
+    top: 510px;
   }
 }
-@media (min-width: 480px) and (max-width: 768px) {
-  /* line 617, ../sass/components/_front-page-blocks.scss */
-  .front #block-bean-donate {
-    top: 40px;
-  }
-}
-/* line 630, ../sass/components/_front-page-blocks.scss */
+/* line 635, ../sass/components/_front-page-blocks.scss */
 .front #block-bean-donate .entity-bean a {
   font-family: "Open Sans Condensed",sans-serif;
   background: #ce9bc0;

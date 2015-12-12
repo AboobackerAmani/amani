@@ -615,16 +615,21 @@
 
 //Donate button
 .front #block-bean-donate {
-  position: absolute;
-  top: -20px;
-  right: 43px;
+  position: fixed;
+  top: 670px;
+  right: 0;
+  z-index: 999;
   
-  @media (max-width: 960px) {
-    right: 0;
+  @media (max-width: 1300px) {
+    top: 620px;
   }
   
-  @media (min-width: 480px) and (max-width: 768px) {
-    top: 40px;
+  @media (max-width: 1160px) {
+    top: 550px;
+  }
+   
+  @media (max-width: 960px) {
+    top: 510px;
   }
   
   .entity-bean a {
