@@ -30,7 +30,7 @@ function amani_incident_report_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -42,6 +42,12 @@ function amani_incident_report_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Description */
+  $handler->display->display_options['fields']['field_description']['id'] = 'field_description';
+  $handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
+  $handler->display->display_options['fields']['field_description']['field'] = 'field_description';
+  $handler->display->display_options['fields']['field_description']['alter']['max_length'] = '100';
+  $handler->display->display_options['fields']['field_description']['alter']['trim'] = TRUE;
   /* Field: Content: Date */
   $handler->display->display_options['fields']['field_incident_date']['id'] = 'field_incident_date';
   $handler->display->display_options['fields']['field_incident_date']['table'] = 'field_data_field_incident_date';
@@ -124,6 +130,7 @@ function amani_incident_report_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('Description'),
     t('All incidents'),
     t('<none>'),
   );

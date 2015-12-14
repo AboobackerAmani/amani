@@ -137,13 +137,51 @@
     }
     
     .views-field-title a {
+      font-family: $open-sans-condensed;
       color: $purple-primary;
       text-transform: uppercase;
      font-size: 16px;
+     letter-spacing: 0.5px;
+     margin-bottom: 8px;
     }
+
+     .views-field-field-description {
+       border-bottom: 1px solid #ccc;
+       margin-bottom: 8px;
+       clear: both;
+       
+       .views-label {
+         display: none;
+       }
+       
+       p {
+         margin-bottom: 8px;
+       }
+     }
     
     .views-field-field-incident-date {
+      font-family: $open-sans-condensed;
+      font-size: 14px;
       color: $silver-chalice-2;
+      display: inline-block;
+    }
+    
+    .views-field-field-incident-address {
+      font-family: $open-sans-condensed;
+      font-size: 14px;
+      color: $purple-primary;
+      display: inline-block;
+      float: right;
+    }
+  }
+  
+  .view-incident-reports {
+    .more-link {
+      margin-left: 10px;
+      text-align: left;
+      a {
+        @include readmore;
+      }
     }
   }
 }
@@ -161,7 +199,7 @@
     float: none;
     img {
       width: 100%;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     @include breakpoint($breakpoint) {
       float: left;

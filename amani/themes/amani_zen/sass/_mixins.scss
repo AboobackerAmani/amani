@@ -141,3 +141,24 @@
     top: 2px;
   }
 }
+
+//Button
+@mixin btn {
+  font-family: "Open Sans Condensed",sans-serif;
+  background: $purple-primary;
+  border: 1px solid $purple-primary;
+  color:$white;
+  float: left;
+  font-size: 17px;
+  height: 30px;
+  letter-spacing: 1px;
+  line-height: 1;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+@mixin secon-btn {
+  @include btn;
+  background: transparent;
+  color:$purple-primary;
+}
