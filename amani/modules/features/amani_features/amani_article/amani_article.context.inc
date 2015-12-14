@@ -29,22 +29,26 @@ function amani_article_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-article-block_1' => array(
+        'views-news_and_events-block_2' => array(
           'module' => 'views',
-          'delta' => 'article-block_1',
+          'delta' => 'news_and_events-block_2',
           'region' => 'sidebar_second',
-          'weight' => '0',
+          'weight' => '-10',
         ),
-        'views-article-block_2' => array(
+        'views-comments-block' => array(
           'module' => 'views',
-          'delta' => 'article-block_2',
+          'delta' => 'comments-block',
           'region' => 'sidebar_second',
-          'weight' => '1',
+          'weight' => '-9',
         ),
       ),
     ),
-    'breadcrumb' => 'news-and-events',
-    'menu' => 'news-and-events',
+    'breadcrumb' => array(
+      0 => 'menu-amani-main-menu:news-and-events',
+    ),
+    'menu' => array(
+      0 => 'menu-amani-main-menu:news-and-events',
+    ),
   );
   $context->condition_mode = 0;
 
