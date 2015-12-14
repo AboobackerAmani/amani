@@ -664,7 +664,7 @@ function amani_activity_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'entityreference',
           'settings' => array(
             'link' => 1,
