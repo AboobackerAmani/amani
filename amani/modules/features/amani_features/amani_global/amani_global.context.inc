@@ -62,19 +62,20 @@ function amani_global_context_default_contexts() {
   $context->description = '';
   $context->tag = 'donation';
   $context->conditions = array(
-    'sitewide' => array(
+    'path' => array(
       'values' => array(
-        1 => 1,
+        'get-involved/*' => 'get-involved/*',
+        '<front>' => '<front>',
       ),
     ),
   );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'menu-menu-donate' => array(
-          'module' => 'menu',
-          'delta' => 'menu-donate',
-          'region' => 'donation_region',
+        'bean-donate' => array(
+          'module' => 'bean',
+          'delta' => 'donate',
+          'region' => 'content',
           'weight' => '-10',
         ),
       ),
@@ -99,6 +100,12 @@ function amani_global_context_default_contexts() {
         1 => 1,
       ),
     ),
+    'user' => array(
+      'values' => array(
+        'administrator' => 'administrator',
+        'anonymous user' => 'anonymous user',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
@@ -107,19 +114,25 @@ function amani_global_context_default_contexts() {
           'module' => 'menu',
           'delta' => 'menu-amani-main-menu',
           'region' => 'footer',
-          'weight' => '-40',
+          'weight' => '-44',
         ),
-        'bean-img1' => array(
-          'module' => 'bean',
-          'delta' => 'img1',
+        'menu-menu-social-media' => array(
+          'module' => 'menu',
+          'delta' => 'menu-social-media',
           'region' => 'footer',
-          'weight' => '-10',
+          'weight' => '-43',
         ),
-        'bean-img2' => array(
+        'bean-project-by-pg' => array(
           'module' => 'bean',
-          'delta' => 'img2',
+          'delta' => 'project-by-pg',
           'region' => 'footer',
-          'weight' => '-9',
+          'weight' => '-42',
+        ),
+        'bean-powered-by-amani' => array(
+          'module' => 'bean',
+          'delta' => 'powered-by-amani',
+          'region' => 'footer',
+          'weight' => '-41',
         ),
       ),
     ),

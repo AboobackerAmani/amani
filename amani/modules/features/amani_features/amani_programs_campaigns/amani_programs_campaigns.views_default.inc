@@ -208,7 +208,7 @@ function amani_programs_campaigns_views_default_views() {
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['alter']['max_length'] = '100';
   $handler->display->display_options['fields']['body']['alter']['more_link'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['more_link_text'] = 'Read More';
+  $handler->display->display_options['fields']['body']['alter']['more_link_text'] = 'more';
   $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
@@ -276,24 +276,6 @@ function amani_programs_campaigns_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['nid']['not'] = TRUE;
-
-  /* Display: Other Programs */
-  $handler = $view->new_display('block', 'Other Programs', 'block_2');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Other Programs';
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $translatables['programs_campaigns'] = array(
     t('Master'),
     t('Programs'),
@@ -316,12 +298,11 @@ function amani_programs_campaigns_views_default_views() {
     t('last »'),
     t('Block'),
     t('Other news'),
-    t('Read More'),
     t('Other News'),
     t('Other projects'),
     t('Other Projects and Campaigns'),
     t('Nid'),
-    t('Other Programs'),
+    t('Read More'),
   );
   $export['programs_campaigns'] = $view;
 
