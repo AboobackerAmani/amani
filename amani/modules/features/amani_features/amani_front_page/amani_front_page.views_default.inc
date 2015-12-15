@@ -59,6 +59,8 @@ function amani_front_page_views_default_views() {
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['label'] = '';
+  $handler->display->display_options['fields']['field_text']['alter']['max_length'] = '160';
+  $handler->display->display_options['fields']['field_text']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
   /* Field: Read More Link */
   $handler->display->display_options['fields']['title_1']['id'] = 'title_1';

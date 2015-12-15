@@ -61,22 +61,11 @@ function amani_front_page_context_default_contexts() {
     ),
     'path' => array(
       'values' => array(
-        '*' => '*',
+        '<front>' => '<front>',
       ),
     ),
   );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'menu-menu-social-media' => array(
-          'module' => 'menu',
-          'delta' => 'menu-social-media',
-          'region' => 'footer',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
+  $context->reactions = array();
   $context->condition_mode = 1;
 
   // Translatables
