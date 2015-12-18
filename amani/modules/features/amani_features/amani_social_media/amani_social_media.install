@@ -1,0 +1,12 @@
+<?php
+/**
+ * @File
+ *
+ * Amani Social media install file.
+ */
+
+function amani_social_media_update_7000() {
+  $modules = array('sharethis');
+  module_enable($modules);
+  features_revert(array('amani_social_media'));
+}
