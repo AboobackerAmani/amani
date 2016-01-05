@@ -25,7 +25,8 @@
   .description,
   .button a,
   .views-slideshow-controls-bottom,
-  .title a {
+  .title a,
+  .title  {
     position: absolute;
     text-align: center;
     width: auto;
@@ -35,6 +36,7 @@
     text-align: center;
     color: rgb(255, 255, 255);
   }
+  .title,
   .title a {
     top: 20%;
     -webkit-transform: translateY(-20%);
@@ -84,6 +86,7 @@
   }
 
   .title a,
+  .title,
   .description,
   .button a {
     text-shadow: -1px 0px 6px rgba(0, 0, 0, 0.59);
@@ -113,12 +116,12 @@
   }
 }
 
-//mobile 
+//mobile
 @media (max-width: $desktop) {
   .slideshow {
     max-height: 300px;
     overflow: hidden;
-    
+
     .button a {
       top: 50%;
     }
