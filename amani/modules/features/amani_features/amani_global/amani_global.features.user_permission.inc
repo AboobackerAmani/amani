@@ -33,6 +33,7 @@ function amani_global_user_default_permissions() {
     'name' => 'access all views',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'views',
   );
@@ -907,6 +908,7 @@ function amani_global_user_default_permissions() {
     'name' => 'administer views',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'views',
   );
