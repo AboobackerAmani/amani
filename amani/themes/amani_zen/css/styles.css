@@ -5012,42 +5012,50 @@ tr.selected td {
   Resources page and node page
 */
 /* line 6, ../sass/components/_resources_page.scss */
-.resources-page-view {
+.page-resources {
   font-family: "Open Sans Condensed", sans-serif;
 }
 /* line 9, ../sass/components/_resources_page.scss */
-.resources-page-view .view-filters {
+.page-resources h2.block-title {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #ce9bc0;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+/* line 17, ../sass/components/_resources_page.scss */
+.page-resources #block-views-exp-resources-page {
   float: right;
-  background-color: #f7f6f5;
-  padding: 12px;
-  box-shadow: 0px 3px 3px -2px #777;
   width: 100%;
-  margin: 0;
+  margin: 10px 0 0;
   clear: both;
 }
 @media (min-width: 768px) {
-  /* line 9, ../sass/components/_resources_page.scss */
-  .resources-page-view .view-filters {
-    float: left;
-    width: 25%;
-    margin-left: 0%;
-    margin-right: -25%;
-    margin: 0;
+  /* line 17, ../sass/components/_resources_page.scss */
+  .page-resources #block-views-exp-resources-page {
     float: right;
   }
 }
-/* line 24, ../sass/components/_resources_page.scss */
-.resources-page-view .view-filters form .views-exposed-form div {
+/* line 27, ../sass/components/_resources_page.scss */
+.page-resources #block-views-exp-resources-page form .views-exposed-form {
+  background-color: #f7f6f5;
+  box-shadow: 0px 3px 3px -2px #777;
+}
+/* line 31, ../sass/components/_resources_page.scss */
+.page-resources #block-views-exp-resources-page form .views-exposed-form div {
   float: none;
   padding: 0;
 }
-/* line 30, ../sass/components/_resources_page.scss */
-.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets > div {
+/* line 36, ../sass/components/_resources_page.scss */
+.page-resources #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets {
+  padding: 12px;
+}
+/* line 39, ../sass/components/_resources_page.scss */
+.page-resources #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets > div {
   margin-bottom: 10px;
 }
-/* line 34, ../sass/components/_resources_page.scss */
-.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets .form-submit {
-  width: 48%;
+/* line 43, ../sass/components/_resources_page.scss */
+.page-resources #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets .form-submit {
+  width: 49%;
   float: left;
   margin: 0;
   border: 1px solid #ce9bc0;
@@ -5058,36 +5066,37 @@ tr.selected td {
   height: 37px;
   letter-spacing: 1px;
 }
-/* line 46, ../sass/components/_resources_page.scss */
-.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets .form-submit#edit-submit-resources {
+/* line 55, ../sass/components/_resources_page.scss */
+.page-resources #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets .form-submit#edit-submit-resources {
   background: #ce9bc0;
   color: white;
-  margin-right: 5px;
+  margin-right: 1%;
 }
-/* line 52, ../sass/components/_resources_page.scss */
-.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets .form-submit#edit-reset {
+/* line 61, ../sass/components/_resources_page.scss */
+.page-resources #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets .form-submit#edit-reset {
   background: transparent;
+  margin-left: 1%;
 }
-/* line 57, ../sass/components/_resources_page.scss */
-.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets label[for="edit-date-min"], .resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets label[for="edit-date-max"] {
+/* line 67, ../sass/components/_resources_page.scss */
+.page-resources #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets label[for="edit-date-min"], .page-resources #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets label[for="edit-date-max"] {
   display: none;
 }
-/* line 58, ../sass/components/_resources_page.scss */
-.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets input[type="text"] {
+/* line 68, ../sass/components/_resources_page.scss */
+.page-resources #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets input[type="text"] {
   border: 1px solid #cccccc;
   height: 35px;
   border-radius: 4px;
 }
-/* line 63, ../sass/components/_resources_page.scss */
-.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets select, .resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets input {
+/* line 73, ../sass/components/_resources_page.scss */
+.page-resources #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets select, .page-resources #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets input {
   background: white;
 }
-/* line 64, ../sass/components/_resources_page.scss */
-.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets label, .resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets input {
+/* line 74, ../sass/components/_resources_page.scss */
+.page-resources #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets label, .page-resources #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets input {
   color: #ce9bc0;
 }
-/* line 65, ../sass/components/_resources_page.scss */
-.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets select {
+/* line 75, ../sass/components/_resources_page.scss */
+.page-resources #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets select {
   border: 1px solid #aaa;
   outline: none;
   box-sizing: border-box;
@@ -5097,41 +5106,37 @@ tr.selected td {
   font-size: 14px;
   color: #ce9bc0;
 }
-/* line 75, ../sass/components/_resources_page.scss */
-.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets select, .resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets input, .resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets .form-type-date-popup {
+/* line 85, ../sass/components/_resources_page.scss */
+.page-resources #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets select, .page-resources #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets input, .page-resources #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets .form-type-date-popup {
   width: 100%;
 }
-/* line 76, ../sass/components/_resources_page.scss */
-.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets label {
+/* line 86, ../sass/components/_resources_page.scss */
+.page-resources #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets label {
   text-transform: uppercase;
   font-size: 12px;
   margin-bottom: 3px;
   letter-spacing: 1.3px;
 }
-/* line 84, ../sass/components/_resources_page.scss */
-.resources-page-view .view-filters form .views-exposed-form .views-exposed-widgets #edit-date-wrapper .views-widget > div {
+/* line 94, ../sass/components/_resources_page.scss */
+.page-resources #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets #edit-date-wrapper .views-widget > div {
   margin-bottom: 10px;
 }
-/* line 92, ../sass/components/_resources_page.scss */
-.resources-page-view .view-content {
+/* line 103, ../sass/components/_resources_page.scss */
+.page-resources .view-resources .view-content {
   position: relative;
   width: 100%;
   margin: 0;
   clear: both;
 }
 @media (min-width: 768px) {
-  /* line 92, ../sass/components/_resources_page.scss */
-  .resources-page-view .view-content {
-    float: left;
-    width: 75%;
-    margin-left: 0%;
-    margin-right: -75%;
+  /* line 103, ../sass/components/_resources_page.scss */
+  .page-resources .view-resources .view-content {
     clear: none;
     margin-top: -12px;
   }
 }
-/* line 103, ../sass/components/_resources_page.scss */
-.resources-page-view .view-content .views-row {
+/* line 114, ../sass/components/_resources_page.scss */
+.page-resources .view-resources .view-content .views-row {
   width: 48%;
   display: inline-block;
   float: left;
@@ -5141,45 +5146,45 @@ tr.selected td {
   margin: 12px 1% 20px 1%;
 }
 @media (min-width: 768px) {
-  /* line 103, ../sass/components/_resources_page.scss */
-  .resources-page-view .view-content .views-row {
+  /* line 114, ../sass/components/_resources_page.scss */
+  .page-resources .view-resources .view-content .views-row {
     width: 31%;
     margin-left: 0;
     margin-right: 12px;
   }
-  /* line 116, ../sass/components/_resources_page.scss */
-  .resources-page-view .view-content .views-row:nth-child(3n+0) {
+  /* line 127, ../sass/components/_resources_page.scss */
+  .page-resources .view-resources .view-content .views-row:nth-child(3n+0) {
     margin-right: 0;
   }
 }
 @media (min-width: 1200px) {
-  /* line 103, ../sass/components/_resources_page.scss */
-  .resources-page-view .view-content .views-row {
+  /* line 114, ../sass/components/_resources_page.scss */
+  .page-resources .view-resources .view-content .views-row {
     margin-right: 15px;
   }
 }
-/* line 125, ../sass/components/_resources_page.scss */
-.resources-page-view .view-content .views-row .views-field {
+/* line 136, ../sass/components/_resources_page.scss */
+.page-resources .view-resources .view-content .views-row .views-field {
   margin-bottom: 5px;
 }
-/* line 128, ../sass/components/_resources_page.scss */
-.resources-page-view .view-content .views-row .views-field, .resources-page-view .view-content .views-row .views-field span, .resources-page-view .view-content .views-row .views-field a {
+/* line 139, ../sass/components/_resources_page.scss */
+.page-resources .view-resources .view-content .views-row .views-field, .page-resources .view-resources .view-content .views-row .views-field span, .page-resources .view-resources .view-content .views-row .views-field a {
   color: #acacac;
   font-size: 14px;
 }
-/* line 134, ../sass/components/_resources_page.scss */
-.resources-page-view .view-content .views-row .views-field-title {
+/* line 145, ../sass/components/_resources_page.scss */
+.page-resources .view-resources .view-content .views-row .views-field-title {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 5px;
 }
-/* line 139, ../sass/components/_resources_page.scss */
-.resources-page-view .view-content .views-row .views-field-title a {
+/* line 150, ../sass/components/_resources_page.scss */
+.page-resources .view-resources .view-content .views-row .views-field-title a {
   color: #ce9bc0;
   font-size: 16px;
 }
-/* line 145, ../sass/components/_resources_page.scss */
-.resources-page-view .view-content .views-row .views-field-field-link {
+/* line 156, ../sass/components/_resources_page.scss */
+.page-resources .view-resources .view-content .views-row .views-field-field-link {
   margin: 0;
   border-top: 1px solid #ccc;
   padding: 8px 10px;
@@ -5188,12 +5193,12 @@ tr.selected td {
   text-align: right;
   text-transform: uppercase;
 }
-/* line 154, ../sass/components/_resources_page.scss */
-.resources-page-view .view-content .views-row .views-field-field-link a {
+/* line 165, ../sass/components/_resources_page.scss */
+.page-resources .view-resources .view-content .views-row .views-field-field-link a {
   color: #ce9bc0;
 }
-/* line 157, ../sass/components/_resources_page.scss */
-.resources-page-view .view-content .views-row .views-field-field-link a::before {
+/* line 168, ../sass/components/_resources_page.scss */
+.page-resources .view-resources .view-content .views-row .views-field-field-link a::before {
   content: "";
   background: url("../images/icons/download.png") no-repeat;
   width: 16px;
@@ -5202,14 +5207,14 @@ tr.selected td {
   display: inline-block;
   margin: -2px 5px;
 }
-/* line 169, ../sass/components/_resources_page.scss */
-.resources-page-view .view-content .views-row .views-field-field-image {
+/* line 180, ../sass/components/_resources_page.scss */
+.page-resources .view-resources .view-content .views-row .views-field-field-image {
   margin-bottom: 10px;
   height: 150px;
   overflow-y: hidden;
 }
-/* line 174, ../sass/components/_resources_page.scss */
-.resources-page-view .view-content .views-row .views-field-field-image img {
+/* line 185, ../sass/components/_resources_page.scss */
+.page-resources .view-resources .view-content .views-row .views-field-field-image img {
   border: 2.5px solid #fff;
   margin: 0px -3px;
   box-shadow: 1.7px 2px 4px -3px #333;
@@ -5217,59 +5222,59 @@ tr.selected td {
   height: 145px;
 }
 
-/* line 187, ../sass/components/_resources_page.scss */
+/* line 198, ../sass/components/_resources_page.scss */
 .node-type-resource #content {
   font-family: "Open Sans Condensed", sans-serif;
   width: 840px;
   margin: auto;
 }
-/* line 192, ../sass/components/_resources_page.scss */
+/* line 203, ../sass/components/_resources_page.scss */
 .node-type-resource #content .breadcrumb, .node-type-resource #content #page-title {
   display: none;
 }
-/* line 196, ../sass/components/_resources_page.scss */
+/* line 207, ../sass/components/_resources_page.scss */
 .node-type-resource #content .field-name-field-image {
   margin-bottom: -10px;
 }
-/* line 200, ../sass/components/_resources_page.scss */
+/* line 211, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content {
   font-weight: 100;
   background: #fcfbfb;
   padding: 35px;
   box-shadow: 0px 3px 3px -2px #777;
 }
-/* line 206, ../sass/components/_resources_page.scss */
+/* line 217, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons {
   float: right;
 }
-/* line 209, ../sass/components/_resources_page.scss */
+/* line 220, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons h3 {
   display: inline-block;
   margin-right: 5px;
   font-family: "Open Sans", sans-serif;
 }
-/* line 215, ../sass/components/_resources_page.scss */
+/* line 226, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons .social-menu {
   width: 100px;
   display: inline-block;
   vertical-align: bottom;
 }
-/* line 220, ../sass/components/_resources_page.scss */
+/* line 231, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons .social-menu div {
   width: 30px;
   height: 36px;
   display: inline-block;
   margin: 0px 2px;
 }
-/* line 227, ../sass/components/_resources_page.scss */
+/* line 238, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons .social-menu .social-media-facebook {
   background: url(../images/icons/black-facebook.png) no-repeat 0 0;
 }
-/* line 230, ../sass/components/_resources_page.scss */
+/* line 241, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons .social-menu .social-media-twitter {
   background: url(../images/icons/black-twitter.png) no-repeat 0 0;
 }
-/* line 236, ../sass/components/_resources_page.scss */
+/* line 247, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content h1#node-title {
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -5278,44 +5283,44 @@ tr.selected td {
   margin-top: 10px;
   clear: both;
 }
-/* line 245, ../sass/components/_resources_page.scss */
+/* line 256, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body {
   font-size: 16px;
 }
-/* line 248, ../sass/components/_resources_page.scss */
+/* line 259, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .meta-info {
   color: #acacac;
   border-left: 2px solid;
   padding-left: 10px;
   margin-bottom: 30px;
 }
-/* line 254, ../sass/components/_resources_page.scss */
+/* line 265, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .meta-info p {
   margin-bottom: 10px;
 }
-/* line 259, ../sass/components/_resources_page.scss */
+/* line 270, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .field-name-body {
   font-family: "Open Sans", sans-serif;
   line-height: 30px;
 }
-/* line 265, ../sass/components/_resources_page.scss */
+/* line 276, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-label {
   font-family: "Open Sans", sans-serif;
   margin-bottom: 5px;
 }
-/* line 270, ../sass/components/_resources_page.scss */
+/* line 281, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-items > div {
   display: inline-block;
   background: #d9d9d9;
   padding: 5px 10px;
   margin-right: 5px;
 }
-/* line 276, ../sass/components/_resources_page.scss */
+/* line 287, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-items > div a {
   color: #7f7f7f;
   text-transform: uppercase;
 }
-/* line 283, ../sass/components/_resources_page.scss */
+/* line 294, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download {
   font-family: "Open Sans", sans-serif;
   background: #ebebeb;
@@ -5324,22 +5329,22 @@ tr.selected td {
   margin-top: 30px;
   overflow: hidden;
 }
-/* line 291, ../sass/components/_resources_page.scss */
+/* line 302, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download > div {
   display: inline-block;
   vertical-align: middle;
   width: 49%;
 }
-/* line 297, ../sass/components/_resources_page.scss */
+/* line 308, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download .field-name-field-media {
   float: left;
   font-size: 16px;
 }
-/* line 301, ../sass/components/_resources_page.scss */
+/* line 312, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download .field-name-field-media a {
   color: #131313;
 }
-/* line 306, ../sass/components/_resources_page.scss */
+/* line 317, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download .field-name-field-link {
   float: right;
   background: #ce9bc0;
@@ -5347,9 +5352,62 @@ tr.selected td {
   padding: 20px 45px;
   font-size: 24px;
 }
-/* line 313, ../sass/components/_resources_page.scss */
+/* line 324, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download .field-name-field-link a {
   color: white;
+}
+
+@media (max-width: 980px) {
+  /* line 336, ../sass/components/_resources_page.scss */
+  .page-resources.sidebar-second #main {
+    position: relative;
+  }
+  /* line 340, ../sass/components/_resources_page.scss */
+  .page-resources.sidebar-second #content {
+    width: 100%;
+    margin: 0;
+    float: none;
+  }
+  /* line 346, ../sass/components/_resources_page.scss */
+  .page-resources.sidebar-second .region-sidebar-second {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 120px;
+    right: 0;
+  }
+}
+
+/* line 356, ../sass/components/_resources_page.scss */
+.add-fliter-title {
+  display: block;
+}
+/* line 359, ../sass/components/_resources_page.scss */
+.add-fliter-title:before {
+  content: "Filters";
+  padding: 5px 20px;
+  text-transform: uppercase;
+  border: 1px solid #474f5e;
+  position: relative;
+  top: -40px;
+  right: 0;
+  float: right;
+  display: block;
+  cursor: pointer;
+}
+/* line 372, ../sass/components/_resources_page.scss */
+.add-fliter-title .views-exposed-form {
+  position: relative;
+  top: -30px;
+  width: 100%;
+  clear: both;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s ease;
+}
+/* line 382, ../sass/components/_resources_page.scss */
+.add-fliter-title .views-exposed-form.show {
+  max-height: 430px;
 }
 
 /*
