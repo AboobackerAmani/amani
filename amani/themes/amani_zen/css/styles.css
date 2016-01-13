@@ -5385,6 +5385,7 @@ tr.selected td {
 /* line 359, ../sass/components/_resources_page.scss */
 .add-fliter-title:before {
   content: "Filters";
+  color: #ce9bc0;
   padding: 5px 20px;
   text-transform: uppercase;
   border: 1px solid #474f5e;
@@ -5395,7 +5396,7 @@ tr.selected td {
   display: block;
   cursor: pointer;
 }
-/* line 372, ../sass/components/_resources_page.scss */
+/* line 373, ../sass/components/_resources_page.scss */
 .add-fliter-title .views-exposed-form {
   position: relative;
   top: -30px;
@@ -5405,7 +5406,7 @@ tr.selected td {
   overflow: hidden;
   transition: max-height 0.7s ease;
 }
-/* line 382, ../sass/components/_resources_page.scss */
+/* line 383, ../sass/components/_resources_page.scss */
 .add-fliter-title .views-exposed-form.show {
   max-height: 430px;
 }
