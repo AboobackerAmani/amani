@@ -130,6 +130,65 @@
   }
 }
 
+// Node activites page
+.node-type-activity {
+  #content {
+    width: 100%;
+    margin: 0;
+    @include breakpoint($breakpoint) {
+      @include zen-grid-item(8, 1);
+      padding-right: 15px;
+    }
+  }
+  .sidebars {
+    width: 100%;
+    margin: 0;
+    
+    @include breakpoint($breakpoint) {
+      @include zen-grid-item(4, 1);
+      margin: 0;
+      float: right;
+    }
+    
+    @media (min-width: $desktop) {
+      padding-left: 15px;
+      box-sizing: border-box;
+    }
+    
+    .region-sidebar-second {
+      width: 100%;
+      margin: 0;
+    }
+    
+    .region-sidebar-second .block-views {
+      background-color: $undefinedebb;
+      padding: 15px;
+      text-transform: uppercase;
+      border-bottom: 1px solid $grey-clear;
+      
+      h2.block-title {
+        font-family: "Open Sans Condensed",sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: $purple-primary;
+        margin: 5px 0 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $grey-clear;
+      }
+    }
+    
+    a {
+      font-family: "Open Sans Condensed",sans-serif;
+      color: $purple-primary;
+      margin: 10px 0;
+      display: block;
+      &.active, &:hover {
+        color: $purple-alt;
+      }
+    }
+  }
+}
 .node-activity {
   margin-bottom: 20px;
   a {
