@@ -177,3 +177,45 @@ Drupal.behaviors.my_custom_behavior = {
   };
 
 })(jQuery);
+
+
+// Resource fliter toggle
+(function ($) {
+  Drupal.behaviors.filter = {
+    attach: function(context, settings) {
+      
+      var ft = $('#block-views-exp-resources-page');
+      
+      $(document).ready(function() {
+        checkTablet();                
+      });
+      
+      $(window).resize(function() {
+        checkTablet();        
+      });
+      
+      function checkTablet() {
+        if($(window).width() < 980 ) {
+          // if the nav menu and nav button are both visible,
+          // then the responsive nav transitioned from open to non-responsive, then back again.
+          // re-hide the nav menu and remove the hidden class
+          $(ft).addClass('add-fliter-title');
+          
+          $(ft).click(function () {
+            $(".views-exposed-form").toggleClass("show");
+          });
+        }
+        if($(window).width() > 979 && ft.hasClass('add-fliter-title')) {
+          // if the navigation menu and nav button are both hidden,
+          // then the responsive nav is closed and the window resized larger than 979.
+          // just display the nav menu which will auto-hide at < 980 width.
+          $(ft).removeAttr('class');
+        }        
+        
+      }
+      
+      
+    }
+  }
+
+}(jQuery))
