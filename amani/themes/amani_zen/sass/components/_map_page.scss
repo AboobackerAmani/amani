@@ -286,3 +286,29 @@
     }
   }
 }
+
+//Add record button
+#block-bean-amani-add-map-record {
+  position: relative;
+  
+  a.button {
+    @include btn;
+    background-color: $purple-alt;
+    height: 17px;
+    padding: 0.55em 1.5em 0.8em 1.5em;
+    position: absolute;
+    left: 20px;
+    top: -220px;
+    
+    &:hover {
+      background-color: $purple-primary;
+    }
+  }
+  
+  a.button:before {
+    content: "+";
+    font-size: 20px;
+    color: $white;
+    margin-right: 10px;
+  }
+}
