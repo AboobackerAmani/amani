@@ -3066,6 +3066,42 @@ footer .field-label {
   padding-bottom: 5px;
 }
 
+/* line 291, ../sass/components/_map_page.scss */
+#block-bean-amani-add-map-record {
+  position: relative;
+}
+/* line 294, ../sass/components/_map_page.scss */
+#block-bean-amani-add-map-record a.button {
+  font-family: "Open Sans Condensed",sans-serif;
+  background: #ce9bc0;
+  border: 1px solid #ce9bc0;
+  color: #fff;
+  float: left;
+  font-size: 17px;
+  height: 30px;
+  letter-spacing: 1px;
+  line-height: 1;
+  padding: 0;
+  text-transform: uppercase;
+  background-color: #513e79;
+  height: 17px;
+  padding: 0.55em 1.5em 0.8em 1.5em;
+  position: absolute;
+  left: 20px;
+  top: -220px;
+}
+/* line 303, ../sass/components/_map_page.scss */
+#block-bean-amani-add-map-record a.button:hover {
+  background-color: #ce9bc0;
+}
+/* line 308, ../sass/components/_map_page.scss */
+#block-bean-amani-add-map-record a.button:before {
+  content: "+";
+  font-size: 20px;
+  color: #fff;
+  margin-right: 10px;
+}
+
 /**
  * @file
  * Style for menus.
