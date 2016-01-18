@@ -383,7 +383,6 @@ Drupal.behaviors.paragraphs_adjustments = {
 		var divBHeights = $('.view-display-id-region_country_name_blocks .item-list').map(function() {
 			
 			heght = $(this).height();
-			console.log(heght);
 			return $(this).height();
 		
 		}).get();
@@ -675,7 +674,16 @@ Drupal.behaviors.paragraphs_adjustments = {
 
 	$('#block-menu-menu-social-media').once().clone().insertAfter('#footer ul.menu');
 	
+
+// Mobile menu toggle 
+
+	$('#block-system-main-menu').hide();
 	
+	$('#mobile-toggle').click(function() {
+	
+		$('#block-system-main-menu').slideToggle("slow");
+	
+	});	
 
 // Show/hide submenu items on hover 
 

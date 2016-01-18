@@ -1,0 +1,856 @@
+@media all and (max-width: $breakpoint) {
+
+.form-textarea,
+.form-text {
+  background: $grey;
+  border: 0px none;
+  border-radius: 0px;
+  padding: 5px 10px;
+  max-width: 100%;
+}
+
+.form-submit {
+  @include button-style();
+}
+
+input.form-text {
+	background:white;
+	border:4px solid $soft-grey;
+}
+
+textarea.form-textarea {
+	background:white;
+	border:4px solid $soft-grey;
+}
+
+
+select.form-select {
+	width:100%;
+	font-style:italic;
+	background:white;
+	font-size:1em;
+	border:1px solid $text-grey;
+	padding:.2em .6em;
+	@include border-radius(0, 0);
+}
+
+/* Contact Form */
+
+body.section-contact {
+	
+	h1#page-title {
+		margin-top:0;
+		font-weight:300;
+		color:$blue;
+		font-size:3em;
+		line-height:30px;
+		margin-bottom:1.2em;
+	}
+	
+	h2 {
+		font-weight:600;
+		text-transform:uppercase;
+		font-size:1.2em;
+		color:$blue;
+		letter-spacing:2px;
+		display:block;
+		float:left;
+		width:100%;
+		margin-bottom:.6em;
+	}
+	
+	#block-amani-global-site-contact-info {
+		display:block;
+		width:100%;
+		float:left;
+		margin-top:8em;
+		margin-bottom:6em;
+	}
+	
+	#contact-site-form {
+		input[type="text"] {
+			display:block;
+			width:100%;
+			padding:.6em;
+			float:left;
+		}
+		
+		background:$soft-grey;
+		padding:2em 2em;
+		font-size:1.1em;
+		line-height:1.5em;
+		display:block;
+		float:left;
+		width:100%;
+		margin-bottom:4em;
+		position:relative;
+		
+		textarea {
+			border:none;
+			padding:.6em;
+			width:100%;
+			float:left;
+			margin-bottom:.4em;
+		}
+		
+		label {
+			font-weight:300;
+			font-size:1em;
+			display:block;
+			width:100%;
+			float:left;
+			margin-top:1em;
+		}
+		
+		input[type="submit"] {
+			background:$blue;
+			color:white;
+			text-align:left;
+			padding:1em 2em 2em 2em;
+			width:100%;
+			font-size:1.2em;
+			border:0;
+			display:block;
+			float:left;
+			margin-top:2em;
+			position:absolute;
+			bottom:-100px;
+			left:0;
+			&:hover {
+				opacity:0.9;
+			}
+		}
+	
+	}
+	
+	
+	
+	
+}
+
+
+
+/* Volunteer Application Form */
+
+body.section-volunteer-application {
+
+	p {
+		font-size:1.1em;
+		line-height:1.5em;
+	}
+	
+	h1#page-title {
+		margin-top:0;
+		font-weight:300;
+		color:$blue;
+		font-size:3em;
+		line-height:30px;
+	}
+
+	form {
+		
+		display:block;
+		float:left;
+		padding-bottom:6em;
+	
+		p {
+		
+			input[type="text"] {
+				display:block;
+				width:100%;
+				padding:.6em;
+			}
+			
+			background:$soft-grey;
+			padding:2em 1em;
+			font-size:1.1em;
+			line-height:1.5em;
+			display:block;
+			float:left;
+			width:96%;
+			
+			&:nth-child(3) {
+				display:none;
+			}
+			&:nth-child(2) {
+				display:none;
+			}
+			&:last-child {
+				background:white;
+				padding:0;
+				input[type="submit"] {
+					background:$blue;
+					color:white;
+					text-align:left;
+					padding:1em 2em 2em 2em;
+					width:100%;
+					font-size:1.2em;
+					border:0;
+					display:block;
+					float:left;
+					
+				}
+			}
+			
+			label {
+				font-weight:300;
+				font-size:1em;
+				display:block;
+				width:100%;
+				float:left;
+				margin-top:1em;
+			}
+		
+		}
+	
+	}
+
+}
+
+
+/* Partner Application Form */
+
+body.section-partner-application {
+	
+	#top-scroll {
+		
+		&:before {
+			content:"";
+			display:block;
+			float:right;
+			position:relative;
+			margin-top:-200px;
+			padding-right:0;
+			margin-right:-305px;
+			width:12px;
+			height:24px;
+			background:url(../images/icons/right-arrow.png) top left no-repeat;
+		}
+	
+	}
+}
+
+#partner-application-form {
+		
+		display:block;
+		float:left;
+		padding-bottom:6em;
+		border-top:2px solid #ccc;
+		padding-top:2em;
+		margin-top:3em;
+		
+		h2 {
+			font-weight:600;
+			text-transform:uppercase;
+			font-size:1.2em;
+			color:$blue;
+			letter-spacing:2px;
+			display:block;
+			float:left;
+			width:100%;
+			margin-bottom:.6em;
+		}
+		
+		input[type="submit"] {
+			background:$blue;
+			color:white;
+			text-align:left;
+			padding:1em 2em 2em 2em;
+			width:100%;
+			font-size:1.2em;
+			border:0;
+			display:block;
+			float:left;
+			margin-top:2em;
+			
+		}
+		
+		
+		.sf-form-required {
+			color:$blue;
+		}
+		
+		.sf-form-required-div {
+			display:block;
+			float:left;
+			width:100%;
+			margin-top:-3.8em;
+			margin-bottom:3em;
+		}
+		
+		.sf-form-text {
+			
+		}
+		
+		input[type="checkbox"] {
+			display:block;
+			height:1em;
+			width:1em;
+		}
+		
+		input {
+			border:none;
+			padding:.6em;
+			width:100%;
+			margin-bottom:.4em;
+		}
+		
+		select {
+			border:none;
+			padding:.6em;
+			width:100%;
+			margin-bottom:.4em;
+		}
+		
+		textarea {
+			border:none;
+			padding:.6em;
+			width:100%;
+			margin-bottom:.4em;
+		}
+	
+		.sf-form-box {
+		
+			input[type="text"] {
+				display:block;
+				width:100%;
+				padding:.6em;
+			}
+			
+			background:$soft-grey;
+			padding:2em 2em;
+			font-size:1.1em;
+			line-height:1.5em;
+			display:block;
+			float:left;
+			width:100%;
+			margin-bottom:4em;
+			
+			
+			
+			label {
+				font-weight:300;
+				font-size:1em;
+				display:block;
+				width:100%;
+				float:left;
+				margin-top:1em;
+			}
+		
+		}
+	
+}
+
+body.section-partner-application {
+
+	p {
+		font-size:1.1em;
+		line-height:1.5em;
+	}
+	
+	h1#page-title {
+		margin-top:0;
+		font-weight:300;
+		color:$blue;
+		font-size:3em;
+		line-height:30px;
+	}
+	
+
+}
+
+
+/* Donation page */
+
+body.node-type-structure.donatepage {
+	
+	.paragraphs-items-field-paragraphs {
+		margin-top:0;
+	}
+	
+	#main {padding-top:50px;}
+
+	.IATS_Div {
+		display:block;
+		float:left;
+		width:100% !important;
+		position:relative;
+		z-index:10;
+	}
+	
+	.IATS_EventTitle {
+		display:none;
+	}
+	
+	.IATS_AmountSectionTitle {
+		position: absolute;
+		top: -34px;
+		left: 0;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 16px;
+		letter-spacing: 1px;
+	}
+	
+	.IATS_EventDescription {
+		display:block;
+		float:left;
+		background:$soft-grey;
+		font-size:2.4em;
+		line-height:1.4em;
+		padding:20px 20px 0 20px;
+		color:$text-black;
+		font-weight:300;
+		
+	}
+	
+	.IATS_OtherAmtMinimum {
+		display:none;
+		
+	}
+	
+	.IATS_AmountDiv {
+		background:$soft-grey;
+		display:block;
+		float:left;
+		width:100%;
+		font-size:14px;
+		padding:20px;
+	}
+	
+	select {
+		background:white !important;
+		border:0;
+		@include border-radius(0,0);
+	}
+	
+	.IATS_PaymentSectionNote {
+		display:none;
+	}
+	
+	#IATS_PaymentSectionDiv {
+		display:block;
+		float:left;
+		width:100%;
+		padding:20px;
+		background:$soft-grey;
+		font-size:14px;
+		margin-top:60px;
+		position:relative;
+		
+		.IATS_PaymentItemDiv {
+			position:relative;
+			margin-top:20px;
+		}
+		
+		input {
+			border:0;
+			padding:4px 8px;
+			width:100%;
+			height:40px;
+			margin-bottom:10px;
+		}
+		
+		label {
+			font-weight:normal;
+			
+		}
+		
+		textarea {
+			width:100%;
+			border:0;
+		}
+		
+		#IATS_PaymentItemDiv_Country{
+			label {
+				width:auto;
+				padding-right:20px;
+			}
+		}
+		
+		#IATS_PaymentItemDiv_Title {
+			label {
+				width:auto;
+				padding-right:20px;
+			}
+		}
+		
+		#IATS_ReoccurringDiv_ScheduleType {
+			margin-top:10px;
+		}
+		
+		#IATS_Payment_ReoccurringDiv {
+			display:block;
+			width:710px;
+			float:none;
+		}
+		
+		#IATS_Payment_AccountTypeDiv {
+			display:block;
+			width:710px;
+			float:none;
+		}
+		
+		#IATS_Payment_PaymentFrequencyDiv {
+			width:710px;
+		}
+		
+		#IATS_PaymentItemInput_Comment {
+			margin-bottom:40px;
+		}
+		
+		#IATS_Payment_CreditCardDiv {
+			display:block;
+			width:100%;
+			margin-top:0;
+		}
+		
+		#IATS_Payment_DebitDiv {
+			display:block;
+			width:100%;
+			margin-top:0;
+		}
+		
+		#IATS_Payment_BeginDate {
+			width:100px;
+		}
+		
+		#IATS_Payment_EndDate {
+			width:100px;
+		}
+		
+		#IATS_ACHCancellationStmDiv {
+			padding-left:0;
+			padding-top:4px;
+			width:100%;
+		}
+		
+		#IATS_ACHRecourseStmDiv {
+			padding-left:0;
+			padding-top:4px;
+		}
+		
+		#IATS_Payment_CVV2 {
+			display:inline;
+			width:80px !important;
+		}
+		
+		#IATS_Payment_ExpiryMonth {
+			margin-right:10px;
+		}
+		
+		#IATS_Payment_AccountNumber1 {
+			display:inline;
+			width:130px;
+			margin-right:10px;
+		}
+		
+		#IATS_Payment_AccountNumber2 {
+			display:inline;
+			width:130px;
+			margin-right:10px;
+		}
+		
+		#IATS_Payment_AccountNumber3 {
+			display:inline;
+			width:130px;
+			margin-right:10px;
+		}
+		
+		#IATS_Payment_AccountNumber4 {
+			display:inline;
+			width:130px;
+			margin-right:10px;
+		}
+		
+		.IATS_PaymentFrequencyItemDiv {	
+			display:block;
+			float:none;
+			padding-left:0 !important;
+			margin-top:10px !important;
+			input {
+				float:none;
+				width:auto;
+				height:auto;
+			}
+			label {
+				float:none;
+				width:auto;
+				padding-left:10px;
+				margin-right:30px;
+			}
+		}
+		
+		.IATS_PaymentTypeItemDiv {	
+			display:block;
+			float:left;
+			padding-left:0 !important;
+			margin-top:10px !important;
+			width:700px;
+			input {
+				float:none;
+				width:auto;
+				height:auto;
+			}
+			label {
+				float:none;
+				width:auto;
+				padding-left:10px;
+				margin-right:30px;
+			}
+		}
+	}
+	
+	
+	
+	.IATS_PaymentSectionTitle {
+		position: absolute;
+		top: -34px;
+		left: 0;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 16px;
+		letter-spacing: 1px;
+	}
+	
+	#IATS_ProcessAction_Button {
+		font-size:28px;
+		border:0;
+		background:$blue;
+		padding:20px 0;
+		color:white;
+		display:block;
+		float:left;
+		width:350px;
+		margin-left:220px;
+	}
+	
+	.IATS_AmountItemDiv {
+		float:left;
+		margin-right:10px;
+		background:white;
+		width:220px;
+		padding:1em;
+	}
+	
+	.IATS_RadioAmtLabel {
+		font-weight:300;
+		font-size:20px;
+	}
+	
+	.IATS_Action {
+		margin-left:0;
+		padding-left:0;
+		position:relative;
+		z-index:10;
+	}
+	
+	#other-giving {
+		font-size:28px;
+		border:0;
+		background:white;
+		padding: 30px 0 20px 0;
+		color: $orange;
+		display: block;
+		float: left;
+		width: 350px;
+		text-align: center;
+		margin-top: -30px;
+		margin-left: 222px;
+		height: 28px;
+		z-index:100;
+		font-weight:300;
+		border:1px solid $orange;
+		margin-bottom:50px;
+	}
+	
+	.other-giving-block {
+		display:block;
+		z-index:100;
+	}
+	
+	.IATS_SecureDataDiv {
+		padding-left:270px;
+		padding-top:30px;
+		float:left;
+	}
+	
+	.donate-top-text {
+		margin-top:0 !important;
+		.field-name-field-large-header-text {
+			margin-bottom:20px;
+		}
+	}
+	
+	.donate-thank-you {
+		display:block;
+		float:left;
+		width:100%;
+		margin-right:0;
+		margin-bottom:0 !important;
+		z-index:10;
+		position:relative;
+		.field-name-field-large-header-text {
+			margin-bottom:40px;
+			text-align:center;
+			width:100%;
+		}
+		
+		.field-name-field-paragraph-text {
+			width:400px;
+		}
+	}
+	
+	.giving-with-confidence {
+		display:block;
+		float:right !important;
+		width:auto;
+		margin-top: -192px !important;
+		z-index:200;
+		position:relative;
+		a {
+			width: 240px;
+			height: 120px;
+			line-height:1.2em;
+			z-index:1000;
+			position:relative;
+			&.shofterlinkbox:after {
+				margin-top:76px;
+			}
+		}
+	}
+
+}
+
+
+/* Newsletter signup form */
+
+#block-mailchimp-signup-newsletter-signup-form {
+	
+	display:block;
+	position:relative;
+	float:left;
+	width:100%;
+	
+	.mailchimp-signup-subscribe-form-description {
+		margin-bottom:6px;
+	}
+	
+	input[type="submit"] {
+		background:$orange;
+		margin-left:0;
+		margin-bottom:40px;
+	}
+	
+	.form-item {
+		display:block;
+		float:none;
+		margin-bottom:10px;
+		label {
+			font-weight:300;
+			display:none;
+		}
+		
+		input {
+			border:0;
+			margin-bottom:6px;
+		}
+		
+		input#edit-mergevars-email {
+			width:100%;
+		}
+		
+		input#edit-mergevars-fname {
+			width:100%;
+			margin-right:10px;
+		}
+		
+		input#edit-mergevars-lname {
+			width:100%;
+		}
+		
+		
+	}
+}
+
+
+/* Become a corporate sponsor contact form */
+
+body.becomesponsor {
+
+	.block-webform {
+		
+		display:block;
+		float:left;
+		width:100%;
+		margin-top:30px;
+	
+		.form-item {
+			display:inline-block;
+			margin-bottom:10px;
+			float:left;
+		}
+	
+		label {
+			display:none;
+		}
+		
+		input {
+			border:0;
+			background:$soft-grey;
+			width:100%;
+			display:block;
+			padding:10px 20px;
+		}
+		
+		div.webform-component--company {
+			display:block;
+			width:100%;
+		}
+		
+		div.webform-component--email-address {
+			display:block;
+			width:100%;
+		}
+		
+		div.webform-component--first-name {
+			display:block;
+			width:100%;
+			margin-right:0;
+		}
+		
+		div.webform-component--last-name {
+			display:block;
+			width:100%;
+		}
+		
+		div.form-textarea-wrapper {
+			display:block;
+			width:100%;
+			margin-bottom:20px;
+		}
+		
+		textarea {
+			border:0;
+			background:$soft-grey;
+			width:100%;
+			display:block;
+			padding:10px 20px;
+			height:210px;
+		}
+		
+		input[type="submit"] {
+			width:auto;
+			background:$grey;
+			clear: both;
+			margin: 0 auto;
+			display: block;
+			padding: 14px 50px;
+			font-size: 17px;
+		}
+	
+	}
+
+}
+
+}

@@ -1,0 +1,104 @@
+/* Styling for banner region */
+
+
+@media all and (max-width: $breakpoint) {
+
+	#banner {
+
+		display:block;
+		width:100%;
+		padding-top:0;
+		
+		.block-bean {
+			display:block;
+			height:auto;
+			position:relative;
+			
+			.field-name-field-banner-image {
+				display:block;
+				z-index:0;
+				width:100%;
+				height:auto;
+				float:left;
+				overflow:visible;
+				/*position: relative;
+				padding-left:3000px;
+				margin-left:-3000px;
+				padding-right:3000px;
+				margin-right:-3000px;
+				height:400px;
+				background:$soft-grey;
+				overflow:hidden;*/
+				img {
+					width:240%;
+					height:auto;
+					margin-left:-50%;
+					max-width:240%;
+				}
+			}
+			
+			.field-name-field-image-attribution {
+				color:white;
+				position:absolute;
+				bottom:22px !important;
+				right:10px !important;
+				font-size:11px;
+				opacity:.7;
+			}
+			
+			.field-name-field-image-attribution-link a {
+				color:white;
+				position:absolute;
+				bottom:8px !important;
+				right:10px !important;
+				font-size:11px;
+				opacity:.7;
+			}
+			
+			.field-name-field-banner-text {
+				width:100%;
+				display:block;
+				margin:0 auto;
+				position: relative;
+				.field-items {
+					display:block;
+					background:$blue;
+					color: white;
+					  font-weight: 600;
+					  font-size: 2.2em;
+					  position: relative;
+					  float: left;
+					  margin-top:0;
+					  width: 100%;
+					  height: auto;
+					  padding: 2em 1em 1em 1em;
+					  line-height: 1.2em;
+					  z-index:0;
+					  margin-bottom:-20px;
+				  }
+			}
+			
+			.field-name-field-header-text {
+				width:100%;
+				display:block;
+				margin:0 auto;
+				position: absolute;
+				left:2em;
+				top:2em;
+				.field-items {
+				  display: block;
+				  float: left;
+				  margin-top: 0;
+				  z-index: 0;
+				  position: relative;
+				  color: white;
+				  font-style: italic;
+				  font-size: 1.2em;
+				}
+			}
+		}
+	
+	}
+
+
+}

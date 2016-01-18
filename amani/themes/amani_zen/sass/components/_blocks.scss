@@ -3,46 +3,7 @@
  * Style for drupal blocks.
  */
 
-/**
- * Style by region
- */
 
-// Header
-.region-header {
-
-  .block {
-
-    .block-title { @include element-invisible(); }
-  }
-}
-
-// Footer
-.region-footer {
-
-  .block {
-    float: left;
-
-    .block-title { @include element-invisible(); }
-  }
-}
-
-/**
- * Style by type
- */
-
-// Blocks menu
-.block-menu {
-
-  ul.menu {
-    margin: 0 0 rhythm(1) 0;
-    padding: 0;
-
-    li {
-      list-style: none outside none;
-      margin-bottom: .3em;
-    }
-  }
-}
 
 /**
  * Unique blocks
@@ -79,7 +40,46 @@
 	
 	
 	
-	
+		/**
+	 * Style by region
+	 */
+
+	// Header
+	.region-header {
+
+	  .block {
+
+		.block-title { @include element-invisible(); }
+	  }
+	}
+
+	// Footer
+	.region-footer {
+
+	  .block {
+		float: left;
+
+		.block-title { @include element-invisible(); }
+	  }
+	}
+
+	/**
+	 * Style by type
+	 */
+
+	// Blocks menu
+	.block-menu {
+
+	  ul.menu {
+		margin: 0 0 rhythm(1) 0;
+		padding: 0;
+
+		li {
+		  list-style: none outside none;
+		  margin-bottom: .3em;
+		}
+	  }
+	}	
 	
 	
 	.paragraphs-item-pull-quote {
@@ -220,7 +220,7 @@
 		
 		.views-field-title {
 			font-weight:600;
-			font-size:2em;
+			font-size:1.9em;
 			letter-spacing:1px;
 			line-height:1.4em;
 			padding-left:1em;
@@ -451,41 +451,43 @@
 		}
 	
 	}
+	
+		// Search form
+	#block-search-form {
+	  display: inline-block;
+	  float: right;
+	  text-align: right;
+	  margin-top: -4px;
+
+	  //screen bigger than 768px
+	  @media all and (min-width: $breakpoint) {
+		margin-top: 0;
+		width: auto;
+		position: absolute;
+		top: 24px;
+		right: 0;
+	  }
+
+	  @include hide-contextual-links();
+
+	  .form-text {
+		background-color: $soft-grey;
+		@include font-size(12px);
+		font-weight: normal;
+		height: 24px;
+		padding:0 4px;
+		width: 170px;
+	  }
+
+	  .form-actions {
+		display: none;
+	  }
+	}
 
 }
 
 
-// Search form
-#block-search-form {
-  display: inline-block;
-  float: right;
-  text-align: right;
-  margin-top: -4px;
 
-  //screen bigger than 768px
-  @media all and (min-width: $breakpoint) {
-    margin-top: 0;
-    width: auto;
-    position: absolute;
-    top: 24px;
-    right: 0;
-  }
-
-  @include hide-contextual-links();
-
-  .form-text {
-    background-color: $soft-grey;
-    @include font-size(12px);
-    font-weight: normal;
-    height: 24px;
-    padding:0 4px;
-    width: 170px;
-  }
-
-  .form-actions {
-    display: none;
-  }
-}
 
 
 
@@ -718,15 +720,17 @@
 	
 	
 	}
+	
+	/* Disqus */
+
+	#block-disqus-disqus-comments {
+		margin-top:4em;
+	}
 
 }
 
 
-/* Disqus */
 
-#block-disqus-disqus-comments {
-	margin-top:4em;
-}
 
 /* News blocks */
 

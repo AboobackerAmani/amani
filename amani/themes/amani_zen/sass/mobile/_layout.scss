@@ -1,0 +1,1046 @@
+/**
+ * @file
+ * General layout
+ */
+
+@media all and (max-width: $breakpoint) {
+
+html {
+
+}
+
+#header,
+#main,
+#footer {
+  margin: 0 auto;
+  position: relative;
+}
+
+body {
+	overflow-x:hidden;
+	background-size:100% auto;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.norightmargin {
+	margin-right:0 !important;
+}
+
+/* Hide stupid email this page links */
+
+ul.links.inline {display:none;}
+
+
+div.breadcrumb {
+	display:none;
+}
+
+
+
+	body.not-front {
+		#main {
+			padding-top:50px;
+		}
+	}
+	
+	#content {
+		@include zen-grid-container;
+		margin:0 auto;
+		width:100%;
+		min-height:0 !important;
+	}
+
+	hr {
+		
+		width:100%;
+		border:1px solid $blue;
+	}
+	
+	span.first-word {
+		font-weight:700;
+	}
+	
+	
+	p {
+		font-size:1.1em;
+		line-height:1.5em;
+	}
+	
+	
+	
+	
+	/* Paragraphs module - bundle styling */
+	
+	body.node-type-structure {
+	
+		.field-name-field-background-colour {
+			display:none;
+		}
+	
+		overflow-x:hidden;
+	
+		#main {padding-top:0;padding-bottom:10em;}
+		
+		.paragraphs-item-divider-line {
+			display:block;
+			float:left;
+			width:100%;
+			hr {
+				width:100%;
+				border:1px solid $blue;
+				margin:0;
+			}
+			
+		}
+		
+		h1#page-title {display:block;}
+		
+		.paragraphs-item-structure-header-text {
+			font-size:2.2em;
+			line-height:1.4em;
+			color:$blue;
+			font-weight:300;
+			letter-spacing:-1px;
+		}
+
+		.paragraphs-items-field-paragraphs {
+			display:block;
+			float:none;
+			margin-top:1em;
+			.field-name-field-paragraphs {
+				display:block;
+			
+				.field-item {
+					display:block;
+					width:100%;
+				}
+			}
+		}
+		
+		.entity-paragraphs-item .field-items h3 {
+				font-size: 1em;
+			  font-weight: 600;
+			  text-transform: uppercase;
+			  margin-bottom: 16px;
+			}
+		
+		.paragraphs-item-paragraph-text-with-header-text {
+			
+			display:block;
+			float:left;
+			position:relative;
+			
+			.field-name-field-header-text {
+				font-size:1.4em;
+				font-weight:600;
+				text-transform:uppercase;
+				margin-bottom:16px;
+			}
+			
+			.field-name-field-paragraph-text {
+				font-size:1.3em;
+				line-height:1.7em;
+				font-weight:300;
+			}
+			
+			.field-name-field-large-header-text {
+				font-size:3em;
+				line-height:1.4em;
+				color:$blue;
+				font-weight:300;
+				margin-bottom:1em;
+			}
+			
+			.field-name-field-images {
+				display:block;
+				float:none;
+				padding-right:0;
+				padding-bottom:1em;
+				img {
+					width:100%;
+					height:auto;
+				}
+			}
+		}
+		
+		.paragraphs-item-callout-box-full-width-grey {
+
+			padding-top:3em;
+			padding-bottom:3em;
+			clear:both;
+			display:block;
+			float:left;
+			position:relative;
+			
+			&:before {
+				content: "";
+				position: absolute;
+				display: block;
+				top: 0px;
+				left: -9998px;
+				height:100%;
+				z-index: -1;
+				border-right: 9999px solid $soft-grey;
+				box-shadow: 9999px 0px 0px 0px $soft-grey;
+			  }
+			  
+			  &.bluebackground {
+			  	&:before {
+			  		border-right: 9999px solid $blue;
+					box-shadow: 9999px 0px 0px 0px $blue;
+			  	}
+			  }
+			
+			.field-name-field-header-text {
+				font-size:1.4em;
+				font-weight:600;
+				text-transform:uppercase;
+				margin-bottom:16px;
+			}
+			
+			.field-name-field-paragraph-text {
+				font-size:1.3em;
+				line-height:1.7em;
+				font-weight:300;
+			}
+			
+			.field-name-field-header-text-large {
+				font-size:3em;
+				line-height:1.4em;
+				color:$blue;
+				font-weight:300;
+				margin-bottom:.4em;
+			}
+			
+			.field-name-field-images {
+				display:block;
+				float:left;
+				padding-right:2em;
+				padding-bottom:1em;
+			}
+			
+			
+		}
+		
+		.paragraphs-item-light-grey-text-box {
+		
+			display:block;
+			width:100%;
+			background:$soft-grey;
+			padding:3em 2em;
+			float:left;
+			margin-right:0;
+			margin-bottom:20px;
+			
+			
+			.field-name-field-box-title {
+				color:$blue;
+				font-size:2.2em;
+				margin-bottom:20px;
+				font-weight:400;
+			}
+			
+			.field-name-field-box-copy {
+				font-size:1.3em;
+				line-height:1.7em;
+				font-weight:300;
+			}
+		}
+		
+		.paragraphs-item-paragraph-text-with-anchor {
+		
+			  display: block;
+			  float: left;
+			  border-top: 1px solid $grey;
+			  padding-top: 4em;
+			
+			.field-name-field-header-text {
+				font-size:1.4em;
+				font-weight:600;
+				text-transform:uppercase;
+				margin-bottom:16px;
+			}
+			
+			.field-name-field-paragraph-text {
+				font-size:1.3em;
+				line-height:1.7em;
+				font-weight:300;
+			}
+			
+			.field-name-field-header-text-large {
+				font-size:3em;
+				line-height:1.4em;
+				margin-top:1.2em;
+				font-weight:300;
+				margin-bottom:.6em;
+			}
+			
+			
+			.field-name-field-anchor-name {
+				display:none;
+			}
+		}
+		
+		.paragraphs-item-simple-text-with-right-side-imag {
+			display:block;
+			float:none;
+			
+			.field-name-field-header-text {
+				font-size:1.4em;
+				font-weight:600;
+				text-transform:uppercase;
+				margin-bottom:16px;
+			}
+			
+			.field-name-field-paragraph-text {
+				font-size:1.3em;
+				line-height:1.7em;
+				font-weight:300;
+			}
+			
+			.field-name-field-images {
+				display:block;
+				float:none;
+				padding-left:0;
+				padding-bottom:1em;
+				img {
+					width:100%;
+					height:auto;
+				}
+			}
+		}
+		
+		.paragraphs-item-link-block-blue {
+			display:block;
+			float:left;
+			margin-top:1em;
+			width:100%;
+			a {
+				color:white;
+				background:$blue;
+				width:100%;
+				padding:1em 0 1em 0;
+				display:block;
+				font-size:1.6em;
+				height:auto;
+				margin-right:0;
+				float:left;
+				text-indent:1em;
+				&:after {
+					content:"\f178";
+					color:white;
+					font-family:$fontawesome;
+					display:block;
+					float:right;
+					position:relative;
+					margin-top:0;
+					font-size:2em;
+					padding-right:1em;
+				}
+			}
+		}
+		
+		.paragraphs-item-link-block-grey {
+			margin-top:1em;
+			display:block;
+			float:none;
+			
+			a {
+				color:white;
+				background:$grey;
+				width:100%;
+				padding:1em 0 1em 0;
+				display:block;
+				font-size:1.6em;
+				height:auto !important;
+				float:none;
+				text-indent:1em;
+				&:after {
+					content:"\f178";
+					color:white;
+					font-family:$fontawesome;
+					display:block;
+					float:right;
+					
+					position:relative;
+					margin-top:0;
+					font-size:2em;
+					padding-right:1em;
+				}
+				&.shorterlinkbox {
+					&:after {
+						
+						/*content:"\f178";
+						color:white;
+						font-family:$fontawesome;
+						font-size:2em;*/
+						content:"";
+						display:block;
+						float:right;
+						position:relative;
+						margin-top:0;
+						padding-right:20px;
+						width:12px;
+						height:24px;
+						background:url(../images/icons/right-arrow.png) top left no-repeat;
+					}
+				}
+			}
+		}
+		
+		.paragraphs-item-light-grey-text-box-narrower {
+		
+			display:block;
+			float:left;
+			background:$soft-grey;
+			padding: 2.6em 1.2em 1.4em 1.2em;
+			width: 100%;
+			margin-right: 0;
+			font-size: 100%;
+			height:auto;
+			margin-bottom:1.4em;
+			
+			.field-name-field-box-pre-title {
+				color:$text-grey;
+				font-size:1.4em;
+				text-transform:uppercase;
+				margin-bottom:.9em;
+				display:block;
+				letter-spacing:1px;
+			}
+			.field-name-field-box-title {
+				color:$blue;
+				font-size:2.2em;
+				display:block;
+				margin-bottom:1em;
+				letter-spacing:1px;
+			}
+			.field-name-field-box-copy {
+				font-size:1.2em;
+				line-height:1.8em;
+				font-weight:300;
+			}
+		
+		}
+		
+		.paragraphs-item-light-grey-text-box-with-link-to {
+		
+			.field-type-link-field {
+				a {
+					color:$text-grey;
+					background:$soft-grey;
+					width:100%;
+					padding:1.5em 0;
+					display:block;
+					font-size:1.5em;
+					float:left;
+					line-height:1.4em;	
+					text-align:center;	
+					margin-bottom:1em;
+					margin-right:1em;		
+				}
+			}
+			
+			.field-name-field-anchor-to-link-to {
+				display:none;
+			}
+		}
+		
+		#values-wrapper {
+			display:block;
+			width:100%;
+			float:none;
+		
+			#values-line {
+				display:block;
+				width:100%;
+				float:none;
+				margin-left:0;
+				
+				span {
+					display:block;
+					border:1px solid $soft-grey;
+					padding:.6em 2em;
+					background:white;
+					float:left;
+					font-size:.8em;
+					cursor:pointer;
+					&.value-active {
+						background:$blue;
+					}
+				}
+			}
+			
+			.value-content-block {
+				display:none;
+				float:left;
+				width:100%;
+				margin-top:2em;
+				&.value-content-active {
+					display:block;
+				}
+				.value-header {
+					font-size:16px;
+					  font-weight: 600;
+					  text-transform: uppercase;
+					  margin-bottom: 10px;
+				}
+				.value-body {
+					font-size: 36px;
+					  line-height: 1.4em;
+					  color: $blue;
+					  font-weight: 300;
+					  margin-bottom: 1em;
+				}
+			}
+		
+		}
+		
+		
+		/* Media kit page */
+		
+		.view-peace-geeks-resources {
+			
+			.view-header h3 {
+				font-size:1.4em;
+				font-weight:600;
+				text-transform:uppercase;
+				margin-bottom:16px;
+			}
+			
+			.views-row {
+				background:$soft-grey;
+				display:block;
+				width:100%;
+				float:left;
+				margin-bottom:2em;
+				height:auto;
+				
+				.views-field-field-image {
+					display:block;
+					float:none;
+					margin-right:0;
+					img {
+						width:100%;
+						height:auto;
+					}
+				}	
+				.views-field-title {
+					font-size:1.2em;
+					font-weight:600;
+					color:$blue;
+					margin-top:1.8em;
+					margin-bottom:.4em;
+					text-transform:uppercase;
+					padding:0 1em;
+				}
+				
+				.views-field-field-date {
+					font-style:italic;
+					margin-bottom:.4em;
+					padding:0 1em;
+				}
+				
+				.views-field-body {
+					width:96%;
+					display:block;
+					margin-bottom:1em;
+					padding:0 1em;
+				}
+				
+				.file-viewonline {
+					display:none;
+				}
+				
+				.file-download {
+					font-weight:600;
+				}
+				
+				.views-field-nothing {
+					padding:0 1em;
+					margin-bottom:2em;
+					a {
+						color:$text-black;
+						text-transform:uppercase;
+					}
+				}
+			}
+			
+			&.view-display-id-block {
+			
+				.view-content {
+					display:block;
+					width:100%;
+					float:left;
+					margin-top:2em;
+				}
+				
+			}
+			
+			&.view-display-id-block_1 {
+				.views-field-body {
+					margin-top:2em;
+				}	
+			}
+		
+		
+		}
+		
+		/* Supporters/Sponsors page */
+		
+		.paragraphs-item-add-a-view {
+			display:block;
+			float:left;
+			.view-id-supporters.view-display-id-block_1 {
+				 display:block;
+				 margin-top:-3em;
+				 position:relative;
+				.views-row {
+					display:block;
+					float:left;
+					width:100%;
+				}
+				
+				.views-column {
+					display:block;
+					float:none;
+					width:100%;
+					margin-right:0;
+					background:$soft-grey;
+					padding:2em .2em;
+					margin-bottom:2em;
+					height:auto;
+					&.views-column-last {
+						margin-right:0;
+					}
+					&:hover {
+						.views-field-field-short-sponsor-info {
+							display:block;
+							
+					
+						}
+						
+						.views-field-field-image {
+							display:none;
+						}
+					}
+				}
+				
+				.views-field-field-image {
+					display:block;
+					vertical-align:middle;
+					width:100%;
+					height:auto;
+					text-align:center;
+					img {
+						height:auto;
+						max-width:90%;
+						margin:0 auto;
+						display:inline-block;
+						width:60%;
+					}
+					
+				}
+				
+				.views-field-field-short-sponsor-info {
+					display:none;
+					text-align:center;
+					text-transform:lowercase;
+					font-weight:600;
+					font-size:1em;
+					width:100%;
+					height:auto;
+					background:$blue;
+					z-index:200;
+					position:relative;
+					padding:3em 2em 2em 2em;
+					margin-top:-26px;
+					margin-left:0;
+					color:$text-black;
+					.sponsor-info {
+						
+					}
+					.sponsor-title {
+						text-transform:uppercase;
+					}
+					a.visit-sponsor {
+						display:block;
+						color:$text-black;
+						text-decoration:underline;
+						margin-top:1em;
+					}
+				}
+				
+				.views-field-title {
+					display:none;
+					text-align:center;
+					text-transform:uppercase;
+					font-weight:400;
+					font-size:1em;
+					
+				}
+				
+				
+				
+				
+			}
+			
+			
+			/* Main list of sponsors */ 
+			
+			.view-id-supporters.view-display-id-page {
+				display:block;
+				width:100%;
+				float:none;
+				margin-top:-2em;
+				
+				h3 {
+					font-size: 1.4em;
+					  font-weight: 600;
+					  text-transform: uppercase;
+					  margin-bottom: 16px;
+					  display:none;
+				}
+				
+				.views-row {
+					display:block;
+					float:none;
+					width:100%;
+				}
+				
+				.views-column {
+					display:block;
+					float:none;
+					width:100%;
+					margin-right:0;
+					background:$soft-grey;
+					padding:2em .2em;
+					margin-bottom:2em;
+					height:auto;
+					&.views-column-last {
+						margin-right:0;
+					}
+					&:hover {
+						.views-field-field-short-sponsor-info {
+							display:block;
+							
+					
+						}
+						
+						.views-field-field-image {
+							display:none;
+						}
+					}
+				}
+				
+				.views-field-field-image {
+					display:block;
+					vertical-align:middle;
+					width:100%;
+					height:auto;
+					text-align:center;
+					img {
+						height:auto;
+						max-width:90%;
+						margin:0 auto;
+						display:inline-block;
+						width:60%;
+					}
+				}
+				
+				.views-field-title {
+					display:none;
+					text-align:center;
+					text-transform:uppercase;
+					font-weight:400;
+					font-size:1em;
+				}
+				
+				.views-field-field-short-sponsor-info {
+					display:none;
+					text-align:center;
+					text-transform:lowercase;
+					font-weight:600;
+					font-size:1em;
+					width:100%;
+					height:auto;
+					background:$blue;
+					z-index:200;
+					position:relative;
+					padding:3em 2em 2em 2em;
+					margin-top:-26px;
+					margin-left:0;
+					color:$text-black;
+					.sponsor-info {
+						
+					}
+					.sponsor-title {
+						text-transform:uppercase;
+					}
+					a.visit-sponsor {
+						display:block;
+						color:$text-black;
+						text-decoration:underline;
+						margin-top:1em;
+					}
+				}
+				.views-exposed-form {
+					display:block;
+					width:100%;
+					padding:1em 2em;
+					background:$soft-grey;
+					margin-bottom:2em;
+					#edit-field-partner-type-tid-wrapper > label {
+			
+							text-transform:uppercase;
+							display:block;
+							width:100%;
+							margin-bottom:1em;
+				
+					}
+					.form-item {
+						display:inline-block;
+						background:white;
+						font-weight:300;
+						font-style:italic;
+						padding:.4em 1em;
+						margin-right:4px;
+						margin-bottom:8px;
+						&:hover {
+							background:$blue;
+							
+						}
+				
+						input[type="radio"] {
+							display:none;
+						}
+				
+						label {
+							cursor:pointer;
+							font-weight:300;
+						}
+					}
+					
+					
+				}
+			
+			
+			}
+			
+			/* Highlighted sponsor */
+			
+			.view-id-supporters.view-display-id-block_3 {
+			
+				  /*padding-right: 3000px;
+				  margin-right: -3000px;
+				  background: #E6E6E6;
+				  padding-left: 3000px;
+				  margin-left: -3000px;*/
+				  padding-top: 1em;
+				  padding-bottom: 7em;
+				  clear: both;
+				  display: block;
+				  float: left;
+				  margin-bottom:-201px;
+				  position:relative;
+				  
+				  &:before {
+					content: "";
+					position: absolute;
+					display: block;
+					top: 0px;
+					left: -9998px;
+					height:100%;
+					z-index: -1;
+					border-right: 9999px solid $soft-grey;
+					box-shadow: 9999px 0px 0px 0px $soft-grey;
+				  }
+			
+				h3 {
+					font-size: 1.4em;
+					font-weight: 600;
+					text-transform: uppercase;
+					margin-bottom: 20px;
+				}
+				
+				.views-field-field-image {
+					display:block;
+					float:none;
+					img {
+						width:70%;
+						height:auto;
+					}
+				}
+				
+				.views-field-title {
+					font-size: 3em;
+					  line-height: 1.4em;
+					  color: $blue;
+					  font-weight: 300;
+					  letter-spacing: -1px;
+					  display:block;
+					  float:none;
+					  margin-left:0;
+				}
+				
+				.views-field-body {
+					display:block;
+					margin-right:0;
+					float:none;
+					margin-top:10px;
+					font-size:1.1em;
+					line-height:1.6em;
+					width:100%;
+					margin-bottom:3em;
+				}
+			
+			}
+		}
+	
+	}
+	
+	
+	/* Team Pages */
+	
+	body.page-team {
+	
+		#main {padding-top:3em;padding-bottom:8em;}
+	
+		h1#page-title {display:block;}
+		
+		h2 {
+			font-size:2.2em;
+			line-height:1.4em;
+			color:$blue;
+			font-weight:300;
+			letter-spacing:-1px;
+		}
+	
+		.views-exposed-form {
+			display:block;
+			width:100%;
+			padding:1em 2em;
+			background:$soft-grey;
+			margin-bottom:2em;
+			#edit-field-team-member-type-tid-wrapper > label {
+			
+					text-transform:uppercase;
+					display:block;
+					width:100%;
+					margin-bottom:1em;
+				
+			}
+			.form-item {
+				display:inline-block;
+				background:white;
+				font-weight:300;
+				font-style:italic;
+				padding:.4em 1em;
+				margin-right:4px;
+				cursor:pointer;
+				margin-bottom:8px;
+				input[type="radio"] {
+					display:none;
+				}
+				
+				label {
+					cursor:pointer;
+					font-weight:300;
+				}
+			}
+		}
+		
+		.views-responsive-grid {
+		
+			.views-row {
+				display:block;
+				float:left;
+				width:100%;
+			}
+			
+			.views-column {
+				display:block;
+				width:100%;
+				margin-right:0;
+				float:left;
+				background:$soft-grey;
+				margin-bottom:2em;
+				padding-bottom:1em;
+				height:auto;
+				&.views-column-last {
+					margin-right:0;
+				}
+			}
+			
+			.views-field-title {
+				padding:.4em 1em;
+				text-transform:uppercase;
+				letter-spacing:.5px;
+				a {
+					text-transform:uppercase;
+					font-weight:600;
+					font-size:1.3em;
+					letter-spacing:1px;
+				}
+				
+			}
+			
+			.views-field-field-team-image {
+				display:block;
+				position:relative;
+				z-index:10;
+				height:auto;
+				margin-bottom:1em;
+				
+				img {
+					width:100%;
+					height:auto;
+					
+				}
+			}
+			
+			.views-field-field-team-title {
+				padding:.4em 1em;
+				text-transform:uppercase;
+				display:block;
+				float:left;
+				margin-top:0;
+				position:relative;
+				z-index:200;
+				font-weight:600;
+				width:100%;
+				font-size:1.1em;
+				letter-spacing:1px;
+				color:$text-grey;
+				text-align:left;
+				margin-bottom:1em;
+				span.field-content {
+					
+				}
+				
+			}
+			
+			.views-field-field-team-bio {
+				padding:.2em 1em .4em 1em;
+				margin-bottom:1em;
+			}
+		
+		}
+	
+	}
+
+	
+
+	
+	
+	
+
+
+
+}

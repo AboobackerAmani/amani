@@ -19,7 +19,7 @@
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
 
-    <meta name="viewport" content="width=1200">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--[if IEMobile]><meta http-equiv="cleartype" content="on"><![endif]-->
 
   <?php print $styles; ?>

@@ -2,6 +2,7 @@
  * @file
  * General layout
  */
+@media all and (min-width: $breakpoint) {
 
 #header,
 #main,
@@ -9,6 +10,10 @@
   max-width: 980px;
   margin: 0 auto;
   position: relative;
+}
+
+#page {
+  padding-bottom: 180px;
 }
 
 body {
@@ -36,7 +41,7 @@ div.breadcrumb {
 	display:none;
 }
 
-@media all and (min-width: $breakpoint) {
+
 
 	body.not-front {
 		#main {
