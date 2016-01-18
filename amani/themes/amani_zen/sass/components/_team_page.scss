@@ -51,6 +51,10 @@
         width: 330px;
         height: 28px;
       }
+      
+      @media (max-width: 1044px) and (min-width: 767px){
+        width: 180px;
+      }
     }
     .ajax-progress {
       position: absolute;
@@ -128,8 +132,15 @@
       }
     }
     
+    .views-submit-button,
+    .views-reset-button {
+      float: right;
+      margin-left: 15px;
+    }
+    
     .views-submit-button .form-submit {
       @include btn;
+      margin-right: 0;
     }
     
     .views-reset-button .form-submit {
@@ -153,7 +164,7 @@
       margin: 10px 0;
       margin-left: 1%;
       @include breakpoint($breakpoint) {
-        margin-top: 2.5em;
+        margin-top: 1em;
       }
       
       a:link, a:visited {
