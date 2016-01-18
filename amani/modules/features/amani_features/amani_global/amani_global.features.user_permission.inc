@@ -153,29 +153,6 @@ function amani_global_user_default_permissions() {
     'module' => 'devel',
   );
 
-  // Exported permission: access epostcard.
-  $permissions['access epostcard'] = array(
-    'name' => 'access epostcard',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'forward',
-  );
-
-  // Exported permission: access forward.
-  $permissions['access forward'] = array(
-    'name' => 'access forward',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'amani administrator',
-      2 => 'anonymous user',
-      3 => 'authenticated user',
-      4 => 'contributor',
-      5 => 'editor',
-    ),
-    'module' => 'forward',
-  );
-
   // Exported permission: access own authorizations.
   $permissions['access own authorizations'] = array(
     'name' => 'access own authorizations',
@@ -567,15 +544,6 @@ function amani_global_user_default_permissions() {
       1 => 'amani administrator',
     ),
     'module' => 'forum',
-  );
-
-  // Exported permission: administer forward.
-  $permissions['administer forward'] = array(
-    'name' => 'administer forward',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'forward',
   );
 
   // Exported permission: administer google analytics.
@@ -1748,26 +1716,6 @@ function amani_global_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'googleanalytics',
-  );
-
-  // Exported permission: override email address.
-  $permissions['override email address'] = array(
-    'name' => 'override email address',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'forward',
-  );
-
-  // Exported permission: override flood control.
-  $permissions['override flood control'] = array(
-    'name' => 'override flood control',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'amani administrator',
-      2 => 'editor',
-    ),
-    'module' => 'forward',
   );
 
   // Exported permission: perform backup.
