@@ -5179,7 +5179,7 @@ tr.selected td {
   float: left;
   vertical-align: top;
   border: 1px solid #cccccc;
-  padding: 10px;
+  padding: 10px 10px 5px;
   margin: 12px 1% 20px 1%;
 }
 @media (min-width: 768px) {
@@ -5258,60 +5258,80 @@ tr.selected td {
   width: 100%;
   height: 145px;
 }
+/* line 194, ../sass/components/_resources_page.scss */
+.page-resources .view-resources .view-content .views-row .views-field-field-media {
+  display: inline-block;
+  float: right;
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+/* line 201, ../sass/components/_resources_page.scss */
+.page-resources .view-resources .view-content .views-row .views-field-field-media a {
+  color: #ce9bc0;
+}
+/* line 205, ../sass/components/_resources_page.scss */
+.page-resources .view-resources .view-content .views-row .views-field-field-media a:before {
+  content: "\e904";
+  font-family: "amani-icons";
+  color: #ce9bc0;
+  margin-right: 10px;
+  display: inline-block;
+}
 
-/* line 198, ../sass/components/_resources_page.scss */
+/* line 218, ../sass/components/_resources_page.scss */
 .node-type-resource #content {
   font-family: "Open Sans Condensed", sans-serif;
   width: 840px;
   margin: auto;
 }
-/* line 203, ../sass/components/_resources_page.scss */
+/* line 223, ../sass/components/_resources_page.scss */
 .node-type-resource #content .breadcrumb, .node-type-resource #content #page-title {
   display: none;
 }
-/* line 207, ../sass/components/_resources_page.scss */
+/* line 227, ../sass/components/_resources_page.scss */
 .node-type-resource #content .field-name-field-image {
   margin-bottom: -10px;
 }
-/* line 211, ../sass/components/_resources_page.scss */
+/* line 231, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content {
   font-weight: 100;
   background: #fcfbfb;
   padding: 35px;
   box-shadow: 0px 3px 3px -2px #777;
 }
-/* line 217, ../sass/components/_resources_page.scss */
+/* line 237, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons {
   float: right;
 }
-/* line 220, ../sass/components/_resources_page.scss */
+/* line 240, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons h3 {
   display: inline-block;
   margin-right: 5px;
   font-family: "Open Sans", sans-serif;
 }
-/* line 226, ../sass/components/_resources_page.scss */
+/* line 246, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons .social-menu {
   width: 100px;
   display: inline-block;
   vertical-align: bottom;
 }
-/* line 231, ../sass/components/_resources_page.scss */
+/* line 251, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons .social-menu div {
   width: 30px;
   height: 36px;
   display: inline-block;
   margin: 0px 2px;
 }
-/* line 238, ../sass/components/_resources_page.scss */
+/* line 258, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons .social-menu .social-media-facebook {
   background: url(../images/icons/black-facebook.png) no-repeat 0 0;
 }
-/* line 241, ../sass/components/_resources_page.scss */
+/* line 261, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons .social-menu .social-media-twitter {
   background: url(../images/icons/black-twitter.png) no-repeat 0 0;
 }
-/* line 247, ../sass/components/_resources_page.scss */
+/* line 267, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content h1#node-title {
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -5320,44 +5340,44 @@ tr.selected td {
   margin-top: 10px;
   clear: both;
 }
-/* line 256, ../sass/components/_resources_page.scss */
+/* line 276, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body {
   font-size: 16px;
 }
-/* line 259, ../sass/components/_resources_page.scss */
+/* line 279, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .meta-info {
   color: #acacac;
   border-left: 2px solid;
   padding-left: 10px;
   margin-bottom: 30px;
 }
-/* line 265, ../sass/components/_resources_page.scss */
+/* line 285, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .meta-info p {
   margin-bottom: 10px;
 }
-/* line 270, ../sass/components/_resources_page.scss */
+/* line 290, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .field-name-body {
   font-family: "Open Sans", sans-serif;
   line-height: 30px;
 }
-/* line 276, ../sass/components/_resources_page.scss */
+/* line 296, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-label {
   font-family: "Open Sans", sans-serif;
   margin-bottom: 5px;
 }
-/* line 281, ../sass/components/_resources_page.scss */
+/* line 301, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-items > div {
   display: inline-block;
   background: #d9d9d9;
   padding: 5px 10px;
   margin-right: 5px;
 }
-/* line 287, ../sass/components/_resources_page.scss */
+/* line 307, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-items > div a {
   color: #7f7f7f;
   text-transform: uppercase;
 }
-/* line 294, ../sass/components/_resources_page.scss */
+/* line 314, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download {
   font-family: "Open Sans", sans-serif;
   background: #ebebeb;
@@ -5366,22 +5386,22 @@ tr.selected td {
   margin-top: 30px;
   overflow: hidden;
 }
-/* line 302, ../sass/components/_resources_page.scss */
+/* line 322, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download > div {
   display: inline-block;
   vertical-align: middle;
   width: 49%;
 }
-/* line 308, ../sass/components/_resources_page.scss */
+/* line 328, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download .field-name-field-media {
   float: left;
   font-size: 16px;
 }
-/* line 312, ../sass/components/_resources_page.scss */
+/* line 332, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download .field-name-field-media a {
   color: #131313;
 }
-/* line 317, ../sass/components/_resources_page.scss */
+/* line 337, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download .field-name-field-link {
   float: right;
   background: #ce9bc0;
@@ -5389,23 +5409,23 @@ tr.selected td {
   padding: 20px 45px;
   font-size: 24px;
 }
-/* line 324, ../sass/components/_resources_page.scss */
+/* line 344, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download .field-name-field-link a {
   color: white;
 }
 
 @media (max-width: 980px) {
-  /* line 336, ../sass/components/_resources_page.scss */
+  /* line 356, ../sass/components/_resources_page.scss */
   .page-resources.sidebar-second #main {
     position: relative;
   }
-  /* line 340, ../sass/components/_resources_page.scss */
+  /* line 360, ../sass/components/_resources_page.scss */
   .page-resources.sidebar-second #content {
     width: 100%;
     margin: 0;
     float: none;
   }
-  /* line 346, ../sass/components/_resources_page.scss */
+  /* line 366, ../sass/components/_resources_page.scss */
   .page-resources.sidebar-second .region-sidebar-second {
     width: 100%;
     margin: 0;
@@ -5415,11 +5435,11 @@ tr.selected td {
   }
 }
 
-/* line 356, ../sass/components/_resources_page.scss */
+/* line 376, ../sass/components/_resources_page.scss */
 .add-fliter-title {
   display: block;
 }
-/* line 359, ../sass/components/_resources_page.scss */
+/* line 379, ../sass/components/_resources_page.scss */
 .add-fliter-title:before {
   content: "Filters";
   color: #ce9bc0;
@@ -5433,7 +5453,7 @@ tr.selected td {
   display: block;
   cursor: pointer;
 }
-/* line 373, ../sass/components/_resources_page.scss */
+/* line 393, ../sass/components/_resources_page.scss */
 .add-fliter-title .views-exposed-form {
   position: relative;
   top: -30px;
@@ -5443,7 +5463,7 @@ tr.selected td {
   overflow: hidden;
   transition: max-height 0.7s ease;
 }
-/* line 383, ../sass/components/_resources_page.scss */
+/* line 403, ../sass/components/_resources_page.scss */
 .add-fliter-title .views-exposed-form.show {
   max-height: 500px;
 }

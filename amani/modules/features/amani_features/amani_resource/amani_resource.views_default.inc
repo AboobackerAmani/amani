@@ -161,6 +161,18 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['fields']['field_link']['label'] = '';
   $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
+  /* Field: Content: Media */
+  $handler->display->display_options['fields']['field_media']['id'] = 'field_media';
+  $handler->display->display_options['fields']['field_media']['table'] = 'field_data_field_media';
+  $handler->display->display_options['fields']['field_media']['field'] = 'field_media';
+  $handler->display->display_options['fields']['field_media']['label'] = '';
+  $handler->display->display_options['fields']['field_media']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_media']['alter']['text'] = 'Download';
+  $handler->display->display_options['fields']['field_media']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_media']['alter']['path'] = '[field_media] ';
+  $handler->display->display_options['fields']['field_media']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_media']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_media']['delta_offset'] = '0';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -488,6 +500,7 @@ function amani_resource_views_default_views() {
     t('I\'m sorry but there are no document resources for the selected criteria.'),
     t('<h3>[title]</h3>
 [body]'),
+    t('Download'),
     t('Resource Type'),
     t('Resource Theme'),
     t('Location'),
