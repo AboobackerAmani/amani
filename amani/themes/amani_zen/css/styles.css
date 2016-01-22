@@ -2114,8 +2114,8 @@ footer .field-label {
 @media all and (max-width: 768px) {
   /* line 458, ../sass/components/_front-page-blocks.scss */
   .view-news-and-events .views-row .views-field-field-image img {
-    width: 150px;
-    height: 110px;
+    width: 160px;
+    height: 120px;
   }
 }
 @media all and (max-width: 480px) {
@@ -2332,7 +2332,13 @@ footer .field-label {
     top: 510px;
   }
 }
-/* line 635, ../sass/components/_front-page-blocks.scss */
+@media (max-width: 768px) {
+  /* line 617, ../sass/components/_front-page-blocks.scss */
+  .front #block-bean-donate {
+    top: 310px;
+  }
+}
+/* line 639, ../sass/components/_front-page-blocks.scss */
 .front #block-bean-donate .entity-bean a {
   font-family: "Open Sans Condensed",sans-serif;
   background: #ce9bc0;
@@ -2349,6 +2355,12 @@ footer .field-label {
   padding: 5px 50px;
   background: #f09416;
   box-shadow: 1px 3px 5px #ccc;
+}
+@media (max-width: 768px) {
+  /* line 639, ../sass/components/_front-page-blocks.scss */
+  .front #block-bean-donate .entity-bean a {
+    padding: 5px 30px;
+  }
 }
 
 /* line 3, ../sass/components/_gallery_page.scss */
