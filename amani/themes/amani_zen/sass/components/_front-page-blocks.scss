@@ -461,8 +461,8 @@
         box-sizing: border-box;
 
         @media all and (max-width: $breakpoint) {
-          width: 150px;
-          height: 110px;
+          width: 160px;
+          height: 120px;
         }
         @media all and (max-width: 480px) {
           width: 100%;
@@ -632,11 +632,19 @@
     top: 510px;
   }
   
+  @media (max-width: 768px) {
+    top: 310px;
+  }
+  
   .entity-bean a {
     @include btn;
     line-height: 30px;
     padding: 5px 50px;
     background: $orange;
     box-shadow: 1px 3px 5px #ccc;
+    
+    @media (max-width: 768px) {
+      padding: 5px 30px;
+    }
   }
 }
