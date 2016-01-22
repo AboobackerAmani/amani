@@ -28,6 +28,19 @@
       background-color: #f7f6f5;
       box-shadow: 0px 3px 3px -2px #777;
       
+      @include breakpoint(980px) {
+        &:before {
+          content:  "Filters";
+          text-transform: uppercase;
+          color: $purple-primary;
+          font-weight: 600;
+          border-bottom: 1px solid #ccc;
+          display: block;
+          margin: 0 15px;
+          padding: 15px 0 5px;
+        }
+      }
+      
       & div {
         float: none;
         padding: 0;
@@ -55,12 +68,14 @@
           &#edit-submit-resources {
             background: #ce9bc0;
             color: white;
-            margin-right: 1%;
+            margin-left: 1%;
+            float: right;
           }
 
           &#edit-reset {
             background: transparent;
-            margin-left: 1%;
+            margin-right: 1%;
+            float: right;
           }
         }
 
