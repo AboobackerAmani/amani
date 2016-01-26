@@ -187,8 +187,12 @@ function amani_sms_token_to_term($token, $val) {
   if (!is_null($terms)) {
     foreach ($terms as $t) {
       $var = variable_get($token . '_' . $t->tid, NULL);
+      // Convert to lower case for case insensitive 'comparison'.
+      $var = strtolower($var);
       $exploded = explode(',', trim($var));
-      if (!is_null($var) && (in_array($val, $exploded))) {
+      // Convert our passed in value to lower and see if it exists in our
+      // 'allowed values' array from configuration.
+      if (!is_null($var) && (in_array(strtolower($val), $exploded))) {
         return taxonomy_term_load($t->tid);
       }
     }
