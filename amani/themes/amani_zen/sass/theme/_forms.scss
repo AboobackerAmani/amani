@@ -1,3 +1,5 @@
+@media all and (min-width: $breakpoint) {
+
 .form-textarea,
 .form-text {
   background: $grey;
@@ -847,5 +849,7 @@ body.becomesponsor {
 		}
 	
 	}
+
+}
 
 }

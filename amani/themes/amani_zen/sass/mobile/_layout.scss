@@ -16,6 +16,10 @@ html {
   position: relative;
 }
 
+#main {
+	clear:both;
+}
+
 body {
 	overflow-x:hidden;
 	background-size:100% auto;
@@ -1008,7 +1012,7 @@ div.breadcrumb {
 			.views-field-field-team-title {
 				padding:.4em 1em;
 				text-transform:uppercase;
-				display:block;
+				display:block !important;
 				float:left;
 				margin-top:0;
 				position:relative;
@@ -1021,7 +1025,7 @@ div.breadcrumb {
 				text-align:left;
 				margin-bottom:1em;
 				span.field-content {
-					
+					opacity:1 !important;
 				}
 				
 			}
