@@ -86,46 +86,29 @@
     width: 144px;
     height: auto;
     margin-right: 30px;
-    
     @media (max-width: 480px) {
       float: none;
       text-align: center;
       margin: 0 auto 20px;
     }
   }
-  
   .field-name-body {
     display: table;
-    
     a {
       color: $purple-primary;
-      
+
       &:hover {
         text-decoration: underline;
       }
     }
   }
-}
-
-//Donate button
-.node-type-get-involved {
-  #block-bean-donate {
-    margin-left: 174px;
-    
-    @media (max-width: 480px) {
-      margin-left: 0;
-    }
-    
-    .entity-bean {
-      text-align: center;
-    }
-    .field-item a {
+  .field-name-field-get-involved-link {
+    text-align: center;
+    margin-top: 50px;
+    a {
       @include btn;
       float: none;
-      line-height: 30px;
-      width: 120px;
-      display: block;
-      margin: 0 auto;
+      padding: 4px 30px 4px 30px;
     }
   }
 }

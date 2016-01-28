@@ -96,13 +96,16 @@ function amani_get_involved_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '6',
+          'weight' => '9',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '8',
+        ),
+        'language' => array(
+          'weight' => '1',
         ),
       ),
       'display' => array(

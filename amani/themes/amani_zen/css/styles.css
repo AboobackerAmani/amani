@@ -5638,35 +5638,25 @@ tr.selected td {
     margin: 0 auto 20px;
   }
 }
-/* line 97, ../sass/components/_take-action_page.scss */
+/* line 95, ../sass/components/_take-action_page.scss */
 .node-get-involved .field-name-body {
   display: table;
 }
-/* line 100, ../sass/components/_take-action_page.scss */
+/* line 97, ../sass/components/_take-action_page.scss */
 .node-get-involved .field-name-body a {
   color: #ce9bc0;
 }
-/* line 103, ../sass/components/_take-action_page.scss */
+/* line 100, ../sass/components/_take-action_page.scss */
 .node-get-involved .field-name-body a:hover {
   text-decoration: underline;
 }
-
-/* line 112, ../sass/components/_take-action_page.scss */
-.node-type-get-involved #block-bean-donate {
-  margin-left: 174px;
-}
-@media (max-width: 480px) {
-  /* line 112, ../sass/components/_take-action_page.scss */
-  .node-type-get-involved #block-bean-donate {
-    margin-left: 0;
-  }
-}
-/* line 119, ../sass/components/_take-action_page.scss */
-.node-type-get-involved #block-bean-donate .entity-bean {
+/* line 105, ../sass/components/_take-action_page.scss */
+.node-get-involved .field-name-field-get-involved-link {
   text-align: center;
+  margin-top: 50px;
 }
-/* line 122, ../sass/components/_take-action_page.scss */
-.node-type-get-involved #block-bean-donate .field-item a {
+/* line 108, ../sass/components/_take-action_page.scss */
+.node-get-involved .field-name-field-get-involved-link a {
   font-family: "Open Sans Condensed",sans-serif;
   background: #ce9bc0;
   border: 1px solid #ce9bc0;
@@ -5679,19 +5669,16 @@ tr.selected td {
   padding: 0;
   text-transform: uppercase;
   float: none;
-  line-height: 30px;
-  width: 120px;
-  display: block;
-  margin: 0 auto;
+  padding: 4px 30px 4px 30px;
 }
 
-/* line 135, ../sass/components/_take-action_page.scss */
+/* line 118, ../sass/components/_take-action_page.scss */
 .node-type-activity #content {
   width: 100%;
   margin: 0;
 }
 @media (min-width: 768px) {
-  /* line 135, ../sass/components/_take-action_page.scss */
+  /* line 118, ../sass/components/_take-action_page.scss */
   .node-type-activity #content {
     float: left;
     width: 66.66667%;
@@ -5700,13 +5687,13 @@ tr.selected td {
     padding-right: 15px;
   }
 }
-/* line 143, ../sass/components/_take-action_page.scss */
+/* line 126, ../sass/components/_take-action_page.scss */
 .node-type-activity .sidebars {
   width: 100%;
   margin: 0;
 }
 @media (min-width: 768px) {
-  /* line 143, ../sass/components/_take-action_page.scss */
+  /* line 126, ../sass/components/_take-action_page.scss */
   .node-type-activity .sidebars {
     float: left;
     width: 33.33333%;
@@ -5717,25 +5704,25 @@ tr.selected td {
   }
 }
 @media (min-width: 960px) {
-  /* line 143, ../sass/components/_take-action_page.scss */
+  /* line 126, ../sass/components/_take-action_page.scss */
   .node-type-activity .sidebars {
     padding-left: 15px;
     box-sizing: border-box;
   }
 }
-/* line 158, ../sass/components/_take-action_page.scss */
+/* line 141, ../sass/components/_take-action_page.scss */
 .node-type-activity .sidebars .region-sidebar-second {
   width: 100%;
   margin: 0;
 }
-/* line 163, ../sass/components/_take-action_page.scss */
+/* line 146, ../sass/components/_take-action_page.scss */
 .node-type-activity .sidebars .region-sidebar-second .block-views {
   background-color: #f7f5f5;
   padding: 15px;
   text-transform: uppercase;
   border-bottom: 1px solid #e6e7e8;
 }
-/* line 169, ../sass/components/_take-action_page.scss */
+/* line 152, ../sass/components/_take-action_page.scss */
 .node-type-activity .sidebars .region-sidebar-second .block-views h2.block-title {
   font-family: "Open Sans Condensed",sans-serif;
   font-size: 18px;
@@ -5746,27 +5733,27 @@ tr.selected td {
   padding-bottom: 10px;
   border-bottom: 1px solid #e6e7e8;
 }
-/* line 181, ../sass/components/_take-action_page.scss */
+/* line 164, ../sass/components/_take-action_page.scss */
 .node-type-activity .sidebars a {
   font-family: "Open Sans Condensed",sans-serif;
   color: #ce9bc0;
   margin: 10px 0;
   display: block;
 }
-/* line 186, ../sass/components/_take-action_page.scss */
+/* line 169, ../sass/components/_take-action_page.scss */
 .node-type-activity .sidebars a.active, .node-type-activity .sidebars a:hover {
   color: #513e79;
 }
 
-/* line 192, ../sass/components/_take-action_page.scss */
+/* line 175, ../sass/components/_take-action_page.scss */
 .node-activity {
   margin-bottom: 20px;
 }
-/* line 194, ../sass/components/_take-action_page.scss */
+/* line 177, ../sass/components/_take-action_page.scss */
 .node-activity a {
   color: #ce9bc0;
 }
-/* line 197, ../sass/components/_take-action_page.scss */
+/* line 180, ../sass/components/_take-action_page.scss */
 .node-activity a:hover {
   text-decoration: underline;
 }

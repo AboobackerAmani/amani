@@ -64,7 +64,6 @@ function amani_global_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'get-involved/*' => 'get-involved/*',
         '<front>' => '<front>',
       ),
     ),
