@@ -62,6 +62,15 @@ function amani_front_page_views_default_views() {
   $handler->display->display_options['fields']['field_text']['alter']['max_length'] = '160';
   $handler->display->display_options['fields']['field_text']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
+  $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['label'] = '';
+  $handler->display->display_options['fields']['field_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['alter']['text'] = '[node:title]';
+  $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   /* Field: Read More Link */
   $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
   $handler->display->display_options['fields']['title_1']['table'] = 'node';
@@ -76,15 +85,6 @@ function amani_front_page_views_default_views() {
   $handler->display->display_options['fields']['title_1']['element_wrapper_class'] = 'read_more_link';
   $handler->display->display_options['fields']['title_1']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['title_1']['link_to_node'] = FALSE;
-  /* Field: Content: Link */
-  $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
-  $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
-  $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
-  $handler->display->display_options['fields']['field_link']['label'] = '';
-  $handler->display->display_options['fields']['field_link']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_link']['alter']['text'] = '[node:title]';
-  $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   /* Sort criterion: Content: Box position (field_box_position) */
   $handler->display->display_options['sorts']['field_box_position_value']['id'] = 'field_box_position_value';
   $handler->display->display_options['sorts']['field_box_position_value']['table'] = 'field_data_field_box_position';
@@ -203,8 +203,8 @@ function amani_front_page_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Read More <span class="more-arrow">>></span>'),
     t('[node:title]'),
+    t('Read More <span class="more-arrow">>></span>'),
     t('Front Page Blocks'),
     t('Front page blocks underneath the slideshow.'),
     t('Centre'),
