@@ -134,6 +134,8 @@
 			font-size:1em;
 			display:block;
 			float:none;
+			clear:both;
+			margin-top:2em;
 			color:$text-grey;
 			a {
 				color:$orange;
@@ -446,7 +448,7 @@
 			background:$blue;
 			position: relative;
 		  	display: inline-block;
-		  	float:left;
+		  	float:none;
 		  	width:100%;
 		  	height:auto;
 		  	margin-top:20px;
