@@ -13,8 +13,20 @@ function peace_geeks_blocks_and_views_ctools_plugin_api() {
     return array("version" => "5");
   }
   list($module, $api) = func_get_args();
+  if ($module == "breakpoints" && $api == "default_breakpoint_group") {
+    return array("version" => "1");
+  }
+  list($module, $api) = func_get_args();
+  if ($module == "breakpoints" && $api == "default_breakpoints") {
+    return array("version" => "1");
+  }
+  list($module, $api) = func_get_args();
   if ($module == "context" && $api == "context") {
     return array("version" => "3");
+  }
+  list($module, $api) = func_get_args();
+  if ($module == "flexslider" && $api == "flexslider_default_preset") {
+    return array("version" => "1");
   }
   list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {

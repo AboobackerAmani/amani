@@ -103,6 +103,14 @@ function peace_geeks_blocks_and_views_context_default_contexts() {
   $context->description = '';
   $context->tag = 'Peace Geeks';
   $context->conditions = array(
+    'breakpoint' => array(
+      'values' => array(
+        0 => 'custom.user.wide',
+      ),
+      'options' => array(
+        'autoreload' => 1,
+      ),
+    ),
     'path' => array(
       'values' => array(
         '<front>' => '<front>',
@@ -157,12 +165,170 @@ function peace_geeks_blocks_and_views_context_default_contexts() {
       ),
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Peace Geeks');
   $export['front_page_blocks'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'front_page_blocks_mobile';
+  $context->description = '';
+  $context->tag = 'Peace Geeks';
+  $context->conditions = array(
+    'breakpoint' => array(
+      'values' => array(
+        0 => 'custom.user.mobile',
+      ),
+      'options' => array(
+        'autoreload' => 1,
+      ),
+    ),
+    'path' => array(
+      'values' => array(
+        '<front>' => '<front>',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-75e6a1c66268dd9908a6e8ba767c53ee' => array(
+          'module' => 'views',
+          'delta' => '75e6a1c66268dd9908a6e8ba767c53ee',
+          'region' => 'content',
+          'weight' => '-76',
+        ),
+        'views-c0f4ed6dd4a249c1bb75d78bdf561906' => array(
+          'module' => 'views',
+          'delta' => 'c0f4ed6dd4a249c1bb75d78bdf561906',
+          'region' => 'content',
+          'weight' => '-75',
+        ),
+        'views-7bcee5f10c6daab67e35dd7f39038fba' => array(
+          'module' => 'views',
+          'delta' => '7bcee5f10c6daab67e35dd7f39038fba',
+          'region' => 'content',
+          'weight' => '-74',
+        ),
+        'views-911b0fc644370a0be38030742b102463' => array(
+          'module' => 'views',
+          'delta' => '911b0fc644370a0be38030742b102463',
+          'region' => 'content',
+          'weight' => '-73',
+        ),
+        'views-0f7076690bb8c1588a09a48dda55fffa' => array(
+          'module' => 'views',
+          'delta' => '0f7076690bb8c1588a09a48dda55fffa',
+          'region' => 'content',
+          'weight' => '-72',
+        ),
+        'views-037c9c33fc20851ba63e916400231c07' => array(
+          'module' => 'views',
+          'delta' => '037c9c33fc20851ba63e916400231c07',
+          'region' => 'content',
+          'weight' => '-71',
+        ),
+        'views-peace_geeks_twitter-block' => array(
+          'module' => 'views',
+          'delta' => 'peace_geeks_twitter-block',
+          'region' => 'content',
+          'weight' => '-70',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Peace Geeks');
+  $export['front_page_blocks_mobile'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'front_page_slideshow_mobile';
+  $context->description = 'Front page slideshow for wide screen widths';
+  $context->tag = 'Peace Geeks';
+  $context->conditions = array(
+    'breakpoint' => array(
+      'values' => array(
+        0 => 'custom.user.mobile',
+      ),
+      'options' => array(
+        'autoreload' => 1,
+      ),
+    ),
+    'path' => array(
+      'values' => array(
+        '<front>' => '<front>',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-de9567465c111516e3a12c8d73ef086e' => array(
+          'module' => 'views',
+          'delta' => 'de9567465c111516e3a12c8d73ef086e',
+          'region' => 'banner',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Front page slideshow for wide screen widths');
+  t('Peace Geeks');
+  $export['front_page_slideshow_mobile'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'front_page_slideshow_wide';
+  $context->description = 'Front page slideshow for wide screen widths';
+  $context->tag = 'Peace Geeks';
+  $context->conditions = array(
+    'breakpoint' => array(
+      'values' => array(
+        0 => 'custom.user.wide',
+      ),
+      'options' => array(
+        'autoreload' => 1,
+      ),
+    ),
+    'path' => array(
+      'values' => array(
+        '<front>' => '<front>',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-959b92b56b515750a8c433f5dc062db3' => array(
+          'module' => 'views',
+          'delta' => '959b92b56b515750a8c433f5dc062db3',
+          'region' => 'banner',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Front page slideshow for wide screen widths');
+  t('Peace Geeks');
+  $export['front_page_slideshow_wide'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
