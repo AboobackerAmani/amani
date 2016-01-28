@@ -11761,14 +11761,26 @@ form.comment-form #edit-preview {
     display: block;
     width: 100%;
     padding-top: 0;
+    margin-bottom: -2em;
   }
-  /* line 12, ../sass/mobile/_banner.scss */
+  /* line 13, ../sass/mobile/_banner.scss */
+  #banner .flex-control-paging {
+    display: none;
+  }
+  /* line 15, ../sass/mobile/_banner.scss */
+  #banner .views-field-field-description {
+    background: #F09416;
+    color: white;
+    padding: 1em 1em 2em 1em;
+    font-size: 1.3em;
+  }
+  /* line 22, ../sass/mobile/_banner.scss */
   #banner .block-bean {
     display: block;
     height: auto;
     position: relative;
   }
-  /* line 17, ../sass/mobile/_banner.scss */
+  /* line 27, ../sass/mobile/_banner.scss */
   #banner .block-bean .field-name-field-banner-image {
     display: block;
     z-index: 0;
@@ -11785,14 +11797,14 @@ form.comment-form #edit-preview {
     background:$soft-grey;
     overflow:hidden;*/
   }
-  /* line 32, ../sass/mobile/_banner.scss */
+  /* line 42, ../sass/mobile/_banner.scss */
   #banner .block-bean .field-name-field-banner-image img {
     width: 240%;
     height: auto;
     margin-left: -50%;
     max-width: 240%;
   }
-  /* line 40, ../sass/mobile/_banner.scss */
+  /* line 50, ../sass/mobile/_banner.scss */
   #banner .block-bean .field-name-field-image-attribution {
     color: white;
     position: absolute;
@@ -11801,7 +11813,7 @@ form.comment-form #edit-preview {
     font-size: 11px;
     opacity: .7;
   }
-  /* line 49, ../sass/mobile/_banner.scss */
+  /* line 59, ../sass/mobile/_banner.scss */
   #banner .block-bean .field-name-field-image-attribution-link a {
     color: white;
     position: absolute;
@@ -11810,14 +11822,14 @@ form.comment-form #edit-preview {
     font-size: 11px;
     opacity: .7;
   }
-  /* line 58, ../sass/mobile/_banner.scss */
+  /* line 68, ../sass/mobile/_banner.scss */
   #banner .block-bean .field-name-field-banner-text {
     width: 100%;
     display: block;
     margin: 0 auto;
     position: relative;
   }
-  /* line 63, ../sass/mobile/_banner.scss */
+  /* line 73, ../sass/mobile/_banner.scss */
   #banner .block-bean .field-name-field-banner-text .field-items {
     display: block;
     background: #59C2ED;
@@ -11834,7 +11846,7 @@ form.comment-form #edit-preview {
     z-index: 0;
     margin-bottom: -20px;
   }
-  /* line 81, ../sass/mobile/_banner.scss */
+  /* line 91, ../sass/mobile/_banner.scss */
   #banner .block-bean .field-name-field-header-text {
     width: 100%;
     display: block;
@@ -11843,7 +11855,7 @@ form.comment-form #edit-preview {
     left: 2em;
     top: 2em;
   }
-  /* line 88, ../sass/mobile/_banner.scss */
+  /* line 98, ../sass/mobile/_banner.scss */
   #banner .block-bean .field-name-field-header-text .field-items {
     display: block;
     float: left;

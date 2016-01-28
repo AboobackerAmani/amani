@@ -8,6 +8,16 @@
 		display:block;
 		width:100%;
 		padding-top:0;
+		margin-bottom:-2em;
+		
+		.flex-control-paging {display:none;}
+		
+		.views-field-field-description {
+			background:$orange;
+			color:white;
+			padding:1em 1em 2em 1em;
+			font-size:1.3em;
+		}
 		
 		.block-bean {
 			display:block;

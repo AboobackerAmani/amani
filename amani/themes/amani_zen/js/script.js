@@ -50,7 +50,7 @@ Drupal.behaviors.misc_adjustments = {
 
 	
 
-	$(window).on('resize', function() {
+	/*$(window).on('resize', function() {
 		
 		var win = $(this);
 		
@@ -86,7 +86,7 @@ Drupal.behaviors.misc_adjustments = {
 			
 			}
     
-    });
+    });*/
     
     	
     	$('.views-exposed-form input[type="radio"]:checked').parent().css('background','#59C2ED');
