@@ -96,8 +96,9 @@ function amani_zen_preprocess_html(&$variables, $hook) {
  */
 function amani_zen_preprocess_page(&$variables, $hook) {
   $variables['page']['footer']['site_name'] = $variables['site_name'];
-    // die(var_dump($variables['page']['footer']['amani_site_name']));
-
+  if (!empty($variables['node']) && !empty($variables['node']->type)) {
+    $variables['theme_hook_suggestions'][] = 'page__node__' . $variables['node']->type;
+  }
 }
 // */
 
