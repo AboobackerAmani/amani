@@ -94,18 +94,17 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
       $mr_wrapper->status->set(0);
     }
   }
-  // Title
+
+  // If we weren't able to parse a date from the message, use 'now'.
+  if (!$title) {
+    $title = date('dmY');
+  }
+  // If we have a reporter, append to the title.
   if (!is_null($parsed_message['message']['amani_sms_reporter'])) {
     $title .= '-' . $parsed_message['message']['amani_sms_reporter'];
   }
-
-  // If we've been able to create a title from the date & reporter, set it.
-  if ($title) {
-    $mr_wrapper->title->set($title);
-  } else {
-  // Otherwise just use 'now' as the date.
-    $mr_wrapper->title->set(date('dmY'));
-  }
+  // Set the title.
+  $mr_wrapper->title->set($title);
   // Location
   if (!is_null($parsed_message['message']['amani_sms_location'])) {
     if ($term = amani_sms_token_to_term('amani_sms_location', $parsed_message['message']['amani_sms_location'])) {
