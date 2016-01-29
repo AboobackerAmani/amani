@@ -49,19 +49,32 @@ Drupal.behaviors.toggleMapFilters = {
 			  }
 			  switch(true){
 			  case (windowWidth < breakpoint ):
-				  //inject a button
-				  if(filterHandle.length === 0){
-				  $('#block-menu-menu-social-media .menu').prepend('<li id="filter" class="menu__item is-leaf first leaf custom-mobile-filter ">Map Filter</li>')
-				  $('#filter').click(function(){
-				  	filtersObj.fadeToggle(function(){});
-				  });
-				  if(initialLoad){
-					  filtersObj.hide();
-				  }
-				  }else{
-				  	 filterHandle.show();
-				  }
-				  break;
+				//inject a button
+				if(filterHandle.length === 0){
+
+					$('.primary-nav-wrapper').append('<div id="filter" class="header__region region filter-header"><h2>Show Filter</h2></div>');					
+					$('#filter').click(
+
+						function(){
+							var text = $(this).find('h2');
+							if(text.text() == 'Show Filter' ){
+								text.text('Hide Filter' );
+							}else if (text.text() == 'Hide Filter' ){
+								text.text('Show Filter' );
+							}
+							$('#filter').toggleClass('expanded');
+							filtersObj.fadeToggle(function(){
+								//this fires 4 times in a row as filterObj is a jquery array
+							});
+					});
+					
+					if(initialLoad){
+						filtersObj.hide();
+					}
+					}else{
+						filterHandle.show();
+					}
+					break;
 			  
 			  case (windowWidth >= breakpoint ):
 				  filterHandle.hide();

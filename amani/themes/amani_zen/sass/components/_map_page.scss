@@ -325,3 +325,41 @@
   font-weight: 400;
   cursor: pointer;
 }
+.filter-header{
+	position:relative;
+	background:white;
+	border-bottom:1px solid #ccc;
+	&:before{
+		content: "+";
+    font-weight: 700;
+    font-size: 28px;
+    color: #ce9bc0;
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin-top: 5px;
+    position: absolute;
+    right: 11px;
+    top: 11px;
+	}
+	h2{
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: #ce9bc0;
+    text-align: left;
+    margin: 0px;
+    padding: 10px;
+		font-weight:100;
+	}
+	
+}
+.expanded.filter-header{
+	&:before{
+		content: "-";
+
+	}
+	
+}
