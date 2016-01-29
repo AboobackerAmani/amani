@@ -85,7 +85,7 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
     if (checkdate($month, $day, $yr)) {
       $date = strtotime("{$month}/{$day}/{$yr}");
       $mr_wrapper->field_incident_date->set($date);
-      $title .= $date;
+      $title = $date;
     }
     else {
       // Add an error.
@@ -95,7 +95,6 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
     }
   }
   // Title
-  $title = date('dmY');
   if (!is_null($parsed_message['message']['amani_sms_reporter'])) {
     $title .= '-' . $parsed_message['message']['amani_sms_reporter'];
   }
