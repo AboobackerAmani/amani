@@ -87,8 +87,6 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
     else {
       // Unpublished map record.
       $mr_wrapper->status->set(0);
-      // Set needs review field on submission.
-      $sub_wrapper->field_sms_sub_status->set(0);
     }
   }
   // Title
@@ -101,60 +99,45 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
   if (!is_null($parsed_message['message']['amani_sms_location'])) {
     if ($term = amani_sms_token_to_term('amani_sms_location', $parsed_message['message']['amani_sms_location'])) {
       $mr_wrapper->field_incident_geolocation->set($term->field_sms_location[LANGUAGE_NONE][0]);
-      $sub_wrapper->field_sms_sub_status->set(1);
     } else {
       // Unpublished map record.
       $mr_wrapper->status->set(0);
-      // Set needs review field on submission.
-      $sub_wrapper->field_sms_sub_status->set(0);
     }
   }
   // Filter 1
   if (!is_null($parsed_message['message']['amani_sms_filter_1'])) {
     if ($term = amani_sms_token_to_term('amani_sms_filter_1', $parsed_message['message']['amani_sms_filter_1'])) {
       $mr_wrapper->field_incident_report_type->set($term->tid);
-      $sub_wrapper->field_sms_sub_status->set(1);
     } else {
       // Unpublished map record.
       $mr_wrapper->status->set(0);
-      // Set needs review field on submission.
-      $sub_wrapper->field_sms_sub_status->set(0);
     }
   }
   // Filter 2
   if (!is_null($parsed_message['message']['amani_sms_filter_2'])) {
     if ($term = amani_sms_token_to_term('amani_sms_filter_2', $parsed_message['message']['amani_sms_filter_2'])) {
       $mr_wrapper->field_incident_severity->set($term->tid);
-      $sub_wrapper->field_sms_sub_status->set(1);
     } else {
       // Unpublished map record.
       $mr_wrapper->status->set(0);
-      // Set needs review field on submission.
-      $sub_wrapper->field_sms_sub_status->set(0);
     }
   }
   // Filter 3
   if (!is_null($parsed_message['message']['amani_sms_filter_3'])) {
     if ($term = amani_sms_token_to_term('amani_sms_filter_3', $parsed_message['message']['amani_sms_filter_3'])) {
       $mr_wrapper->field_map_filter_3->set($term->tid);
-      $sub_wrapper->field_sms_sub_status->set(1);
     } else {
       // Unpublished map record.
       $mr_wrapper->status->set(0);
-      // Set needs review field on submission.
-      $sub_wrapper->field_sms_sub_status->set(0);
     }
   }
   // Filter 4
   if (!is_null($parsed_message['message']['amani_sms_filter_4'])) {
     if ($term = amani_sms_token_to_term('amani_sms_filter_4', $parsed_message['message']['amani_sms_filter_4'])) {
       $mr_wrapper->field_map_filter_4->set($term->tid);
-      $sub_wrapper->field_sms_sub_status->set(1);
     } else {
       // Unpublished map record.
       $mr_wrapper->status->set(0);
-      // Set needs review field on submission.
-      $sub_wrapper->field_sms_sub_status->set(0);
     }
   }
   // Description
@@ -163,6 +146,14 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
         'value' => $parsed_message['message']['amani_sms_description'],
       )
     );
+  }
+
+  // If the map record has been set to unpublished - set the needs review flag.
+  if ($mr_wrapper->status->value() == 0) {
+    // Set needs review field on submission.
+    $sub_wrapper->field_sms_sub_status->set(0);
+  } else {
+    $sub_wrapper->field_sms_sub_status->set(1);
   }
 
   $mr_wrapper->save();
