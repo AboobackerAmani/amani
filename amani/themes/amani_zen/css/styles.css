@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * @file
  * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
@@ -1083,6 +1084,41 @@ footer {
   font-size: 18px;
   margin-top: 1.5em;
   margin-bottom: 0;
+}
+
+/* line 107, ../sass/components/_about_page.scss */
+.section-team .mobile-team-filter {
+  position: relative;
+  padding: 5px;
+  color: #ce9bc0;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+}
+/* line 111, ../sass/components/_about_page.scss */
+.section-team .mobile-team-filter a:hover, .section-team .mobile-team-filter a:focus {
+  color: #ce9bc0;
+}
+/* line 117, ../sass/components/_about_page.scss */
+.section-team .mobile-team-filter:before {
+  content: "⍓";
+  font-size: 28px;
+  color: #ce9bc0;
+  display: block;
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
+  position: absolute;
+  right: -9px;
+  top: -3px;
+}
+/* line 131, ../sass/components/_about_page.scss */
+.section-team .expanded.mobile-team-filter {
+  border-bottom: none;
+  box-shadow: none;
+}
+/* line 134, ../sass/components/_about_page.scss */
+.section-team .expanded.mobile-team-filter:before {
+  content: "⍌";
 }
 
 /**

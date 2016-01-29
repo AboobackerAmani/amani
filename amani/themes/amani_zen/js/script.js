@@ -26,49 +26,105 @@ Drupal.behaviors.my_custom_behavior = {
 };
 Drupal.behaviors.toggleMapFilters = {
   attach: function(context, settings) {
-	  var breakpoint = 761;
-	  var filterIds =
-					['block-incident-map-field-incident-report-type',
-					'block-incident-map-field-incident-severity',
-					'block-incident-map-field-map-filter-3',
-					'block-incident-map-field-map-filter-4'
-					];
-	  var filters = $.map( filterIds, function(i) { return document.getElementById(i) } );
-	  var filtersObj = $(filters);
-	  var initialWidth = $(window).width();
-	  var toggleMapFilters = function(initialWidth){
-		  var initialLoad, windowWidth, filterHandle = $('#filter');	
-		  if(jQuery.type(initialWidth) === 'number'){
-			  windowWidth = initialWidth;
-			  initialLoad = true
-		  }else{
-			 windowWidth = $(window).width();
-			 initialLoad = false;
-		  }
-		  switch(true){
-		  case (windowWidth < breakpoint ):
-			  //inject a button
-			  if(filterHandle.length === 0){
-			  $('#block-menu-menu-social-media .menu').prepend('<li id="filter" class="menu__item is-leaf first leaf custom-mobile-filter ">Map Filter</li>')
-			  $('#filter').click(function(){
-			  	filtersObj.fadeToggle(function(){});
-			  });
-			  if(initialLoad){
-				  filtersObj.hide();
-			  }
+	  
+	  if($('body').hasClass('section-mapping-conflict-violence-in-south-sudan')){//Exclude othr pages but the map page
+		  var breakpoint = 761;
+		  var filterIds =
+						['block-incident-map-field-incident-report-type',
+						'block-incident-map-field-incident-severity',
+						'block-incident-map-field-map-filter-3',
+						'block-incident-map-field-map-filter-4'
+						];
+		  var filters = $.map( filterIds, function(i) { return document.getElementById(i) } );
+		  var filtersObj = $(filters);
+		  var initialWidth = $(window).width();
+		  var toggleMapFilters = function(initialWidth){
+			  var initialLoad, windowWidth, filterHandle = $('#filter');	
+			  if(jQuery.type(initialWidth) === 'number'){
+				  windowWidth = initialWidth;
+				  initialLoad = true
 			  }else{
-			  	 filterHandle.show();
+				 windowWidth = $(window).width();
+				 initialLoad = false;
 			  }
-			  break;
+			  switch(true){
+			  case (windowWidth < breakpoint ):
+				  //inject a button
+				  if(filterHandle.length === 0){
+				  $('#block-menu-menu-social-media .menu').prepend('<li id="filter" class="menu__item is-leaf first leaf custom-mobile-filter ">Map Filter</li>')
+				  $('#filter').click(function(){
+				  	filtersObj.fadeToggle(function(){});
+				  });
+				  if(initialLoad){
+					  filtersObj.hide();
+				  }
+				  }else{
+				  	 filterHandle.show();
+				  }
+				  break;
 			  
-		  case (windowWidth >= breakpoint ):
-			  filterHandle.hide();
-			  break;
-		  }
+			  case (windowWidth >= breakpoint ):
+				  filterHandle.hide();
+				  break;
+			  }
 		  
-	  };
-	  $(window).smartresize(toggleMapFilters);
-	  new toggleMapFilters(initialWidth);//initilizes 
+		  };
+		  $(window).smartresize(toggleMapFilters);
+		  new toggleMapFilters(initialWidth);//initilizes 
+	  }
+
+	  
+
+  }
+};
+Drupal.behaviors.toggleTeamFilters = {
+  attach: function(context, settings) {
+	  
+	  if($('body').hasClass('section-team')){//Exclude othr pages but the team page
+		  var breakpoint = 761;
+		  var filterObjParent = $('#main').find('.view-team');
+		  var filterObj = filterObjParent.find('.view-filters');
+		  var initialWidth = $(window).width();
+		  var toggleMapFilters = function(initialWidth){
+			  var initialLoad, windowWidth, filterHandle = $('#filter');	
+			  if(jQuery.type(initialWidth) === 'number'){
+				windowWidth = initialWidth;
+				initialLoad = true
+			  }else {
+				windowWidth = $(window).width();
+				initialLoad = false;
+			  }
+			  switch(true){
+			  case (windowWidth < breakpoint ):
+				  //inject a button
+				  if(filterHandle.length === 0){
+				  filterObjParent.prepend('<h3 id="filter" class="mobile-team-filter "><a>Filters</a></h3>')
+				  $('#filter').click(function(){
+				  	filterObj.fadeToggle("slow", "linear" ,function(){
+						$('#filter').toggleClass( "expanded" );
+				  	});
+				  });
+				  if(initialLoad){
+					  filterObj.hide();
+				  }
+				  }else{
+				  	 filterHandle.show();
+				  }
+				  break;
+			  
+			  case (windowWidth >= breakpoint ):
+
+				  	filterHandle.hide();					 
+  					filterObj.show();			
+				  
+				  break;
+			  }
+		  
+		  };
+		  $(window).smartresize(toggleMapFilters);
+		  new toggleMapFilters(initialWidth);//initilizes 
+	  }
+
 	  
 
   }
