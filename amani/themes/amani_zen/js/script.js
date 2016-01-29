@@ -51,8 +51,11 @@ Drupal.behaviors.toggleMapFilters = {
 			  case (windowWidth < breakpoint ):
 				  //inject a button
 				  if(filterHandle.length === 0){
-				  $('#block-menu-menu-social-media .menu').prepend('<li id="filter" class="menu__item is-leaf first leaf custom-mobile-filter ">Map Filter</li>')
+					  // $('#block-menu-menu-social-media .menu').prepend('<li id="filter" class="menu__item is-leaf first leaf custom-mobile-filter ">Map Filter</li>');
+					  $('.primary-nav-wrapper').append('<div id="filter" class="header__region region filter-header"><h2>Filter By</h2></div>');
+					  
 				  $('#filter').click(function(){
+					  $('#filter').toggleClass('expanded');
 				  	filtersObj.fadeToggle(function(){});
 				  });
 				  if(initialLoad){

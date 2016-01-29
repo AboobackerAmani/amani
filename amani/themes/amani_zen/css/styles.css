@@ -3200,6 +3200,45 @@ footer .field-label {
   cursor: pointer;
 }
 
+/* line 328, ../sass/components/_map_page.scss */
+.filter-header {
+  position: relative;
+  background: white;
+  border-bottom: 1px solid #ccc;
+}
+/* line 332, ../sass/components/_map_page.scss */
+.filter-header:before {
+  content: "+";
+  font-weight: 700;
+  font-size: 28px;
+  color: #ce9bc0;
+  display: block;
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
+  position: absolute;
+  right: 11px;
+  top: 11px;
+}
+/* line 345, ../sass/components/_map_page.scss */
+.filter-header h2 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  color: #ce9bc0;
+  text-align: left;
+  margin: 0px;
+  padding: 10px;
+  font-weight: 100;
+}
+
+/* line 360, ../sass/components/_map_page.scss */
+.expanded.filter-header:before {
+  content: "-";
+}
+
 /**
  * @file
  * Style for menus.
