@@ -25,6 +25,7 @@ function amani_sms_process_sms($inputJSON) {
     if (isset($parsed_message['message']['amani_sms_reporter'])) {
       $title .= '-' . $parsed_message['message']['amani_sms_reporter'];
     }
+    $sub_wrapper->title->set($title);
     $sub_wrapper->field_sms_sub_message->set($inputJSON);
     $sub_wrapper->save();
     // Create our map record and associate it with the sms submission.
