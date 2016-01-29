@@ -2372,7 +2372,7 @@ footer .field-label {
   text-transform: uppercase;
   line-height: 30px;
   padding: 5px 50px;
-  background: #f09416;
+  background: #513e79;
   box-shadow: 1px 3px 5px #ccc;
 }
 @media (max-width: 768px) {
@@ -3147,6 +3147,21 @@ footer .field-label {
   font-size: 20px;
   color: white;
   margin-right: 10px;
+}
+
+/* line 315, ../sass/components/_map_page.scss */
+.custom-mobile-filter {
+  color: #513e79;
+  border-radius: 4px;
+  padding: 4px 9px;
+  height: 21px;
+  font-size: 18px;
+  background: white;
+  position: absolute !important;
+  right: 80px;
+  width: 76px;
+  font-weight: 400;
+  cursor: pointer;
 }
 
 /**
@@ -4238,7 +4253,7 @@ tr.selected td {
 /* line 809, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1431025404');
+  background-image: url('../images/progress.gif?1448675509');
 }
 
 @media all and (max-width: 768px) {
