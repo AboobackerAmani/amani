@@ -24,9 +24,86 @@ Drupal.behaviors.my_custom_behavior = {
 
   }
 };
+Drupal.behaviors.toggleMapFilters = {
+  attach: function(context, settings) {
+	  var breakpoint = 761;
+	  var filterIds =
+					['block-incident-map-field-incident-report-type',
+					'block-incident-map-field-incident-severity',
+					'block-incident-map-field-map-filter-3',
+					'block-incident-map-field-map-filter-4'
+					];
+	  var filters = $.map( filterIds, function(i) { return document.getElementById(i) } );
+	  var filtersObj = $(filters);
+	  var initialWidth = $(window).width();
+	  var toggleMapFilters = function(initialWidth){
+		  var initialLoad, windowWidth, filterHandle = $('#filter');	
+		  if(jQuery.type(initialWidth) === 'number'){
+			  windowWidth = initialWidth;
+			  initialLoad = true
+		  }else{
+			 windowWidth = $(window).width();
+			 initialLoad = false;
+		  }
+		  switch(true){
+		  case (windowWidth < breakpoint ):
+			  //inject a button
+			  if(filterHandle.length === 0){
+			  $('#block-menu-menu-social-media .menu').prepend('<li id="filter" class="menu__item is-leaf first leaf custom-mobile-filter ">Map Filter</li>')
+			  $('#filter').click(function(){
+			  	filtersObj.fadeToggle(function(){});
+			  });
+			  if(initialLoad){
+				  filtersObj.hide();
+			  }
+			  }else{
+			  	 filterHandle.show();
+			  }
+			  break;
+			  
+		  case (windowWidth >= breakpoint ):
+			  filterHandle.hide();
+			  break;
+		  }
+		  
+	  };
+	  $(window).smartresize(toggleMapFilters);
+	  new toggleMapFilters(initialWidth);//initilizes 
+	  
+
+  }
+};
 
 })(jQuery, Drupal, this, this.document);
 
+
+(function($,sr){
+
+  // debouncing function from John Hann
+  // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+  var debounce = function (func, threshold, execAsap) {
+      var timeout;
+
+      return function debounced () {
+          var obj = this, args = arguments;
+          function delayed () {
+              if (!execAsap)
+                  func.apply(obj, args);
+              timeout = null;
+          };
+
+          if (timeout)
+              clearTimeout(timeout);
+          else if (execAsap)
+              func.apply(obj, args);
+
+          timeout = setTimeout(delayed, threshold || 100);
+      };
+  }
+  // smartresize 
+  jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+
+})(jQuery,'smartresize');
 
 /**
 *
