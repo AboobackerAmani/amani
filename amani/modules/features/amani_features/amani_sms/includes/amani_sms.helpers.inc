@@ -21,11 +21,11 @@ function amani_sms_process_sms($inputJSON) {
     // Create sms submission.
     $submission = entity_create('node', array('type' => 'sms_submission'));
     $sub_wrapper = entity_metadata_wrapper('node', $submission);
-    $title = 'SMS Submission-' . date('dmY');
+    $title = date('dmY');
     if (isset($parsed_message['message']['amani_sms_reporter'])) {
-      $title .= ' ' . $parsed_message['message']['amani_sms_reporter'];
+      $title .= '-' . $parsed_message['message']['amani_sms_reporter'];
     }
-    $sub_wrapper->title->set($title);
+    $sub_wrapper->title->set($title . ' (SMS Submission)');
     $sub_wrapper->field_sms_sub_message->set($inputJSON);
     $sub_wrapper->save();
     // Create our map record and associate it with the sms submission.
