@@ -21,7 +21,7 @@ function amani_sms_process_sms($inputJSON) {
     // Create sms submission.
     $submission = entity_create('node', array('type' => 'sms_submission'));
     $sub_wrapper = entity_metadata_wrapper('node', $submission);
-    $title = date('dmY');
+    $title = 'SMS Submission-' . date('dmY');
     if (isset($parsed_message['message']['amani_sms_reporter'])) {
       $title .= ' ' . $parsed_message['message']['amani_sms_reporter'];
     }
@@ -75,6 +75,7 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
   $map_record = entity_create('node', array('type' => 'incident_report'));
   $mr_wrapper = entity_metadata_wrapper('node', $map_record);
   $errors = array();
+  $title = '';
   // Incident Date
   if (!is_null($parsed_message['message']['amani_sms_date'])) {
     $message_date = $parsed_message['message']['amani_sms_date'];
@@ -84,6 +85,7 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
     if (checkdate($month, $day, $yr)) {
       $date = strtotime("{$month}/{$day}/{$yr}");
       $mr_wrapper->field_incident_date->set($date);
+      $title .= $date;
     }
     else {
       // Add an error.
@@ -95,9 +97,16 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
   // Title
   $title = date('dmY');
   if (!is_null($parsed_message['message']['amani_sms_reporter'])) {
-    $title .= ' ' . $parsed_message['message']['amani_sms_reporter'];
+    $title .= '-' . $parsed_message['message']['amani_sms_reporter'];
   }
-  $mr_wrapper->title->set($title);
+
+  // If we've been able to create a title from the date & reporter, set it.
+  if ($title) {
+    $mr_wrapper->title->set($title);
+  } else {
+  // Otherwise just use 'now' as the date.
+    $mr_wrapper->title->set(date('dmY'));
+  }
   // Location
   if (!is_null($parsed_message['message']['amani_sms_location'])) {
     if ($term = amani_sms_token_to_term('amani_sms_location', $parsed_message['message']['amani_sms_location'])) {
