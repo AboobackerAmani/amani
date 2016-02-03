@@ -52,3 +52,22 @@ function amani_incident_report_field_widget_form_alter(&$element, &$form_state, 
     }
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function amani_incident_report_form_incident_report_node_form_alter(&$form, &$form_state, $form_id) {
+  // Ensure we use the labels from config on map records - if they exist.
+  if ($title = variable_get('incident-map-filter-field_incident_report_type-category-title')) {
+    $form['field_incident_report_type'][LANGUAGE_NONE]['#title'] = $title;
+  }
+  if ($title = variable_get('incident-map-filter-field_incident_severity-category-title')) {
+    $form['field_incident_severity'][LANGUAGE_NONE]['#title'] = $title;
+  }
+  if ($title = variable_get('incident-map-filter-field_map_filter_3-category-title')) {
+    $form['field_map_filter_3'][LANGUAGE_NONE]['#title'] = $title;
+  }
+  if ($title = variable_get('incident-map-filter-field_map_filter_4-category-title')) {
+    $form['field_map_filter_4'][LANGUAGE_NONE]['#title'] = $title;
+  }
+}

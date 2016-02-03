@@ -140,7 +140,7 @@ function amani_incident_report_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '9',
+          'weight' => '12',
         ),
         'ical' => array(
           'label' => 'above',
@@ -307,7 +307,7 @@ function amani_incident_report_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '11',
+          'weight' => '14',
         ),
         'ical' => array(
           'label' => 'above',
@@ -608,7 +608,7 @@ function amani_incident_report_field_default_fields() {
             'file_view_mode' => 'default',
           ),
           'type' => 'file_rendered',
-          'weight' => '6',
+          'weight' => '8',
         ),
         'ical' => array(
           'label' => 'above',
@@ -718,7 +718,7 @@ function amani_incident_report_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '4',
+          'weight' => '3',
         ),
         'ical' => array(
           'label' => 'above',
@@ -797,7 +797,7 @@ function amani_incident_report_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'ical' => array(
           'label' => 'above',
@@ -871,7 +871,7 @@ function amani_incident_report_field_default_fields() {
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => '5',
+          'weight' => '9',
         ),
         'ical' => array(
           'label' => 'above',
@@ -965,7 +965,7 @@ function amani_incident_report_field_default_fields() {
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => 12,
+          'weight' => '5',
         ),
         'ical' => array(
           'label' => 'above',
@@ -1043,7 +1043,7 @@ function amani_incident_report_field_default_fields() {
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => 13,
+          'weight' => '6',
         ),
         'ical' => array(
           'label' => 'above',
@@ -1186,7 +1186,7 @@ Prof.',
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '8',
+          'weight' => '11',
         ),
         'ical' => array(
           'label' => 'above',
@@ -1296,7 +1296,7 @@ Prof.',
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '10',
+          'weight' => '13',
         ),
         'ical' => array(
           'label' => 'above',

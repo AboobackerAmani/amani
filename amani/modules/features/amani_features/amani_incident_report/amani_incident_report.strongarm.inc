@@ -115,7 +115,7 @@ function amani_incident_report_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '0',
+            'weight' => '10',
             'visible' => FALSE,
           ),
           'teaser' => array(
