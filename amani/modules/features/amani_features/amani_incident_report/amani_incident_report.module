@@ -71,3 +71,24 @@ function amani_incident_report_form_incident_report_node_form_alter(&$form, &$fo
     $form['field_map_filter_4'][LANGUAGE_NONE]['#title'] = $title;
   }
 }
+
+/**
+ * Implements hook_node_view().
+ */
+function amani_incident_report_node_view($node, $view_mode, $langcode) {
+  if ($node->type == 'incident_report') {
+    // Ensure we use the labels from config on map record node displays - if they exist.
+    if ($title = variable_get('incident-map-filter-field_incident_report_type-category-title')) {
+      $node->content['field_incident_report_type']['#title'] = $title;
+    }
+    if ($title = variable_get('incident-map-filter-field_incident_severity-category-title')) {
+      $node->content['field_incident_severity']['#title'] = $title;
+    }
+    if ($title = variable_get('incident-map-filter-field_map_filter_3-category-title')) {
+      $node->content['field_map_filter_3']['#title'] = $title;
+    }
+    if ($title = variable_get('incident-map-filter-field_map_filter_4-category-title')) {
+      $node->content['field_map_filter_4']['#title'] = $title;
+    }
+  }
+}
