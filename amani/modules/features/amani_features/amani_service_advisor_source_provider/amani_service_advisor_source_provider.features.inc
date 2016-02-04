@@ -9,6 +9,10 @@
  */
 function amani_service_advisor_source_provider_ctools_plugin_api() {
   list($module, $api) = func_get_args();
+  if ($module == "field_group" && $api == "field_group") {
+    return array("version" => "1");
+  }
+  list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -26,6 +30,14 @@ function amani_service_advisor_source_provider_views_api() {
  */
 function amani_service_advisor_source_provider_node_info() {
   $items = array(
+    'service_partner' => array(
+      'name' => t('Service Partner'),
+      'base' => 'node_content',
+      'description' => t('A partner for a UNHCR service source'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'service_source' => array(
       'name' => t('Service Source'),
       'base' => 'node_content',
