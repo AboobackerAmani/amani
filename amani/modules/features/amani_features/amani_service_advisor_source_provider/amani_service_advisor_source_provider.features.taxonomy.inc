@@ -17,7 +17,7 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => '10',
       'language' => 'und',
-      'i18n_mode' => '0',
+      'i18n_mode' => '1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -42,7 +42,7 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => '7',
       'language' => 'und',
-      'i18n_mode' => '0',
+      'i18n_mode' => '1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -67,7 +67,7 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => '10',
       'language' => 'und',
-      'i18n_mode' => '0',
+      'i18n_mode' => '1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -117,7 +117,7 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => '9',
       'language' => 'und',
-      'i18n_mode' => '0',
+      'i18n_mode' => '1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -142,7 +142,7 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => '8',
       'language' => 'und',
-      'i18n_mode' => '0',
+      'i18n_mode' => '1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',

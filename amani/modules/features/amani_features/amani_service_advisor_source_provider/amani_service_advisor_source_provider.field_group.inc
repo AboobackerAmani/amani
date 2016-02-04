@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function amani_service_advisor_source_provider_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -41,7 +41,7 @@ function amani_service_advisor_source_provider_field_group_info() {
       ),
     ),
   );
-  $export['group_service_accessibility|node|service_source|form'] = $field_group;
+  $field_groups['group_service_accessibility|node|service_source|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -73,7 +73,12 @@ function amani_service_advisor_source_provider_field_group_info() {
       ),
     ),
   );
-  $export['group_service_properties|node|service_source|form'] = $field_group;
+  $field_groups['group_service_properties|node|service_source|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Accessibility');
+  t('Properties');
+
+  return $field_groups;
 }
