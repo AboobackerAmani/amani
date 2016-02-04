@@ -454,7 +454,7 @@ function amani_event_views_default_views() {
   $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
-  $handler->display->display_options['footer']['area_text_custom']['content'] = '<div class="all-events"><a href="/news-and-events">View all events >></a></div>';
+  $handler->display->display_options['footer']['area_text_custom']['content'] = '<div class="all-events"><a href="/news-and-events">View all events </a></div>';
   $handler->display->display_options['footer']['area_text_custom']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Date */
@@ -478,7 +478,7 @@ function amani_event_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '<div class="title">[title] >></div>';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<div class="title">[title] </div>';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
@@ -534,8 +534,8 @@ function amani_event_views_default_views() {
     t('upcoming events - list'),
     t('block list'),
     t('Upcoming events'),
-    t('<div class="all-events"><a href="/news-and-events">View all events >></a></div>'),
-    t('<div class="title">[title] >></div>'),
+    t('<div class="all-events"><a href="/news-and-events">View all events </a></div>'),
+    t('<div class="title">[title] </div>'),
   );
   $export['calendar_of_events'] = $view;
 
