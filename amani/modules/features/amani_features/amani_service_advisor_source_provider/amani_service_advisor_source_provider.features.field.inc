@@ -202,18 +202,17 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'locked' => '0',
       'module' => 'entityreference',
       'settings' => array(
-        'handler' => 'base',
+        'handler' => 'views',
         'handler_settings' => array(
           'behaviors' => array(
             'views-select-list' => array(
               'status' => 0,
             ),
           ),
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'service_source' => 'service_source',
+          'view' => array(
+            'args' => array(),
+            'display_name' => 'entityreference_1',
+            'view_name' => 'services_endpoint_services_for_group',
           ),
         ),
         'target_type' => 'node',
@@ -331,17 +330,17 @@ function amani_service_advisor_source_provider_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'og_group_ref',
-      'label' => 'Groups audience',
-      'required' => 0,
+      'label' => 'Service Partner',
+      'required' => 1,
       'settings' => array(
         'behaviors' => array(
           'og_widget' => array(
             'access_override' => 0,
             'admin' => array(
-              'widget_type' => 'options_select',
+              'widget_type' => 'options_buttons',
             ),
             'default' => array(
-              'widget_type' => 'options_select',
+              'widget_type' => 'options_buttons',
             ),
             'status' => TRUE,
           ),
@@ -2095,16 +2094,17 @@ function amani_service_advisor_source_provider_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'og_group_ref',
-      'label' => 'Groups audience',
-      'required' => FALSE,
+      'label' => 'Service Partner',
+      'required' => 1,
       'settings' => array(
         'behaviors' => array(
           'og_widget' => array(
+            'access_override' => 0,
             'admin' => array(
-              'widget_type' => 'entityreference_autocomplete',
+              'widget_type' => 'options_buttons',
             ),
             'default' => array(
-              'widget_type' => 'options_select',
+              'widget_type' => 'options_buttons',
             ),
             'status' => TRUE,
           ),
@@ -2124,6 +2124,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         ),
       ),
       'widget' => array(
+        'active' => 0,
         'module' => 'og',
         'settings' => array(),
         'type' => 'og_complex',
@@ -2297,7 +2298,6 @@ function amani_service_advisor_source_provider_field_default_fields() {
   t('End Date');
   t('Group');
   t('Group membership');
-  t('Groups audience');
   t('Logo');
   t('More Info Link');
   t('Partner Name');
@@ -2310,6 +2310,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
   t('Service Indicators');
   t('Service Intake Criteria');
   t('Service Location');
+  t('Service Partner');
   t('Service Registration type');
   t('Service Response Delay');
   t('Service Sub Category');

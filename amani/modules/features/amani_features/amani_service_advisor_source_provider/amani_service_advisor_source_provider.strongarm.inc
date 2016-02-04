@@ -126,7 +126,7 @@ function amani_service_advisor_source_provider_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_service_partner';
-  $strongarm->value = '2';
+  $strongarm->value = '0';
   $export['comment_service_partner'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -253,15 +253,49 @@ function amani_service_advisor_source_provider_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_extended_service_location';
+  $strongarm->value = '1';
+  $export['i18n_node_extended_service_location'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_extended_service_partner';
+  $strongarm->value = '1';
+  $export['i18n_node_extended_service_partner'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_extended_service_source';
-  $strongarm->value = 1;
+  $strongarm->value = '1';
   $export['i18n_node_extended_service_source'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_service_location';
+  $strongarm->value = array(
+    0 => 'current',
+  );
+  $export['i18n_node_options_service_location'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_service_partner';
+  $strongarm->value = array(
+    0 => 'current',
+  );
+  $export['i18n_node_options_service_partner'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_options_service_source';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'current',
+  );
   $export['i18n_node_options_service_source'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -275,7 +309,7 @@ function amani_service_advisor_source_provider_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_service_partner';
-  $strongarm->value = '0';
+  $strongarm->value = '2';
   $export['language_content_type_service_partner'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -298,9 +332,7 @@ function amani_service_advisor_source_provider_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_service_partner';
-  $strongarm->value = array(
-    0 => 'main-menu',
-  );
+  $strongarm->value = array();
   $export['menu_options_service_partner'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -394,7 +426,7 @@ function amani_service_advisor_source_provider_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_service_partner';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_service_partner'] = $strongarm;
 
   $strongarm = new stdClass();
