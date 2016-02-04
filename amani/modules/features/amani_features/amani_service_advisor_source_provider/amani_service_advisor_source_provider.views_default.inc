@@ -47,12 +47,11 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = 'id';
-  /* Field: Content: Location Name */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_service_location_name']['id'] = 'field_service_location_name';
   $handler->display->display_options['fields']['field_service_location_name']['table'] = 'field_data_field_service_location_name';
   $handler->display->display_options['fields']['field_service_location_name']['field'] = 'field_service_location_name';
   $handler->display->display_options['fields']['field_service_location_name']['label'] = 'region';
-  $handler->display->display_options['fields']['field_service_location_name']['type'] = 'text_plain';
   /* Field: Content: Service Category */
   $handler->display->display_options['fields']['field_service_category']['id'] = 'field_service_category';
   $handler->display->display_options['fields']['field_service_category']['table'] = 'field_data_field_service_category';
@@ -68,16 +67,11 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_partner_name']['table'] = 'field_data_field_service_partner_name';
   $handler->display->display_options['fields']['field_service_partner_name']['field'] = 'field_service_partner_name';
   $handler->display->display_options['fields']['field_service_partner_name']['label'] = 'organization:name';
-  /* Field: Content: Organization logo  */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_service_organization_logo_']['id'] = 'field_service_organization_logo_';
   $handler->display->display_options['fields']['field_service_organization_logo_']['table'] = 'field_data_field_service_organization_logo_';
   $handler->display->display_options['fields']['field_service_organization_logo_']['field'] = 'field_service_organization_logo_';
   $handler->display->display_options['fields']['field_service_organization_logo_']['label'] = 'organization:imageUrl';
-  $handler->display->display_options['fields']['field_service_organization_logo_']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_service_organization_logo_']['settings'] = array(
-    'image_style' => '',
-    'image_link' => '',
-  );
   /* Field: Content: Service Location */
   $handler->display->display_options['fields']['field_service_location']['id'] = 'field_service_location';
   $handler->display->display_options['fields']['field_service_location']['table'] = 'field_data_field_service_location';

@@ -30,6 +30,14 @@ function amani_service_advisor_source_provider_views_api() {
  */
 function amani_service_advisor_source_provider_node_info() {
   $items = array(
+    'service_location' => array(
+      'name' => t('Service Location'),
+      'base' => 'node_content',
+      'description' => t('A Service Location for the Service Advisor'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'service_partner' => array(
       'name' => t('Service Partner'),
       'base' => 'node_content',
