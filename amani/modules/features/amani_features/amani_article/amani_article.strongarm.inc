@@ -122,7 +122,7 @@ function amani_article_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '0',
+            'weight' => '6',
             'visible' => FALSE,
           ),
         ),

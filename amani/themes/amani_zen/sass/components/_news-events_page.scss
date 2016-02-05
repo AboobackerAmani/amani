@@ -243,10 +243,19 @@
 }
 
 //Node page
+.node-type-article .article-title-wrapper {
+  .article-title {
+    color: $purple-primary;
+    font-size: 2em;
+    line-height: 1.8em;
+  }
+}
 .node-article {
-  border-top: 3px solid $purple-primary;
-  padding-top: 20px;
-  
+  .field-name-field-article-date .date-display-single{
+    text-transform: uppercase;
+    font-style: italic;
+  }
+
   .field-name-field-image {
     display: block;
     margin-right: 0;
@@ -269,12 +278,6 @@
     
     @include breakpoint($breakpoint) {
       margin-left: 250px;
-    }
-  }
-  
-  .field-name-field-article-date {
-    .field-label {
-      display: none;
     }
   }
   

@@ -29,9 +29,9 @@ function amani_article_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-news_and_events-block_2' => array(
+        'views-programs_campaigns-block' => array(
           'module' => 'views',
-          'delta' => 'news_and_events-block_2',
+          'delta' => 'programs_campaigns-block',
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
