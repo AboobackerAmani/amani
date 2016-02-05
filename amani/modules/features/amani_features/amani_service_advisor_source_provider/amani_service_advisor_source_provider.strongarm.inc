@@ -254,7 +254,7 @@ function amani_service_advisor_source_provider_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'i18n_node_extended_service_location';
-  $strongarm->value = '1';
+  $strongarm->value = '4';
   $export['i18n_node_extended_service_location'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -277,6 +277,7 @@ function amani_service_advisor_source_provider_strongarm() {
   $strongarm->name = 'i18n_node_options_service_location';
   $strongarm->value = array(
     0 => 'current',
+    1 => 'required',
   );
   $export['i18n_node_options_service_location'] = $strongarm;
 
