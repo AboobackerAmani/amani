@@ -9,6 +9,31 @@
  */
 function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
   return array(
+    'service_accessibility' => array(
+      'name' => 'Service Accessibility',
+      'machine_name' => 'service_accessibility',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'language' => 'und',
+      'i18n_mode' => '1',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'service_available_languages' => array(
       'name' => 'Service Language',
       'machine_name' => 'service_available_languages',
@@ -59,6 +84,31 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'service_coverage' => array(
+      'name' => 'Service Coverage',
+      'machine_name' => 'service_coverage',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'language' => 'und',
+      'i18n_mode' => '1',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'service_intake_criteria' => array(
       'name' => 'Service Intake Criteria',
       'machine_name' => 'service_intake_criteria',
@@ -84,15 +134,40 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'service_location_availability_days' => array(
+      'name' => 'Service Location Availability Days',
+      'machine_name' => 'service_location_availability_days',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'language' => 'und',
+      'i18n_mode' => '1',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'service_registration_type' => array(
-      'name' => 'Service Registration type',
+      'name' => 'Service Registration Type',
       'machine_name' => 'service_registration_type',
       'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '10',
       'language' => 'und',
-      'i18n_mode' => '0',
+      'i18n_mode' => '1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -134,9 +209,9 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'services_available_nationality_' => array(
+    'services_available_nationality' => array(
       'name' => 'Services Available Nationality',
-      'machine_name' => 'services_available_nationality_',
+      'machine_name' => 'services_available_nationality',
       'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',
