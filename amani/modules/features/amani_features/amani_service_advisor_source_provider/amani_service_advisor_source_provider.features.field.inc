@@ -223,7 +223,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => array(),
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -245,7 +245,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_service_location_days',
-      'label' => 'Office Open on',
+      'label' => 'Days available',
       'required' => 0,
       'settings' => array(
         'behaviors' => array(
@@ -258,11 +258,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(
-          'match_operator' => 'CONTAINS',
-          'path' => '',
-          'size' => '60',
-        ),
+        'settings' => array(),
         'type' => 'options_select',
         'weight' => '46',
       ),
@@ -914,7 +910,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'list',
           'settings' => array(),
           'type' => 'list_default',
-          'weight' => 30,
+          'weight' => '30',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -980,7 +976,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 31,
+          'weight' => '31',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1080,8 +1076,8 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'label' => 'above',
           'module' => 'i18n_taxonomy',
           'settings' => array(),
-          'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => 29,
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '29',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1152,8 +1148,8 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'label' => 'above',
           'module' => 'i18n_taxonomy',
           'settings' => array(),
-          'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => 17,
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '17',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1217,7 +1213,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 27,
+          'weight' => '27',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1321,7 +1317,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
             'show_repeat_rule' => 'show',
           ),
           'type' => 'date_default',
-          'weight' => 6,
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1397,7 +1393,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 18,
+          'weight' => '18',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1497,8 +1493,8 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'label' => 'above',
           'module' => 'i18n_taxonomy',
           'settings' => array(),
-          'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => 24,
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '24',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1569,8 +1565,8 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'label' => 'above',
           'module' => 'i18n_taxonomy',
           'settings' => array(),
-          'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => 28,
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '28',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1637,7 +1633,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => 20,
+          'weight' => '20',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1724,8 +1720,8 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'label' => 'above',
           'module' => 'i18n_taxonomy',
           'settings' => array(),
-          'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => 26,
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '26',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1796,8 +1792,8 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'label' => 'above',
           'module' => 'i18n_taxonomy',
           'settings' => array(),
-          'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => 23,
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '23',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1872,7 +1868,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
             'show_repeat_rule' => 'show',
           ),
           'type' => 'date_default',
-          'weight' => 5,
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1950,7 +1946,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 32,
+          'weight' => '32',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2045,7 +2041,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 4,
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2160,7 +2156,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'og_ui',
           'settings' => array(),
           'type' => 'og_list_default',
-          'weight' => 33,
+          'weight' => '33',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2371,6 +2367,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
   t('Available to Nationality');
   t('Body');
   t('Comments');
+  t('Days available');
   t('Determine if this is an OG group.');
   t('End Date');
   t('Group');
@@ -2378,7 +2375,6 @@ function amani_service_advisor_source_provider_field_default_fields() {
   t('Logo');
   t('More Info Link');
   t('Office Closes At');
-  t('Office Open on');
   t('Office Opens At');
   t('Referral Required ');
   t('Referral type ');

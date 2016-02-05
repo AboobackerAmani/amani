@@ -124,6 +124,27 @@ function amani_service_advisor_source_provider_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: delete terms in 25.
+  $permissions['delete terms in 25'] = array(
+    'name' => 'delete terms in 25',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in 26.
+  $permissions['delete terms in 26'] = array(
+    'name' => 'delete terms in 26',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in 27.
+  $permissions['delete terms in 27'] = array(
+    'name' => 'delete terms in 27',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: edit any service_location content.
   $permissions['edit any service_location content'] = array(
     'name' => 'edit any service_location content',
@@ -206,6 +227,37 @@ function amani_service_advisor_source_provider_user_default_permissions() {
     'name' => 'edit terms in 24',
     'roles' => array(),
     'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in 25.
+  $permissions['edit terms in 25'] = array(
+    'name' => 'edit terms in 25',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in 26.
+  $permissions['edit terms in 26'] = array(
+    'name' => 'edit terms in 26',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in 27.
+  $permissions['edit terms in 27'] = array(
+    'name' => 'edit terms in 27',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: translate own content.
+  $permissions['translate own content'] = array(
+    'name' => 'translate own content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'authenticated user',
+    ),
+    'module' => 'translation_own_nodes',
   );
 
   return $permissions;
