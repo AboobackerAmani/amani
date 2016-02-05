@@ -62,7 +62,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_sub_category']['table'] = 'field_data_field_service_sub_category';
   $handler->display->display_options['fields']['field_service_sub_category']['field'] = 'field_service_sub_category';
   $handler->display->display_options['fields']['field_service_sub_category']['label'] = 'category:subCategory';
-  /* Field: Content: Partner Name */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_service_partner_name']['id'] = 'field_service_partner_name';
   $handler->display->display_options['fields']['field_service_partner_name']['table'] = 'field_data_field_service_partner_name';
   $handler->display->display_options['fields']['field_service_partner_name']['field'] = 'field_service_partner_name';
@@ -141,7 +141,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_response_delay']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_service_response_delay']['group_column'] = 'value';
   $handler->display->display_options['fields']['field_service_response_delay']['delta_offset'] = '0';
-  /* Field: Content: Service Availability Day and Time */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_service_availability_day_a']['id'] = 'field_service_availability_day_a';
   $handler->display->display_options['fields']['field_service_availability_day_a']['table'] = 'field_data_field_service_availability_day_a';
   $handler->display->display_options['fields']['field_service_availability_day_a']['field'] = 'field_service_availability_day_a';

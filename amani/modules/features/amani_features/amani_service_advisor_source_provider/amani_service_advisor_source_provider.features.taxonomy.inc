@@ -15,7 +15,7 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
       'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => '7',
       'language' => 'und',
       'i18n_mode' => '1',
       'rdf_mapping' => array(
@@ -65,7 +65,7 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
       'description' => 'Service categories available to be used in service advisor app ',
       'hierarchy' => '0',
       'module' => 'taxonomy',
-      'weight' => '7',
+      'weight' => '9',
       'language' => 'und',
       'i18n_mode' => '1',
       'rdf_mapping' => array(
@@ -90,7 +90,7 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
       'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => '8',
       'language' => 'und',
       'i18n_mode' => '1',
       'rdf_mapping' => array(
@@ -135,12 +135,62 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
       ),
     ),
     'service_location_availability_days' => array(
-      'name' => 'Service Location Availability Days',
+      'name' => 'Service Location Availability days',
       'machine_name' => 'service_location_availability_days',
       'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => '10',
+      'language' => 'und',
+      'i18n_mode' => '1',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'service_location_hour_close' => array(
+      'name' => 'Service Location Office closes at',
+      'machine_name' => 'service_location_hour_close',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '10',
+      'language' => 'und',
+      'i18n_mode' => '1',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'service_location_hour_open' => array(
+      'name' => 'Service Location Office opens at',
+      'machine_name' => 'service_location_hour_open',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '10',
       'language' => 'und',
       'i18n_mode' => '1',
       'rdf_mapping' => array(
@@ -190,7 +240,7 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
       'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',
-      'weight' => '9',
+      'weight' => '10',
       'language' => 'und',
       'i18n_mode' => '1',
       'rdf_mapping' => array(
@@ -215,7 +265,7 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
       'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',
-      'weight' => '8',
+      'weight' => '10',
       'language' => 'und',
       'i18n_mode' => '1',
       'rdf_mapping' => array(

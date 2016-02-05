@@ -7,7 +7,10 @@ $vocabularies_to_load = array (
   'service_available_nationality',
   'service_coverage',
   'service_intake_criteria',
-  'service_registration_type'
+  'service_registration_type',
+  'service_location_availability_days',
+  'service_location_hour_open',
+  'service_location_hour_close'
 );
 
 foreach ($vocabularies_to_load as $vocabulary){
