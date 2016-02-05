@@ -889,7 +889,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'settings' => array(
         'allowed_values' => array(
           0 => array(
-            'vocabulary' => 'services_available_nationality_',
+            'vocabulary' => 'services_available_nationality',
             'parent' => '0',
           ),
         ),
