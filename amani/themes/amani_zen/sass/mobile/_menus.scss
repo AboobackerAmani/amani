@@ -200,7 +200,7 @@ html.mm-opened .mm-page {
 } */
 
 div[id*="block-menu-menu-social-media"] {
-  display: none;
+  display: block;
   margin-left: 40px;
   //screen bigger than 768px
     width: auto;
@@ -219,6 +219,11 @@ div[id*="block-menu-menu-social-media"] {
     display: inline-block;
     list-style: none outside none;
     margin-left: 0.3em;
+    margin-right:.6em;
+    
+    a {
+    	font-size:22px;
+    }
   }
 }
 
