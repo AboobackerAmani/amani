@@ -4568,7 +4568,7 @@ div[id*="block-menu-menu-social-media"] li {
     height: 400px;
     float: left;
     overflow: hidden;
-    margin-top: -400px;
+    margin-top: 0;
     /*position: relative;
     padding-left:3000px;
     margin-left:-3000px;
@@ -4619,7 +4619,7 @@ div[id*="block-menu-menu-social-media"] li {
     font-size: 2.2em;
     position: relative;
     float: left;
-    margin-top: 60px;
+    margin-top: -340px;
     margin-left: 120px;
     width: 350px;
     height: 340px;
@@ -11839,18 +11839,19 @@ form.comment-form #edit-preview {
     background: #59C2ED;
     color: white;
     font-weight: 600;
-    font-size: 2.2em;
+    font-size: 2em;
     position: relative;
     float: left;
-    margin-top: 0;
-    width: 100%;
+    margin-top: -5px;
+    width: 104%;
     height: auto;
-    padding: 2em 1em 1em 1em;
+    padding: .6em;
     line-height: 1.2em;
     z-index: 0;
-    margin-bottom: -20px;
+    margin-bottom: 50px;
+    margin-left: -10px;
   }
-  /* line 94, ../sass/mobile/_banner.scss */
+  /* line 95, ../sass/mobile/_banner.scss */
   #banner .block-bean .field-name-field-header-text {
     width: 100%;
     display: block;
@@ -11859,7 +11860,7 @@ form.comment-form #edit-preview {
     left: 2em;
     top: 2em;
   }
-  /* line 101, ../sass/mobile/_banner.scss */
+  /* line 102, ../sass/mobile/_banner.scss */
   #banner .block-bean .field-name-field-header-text .field-items {
     display: block;
     float: left;
