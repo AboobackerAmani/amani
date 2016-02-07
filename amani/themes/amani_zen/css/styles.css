@@ -10578,8 +10578,10 @@ form.comment-form #edit-preview {
     border-top: 2px solid #ccc;
     padding-top: 2em;
     margin-top: 3em;
+    width: 100%;
+    box-sizing: border-box;
   }
-  /* line 246, ../sass/mobile/_forms.scss */
+  /* line 248, ../sass/mobile/_forms.scss */
   #partner-application-form h2 {
     font-weight: 600;
     text-transform: uppercase;
@@ -10591,7 +10593,7 @@ form.comment-form #edit-preview {
     width: 100%;
     margin-bottom: .6em;
   }
-  /* line 258, ../sass/mobile/_forms.scss */
+  /* line 260, ../sass/mobile/_forms.scss */
   #partner-application-form input[type="submit"] {
     background: #59C2ED;
     color: white;
@@ -10604,11 +10606,11 @@ form.comment-form #edit-preview {
     float: left;
     margin-top: 2em;
   }
-  /* line 273, ../sass/mobile/_forms.scss */
+  /* line 275, ../sass/mobile/_forms.scss */
   #partner-application-form .sf-form-required {
     color: #59C2ED;
   }
-  /* line 277, ../sass/mobile/_forms.scss */
+  /* line 279, ../sass/mobile/_forms.scss */
   #partner-application-form .sf-form-required-div {
     display: block;
     float: left;
@@ -10616,34 +10618,34 @@ form.comment-form #edit-preview {
     margin-top: -3.8em;
     margin-bottom: 3em;
   }
-  /* line 289, ../sass/mobile/_forms.scss */
+  /* line 291, ../sass/mobile/_forms.scss */
   #partner-application-form input[type="checkbox"] {
     display: block;
     height: 1em;
     width: 1em;
   }
-  /* line 295, ../sass/mobile/_forms.scss */
+  /* line 297, ../sass/mobile/_forms.scss */
   #partner-application-form input {
     border: none;
     padding: .6em;
     width: 100%;
     margin-bottom: .4em;
   }
-  /* line 302, ../sass/mobile/_forms.scss */
+  /* line 304, ../sass/mobile/_forms.scss */
   #partner-application-form select {
     border: none;
     padding: .6em;
     width: 100%;
     margin-bottom: .4em;
   }
-  /* line 309, ../sass/mobile/_forms.scss */
+  /* line 311, ../sass/mobile/_forms.scss */
   #partner-application-form textarea {
     border: none;
     padding: .6em;
     width: 100%;
     margin-bottom: .4em;
   }
-  /* line 316, ../sass/mobile/_forms.scss */
+  /* line 318, ../sass/mobile/_forms.scss */
   #partner-application-form .sf-form-box {
     background: #E6E6E6;
     padding: 2em 2em;
@@ -10654,13 +10656,13 @@ form.comment-form #edit-preview {
     width: 100%;
     margin-bottom: 4em;
   }
-  /* line 318, ../sass/mobile/_forms.scss */
+  /* line 320, ../sass/mobile/_forms.scss */
   #partner-application-form .sf-form-box input[type="text"] {
     display: block;
     width: 100%;
     padding: .6em;
   }
-  /* line 335, ../sass/mobile/_forms.scss */
+  /* line 337, ../sass/mobile/_forms.scss */
   #partner-application-form .sf-form-box label {
     font-weight: 300;
     font-size: 1em;
@@ -10670,12 +10672,12 @@ form.comment-form #edit-preview {
     margin-top: 1em;
   }
 
-  /* line 350, ../sass/mobile/_forms.scss */
+  /* line 352, ../sass/mobile/_forms.scss */
   body.section-partner-application p {
     font-size: 1.1em;
     line-height: 1.5em;
   }
-  /* line 355, ../sass/mobile/_forms.scss */
+  /* line 357, ../sass/mobile/_forms.scss */
   body.section-partner-application h1#page-title {
     margin-top: 0;
     font-weight: 300;
@@ -10685,15 +10687,15 @@ form.comment-form #edit-preview {
   }
 
   /* Donation page */
-  /* line 371, ../sass/mobile/_forms.scss */
+  /* line 373, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .paragraphs-items-field-paragraphs {
     margin-top: 0;
   }
-  /* line 375, ../sass/mobile/_forms.scss */
+  /* line 377, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #main {
     padding-top: 50px;
   }
-  /* line 377, ../sass/mobile/_forms.scss */
+  /* line 379, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_Div {
     display: block;
     float: left;
@@ -10701,11 +10703,11 @@ form.comment-form #edit-preview {
     position: relative;
     z-index: 10;
   }
-  /* line 385, ../sass/mobile/_forms.scss */
+  /* line 387, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_EventTitle {
     display: none;
   }
-  /* line 389, ../sass/mobile/_forms.scss */
+  /* line 391, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_AmountSectionTitle {
     position: absolute;
     top: -34px;
@@ -10715,7 +10717,7 @@ form.comment-form #edit-preview {
     font-size: 16px;
     letter-spacing: 1px;
   }
-  /* line 399, ../sass/mobile/_forms.scss */
+  /* line 401, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_EventDescription {
     display: block;
     float: left;
@@ -10726,11 +10728,11 @@ form.comment-form #edit-preview {
     color: #414042;
     font-weight: 300;
   }
-  /* line 411, ../sass/mobile/_forms.scss */
+  /* line 413, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_OtherAmtMinimum {
     display: none;
   }
-  /* line 416, ../sass/mobile/_forms.scss */
+  /* line 418, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_AmountDiv {
     background: #E6E6E6;
     display: block;
@@ -10739,7 +10741,7 @@ form.comment-form #edit-preview {
     font-size: 14px;
     padding: 20px;
   }
-  /* line 425, ../sass/mobile/_forms.scss */
+  /* line 427, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage select {
     background: white !important;
     border: 0;
@@ -10747,11 +10749,11 @@ form.comment-form #edit-preview {
     -webkit-border-radius: 0 0;
     border-radius: 0 / 0;
   }
-  /* line 431, ../sass/mobile/_forms.scss */
+  /* line 433, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_PaymentSectionNote {
     display: none;
   }
-  /* line 435, ../sass/mobile/_forms.scss */
+  /* line 437, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv {
     display: block;
     float: left;
@@ -10762,12 +10764,12 @@ form.comment-form #edit-preview {
     margin-top: 60px;
     position: relative;
   }
-  /* line 445, ../sass/mobile/_forms.scss */
+  /* line 447, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv .IATS_PaymentItemDiv {
     position: relative;
     margin-top: 20px;
   }
-  /* line 450, ../sass/mobile/_forms.scss */
+  /* line 452, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv input {
     border: 0;
     padding: 4px 8px;
@@ -10775,134 +10777,134 @@ form.comment-form #edit-preview {
     height: 40px;
     margin-bottom: 10px;
   }
-  /* line 458, ../sass/mobile/_forms.scss */
+  /* line 460, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv label {
     font-weight: normal;
   }
-  /* line 463, ../sass/mobile/_forms.scss */
+  /* line 465, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv textarea {
     width: 100%;
     border: 0;
   }
-  /* line 469, ../sass/mobile/_forms.scss */
+  /* line 471, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_PaymentItemDiv_Country label {
     width: auto;
     padding-right: 20px;
   }
-  /* line 476, ../sass/mobile/_forms.scss */
+  /* line 478, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_PaymentItemDiv_Title label {
     width: auto;
     padding-right: 20px;
   }
-  /* line 482, ../sass/mobile/_forms.scss */
+  /* line 484, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_ReoccurringDiv_ScheduleType {
     margin-top: 10px;
   }
-  /* line 486, ../sass/mobile/_forms.scss */
+  /* line 488, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_ReoccurringDiv {
     display: block;
     width: 710px;
     float: none;
   }
-  /* line 492, ../sass/mobile/_forms.scss */
+  /* line 494, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_AccountTypeDiv {
     display: block;
     width: 710px;
     float: none;
   }
-  /* line 498, ../sass/mobile/_forms.scss */
+  /* line 500, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_PaymentFrequencyDiv {
     width: 710px;
   }
-  /* line 502, ../sass/mobile/_forms.scss */
+  /* line 504, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_PaymentItemInput_Comment {
     margin-bottom: 40px;
   }
-  /* line 506, ../sass/mobile/_forms.scss */
+  /* line 508, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_CreditCardDiv {
     display: block;
     width: 100%;
     margin-top: 0;
   }
-  /* line 512, ../sass/mobile/_forms.scss */
+  /* line 514, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_DebitDiv {
     display: block;
     width: 100%;
     margin-top: 0;
   }
-  /* line 518, ../sass/mobile/_forms.scss */
+  /* line 520, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_BeginDate {
     width: 100px;
   }
-  /* line 522, ../sass/mobile/_forms.scss */
+  /* line 524, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_EndDate {
     width: 100px;
   }
-  /* line 526, ../sass/mobile/_forms.scss */
+  /* line 528, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_ACHCancellationStmDiv {
     padding-left: 0;
     padding-top: 4px;
     width: 100%;
   }
-  /* line 532, ../sass/mobile/_forms.scss */
+  /* line 534, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_ACHRecourseStmDiv {
     padding-left: 0;
     padding-top: 4px;
   }
-  /* line 537, ../sass/mobile/_forms.scss */
+  /* line 539, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_CVV2 {
     display: inline;
     width: 80px !important;
   }
-  /* line 542, ../sass/mobile/_forms.scss */
+  /* line 544, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_ExpiryMonth {
     margin-right: 10px;
   }
-  /* line 546, ../sass/mobile/_forms.scss */
+  /* line 548, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_AccountNumber1 {
     display: inline;
     width: 130px;
     margin-right: 10px;
   }
-  /* line 552, ../sass/mobile/_forms.scss */
+  /* line 554, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_AccountNumber2 {
     display: inline;
     width: 130px;
     margin-right: 10px;
   }
-  /* line 558, ../sass/mobile/_forms.scss */
+  /* line 560, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_AccountNumber3 {
     display: inline;
     width: 130px;
     margin-right: 10px;
   }
-  /* line 564, ../sass/mobile/_forms.scss */
+  /* line 566, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_AccountNumber4 {
     display: inline;
     width: 130px;
     margin-right: 10px;
   }
-  /* line 570, ../sass/mobile/_forms.scss */
+  /* line 572, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv .IATS_PaymentFrequencyItemDiv {
     display: block;
     float: none;
     padding-left: 0 !important;
     margin-top: 10px !important;
   }
-  /* line 575, ../sass/mobile/_forms.scss */
+  /* line 577, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv .IATS_PaymentFrequencyItemDiv input {
     float: none;
     width: auto;
     height: auto;
   }
-  /* line 580, ../sass/mobile/_forms.scss */
+  /* line 582, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv .IATS_PaymentFrequencyItemDiv label {
     float: none;
     width: auto;
     padding-left: 10px;
     margin-right: 30px;
   }
-  /* line 588, ../sass/mobile/_forms.scss */
+  /* line 590, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv .IATS_PaymentTypeItemDiv {
     display: block;
     float: left;
@@ -10910,20 +10912,20 @@ form.comment-form #edit-preview {
     margin-top: 10px !important;
     width: 700px;
   }
-  /* line 594, ../sass/mobile/_forms.scss */
+  /* line 596, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv .IATS_PaymentTypeItemDiv input {
     float: none;
     width: auto;
     height: auto;
   }
-  /* line 599, ../sass/mobile/_forms.scss */
+  /* line 601, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv .IATS_PaymentTypeItemDiv label {
     float: none;
     width: auto;
     padding-left: 10px;
     margin-right: 30px;
   }
-  /* line 610, ../sass/mobile/_forms.scss */
+  /* line 612, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_PaymentSectionTitle {
     position: absolute;
     top: -34px;
@@ -10933,7 +10935,7 @@ form.comment-form #edit-preview {
     font-size: 16px;
     letter-spacing: 1px;
   }
-  /* line 620, ../sass/mobile/_forms.scss */
+  /* line 622, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_ProcessAction_Button {
     font-size: 28px;
     border: 0;
@@ -10945,7 +10947,7 @@ form.comment-form #edit-preview {
     width: 350px;
     margin-left: 220px;
   }
-  /* line 632, ../sass/mobile/_forms.scss */
+  /* line 634, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_AmountItemDiv {
     float: left;
     margin-right: 10px;
@@ -10953,19 +10955,19 @@ form.comment-form #edit-preview {
     width: 220px;
     padding: 1em;
   }
-  /* line 640, ../sass/mobile/_forms.scss */
+  /* line 642, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_RadioAmtLabel {
     font-weight: 300;
     font-size: 20px;
   }
-  /* line 645, ../sass/mobile/_forms.scss */
+  /* line 647, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_Action {
     margin-left: 0;
     padding-left: 0;
     position: relative;
     z-index: 10;
   }
-  /* line 652, ../sass/mobile/_forms.scss */
+  /* line 654, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #other-giving {
     font-size: 28px;
     border: 0;
@@ -10984,26 +10986,26 @@ form.comment-form #edit-preview {
     border: 1px solid #F09416;
     margin-bottom: 50px;
   }
-  /* line 671, ../sass/mobile/_forms.scss */
+  /* line 673, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .other-giving-block {
     display: block;
     z-index: 100;
   }
-  /* line 676, ../sass/mobile/_forms.scss */
+  /* line 678, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_SecureDataDiv {
     padding-left: 270px;
     padding-top: 30px;
     float: left;
   }
-  /* line 682, ../sass/mobile/_forms.scss */
+  /* line 684, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .donate-top-text {
     margin-top: 0 !important;
   }
-  /* line 684, ../sass/mobile/_forms.scss */
+  /* line 686, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .donate-top-text .field-name-field-large-header-text {
     margin-bottom: 20px;
   }
-  /* line 689, ../sass/mobile/_forms.scss */
+  /* line 691, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .donate-thank-you {
     display: block;
     float: left;
@@ -11013,17 +11015,17 @@ form.comment-form #edit-preview {
     z-index: 10;
     position: relative;
   }
-  /* line 697, ../sass/mobile/_forms.scss */
+  /* line 699, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .donate-thank-you .field-name-field-large-header-text {
     margin-bottom: 40px;
     text-align: center;
     width: 100%;
   }
-  /* line 703, ../sass/mobile/_forms.scss */
+  /* line 705, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .donate-thank-you .field-name-field-paragraph-text {
     width: 400px;
   }
-  /* line 708, ../sass/mobile/_forms.scss */
+  /* line 710, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .giving-with-confidence {
     display: block;
     float: right !important;
@@ -11032,7 +11034,7 @@ form.comment-form #edit-preview {
     z-index: 200;
     position: relative;
   }
-  /* line 715, ../sass/mobile/_forms.scss */
+  /* line 717, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .giving-with-confidence a {
     width: 240px;
     height: 120px;
@@ -11040,13 +11042,13 @@ form.comment-form #edit-preview {
     z-index: 1000;
     position: relative;
   }
-  /* line 721, ../sass/mobile/_forms.scss */
+  /* line 723, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .giving-with-confidence a.shofterlinkbox:after {
     margin-top: 76px;
   }
 
   /* Newsletter signup form */
-  /* line 732, ../sass/mobile/_forms.scss */
+  /* line 734, ../sass/mobile/_forms.scss */
   #block-mailchimp-signup-newsletter-signup-form {
     display: block;
     position: relative;
@@ -11054,65 +11056,65 @@ form.comment-form #edit-preview {
     width: 100%;
     margin-top: 3em;
   }
-  /* line 740, ../sass/mobile/_forms.scss */
+  /* line 742, ../sass/mobile/_forms.scss */
   #block-mailchimp-signup-newsletter-signup-form .mailchimp-signup-subscribe-form-description {
     margin-bottom: 6px;
   }
-  /* line 744, ../sass/mobile/_forms.scss */
+  /* line 746, ../sass/mobile/_forms.scss */
   #block-mailchimp-signup-newsletter-signup-form input[type="submit"] {
     background: #F09416;
     margin-left: 0;
     margin-bottom: 40px;
   }
-  /* line 750, ../sass/mobile/_forms.scss */
+  /* line 752, ../sass/mobile/_forms.scss */
   #block-mailchimp-signup-newsletter-signup-form .form-item {
     display: block;
     float: none;
     margin-bottom: 10px;
   }
-  /* line 754, ../sass/mobile/_forms.scss */
+  /* line 756, ../sass/mobile/_forms.scss */
   #block-mailchimp-signup-newsletter-signup-form .form-item label {
     font-weight: 300;
     display: none;
   }
-  /* line 759, ../sass/mobile/_forms.scss */
+  /* line 761, ../sass/mobile/_forms.scss */
   #block-mailchimp-signup-newsletter-signup-form .form-item input {
     border: 0;
     margin-bottom: 6px;
   }
-  /* line 764, ../sass/mobile/_forms.scss */
+  /* line 766, ../sass/mobile/_forms.scss */
   #block-mailchimp-signup-newsletter-signup-form .form-item input#edit-mergevars-email {
     width: 100%;
   }
-  /* line 768, ../sass/mobile/_forms.scss */
+  /* line 770, ../sass/mobile/_forms.scss */
   #block-mailchimp-signup-newsletter-signup-form .form-item input#edit-mergevars-fname {
     width: 100%;
     margin-right: 10px;
   }
-  /* line 773, ../sass/mobile/_forms.scss */
+  /* line 775, ../sass/mobile/_forms.scss */
   #block-mailchimp-signup-newsletter-signup-form .form-item input#edit-mergevars-lname {
     width: 100%;
   }
 
   /* Become a corporate sponsor contact form */
-  /* line 786, ../sass/mobile/_forms.scss */
+  /* line 788, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform {
     display: block;
     float: left;
     width: 100%;
     margin-top: 30px;
   }
-  /* line 793, ../sass/mobile/_forms.scss */
+  /* line 795, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform .form-item {
     display: inline-block;
     margin-bottom: 10px;
     float: left;
   }
-  /* line 799, ../sass/mobile/_forms.scss */
+  /* line 801, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform label {
     display: none;
   }
-  /* line 803, ../sass/mobile/_forms.scss */
+  /* line 805, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform input {
     border: 0;
     background: #E6E6E6;
@@ -11120,34 +11122,34 @@ form.comment-form #edit-preview {
     display: block;
     padding: 10px 20px;
   }
-  /* line 811, ../sass/mobile/_forms.scss */
+  /* line 813, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform div.webform-component--company {
     display: block;
     width: 100%;
   }
-  /* line 816, ../sass/mobile/_forms.scss */
+  /* line 818, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform div.webform-component--email-address {
     display: block;
     width: 100%;
   }
-  /* line 821, ../sass/mobile/_forms.scss */
+  /* line 823, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform div.webform-component--first-name {
     display: block;
     width: 100%;
     margin-right: 0;
   }
-  /* line 827, ../sass/mobile/_forms.scss */
+  /* line 829, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform div.webform-component--last-name {
     display: block;
     width: 100%;
   }
-  /* line 832, ../sass/mobile/_forms.scss */
+  /* line 834, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform div.form-textarea-wrapper {
     display: block;
     width: 100%;
     margin-bottom: 20px;
   }
-  /* line 838, ../sass/mobile/_forms.scss */
+  /* line 840, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform textarea {
     border: 0;
     background: #E6E6E6;
@@ -11156,7 +11158,7 @@ form.comment-form #edit-preview {
     padding: 10px 20px;
     height: 210px;
   }
-  /* line 847, ../sass/mobile/_forms.scss */
+  /* line 849, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform input[type="submit"] {
     width: auto;
     background: #474F5E;
