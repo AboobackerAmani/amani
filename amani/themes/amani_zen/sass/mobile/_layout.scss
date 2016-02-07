@@ -181,6 +181,8 @@ div.breadcrumb {
 			display:block;
 			float:left;
 			position:relative;
+			background:$soft-grey;
+			z-index:1;
 			
 			&:before {
 				content: "";

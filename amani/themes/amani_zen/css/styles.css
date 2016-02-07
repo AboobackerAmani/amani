@@ -8503,8 +8503,10 @@ form.comment-form #edit-preview {
     display: block;
     float: left;
     position: relative;
+    background: #E6E6E6;
+    z-index: 1;
   }
-  /* line 185, ../sass/mobile/_layout.scss */
+  /* line 187, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-callout-box-full-width-grey:before {
     content: "";
     position: absolute;
@@ -8516,25 +8518,25 @@ form.comment-form #edit-preview {
     border-right: 9999px solid #E6E6E6;
     box-shadow: 9999px 0px 0px 0px #E6E6E6;
   }
-  /* line 198, ../sass/mobile/_layout.scss */
+  /* line 200, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-callout-box-full-width-grey.bluebackground:before {
     border-right: 9999px solid #59C2ED;
     box-shadow: 9999px 0px 0px 0px #59C2ED;
   }
-  /* line 204, ../sass/mobile/_layout.scss */
+  /* line 206, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-callout-box-full-width-grey .field-name-field-header-text {
     font-size: 1.4em;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 16px;
   }
-  /* line 211, ../sass/mobile/_layout.scss */
+  /* line 213, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-callout-box-full-width-grey .field-name-field-paragraph-text {
     font-size: 1.3em;
     line-height: 1.7em;
     font-weight: 300;
   }
-  /* line 217, ../sass/mobile/_layout.scss */
+  /* line 219, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-callout-box-full-width-grey .field-name-field-header-text-large {
     font-size: 3em;
     line-height: 1.4em;
@@ -8542,14 +8544,14 @@ form.comment-form #edit-preview {
     font-weight: 300;
     margin-bottom: .4em;
   }
-  /* line 225, ../sass/mobile/_layout.scss */
+  /* line 227, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-callout-box-full-width-grey .field-name-field-images {
     display: block;
     float: left;
     padding-right: 2em;
     padding-bottom: 1em;
   }
-  /* line 235, ../sass/mobile/_layout.scss */
+  /* line 237, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-light-grey-text-box {
     display: block;
     width: 100%;
@@ -8559,40 +8561,40 @@ form.comment-form #edit-preview {
     margin-right: 0;
     margin-bottom: 20px;
   }
-  /* line 246, ../sass/mobile/_layout.scss */
+  /* line 248, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-light-grey-text-box .field-name-field-box-title {
     color: #59C2ED;
     font-size: 2.2em;
     margin-bottom: 20px;
     font-weight: 400;
   }
-  /* line 253, ../sass/mobile/_layout.scss */
+  /* line 255, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-light-grey-text-box .field-name-field-box-copy {
     font-size: 1.3em;
     line-height: 1.7em;
     font-weight: 300;
   }
-  /* line 260, ../sass/mobile/_layout.scss */
+  /* line 262, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-paragraph-text-with-anchor {
     display: block;
     float: left;
     border-top: 1px solid #474F5E;
     padding-top: 4em;
   }
-  /* line 267, ../sass/mobile/_layout.scss */
+  /* line 269, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-paragraph-text-with-anchor .field-name-field-header-text {
     font-size: 1.4em;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 16px;
   }
-  /* line 274, ../sass/mobile/_layout.scss */
+  /* line 276, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-paragraph-text-with-anchor .field-name-field-paragraph-text {
     font-size: 1.3em;
     line-height: 1.7em;
     font-weight: 300;
   }
-  /* line 280, ../sass/mobile/_layout.scss */
+  /* line 282, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-paragraph-text-with-anchor .field-name-field-header-text-large {
     font-size: 3em;
     line-height: 1.4em;
@@ -8600,48 +8602,48 @@ form.comment-form #edit-preview {
     font-weight: 300;
     margin-bottom: .6em;
   }
-  /* line 289, ../sass/mobile/_layout.scss */
+  /* line 291, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-paragraph-text-with-anchor .field-name-field-anchor-name {
     display: none;
   }
-  /* line 294, ../sass/mobile/_layout.scss */
+  /* line 296, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-simple-text-with-right-side-imag {
     display: block;
     float: none;
   }
-  /* line 298, ../sass/mobile/_layout.scss */
+  /* line 300, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-simple-text-with-right-side-imag .field-name-field-header-text {
     font-size: 1.4em;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 16px;
   }
-  /* line 305, ../sass/mobile/_layout.scss */
+  /* line 307, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-simple-text-with-right-side-imag .field-name-field-paragraph-text {
     font-size: 1.3em;
     line-height: 1.7em;
     font-weight: 300;
   }
-  /* line 311, ../sass/mobile/_layout.scss */
+  /* line 313, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-simple-text-with-right-side-imag .field-name-field-images {
     display: block;
     float: none;
     padding-left: 0;
     padding-bottom: 1em;
   }
-  /* line 316, ../sass/mobile/_layout.scss */
+  /* line 318, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-simple-text-with-right-side-imag .field-name-field-images img {
     width: 100%;
     height: auto;
   }
-  /* line 323, ../sass/mobile/_layout.scss */
+  /* line 325, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-link-block-blue {
     display: block;
     float: left;
     margin-top: 1em;
     width: 100%;
   }
-  /* line 328, ../sass/mobile/_layout.scss */
+  /* line 330, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-link-block-blue a {
     color: white;
     background: #59C2ED;
@@ -8654,7 +8656,7 @@ form.comment-form #edit-preview {
     float: left;
     text-indent: 1em;
   }
-  /* line 339, ../sass/mobile/_layout.scss */
+  /* line 341, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-link-block-blue a:after {
     content: "\f178";
     color: white;
@@ -8666,13 +8668,13 @@ form.comment-form #edit-preview {
     font-size: 2em;
     padding-right: 1em;
   }
-  /* line 353, ../sass/mobile/_layout.scss */
+  /* line 355, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-link-block-grey {
     margin-top: 1em;
     display: block;
     float: none;
   }
-  /* line 358, ../sass/mobile/_layout.scss */
+  /* line 360, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-link-block-grey a {
     color: white;
     background: #474F5E;
@@ -8684,7 +8686,7 @@ form.comment-form #edit-preview {
     float: none;
     text-indent: 1em;
   }
-  /* line 368, ../sass/mobile/_layout.scss */
+  /* line 370, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-link-block-grey a:after {
     content: "\f178";
     color: white;
@@ -8696,7 +8698,7 @@ form.comment-form #edit-preview {
     font-size: 2em;
     padding-right: 1em;
   }
-  /* line 381, ../sass/mobile/_layout.scss */
+  /* line 383, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-link-block-grey a.shorterlinkbox:after {
     /*content:"\f178";
     color:white;
@@ -8712,7 +8714,7 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 401, ../sass/mobile/_layout.scss */
+  /* line 403, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-light-grey-text-box-narrower {
     display: block;
     float: left;
@@ -8724,7 +8726,7 @@ form.comment-form #edit-preview {
     height: auto;
     margin-bottom: 1.4em;
   }
-  /* line 413, ../sass/mobile/_layout.scss */
+  /* line 415, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-light-grey-text-box-narrower .field-name-field-box-pre-title {
     color: #9a9a9a;
     font-size: 1.4em;
@@ -8733,7 +8735,7 @@ form.comment-form #edit-preview {
     display: block;
     letter-spacing: 1px;
   }
-  /* line 421, ../sass/mobile/_layout.scss */
+  /* line 423, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-light-grey-text-box-narrower .field-name-field-box-title {
     color: #59C2ED;
     font-size: 2.2em;
@@ -8741,13 +8743,13 @@ form.comment-form #edit-preview {
     margin-bottom: 1em;
     letter-spacing: 1px;
   }
-  /* line 428, ../sass/mobile/_layout.scss */
+  /* line 430, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-light-grey-text-box-narrower .field-name-field-box-copy {
     font-size: 1.2em;
     line-height: 1.8em;
     font-weight: 300;
   }
-  /* line 439, ../sass/mobile/_layout.scss */
+  /* line 441, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-light-grey-text-box-with-link-to .field-type-link-field a {
     color: #9a9a9a;
     background: #E6E6E6;
@@ -8761,24 +8763,24 @@ form.comment-form #edit-preview {
     margin-bottom: 1em;
     margin-right: 1em;
   }
-  /* line 454, ../sass/mobile/_layout.scss */
+  /* line 456, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-light-grey-text-box-with-link-to .field-name-field-anchor-to-link-to {
     display: none;
   }
-  /* line 459, ../sass/mobile/_layout.scss */
+  /* line 461, ../sass/mobile/_layout.scss */
   body.node-type-structure #values-wrapper {
     display: block;
     width: 100%;
     float: none;
   }
-  /* line 464, ../sass/mobile/_layout.scss */
+  /* line 466, ../sass/mobile/_layout.scss */
   body.node-type-structure #values-wrapper #values-line {
     display: block;
     width: 100%;
     float: none;
     margin-left: 0;
   }
-  /* line 470, ../sass/mobile/_layout.scss */
+  /* line 472, ../sass/mobile/_layout.scss */
   body.node-type-structure #values-wrapper #values-line span {
     display: block;
     border: 1px solid #E6E6E6;
@@ -8788,29 +8790,29 @@ form.comment-form #edit-preview {
     font-size: .8em;
     cursor: pointer;
   }
-  /* line 478, ../sass/mobile/_layout.scss */
+  /* line 480, ../sass/mobile/_layout.scss */
   body.node-type-structure #values-wrapper #values-line span.value-active {
     background: #59C2ED;
   }
-  /* line 484, ../sass/mobile/_layout.scss */
+  /* line 486, ../sass/mobile/_layout.scss */
   body.node-type-structure #values-wrapper .value-content-block {
     display: none;
     float: left;
     width: 100%;
     margin-top: 2em;
   }
-  /* line 489, ../sass/mobile/_layout.scss */
+  /* line 491, ../sass/mobile/_layout.scss */
   body.node-type-structure #values-wrapper .value-content-block.value-content-active {
     display: block;
   }
-  /* line 492, ../sass/mobile/_layout.scss */
+  /* line 494, ../sass/mobile/_layout.scss */
   body.node-type-structure #values-wrapper .value-content-block .value-header {
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 10px;
   }
-  /* line 498, ../sass/mobile/_layout.scss */
+  /* line 500, ../sass/mobile/_layout.scss */
   body.node-type-structure #values-wrapper .value-content-block .value-body {
     font-size: 36px;
     line-height: 1.4em;
@@ -8818,14 +8820,14 @@ form.comment-form #edit-preview {
     font-weight: 300;
     margin-bottom: 1em;
   }
-  /* line 514, ../sass/mobile/_layout.scss */
+  /* line 516, ../sass/mobile/_layout.scss */
   body.node-type-structure .view-peace-geeks-resources .view-header h3 {
     font-size: 1.4em;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 16px;
   }
-  /* line 521, ../sass/mobile/_layout.scss */
+  /* line 523, ../sass/mobile/_layout.scss */
   body.node-type-structure .view-peace-geeks-resources .views-row {
     background: #E6E6E6;
     display: block;
@@ -8834,18 +8836,18 @@ form.comment-form #edit-preview {
     margin-bottom: 2em;
     height: auto;
   }
-  /* line 529, ../sass/mobile/_layout.scss */
+  /* line 531, ../sass/mobile/_layout.scss */
   body.node-type-structure .view-peace-geeks-resources .views-row .views-field-field-image {
     display: block;
     float: none;
     margin-right: 0;
   }
-  /* line 533, ../sass/mobile/_layout.scss */
+  /* line 535, ../sass/mobile/_layout.scss */
   body.node-type-structure .view-peace-geeks-resources .views-row .views-field-field-image img {
     width: 100%;
     height: auto;
   }
-  /* line 538, ../sass/mobile/_layout.scss */
+  /* line 540, ../sass/mobile/_layout.scss */
   body.node-type-structure .view-peace-geeks-resources .views-row .views-field-title {
     font-size: 1.2em;
     font-weight: 600;
@@ -8855,68 +8857,68 @@ form.comment-form #edit-preview {
     text-transform: uppercase;
     padding: 0 1em;
   }
-  /* line 548, ../sass/mobile/_layout.scss */
+  /* line 550, ../sass/mobile/_layout.scss */
   body.node-type-structure .view-peace-geeks-resources .views-row .views-field-field-date {
     font-style: italic;
     margin-bottom: .4em;
     padding: 0 1em;
   }
-  /* line 554, ../sass/mobile/_layout.scss */
+  /* line 556, ../sass/mobile/_layout.scss */
   body.node-type-structure .view-peace-geeks-resources .views-row .views-field-body {
     width: 96%;
     display: block;
     margin-bottom: 1em;
     padding: 0 1em;
   }
-  /* line 561, ../sass/mobile/_layout.scss */
+  /* line 563, ../sass/mobile/_layout.scss */
   body.node-type-structure .view-peace-geeks-resources .views-row .file-viewonline {
     display: none;
   }
-  /* line 565, ../sass/mobile/_layout.scss */
+  /* line 567, ../sass/mobile/_layout.scss */
   body.node-type-structure .view-peace-geeks-resources .views-row .file-download {
     font-weight: 600;
   }
-  /* line 569, ../sass/mobile/_layout.scss */
+  /* line 571, ../sass/mobile/_layout.scss */
   body.node-type-structure .view-peace-geeks-resources .views-row .views-field-nothing {
     padding: 0 1em;
     margin-bottom: 2em;
   }
-  /* line 572, ../sass/mobile/_layout.scss */
+  /* line 574, ../sass/mobile/_layout.scss */
   body.node-type-structure .view-peace-geeks-resources .views-row .views-field-nothing a {
     color: #414042;
     text-transform: uppercase;
   }
-  /* line 581, ../sass/mobile/_layout.scss */
+  /* line 583, ../sass/mobile/_layout.scss */
   body.node-type-structure .view-peace-geeks-resources.view-display-id-block .view-content {
     display: block;
     width: 100%;
     float: left;
     margin-top: 2em;
   }
-  /* line 591, ../sass/mobile/_layout.scss */
+  /* line 593, ../sass/mobile/_layout.scss */
   body.node-type-structure .view-peace-geeks-resources.view-display-id-block_1 .views-field-body {
     margin-top: 2em;
   }
-  /* line 601, ../sass/mobile/_layout.scss */
+  /* line 603, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view {
     display: block;
     float: left;
     /* Main list of sponsors */
     /* Highlighted sponsor */
   }
-  /* line 604, ../sass/mobile/_layout.scss */
+  /* line 606, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_1 {
     display: block;
     margin-top: -3em;
     position: relative;
   }
-  /* line 608, ../sass/mobile/_layout.scss */
+  /* line 610, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_1 .views-row {
     display: block;
     float: left;
     width: 100%;
   }
-  /* line 614, ../sass/mobile/_layout.scss */
+  /* line 616, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_1 .views-column {
     display: block;
     float: none;
@@ -8927,19 +8929,19 @@ form.comment-form #edit-preview {
     margin-bottom: 2em;
     height: auto;
   }
-  /* line 623, ../sass/mobile/_layout.scss */
+  /* line 625, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_1 .views-column.views-column-last {
     margin-right: 0;
   }
-  /* line 627, ../sass/mobile/_layout.scss */
+  /* line 629, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_1 .views-column:hover .views-field-field-short-sponsor-info {
     display: block;
   }
-  /* line 633, ../sass/mobile/_layout.scss */
+  /* line 635, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_1 .views-column:hover .views-field-field-image {
     display: none;
   }
-  /* line 639, ../sass/mobile/_layout.scss */
+  /* line 641, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_1 .views-field-field-image {
     display: block;
     vertical-align: middle;
@@ -8947,7 +8949,7 @@ form.comment-form #edit-preview {
     height: auto;
     text-align: center;
   }
-  /* line 645, ../sass/mobile/_layout.scss */
+  /* line 647, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_1 .views-field-field-image img {
     height: auto;
     max-width: 90%;
@@ -8955,7 +8957,7 @@ form.comment-form #edit-preview {
     display: inline-block;
     width: 60%;
   }
-  /* line 655, ../sass/mobile/_layout.scss */
+  /* line 657, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_1 .views-field-field-short-sponsor-info {
     display: none;
     text-align: center;
@@ -8972,18 +8974,18 @@ form.comment-form #edit-preview {
     margin-left: 0;
     color: #414042;
   }
-  /* line 673, ../sass/mobile/_layout.scss */
+  /* line 675, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_1 .views-field-field-short-sponsor-info .sponsor-title {
     text-transform: uppercase;
   }
-  /* line 676, ../sass/mobile/_layout.scss */
+  /* line 678, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_1 .views-field-field-short-sponsor-info a.visit-sponsor {
     display: block;
     color: #414042;
     text-decoration: underline;
     margin-top: 1em;
   }
-  /* line 684, ../sass/mobile/_layout.scss */
+  /* line 686, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_1 .views-field-title {
     display: none;
     text-align: center;
@@ -8991,14 +8993,14 @@ form.comment-form #edit-preview {
     font-weight: 400;
     font-size: 1em;
   }
-  /* line 701, ../sass/mobile/_layout.scss */
+  /* line 703, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page {
     display: block;
     width: 100%;
     float: none;
     margin-top: -2em;
   }
-  /* line 707, ../sass/mobile/_layout.scss */
+  /* line 709, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page h3 {
     font-size: 1.4em;
     font-weight: 600;
@@ -9006,13 +9008,13 @@ form.comment-form #edit-preview {
     margin-bottom: 16px;
     display: none;
   }
-  /* line 715, ../sass/mobile/_layout.scss */
+  /* line 717, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-row {
     display: block;
     float: none;
     width: 100%;
   }
-  /* line 721, ../sass/mobile/_layout.scss */
+  /* line 723, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-column {
     display: block;
     float: none;
@@ -9023,19 +9025,19 @@ form.comment-form #edit-preview {
     margin-bottom: 2em;
     height: auto;
   }
-  /* line 730, ../sass/mobile/_layout.scss */
+  /* line 732, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-column.views-column-last {
     margin-right: 0;
   }
-  /* line 734, ../sass/mobile/_layout.scss */
+  /* line 736, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-column:hover .views-field-field-short-sponsor-info {
     display: block;
   }
-  /* line 740, ../sass/mobile/_layout.scss */
+  /* line 742, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-column:hover .views-field-field-image {
     display: none;
   }
-  /* line 746, ../sass/mobile/_layout.scss */
+  /* line 748, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-field-field-image {
     display: block;
     vertical-align: middle;
@@ -9043,7 +9045,7 @@ form.comment-form #edit-preview {
     height: auto;
     text-align: center;
   }
-  /* line 752, ../sass/mobile/_layout.scss */
+  /* line 754, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-field-field-image img {
     height: auto;
     max-width: 90%;
@@ -9051,7 +9053,7 @@ form.comment-form #edit-preview {
     display: inline-block;
     width: 60%;
   }
-  /* line 761, ../sass/mobile/_layout.scss */
+  /* line 763, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-field-title {
     display: none;
     text-align: center;
@@ -9059,7 +9061,7 @@ form.comment-form #edit-preview {
     font-weight: 400;
     font-size: 1em;
   }
-  /* line 769, ../sass/mobile/_layout.scss */
+  /* line 771, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-field-field-short-sponsor-info {
     display: none;
     text-align: center;
@@ -9076,18 +9078,18 @@ form.comment-form #edit-preview {
     margin-left: 0;
     color: #414042;
   }
-  /* line 787, ../sass/mobile/_layout.scss */
+  /* line 789, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-field-field-short-sponsor-info .sponsor-title {
     text-transform: uppercase;
   }
-  /* line 790, ../sass/mobile/_layout.scss */
+  /* line 792, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-field-field-short-sponsor-info a.visit-sponsor {
     display: block;
     color: #414042;
     text-decoration: underline;
     margin-top: 1em;
   }
-  /* line 797, ../sass/mobile/_layout.scss */
+  /* line 799, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-exposed-form {
     display: block;
     width: 100%;
@@ -9095,14 +9097,14 @@ form.comment-form #edit-preview {
     background: #E6E6E6;
     margin-bottom: 2em;
   }
-  /* line 803, ../sass/mobile/_layout.scss */
+  /* line 805, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-exposed-form #edit-field-partner-type-tid-wrapper > label {
     text-transform: uppercase;
     display: block;
     width: 100%;
     margin-bottom: 1em;
   }
-  /* line 811, ../sass/mobile/_layout.scss */
+  /* line 813, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-exposed-form .form-item {
     display: inline-block;
     background: white;
@@ -9112,20 +9114,20 @@ form.comment-form #edit-preview {
     margin-right: 4px;
     margin-bottom: 8px;
   }
-  /* line 819, ../sass/mobile/_layout.scss */
+  /* line 821, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-exposed-form .form-item:hover {
     background: #59C2ED;
   }
-  /* line 824, ../sass/mobile/_layout.scss */
+  /* line 826, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-exposed-form .form-item input[type="radio"] {
     display: none;
   }
-  /* line 828, ../sass/mobile/_layout.scss */
+  /* line 830, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-page .views-exposed-form .form-item label {
     cursor: pointer;
     font-weight: 300;
   }
-  /* line 842, ../sass/mobile/_layout.scss */
+  /* line 844, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_3 {
     /*padding-right: 3000px;
     margin-right: -3000px;
@@ -9140,7 +9142,7 @@ form.comment-form #edit-preview {
     margin-bottom: -201px;
     position: relative;
   }
-  /* line 857, ../sass/mobile/_layout.scss */
+  /* line 859, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_3:before {
     content: "";
     position: absolute;
@@ -9152,24 +9154,24 @@ form.comment-form #edit-preview {
     border-right: 9999px solid #E6E6E6;
     box-shadow: 9999px 0px 0px 0px #E6E6E6;
   }
-  /* line 869, ../sass/mobile/_layout.scss */
+  /* line 871, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_3 h3 {
     font-size: 1.4em;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 20px;
   }
-  /* line 876, ../sass/mobile/_layout.scss */
+  /* line 878, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_3 .views-field-field-image {
     display: block;
     float: none;
   }
-  /* line 879, ../sass/mobile/_layout.scss */
+  /* line 881, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_3 .views-field-field-image img {
     width: 70%;
     height: auto;
   }
-  /* line 885, ../sass/mobile/_layout.scss */
+  /* line 887, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_3 .views-field-title {
     font-size: 3em;
     line-height: 1.4em;
@@ -9180,7 +9182,7 @@ form.comment-form #edit-preview {
     float: none;
     margin-left: 0;
   }
-  /* line 896, ../sass/mobile/_layout.scss */
+  /* line 898, ../sass/mobile/_layout.scss */
   body.node-type-structure .paragraphs-item-add-a-view .view-id-supporters.view-display-id-block_3 .views-field-body {
     display: block;
     margin-right: 0;
@@ -9193,16 +9195,16 @@ form.comment-form #edit-preview {
   }
 
   /* Team Pages */
-  /* line 917, ../sass/mobile/_layout.scss */
+  /* line 919, ../sass/mobile/_layout.scss */
   body.page-team #main {
     padding-top: 3em;
     padding-bottom: 8em;
   }
-  /* line 919, ../sass/mobile/_layout.scss */
+  /* line 921, ../sass/mobile/_layout.scss */
   body.page-team h1#page-title {
     display: block;
   }
-  /* line 921, ../sass/mobile/_layout.scss */
+  /* line 923, ../sass/mobile/_layout.scss */
   body.page-team h2 {
     font-size: 2.2em;
     line-height: 1.4em;
@@ -9210,7 +9212,7 @@ form.comment-form #edit-preview {
     font-weight: 300;
     letter-spacing: -1px;
   }
-  /* line 929, ../sass/mobile/_layout.scss */
+  /* line 931, ../sass/mobile/_layout.scss */
   body.page-team .views-exposed-form {
     display: block;
     width: 100%;
@@ -9218,14 +9220,14 @@ form.comment-form #edit-preview {
     background: #E6E6E6;
     margin-bottom: 2em;
   }
-  /* line 935, ../sass/mobile/_layout.scss */
+  /* line 937, ../sass/mobile/_layout.scss */
   body.page-team .views-exposed-form #edit-field-team-member-type-tid-wrapper > label {
     text-transform: uppercase;
     display: block;
     width: 100%;
     margin-bottom: 1em;
   }
-  /* line 943, ../sass/mobile/_layout.scss */
+  /* line 945, ../sass/mobile/_layout.scss */
   body.page-team .views-exposed-form .form-item {
     display: inline-block;
     background: white;
@@ -9236,22 +9238,22 @@ form.comment-form #edit-preview {
     cursor: pointer;
     margin-bottom: 8px;
   }
-  /* line 952, ../sass/mobile/_layout.scss */
+  /* line 954, ../sass/mobile/_layout.scss */
   body.page-team .views-exposed-form .form-item input[type="radio"] {
     display: none;
   }
-  /* line 956, ../sass/mobile/_layout.scss */
+  /* line 958, ../sass/mobile/_layout.scss */
   body.page-team .views-exposed-form .form-item label {
     cursor: pointer;
     font-weight: 300;
   }
-  /* line 965, ../sass/mobile/_layout.scss */
+  /* line 967, ../sass/mobile/_layout.scss */
   body.page-team .views-responsive-grid .views-row {
     display: block;
     float: left;
     width: 100%;
   }
-  /* line 971, ../sass/mobile/_layout.scss */
+  /* line 973, ../sass/mobile/_layout.scss */
   body.page-team .views-responsive-grid .views-column {
     display: block;
     width: 100%;
@@ -9262,24 +9264,24 @@ form.comment-form #edit-preview {
     padding-bottom: 1em;
     height: auto;
   }
-  /* line 980, ../sass/mobile/_layout.scss */
+  /* line 982, ../sass/mobile/_layout.scss */
   body.page-team .views-responsive-grid .views-column.views-column-last {
     margin-right: 0;
   }
-  /* line 985, ../sass/mobile/_layout.scss */
+  /* line 987, ../sass/mobile/_layout.scss */
   body.page-team .views-responsive-grid .views-field-title {
     padding: .4em 1em;
     text-transform: uppercase;
     letter-spacing: .5px;
   }
-  /* line 989, ../sass/mobile/_layout.scss */
+  /* line 991, ../sass/mobile/_layout.scss */
   body.page-team .views-responsive-grid .views-field-title a {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1.3em;
     letter-spacing: 1px;
   }
-  /* line 998, ../sass/mobile/_layout.scss */
+  /* line 1000, ../sass/mobile/_layout.scss */
   body.page-team .views-responsive-grid .views-field-field-team-image {
     display: block;
     position: relative;
@@ -9287,12 +9289,12 @@ form.comment-form #edit-preview {
     height: auto;
     margin-bottom: 1em;
   }
-  /* line 1005, ../sass/mobile/_layout.scss */
+  /* line 1007, ../sass/mobile/_layout.scss */
   body.page-team .views-responsive-grid .views-field-field-team-image img {
     width: 100%;
     height: auto;
   }
-  /* line 1012, ../sass/mobile/_layout.scss */
+  /* line 1014, ../sass/mobile/_layout.scss */
   body.page-team .views-responsive-grid .views-field-field-team-title {
     padding: .4em 1em;
     text-transform: uppercase;
@@ -9309,11 +9311,11 @@ form.comment-form #edit-preview {
     text-align: left;
     margin-bottom: 1em;
   }
-  /* line 1027, ../sass/mobile/_layout.scss */
+  /* line 1029, ../sass/mobile/_layout.scss */
   body.page-team .views-responsive-grid .views-field-field-team-title span.field-content {
     opacity: 1 !important;
   }
-  /* line 1033, ../sass/mobile/_layout.scss */
+  /* line 1035, ../sass/mobile/_layout.scss */
   body.page-team .views-responsive-grid .views-field-field-team-bio {
     padding: .2em 1em .4em 1em;
     margin-bottom: 1em;
