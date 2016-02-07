@@ -11708,7 +11708,7 @@ form.comment-form #edit-preview {
     right: 0;
     top: 116px;
     z-index: 99;
-    display: none;
+    display: block;
   }
   /* line 23, ../sass/mobile/_donate.scss */
   #block-bean-donate .field-item > a {
@@ -11716,11 +11716,11 @@ form.comment-form #edit-preview {
     /*-webkit-box-shadow: 3px 8px 5px 0px rgba(224,221,224,1);
     -moz-box-shadow: 3px 8px 5px 0px rgba(224,221,224,1);
     box-shadow: 3px 8px 5px 0px rgba(224,221,224,1);*/
-    font-size: 17px;
-    font-size: 1.30769rem;
+    font-size: 12px;
+    font-size: 0.92308rem;
     line-height: 1;
     font-weight: 200;
-    padding: 15px 30px 12px;
+    padding: 8px;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 2px;
