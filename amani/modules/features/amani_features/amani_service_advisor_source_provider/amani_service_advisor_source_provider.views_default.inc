@@ -271,6 +271,30 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_location_days']['settings'] = array(
     'link' => 0,
   );
+  /* Field: Content: Service Location */
+  $handler->display->display_options['fields']['field_service_location']['id'] = 'field_service_location';
+  $handler->display->display_options['fields']['field_service_location']['table'] = 'field_data_field_service_location';
+  $handler->display->display_options['fields']['field_service_location']['field'] = 'field_service_location';
+  $handler->display->display_options['fields']['field_service_location']['label'] = 'location:geometry';
+  $handler->display->display_options['fields']['field_service_location']['click_sort_column'] = 'geom';
+  $handler->display->display_options['fields']['field_service_location']['type'] = 'geofield_geojson';
+  $handler->display->display_options['fields']['field_service_location']['settings'] = array(
+    'data' => 'full',
+  );
+  /* Field: Content: Office Opens At */
+  $handler->display->display_options['fields']['field_service_location_hour_open']['id'] = 'field_service_location_hour_open';
+  $handler->display->display_options['fields']['field_service_location_hour_open']['table'] = 'field_data_field_service_location_hour_open';
+  $handler->display->display_options['fields']['field_service_location_hour_open']['field'] = 'field_service_location_hour_open';
+  $handler->display->display_options['fields']['field_service_location_hour_open']['settings'] = array(
+    'link' => 0,
+  );
+  /* Field: Content: Office Closes At */
+  $handler->display->display_options['fields']['field_service_location_hour_clos']['id'] = 'field_service_location_hour_clos';
+  $handler->display->display_options['fields']['field_service_location_hour_clos']['table'] = 'field_data_field_service_location_hour_clos';
+  $handler->display->display_options['fields']['field_service_location_hour_clos']['field'] = 'field_service_location_hour_clos';
+  $handler->display->display_options['fields']['field_service_location_hour_clos']['settings'] = array(
+    'link' => 0,
+  );
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -306,6 +330,9 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Days available'),
+    t('location:geometry'),
+    t('Office Opens At'),
+    t('Office Closes At'),
     t('Page'),
   );
   $export['service_locations_json_feed'] = $view;
