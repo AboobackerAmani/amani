@@ -55,3 +55,38 @@ function amani_service_advisor_source_provider_load_terms_file($terms_file) {
   }
   return $terms;
 }
+
+/*
+ * Import the default categories and subcategories
+ */
+function amani_service_advisor_source_provider_load_categories() {
+  $terms_path = drupal_get_path('module', 'amani_service_advisor_source_provider') . '/terms/service_categories.terms';
+  $source_terms = amani_service_advisor_source_provider_load_terms_file($terms_path);
+  if ($source_terms) {
+    $created_terms = array();
+    $vocab = taxonomy_vocabulary_machine_name_load('service_categories');
+    $current_terms = amani_service_advisor_source_provider_get_terms($vocab);
+    $new_terms = array_diff_key($source_terms, $current_terms);
+
+
+    foreach ($new_terms as $term_name => $term_values) {
+      if (! $term_name){
+        continue;
+      }
+      $term_parent = $term_values[1];
+      $term = new stdClass();
+      $term->vid = $vocab->vid;
+      $term->name = $term_name;
+      if (! $term_parent){
+        taxonomy_term_save($term);
+        $created_terms[$term->name] = $term;
+      } else {
+        $term->parent = $created_terms[$term_parent]->tid;
+        taxonomy_term_save($term);
+        $created_terms[$term->name] = $term;
+      }
+      print "Created " . $term->name . ' (' . $term->tid . ")\n";
+    }
+  }
+}
+

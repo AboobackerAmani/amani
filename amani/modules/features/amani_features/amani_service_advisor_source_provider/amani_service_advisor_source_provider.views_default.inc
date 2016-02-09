@@ -57,7 +57,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_category']['table'] = 'field_data_field_service_category';
   $handler->display->display_options['fields']['field_service_category']['field'] = 'field_service_category';
   $handler->display->display_options['fields']['field_service_category']['label'] = 'category:name';
-  /* Field: Content: Service Sub Category */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_service_sub_category']['id'] = 'field_service_sub_category';
   $handler->display->display_options['fields']['field_service_sub_category']['table'] = 'field_data_field_service_sub_category';
   $handler->display->display_options['fields']['field_service_sub_category']['field'] = 'field_service_sub_category';
@@ -175,7 +175,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_referral_type_']['table'] = 'field_data_field_referral_type_';
   $handler->display->display_options['fields']['field_referral_type_']['field'] = 'field_referral_type_';
   $handler->display->display_options['fields']['field_referral_type_']['label'] = 'referral:type ';
-  /* Contextual filter: Content: Service language  (field_service_language_) */
+  /* Contextual filter: Broken/missing handler */
   $handler->display->display_options['arguments']['field_service_language__tid']['id'] = 'field_service_language__tid';
   $handler->display->display_options['arguments']['field_service_language__tid']['table'] = 'field_data_field_service_language_';
   $handler->display->display_options['arguments']['field_service_language__tid']['field'] = 'field_service_language__tid';

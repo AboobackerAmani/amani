@@ -17,3 +17,5 @@ foreach ($vocabularies_to_load as $vocabulary){
   print "Importing " . $vocabulary . "\n";
   amani_service_advisor_source_provider_load_vocabulary($vocabulary);
 }
+
+amani_service_advisor_source_provider_load_categories();

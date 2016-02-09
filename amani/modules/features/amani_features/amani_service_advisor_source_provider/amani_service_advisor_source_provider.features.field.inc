@@ -1520,78 +1520,6 @@ function amani_service_advisor_source_provider_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-service_source-field_service_language_'.
-  $fields['node-service_source-field_service_language_'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_service_language_',
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'taxonomy',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'service_available_languages',
-            'parent' => '0',
-          ),
-        ),
-        'options_list_callback' => 'i18n_taxonomy_allowed_values',
-      ),
-      'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'service_source',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'i18n_taxonomy',
-          'settings' => array(),
-          'type' => 'i18n_taxonomy_term_reference_plain',
-          'weight' => '28',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_service_language_',
-      'label' => 'Service language ',
-      'required' => 1,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_buttons',
-        'weight' => '3',
-      ),
-    ),
-  );
-
   // Exported field: 'node-service_source-field_service_more_info_link'.
   $fields['node-service_source-field_service_more_info_link'] = array(
     'field_config' => array(
@@ -1902,101 +1830,6 @@ function amani_service_advisor_source_provider_field_default_fields() {
         ),
         'type' => 'date_popup',
         'weight' => '45',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-service_source-field_service_sub_category'.
-  $fields['node-service_source-field_service_sub_category'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_service_sub_category',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(
-        'max_length' => '255',
-      ),
-      'translatable' => '0',
-      'type' => 'text',
-    ),
-    'field_instance' => array(
-      'bundle' => 'service_source',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '32',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_service_sub_category',
-      'label' => 'Service Sub Category',
-      'required' => 1,
-      'settings' => array(
-        'better_formats' => array(
-          'allowed_formats' => array(
-            'php_code' => 'php_code',
-            'plain_text' => 'plain_text',
-            'wysiwyg_advanced' => 'wysiwyg_advanced',
-            'wysiwyg_public' => 'wysiwyg_public',
-          ),
-          'allowed_formats_toggle' => 0,
-          'default_order_toggle' => 0,
-          'default_order_wrapper' => array(
-            'formats' => array(
-              'php_code' => array(
-                'weight' => '11',
-              ),
-              'plain_text' => array(
-                'weight' => '10',
-              ),
-              'wysiwyg_advanced' => array(
-                'weight' => '-10',
-              ),
-              'wysiwyg_public' => array(
-                'weight' => '-9',
-              ),
-            ),
-          ),
-        ),
-        'text_processing' => '0',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'size' => '80',
-        ),
-        'type' => 'text_textfield',
-        'weight' => '5',
       ),
     ),
   );
@@ -2387,8 +2220,6 @@ function amani_service_advisor_source_provider_field_default_fields() {
   t('Service Partner');
   t('Service Registration type');
   t('Service Response Delay');
-  t('Service Sub Category');
-  t('Service language ');
   t('Start Date');
   t('This is the text a user may send to the group administrators.');
 
