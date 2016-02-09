@@ -359,6 +359,13 @@ function amani_service_advisor_source_provider_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'locale_language_negotiation_session_param';
+  $strongarm->value = 'lang';
+  $export['locale_language_negotiation_session_param'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_service_location';
   $strongarm->value = array(
     0 => 'main-menu',
