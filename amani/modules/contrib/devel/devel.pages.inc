@@ -41,20 +41,32 @@ function devel_querylog_explain($request_id, $qid) {
 
   $path = "temporary://devel_querylog/$request_id.txt";
   $path = file_stream_wrapper_uri_normalize($path);
-  $queries = json_decode(file_get_contents($path));
-  $query = $queries[$qid];
-  $result = db_query('EXPLAIN ' . $query->query, (array)$query->args)->fetchAllAssoc('table');
-  $i = 1;
-  foreach ($result as $row) {
-    $row = (array)$row;
-    if ($i == 1) {
-      $header = array_keys($row);
+
+  $output = t('No explain log found.');
+
+  if (file_exists($path)) {
+    $queries = json_decode(file_get_contents($path));
+
+    if ($queries !== FALSE && isset($queries[$qid])) {
+      $header = $rows = array();
+
+      $query = $queries[$qid];
+      $result = db_query('EXPLAIN ' . $query->query, (array)$query->args)->fetchAllAssoc('table');
+      $i = 1;
+      foreach ($result as $row) {
+        $row = (array)$row;
+        if ($i == 1) {
+          $header = array_keys($row);
+        }
+        $rows[] = array_values($row);
+        $i++;
+      }
+
+      $output = theme('table', array('header' => $header, 'rows' => $rows));
     }
-    $rows[] = array_values($row);
-    $i++;
   }
+
   // Print and return nothing thus avoiding page wrapper.
-  $output = theme('table', array('header' => $header, 'rows' => $rows));
   print $output;
   $GLOBALS['devel_shutdown'] = FALSE;
 }
@@ -67,14 +79,22 @@ function devel_querylog_arguments($request_id, $qid) {
 
   $path = "temporary://devel_querylog/$request_id.txt";
   $path = file_stream_wrapper_uri_normalize($path);
-  $queries = json_decode(file_get_contents($path));
-  $query = $queries[$qid];
-  $conn = Database::getConnection();
-  $quoted = array();
-  foreach ((array)$query->args as $key => $val) {
-    $quoted[$key] = $conn->quote($val);
+
+  $output = t('No arguments log found.');
+
+  if (file_exists($path)) {
+    $queries = json_decode(file_get_contents($path));
+
+    if ($queries !== FALSE && isset($queries[$qid])) {
+      $query = $queries[$qid];
+      $conn = Database::getConnection();
+      $quoted = array();
+      foreach ((array)$query->args as $key => $val) {
+        $quoted[$key] = $conn->quote($val);
+      }
+      $output = strtr($query->query, $quoted);
+    }
   }
-  $output = strtr($query->query, $quoted);
 
   // print and return nothing thus avoiding page wrapper.
   print $output;
@@ -145,18 +165,15 @@ function devel_field_info_page() {
   $output .= kprint_r($info, TRUE, t('Instances'));
   $info = field_info_bundles();
   $output .= kprint_r($info, TRUE, t('Bundles'));
+  $info = field_info_field_types();
+  $output .= kprint_r($info, TRUE, t('Field types'));
+  $info = field_info_formatter_types();
+  $output .= kprint_r($info, TRUE, t('Formatter types'));
+  $info = field_info_storage_types();
+  $output .= kprint_r($info, TRUE, t('Storage types'));
+  $info = field_info_widget_types();
+  $output .= kprint_r($info, TRUE, t('Widget types'));
   return $output;
-}
-
-/**
- * Menu callback; display all variables.
- */
-function devel_variable_page() {
-  // We return our own $page so as to avoid blocks.
-  $output = drupal_get_form('devel_variable_form');
-  drupal_set_page_content($output);
-  $page = element_info('page');
-  return $page;
 }
 
 function devel_variable_form() {
@@ -287,7 +304,17 @@ function devel_load_object($type, $object, $name = NULL) {
 function devel_render_object($type, $object, $name = NULL) {
   $name = isset($name) ? $name : $type;
   $function = $type . '_view';
-  $build = $function($object);
+
+  switch ($function) {
+    case 'comment_view':
+      $node = node_load($object->nid);
+      $build = $function($object, $node);
+      break;
+
+    default:
+      $build = $function($object);
+  }
+
   return kdevel_print_object($build, '$'. $name .'->');
 }
 
