@@ -257,11 +257,37 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1000';
   $handler->display->display_options['style_plugin'] = 'views_json';
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_service_location_service_target_id']['id'] = 'field_service_location_service_target_id';
+  $handler->display->display_options['relationships']['field_service_location_service_target_id']['table'] = 'field_data_field_service_location_service';
+  $handler->display->display_options['relationships']['field_service_location_service_target_id']['field'] = 'field_service_location_service_target_id';
+  $handler->display->display_options['relationships']['field_service_location_service_target_id']['required'] = TRUE;
+  /* Relationship: OG membership: OG membership from Node */
+  $handler->display->display_options['relationships']['og_membership_rel']['id'] = 'og_membership_rel';
+  $handler->display->display_options['relationships']['og_membership_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['og_membership_rel']['field'] = 'og_membership_rel';
+  $handler->display->display_options['relationships']['og_membership_rel']['required'] = TRUE;
+  /* Relationship: Content: Service Category (field_service_category) */
+  $handler->display->display_options['relationships']['field_service_category_tid']['id'] = 'field_service_category_tid';
+  $handler->display->display_options['relationships']['field_service_category_tid']['table'] = 'field_data_field_service_category';
+  $handler->display->display_options['relationships']['field_service_category_tid']['field'] = 'field_service_category_tid';
+  $handler->display->display_options['relationships']['field_service_category_tid']['relationship'] = 'field_service_location_service_target_id';
+  /* Relationship: Taxonomy term: Parent term */
+  $handler->display->display_options['relationships']['parent']['id'] = 'parent';
+  $handler->display->display_options['relationships']['parent']['table'] = 'taxonomy_term_hierarchy';
+  $handler->display->display_options['relationships']['parent']['field'] = 'parent';
+  $handler->display->display_options['relationships']['parent']['relationship'] = 'field_service_category_tid';
+  $handler->display->display_options['relationships']['parent']['label'] = 'Parent category';
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = 'id';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['label'] = 'locationName';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   /* Field: Content: Days available */
@@ -275,7 +301,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_location']['id'] = 'field_service_location';
   $handler->display->display_options['fields']['field_service_location']['table'] = 'field_data_field_service_location';
   $handler->display->display_options['fields']['field_service_location']['field'] = 'field_service_location';
-  $handler->display->display_options['fields']['field_service_location']['label'] = 'location:geometry';
+  $handler->display->display_options['fields']['field_service_location']['label'] = 'geometry';
   $handler->display->display_options['fields']['field_service_location']['click_sort_column'] = 'geom';
   $handler->display->display_options['fields']['field_service_location']['type'] = 'geofield_geojson';
   $handler->display->display_options['fields']['field_service_location']['settings'] = array(
@@ -295,6 +321,30 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_location_hour_clos']['settings'] = array(
     'link' => 0,
   );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
+  $handler->display->display_options['fields']['title_1']['table'] = 'node';
+  $handler->display->display_options['fields']['title_1']['field'] = 'title';
+  $handler->display->display_options['fields']['title_1']['relationship'] = 'field_service_location_service_target_id';
+  $handler->display->display_options['fields']['title_1']['label'] = 'serviceName';
+  /* Field: Content: Service Category */
+  $handler->display->display_options['fields']['field_service_category']['id'] = 'field_service_category';
+  $handler->display->display_options['fields']['field_service_category']['table'] = 'field_data_field_service_category';
+  $handler->display->display_options['fields']['field_service_category']['field'] = 'field_service_category';
+  $handler->display->display_options['fields']['field_service_category']['relationship'] = 'field_service_location_service_target_id';
+  $handler->display->display_options['fields']['field_service_category']['label'] = 'activityCategory';
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['relationship'] = 'parent';
+  $handler->display->display_options['fields']['name']['label'] = 'activityCategory';
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
+  $handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name_1']['field'] = 'name';
+  $handler->display->display_options['fields']['name_1']['relationship'] = 'field_service_category_tid';
+  $handler->display->display_options['fields']['name_1']['label'] = 'activityName';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -329,10 +379,19 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('Content entity referenced from field_service_location_service'),
+    t('OG membership from node'),
+    t('term from field_service_category'),
+    t('Parent category'),
+    t('id'),
+    t('locationName'),
     t('Days available'),
-    t('location:geometry'),
+    t('geometry'),
     t('Office Opens At'),
     t('Office Closes At'),
+    t('serviceName'),
+    t('activityCategory'),
+    t('activityName'),
     t('Page'),
   );
   $export['service_locations_json_feed'] = $view;
