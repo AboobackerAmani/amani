@@ -175,7 +175,7 @@ function amani_service_advisor_source_provider_strongarm() {
           'weight' => '1',
         ),
         'path' => array(
-          'weight' => '11',
+          'weight' => '8',
         ),
       ),
       'display' => array(),
@@ -361,13 +361,6 @@ function amani_service_advisor_source_provider_strongarm() {
   $strongarm->name = 'language_content_type_service_source';
   $strongarm->value = '2';
   $export['language_content_type_service_source'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'locale_language_negotiation_session_param';
-  $strongarm->value = 'lang';
-  $export['locale_language_negotiation_session_param'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

@@ -84,6 +84,31 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'service_available_nationality' => array(
+      'name' => 'Service Available Nationality',
+      'machine_name' => 'service_available_nationality',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'language' => 'und',
+      'i18n_mode' => '1',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'service_categories' => array(
       'name' => 'Service Category',
       'machine_name' => 'service_categories',
@@ -437,31 +462,6 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
     'service_response_delay' => array(
       'name' => 'Service Response Delay',
       'machine_name' => 'service_response_delay',
-      'description' => '',
-      'hierarchy' => '0',
-      'module' => 'taxonomy',
-      'weight' => '10',
-      'language' => 'und',
-      'i18n_mode' => '1',
-      'rdf_mapping' => array(
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'dc:title',
-          ),
-        ),
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-      ),
-    ),
-    'services_available_nationality' => array(
-      'name' => 'Services Nationality',
-      'machine_name' => 'services_available_nationality',
       'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',

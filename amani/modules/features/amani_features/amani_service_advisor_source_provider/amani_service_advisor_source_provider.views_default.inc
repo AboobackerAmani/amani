@@ -148,13 +148,11 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_comments']['table'] = 'field_data_field_service_comments';
   $handler->display->display_options['fields']['field_service_comments']['field'] = 'field_service_comments';
   $handler->display->display_options['fields']['field_service_comments']['label'] = 'details:Comments';
-  /* Field: Content: Available to Nationality */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_service_available_to_natio']['id'] = 'field_service_available_to_natio';
   $handler->display->display_options['fields']['field_service_available_to_natio']['table'] = 'field_data_field_service_available_to_natio';
   $handler->display->display_options['fields']['field_service_available_to_natio']['field'] = 'field_service_available_to_natio';
   $handler->display->display_options['fields']['field_service_available_to_natio']['label'] = 'details:Nationality';
-  $handler->display->display_options['fields']['field_service_available_to_natio']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_service_available_to_natio']['delta_offset'] = '0';
   /* Field: Content: Service Intake Criteria */
   $handler->display->display_options['fields']['field_service_intake_criteria']['id'] = 'field_service_intake_criteria';
   $handler->display->display_options['fields']['field_service_intake_criteria']['table'] = 'field_data_field_service_intake_criteria';

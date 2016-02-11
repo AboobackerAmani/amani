@@ -17,7 +17,9 @@ $vocabularies_to_load = array (
   'service_referral_method',
   'service_referral_next_step',
   'service_response_delay',
-
+  'service_location_district',
+  'service_location_governorate',
+  'service_location_region'
 );
 
 foreach ($vocabularies_to_load as $vocabulary){
