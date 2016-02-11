@@ -169,13 +169,13 @@ function amani_service_advisor_source_provider_strongarm() {
           'weight' => '0',
         ),
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '12',
         ),
         'title' => array(
-          'weight' => '-5',
+          'weight' => '1',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '11',
         ),
       ),
       'display' => array(),
@@ -192,13 +192,16 @@ function amani_service_advisor_source_provider_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '5',
+          'weight' => '8',
         ),
         'title' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '7',
+        ),
+        'language' => array(
+          'weight' => '0',
         ),
       ),
       'display' => array(),
@@ -243,13 +246,16 @@ function amani_service_advisor_source_provider_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '2',
+          'weight' => '3',
         ),
         'title' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
         'path' => array(
-          'weight' => '1',
+          'weight' => '2',
+        ),
+        'language' => array(
+          'weight' => '0',
         ),
       ),
       'display' => array(

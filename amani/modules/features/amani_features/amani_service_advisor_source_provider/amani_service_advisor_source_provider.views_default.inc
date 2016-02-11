@@ -52,7 +52,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_location_name']['table'] = 'field_data_field_service_location_name';
   $handler->display->display_options['fields']['field_service_location_name']['field'] = 'field_service_location_name';
   $handler->display->display_options['fields']['field_service_location_name']['label'] = 'region';
-  /* Field: Content: Service Category */
+  /* Field: Content: Category */
   $handler->display->display_options['fields']['field_service_category']['id'] = 'field_service_category';
   $handler->display->display_options['fields']['field_service_category']['table'] = 'field_data_field_service_category';
   $handler->display->display_options['fields']['field_service_category']['field'] = 'field_service_category';
@@ -108,7 +108,7 @@ function amani_service_advisor_source_provider_views_default_views() {
     'multiple_to' => '',
     'show_repeat_rule' => 'show',
   );
-  /* Field: Content: Activity Name */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_serviceactivity_name']['id'] = 'field_serviceactivity_name';
   $handler->display->display_options['fields']['field_serviceactivity_name']['table'] = 'field_data_field_serviceactivity_name';
   $handler->display->display_options['fields']['field_serviceactivity_name']['field'] = 'field_serviceactivity_name';
@@ -133,14 +133,11 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_more_info_link']['label'] = 'details: More Info Link';
   $handler->display->display_options['fields']['field_service_more_info_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_service_more_info_link']['delta_offset'] = '0';
-  /* Field: Content: Service Response Delay */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_service_response_delay']['id'] = 'field_service_response_delay';
   $handler->display->display_options['fields']['field_service_response_delay']['table'] = 'field_data_field_service_response_delay';
   $handler->display->display_options['fields']['field_service_response_delay']['field'] = 'field_service_response_delay';
   $handler->display->display_options['fields']['field_service_response_delay']['label'] = 'details:Response Delay After Referrals';
-  $handler->display->display_options['fields']['field_service_response_delay']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_service_response_delay']['group_column'] = 'value';
-  $handler->display->display_options['fields']['field_service_response_delay']['delta_offset'] = '0';
   /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_service_availability_day_a']['id'] = 'field_service_availability_day_a';
   $handler->display->display_options['fields']['field_service_availability_day_a']['table'] = 'field_data_field_service_availability_day_a';
@@ -262,12 +259,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['relationships']['field_service_location_service_target_id']['table'] = 'field_data_field_service_location_service';
   $handler->display->display_options['relationships']['field_service_location_service_target_id']['field'] = 'field_service_location_service_target_id';
   $handler->display->display_options['relationships']['field_service_location_service_target_id']['required'] = TRUE;
-  /* Relationship: OG membership: OG membership from Node */
-  $handler->display->display_options['relationships']['og_membership_rel']['id'] = 'og_membership_rel';
-  $handler->display->display_options['relationships']['og_membership_rel']['table'] = 'node';
-  $handler->display->display_options['relationships']['og_membership_rel']['field'] = 'og_membership_rel';
-  $handler->display->display_options['relationships']['og_membership_rel']['required'] = TRUE;
-  /* Relationship: Content: Service Category (field_service_category) */
+  /* Relationship: Content: Category (field_service_category) */
   $handler->display->display_options['relationships']['field_service_category_tid']['id'] = 'field_service_category_tid';
   $handler->display->display_options['relationships']['field_service_category_tid']['table'] = 'field_data_field_service_category';
   $handler->display->display_options['relationships']['field_service_category_tid']['field'] = 'field_service_category_tid';
@@ -278,6 +270,10 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['relationships']['parent']['field'] = 'parent';
   $handler->display->display_options['relationships']['parent']['relationship'] = 'field_service_category_tid';
   $handler->display->display_options['relationships']['parent']['label'] = 'Parent category';
+  /* Relationship: OG membership: Group Node from OG membership */
+  $handler->display->display_options['relationships']['og_membership_related_node_group']['id'] = 'og_membership_related_node_group';
+  $handler->display->display_options['relationships']['og_membership_related_node_group']['table'] = 'og_membership';
+  $handler->display->display_options['relationships']['og_membership_related_node_group']['field'] = 'og_membership_related_node_group';
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -290,10 +286,17 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = 'locationName';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Days available */
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title_2']['id'] = 'title_2';
+  $handler->display->display_options['fields']['title_2']['table'] = 'node';
+  $handler->display->display_options['fields']['title_2']['field'] = 'title';
+  $handler->display->display_options['fields']['title_2']['relationship'] = 'og_membership_related_node_group';
+  $handler->display->display_options['fields']['title_2']['label'] = 'partnerName';
+  /* Field: Content: Availability Day */
   $handler->display->display_options['fields']['field_service_location_days']['id'] = 'field_service_location_days';
   $handler->display->display_options['fields']['field_service_location_days']['table'] = 'field_data_field_service_location_days';
   $handler->display->display_options['fields']['field_service_location_days']['field'] = 'field_service_location_days';
+  $handler->display->display_options['fields']['field_service_location_days']['label'] = 'Days available';
   $handler->display->display_options['fields']['field_service_location_days']['settings'] = array(
     'link' => 0,
   );
@@ -327,7 +330,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['title_1']['field'] = 'title';
   $handler->display->display_options['fields']['title_1']['relationship'] = 'field_service_location_service_target_id';
   $handler->display->display_options['fields']['title_1']['label'] = 'serviceName';
-  /* Field: Content: Service Category */
+  /* Field: Content: Category */
   $handler->display->display_options['fields']['field_service_category']['id'] = 'field_service_category';
   $handler->display->display_options['fields']['field_service_category']['table'] = 'field_data_field_service_category';
   $handler->display->display_options['fields']['field_service_category']['field'] = 'field_service_category';
@@ -380,11 +383,12 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Content entity referenced from field_service_location_service'),
-    t('OG membership from node'),
     t('term from field_service_category'),
     t('Parent category'),
+    t('Group node from OG membership'),
     t('id'),
     t('locationName'),
+    t('partnerName'),
     t('Days available'),
     t('geometry'),
     t('Office Opens At'),

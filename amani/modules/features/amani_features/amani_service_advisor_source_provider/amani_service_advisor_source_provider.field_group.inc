@@ -46,6 +46,35 @@ function amani_service_advisor_source_provider_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_service_feedback|node|service_source|form';
+  $field_group->group_name = 'group_service_feedback';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'service_source';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Feedback Information',
+    'weight' => '19',
+    'children' => array(
+      0 => 'field_service_feedback_mechanism',
+      1 => 'field_service_feedback_delay',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-service-feedback field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_service_feedback|node|service_source|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_service_properties|node|service_source|form';
   $field_group->group_name = 'group_service_properties';
   $field_group->entity_type = 'node';
@@ -75,10 +104,44 @@ function amani_service_advisor_source_provider_field_group_info() {
   );
   $field_groups['group_service_properties|node|service_source|form'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_service_referral|node|service_source|form';
+  $field_group->group_name = 'group_service_referral';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'service_source';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Referral Information',
+    'weight' => '18',
+    'children' => array(
+      0 => 'field_referral_required_',
+      1 => 'field_referral_type_',
+      2 => 'field_service_referral_method',
+      3 => 'field_service_referral_next_step',
+      4 => 'field_response_delay_after_refer',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-service-referral field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_service_referral|node|service_source|form'] = $field_group;
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Accessibility');
+  t('Feedback Information');
   t('Properties');
+  t('Referral Information');
 
   return $field_groups;
 }

@@ -34,6 +34,31 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'service_activities' => array(
+      'name' => 'Service Activities',
+      'machine_name' => 'service_activities',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'language' => 'und',
+      'i18n_mode' => '1',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'service_available_languages' => array(
       'name' => 'Service Language',
       'machine_name' => 'service_available_languages',
@@ -109,6 +134,56 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'service_feedback_delay' => array(
+      'name' => 'Service Feedback Delay',
+      'machine_name' => 'service_feedback_delay',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'language' => 'und',
+      'i18n_mode' => '1',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'service_feedback_mechanism' => array(
+      'name' => 'Service Feedback Mechanism',
+      'machine_name' => 'service_feedback_mechanism',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'language' => 'und',
+      'i18n_mode' => '1',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'service_intake_criteria' => array(
       'name' => 'Service Intake Criteria',
       'machine_name' => 'service_intake_criteria',
@@ -159,6 +234,56 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'service_location_district' => array(
+      'name' => 'Service Location District',
+      'machine_name' => 'service_location_district',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'language' => 'und',
+      'i18n_mode' => '1',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'service_location_governorate' => array(
+      'name' => 'Service Location Governorate',
+      'machine_name' => 'service_location_governorate',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'language' => 'und',
+      'i18n_mode' => '1',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'service_location_hour_close' => array(
       'name' => 'Service Location Office closes at',
       'machine_name' => 'service_location_hour_close',
@@ -191,6 +316,81 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '10',
+      'language' => 'und',
+      'i18n_mode' => '1',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'service_location_region' => array(
+      'name' => 'Service Location Region',
+      'machine_name' => 'service_location_region',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'language' => 'und',
+      'i18n_mode' => '1',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'service_referral_method' => array(
+      'name' => 'Service Referral Method',
+      'machine_name' => 'service_referral_method',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'language' => 'und',
+      'i18n_mode' => '1',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'service_referral_next_step' => array(
+      'name' => 'Service Referral Next Step',
+      'machine_name' => 'service_referral_next_step',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
       'language' => 'und',
       'i18n_mode' => '1',
       'rdf_mapping' => array(
@@ -260,7 +460,7 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
       ),
     ),
     'services_available_nationality' => array(
-      'name' => 'Services Available Nationality',
+      'name' => 'Services Nationality',
       'machine_name' => 'services_available_nationality',
       'description' => '',
       'hierarchy' => '0',
