@@ -9,6 +9,10 @@
  */
 function amani_service_advisor_source_provider_ctools_plugin_api() {
   list($module, $api) = func_get_args();
+  if ($module == "context" && $api == "context") {
+    return array("version" => "3");
+  }
+  list($module, $api) = func_get_args();
   if ($module == "field_group" && $api == "field_group") {
     return array("version" => "1");
   }
@@ -43,13 +47,13 @@ function amani_service_advisor_source_provider_node_info() {
       'base' => 'node_content',
       'description' => t('A partner for a UNHCR service source'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Abbreviated Partner Name'),
       'help' => '',
     ),
     'service_source' => array(
-      'name' => t('Service Source'),
+      'name' => t('Service'),
       'base' => 'node_content',
-      'description' => t('To report a Source for a certain service where the Service-Advisor app will generate such service from this source '),
+      'description' => t('A Service provided by a Service Partner.  '),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
