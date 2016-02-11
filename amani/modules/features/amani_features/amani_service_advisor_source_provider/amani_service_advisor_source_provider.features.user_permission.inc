@@ -145,6 +145,55 @@ function amani_service_advisor_source_provider_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: delete terms in 30.
+  $permissions['delete terms in 30'] = array(
+    'name' => 'delete terms in 30',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in 31.
+  $permissions['delete terms in 31'] = array(
+    'name' => 'delete terms in 31',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in 32.
+  $permissions['delete terms in 32'] = array(
+    'name' => 'delete terms in 32',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in 34.
+  $permissions['delete terms in 34'] = array(
+    'name' => 'delete terms in 34',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in 35.
+  $permissions['delete terms in 35'] = array(
+    'name' => 'delete terms in 35',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in 36.
+  $permissions['delete terms in 36'] = array(
+    'name' => 'delete terms in 36',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in 38.
+  $permissions['delete terms in 38'] = array(
+    'name' => 'delete terms in 38',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: edit any service_location content.
   $permissions['edit any service_location content'] = array(
     'name' => 'edit any service_location content',
@@ -246,6 +295,55 @@ function amani_service_advisor_source_provider_user_default_permissions() {
   // Exported permission: edit terms in 27.
   $permissions['edit terms in 27'] = array(
     'name' => 'edit terms in 27',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in 30.
+  $permissions['edit terms in 30'] = array(
+    'name' => 'edit terms in 30',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in 31.
+  $permissions['edit terms in 31'] = array(
+    'name' => 'edit terms in 31',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in 32.
+  $permissions['edit terms in 32'] = array(
+    'name' => 'edit terms in 32',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in 34.
+  $permissions['edit terms in 34'] = array(
+    'name' => 'edit terms in 34',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in 35.
+  $permissions['edit terms in 35'] = array(
+    'name' => 'edit terms in 35',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in 36.
+  $permissions['edit terms in 36'] = array(
+    'name' => 'edit terms in 36',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in 38.
+  $permissions['edit terms in 38'] = array(
+    'name' => 'edit terms in 38',
     'roles' => array(),
     'module' => 'taxonomy',
   );
