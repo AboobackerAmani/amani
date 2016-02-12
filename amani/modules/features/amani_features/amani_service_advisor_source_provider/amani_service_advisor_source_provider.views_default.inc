@@ -422,6 +422,13 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_feedback_delay']['settings'] = array(
     'link' => 0,
   );
+  /* Field: Content: Accessibility */
+  $handler->display->display_options['fields']['field_service_accessibility']['id'] = 'field_service_accessibility';
+  $handler->display->display_options['fields']['field_service_accessibility']['table'] = 'field_data_field_service_accessibility';
+  $handler->display->display_options['fields']['field_service_accessibility']['field'] = 'field_service_accessibility';
+  $handler->display->display_options['fields']['field_service_accessibility']['settings'] = array(
+    'link' => 0,
+  );
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -480,6 +487,7 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('Referral Next Step'),
     t('Feedback Mechanism'),
     t('Feedback Delay'),
+    t('Accessibility'),
     t('Page'),
   );
   $export['service_locations_json_feed'] = $view;
