@@ -84,31 +84,6 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'service_available_languages' => array(
-      'name' => 'Service Language',
-      'machine_name' => 'service_available_languages',
-      'description' => '',
-      'hierarchy' => '0',
-      'module' => 'taxonomy',
-      'weight' => '10',
-      'language' => 'und',
-      'i18n_mode' => '1',
-      'rdf_mapping' => array(
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'dc:title',
-          ),
-        ),
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-      ),
-    ),
     'service_available_nationality' => array(
       'name' => 'Service Available Nationality',
       'machine_name' => 'service_available_nationality',

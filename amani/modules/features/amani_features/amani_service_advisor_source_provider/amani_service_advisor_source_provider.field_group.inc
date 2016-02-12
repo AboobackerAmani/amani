@@ -84,6 +84,7 @@ function amani_service_advisor_source_provider_field_group_info() {
       1 => 'field_service_location_region',
       2 => 'field_service_location_governor',
       3 => 'field_service_location_district',
+      4 => 'field_service_coverage',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
