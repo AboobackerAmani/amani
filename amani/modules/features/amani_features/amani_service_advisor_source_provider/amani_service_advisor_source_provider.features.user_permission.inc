@@ -96,13 +96,6 @@ function amani_service_advisor_source_provider_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: delete terms in 21.
-  $permissions['delete terms in 21'] = array(
-    'name' => 'delete terms in 21',
-    'roles' => array(),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: delete terms in 22.
   $permissions['delete terms in 22'] = array(
     'name' => 'delete terms in 22',
@@ -246,13 +239,6 @@ function amani_service_advisor_source_provider_user_default_permissions() {
   // Exported permission: edit terms in 20.
   $permissions['edit terms in 20'] = array(
     'name' => 'edit terms in 20',
-    'roles' => array(),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: edit terms in 21.
-  $permissions['edit terms in 21'] = array(
-    'name' => 'edit terms in 21',
     'roles' => array(),
     'module' => 'taxonomy',
   );
