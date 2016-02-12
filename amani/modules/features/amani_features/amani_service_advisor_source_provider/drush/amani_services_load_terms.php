@@ -5,6 +5,7 @@ module_load_include('inc', 'amani_service_advisor_source_provider', 'includes/am
 $vocabularies_to_load = array (
   'service_accessibility',
   'service_available_nationality',
+  'service_availability',
   'service_coverage',
   'service_intake_criteria',
   'service_registration_type',

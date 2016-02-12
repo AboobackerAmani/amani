@@ -114,6 +114,7 @@ function amani_service_advisor_source_provider_field_group_info() {
       0 => 'field_service_location_days',
       1 => 'field_service_location_hour_clos',
       2 => 'field_service_location_hour_open',
+      3 => 'field_service_availability',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
