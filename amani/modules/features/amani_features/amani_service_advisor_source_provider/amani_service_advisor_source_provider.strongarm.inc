@@ -328,6 +328,8 @@ function amani_service_advisor_source_provider_strongarm() {
   $strongarm->name = 'i18n_node_options_service_partner';
   $strongarm->value = array(
     0 => 'current',
+    1 => 'required',
+    2 => 'lock',
   );
   $export['i18n_node_options_service_partner'] = $strongarm;
 
@@ -340,6 +342,60 @@ function amani_service_advisor_source_provider_strongarm() {
     1 => 'required',
   );
   $export['i18n_node_options_service_source'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_sync_node_type_service_location';
+  $strongarm->value = array(
+    0 => 'body',
+    1 => 'field_service_end_date',
+    2 => 'field_service_location',
+    3 => 'field_service_location_days',
+    4 => 'field_service_location_hour_clos',
+    5 => 'field_service_location_hour_open',
+    6 => 'field_service_location_service',
+    7 => 'field_service_nationality',
+    8 => 'field_service_start_date',
+    9 => 'og_group_ref',
+    10 => 'field_service_location_region',
+    11 => 'field_service_location_governor',
+    12 => 'field_service_location_district',
+    13 => 'field_service_availability',
+    14 => 'field_service_coverage',
+    15 => 'field_service_accessibility',
+  );
+  $export['i18n_sync_node_type_service_location'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_sync_node_type_service_partner';
+  $strongarm->value = array();
+  $export['i18n_sync_node_type_service_partner'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_sync_node_type_service_source';
+  $strongarm->value = array(
+    0 => 'field_referral_required_',
+    1 => 'field_referral_type_',
+    2 => 'field_response_delay_after_refer',
+    3 => 'field_service_activity_details',
+    4 => 'field_service_category',
+    5 => 'field_service_comments',
+    6 => 'field_service_feedback_delay',
+    7 => 'field_service_feedback_mechanism',
+    8 => 'field_service_indicators',
+    9 => 'field_service_intake_criteria',
+    10 => 'field_service_more_info_link',
+    11 => 'field_service_referral_method',
+    12 => 'field_service_referral_next_step',
+    13 => 'field_service_registration_type',
+    14 => 'og_group_ref',
+  );
+  $export['i18n_sync_node_type_service_source'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
