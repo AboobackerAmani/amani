@@ -1721,7 +1721,7 @@
 	body.node-type-projects {
 	
 		#main {
-			padding-top:50px;
+			padding-top:6em;
 			padding-bottom:7em;
 		}
 	
@@ -1733,11 +1733,12 @@
 			font-weight:600;
 			padding:20px;
 			height:120px;
-			width:320px;
-			margin-right:20px;
+			width:100%;
+			margin-right:0;
 			font-size:18px;
 			margin-bottom:4px;
 			margin-top:30px;
+			box-sizing:border-box;
 			&:after {
 				content:"become a PeaceGeek!";
 				font-weight:300;
@@ -1755,11 +1756,12 @@
 			font-weight:600;
 			padding:20px;
 			height:120px;
-			width:310px;
+			width:100%;
 			margin-right:0;
 			font-size:18px;
 			margin-bottom:4px;
 			margin-top:30px;
+			box-sizing:border-box;
 			&:after {
 				content:"to PeaceGeeks";
 				font-weight:300;
@@ -1792,7 +1794,7 @@
 					margin:0 auto;
 					height:auto;
 					position:relative;
-					padding:40px 20px;
+					padding:20px 20px 100px 20px;
 					box-sizing:border-box;
 					
 					.views-field-view-node {
@@ -1886,7 +1888,7 @@
 					
 					.views-field-field-project-tags {
 						display:block;
-						right:0;
+						left:0;
 						width:100%;
 						position:absolute;
 						bottom:0;
@@ -1899,8 +1901,11 @@
 						}
 						
 						ol {
-							text-align:right;
-							margin:0 0 -5px 0;
+							text-align:left;
+							margin:0 0 -12px 0;
+							padding-left:13px;
+							position:absolute;
+							bottom:0;
 							li {
 								list-style-type:none;
 								display:inline;
@@ -1910,6 +1915,8 @@
 									font-style:italic;
 									padding:4px 14px;
 									margin-left:8px;
+									margin-bottom:4px;
+									display:inline-block;
 									text-decoration:none;
 									&:before {
 										content:"#";
@@ -1923,7 +1930,6 @@
 			}
 		}
 		
-		#main {padding-top:50px;}
 		
 		h1#page-title {display:none;}
 		
@@ -1970,6 +1976,11 @@
 				
 				.views-field-field-project-image {
 					margin-bottom:4em;
+					
+					img {
+						width:100%;
+						height:auto;
+					}	
 				}
 				
 				.views-field {
@@ -2225,6 +2236,13 @@
 					font-weight: 300;
 					.date-display-single {
 						
+					}
+				}
+				
+				.views-field-field-project-image {
+					img {
+						width:100%;
+						height:auto;
 					}
 				}
 			
