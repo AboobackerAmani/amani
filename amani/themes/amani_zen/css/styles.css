@@ -11644,22 +11644,26 @@ form.comment-form #edit-preview {
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
   }
+  /* line 39, ../sass/mobile/_header.scss */
+  #header #block-menu-menu-social-media {
+    display: none;
+  }
 
-  /* line 41, ../sass/mobile/_header.scss */
+  /* line 45, ../sass/mobile/_header.scss */
   #navigation ul {
     list-style-type: none;
   }
-  /* line 44, ../sass/mobile/_header.scss */
+  /* line 48, ../sass/mobile/_header.scss */
   #navigation li {
     float: left;
   }
 
-  /* line 53, ../sass/mobile/_header.scss */
+  /* line 57, ../sass/mobile/_header.scss */
   #navigation li {
     background-color: transparent;
     border-color: #474F5E;
   }
-  /* line 58, ../sass/mobile/_header.scss */
+  /* line 62, ../sass/mobile/_header.scss */
   #navigation a {
     padding: 0 16px;
     font-size: 16px;
@@ -11671,13 +11675,13 @@ form.comment-form #edit-preview {
     color: #474F5E;
     border: none;
   }
-  /* line 67, ../sass/mobile/_header.scss */
+  /* line 71, ../sass/mobile/_header.scss */
   #navigation a:hover, #navigation a.active {
     background-color: transparent;
     text-shadow: 0 0 #474F5E;
   }
 
-  /* line 76, ../sass/mobile/_header.scss */
+  /* line 80, ../sass/mobile/_header.scss */
   div[id*="block-menu-menu-social-media"] a {
     color: #414042;
     font-family: "SSSocial";
