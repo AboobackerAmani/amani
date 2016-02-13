@@ -24,11 +24,12 @@
 				a {
 					width:100%;
 					background:$orange;
-					padding:1em 0;
-					text-indent:1em;
+					padding:1em;
+					text-indent:0;
 					height:auto !important;
 					margin-top:0 !important;
 					line-height:1.4em;
+					box-sizing:border-box;
 					&.shorterlinkbox:after {
 						margin-top:6px !important;
 					}
@@ -3227,6 +3228,7 @@
 			background:$soft-grey;*/
 			margin-bottom:-71px;
 			margin-top:3em;
+			z-index:1;
 			
 			&:before {
 				content: "";
