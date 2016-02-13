@@ -393,5 +393,91 @@ function peace_geeks_blocks_and_views_context_default_contexts() {
   t('Peace Geeks');
   $export['news_section_blocks'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'partner_banners_placement';
+  $context->description = '';
+  $context->tag = 'Peace Geeks';
+  $context->conditions = array(
+    'breakpoint' => array(
+      'values' => array(
+        0 => 'custom.user.wide',
+      ),
+      'options' => array(
+        'autoreload' => 0,
+      ),
+    ),
+    'node' => array(
+      'values' => array(
+        'project_partners' => 'project_partners',
+      ),
+      'options' => array(
+        'node_form' => '0',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-7be5f926a7c4bc78a69289b9129ae808' => array(
+          'module' => 'views',
+          'delta' => '7be5f926a7c4bc78a69289b9129ae808',
+          'region' => 'banner',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Peace Geeks');
+  $export['partner_banners_placement'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'partner_banners_placement_mobile';
+  $context->description = '';
+  $context->tag = 'Peace Geeks';
+  $context->conditions = array(
+    'breakpoint' => array(
+      'values' => array(
+        0 => 'custom.user.mobile',
+      ),
+      'options' => array(
+        'autoreload' => 0,
+      ),
+    ),
+    'node' => array(
+      'values' => array(
+        'project_partners' => 'project_partners',
+      ),
+      'options' => array(
+        'node_form' => '0',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-df975120470ab7adfe31ef5aa853e005' => array(
+          'module' => 'views',
+          'delta' => 'df975120470ab7adfe31ef5aa853e005',
+          'region' => 'banner',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Peace Geeks');
+  $export['partner_banners_placement_mobile'] = $context;
+
   return $export;
 }
