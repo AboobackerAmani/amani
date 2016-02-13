@@ -341,16 +341,22 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['fields']['field_crisis_overview']['table'] = 'field_data_field_crisis_overview';
   $handler->display->display_options['fields']['field_crisis_overview']['field'] = 'field_crisis_overview';
   $handler->display->display_options['fields']['field_crisis_overview']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_crisis_overview']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_crisis_overview']['empty_zero'] = TRUE;
   /* Field: Content: What They Do */
   $handler->display->display_options['fields']['field_what_they_do']['id'] = 'field_what_they_do';
   $handler->display->display_options['fields']['field_what_they_do']['table'] = 'field_data_field_what_they_do';
   $handler->display->display_options['fields']['field_what_they_do']['field'] = 'field_what_they_do';
   $handler->display->display_options['fields']['field_what_they_do']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_what_they_do']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_what_they_do']['empty_zero'] = TRUE;
   /* Field: Content: Our Impact */
   $handler->display->display_options['fields']['field_our_impact']['id'] = 'field_our_impact';
   $handler->display->display_options['fields']['field_our_impact']['table'] = 'field_data_field_our_impact';
   $handler->display->display_options['fields']['field_our_impact']['field'] = 'field_our_impact';
   $handler->display->display_options['fields']['field_our_impact']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_our_impact']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_our_impact']['empty_zero'] = TRUE;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_proj_partners_image']['id'] = 'field_proj_partners_image';
   $handler->display->display_options['fields']['field_proj_partners_image']['table'] = 'field_data_field_proj_partners_image';
@@ -508,7 +514,7 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['fields']['field_image_attribution']['field'] = 'field_image_attribution';
   $handler->display->display_options['fields']['field_image_attribution']['label'] = '';
   $handler->display->display_options['fields']['field_image_attribution']['element_label_colon'] = FALSE;
-  /* Field: Field: Image Attribution Link */
+  /* Field: Field: Banner Image Attribution Link */
   $handler->display->display_options['fields']['field_image_attribution_link']['id'] = 'field_image_attribution_link';
   $handler->display->display_options['fields']['field_image_attribution_link']['table'] = 'field_data_field_image_attribution_link';
   $handler->display->display_options['fields']['field_image_attribution_link']['field'] = 'field_image_attribution_link';
@@ -1553,6 +1559,78 @@ function peace_geeks_project_partners_views_default_views() {
   $handler->display->display_options['filters']['field_project_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_project_type_tid']['vocabulary'] = 'project_type';
   $handler->display->display_options['block_description'] = 'PG All Projects Block';
+
+  /* Display: Mobile PG Partners Node Banner */
+  $handler = $view->new_display('block', 'Mobile PG Partners Node Banner', 'mobile_project_partners_banner_block');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_projects_reference_target_id']['id'] = 'field_projects_reference_target_id';
+  $handler->display->display_options['relationships']['field_projects_reference_target_id']['table'] = 'field_data_field_projects_reference';
+  $handler->display->display_options['relationships']['field_projects_reference_target_id']['field'] = 'field_projects_reference_target_id';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Field: Banner Image */
+  $handler->display->display_options['fields']['field_banner_image']['id'] = 'field_banner_image';
+  $handler->display->display_options['fields']['field_banner_image']['table'] = 'field_data_field_banner_image';
+  $handler->display->display_options['fields']['field_banner_image']['field'] = 'field_banner_image';
+  $handler->display->display_options['fields']['field_banner_image']['label'] = '';
+  $handler->display->display_options['fields']['field_banner_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_banner_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_banner_image']['settings'] = array(
+    'image_style' => 'banner_image',
+    'image_link' => '',
+  );
+  /* Field: Field: Image Attribution */
+  $handler->display->display_options['fields']['field_image_attribution']['id'] = 'field_image_attribution';
+  $handler->display->display_options['fields']['field_image_attribution']['table'] = 'field_data_field_image_attribution';
+  $handler->display->display_options['fields']['field_image_attribution']['field'] = 'field_image_attribution';
+  $handler->display->display_options['fields']['field_image_attribution']['label'] = '';
+  $handler->display->display_options['fields']['field_image_attribution']['element_label_colon'] = FALSE;
+  /* Field: Field: Banner Image Attribution Link */
+  $handler->display->display_options['fields']['field_image_attribution_link']['id'] = 'field_image_attribution_link';
+  $handler->display->display_options['fields']['field_image_attribution_link']['table'] = 'field_data_field_image_attribution_link';
+  $handler->display->display_options['fields']['field_image_attribution_link']['field'] = 'field_image_attribution_link';
+  $handler->display->display_options['fields']['field_image_attribution_link']['label'] = '';
+  $handler->display->display_options['fields']['field_image_attribution_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image_attribution_link']['click_sort_column'] = 'url';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<div id="partner-profile-label">Partner Profile:</div><div id="parter-profile-name">[title]</div>';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Partner One Liner */
+  $handler->display->display_options['fields']['field_partner_one_liner']['id'] = 'field_partner_one_liner';
+  $handler->display->display_options['fields']['field_partner_one_liner']['table'] = 'field_data_field_partner_one_liner';
+  $handler->display->display_options['fields']['field_partner_one_liner']['field'] = 'field_partner_one_liner';
+  $handler->display->display_options['fields']['field_partner_one_liner']['label'] = '';
+  $handler->display->display_options['fields']['field_partner_one_liner']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_partner_one_liner']['alter']['text'] = '<div id="partner-title">[title]</div>
+<div id="partner-one-liner">[field_partner_one_liner-value]</div>';
+  $handler->display->display_options['fields']['field_partner_one_liner']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['block_description'] = 'Mobile PG Project Partners Banner Block';
   $translatables['peace_geeks_projects'] = array(
     t('Master'),
     t('Peace Geeks Projects'),
@@ -1640,6 +1718,10 @@ function peace_geeks_project_partners_views_default_views() {
     t('Partner Country'),
     t('Project Service'),
     t('PG All Projects Block'),
+    t('Mobile PG Partners Node Banner'),
+    t('<div id="partner-title">[title]</div>
+<div id="partner-one-liner">[field_partner_one_liner-value]</div>'),
+    t('Mobile PG Project Partners Banner Block'),
   );
   $export['peace_geeks_projects'] = $view;
 
