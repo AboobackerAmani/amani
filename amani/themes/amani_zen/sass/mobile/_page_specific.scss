@@ -1201,11 +1201,12 @@
 			font-weight:600;
 			padding:20px;
 			height:120px;
-			width:300px;
+			width:100%;
 			margin-right:20px;
 			font-size:18px;
 			margin-bottom:4px;
 			margin-top:30px;
+			box-sizing:border-box;
 			&:after {
 				content:"become a PeaceGeek!";
 				font-weight:300;
@@ -1223,11 +1224,12 @@
 			font-weight:600;
 			padding:20px;
 			height:120px;
-			width:300px;
+			width:100%;
 			margin-right:0;
 			font-size:18px;
 			margin-bottom:4px;
 			margin-top:30px;
+			box-sizing:border-box;
 			&:after {
 				content:"to PeaceGeeks";
 				font-weight:300;
@@ -1236,28 +1238,30 @@
 			}	
 		}
 		
-		.view-id-peace_geeks_projects.view-display-id-project_partners_banner_block {
+		.view-id-peace_geeks_projects.view-display-id-mobile_project_partners_banner_block {
 		
 			display:block;
 			width:100%;
-			padding-top:81px;
 			position:relative;
-			height:400px;
+			height:auto;
+			box-sizing:border-box;
 			
 			.view-content {
 				
 				display: block;
 				z-index: 10;
 				display:block;
-				height:400px;
+				height:auto;
+				box-sizing:border-box;
 				
 			}
 					
 			.views-field-title {
-				width:1200px;
+				width:100%;
 				display:block;
 				margin:0 auto;
 				position: relative;
+				box-sizing:border-box;
 				
 				.field-content {
 					  display: block;
@@ -1268,7 +1272,6 @@
 					  color: white;
 					  font-style: italic;
 					  font-size: 1.2em;
-					  margin-left:-320px;
 				}
 			}	
 			
@@ -1300,32 +1303,49 @@
 			#parter-profile-name {
 				display:block;
 				float:left;
-				width:66%;
+				width:100%;
 				padding-bottom:1em;
 			}
 				
 			.views-field-field-partner-one-liner {
 			
-				width:1200px;
+				width:100%;
 				display:block;
 				margin:0 auto;
 				position: relative;
+				box-sizing:border-box;
+				
+				#partner-title {
+					font-size:1.2em;
+					font-style:italic;
+					font-weight:lighter;
+					color:white;
+					display:block;
+					width:100%;
+					
+				}
+				
+				#partner-one-liner {
+					color: white;
+					font-weight: 600;
+					font-size: 1.8em;
+					line-height: 1.2em;
+				}
 				
 				.field-content {
 					display: block;
 					background: $blue;
-					color: white;
-					font-weight: 600;
-					font-size: 2.2em;
+					
 					position: relative;
 					float: left;
-					margin-top: -21px;
-					margin-left: 120px;
-					width: 350px;
-					height: 340px;
-					padding: 3.2em 1em 1em 1em;
-					line-height: 1.2em;
+					margin-top: -5px;
+					margin-left: 0;
+					width: 100%;
+					height: auto;
+					padding: 1.2em 1em 3em 1em;
+					
 					z-index: 20;
+					box-sizing:border-box;
 				}
 			}
 				
@@ -1333,16 +1353,14 @@
 					display:block;
 					z-index:10;
 					width:100%;
-					height:400px;
+					height:auto;
 					float:left;
 					overflow:hidden;
-					margin-top:-400px;
 			
 				img {
 					width:100%;
 					height:auto;
-					min-width:1200px;
-					min-height:400px;
+					
 				}
 		
 			}
@@ -1361,6 +1379,7 @@
 			.view-footer {
 					display:block;
 					float:left;
+					width:100%;
 				}
 			
 			.views-row {
@@ -1489,7 +1508,7 @@
 						margin-top: 30px;
 					}
 					.field-content p {
-						font-size: 2.8em;
+						font-size: 2.2em;
 						color: $blue;
 						line-height: 1.4em;
 						margin-bottom: 20px;
@@ -1762,21 +1781,19 @@
 				display: block;
 				z-index: 10;
 				position: relative;
-				padding-left: 3000px;
-				margin-left: -3000px;
-				padding-right: 3000px;
-				margin-right: -3000px;
-				height: 330px;
+				
+				height: auto;
 				background: $blue;
 				overflow: hidden;
 				
 				.views-row {
 					display:block;
-					width:980px;
+					width:100%;
 					margin:0 auto;
-					height:330px;
+					height:auto;
 					position:relative;
 					padding:40px 20px;
+					box-sizing:border-box;
 					
 					.views-field-view-node {
 						margin-top:10px;
@@ -3318,7 +3335,7 @@
 				margin-top: 30px;
 			}
 			.field-content p {
-				font-size: 2.8em;
+				font-size: 2.2em;
 				color: $blue;
 				line-height: 1.4em;
 				margin-bottom: 20px;
