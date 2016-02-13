@@ -10517,15 +10517,16 @@ form.comment-form #edit-preview {
     font-weight: 300;
     color: #59C2ED;
     font-size: 3em;
-    line-height: 30px;
+    line-height: 1em;
+    margin-bottom: 1em;
   }
-  /* line 154, ../sass/mobile/_forms.scss */
+  /* line 155, ../sass/mobile/_forms.scss */
   body.section-volunteer-application form {
     display: block;
     float: left;
     padding-bottom: 6em;
   }
-  /* line 160, ../sass/mobile/_forms.scss */
+  /* line 161, ../sass/mobile/_forms.scss */
   body.section-volunteer-application form p {
     background: #E6E6E6;
     padding: 2em 1em;
@@ -10533,28 +10534,29 @@ form.comment-form #edit-preview {
     line-height: 1.5em;
     display: block;
     float: left;
-    width: 96%;
+    width: 100%;
+    box-sizing: border-box;
   }
-  /* line 162, ../sass/mobile/_forms.scss */
+  /* line 163, ../sass/mobile/_forms.scss */
   body.section-volunteer-application form p input[type="text"] {
     display: block;
     width: 100%;
     padding: .6em;
   }
-  /* line 176, ../sass/mobile/_forms.scss */
+  /* line 178, ../sass/mobile/_forms.scss */
   body.section-volunteer-application form p:nth-child(3) {
     display: none;
   }
-  /* line 179, ../sass/mobile/_forms.scss */
+  /* line 181, ../sass/mobile/_forms.scss */
   body.section-volunteer-application form p:nth-child(2) {
     display: none;
   }
-  /* line 182, ../sass/mobile/_forms.scss */
+  /* line 184, ../sass/mobile/_forms.scss */
   body.section-volunteer-application form p:last-child {
     background: white;
     padding: 0;
   }
-  /* line 185, ../sass/mobile/_forms.scss */
+  /* line 187, ../sass/mobile/_forms.scss */
   body.section-volunteer-application form p:last-child input[type="submit"] {
     background: #59C2ED;
     color: white;
@@ -10566,7 +10568,7 @@ form.comment-form #edit-preview {
     display: block;
     float: left;
   }
-  /* line 199, ../sass/mobile/_forms.scss */
+  /* line 201, ../sass/mobile/_forms.scss */
   body.section-volunteer-application form p label {
     font-weight: 300;
     font-size: 1em;
@@ -10577,7 +10579,7 @@ form.comment-form #edit-preview {
   }
 
   /* Partner Application Form */
-  /* line 221, ../sass/mobile/_forms.scss */
+  /* line 223, ../sass/mobile/_forms.scss */
   body.section-partner-application #top-scroll:before {
     content: "";
     display: block;
@@ -10591,7 +10593,7 @@ form.comment-form #edit-preview {
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
 
-  /* line 237, ../sass/mobile/_forms.scss */
+  /* line 239, ../sass/mobile/_forms.scss */
   #partner-application-form {
     display: block;
     float: left;
@@ -10602,7 +10604,7 @@ form.comment-form #edit-preview {
     width: 100%;
     box-sizing: border-box;
   }
-  /* line 248, ../sass/mobile/_forms.scss */
+  /* line 250, ../sass/mobile/_forms.scss */
   #partner-application-form h2 {
     font-weight: 600;
     text-transform: uppercase;
@@ -10614,7 +10616,7 @@ form.comment-form #edit-preview {
     width: 100%;
     margin-bottom: .6em;
   }
-  /* line 260, ../sass/mobile/_forms.scss */
+  /* line 262, ../sass/mobile/_forms.scss */
   #partner-application-form input[type="submit"] {
     background: #59C2ED;
     color: white;
@@ -10627,11 +10629,11 @@ form.comment-form #edit-preview {
     float: left;
     margin-top: 2em;
   }
-  /* line 275, ../sass/mobile/_forms.scss */
+  /* line 277, ../sass/mobile/_forms.scss */
   #partner-application-form .sf-form-required {
     color: #59C2ED;
   }
-  /* line 279, ../sass/mobile/_forms.scss */
+  /* line 281, ../sass/mobile/_forms.scss */
   #partner-application-form .sf-form-required-div {
     display: block;
     float: left;
@@ -10639,34 +10641,34 @@ form.comment-form #edit-preview {
     margin-top: -3.8em;
     margin-bottom: 3em;
   }
-  /* line 291, ../sass/mobile/_forms.scss */
+  /* line 293, ../sass/mobile/_forms.scss */
   #partner-application-form input[type="checkbox"] {
     display: block;
     height: 1em;
     width: 1em;
   }
-  /* line 297, ../sass/mobile/_forms.scss */
+  /* line 299, ../sass/mobile/_forms.scss */
   #partner-application-form input {
     border: none;
     padding: .6em;
     width: 100%;
     margin-bottom: .4em;
   }
-  /* line 304, ../sass/mobile/_forms.scss */
+  /* line 306, ../sass/mobile/_forms.scss */
   #partner-application-form select {
     border: none;
     padding: .6em;
     width: 100%;
     margin-bottom: .4em;
   }
-  /* line 311, ../sass/mobile/_forms.scss */
+  /* line 313, ../sass/mobile/_forms.scss */
   #partner-application-form textarea {
     border: none;
     padding: .6em;
     width: 100%;
     margin-bottom: .4em;
   }
-  /* line 318, ../sass/mobile/_forms.scss */
+  /* line 320, ../sass/mobile/_forms.scss */
   #partner-application-form .sf-form-box {
     background: #E6E6E6;
     padding: 2em 2em;
@@ -10677,13 +10679,13 @@ form.comment-form #edit-preview {
     width: 100%;
     margin-bottom: 4em;
   }
-  /* line 320, ../sass/mobile/_forms.scss */
+  /* line 322, ../sass/mobile/_forms.scss */
   #partner-application-form .sf-form-box input[type="text"] {
     display: block;
     width: 100%;
     padding: .6em;
   }
-  /* line 337, ../sass/mobile/_forms.scss */
+  /* line 339, ../sass/mobile/_forms.scss */
   #partner-application-form .sf-form-box label {
     font-weight: 300;
     font-size: 1em;
@@ -10693,12 +10695,12 @@ form.comment-form #edit-preview {
     margin-top: 1em;
   }
 
-  /* line 352, ../sass/mobile/_forms.scss */
+  /* line 354, ../sass/mobile/_forms.scss */
   body.section-partner-application p {
     font-size: 1.1em;
     line-height: 1.5em;
   }
-  /* line 357, ../sass/mobile/_forms.scss */
+  /* line 359, ../sass/mobile/_forms.scss */
   body.section-partner-application h1#page-title {
     margin-top: 0;
     font-weight: 300;
@@ -10708,15 +10710,15 @@ form.comment-form #edit-preview {
   }
 
   /* Donation page */
-  /* line 373, ../sass/mobile/_forms.scss */
+  /* line 375, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .paragraphs-items-field-paragraphs {
     margin-top: 0;
   }
-  /* line 377, ../sass/mobile/_forms.scss */
+  /* line 379, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #main {
     padding-top: 50px;
   }
-  /* line 379, ../sass/mobile/_forms.scss */
+  /* line 381, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_Div {
     display: block;
     float: left;
@@ -10724,11 +10726,11 @@ form.comment-form #edit-preview {
     position: relative;
     z-index: 10;
   }
-  /* line 387, ../sass/mobile/_forms.scss */
+  /* line 389, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_EventTitle {
     display: none;
   }
-  /* line 391, ../sass/mobile/_forms.scss */
+  /* line 393, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_AmountSectionTitle {
     position: absolute;
     top: -34px;
@@ -10738,7 +10740,7 @@ form.comment-form #edit-preview {
     font-size: 16px;
     letter-spacing: 1px;
   }
-  /* line 401, ../sass/mobile/_forms.scss */
+  /* line 403, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_EventDescription {
     display: block;
     float: left;
@@ -10749,11 +10751,11 @@ form.comment-form #edit-preview {
     color: #414042;
     font-weight: 300;
   }
-  /* line 413, ../sass/mobile/_forms.scss */
+  /* line 415, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_OtherAmtMinimum {
     display: none;
   }
-  /* line 418, ../sass/mobile/_forms.scss */
+  /* line 420, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_AmountDiv {
     background: #E6E6E6;
     display: block;
@@ -10762,7 +10764,7 @@ form.comment-form #edit-preview {
     font-size: 14px;
     padding: 20px;
   }
-  /* line 427, ../sass/mobile/_forms.scss */
+  /* line 429, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage select {
     background: white !important;
     border: 0;
@@ -10770,11 +10772,11 @@ form.comment-form #edit-preview {
     -webkit-border-radius: 0 0;
     border-radius: 0 / 0;
   }
-  /* line 433, ../sass/mobile/_forms.scss */
+  /* line 435, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_PaymentSectionNote {
     display: none;
   }
-  /* line 437, ../sass/mobile/_forms.scss */
+  /* line 439, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv {
     display: block;
     float: left;
@@ -10785,168 +10787,168 @@ form.comment-form #edit-preview {
     margin-top: 60px;
     position: relative;
   }
-  /* line 447, ../sass/mobile/_forms.scss */
+  /* line 449, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv .IATS_PaymentItemDiv {
     position: relative;
     margin-top: 20px;
   }
-  /* line 452, ../sass/mobile/_forms.scss */
+  /* line 454, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv input {
     border: 0;
     padding: 4px 8px;
     width: 100%;
     height: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
-  /* line 460, ../sass/mobile/_forms.scss */
+  /* line 462, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv label {
     font-weight: normal;
   }
-  /* line 465, ../sass/mobile/_forms.scss */
+  /* line 467, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv textarea {
     width: 100%;
     border: 0;
   }
-  /* line 471, ../sass/mobile/_forms.scss */
+  /* line 473, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_PaymentItemDiv_Country label {
     width: auto;
     padding-right: 20px;
   }
-  /* line 478, ../sass/mobile/_forms.scss */
+  /* line 480, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_PaymentItemDiv_Title label {
     width: auto;
     padding-right: 20px;
   }
-  /* line 484, ../sass/mobile/_forms.scss */
+  /* line 486, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_ReoccurringDiv_ScheduleType {
     margin-top: 10px;
   }
-  /* line 488, ../sass/mobile/_forms.scss */
+  /* line 490, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_ReoccurringDiv {
     display: block;
     width: 710px;
     float: none;
   }
-  /* line 494, ../sass/mobile/_forms.scss */
+  /* line 496, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_AccountTypeDiv {
     display: block;
     width: 710px;
     float: none;
   }
-  /* line 500, ../sass/mobile/_forms.scss */
+  /* line 502, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_PaymentFrequencyDiv {
-    width: 710px;
+    width: 100%;
   }
-  /* line 504, ../sass/mobile/_forms.scss */
+  /* line 506, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_PaymentItemInput_Comment {
     margin-bottom: 40px;
   }
-  /* line 508, ../sass/mobile/_forms.scss */
+  /* line 510, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_CreditCardDiv {
     display: block;
     width: 100%;
     margin-top: 0;
   }
-  /* line 514, ../sass/mobile/_forms.scss */
+  /* line 516, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_DebitDiv {
     display: block;
     width: 100%;
     margin-top: 0;
   }
-  /* line 520, ../sass/mobile/_forms.scss */
+  /* line 522, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_BeginDate {
     width: 100px;
   }
-  /* line 524, ../sass/mobile/_forms.scss */
+  /* line 526, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_EndDate {
     width: 100px;
   }
-  /* line 528, ../sass/mobile/_forms.scss */
+  /* line 530, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_ACHCancellationStmDiv {
     padding-left: 0;
     padding-top: 4px;
     width: 100%;
   }
-  /* line 534, ../sass/mobile/_forms.scss */
+  /* line 536, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_ACHRecourseStmDiv {
     padding-left: 0;
     padding-top: 4px;
   }
-  /* line 539, ../sass/mobile/_forms.scss */
+  /* line 541, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_CVV2 {
     display: inline;
     width: 80px !important;
   }
-  /* line 544, ../sass/mobile/_forms.scss */
+  /* line 546, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_ExpiryMonth {
     margin-right: 10px;
   }
-  /* line 548, ../sass/mobile/_forms.scss */
+  /* line 550, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_AccountNumber1 {
     display: inline;
     width: 130px;
     margin-right: 10px;
   }
-  /* line 554, ../sass/mobile/_forms.scss */
+  /* line 556, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_AccountNumber2 {
     display: inline;
     width: 130px;
     margin-right: 10px;
   }
-  /* line 560, ../sass/mobile/_forms.scss */
+  /* line 562, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_AccountNumber3 {
     display: inline;
     width: 130px;
     margin-right: 10px;
   }
-  /* line 566, ../sass/mobile/_forms.scss */
+  /* line 568, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv #IATS_Payment_AccountNumber4 {
     display: inline;
     width: 130px;
     margin-right: 10px;
   }
-  /* line 572, ../sass/mobile/_forms.scss */
+  /* line 574, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv .IATS_PaymentFrequencyItemDiv {
     display: block;
     float: none;
     padding-left: 0 !important;
     margin-top: 10px !important;
   }
-  /* line 577, ../sass/mobile/_forms.scss */
+  /* line 579, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv .IATS_PaymentFrequencyItemDiv input {
     float: none;
     width: auto;
     height: auto;
   }
-  /* line 582, ../sass/mobile/_forms.scss */
+  /* line 584, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv .IATS_PaymentFrequencyItemDiv label {
     float: none;
     width: auto;
     padding-left: 10px;
     margin-right: 30px;
   }
-  /* line 590, ../sass/mobile/_forms.scss */
+  /* line 592, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv .IATS_PaymentTypeItemDiv {
     display: block;
     float: left;
     padding-left: 0 !important;
     margin-top: 10px !important;
-    width: 700px;
+    width: 100%;
   }
-  /* line 596, ../sass/mobile/_forms.scss */
+  /* line 598, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv .IATS_PaymentTypeItemDiv input {
     float: none;
     width: auto;
     height: auto;
   }
-  /* line 601, ../sass/mobile/_forms.scss */
+  /* line 603, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_PaymentSectionDiv .IATS_PaymentTypeItemDiv label {
     float: none;
     width: auto;
     padding-left: 10px;
     margin-right: 30px;
   }
-  /* line 612, ../sass/mobile/_forms.scss */
+  /* line 614, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_PaymentSectionTitle {
     position: absolute;
     top: -34px;
@@ -10956,7 +10958,7 @@ form.comment-form #edit-preview {
     font-size: 16px;
     letter-spacing: 1px;
   }
-  /* line 622, ../sass/mobile/_forms.scss */
+  /* line 624, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #IATS_ProcessAction_Button {
     font-size: 28px;
     border: 0;
@@ -10968,7 +10970,7 @@ form.comment-form #edit-preview {
     width: 100%;
     margin-left: 0;
   }
-  /* line 634, ../sass/mobile/_forms.scss */
+  /* line 636, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_AmountItemDiv {
     float: left;
     margin-right: 10px;
@@ -10976,19 +10978,19 @@ form.comment-form #edit-preview {
     width: 220px;
     padding: 1em;
   }
-  /* line 642, ../sass/mobile/_forms.scss */
+  /* line 644, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_RadioAmtLabel {
     font-weight: 300;
     font-size: 20px;
   }
-  /* line 647, ../sass/mobile/_forms.scss */
+  /* line 649, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_Action {
     margin-left: 0;
     padding-left: 0;
     position: relative;
     z-index: 10;
   }
-  /* line 654, ../sass/mobile/_forms.scss */
+  /* line 656, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage #other-giving {
     font-size: 28px;
     border: 0;
@@ -11008,26 +11010,26 @@ form.comment-form #edit-preview {
     margin-bottom: 50px;
     box-sizing: border-box;
   }
-  /* line 674, ../sass/mobile/_forms.scss */
+  /* line 676, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .other-giving-block {
     display: block;
     z-index: 100;
   }
-  /* line 679, ../sass/mobile/_forms.scss */
+  /* line 681, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .IATS_SecureDataDiv {
     padding-left: 270px;
     padding-top: 30px;
     float: left;
   }
-  /* line 685, ../sass/mobile/_forms.scss */
+  /* line 687, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .donate-top-text {
     margin-top: 0 !important;
   }
-  /* line 687, ../sass/mobile/_forms.scss */
+  /* line 689, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .donate-top-text .field-name-field-large-header-text {
     margin-bottom: 20px;
   }
-  /* line 692, ../sass/mobile/_forms.scss */
+  /* line 694, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .donate-thank-you {
     display: block;
     float: left;
@@ -11038,21 +11040,21 @@ form.comment-form #edit-preview {
     position: relative;
     box-sizing: border-box;
   }
-  /* line 701, ../sass/mobile/_forms.scss */
+  /* line 703, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .donate-thank-you .field-name-field-large-header-text {
     margin-bottom: 40px;
     text-align: center;
     width: 100%;
   }
-  /* line 707, ../sass/mobile/_forms.scss */
+  /* line 709, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .donate-thank-you .field-name-field-paragraph-text {
     width: 100%;
   }
-  /* line 712, ../sass/mobile/_forms.scss */
+  /* line 714, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .paragraphs-item-link-block-grey a.shorterlinkbox:after {
     padding-right: 0;
   }
-  /* line 716, ../sass/mobile/_forms.scss */
+  /* line 718, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .giving-with-confidence {
     display: block;
     float: right !important;
@@ -11062,7 +11064,7 @@ form.comment-form #edit-preview {
     box-sizing: border-box;
     position: relative;
   }
-  /* line 726, ../sass/mobile/_forms.scss */
+  /* line 728, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .giving-with-confidence a {
     width: 100%;
     height: 120px;
@@ -11073,14 +11075,14 @@ form.comment-form #edit-preview {
     padding: 1em;
     box-sizing: border-box;
   }
-  /* line 735, ../sass/mobile/_forms.scss */
+  /* line 737, ../sass/mobile/_forms.scss */
   body.node-type-structure.donatepage .giving-with-confidence a.shofterlinkbox:after {
     margin-top: 76px;
     padding-right: 0;
   }
 
   /* Newsletter signup form */
-  /* line 747, ../sass/mobile/_forms.scss */
+  /* line 749, ../sass/mobile/_forms.scss */
   #block-mailchimp-signup-newsletter-signup-form {
     display: block;
     position: relative;
@@ -11088,65 +11090,65 @@ form.comment-form #edit-preview {
     width: 100%;
     margin-top: 3em;
   }
-  /* line 755, ../sass/mobile/_forms.scss */
+  /* line 757, ../sass/mobile/_forms.scss */
   #block-mailchimp-signup-newsletter-signup-form .mailchimp-signup-subscribe-form-description {
     margin-bottom: 6px;
   }
-  /* line 759, ../sass/mobile/_forms.scss */
+  /* line 761, ../sass/mobile/_forms.scss */
   #block-mailchimp-signup-newsletter-signup-form input[type="submit"] {
     background: #F09416;
     margin-left: 0;
     margin-bottom: 40px;
   }
-  /* line 765, ../sass/mobile/_forms.scss */
+  /* line 767, ../sass/mobile/_forms.scss */
   #block-mailchimp-signup-newsletter-signup-form .form-item {
     display: block;
     float: none;
     margin-bottom: 10px;
   }
-  /* line 769, ../sass/mobile/_forms.scss */
+  /* line 771, ../sass/mobile/_forms.scss */
   #block-mailchimp-signup-newsletter-signup-form .form-item label {
     font-weight: 300;
     display: none;
   }
-  /* line 774, ../sass/mobile/_forms.scss */
+  /* line 776, ../sass/mobile/_forms.scss */
   #block-mailchimp-signup-newsletter-signup-form .form-item input {
     border: 0;
     margin-bottom: 6px;
   }
-  /* line 779, ../sass/mobile/_forms.scss */
+  /* line 781, ../sass/mobile/_forms.scss */
   #block-mailchimp-signup-newsletter-signup-form .form-item input#edit-mergevars-email {
     width: 100%;
   }
-  /* line 783, ../sass/mobile/_forms.scss */
+  /* line 785, ../sass/mobile/_forms.scss */
   #block-mailchimp-signup-newsletter-signup-form .form-item input#edit-mergevars-fname {
     width: 100%;
     margin-right: 10px;
   }
-  /* line 788, ../sass/mobile/_forms.scss */
+  /* line 790, ../sass/mobile/_forms.scss */
   #block-mailchimp-signup-newsletter-signup-form .form-item input#edit-mergevars-lname {
     width: 100%;
   }
 
   /* Become a corporate sponsor contact form */
-  /* line 801, ../sass/mobile/_forms.scss */
+  /* line 803, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform {
     display: block;
     float: left;
     width: 100%;
     margin-top: 30px;
   }
-  /* line 808, ../sass/mobile/_forms.scss */
+  /* line 810, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform .form-item {
     display: inline-block;
     margin-bottom: 10px;
     float: left;
   }
-  /* line 814, ../sass/mobile/_forms.scss */
+  /* line 816, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform label {
     display: none;
   }
-  /* line 818, ../sass/mobile/_forms.scss */
+  /* line 820, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform input {
     border: 0;
     background: #E6E6E6;
@@ -11154,34 +11156,34 @@ form.comment-form #edit-preview {
     display: block;
     padding: 10px 20px;
   }
-  /* line 826, ../sass/mobile/_forms.scss */
+  /* line 828, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform div.webform-component--company {
     display: block;
     width: 100%;
   }
-  /* line 831, ../sass/mobile/_forms.scss */
+  /* line 833, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform div.webform-component--email-address {
     display: block;
     width: 100%;
   }
-  /* line 836, ../sass/mobile/_forms.scss */
+  /* line 838, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform div.webform-component--first-name {
     display: block;
     width: 100%;
     margin-right: 0;
   }
-  /* line 842, ../sass/mobile/_forms.scss */
+  /* line 844, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform div.webform-component--last-name {
     display: block;
     width: 100%;
   }
-  /* line 847, ../sass/mobile/_forms.scss */
+  /* line 849, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform div.form-textarea-wrapper {
     display: block;
     width: 100%;
     margin-bottom: 20px;
   }
-  /* line 853, ../sass/mobile/_forms.scss */
+  /* line 855, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform textarea {
     border: 0;
     background: #E6E6E6;
@@ -11190,7 +11192,7 @@ form.comment-form #edit-preview {
     padding: 10px 20px;
     height: 210px;
   }
-  /* line 862, ../sass/mobile/_forms.scss */
+  /* line 864, ../sass/mobile/_forms.scss */
   body.becomesponsor .block-webform input[type="submit"] {
     width: auto;
     background: #474F5E;
@@ -14036,7 +14038,7 @@ form.comment-form #edit-preview {
   /* Become a Volunteer */
   /* line 2276, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer #main {
-    padding-top: 50px;
+    padding-top: 0;
     padding-bottom: 6em;
   }
   /* line 2278, ../sass/mobile/_page_specific.scss */
@@ -14062,10 +14064,12 @@ form.comment-form #edit-preview {
     margin-left: -3000px;
     padding-right: 3000px;
     margin-right: -3000px;*/
-    height: 430px;
+    height: auto;
     background: #E6E6E6;
+    z-index: 1;
+    box-sizing: border-box;
   }
-  /* line 2302, ../sass/mobile/_page_specific.scss */
+  /* line 2304, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block:before {
     content: "";
     position: absolute;
@@ -14077,23 +14081,30 @@ form.comment-form #edit-preview {
     border-right: 9999px solid #E6E6E6;
     box-shadow: 9999px 0px 0px 0px #E6E6E6;
   }
-  /* line 2314, ../sass/mobile/_page_specific.scss */
+  /* line 2316, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .view-content {
-    width: 980px;
-    margin-left: -114px;
+    width: 100%;
+    margin-left: 0;
+    box-sizing: border-box;
   }
-  /* line 2319, ../sass/mobile/_page_specific.scss */
+  /* line 2322, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-team-image {
-    position: absolute;
+    position: relative;
     bottom: 0;
     margin-bottom: -4px;
+    padding-top: 2em;
   }
-  /* line 2325, ../sass/mobile/_page_specific.scss */
+  /* line 2327, ../sass/mobile/_page_specific.scss */
+  body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-team-image img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 2333, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-title {
-    margin-left: 300px;
+    margin-left: 0;
     padding-top: 50px;
   }
-  /* line 2328, ../sass/mobile/_page_specific.scss */
+  /* line 2336, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-title .views-label {
     display: block;
     font-size: 18px;
@@ -14102,7 +14113,7 @@ form.comment-form #edit-preview {
     letter-spacing: 1px;
     margin-bottom: 16px;
   }
-  /* line 2338, ../sass/mobile/_page_specific.scss */
+  /* line 2346, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-title .field-content {
     font-size: 28px;
     font-weight: 600;
@@ -14110,25 +14121,26 @@ form.comment-form #edit-preview {
     margin-bottom: 30px;
     display: block;
   }
-  /* line 2348, ../sass/mobile/_page_specific.scss */
+  /* line 2356, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-team-bio {
     font-size: 1.2em;
     line-height: 1.6em;
-    margin-left: 300px;
+    margin-left: 0;
+    padding-bottom: 2em;
   }
-  /* line 2354, ../sass/mobile/_page_specific.scss */
+  /* line 2363, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-amani-tags {
     padding: 10px 20px 0 20px;
   }
-  /* line 2356, ../sass/mobile/_page_specific.scss */
+  /* line 2365, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-amani-tags ol {
     display: block;
     position: absolute;
     bottom: 0;
     margin-bottom: -4px;
-    margin-left: 300px;
+    margin-left: 0;
   }
-  /* line 2362, ../sass/mobile/_page_specific.scss */
+  /* line 2371, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-amani-tags ol li {
     list-style-type: none;
     display: block;
@@ -14136,7 +14148,7 @@ form.comment-form #edit-preview {
     margin-right: 16px;
     margin-bottom: 4px;
   }
-  /* line 2368, ../sass/mobile/_page_specific.scss */
+  /* line 2377, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-amani-tags ol li a {
     display: inline-block;
     background: white;
@@ -14146,20 +14158,20 @@ form.comment-form #edit-preview {
     font-size: 14px;
     font-weight: normal;
   }
-  /* line 2376, ../sass/mobile/_page_specific.scss */
+  /* line 2385, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-meet_volunteer_block .views-field-field-amani-tags ol li a:before {
     content: "#";
   }
-  /* line 2385, ../sass/mobile/_page_specific.scss */
+  /* line 2394, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block {
     margin-top: -2em;
   }
-  /* line 2389, ../sass/mobile/_page_specific.scss */
+  /* line 2398, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .view-header h3 {
     font-size: 1.4em;
     letter-spacing: 1px;
   }
-  /* line 2395, ../sass/mobile/_page_specific.scss */
+  /* line 2404, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-title a {
     color: #414042;
     font-size: 1.4em;
@@ -14171,13 +14183,14 @@ form.comment-form #edit-preview {
     font-weight: 600;
     padding-left: 1em;
   }
-  /* line 2408, ../sass/mobile/_page_specific.scss */
+  /* line 2417, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-body {
     font-size: 1.2em;
     line-height: 1.6em;
     padding-left: 1em;
+    padding-bottom: 2em;
   }
-  /* line 2412, ../sass/mobile/_page_specific.scss */
+  /* line 2422, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-body a {
     color: #414042;
     width: 100%;
@@ -14185,7 +14198,7 @@ form.comment-form #edit-preview {
     height: auto;
     padding-bottom: 2em;
   }
-  /* line 2422, ../sass/mobile/_page_specific.scss */
+  /* line 2432, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block ol > li {
     list-style-type: none;
     display: block;
@@ -14198,22 +14211,22 @@ form.comment-form #edit-preview {
     position: relative;
     margin-bottom: 2em;
   }
-  /* line 2434, ../sass/mobile/_page_specific.scss */
+  /* line 2444, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block ol > li:nth-child(3) {
     margin-right: 0;
   }
-  /* line 2441, ../sass/mobile/_page_specific.scss */
+  /* line 2451, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-field-opportunity-tags {
     padding: 0 0 0 1em;
   }
-  /* line 2444, ../sass/mobile/_page_specific.scss */
+  /* line 2454, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-field-opportunity-tags ul {
     display: block;
     position: absolute;
     bottom: 0;
     margin-bottom: -4px;
   }
-  /* line 2449, ../sass/mobile/_page_specific.scss */
+  /* line 2459, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-field-opportunity-tags ul li {
     list-style-type: none;
     display: block;
@@ -14222,7 +14235,7 @@ form.comment-form #edit-preview {
     margin-bottom: 4px;
     margin-top: 4px;
   }
-  /* line 2456, ../sass/mobile/_page_specific.scss */
+  /* line 2466, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-field-opportunity-tags ul li a {
     display: inline-block;
     background: white;
@@ -14232,11 +14245,11 @@ form.comment-form #edit-preview {
     font-size: 13px;
     font-weight: normal;
   }
-  /* line 2464, ../sass/mobile/_page_specific.scss */
+  /* line 2474, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer .view-display-id-current_openings_block .views-field-field-opportunity-tags ul li a:before {
     content: "#";
   }
-  /* line 2475, ../sass/mobile/_page_specific.scss */
+  /* line 2485, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons {
     display: block;
     float: left;
@@ -14244,7 +14257,7 @@ form.comment-form #edit-preview {
     margin-bottom: 60px;
     margin-top: -10px;
   }
-  /* line 2483, ../sass/mobile/_page_specific.scss */
+  /* line 2493, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons #volunteer-general-app-link {
     display: block;
     float: left;
@@ -14259,12 +14272,12 @@ form.comment-form #edit-preview {
     height: 110px;
     text-indent: 20px;
   }
-  /* line 2496, ../sass/mobile/_page_specific.scss */
+  /* line 2506, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons #volunteer-general-app-link span {
     display: block;
     font-weight: 300;
   }
-  /* line 2500, ../sass/mobile/_page_specific.scss */
+  /* line 2510, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons #volunteer-general-app-link:after {
     content: "";
     display: block;
@@ -14276,7 +14289,7 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 2513, ../sass/mobile/_page_specific.scss */
+  /* line 2523, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons #volunteer-current-openings-link {
     display: block;
     float: left;
@@ -14291,12 +14304,12 @@ form.comment-form #edit-preview {
     text-indent: 20px;
     height: 110px;
   }
-  /* line 2526, ../sass/mobile/_page_specific.scss */
+  /* line 2536, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons #volunteer-current-openings-link span {
     display: block;
     font-weight: 300;
   }
-  /* line 2530, ../sass/mobile/_page_specific.scss */
+  /* line 2540, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomevolunteer #volunteer-landing-buttons #volunteer-current-openings-link:after {
     content: "";
     display: block;
@@ -14310,11 +14323,11 @@ form.comment-form #edit-preview {
   }
 
   /* Current Openings */
-  /* line 2551, ../sass/mobile/_page_specific.scss */
+  /* line 2561, ../sass/mobile/_page_specific.scss */
   body.page-currentopenings #main {
     padding-bottom: 6em;
   }
-  /* line 2555, ../sass/mobile/_page_specific.scss */
+  /* line 2565, ../sass/mobile/_page_specific.scss */
   body.page-currentopenings h1#page-title {
     font-weight: 600;
     font-size: 1.6em;
@@ -14323,7 +14336,7 @@ form.comment-form #edit-preview {
     letter-spacing: 1px;
     margin-bottom: 30px;
   }
-  /* line 2566, ../sass/mobile/_page_specific.scss */
+  /* line 2576, ../sass/mobile/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-title {
     margin-left: 0;
     color: #414042;
@@ -14333,14 +14346,20 @@ form.comment-form #edit-preview {
     margin-bottom: 16px;
     cursor: pointer;
   }
-  /* line 2574, ../sass/mobile/_page_specific.scss */
+  /* line 2584, ../sass/mobile/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-title .views-label {
     padding-right: 24px;
     font-size: 36px;
     display: block;
     float: left;
   }
-  /* line 2582, ../sass/mobile/_page_specific.scss */
+  /* line 2591, ../sass/mobile/_page_specific.scss */
+  body.page-currentopenings .view-display-id-current_openings_page .views-field-title .field-content {
+    display: block;
+    padding-left: 44px;
+    line-height: 1em;
+  }
+  /* line 2598, ../sass/mobile/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .current-apply-button {
     font-size: 1.1em;
     color: white;
@@ -14350,14 +14369,14 @@ form.comment-form #edit-preview {
     display: inline-block;
     margin-top: 10px;
   }
-  /* line 2592, ../sass/mobile/_page_specific.scss */
+  /* line 2608, ../sass/mobile/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-body {
     font-size: 1.2em;
     line-height: 1.6em;
     margin-left: 20px;
     margin-bottom: 10px;
   }
-  /* line 2599, ../sass/mobile/_page_specific.scss */
+  /* line 2615, ../sass/mobile/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .view-footer {
     display: block;
     float: left;
@@ -14365,7 +14384,7 @@ form.comment-form #edit-preview {
     margin-top: 80px;
     margin-bottom: 20px;
   }
-  /* line 2607, ../sass/mobile/_page_specific.scss */
+  /* line 2623, ../sass/mobile/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page #current-openings-general-application {
     display: block;
     float: left;
@@ -14379,13 +14398,14 @@ form.comment-form #edit-preview {
     padding: 20px 0 10px 0;
     text-indent: 20px;
     height: 110px;
+    margin-top: 4em;
   }
-  /* line 2620, ../sass/mobile/_page_specific.scss */
+  /* line 2637, ../sass/mobile/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page #current-openings-general-application span {
     display: block;
     font-weight: 300;
   }
-  /* line 2624, ../sass/mobile/_page_specific.scss */
+  /* line 2641, ../sass/mobile/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page #current-openings-general-application:after {
     content: "";
     display: block;
@@ -14397,7 +14417,7 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 2637, ../sass/mobile/_page_specific.scss */
+  /* line 2654, ../sass/mobile/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page #current-openings-bottom-text {
     display: block;
     float: left;
@@ -14408,18 +14428,18 @@ form.comment-form #edit-preview {
     font-size: 1.2em;
     line-height: 1.6em;
   }
-  /* line 2648, ../sass/mobile/_page_specific.scss */
+  /* line 2665, ../sass/mobile/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags {
     padding-top: 30px;
   }
-  /* line 2650, ../sass/mobile/_page_specific.scss */
+  /* line 2667, ../sass/mobile/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags ol {
     display: block;
     position: absolute;
     bottom: 0;
     margin-bottom: -4px;
   }
-  /* line 2655, ../sass/mobile/_page_specific.scss */
+  /* line 2672, ../sass/mobile/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags ol li {
     list-style-type: none;
     display: block;
@@ -14427,7 +14447,7 @@ form.comment-form #edit-preview {
     margin-right: 6px;
     margin-bottom: 4px;
   }
-  /* line 2661, ../sass/mobile/_page_specific.scss */
+  /* line 2678, ../sass/mobile/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags ol li a {
     display: inline-block;
     background: white;
@@ -14437,12 +14457,12 @@ form.comment-form #edit-preview {
     font-size: 14px;
     font-weight: normal;
   }
-  /* line 2669, ../sass/mobile/_page_specific.scss */
+  /* line 2686, ../sass/mobile/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page .views-field-field-opportunity-tags ol li a:before {
     content: "#";
     font-style: italic;
   }
-  /* line 2679, ../sass/mobile/_page_specific.scss */
+  /* line 2696, ../sass/mobile/_page_specific.scss */
   body.page-currentopenings .view-display-id-current_openings_page ol li.views-row {
     list-style-type: none;
     display: block;
@@ -14460,11 +14480,11 @@ form.comment-form #edit-preview {
   }
 
   /* Become a Corporate Sponsor */
-  /* line 2706, ../sass/mobile/_page_specific.scss */
+  /* line 2723, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor h1#page-title {
     display: none;
   }
-  /* line 2708, ../sass/mobile/_page_specific.scss */
+  /* line 2725, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #amani-globalfeatures {
     text-align: center;
     margin-top: 3em;
@@ -14472,21 +14492,21 @@ form.comment-form #edit-preview {
     table-layout: fixed;
     width: 100% !important;
   }
-  /* line 2714, ../sass/mobile/_page_specific.scss */
+  /* line 2731, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #amani-globalfeatures tr {
     width: 100%;
   }
-  /* line 2716, ../sass/mobile/_page_specific.scss */
+  /* line 2733, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #amani-globalfeatures tr td {
     width: 100%;
     vertical-align: top;
   }
-  /* line 2719, ../sass/mobile/_page_specific.scss */
+  /* line 2736, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #amani-globalfeatures tr td img {
     width: 80%;
     height: auto;
   }
-  /* line 2726, ../sass/mobile/_page_specific.scss */
+  /* line 2743, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #amani-globalfeatures tr:nth-child(even) td {
     padding-bottom: 4em;
     line-height: 1.4em;
@@ -14496,24 +14516,24 @@ form.comment-form #edit-preview {
     vertical-align: top;
     padding-top: .8em;
   }
-  /* line 2739, ../sass/mobile/_page_specific.scss */
+  /* line 2756, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .spons-opp-box.anchor-link-to-box {
     padding-top: 3em;
   }
-  /* line 2743, ../sass/mobile/_page_specific.scss */
+  /* line 2760, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .anchor-link-to-box {
     float: left !important;
     position: relative;
   }
-  /* line 2748, ../sass/mobile/_page_specific.scss */
+  /* line 2765, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .anchor-link-to-box .paragraphs-item-light-grey-text-box-with-link-to {
     padding: 0;
   }
-  /* line 2752, ../sass/mobile/_page_specific.scss */
+  /* line 2769, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .anchor-link-to-box .paragraphs-item-light-grey-text-box-with-link-to .field-type-link-field .field-item {
     position: relative;
   }
-  /* line 2754, ../sass/mobile/_page_specific.scss */
+  /* line 2771, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .anchor-link-to-box .paragraphs-item-light-grey-text-box-with-link-to .field-type-link-field .field-item a {
     width: 100%;
     display: block;
@@ -14531,31 +14551,31 @@ form.comment-form #edit-preview {
     text-indent: 0;
     box-sizing: border-box;
   }
-  /* line 2774, ../sass/mobile/_page_specific.scss */
+  /* line 2791, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .anchor-link-to-box .paragraphs-item-light-grey-text-box-with-link-to .field-name-field-image {
     margin-bottom: -5px;
   }
-  /* line 2776, ../sass/mobile/_page_specific.scss */
+  /* line 2793, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .anchor-link-to-box .paragraphs-item-light-grey-text-box-with-link-to .field-name-field-image img {
     width: 100%;
     height: auto;
   }
-  /* line 2785, ../sass/mobile/_page_specific.scss */
+  /* line 2802, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .paragraphs-item-paragraph-text-with-anchor {
     border-top: 0;
     padding-top: 0;
   }
-  /* line 2789, ../sass/mobile/_page_specific.scss */
+  /* line 2806, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .paragraphs-item-paragraph-text-with-anchor .field-name-field-image {
     float: none;
     margin-right: 0;
   }
-  /* line 2792, ../sass/mobile/_page_specific.scss */
+  /* line 2809, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .paragraphs-item-paragraph-text-with-anchor .field-name-field-image img {
     width: 100%;
     height: auto;
   }
-  /* line 2797, ../sass/mobile/_page_specific.scss */
+  /* line 2814, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .paragraphs-item-paragraph-text-with-anchor .field-name-field-header-text {
     font-weight: bold;
     text-transform: none;
@@ -14563,31 +14583,31 @@ form.comment-form #edit-preview {
     color: #474F5E;
     margin-bottom: 40px;
   }
-  /* line 2808, ../sass/mobile/_page_specific.scss */
+  /* line 2825, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #peacetalk {
     border-top: 1px solid #59C2ED;
     padding-top: 4em;
     margin-bottom: -40px;
   }
-  /* line 2812, ../sass/mobile/_page_specific.scss */
+  /* line 2829, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #peacetalk .field-name-field-image {
     float: none;
     margin-left: 0;
   }
-  /* line 2815, ../sass/mobile/_page_specific.scss */
+  /* line 2832, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #peacetalk .field-name-field-image img {
     width: 100%;
     height: auto;
   }
-  /* line 2822, ../sass/mobile/_page_specific.scss */
+  /* line 2839, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #hackathon {
     margin-top: -20px;
   }
-  /* line 2826, ../sass/mobile/_page_specific.scss */
+  /* line 2843, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #project {
     margin-top: 2em;
   }
-  /* line 2831, ../sass/mobile/_page_specific.scss */
+  /* line 2848, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .project-box:before {
     content: "Sponsorship Opportunities";
     display: block;
@@ -14600,24 +14620,24 @@ form.comment-form #edit-preview {
     margin-bottom: 40px;
     width: 300px;
   }
-  /* line 2845, ../sass/mobile/_page_specific.scss */
+  /* line 2862, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .hackathon-box {
     float: left !important;
   }
-  /* line 2847, ../sass/mobile/_page_specific.scss */
+  /* line 2864, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .hackathon-box .paragraphs-item-light-grey-text-box-with-link-to {
     padding: 0;
   }
-  /* line 2849, ../sass/mobile/_page_specific.scss */
+  /* line 2866, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor .hackathon-box .paragraphs-item-light-grey-text-box-with-link-to a {
     margin-right: 0;
   }
-  /* line 2859, ../sass/mobile/_page_specific.scss */
+  /* line 2876, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons {
     width: 100%;
     margin-top: 1em;
   }
-  /* line 2864, ../sass/mobile/_page_specific.scss */
+  /* line 2881, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #visit-sponsors-link {
     display: block;
     float: left;
@@ -14632,12 +14652,12 @@ form.comment-form #edit-preview {
     text-indent: 20px;
     height: 110px;
   }
-  /* line 2877, ../sass/mobile/_page_specific.scss */
+  /* line 2894, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #visit-sponsors-link span {
     display: block;
     font-weight: 300;
   }
-  /* line 2881, ../sass/mobile/_page_specific.scss */
+  /* line 2898, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #visit-sponsors-link:after {
     content: "";
     display: block;
@@ -14649,7 +14669,7 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 2894, ../sass/mobile/_page_specific.scss */
+  /* line 2911, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #download-sponsor-link {
     display: block;
     float: left;
@@ -14664,12 +14684,12 @@ form.comment-form #edit-preview {
     text-indent: 20px;
     height: 110px;
   }
-  /* line 2907, ../sass/mobile/_page_specific.scss */
+  /* line 2924, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #download-sponsor-link span {
     display: block;
     font-weight: 300;
   }
-  /* line 2911, ../sass/mobile/_page_specific.scss */
+  /* line 2928, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.becomesponsor #become-sponsor-buttons #download-sponsor-link:after {
     content: "";
     display: block;
@@ -14683,17 +14703,17 @@ form.comment-form #edit-preview {
   }
 
   /* Team - Node */
-  /* line 2934, ../sass/mobile/_page_specific.scss */
+  /* line 2951, ../sass/mobile/_page_specific.scss */
   body.node-type-team h1#page-title {
     display: none;
   }
-  /* line 2938, ../sass/mobile/_page_specific.scss */
+  /* line 2955, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-row {
     display: block;
     float: none;
     width: 100%;
   }
-  /* line 2940, ../sass/mobile/_page_specific.scss */
+  /* line 2957, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-team-image {
     width: 100%;
     float: none;
@@ -14701,12 +14721,12 @@ form.comment-form #edit-preview {
     margin-right: 0;
     margin-top: 0;
   }
-  /* line 2946, ../sass/mobile/_page_specific.scss */
+  /* line 2963, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-team-image img {
     width: 100%;
     height: auto;
   }
-  /* line 2952, ../sass/mobile/_page_specific.scss */
+  /* line 2969, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-title {
     font-size: 3em;
     color: #59C2ED;
@@ -14718,7 +14738,7 @@ form.comment-form #edit-preview {
     line-height: 28px;
     margin-top: .6em;
   }
-  /* line 2964, ../sass/mobile/_page_specific.scss */
+  /* line 2981, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-team-title {
     display: block;
     font-style: italic;
@@ -14727,7 +14747,7 @@ form.comment-form #edit-preview {
     width: 100%;
     float: none;
   }
-  /* line 2973, ../sass/mobile/_page_specific.scss */
+  /* line 2990, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-team-bio {
     display: block;
     font-size: 1.1em;
@@ -14739,23 +14759,23 @@ form.comment-form #edit-preview {
     margin-top: 2em;
     float: none;
   }
-  /* line 2986, ../sass/mobile/_page_specific.scss */
+  /* line 3003, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-email {
     display: block;
     float: none;
     width: 100%;
   }
-  /* line 2990, ../sass/mobile/_page_specific.scss */
+  /* line 3007, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-email a {
     color: #414042;
   }
-  /* line 2993, ../sass/mobile/_page_specific.scss */
+  /* line 3010, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-email span.views-label {
     display: block;
     float: none;
     padding-right: 8px;
   }
-  /* line 3000, ../sass/mobile/_page_specific.scss */
+  /* line 3017, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-nothing {
     display: block;
     float: none;
@@ -14763,90 +14783,90 @@ form.comment-form #edit-preview {
     margin-bottom: 10px;
     font-weight: 600;
   }
-  /* line 3008, ../sass/mobile/_page_specific.scss */
+  /* line 3025, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-facebook-link {
     display: block;
     float: none;
     width: 100%;
   }
-  /* line 3012, ../sass/mobile/_page_specific.scss */
+  /* line 3029, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-facebook-link a {
     color: #414042;
   }
-  /* line 3015, ../sass/mobile/_page_specific.scss */
+  /* line 3032, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-facebook-link span.views-label {
     display: block;
     float: none;
     padding-right: 8px;
   }
-  /* line 3022, ../sass/mobile/_page_specific.scss */
+  /* line 3039, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-twitter-link {
     display: block;
     float: none;
     width: 100%;
   }
-  /* line 3026, ../sass/mobile/_page_specific.scss */
+  /* line 3043, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-twitter-link a {
     color: #414042;
   }
-  /* line 3029, ../sass/mobile/_page_specific.scss */
+  /* line 3046, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-twitter-link span.views-label {
     display: block;
     float: none;
     padding-right: 8px;
   }
-  /* line 3036, ../sass/mobile/_page_specific.scss */
+  /* line 3053, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-github-link {
     display: block;
     float: none;
     width: 100%;
   }
-  /* line 3040, ../sass/mobile/_page_specific.scss */
+  /* line 3057, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-github-link a {
     color: #414042;
   }
-  /* line 3043, ../sass/mobile/_page_specific.scss */
+  /* line 3060, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-github-link span.views-label {
     display: block;
     float: none;
     padding-right: 8px;
   }
-  /* line 3050, ../sass/mobile/_page_specific.scss */
+  /* line 3067, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-linkedin-link {
     display: block;
     float: none;
     width: 100%;
   }
-  /* line 3054, ../sass/mobile/_page_specific.scss */
+  /* line 3071, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-linkedin-link a {
     color: #414042;
   }
-  /* line 3057, ../sass/mobile/_page_specific.scss */
+  /* line 3074, ../sass/mobile/_page_specific.scss */
   body.node-type-team .view-peace-geeks-team.view-display-id-team_node_override .views-field-field-linkedin-link span.views-label {
     display: block;
     float: none;
     padding-right: 8px;
   }
-  /* line 3066, ../sass/mobile/_page_specific.scss */
+  /* line 3083, ../sass/mobile/_page_specific.scss */
   body.node-type-team #content {
     min-height: 700px !important;
     padding-bottom: 6em;
   }
 
   /* Where We Work */
-  /* line 3081, ../sass/mobile/_page_specific.scss */
+  /* line 3098, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .paragraphs-item-paragraph-text-with-header-text .field-name-field-large-header-text {
     margin-bottom: 20px;
   }
-  /* line 3083, ../sass/mobile/_page_specific.scss */
+  /* line 3100, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .paragraphs-item-paragraph-text-with-header-text .field-name-field-large-header-text:nth-child(2) {
     margin-top: 1em;
   }
-  /* line 3089, ../sass/mobile/_page_specific.scss */
+  /* line 3106, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework h1#page-title {
     display: none;
   }
-  /* line 3091, ../sass/mobile/_page_specific.scss */
+  /* line 3108, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework #partner-apply {
     display: block;
     float: left;
@@ -14861,7 +14881,7 @@ form.comment-form #edit-preview {
     text-indent: 1em;
     height: 90px;
   }
-  /* line 3104, ../sass/mobile/_page_specific.scss */
+  /* line 3121, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework #partner-apply:after {
     content: "";
     display: block;
@@ -14873,20 +14893,20 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 3115, ../sass/mobile/_page_specific.scss */
+  /* line 3132, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework #partner-apply span {
     display: block;
     margin-top: 4px;
     font-weight: 300;
   }
-  /* line 3122, ../sass/mobile/_page_specific.scss */
+  /* line 3139, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .paragraphs-item-add-a-view {
     display: block;
     width: 100%;
     float: left;
     margin-top: -20px;
   }
-  /* line 3127, ../sass/mobile/_page_specific.scss */
+  /* line 3144, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .paragraphs-item-add-a-view .field-name-field-view-title-text {
     font-size: 1.4em;
     text-transform: uppercase;
@@ -14895,13 +14915,13 @@ form.comment-form #edit-preview {
     font-weight: 600;
     margin-bottom: 16px;
   }
-  /* line 3137, ../sass/mobile/_page_specific.scss */
+  /* line 3154, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-region_country_name_blocks {
     display: block;
     float: left;
     width: 100%;
   }
-  /* line 3142, ../sass/mobile/_page_specific.scss */
+  /* line 3159, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-region_country_name_blocks h3 {
     font-size: 1.2em;
     text-transform: uppercase;
@@ -14910,13 +14930,13 @@ form.comment-form #edit-preview {
     font-weight: 600;
     margin-bottom: 14px;
   }
-  /* line 3152, ../sass/mobile/_page_specific.scss */
+  /* line 3169, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-region_country_name_blocks ul li {
     list-style-type: none;
     font-size: 1.1em;
     margin-bottom: 10px;
   }
-  /* line 3159, ../sass/mobile/_page_specific.scss */
+  /* line 3176, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-region_country_name_blocks .view-content .item-list {
     display: block;
     float: left;
@@ -14926,11 +14946,11 @@ form.comment-form #edit-preview {
     padding: 0 0 0 20px;
     margin-bottom: 20px;
   }
-  /* line 3167, ../sass/mobile/_page_specific.scss */
+  /* line 3184, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-region_country_name_blocks .view-content .item-list:nth-child(even) {
     margin-right: 0;
   }
-  /* line 3175, ../sass/mobile/_page_specific.scss */
+  /* line 3192, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-country_image_cards .views-row {
     position: relative;
     display: block;
@@ -14939,11 +14959,11 @@ form.comment-form #edit-preview {
     width: 100%;
     margin-bottom: 1em;
   }
-  /* line 3182, ../sass/mobile/_page_specific.scss */
+  /* line 3199, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-country_image_cards .views-row.views-row-last {
     margin-right: 0;
   }
-  /* line 3185, ../sass/mobile/_page_specific.scss */
+  /* line 3202, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-country_image_cards .views-row .views-field-title {
     position: absolute;
     display: block;
@@ -14958,18 +14978,18 @@ form.comment-form #edit-preview {
     padding: 0 20px;
     z-index: 300;
   }
-  /* line 3199, ../sass/mobile/_page_specific.scss */
+  /* line 3216, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-country_image_cards .views-row .views-field-field-image {
     position: relative;
     float: left;
     width: 100%;
   }
-  /* line 3203, ../sass/mobile/_page_specific.scss */
+  /* line 3220, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-country_image_cards .views-row .views-field-field-image img {
     width: 100%;
     height: auto;
   }
-  /* line 3207, ../sass/mobile/_page_specific.scss */
+  /* line 3224, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.wherewework .view-display-id-country_image_cards .views-row .views-field-field-image:before {
     content: "";
     display: block;
@@ -14986,15 +15006,15 @@ form.comment-form #edit-preview {
   }
 
   /* Products pages */
-  /* line 3236, ../sass/mobile/_page_specific.scss */
+  /* line 3253, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts #main {
     padding-bottom: 0;
   }
-  /* line 3240, ../sass/mobile/_page_specific.scss */
+  /* line 3257, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts #learn-more-partnership {
     display: none;
   }
-  /* line 3244, ../sass/mobile/_page_specific.scss */
+  /* line 3261, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .view-display-id-random_partner_quotes {
     display: block;
     float: left;
@@ -15008,7 +15028,7 @@ form.comment-form #edit-preview {
     margin-top: 3em;
     z-index: 1;
   }
-  /* line 3257, ../sass/mobile/_page_specific.scss */
+  /* line 3274, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .view-display-id-random_partner_quotes:before {
     content: "";
     position: absolute;
@@ -15020,19 +15040,19 @@ form.comment-form #edit-preview {
     border-right: 9999px solid #E6E6E6;
     box-shadow: 9999px 0px 0px 0px #E6E6E6;
   }
-  /* line 3270, ../sass/mobile/_page_specific.scss */
+  /* line 3287, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts #proj-testimonial-author {
     font-size: 16px;
     color: #9a9a9a;
     font-style: italic;
     text-align: right;
   }
-  /* line 3277, ../sass/mobile/_page_specific.scss */
+  /* line 3294, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .paragraphs-item-link-block-blue a {
     width: 100%;
     height: 120px;
   }
-  /* line 3280, ../sass/mobile/_page_specific.scss */
+  /* line 3297, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .paragraphs-item-link-block-blue a:after {
     content: "";
     display: block;
@@ -15044,20 +15064,20 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 3293, ../sass/mobile/_page_specific.scss */
+  /* line 3310, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .amani-text {
     margin-top: 0 !important;
     display: block;
     width: 100%;
     margin-right: 0;
   }
-  /* line 3298, ../sass/mobile/_page_specific.scss */
+  /* line 3315, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .amani-text p {
     font-size: 1.3em;
     line-height: 1.5em;
     font-weight: 300;
   }
-  /* line 3305, ../sass/mobile/_page_specific.scss */
+  /* line 3322, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .service-text {
     margin-top: 0 !important;
     display: block;
@@ -15065,13 +15085,13 @@ form.comment-form #edit-preview {
     margin-right: 0;
     margin-left: 0;
   }
-  /* line 3311, ../sass/mobile/_page_specific.scss */
+  /* line 3328, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .service-text p {
     font-size: 1.3em;
     line-height: 1.5em;
     font-weight: 300;
   }
-  /* line 3318, ../sass/mobile/_page_specific.scss */
+  /* line 3335, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .views-field-field-proj-partners-testimonial {
     display: block;
     float: left;
@@ -15081,7 +15101,7 @@ form.comment-form #edit-preview {
     padding-top: 3em;
     padding-bottom: 8em;
   }
-  /* line 3328, ../sass/mobile/_page_specific.scss */
+  /* line 3345, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .views-field-field-proj-partners-testimonial:before {
     content: "“";
     font-size: 5em;
@@ -15092,7 +15112,7 @@ form.comment-form #edit-preview {
     margin-bottom: 16px;
     margin-top: 30px;
   }
-  /* line 3338, ../sass/mobile/_page_specific.scss */
+  /* line 3355, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .views-field-field-proj-partners-testimonial .field-content p {
     font-size: 2.2em;
     color: #59C2ED;
@@ -15101,38 +15121,38 @@ form.comment-form #edit-preview {
     font-weight: 300;
     float: left;
   }
-  /* line 3345, ../sass/mobile/_page_specific.scss */
+  /* line 3362, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.ourproducts .views-field-field-proj-partners-testimonial .field-content p:after {
     content: "”";
     display: inline;
   }
 
   /* Partners overview */
-  /* line 3360, ../sass/mobile/_page_specific.scss */
+  /* line 3377, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.partnersmain .paragraphs-item-callout-box-full-width-grey {
     height: auto;
     position: relative;
   }
-  /* line 3364, ../sass/mobile/_page_specific.scss */
+  /* line 3381, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.partnersmain .paragraphs-item-callout-box-full-width-grey .field-item div div {
     width: 100% !important;
   }
 
   /* Services page */
-  /* line 3375, ../sass/mobile/_page_specific.scss */
+  /* line 3392, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.servicespage .paragraphs-item-light-grey-text-box {
     height: auto;
     width: 100%;
   }
-  /* line 3379, ../sass/mobile/_page_specific.scss */
+  /* line 3396, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.servicespage .paragraphs-item-light-grey-text-box .field-name-field-box-title {
     line-height: 1em;
   }
-  /* line 3384, ../sass/mobile/_page_specific.scss */
+  /* line 3401, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.servicespage .paragraphs-item-link-block-blue {
     margin-top: 3em;
   }
-  /* line 3386, ../sass/mobile/_page_specific.scss */
+  /* line 3403, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.servicespage .paragraphs-item-link-block-blue a:after {
     content: "";
     display: block;
@@ -15144,11 +15164,11 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 3399, ../sass/mobile/_page_specific.scss */
+  /* line 3416, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.servicespage .paragraphs-item-link-block-grey {
     margin-top: 3em;
   }
-  /* line 3401, ../sass/mobile/_page_specific.scss */
+  /* line 3418, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.servicespage .paragraphs-item-link-block-grey a:after {
     content: "";
     display: block;
@@ -15162,15 +15182,15 @@ form.comment-form #edit-preview {
   }
 
   /* FAQ */
-  /* line 3421, ../sass/mobile/_page_specific.scss */
+  /* line 3438, ../sass/mobile/_page_specific.scss */
   body.page-faq #main {
     padding-bottom: 4em;
   }
-  /* line 3425, ../sass/mobile/_page_specific.scss */
+  /* line 3442, ../sass/mobile/_page_specific.scss */
   body.page-faq h3 {
     margin-bottom: 2em;
   }
-  /* line 3429, ../sass/mobile/_page_specific.scss */
+  /* line 3446, ../sass/mobile/_page_specific.scss */
   body.page-faq h1#page-title {
     font-weight: 300;
     font-size: 3em;
@@ -15181,7 +15201,7 @@ form.comment-form #edit-preview {
     margin-bottom: 1.6em;
     color: #59C2ED;
   }
-  /* line 3442, ../sass/mobile/_page_specific.scss */
+  /* line 3459, ../sass/mobile/_page_specific.scss */
   body.page-faq .view-display-id-faq_page .views-field-title {
     color: #414042;
     font-weight: 600;
@@ -15191,7 +15211,7 @@ form.comment-form #edit-preview {
     line-height: 1.6em;
     cursor: pointer;
   }
-  /* line 3450, ../sass/mobile/_page_specific.scss */
+  /* line 3467, ../sass/mobile/_page_specific.scss */
   body.page-faq .view-display-id-faq_page .views-field-title .views-label {
     padding-right: 10px;
     font-size: 1.8em;
@@ -15199,7 +15219,7 @@ form.comment-form #edit-preview {
     float: right;
     font-weight: 600;
   }
-  /* line 3461, ../sass/mobile/_page_specific.scss */
+  /* line 3478, ../sass/mobile/_page_specific.scss */
   body.page-faq .view-display-id-faq_page ol li.views-row {
     list-style-type: none;
     display: block;
@@ -15210,12 +15230,12 @@ form.comment-form #edit-preview {
     margin-bottom: 1.4em;
     padding: 40px 20px 20px 20px;
   }
-  /* line 3470, ../sass/mobile/_page_specific.scss */
+  /* line 3487, ../sass/mobile/_page_specific.scss */
   body.page-faq .view-display-id-faq_page ol li.views-row.views-row-last {
     margin-bottom: 6em;
   }
 
-  /* line 3481, ../sass/mobile/_page_specific.scss */
+  /* line 3498, ../sass/mobile/_page_specific.scss */
   .large-blue-text {
     color: #59C2ED;
     line-height: 1.4em;
@@ -15225,11 +15245,11 @@ form.comment-form #edit-preview {
   }
 
   /* Products - Amani */
-  /* line 3494, ../sass/mobile/_page_specific.scss */
+  /* line 3511, ../sass/mobile/_page_specific.scss */
   body.products-amani #main {
     padding-bottom: 6em;
   }
-  /* line 3496, ../sass/mobile/_page_specific.scss */
+  /* line 3513, ../sass/mobile/_page_specific.scss */
   body.products-amani #amani-globalfeatures {
     text-align: center;
     margin-top: 3em;
@@ -15237,21 +15257,21 @@ form.comment-form #edit-preview {
     table-layout: fixed;
     width: 100% !important;
   }
-  /* line 3502, ../sass/mobile/_page_specific.scss */
+  /* line 3519, ../sass/mobile/_page_specific.scss */
   body.products-amani #amani-globalfeatures tr {
     width: 100%;
   }
-  /* line 3504, ../sass/mobile/_page_specific.scss */
+  /* line 3521, ../sass/mobile/_page_specific.scss */
   body.products-amani #amani-globalfeatures tr td {
     width: 100%;
     vertical-align: top;
   }
-  /* line 3507, ../sass/mobile/_page_specific.scss */
+  /* line 3524, ../sass/mobile/_page_specific.scss */
   body.products-amani #amani-globalfeatures tr td img {
     width: 80%;
     height: auto;
   }
-  /* line 3514, ../sass/mobile/_page_specific.scss */
+  /* line 3531, ../sass/mobile/_page_specific.scss */
   body.products-amani #amani-globalfeatures tr:nth-child(even) td {
     padding-bottom: 4em;
     line-height: 1.4em;
@@ -15261,18 +15281,18 @@ form.comment-form #edit-preview {
     vertical-align: top;
     padding-top: .8em;
   }
-  /* line 3527, ../sass/mobile/_page_specific.scss */
+  /* line 3544, ../sass/mobile/_page_specific.scss */
   body.products-amani .product-features-highlight-box {
     margin-bottom: 4em !important;
     clear: both;
   }
-  /* line 3532, ../sass/mobile/_page_specific.scss */
+  /* line 3549, ../sass/mobile/_page_specific.scss */
   body.products-amani .product-features-highlight-box .paragraphs-item-paragraph-text-with-header-text {
     padding-top: 3em;
     padding-bottom: 2em;
     z-index: 1;
   }
-  /* line 3538, ../sass/mobile/_page_specific.scss */
+  /* line 3555, ../sass/mobile/_page_specific.scss */
   body.products-amani .product-features-highlight-box .paragraphs-item-paragraph-text-with-header-text:before {
     content: "";
     position: absolute;
@@ -15284,21 +15304,21 @@ form.comment-form #edit-preview {
     border-right: 9999px solid #E6E6E6;
     box-shadow: 9999px 0px 0px 0px #E6E6E6;
   }
-  /* line 3554, ../sass/mobile/_page_specific.scss */
+  /* line 3571, ../sass/mobile/_page_specific.scss */
   body.products-amani .amani-product-page-bottom {
     display: block;
     width: 100%;
     margin-top: 5em !important;
     clear: both;
   }
-  /* line 3561, ../sass/mobile/_page_specific.scss */
+  /* line 3578, ../sass/mobile/_page_specific.scss */
   body.products-amani #example-amani-site {
     border: 1px solid #ccc;
     margin-bottom: -2em;
     width: 100% !important;
     height: auto !important;
   }
-  /* line 3568, ../sass/mobile/_page_specific.scss */
+  /* line 3585, ../sass/mobile/_page_specific.scss */
   body.products-amani .feature-grey-full-bg-box {
     padding-left: 3000px;
     padding-right: 3000px;
@@ -15309,26 +15329,26 @@ form.comment-form #edit-preview {
     padding-bottom: 2em;
     margin-bottom: 3em !important;
   }
-  /* line 3580, ../sass/mobile/_page_specific.scss */
+  /* line 3597, ../sass/mobile/_page_specific.scss */
   body.products-amani .image-float-left .field-name-field-images {
     float: none;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
   }
-  /* line 3588, ../sass/mobile/_page_specific.scss */
+  /* line 3605, ../sass/mobile/_page_specific.scss */
   body.products-amani #page-bottom-buttons {
     display: block;
     float: left;
     width: 100%;
   }
-  /* line 3594, ../sass/mobile/_page_specific.scss */
+  /* line 3611, ../sass/mobile/_page_specific.scss */
   body.products-amani .products-footer {
     display: block;
     float: left;
     width: 100%;
   }
-  /* line 3600, ../sass/mobile/_page_specific.scss */
+  /* line 3617, ../sass/mobile/_page_specific.scss */
   body.products-amani a#apply-today-button {
     display: block;
     float: left;
@@ -15344,13 +15364,13 @@ form.comment-form #edit-preview {
     margin-bottom: 4px;
     margin-top: 20px;
   }
-  /* line 3614, ../sass/mobile/_page_specific.scss */
+  /* line 3631, ../sass/mobile/_page_specific.scss */
   body.products-amani a#apply-today-button span {
     font-weight: 300;
     display: block;
     padding-top: 4px;
   }
-  /* line 3619, ../sass/mobile/_page_specific.scss */
+  /* line 3636, ../sass/mobile/_page_specific.scss */
   body.products-amani a#apply-today-button:after {
     content: "";
     display: block;
@@ -15362,7 +15382,7 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 3632, ../sass/mobile/_page_specific.scss */
+  /* line 3649, ../sass/mobile/_page_specific.scss */
   body.products-amani a#faq-button {
     display: block;
     float: left;
@@ -15378,7 +15398,7 @@ form.comment-form #edit-preview {
     margin-bottom: 4px;
     margin-top: 20px;
   }
-  /* line 3646, ../sass/mobile/_page_specific.scss */
+  /* line 3663, ../sass/mobile/_page_specific.scss */
   body.products-amani a#faq-button:after {
     content: "";
     display: block;
@@ -15390,7 +15410,7 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/right-arrow.png) top left no-repeat;
   }
-  /* line 3660, ../sass/mobile/_page_specific.scss */
+  /* line 3677, ../sass/mobile/_page_specific.scss */
   body.products-amani a#documentation-button {
     display: block;
     float: left;
@@ -15406,7 +15426,7 @@ form.comment-form #edit-preview {
     margin-bottom: 4px;
     margin-top: 20px;
   }
-  /* line 3674, ../sass/mobile/_page_specific.scss */
+  /* line 3691, ../sass/mobile/_page_specific.scss */
   body.products-amani a#documentation-button:after {
     content: "";
     display: block;
@@ -15420,7 +15440,7 @@ form.comment-form #edit-preview {
   }
 
   /* FAQ Page */
-  /* line 3695, ../sass/mobile/_page_specific.scss */
+  /* line 3712, ../sass/mobile/_page_specific.scss */
   body.page-faq h3 {
     color: #F09416;
     text-transform: uppercase;
@@ -15430,43 +15450,43 @@ form.comment-form #edit-preview {
   }
 
   /* Other Ways to Give page */
-  /* line 3710, ../sass/mobile/_page_specific.scss */
+  /* line 3727, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive #main {
     padding-top: 50px;
   }
-  /* line 3712, ../sass/mobile/_page_specific.scss */
+  /* line 3729, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .paragraphs-items-field-paragraphs {
     margin-top: 0;
   }
-  /* line 3716, ../sass/mobile/_page_specific.scss */
+  /* line 3733, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-top-box {
     margin-top: 0 !important;
   }
-  /* line 3720, ../sass/mobile/_page_specific.scss */
+  /* line 3737, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item-first {
     padding-top: 30px;
     border-top: 1px solid #9a9a9a;
     border-bottom: 1px solid #9a9a9a;
     padding-bottom: 20px;
   }
-  /* line 3727, ../sass/mobile/_page_specific.scss */
+  /* line 3744, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item {
     width: 100%;
     position: relative;
     border-bottom: 1px solid #9a9a9a;
     padding-bottom: 20px;
   }
-  /* line 3736, ../sass/mobile/_page_specific.scss */
+  /* line 3753, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item.other-ways-question .field-name-field-header-text {
     text-transform: none;
   }
-  /* line 3741, ../sass/mobile/_page_specific.scss */
+  /* line 3758, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item .field-name-field-header-text {
     cursor: pointer;
     position: relative;
     width: 100%;
   }
-  /* line 3745, ../sass/mobile/_page_specific.scss */
+  /* line 3762, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-item .field-name-field-header-text:after {
     content: "";
     display: block;
@@ -15478,18 +15498,18 @@ form.comment-form #edit-preview {
     height: 24px;
     background: url(../images/icons/grey-arrow-down.png) top left no-repeat;
   }
-  /* line 3760, ../sass/mobile/_page_specific.scss */
+  /* line 3777, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-question-first {
     padding-top: 30px;
     border-top: 1px solid #9a9a9a;
   }
-  /* line 3765, ../sass/mobile/_page_specific.scss */
+  /* line 3782, ../sass/mobile/_page_specific.scss */
   body.node-type-structure.otherwaystogive .other-ways-questions-header {
     margin-bottom: -30px !important;
     margin-top: 40px !important;
   }
 
-  /* line 3776, ../sass/mobile/_page_specific.scss */
+  /* line 3793, ../sass/mobile/_page_specific.scss */
   body.donatepage h1#page-title {
     display: none;
   }
