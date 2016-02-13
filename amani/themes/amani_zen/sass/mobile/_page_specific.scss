@@ -1114,6 +1114,10 @@
 	
 		.paragraphs-item-callout-box-full-width-grey {
 			padding-bottom:10em;
+			
+			.content .field-name-field-paragraph-text .field-items .field-item > div {
+				position:initial !important;
+			}
 		}
 	
 		#hacky-id {
@@ -1125,10 +1129,10 @@
 			
 			display:block;
 			float:left;
-			position:relative;
-			top:1em;
-			right: 0;
-			height:213px;
+			position:absolute;
+			bottom:0;
+			left: 0;
+			height:auto;
 			width:100%;
 					
 			.field-name-field-header-text {
@@ -1162,14 +1166,16 @@
 				
 				content:"";
 				display:block;
-				float:right;
-				position:relative;
-				margin-top:202px;
+				float:none;
+				position:absolute;
+				margin-top:0;
 				padding-right:30px;
-				margin-left:-30px;
+				margin-left:0;
+				right:10px;
+				bottom:20px;
 				width:12px;
 				height:24px;
-				background:url(../images/icons/right-arrow.png) top left no-repeat;
+				background:url(../images/icons/right-arrow.png) top right no-repeat;
 			
 			}
 		}
@@ -3334,7 +3340,12 @@
 	body.node-type-structure.partnersmain {
 		
 		.paragraphs-item-callout-box-full-width-grey {
-			height:330px;
+			height:auto;
+			position:relative;
+			
+			.field-item div div {
+				width:100% !important;
+			}
 		}
 		
 	}
@@ -3504,6 +3515,7 @@
 				
 				padding-top:3em;
 				padding-bottom:2em;
+				z-index:1;
 			
 				&:before {
 					content: "";
