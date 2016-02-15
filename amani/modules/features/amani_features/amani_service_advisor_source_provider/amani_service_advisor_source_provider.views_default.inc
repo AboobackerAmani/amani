@@ -281,7 +281,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = 'locationName';
+  $handler->display->display_options['fields']['title']['label'] = 'region';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   /* Field: Content: Title */
@@ -289,20 +289,56 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['title_2']['table'] = 'node';
   $handler->display->display_options['fields']['title_2']['field'] = 'title';
   $handler->display->display_options['fields']['title_2']['relationship'] = 'og_membership_related_node_group';
-  $handler->display->display_options['fields']['title_2']['label'] = 'partnerName';
-  /* Field: Content: Availability Day */
-  $handler->display->display_options['fields']['field_service_location_days']['id'] = 'field_service_location_days';
-  $handler->display->display_options['fields']['field_service_location_days']['table'] = 'field_data_field_service_location_days';
-  $handler->display->display_options['fields']['field_service_location_days']['field'] = 'field_service_location_days';
-  $handler->display->display_options['fields']['field_service_location_days']['label'] = 'Days available';
-  $handler->display->display_options['fields']['field_service_location_days']['settings'] = array(
-    'link' => 0,
+  $handler->display->display_options['fields']['title_2']['label'] = 'organization';
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['relationship'] = 'parent';
+  $handler->display->display_options['fields']['name']['label'] = 'category';
+  /* Field: Content: Category */
+  $handler->display->display_options['fields']['field_service_category']['id'] = 'field_service_category';
+  $handler->display->display_options['fields']['field_service_category']['table'] = 'field_data_field_service_category';
+  $handler->display->display_options['fields']['field_service_category']['field'] = 'field_service_category';
+  $handler->display->display_options['fields']['field_service_category']['relationship'] = 'field_service_location_service_target_id';
+  $handler->display->display_options['fields']['field_service_category']['label'] = 'subCategory';
+  /* Field: Content: Start Date */
+  $handler->display->display_options['fields']['field_service_start_date']['id'] = 'field_service_start_date';
+  $handler->display->display_options['fields']['field_service_start_date']['table'] = 'field_data_field_service_start_date';
+  $handler->display->display_options['fields']['field_service_start_date']['field'] = 'field_service_start_date';
+  $handler->display->display_options['fields']['field_service_start_date']['label'] = 'startDate';
+  $handler->display->display_options['fields']['field_service_start_date']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
   );
+  /* Field: Content: End Date */
+  $handler->display->display_options['fields']['field_service_end_date']['id'] = 'field_service_end_date';
+  $handler->display->display_options['fields']['field_service_end_date']['table'] = 'field_data_field_service_end_date';
+  $handler->display->display_options['fields']['field_service_end_date']['field'] = 'field_service_end_date';
+  $handler->display->display_options['fields']['field_service_end_date']['label'] = 'endDate';
+  $handler->display->display_options['fields']['field_service_end_date']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
+  $handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name_1']['field'] = 'name';
+  $handler->display->display_options['fields']['name_1']['relationship'] = 'field_service_category_tid';
+  $handler->display->display_options['fields']['name_1']['label'] = 'servicesProvided';
   /* Field: Content: Service Location */
   $handler->display->display_options['fields']['field_service_location']['id'] = 'field_service_location';
   $handler->display->display_options['fields']['field_service_location']['table'] = 'field_data_field_service_location';
   $handler->display->display_options['fields']['field_service_location']['field'] = 'field_service_location';
-  $handler->display->display_options['fields']['field_service_location']['label'] = 'geometry';
+  $handler->display->display_options['fields']['field_service_location']['label'] = 'location:geometry';
   $handler->display->display_options['fields']['field_service_location']['click_sort_column'] = 'geom';
   $handler->display->display_options['fields']['field_service_location']['type'] = 'geofield_geojson';
   $handler->display->display_options['fields']['field_service_location']['settings'] = array(
@@ -312,7 +348,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_location_hour_open']['id'] = 'field_service_location_hour_open';
   $handler->display->display_options['fields']['field_service_location_hour_open']['table'] = 'field_data_field_service_location_hour_open';
   $handler->display->display_options['fields']['field_service_location_hour_open']['field'] = 'field_service_location_hour_open';
-  $handler->display->display_options['fields']['field_service_location_hour_open']['label'] = 'openAt';
+  $handler->display->display_options['fields']['field_service_location_hour_open']['label'] = 'hours:openAt';
   $handler->display->display_options['fields']['field_service_location_hour_open']['settings'] = array(
     'link' => 0,
   );
@@ -320,7 +356,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_location_hour_clos']['id'] = 'field_service_location_hour_clos';
   $handler->display->display_options['fields']['field_service_location_hour_clos']['table'] = 'field_data_field_service_location_hour_clos';
   $handler->display->display_options['fields']['field_service_location_hour_clos']['field'] = 'field_service_location_hour_clos';
-  $handler->display->display_options['fields']['field_service_location_hour_clos']['label'] = 'closedAt';
+  $handler->display->display_options['fields']['field_service_location_hour_clos']['label'] = 'hours:closedAt';
   $handler->display->display_options['fields']['field_service_location_hour_clos']['settings'] = array(
     'link' => 0,
   );
@@ -330,51 +366,12 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['title_1']['field'] = 'title';
   $handler->display->display_options['fields']['title_1']['relationship'] = 'field_service_location_service_target_id';
   $handler->display->display_options['fields']['title_1']['label'] = 'serviceName';
-  /* Field: Content: Category */
-  $handler->display->display_options['fields']['field_service_category']['id'] = 'field_service_category';
-  $handler->display->display_options['fields']['field_service_category']['table'] = 'field_data_field_service_category';
-  $handler->display->display_options['fields']['field_service_category']['field'] = 'field_service_category';
-  $handler->display->display_options['fields']['field_service_category']['relationship'] = 'field_service_location_service_target_id';
-  $handler->display->display_options['fields']['field_service_category']['label'] = 'activityCategory';
-  /* Field: Taxonomy term: Name */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['relationship'] = 'parent';
-  $handler->display->display_options['fields']['name']['label'] = 'activityCategory';
-  /* Field: Taxonomy term: Name */
-  $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
-  $handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['name_1']['field'] = 'name';
-  $handler->display->display_options['fields']['name_1']['relationship'] = 'field_service_category_tid';
-  $handler->display->display_options['fields']['name_1']['label'] = 'activityName';
-  /* Field: Content: Coverage */
-  $handler->display->display_options['fields']['field_service_coverage']['id'] = 'field_service_coverage';
-  $handler->display->display_options['fields']['field_service_coverage']['table'] = 'field_data_field_service_coverage';
-  $handler->display->display_options['fields']['field_service_coverage']['field'] = 'field_service_coverage';
-  $handler->display->display_options['fields']['field_service_coverage']['settings'] = array(
-    'link' => 0,
-  );
   /* Field: Content: Nationality */
   $handler->display->display_options['fields']['field_service_nationality']['id'] = 'field_service_nationality';
   $handler->display->display_options['fields']['field_service_nationality']['table'] = 'field_data_field_service_nationality';
   $handler->display->display_options['fields']['field_service_nationality']['field'] = 'field_service_nationality';
+  $handler->display->display_options['fields']['field_service_nationality']['label'] = 'details:Nationality';
   $handler->display->display_options['fields']['field_service_nationality']['settings'] = array(
-    'link' => 0,
-  );
-  /* Field: Content: Availability Day */
-  $handler->display->display_options['fields']['field_service_location_days_1']['id'] = 'field_service_location_days_1';
-  $handler->display->display_options['fields']['field_service_location_days_1']['table'] = 'field_data_field_service_location_days';
-  $handler->display->display_options['fields']['field_service_location_days_1']['field'] = 'field_service_location_days';
-  $handler->display->display_options['fields']['field_service_location_days_1']['settings'] = array(
-    'link' => 0,
-  );
-  /* Field: Content: Service Availability */
-  $handler->display->display_options['fields']['field_service_availability']['id'] = 'field_service_availability';
-  $handler->display->display_options['fields']['field_service_availability']['table'] = 'field_data_field_service_availability';
-  $handler->display->display_options['fields']['field_service_availability']['field'] = 'field_service_availability';
-  $handler->display->display_options['fields']['field_service_availability']['label'] = 'Availability';
-  $handler->display->display_options['fields']['field_service_availability']['settings'] = array(
     'link' => 0,
   );
   /* Field: Content: Service Intake Criteria */
@@ -382,19 +379,46 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_intake_criteria']['table'] = 'field_data_field_service_intake_criteria';
   $handler->display->display_options['fields']['field_service_intake_criteria']['field'] = 'field_service_intake_criteria';
   $handler->display->display_options['fields']['field_service_intake_criteria']['relationship'] = 'field_service_location_service_target_id';
-  $handler->display->display_options['fields']['field_service_intake_criteria']['label'] = 'Intake Criteria';
+  $handler->display->display_options['fields']['field_service_intake_criteria']['label'] = 'details:Intake Criteria';
   $handler->display->display_options['fields']['field_service_intake_criteria']['delta_offset'] = '0';
-  /* Field: Content: Service Registration type */
-  $handler->display->display_options['fields']['field_service_registration_type']['id'] = 'field_service_registration_type';
-  $handler->display->display_options['fields']['field_service_registration_type']['table'] = 'field_data_field_service_registration_type';
-  $handler->display->display_options['fields']['field_service_registration_type']['field'] = 'field_service_registration_type';
-  $handler->display->display_options['fields']['field_service_registration_type']['relationship'] = 'field_service_location_service_target_id';
-  $handler->display->display_options['fields']['field_service_registration_type']['delta_offset'] = '0';
+  /* Field: Content: Accessibility */
+  $handler->display->display_options['fields']['field_service_accessibility']['id'] = 'field_service_accessibility';
+  $handler->display->display_options['fields']['field_service_accessibility']['table'] = 'field_data_field_service_accessibility';
+  $handler->display->display_options['fields']['field_service_accessibility']['field'] = 'field_service_accessibility';
+  $handler->display->display_options['fields']['field_service_accessibility']['label'] = 'details:Accessibility';
+  $handler->display->display_options['fields']['field_service_accessibility']['settings'] = array(
+    'link' => 0,
+  );
+  /* Field: Content: Coverage */
+  $handler->display->display_options['fields']['field_service_coverage']['id'] = 'field_service_coverage';
+  $handler->display->display_options['fields']['field_service_coverage']['table'] = 'field_data_field_service_coverage';
+  $handler->display->display_options['fields']['field_service_coverage']['field'] = 'field_service_coverage';
+  $handler->display->display_options['fields']['field_service_coverage']['label'] = 'details:Coverage';
+  $handler->display->display_options['fields']['field_service_coverage']['settings'] = array(
+    'link' => 0,
+  );
+  /* Field: Content: Service Availability */
+  $handler->display->display_options['fields']['field_service_availability']['id'] = 'field_service_availability';
+  $handler->display->display_options['fields']['field_service_availability']['table'] = 'field_data_field_service_availability';
+  $handler->display->display_options['fields']['field_service_availability']['field'] = 'field_service_availability';
+  $handler->display->display_options['fields']['field_service_availability']['label'] = 'details:Availability';
+  $handler->display->display_options['fields']['field_service_availability']['settings'] = array(
+    'link' => 0,
+  );
+  /* Field: Content: Availability Day */
+  $handler->display->display_options['fields']['field_service_location_days_1']['id'] = 'field_service_location_days_1';
+  $handler->display->display_options['fields']['field_service_location_days_1']['table'] = 'field_data_field_service_location_days';
+  $handler->display->display_options['fields']['field_service_location_days_1']['field'] = 'field_service_location_days';
+  $handler->display->display_options['fields']['field_service_location_days_1']['label'] = 'details:Availability Day';
+  $handler->display->display_options['fields']['field_service_location_days_1']['settings'] = array(
+    'link' => 0,
+  );
   /* Field: Content: Referral Method */
   $handler->display->display_options['fields']['field_service_referral_method']['id'] = 'field_service_referral_method';
   $handler->display->display_options['fields']['field_service_referral_method']['table'] = 'field_data_field_service_referral_method';
   $handler->display->display_options['fields']['field_service_referral_method']['field'] = 'field_service_referral_method';
   $handler->display->display_options['fields']['field_service_referral_method']['relationship'] = 'field_service_location_service_target_id';
+  $handler->display->display_options['fields']['field_service_referral_method']['label'] = 'details:Referral Method';
   $handler->display->display_options['fields']['field_service_referral_method']['settings'] = array(
     'link' => 0,
   );
@@ -403,6 +427,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_referral_next_step']['table'] = 'field_data_field_service_referral_next_step';
   $handler->display->display_options['fields']['field_service_referral_next_step']['field'] = 'field_service_referral_next_step';
   $handler->display->display_options['fields']['field_service_referral_next_step']['relationship'] = 'field_service_location_service_target_id';
+  $handler->display->display_options['fields']['field_service_referral_next_step']['label'] = 'details: Referral Next Steps';
   $handler->display->display_options['fields']['field_service_referral_next_step']['settings'] = array(
     'link' => 0,
   );
@@ -411,6 +436,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_feedback_mechanism']['table'] = 'field_data_field_service_feedback_mechanism';
   $handler->display->display_options['fields']['field_service_feedback_mechanism']['field'] = 'field_service_feedback_mechanism';
   $handler->display->display_options['fields']['field_service_feedback_mechanism']['relationship'] = 'field_service_location_service_target_id';
+  $handler->display->display_options['fields']['field_service_feedback_mechanism']['label'] = 'details:Feedback Mechanism';
   $handler->display->display_options['fields']['field_service_feedback_mechanism']['settings'] = array(
     'link' => 0,
   );
@@ -419,16 +445,16 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_feedback_delay']['table'] = 'field_data_field_service_feedback_delay';
   $handler->display->display_options['fields']['field_service_feedback_delay']['field'] = 'field_service_feedback_delay';
   $handler->display->display_options['fields']['field_service_feedback_delay']['relationship'] = 'field_service_location_service_target_id';
+  $handler->display->display_options['fields']['field_service_feedback_delay']['label'] = 'details:Feedback Delay';
   $handler->display->display_options['fields']['field_service_feedback_delay']['settings'] = array(
     'link' => 0,
   );
-  /* Field: Content: Accessibility */
-  $handler->display->display_options['fields']['field_service_accessibility']['id'] = 'field_service_accessibility';
-  $handler->display->display_options['fields']['field_service_accessibility']['table'] = 'field_data_field_service_accessibility';
-  $handler->display->display_options['fields']['field_service_accessibility']['field'] = 'field_service_accessibility';
-  $handler->display->display_options['fields']['field_service_accessibility']['settings'] = array(
-    'link' => 0,
-  );
+  /* Field: Content: Service Registration type */
+  $handler->display->display_options['fields']['field_service_registration_type']['id'] = 'field_service_registration_type';
+  $handler->display->display_options['fields']['field_service_registration_type']['table'] = 'field_data_field_service_registration_type';
+  $handler->display->display_options['fields']['field_service_registration_type']['field'] = 'field_service_registration_type';
+  $handler->display->display_options['fields']['field_service_registration_type']['relationship'] = 'field_service_location_service_target_id';
+  $handler->display->display_options['fields']['field_service_registration_type']['delta_offset'] = '0';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -468,26 +494,28 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('Parent category'),
     t('Group node from OG membership'),
     t('id'),
-    t('locationName'),
-    t('partnerName'),
-    t('Days available'),
-    t('geometry'),
-    t('openAt'),
-    t('closedAt'),
+    t('region'),
+    t('organization'),
+    t('category'),
+    t('subCategory'),
+    t('startDate'),
+    t('endDate'),
+    t('servicesProvided'),
+    t('location:geometry'),
+    t('hours:openAt'),
+    t('hours:closedAt'),
     t('serviceName'),
-    t('activityCategory'),
-    t('activityName'),
-    t('Coverage'),
-    t('Nationality'),
-    t('Availability Day'),
-    t('Availability'),
-    t('Intake Criteria'),
+    t('details:Nationality'),
+    t('details:Intake Criteria'),
+    t('details:Accessibility'),
+    t('details:Coverage'),
+    t('details:Availability'),
+    t('details:Availability Day'),
+    t('details:Referral Method'),
+    t('details: Referral Next Steps'),
+    t('details:Feedback Mechanism'),
+    t('details:Feedback Delay'),
     t('Service Registration type'),
-    t('Referral Method'),
-    t('Referral Next Step'),
-    t('Feedback Mechanism'),
-    t('Feedback Delay'),
-    t('Accessibility'),
     t('Page'),
   );
   $export['service_locations_json_feed'] = $view;

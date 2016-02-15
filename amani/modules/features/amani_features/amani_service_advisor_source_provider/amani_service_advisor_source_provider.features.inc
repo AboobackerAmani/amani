@@ -39,7 +39,7 @@ function amani_service_advisor_source_provider_node_info() {
       'base' => 'node_content',
       'description' => t('A Service Location for the Service Advisor'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Location Name/Region'),
       'help' => '',
     ),
     'service_partner' => array(
