@@ -160,6 +160,13 @@ function amani_service_advisor_source_provider_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_yyyy_mm_dd';
+  $strongarm->value = 'Y-m-d';
+  $export['date_format_yyyy_mm_dd'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__service_location';
   $strongarm->value = array(
     'view_modes' => array(),

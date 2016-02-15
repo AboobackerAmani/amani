@@ -308,7 +308,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_start_date']['field'] = 'field_service_start_date';
   $handler->display->display_options['fields']['field_service_start_date']['label'] = 'startDate';
   $handler->display->display_options['fields']['field_service_start_date']['settings'] = array(
-    'format_type' => 'long',
+    'format_type' => 'yyyy_mm_dd',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -321,7 +321,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_end_date']['field'] = 'field_service_end_date';
   $handler->display->display_options['fields']['field_service_end_date']['label'] = 'endDate';
   $handler->display->display_options['fields']['field_service_end_date']['settings'] = array(
-    'format_type' => 'long',
+    'format_type' => 'yyyy_mm_dd',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
