@@ -84,7 +84,7 @@ function amani_service_advisor_source_provider_ds_custom_fields_info() {
   );
   $ds_field->ui_limit = 'service_partner|*';
   $ds_field->properties = array(
-    'block' => 'block|1',
+    'block' => 'amani_service_advisor_source_provider|services_links',
     'block_render' => '2',
   );
   $export['services_add_links'] = $ds_field;

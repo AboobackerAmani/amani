@@ -1127,6 +1127,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'service_location',
       'default_value' => NULL,
+      'default_value_function' => '',
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -1151,6 +1152,11 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'label' => 'Service',
       'required' => 1,
       'settings' => array(
+        'behaviors' => array(
+          'prepopulate' => array(
+            'status' => 0,
+          ),
+        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
