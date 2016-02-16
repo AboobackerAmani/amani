@@ -5,3 +5,48 @@
  */
 
 include_once 'amani_service_advisor_source_provider.features.inc';
+
+/**
+ * Implements hook_block_info().
+ */
+function amani_service_advisor_source_provider_block_info() {
+  $blocks = array();
+  $blocks['services_links'] = array(
+    'info' => t('Services Links'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function amani_service_advisor_source_provider_block_view($delta='') {
+  $block = array();
+
+  switch($delta) {
+    case 'services_links' :
+      $block['content'] = amani_service_advisor_source_provider_services_links();
+      break;
+  }
+
+  return $block;
+}
+
+function amani_service_advisor_source_provider_services_links(){
+
+  $node = menu_get_object();
+
+  $variables = array(
+    'items' => array(),
+    // Leave the title element empty to omit the title.
+    'title' => '',
+    'type' => 'ul',
+    'attributes' => array(),
+  );
+  $variables['items'][] = l(t('Add a new service'), '/node/add/service-source', array('query' => array('og_group_ref' => $node->nid)));
+  $variables['items'][] = l(t('Add a new location'), '/node/add/service-location', array('query' => array('og_group_ref' => $node->nid)));
+  return theme('item_list', $variables);
+
+
+}
