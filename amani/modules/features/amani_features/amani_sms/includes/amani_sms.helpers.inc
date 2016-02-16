@@ -21,9 +21,15 @@ function amani_sms_process_sms($inputJSON) {
     // Create sms submission.
     $submission = entity_create('node', array('type' => 'sms_submission'));
     $sub_wrapper = entity_metadata_wrapper('node', $submission);
-    $title = 'Sms Submission';
+    $title = '';
+    if (isset($parsed_message['message']['amani_sms_date'])) {
+      $title .= $parsed_message['message']['amani_sms_date'];
+    }
     if (isset($parsed_message['message']['amani_sms_reporter'])) {
-      $title .= '-' . $parsed_message['message']['amani_sms_reporter'];
+      $title .= ' ' . $parsed_message['message']['amani_sms_reporter'];
+    }
+    if (empty($title)) {
+      $title = 'Sms Submission';
     }
     $sub_wrapper->title->set($title);
     $sub_wrapper->field_sms_sub_message->set($inputJSON);
