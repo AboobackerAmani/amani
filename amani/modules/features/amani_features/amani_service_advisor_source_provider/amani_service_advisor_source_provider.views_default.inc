@@ -252,6 +252,17 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1000';
   $handler->display->display_options['style_plugin'] = 'views_json';
+  $handler->display->display_options['style_options']['plaintext_output'] = 1;
+  $handler->display->display_options['style_options']['remove_newlines'] = 0;
+  $handler->display->display_options['style_options']['jsonp_prefix'] = '';
+  $handler->display->display_options['style_options']['using_views_api_mode'] = 0;
+  $handler->display->display_options['style_options']['object_arrays'] = 0;
+  $handler->display->display_options['style_options']['numeric_strings'] = 0;
+  $handler->display->display_options['style_options']['bigint_string'] = 0;
+  $handler->display->display_options['style_options']['pretty_print'] = 0;
+  $handler->display->display_options['style_options']['unescaped_slashes'] = 0;
+  $handler->display->display_options['style_options']['unescaped_unicode'] = 0;
+  $handler->display->display_options['style_options']['char_encoding'] = array();
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_service_location_service_target_id']['id'] = 'field_service_location_service_target_id';
   $handler->display->display_options['relationships']['field_service_location_service_target_id']['table'] = 'field_data_field_service_location_service';
@@ -427,7 +438,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_referral_next_step']['table'] = 'field_data_field_service_referral_next_step';
   $handler->display->display_options['fields']['field_service_referral_next_step']['field'] = 'field_service_referral_next_step';
   $handler->display->display_options['fields']['field_service_referral_next_step']['relationship'] = 'field_service_location_service_target_id';
-  $handler->display->display_options['fields']['field_service_referral_next_step']['label'] = 'details: Referral Next Steps';
+  $handler->display->display_options['fields']['field_service_referral_next_step']['label'] = 'details:Referral Next Steps';
   $handler->display->display_options['fields']['field_service_referral_next_step']['settings'] = array(
     'link' => 0,
   );
@@ -512,7 +523,7 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('details:Availability'),
     t('details:Availability Day'),
     t('details:Referral Method'),
-    t('details: Referral Next Steps'),
+    t('details:Referral Next Steps'),
     t('details:Feedback Mechanism'),
     t('details:Feedback Delay'),
     t('Service Registration type'),
@@ -708,7 +719,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['arguments']['og_group_ref_target_id']['table'] = 'og_membership';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['field'] = 'og_group_ref_target_id';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['og_group_ref_target_id']['default_argument_type'] = 'og_user_groups';
+  $handler->display->display_options['arguments']['og_group_ref_target_id']['default_argument_type'] = 'og_context';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['summary_options']['items_per_page'] = '25';
