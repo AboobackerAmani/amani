@@ -48,10 +48,9 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'list',
           'settings' => array(),
-          'type' => 'list_default',
-          'weight' => 23,
+          'type' => 'hidden',
+          'weight' => '34',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -130,13 +129,13 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'entityreference',
           'settings' => array(
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => 26,
+          'weight' => '16',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -226,7 +225,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => '13',
+          'weight' => '11',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -252,7 +251,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '12',
+        'weight' => '8',
       ),
     ),
   );
@@ -302,19 +301,19 @@ function amani_service_advisor_source_provider_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => NULL,
+      'default_value' => array(),
       'default_value_function' => '',
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'entityreference',
           'settings' => array(
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => 22,
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -342,8 +341,8 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '18',
+        'type' => 'options_buttons',
+        'weight' => '4',
       ),
     ),
   );
@@ -393,7 +392,12 @@ function amani_service_advisor_source_provider_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'target_id' => '152',
+        ),
+      ),
+      'default_value_function' => '',
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -404,7 +408,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => '11',
+          'weight' => '9',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -419,6 +423,9 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'behaviors' => array(
+          'prepopulate' => array(
+            'status' => 0,
+          ),
           'taxonomy-index' => array(
             'status' => TRUE,
           ),
@@ -477,11 +484,11 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'i18n_taxonomy',
+          'label' => 'inline',
+          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => 17,
+          'type' => 'taxonomy_term_reference_plain',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -493,7 +500,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_service_category',
       'label' => 'Category',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
@@ -502,7 +509,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '8',
+        'weight' => '3',
       ),
     ),
   );
@@ -542,10 +549,9 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 18,
+          'type' => 'hidden',
+          'weight' => '31',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -569,7 +575,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '14',
+        'weight' => '16',
       ),
     ),
   );
@@ -630,7 +636,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => '12',
+          'weight' => '10',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -694,7 +700,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => NULL,
+      'default_value' => array(),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -710,7 +716,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
             'show_remaining_days' => FALSE,
           ),
           'type' => 'date_default',
-          'weight' => '6',
+          'weight' => '7',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -800,13 +806,13 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'entityreference',
           'settings' => array(
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => 28,
+          'weight' => '18',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -891,13 +897,13 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'entityreference',
           'settings' => array(
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => 27,
+          'weight' => '17',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -966,10 +972,9 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 19,
+          'type' => 'hidden',
+          'weight' => '32',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1040,11 +1045,11 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'i18n_taxonomy',
+          'label' => 'inline',
+          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => 20,
+          'type' => 'taxonomy_term_reference_plain',
+          'weight' => '12',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1065,7 +1070,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '16',
+        'weight' => '10',
       ),
     ),
   );
@@ -1128,7 +1133,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'geolocation_googlemaps',
           'settings' => array(
             'map_height' => '300px',
@@ -1140,7 +1145,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
             'marker_icon' => '',
           ),
           'type' => 'geolocation_googlemaps_dynamic',
-          'weight' => '15',
+          'weight' => '19',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1225,7 +1230,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => '4',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1312,7 +1317,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => '10',
+          'weight' => '22',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1399,7 +1404,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => '9',
+          'weight' => '21',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1486,7 +1491,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1573,7 +1578,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => '2',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1660,7 +1665,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => '8',
+          'weight' => '20',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1729,10 +1734,9 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'link',
           'settings' => array(),
-          'type' => 'link_default',
-          'weight' => 16,
+          'type' => 'hidden',
+          'weight' => '30',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1769,7 +1773,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '13',
+        'weight' => '14',
       ),
     ),
   );
@@ -1830,7 +1834,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => '7',
+          'weight' => '8',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1856,7 +1860,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '10',
+        'weight' => '9',
       ),
     ),
   );
@@ -1912,13 +1916,13 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'entityreference',
           'settings' => array(
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => 24,
+          'weight' => '14',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2003,13 +2007,13 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'entityreference',
           'settings' => array(
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => 25,
+          'weight' => '15',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2085,11 +2089,11 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'i18n_taxonomy',
+          'label' => 'inline',
+          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => 21,
+          'type' => 'taxonomy_term_reference_plain',
+          'weight' => '13',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2110,7 +2114,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '17',
+        'weight' => '11',
       ),
     ),
   );
@@ -2148,7 +2152,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => NULL,
+      'default_value' => array(),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -2164,7 +2168,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
             'show_remaining_days' => FALSE,
           ),
           'type' => 'date_default',
-          'weight' => '5',
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2308,7 +2312,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'og',
         'settings' => array(),
         'type' => 'og_complex',
-        'weight' => '3',
+        'weight' => '1',
       ),
     ),
   );

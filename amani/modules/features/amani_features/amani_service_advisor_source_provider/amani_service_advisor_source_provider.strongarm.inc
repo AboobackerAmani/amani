@@ -156,16 +156,16 @@ function amani_service_advisor_source_provider_strongarm() {
           'weight' => '12',
         ),
         'title' => array(
-          'weight' => '1',
+          'weight' => '2',
         ),
         'path' => array(
-          'weight' => '9',
+          'weight' => '17',
         ),
       ),
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '23',
+            'weight' => '33',
             'visible' => FALSE,
           ),
         ),

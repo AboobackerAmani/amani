@@ -21,10 +21,10 @@ function amani_service_advisor_source_provider_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Feedback',
-    'weight' => '20',
+    'weight' => '13',
     'children' => array(
-      0 => 'field_service_feedback_mechanism',
-      1 => 'field_service_feedback_delay',
+      0 => 'field_service_feedback_delay',
+      1 => 'field_service_feedback_mechanism',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -50,13 +50,14 @@ function amani_service_advisor_source_provider_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Location Details',
-    'weight' => '11',
+    'weight' => '8',
     'children' => array(
       0 => 'field_service_location',
       1 => 'field_service_location_region',
       2 => 'field_service_location_governor',
       3 => 'field_service_location_district',
       4 => 'field_service_coverage',
+      5 => 'field_service_accessibility',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -113,12 +114,12 @@ function amani_service_advisor_source_provider_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Referral Information',
-    'weight' => '19',
+    'weight' => '12',
     'children' => array(
       0 => 'field_referral_required_',
-      1 => 'field_service_referral_method',
-      2 => 'field_service_referral_next_step',
-      3 => 'field_response_delay_after_refer',
+      1 => 'field_response_delay_after_refer',
+      2 => 'field_service_referral_method',
+      3 => 'field_service_referral_next_step',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
