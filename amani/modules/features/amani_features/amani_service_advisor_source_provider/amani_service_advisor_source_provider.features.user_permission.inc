@@ -33,13 +33,6 @@ function amani_service_advisor_source_provider_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: create service_source content.
-  $permissions['create service_source content'] = array(
-    'name' => 'create service_source content',
-    'roles' => array(),
-    'module' => 'node',
-  );
-
   // Exported permission: delete any service_location content.
   $permissions['delete any service_location content'] = array(
     'name' => 'delete any service_location content',
@@ -54,13 +47,6 @@ function amani_service_advisor_source_provider_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete any service_source content.
-  $permissions['delete any service_source content'] = array(
-    'name' => 'delete any service_source content',
-    'roles' => array(),
-    'module' => 'node',
-  );
-
   // Exported permission: delete own service_location content.
   $permissions['delete own service_location content'] = array(
     'name' => 'delete own service_location content',
@@ -71,13 +57,6 @@ function amani_service_advisor_source_provider_user_default_permissions() {
   // Exported permission: delete own service_partner content.
   $permissions['delete own service_partner content'] = array(
     'name' => 'delete own service_partner content',
-    'roles' => array(),
-    'module' => 'node',
-  );
-
-  // Exported permission: delete own service_source content.
-  $permissions['delete own service_source content'] = array(
-    'name' => 'delete own service_source content',
     'roles' => array(),
     'module' => 'node',
   );
@@ -201,13 +180,6 @@ function amani_service_advisor_source_provider_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any service_source content.
-  $permissions['edit any service_source content'] = array(
-    'name' => 'edit any service_source content',
-    'roles' => array(),
-    'module' => 'node',
-  );
-
   // Exported permission: edit own service_location content.
   $permissions['edit own service_location content'] = array(
     'name' => 'edit own service_location content',
@@ -218,13 +190,6 @@ function amani_service_advisor_source_provider_user_default_permissions() {
   // Exported permission: edit own service_partner content.
   $permissions['edit own service_partner content'] = array(
     'name' => 'edit own service_partner content',
-    'roles' => array(),
-    'module' => 'node',
-  );
-
-  // Exported permission: edit own service_source content.
-  $permissions['edit own service_source content'] = array(
-    'name' => 'edit own service_source content',
     'roles' => array(),
     'module' => 'node',
   );

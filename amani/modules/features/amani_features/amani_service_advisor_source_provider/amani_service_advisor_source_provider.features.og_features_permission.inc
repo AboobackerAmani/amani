@@ -39,14 +39,6 @@ function amani_service_advisor_source_provider_og_features_default_permissions()
     ),
   );
 
-  // Exported og permission: 'node:service_partner:create service_source content'
-  $permissions['node:service_partner:create service_source content'] = array(
-    'roles' => array(
-      'administrator member' => 'administrator member',
-      'member' => 'member',
-    ),
-  );
-
   // Exported og permission: 'node:service_partner:delete any service_location content'
   $permissions['node:service_partner:delete any service_location content'] = array(
     'roles' => array(
@@ -55,24 +47,8 @@ function amani_service_advisor_source_provider_og_features_default_permissions()
     ),
   );
 
-  // Exported og permission: 'node:service_partner:delete any service_source content'
-  $permissions['node:service_partner:delete any service_source content'] = array(
-    'roles' => array(
-      'administrator member' => 'administrator member',
-      'member' => 'member',
-    ),
-  );
-
   // Exported og permission: 'node:service_partner:delete own service_location content'
   $permissions['node:service_partner:delete own service_location content'] = array(
-    'roles' => array(
-      'administrator member' => 'administrator member',
-      'member' => 'member',
-    ),
-  );
-
-  // Exported og permission: 'node:service_partner:delete own service_source content'
-  $permissions['node:service_partner:delete own service_source content'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
       'member' => 'member',
@@ -125,14 +101,6 @@ function amani_service_advisor_source_provider_og_features_default_permissions()
     ),
   );
 
-  // Exported og permission: 'node:service_partner:update any service_source content'
-  $permissions['node:service_partner:update any service_source content'] = array(
-    'roles' => array(
-      'administrator member' => 'administrator member',
-      'member' => 'member',
-    ),
-  );
-
   // Exported og permission: 'node:service_partner:update group'
   $permissions['node:service_partner:update group'] = array(
     'roles' => array(
@@ -142,14 +110,6 @@ function amani_service_advisor_source_provider_og_features_default_permissions()
 
   // Exported og permission: 'node:service_partner:update own service_location content'
   $permissions['node:service_partner:update own service_location content'] = array(
-    'roles' => array(
-      'administrator member' => 'administrator member',
-      'member' => 'member',
-    ),
-  );
-
-  // Exported og permission: 'node:service_partner:update own service_source content'
-  $permissions['node:service_partner:update own service_source content'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
       'member' => 'member',

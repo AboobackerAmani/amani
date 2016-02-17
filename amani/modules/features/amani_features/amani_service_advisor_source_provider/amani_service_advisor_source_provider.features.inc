@@ -54,14 +54,6 @@ function amani_service_advisor_source_provider_node_info() {
       'title_label' => t('Abbreviated Partner Name'),
       'help' => '',
     ),
-    'service_source' => array(
-      'name' => t('Service'),
-      'base' => 'node_content',
-      'description' => t('A Service provided by a Service Partner.  '),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
   );
   return $items;
 }
