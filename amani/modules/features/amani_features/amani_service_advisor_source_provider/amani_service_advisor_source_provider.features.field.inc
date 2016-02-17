@@ -342,7 +342,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '4',
+        'weight' => '2',
       ),
     ),
   );
@@ -509,7 +509,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '3',
+        'weight' => '1',
       ),
     ),
   );
@@ -730,7 +730,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'label' => 'End Date',
       'required' => 0,
       'settings' => array(
-        'default_value' => 'now',
+        'default_value' => 'blank',
         'default_value2' => 'same',
         'default_value_code' => '',
         'default_value_code2' => '',
@@ -745,12 +745,11 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'input_format_custom' => '',
           'label_position' => 'above',
           'no_fieldset' => 0,
-          'repeat_collapsed' => 0,
           'text_parts' => array(),
           'year_range' => '-3:+3',
         ),
         'type' => 'date_select',
-        'weight' => '7',
+        'weight' => '12',
       ),
     ),
   );
@@ -1070,7 +1069,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '10',
+        'weight' => '3',
       ),
     ),
   );
@@ -1860,7 +1859,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '9',
+        'weight' => '5',
       ),
     ),
   );
@@ -2114,7 +2113,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '11',
+        'weight' => '4',
       ),
     ),
   );
@@ -2202,7 +2201,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_select',
-        'weight' => '6',
+        'weight' => '11',
       ),
     ),
   );
@@ -2312,7 +2311,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'og',
         'settings' => array(),
         'type' => 'og_complex',
-        'weight' => '1',
+        'weight' => '10',
       ),
     ),
   );

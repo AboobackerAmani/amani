@@ -150,13 +150,13 @@ function amani_service_advisor_source_provider_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '0',
+          'weight' => '9',
         ),
         'metatags' => array(
           'weight' => '12',
         ),
         'title' => array(
-          'weight' => '2',
+          'weight' => '0',
         ),
         'path' => array(
           'weight' => '17',
@@ -261,6 +261,7 @@ function amani_service_advisor_source_provider_strongarm() {
   $strongarm->value = array(
     0 => 'current',
     1 => 'required',
+    2 => 'lock',
   );
   $export['i18n_node_options_service_location'] = $strongarm;
 
