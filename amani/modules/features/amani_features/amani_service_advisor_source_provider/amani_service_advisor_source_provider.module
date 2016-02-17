@@ -44,9 +44,7 @@ function amani_service_advisor_source_provider_services_links(){
     'type' => 'ul',
     'attributes' => array(),
   );
-  $variables['items'][] = l(t('Add a new service'), '/node/add/service-source', array('query' => array('og_group_ref' => $node->nid)));
   $variables['items'][] = l(t('Add a new location'), '/node/add/service-location', array('query' => array('og_group_ref' => $node->nid)));
   return theme('item_list', $variables);
-
 
 }
