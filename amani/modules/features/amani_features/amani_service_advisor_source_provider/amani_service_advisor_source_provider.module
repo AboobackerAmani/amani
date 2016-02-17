@@ -56,6 +56,9 @@ function amani_service_advisor_source_provider_services_links(){
 function amani_service_advisor_source_provider_node_insert($node) {
 
   // Create the Arabic translation at the same time that we save the English.
+  // If we want to generalize this we could use
+  // $languages = i18n_node_language_list($node, TRUE, TRUE);
+  // but we'd might want a mechanism to detect content type too.
 
   if ($node->type == 'service_location' && $node->language == 'en' && $node->tnid == 0){
     $node->tnid = $node->nid;
@@ -73,5 +76,9 @@ function amani_service_advisor_source_provider_node_insert($node) {
     // Save the copy
     node_save($arabic_node);
 
+    if ($arabic_node->nid){
+      drupal_set_message( '<strong>' . t('You still need to complete the Arabic translation this location, either by !link now or using the Translate tab at a later time.' . '</strong>',
+                          array('!link' => l(t('clicking this link'), 'node/' . $arabic_node->nid . '/edit'), 'status')));
+    }
   }
 }
