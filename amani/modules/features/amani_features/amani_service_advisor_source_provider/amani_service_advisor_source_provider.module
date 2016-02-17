@@ -48,3 +48,30 @@ function amani_service_advisor_source_provider_services_links(){
   return theme('item_list', $variables);
 
 }
+
+/*
+ * Implementation of hook_node_insert()
+ */
+
+function amani_service_advisor_source_provider_node_insert($node) {
+
+  // Create the Arabic translation at the same time that we save the English.
+
+  if ($node->type == 'service_location' && $node->language == 'en' && $node->tnid == 0){
+    $node->tnid = $node->nid;
+
+    $translation_source = new stdClass();
+    $node->translation_source->tnid = $node->nid;
+    $arabic_node = clone $node;
+    // unset version and node id's
+    unset($arabic_node->nid);
+    unset($arabic_node->vid);
+    unset($arabic_node->path);
+
+    $arabic_node->language = 'ar';
+
+    // Save the copy
+    node_save($arabic_node);
+
+  }
+}
