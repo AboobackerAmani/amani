@@ -18,17 +18,12 @@ function amani_service_advisor_source_provider_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
     'services_add_links' => array(
-      'weight' => '2',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
-    'service_partners_services_with_t' => array(
-      'weight' => '0',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
     ),
     'service_partners_service_locatio' => array(
-      'weight' => '1',
+      'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -58,21 +53,6 @@ function amani_service_advisor_source_provider_ds_custom_fields_info() {
     'block_render' => '1',
   );
   $export['service_partners_service_locatio'] = $ds_field;
-
-  $ds_field = new stdClass();
-  $ds_field->api_version = 1;
-  $ds_field->field = 'service_partners_services_with_t';
-  $ds_field->label = 'Service Partners: Services with Translations';
-  $ds_field->field_type = 6;
-  $ds_field->entities = array(
-    'node' => 'node',
-  );
-  $ds_field->ui_limit = 'service_partner|*';
-  $ds_field->properties = array(
-    'block' => 'views|8053fce43bea62d95543c51c0bd744d5',
-    'block_render' => '1',
-  );
-  $export['service_partners_services_with_t'] = $ds_field;
 
   $ds_field = new stdClass();
   $ds_field->api_version = 1;
@@ -170,18 +150,16 @@ function amani_service_advisor_source_provider_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
-        0 => 'service_partners_services_with_t',
-        1 => 'service_partners_service_locatio',
-        2 => 'services_add_links',
+        0 => 'service_partners_service_locatio',
+        1 => 'services_add_links',
       ),
       'right' => array(
-        3 => 'field_logo',
-        4 => 'field_service_partner_full_name',
-        5 => 'field_service_partner_url',
+        2 => 'field_logo',
+        3 => 'field_service_partner_full_name',
+        4 => 'field_service_partner_url',
       ),
     ),
     'fields' => array(
-      'service_partners_services_with_t' => 'left',
       'service_partners_service_locatio' => 'left',
       'services_add_links' => 'left',
       'field_logo' => 'right',
