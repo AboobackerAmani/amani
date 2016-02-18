@@ -49,6 +49,29 @@ function amani_service_advisor_source_provider_services_links(){
 
 }
 
+/**
+ * Alter the access to the ability to clone a given node.
+ *
+ * @param bool $access
+ *   Reference to the boolean determining if cloning should be allowed on a
+ *   given node.
+ * @param $node
+ *   The fully loaded node object being considered for cloning.
+ *
+ * @see clone_access_cloning()
+ * @see drupal_alter()
+ */
+function amani_service_advisor_source_provider_clone_access_alter(&$access, $node) {
+  global $user;
+
+  // Only allow cloning of nodes posted to groups you belong to.
+  if ($node->type == 'service_location' && $node->language == 'en' && og_is_member('node', $node->og_group_ref['und'][0]['target_id'])) {
+    $access = TRUE;
+  }
+}
+
+
+
 /*
  * Implementation of hook_node_insert()
  */
