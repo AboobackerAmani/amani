@@ -17,13 +17,13 @@ function amani_service_advisor_source_provider_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'service_partner';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'services_add_links' => array(
-      'weight' => '1',
+    'service_partners_service_locatio' => array(
+      'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
     ),
-    'service_partners_service_locatio' => array(
-      'weight' => '0',
+    'services_add_links' => array(
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -84,7 +84,7 @@ function amani_service_advisor_source_provider_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'service_location';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_2col_fluid';
+  $ds_layout->layout = 'ds_2col_stacked';
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
@@ -142,8 +142,10 @@ function amani_service_advisor_source_provider_ds_layout_settings_info() {
     ),
     'classes' => array(),
     'wrappers' => array(
+      'header' => 'div',
       'left' => 'div',
       'right' => 'div',
+      'footer' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

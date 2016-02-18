@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function amani_service_advisor_source_provider_field_group_info() {
-  $field_groups = array();
+  $export = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -37,7 +37,7 @@ function amani_service_advisor_source_provider_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_service_feedback|node|service_location|form'] = $field_group;
+  $export['group_service_feedback|node|service_location|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -70,7 +70,7 @@ function amani_service_advisor_source_provider_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_service_location_details|node|service_location|form'] = $field_group;
+  $export['group_service_location_details|node|service_location|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -101,7 +101,7 @@ function amani_service_advisor_source_provider_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_service_location_office|node|service_location|form'] = $field_group;
+  $export['group_service_location_office|node|service_location|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -132,14 +132,7 @@ function amani_service_advisor_source_provider_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_service_referral|node|service_location|form'] = $field_group;
+  $export['group_service_referral|node|service_location|form'] = $field_group;
 
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('Feedback');
-  t('Location Details');
-  t('Office Information');
-  t('Referral Information');
-
-  return $field_groups;
+  return $export;
 }
