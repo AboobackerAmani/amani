@@ -88,12 +88,6 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['title_1']['field'] = 'title';
   $handler->display->display_options['fields']['title_1']['relationship'] = 'translation';
   $handler->display->display_options['fields']['title_1']['label'] = 'Arabic Title';
-  /* Field: Content: Edit link */
-  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
-  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
-  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
-  $handler->display->display_options['fields']['edit_node']['label'] = 'Edit';
-  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
   /* Field: Content translation: Translation status */
   $handler->display->display_options['fields']['translate']['id'] = 'translate';
   $handler->display->display_options['fields']['translate']['table'] = 'node';
@@ -102,7 +96,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['translate']['label'] = 'Translation Status';
   $handler->display->display_options['fields']['translate']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['translate']['type'] = 'custom';
-  $handler->display->display_options['fields']['translate']['type_custom_true'] = 'Need translation';
+  $handler->display->display_options['fields']['translate']['type_custom_true'] = 'Need Translation';
   $handler->display->display_options['fields']['translate']['type_custom_false'] = 'Translation Complete ';
   $handler->display->display_options['fields']['translate']['not'] = 0;
   /* Field: Edit translation */
@@ -112,6 +106,24 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Edit translation';
   $handler->display->display_options['fields']['nothing']['label'] = 'Translation';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="/node/[nid]/translate">translation</a>';
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = 'Edit English';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node_1']['id'] = 'edit_node_1';
+  $handler->display->display_options['fields']['edit_node_1']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node_1']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node_1']['relationship'] = 'translation';
+  $handler->display->display_options['fields']['edit_node_1']['label'] = 'Edit Arabic';
+  /* Field: Content: Sector/Service */
+  $handler->display->display_options['fields']['field_service_category']['id'] = 'field_service_category';
+  $handler->display->display_options['fields']['field_service_category']['table'] = 'field_data_field_service_category';
+  $handler->display->display_options['fields']['field_service_category']['field'] = 'field_service_category';
+  $handler->display->display_options['fields']['field_service_category']['label'] = 'Sector';
+  $handler->display->display_options['fields']['field_service_category']['type'] = 'i18n_taxonomy_term_reference_plain';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -149,6 +161,25 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['filters']['language']['value'] = array(
     '***DEFAULT_LANGUAGE***' => '***DEFAULT_LANGUAGE***',
   );
+  /* Filter criterion: Content: Sector/Service (field_service_category) */
+  $handler->display->display_options['filters']['field_service_category_tid']['id'] = 'field_service_category_tid';
+  $handler->display->display_options['filters']['field_service_category_tid']['table'] = 'field_data_field_service_category';
+  $handler->display->display_options['filters']['field_service_category_tid']['field'] = 'field_service_category_tid';
+  $handler->display->display_options['filters']['field_service_category_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_service_category_tid']['expose']['operator_id'] = 'field_service_category_tid_op';
+  $handler->display->display_options['filters']['field_service_category_tid']['expose']['label'] = 'Category (field_service_category)';
+  $handler->display->display_options['filters']['field_service_category_tid']['expose']['operator'] = 'field_service_category_tid_op';
+  $handler->display->display_options['filters']['field_service_category_tid']['expose']['identifier'] = 'field_service_category_tid';
+  $handler->display->display_options['filters']['field_service_category_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    5 => 0,
+    6 => 0,
+    4 => 0,
+  );
+  $handler->display->display_options['filters']['field_service_category_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_service_category_tid']['vocabulary'] = 'service_categories';
 
   /* Display: Service list */
   $handler = $view->new_display('block', 'Service list', 'service_location_list');
@@ -164,9 +195,11 @@ function amani_service_advisor_source_provider_views_default_views() {
     'nid' => 'nid',
     'title' => 'title',
     'title_1' => 'title_1',
-    'edit_node' => 'edit_node',
     'translate' => 'translate',
     'nothing' => 'nothing',
+    'edit_node' => 'edit_node',
+    'edit_node_1' => 'edit_node_1',
+    'field_service_category' => 'field_service_category',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
@@ -191,11 +224,6 @@ function amani_service_advisor_source_provider_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'edit_node' => array(
-      'align' => 'views-align-center',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
     'translate' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
@@ -204,6 +232,23 @@ function amani_service_advisor_source_provider_views_default_views() {
       'empty_column' => 0,
     ),
     'nothing' => array(
+      'align' => 'views-align-center',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'edit_node' => array(
+      'align' => 'views-align-center',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'edit_node_1' => array(
+      'align' => 'views-align-center',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_service_category' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
       'align' => 'views-align-center',
       'separator' => '',
       'empty_column' => 0,
@@ -235,13 +280,16 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('Translations'),
     t('Title'),
     t('Arabic Title'),
-    t('Edit'),
     t('Translation Status'),
-    t('Need translation'),
+    t('Need Translation'),
     t('Translation Complete '),
     t('Translation'),
     t('<a href="/node/[nid]/translate">translation</a>'),
+    t('Edit English'),
+    t('Edit Arabic'),
+    t('Sector'),
     t('All'),
+    t('Category (field_service_category)'),
     t('Service list'),
     t('Services'),
   );
@@ -799,7 +847,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Edit ';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Edit';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Edit Group';
   $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['nothing']['alter']['path'] = '/node/[nid]/edit?destination=/user/[uid]';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
@@ -810,7 +858,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['nothing_2']['ui_name'] = 'Account view';
   $handler->display->display_options['fields']['nothing_2']['label'] = '';
   $handler->display->display_options['fields']['nothing_2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['nothing_2']['alter']['text'] = 'Account View';
+  $handler->display->display_options['fields']['nothing_2']['alter']['text'] = 'Group Info';
   $handler->display->display_options['fields']['nothing_2']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['nothing_2']['alter']['path'] = '/node/[nid]';
   $handler->display->display_options['fields']['nothing_2']['element_label_colon'] = FALSE;
@@ -834,7 +882,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['nothing_4']['ui_name'] = 'View group info';
   $handler->display->display_options['fields']['nothing_4']['label'] = '';
   $handler->display->display_options['fields']['nothing_4']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['nothing_4']['alter']['text'] = 'View Group Info';
+  $handler->display->display_options['fields']['nothing_4']['alter']['text'] = 'Group User Details';
   $handler->display->display_options['fields']['nothing_4']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['nothing_4']['alter']['path'] = '/node/[nid]/group';
   $handler->display->display_options['fields']['nothing_4']['element_label_colon'] = FALSE;
@@ -903,10 +951,10 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('Membership'),
     t('User'),
     t('Uid'),
-    t('Edit'),
-    t('Account View'),
+    t('Edit Group'),
+    t('Group Info'),
     t('Logout'),
-    t('View Group Info'),
+    t('Group User Details'),
     t('[nothing_2][nothing] [nothing_4] [nothing_1] '),
     t('Add a new location
 '),

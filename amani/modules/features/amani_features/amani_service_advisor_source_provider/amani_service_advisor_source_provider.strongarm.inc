@@ -266,16 +266,16 @@ function amani_service_advisor_source_provider_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '10',
+          'weight' => '9',
         ),
         'metatags' => array(
           'weight' => '12',
         ),
         'title' => array(
-          'weight' => '13',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '14',
+          'weight' => '17',
         ),
       ),
       'display' => array(
@@ -411,18 +411,18 @@ function amani_service_advisor_source_provider_strongarm() {
     11 => 'field_service_availability',
     12 => 'field_service_coverage',
     13 => 'field_service_accessibility',
-    14 => 'field_referral_required_',
-    15 => 'field_response_delay_after_refer',
-    16 => 'field_service_activity_details',
-    17 => 'field_service_category',
-    18 => 'field_service_feedback_delay',
-    19 => 'field_service_feedback_mechanism',
-    20 => 'field_service_indicators',
-    21 => 'field_service_intake_criteria',
-    22 => 'field_service_more_info_link',
-    23 => 'field_service_referral_method',
-    24 => 'field_service_referral_next_step',
-    25 => 'field_service_registration_type',
+    14 => 'field_service_more_info_link',
+    15 => 'field_service_category',
+    16 => 'field_service_indicators',
+    17 => 'field_service_intake_criteria',
+    18 => 'field_service_registration_type',
+    19 => 'field_service_activity_details',
+    20 => 'field_referral_required_',
+    21 => 'field_service_referral_method',
+    22 => 'field_service_referral_next_step',
+    23 => 'field_response_delay_after_refer',
+    24 => 'field_service_feedback_mechanism',
+    25 => 'field_service_feedback_delay',
     26 => 'status',
   );
   $export['i18n_sync_node_type_service_location'] = $strongarm;

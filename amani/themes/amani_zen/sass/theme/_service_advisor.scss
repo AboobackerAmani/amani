@@ -17,7 +17,7 @@
 		}
 	}
 }
-//English
+//English 
 .en{
 
 }
@@ -38,9 +38,13 @@
 .view-service-partner-login{
 	.view-content{
 		position:relative;
+		.views-field-field-service-partner-url{
+			margin-bottom:10px;
+		}
 		.views-field-field-service-partner-full-name{
 			h3{
 		    line-height: 0px;
+				margin-bottom:10px;
 			}
 		}
 		.views-field-nothing-5 {
@@ -50,7 +54,7 @@
 	    margin: 10px;
 	    background: #eee;
 	    padding: 7px;
-	    width: 33% !important;
+	    width: auto !important;
 			.link-wrapper {
 				a {
 					    padding: 0 7px;
@@ -73,13 +77,13 @@
 			width:auto !important;
 		}
 		.views-field {
-			width:80%;
+			width:70%;
 		}
 	}
 
 }
 .view-service-location-list{
-	.views-table.cols-5{
+	.views-table{
 		width:100%;
 	}
 }

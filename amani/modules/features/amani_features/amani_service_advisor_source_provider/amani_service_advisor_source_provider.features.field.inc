@@ -10,6 +10,74 @@
 function amani_service_advisor_source_provider_field_default_fields() {
   $fields = array();
 
+  // Exported field: 'node-service_location-field_referral_required_'.
+  $fields['node-service_location-field_referral_required_'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_referral_required_',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => 'false',
+          1 => 'true',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_boolean',
+    ),
+    'field_instance' => array(
+      'bundle' => 'service_location',
+      'default_value' => array(
+        0 => array(
+          'value' => 0,
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '34',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_referral_required_',
+      'label' => 'Referral Required ',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(
+          'display_label' => 0,
+        ),
+        'type' => 'options_onoff',
+        'weight' => '28',
+      ),
+    ),
+  );
+
   // Exported field: 'node-service_location-field_response_delay_after_refer'.
   $fields['node-service_location-field_response_delay_after_refer'] = array(
     'field_config' => array(
@@ -1071,6 +1139,72 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'settings' => array(),
         'type' => 'options_select',
         'weight' => '13',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-service_location-field_service_indicators'.
+  $fields['node-service_location-field_service_indicators'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_service_indicators',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'text_long',
+    ),
+    'field_instance' => array(
+      'bundle' => 'service_location',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '32',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_service_indicators',
+      'label' => 'Service Indicators',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'rows' => '5',
+        ),
+        'type' => 'text_textarea',
+        'weight' => '15',
       ),
     ),
   );
@@ -3040,11 +3174,13 @@ function amani_service_advisor_source_provider_field_default_fields() {
   t('Referral Contact Phone');
   t('Referral Method');
   t('Referral Next Step');
+  t('Referral Required ');
   t('Region');
   t('Registration Type Requirement');
   t('Request message');
   t('Response Delay after Referral');
   t('Sector/Service');
+  t('Service Indicators');
   t('Start Date');
   t('This is the text a user may send to the group administrators.');
 
