@@ -13,6 +13,122 @@ function amani_service_advisor_source_provider_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'clone_menu_links';
+  $strongarm->value = '0';
+  $export['clone_menu_links'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'clone_method';
+  $strongarm->value = 'save-edit';
+  $export['clone_method'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'clone_nodes_without_confirm';
+  $strongarm->value = '0';
+  $export['clone_nodes_without_confirm'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'clone_omitted';
+  $strongarm->value = array(
+    'about' => 'about',
+    'article' => 'article',
+    'blog' => 'blog',
+    'page' => 'page',
+    'partner' => 'partner',
+    'project' => 'project',
+    'resource' => 'resource',
+    'service_partner' => 'service_partner',
+    'webform' => 'webform',
+    'service_location' => 0,
+  );
+  $export['clone_omitted'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'clone_reset_about';
+  $strongarm->value = 0;
+  $export['clone_reset_about'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'clone_reset_article';
+  $strongarm->value = 0;
+  $export['clone_reset_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'clone_reset_blog';
+  $strongarm->value = 0;
+  $export['clone_reset_blog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'clone_reset_page';
+  $strongarm->value = 0;
+  $export['clone_reset_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'clone_reset_partner';
+  $strongarm->value = 0;
+  $export['clone_reset_partner'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'clone_reset_project';
+  $strongarm->value = 0;
+  $export['clone_reset_project'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'clone_reset_resource';
+  $strongarm->value = 0;
+  $export['clone_reset_resource'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'clone_reset_service_location';
+  $strongarm->value = 0;
+  $export['clone_reset_service_location'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'clone_reset_service_partner';
+  $strongarm->value = 0;
+  $export['clone_reset_service_partner'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'clone_reset_webform';
+  $strongarm->value = 0;
+  $export['clone_reset_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'clone_use_node_type_name';
+  $strongarm->value = 0;
+  $export['clone_use_node_type_name'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_service_location';
   $strongarm->value = 0;
   $export['comment_anonymous_service_location'] = $strongarm;
