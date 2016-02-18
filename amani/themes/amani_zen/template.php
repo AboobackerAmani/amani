@@ -35,6 +35,11 @@ function amani_zen_preprocess_maintenance_page(&$variables, $hook) {
  *   The name of the template being rendered ("html" in this case.)
  */
 function amani_zen_preprocess_html(&$variables, $hook) {
+	//Add language class to the body tag
+	if(isSet($variables['language'])){
+		$variables['classes_array'][] = $variables['language']->language;
+	}
+	
   // The body tag's classes are controlled by the $classes_array variable. To
   // remove a class from $classes_array, use array_diff().
   //$variables['classes_array'] = array_diff($variables['classes_array'], array('class-to-remove'));

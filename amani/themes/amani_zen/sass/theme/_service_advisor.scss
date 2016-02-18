@@ -1,0 +1,31 @@
+.node-service-location.view-mode-full {
+	.group-left{
+		width:35% !important;
+	}
+	.group-right{
+		width:55% !important;
+		padding:5%;
+		border-left:1px solid #ccc;
+	}
+	.field{
+		margin-bottom:15px;
+		.field-label{
+			margin-right:5px;
+		}
+		.geolocation-googlemaps-dynamic{
+			width:100% !important;
+		}
+	}
+}
+//English
+.en{
+
+}
+//arabic RTL
+.ar{
+	.node-service-location.view-mode-full {
+		.group-right{
+			border-right:1px solid #ccc;
+		}
+	}
+}
