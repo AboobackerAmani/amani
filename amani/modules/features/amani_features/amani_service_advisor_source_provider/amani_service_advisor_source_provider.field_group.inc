@@ -21,7 +21,7 @@ function amani_service_advisor_source_provider_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Additional Information',
-    'weight' => '4',
+    'weight' => '6',
     'children' => array(
       0 => 'field_service_end_date',
       1 => 'field_service_start_date',
@@ -56,8 +56,8 @@ function amani_service_advisor_source_provider_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'og_group_ref',
-      1 => 'field_service_activity_details',
-      2 => 'field_service_category',
+      1 => 'field_service_category',
+      2 => 'field_service_activity_details',
       3 => 'title',
     ),
     'format_type' => 'fieldset',
@@ -83,23 +83,24 @@ function amani_service_advisor_source_provider_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Feedback',
-    'weight' => '5',
+    'label' => 'Next Steps & Feedback',
+    'weight' => '4',
     'children' => array(
-      0 => 'field_response_delay_after_refer',
-      1 => 'field_service_feedback_delay',
+      0 => 'field_service_referral_next_step',
+      1 => 'field_response_delay_after_refer',
       2 => 'field_service_feedback_mechanism',
-      3 => 'field_service_referral_next_step',
+      3 => 'field_service_feedback_delay',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Next Steps & Feedback',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-service-feedback field-group-fieldset',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-service-feedback field-group-fieldset',
+        'description' => '',
       ),
+      'formatter' => 'collapsible',
     ),
   );
   $field_groups['group_service_feedback|node|service_location|form'] = $field_group;
@@ -115,12 +116,9 @@ function amani_service_advisor_source_provider_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Location Details',
-    'weight' => '3',
+    'weight' => '5',
     'children' => array(
       0 => 'field_service_location',
-      1 => 'field_service_location_region',
-      2 => 'field_service_location_governor',
-      3 => 'field_service_location_district',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -148,10 +146,10 @@ function amani_service_advisor_source_provider_field_group_info() {
     'label' => 'Office Information',
     'weight' => '1',
     'children' => array(
-      0 => 'field_service_location_days',
-      1 => 'field_service_location_hour_clos',
-      2 => 'field_service_location_hour_open',
-      3 => 'field_service_availability',
+      0 => 'field_service_availability',
+      1 => 'field__service_location_days',
+      2 => 'field_service_location_hour_clos',
+      3 => 'field_service_location_hour_open',
       4 => 'field_service_coverage',
       5 => 'field_service_accessibility',
     ),
@@ -179,15 +177,15 @@ function amani_service_advisor_source_provider_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Registration and Referrals',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
-      0 => 'field_service_nationality',
-      1 => 'field_service_intake_criteria',
-      2 => 'field_service_referral_method',
-      3 => 'field_service_registration_type',
-      4 => 'field_service_contact_name',
-      5 => 'field_service_contact_phone',
-      6 => 'field_service_contact_email',
+      0 => 'field_service_intake_criteria',
+      1 => 'field_service_registration_type',
+      2 => 'field_service_contact_name',
+      3 => 'field_service_contact_phone',
+      4 => 'field_service_contact_email',
+      5 => 'field_service_nationality',
+      6 => 'field_service_referral_method',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -206,9 +204,9 @@ function amani_service_advisor_source_provider_field_group_info() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Additional Information');
-  t('Feedback');
   t('General Information');
   t('Location Details');
+  t('Next Steps & Feedback');
   t('Office Information');
   t('Registration and Referrals');
 

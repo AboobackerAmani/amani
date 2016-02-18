@@ -104,7 +104,7 @@ function amani_service_advisor_source_provider_node_insert($node) {
 
     if ($arabic_node->nid){
       drupal_set_message( '<strong>' . t('You still need to complete the Arabic translation this location, either by !link now or using the Translate tab at a later time.' . '</strong>',
-                          array('!link' => l(t('clicking this link'), 'node/' . $arabic_node->nid . '/edit'), 'status')));
+                          array('!link' => l(t('clicking this link'), 'ar/node/' . $arabic_node->nid . '/edit'), 'status')));
     }
   }
 }

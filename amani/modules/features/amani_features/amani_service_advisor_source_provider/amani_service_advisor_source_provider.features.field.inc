@@ -10,47 +10,57 @@
 function amani_service_advisor_source_provider_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-service_location-field_referral_required_'.
-  $fields['node-service_location-field_referral_required_'] = array(
+  // Exported field: 'node-service_location-field__service_location_days'.
+  $fields['node-service_location-field__service_location_days'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_referral_required_',
-      'foreign keys' => array(),
+      'field_name' => 'field__service_location_days',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
       'indexes' => array(
-        'value' => array(
-          0 => 'value',
+        'tid' => array(
+          0 => 'tid',
         ),
       ),
       'locked' => '0',
-      'module' => 'list',
+      'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
-          0 => 'false',
-          1 => 'true',
+          0 => array(
+            'vocabulary' => 'service_location_availability_days',
+            'parent' => '0',
+          ),
         ),
-        'allowed_values_function' => '',
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
-      'type' => 'list_boolean',
+      'type' => 'taxonomy_term_reference',
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
       'default_value' => array(
         0 => array(
-          'value' => 0,
+          'tid' => '37',
         ),
       ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
+          'module' => 'i18n_taxonomy',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '34',
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '37',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -60,20 +70,18 @@ function amani_service_advisor_source_provider_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_referral_required_',
-      'label' => 'Referral Required ',
-      'required' => 0,
+      'field_name' => 'field__service_location_days',
+      'label' => 'Availability Days',
+      'required' => 1,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(
-          'display_label' => 0,
-        ),
-        'type' => 'options_onoff',
-        'weight' => '28',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '13',
       ),
     ),
   );
@@ -87,55 +95,44 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_response_delay_after_refer',
       'foreign keys' => array(
-        'taxonomy_term_data' => array(
+        'tid' => array(
           'columns' => array(
-            'target_id' => 'tid',
+            'tid' => 'tid',
           ),
           'table' => 'taxonomy_term_data',
         ),
       ),
       'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
+        'tid' => array(
+          0 => 'tid',
         ),
       ),
       'locked' => '0',
-      'module' => 'entityreference',
+      'module' => 'taxonomy',
       'settings' => array(
-        'handler' => 'base',
-        'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
-          ),
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'service_response_delay' => 'service_response_delay',
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'service_response_delay',
+            'parent' => '0',
           ),
         ),
-        'target_type' => 'taxonomy_term',
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
-      'type' => 'entityreference',
+      'type' => 'taxonomy_term_reference',
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
       'default_value' => NULL,
-      'default_value_function' => '',
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => FALSE,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => '16',
+          'module' => 'i18n_taxonomy',
+          'settings' => array(),
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '41',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -149,14 +146,6 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'label' => 'Response Delay after Referral',
       'required' => 0,
       'settings' => array(
-        'behaviors' => array(
-          'prepopulate' => array(
-            'status' => 0,
-          ),
-          'taxonomy-index' => array(
-            'status' => TRUE,
-          ),
-        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -164,7 +153,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '12',
+        'weight' => '33',
       ),
     ),
   );
@@ -178,54 +167,48 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_service_accessibility',
       'foreign keys' => array(
-        'taxonomy_term_data' => array(
+        'tid' => array(
           'columns' => array(
-            'target_id' => 'tid',
+            'tid' => 'tid',
           ),
           'table' => 'taxonomy_term_data',
         ),
       ),
       'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
+        'tid' => array(
+          0 => 'tid',
         ),
       ),
       'locked' => '0',
-      'module' => 'entityreference',
+      'module' => 'taxonomy',
       'settings' => array(
-        'handler' => 'base',
-        'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
-          ),
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'service_accessibility' => 'service_accessibility',
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'service_accessibility',
+            'parent' => '0',
           ),
         ),
-        'target_type' => 'taxonomy_term',
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
-      'type' => 'entityreference',
+      'type' => 'taxonomy_term_reference',
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'tid' => '7',
+        ),
+      ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => FALSE,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => '11',
+          'module' => 'i18n_taxonomy',
+          'settings' => array(),
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '8',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -239,11 +222,6 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'label' => 'Accessibility',
       'required' => 0,
       'settings' => array(
-        'behaviors' => array(
-          'taxonomy-index' => array(
-            'status' => TRUE,
-          ),
-        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -251,7 +229,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '14',
+        'weight' => '17',
       ),
     ),
   );
@@ -265,54 +243,43 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_service_activity_details',
       'foreign keys' => array(
-        'taxonomy_term_data' => array(
+        'tid' => array(
           'columns' => array(
-            'target_id' => 'tid',
+            'tid' => 'tid',
           ),
           'table' => 'taxonomy_term_data',
         ),
       ),
       'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
+        'tid' => array(
+          0 => 'tid',
         ),
       ),
       'locked' => '0',
-      'module' => 'entityreference',
+      'module' => 'taxonomy',
       'settings' => array(
-        'handler' => 'base',
-        'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
-          ),
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'service_activities' => 'service_activities',
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'service_activities',
+            'parent' => '0',
           ),
         ),
-        'target_type' => 'taxonomy_term',
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
-      'type' => 'entityreference',
+      'type' => 'taxonomy_term_reference',
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => array(),
-      'default_value_function' => '',
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => FALSE,
-          ),
-          'type' => 'entityreference_label',
+          'module' => 'i18n_taxonomy',
+          'settings' => array(),
+          'type' => 'i18n_taxonomy_term_reference_plain',
           'weight' => '2',
         ),
         'teaser' => array(
@@ -327,14 +294,6 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'label' => 'Activity Details',
       'required' => 0,
       'settings' => array(
-        'behaviors' => array(
-          'prepopulate' => array(
-            'status' => 0,
-          ),
-          'taxonomy-index' => array(
-            'status' => TRUE,
-          ),
-        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -342,7 +301,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '14',
+        'weight' => '4',
       ),
     ),
   );
@@ -356,59 +315,48 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_service_availability',
       'foreign keys' => array(
-        'taxonomy_term_data' => array(
+        'tid' => array(
           'columns' => array(
-            'target_id' => 'tid',
+            'tid' => 'tid',
           ),
           'table' => 'taxonomy_term_data',
         ),
       ),
       'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
+        'tid' => array(
+          0 => 'tid',
         ),
       ),
       'locked' => '0',
-      'module' => 'entityreference',
+      'module' => 'taxonomy',
       'settings' => array(
-        'handler' => 'base',
-        'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
-          ),
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'service_availability' => 'service_availability',
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'service_availability',
+            'parent' => '0',
           ),
         ),
-        'target_type' => 'taxonomy_term',
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
-      'type' => 'entityreference',
+      'type' => 'taxonomy_term_reference',
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
       'default_value' => array(
         0 => array(
-          'target_id' => '152',
+          'tid' => '152',
         ),
       ),
-      'default_value_function' => '',
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => FALSE,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => '9',
+          'module' => 'i18n_taxonomy',
+          'settings' => array(),
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '17',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -420,16 +368,8 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_service_availability',
       'label' => 'Availability',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
-        'behaviors' => array(
-          'prepopulate' => array(
-            'status' => 0,
-          ),
-          'taxonomy-index' => array(
-            'status' => TRUE,
-          ),
-        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -437,7 +377,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '8',
+        'weight' => '12',
       ),
     ),
   );
@@ -509,7 +449,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '12',
+        'weight' => '2',
       ),
     ),
   );
@@ -551,7 +491,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '31',
+          'weight' => '30',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -617,10 +557,9 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 34,
+          'type' => 'hidden',
+          'weight' => '35',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -644,7 +583,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '12',
+        'weight' => '31',
       ),
     ),
   );
@@ -686,10 +625,9 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 32,
+          'type' => 'hidden',
+          'weight' => '32',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -713,7 +651,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '10',
+        'weight' => '29',
       ),
     ),
   );
@@ -755,10 +693,9 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 33,
+          'type' => 'hidden',
+          'weight' => '34',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -782,7 +719,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '11',
+        'weight' => '30',
       ),
     ),
   );
@@ -796,39 +733,31 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_service_coverage',
       'foreign keys' => array(
-        'taxonomy_term_data' => array(
+        'tid' => array(
           'columns' => array(
-            'target_id' => 'tid',
+            'tid' => 'tid',
           ),
           'table' => 'taxonomy_term_data',
         ),
       ),
       'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
+        'tid' => array(
+          0 => 'tid',
         ),
       ),
       'locked' => '0',
-      'module' => 'entityreference',
+      'module' => 'taxonomy',
       'settings' => array(
-        'handler' => 'base',
-        'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
-          ),
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'service_coverage' => 'service_coverage',
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'service_coverage',
+            'parent' => '0',
           ),
         ),
-        'target_type' => 'taxonomy_term',
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
-      'type' => 'entityreference',
+      'type' => 'taxonomy_term_reference',
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
@@ -838,12 +767,10 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => FALSE,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => '10',
+          'module' => 'i18n_taxonomy',
+          'settings' => array(),
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '7',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -857,11 +784,6 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'label' => 'Coverage',
       'required' => 0,
       'settings' => array(
-        'behaviors' => array(
-          'taxonomy-index' => array(
-            'status' => TRUE,
-          ),
-        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -869,7 +791,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '13',
+        'weight' => '16',
       ),
     ),
   );
@@ -923,7 +845,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
             'show_remaining_days' => FALSE,
           ),
           'type' => 'date_default',
-          'weight' => '7',
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -970,55 +892,44 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_service_feedback_delay',
       'foreign keys' => array(
-        'taxonomy_term_data' => array(
+        'tid' => array(
           'columns' => array(
-            'target_id' => 'tid',
+            'tid' => 'tid',
           ),
           'table' => 'taxonomy_term_data',
         ),
       ),
       'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
+        'tid' => array(
+          0 => 'tid',
         ),
       ),
       'locked' => '0',
-      'module' => 'entityreference',
+      'module' => 'taxonomy',
       'settings' => array(
-        'handler' => 'base',
-        'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
-          ),
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'service_feedback_delay' => 'service_feedback_delay',
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'service_feedback_delay',
+            'parent' => '0',
           ),
         ),
-        'target_type' => 'taxonomy_term',
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
-      'type' => 'entityreference',
+      'type' => 'taxonomy_term_reference',
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
       'default_value' => NULL,
-      'default_value_function' => '',
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => FALSE,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => '18',
+          'module' => 'i18n_taxonomy',
+          'settings' => array(),
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '43',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1032,14 +943,6 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'label' => 'Feedback Delay',
       'required' => 0,
       'settings' => array(
-        'behaviors' => array(
-          'prepopulate' => array(
-            'status' => 0,
-          ),
-          'taxonomy-index' => array(
-            'status' => TRUE,
-          ),
-        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -1047,7 +950,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '14',
+        'weight' => '35',
       ),
     ),
   );
@@ -1061,55 +964,44 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_service_feedback_mechanism',
       'foreign keys' => array(
-        'taxonomy_term_data' => array(
+        'tid' => array(
           'columns' => array(
-            'target_id' => 'tid',
+            'tid' => 'tid',
           ),
           'table' => 'taxonomy_term_data',
         ),
       ),
       'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
+        'tid' => array(
+          0 => 'tid',
         ),
       ),
       'locked' => '0',
-      'module' => 'entityreference',
+      'module' => 'taxonomy',
       'settings' => array(
-        'handler' => 'base',
-        'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
-          ),
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'service_feedback_mechanism' => 'service_feedback_mechanism',
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'service_feedback_mechanism',
+            'parent' => '0',
           ),
         ),
-        'target_type' => 'taxonomy_term',
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
-      'type' => 'entityreference',
+      'type' => 'taxonomy_term_reference',
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
       'default_value' => NULL,
-      'default_value_function' => '',
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => FALSE,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => '17',
+          'module' => 'i18n_taxonomy',
+          'settings' => array(),
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '42',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1123,14 +1015,6 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'label' => 'Feedback Mechanism',
       'required' => 0,
       'settings' => array(
-        'behaviors' => array(
-          'prepopulate' => array(
-            'status' => 0,
-          ),
-          'taxonomy-index' => array(
-            'status' => TRUE,
-          ),
-        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -1138,73 +1022,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '13',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-service_location-field_service_indicators'.
-  $fields['node-service_location-field_service_indicators'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_service_indicators',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(),
-      'translatable' => '0',
-      'type' => 'text_long',
-    ),
-    'field_instance' => array(
-      'bundle' => 'service_location',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '32',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_service_indicators',
-      'label' => 'Service Indicators',
-      'required' => 0,
-      'settings' => array(
-        'text_processing' => '0',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'rows' => '5',
-        ),
-        'type' => 'text_textarea',
-        'weight' => '15',
+        'weight' => '34',
       ),
     ),
   );
@@ -1252,10 +1070,10 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'taxonomy',
+          'module' => 'i18n_taxonomy',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_plain',
-          'weight' => '12',
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '10',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1276,7 +1094,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '8',
+        'weight' => '27',
       ),
     ),
   );
@@ -1351,7 +1169,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
             'marker_icon' => '',
           ),
           'type' => 'geolocation_googlemaps_dynamic',
-          'weight' => '19',
+          'weight' => '18',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1375,276 +1193,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'scrollwheel' => 0,
         ),
         'type' => 'geolocation_googlemap',
-        'weight' => '3',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-service_location-field_service_location_days'.
-  $fields['node-service_location-field_service_location_days'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_service_location_days',
-      'foreign keys' => array(
-        'taxonomy_term_data' => array(
-          'columns' => array(
-            'target_id' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'entityreference',
-      'settings' => array(
-        'handler' => 'base',
-        'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
-          ),
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'service_location_availability_days' => 'service_location_availability_days',
-          ),
-        ),
-        'target_type' => 'taxonomy_term',
-      ),
-      'translatable' => '0',
-      'type' => 'entityreference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'service_location',
-      'default_value' => array(
-        0 => array(
-          'target_id' => '37',
-        ),
-      ),
-      'default_value_function' => '',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'inline',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => FALSE,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => '5',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_service_location_days',
-      'label' => 'Availability Day',
-      'required' => 0,
-      'settings' => array(
-        'behaviors' => array(
-          'prepopulate' => array(
-            'status' => 0,
-          ),
-          'taxonomy-index' => array(
-            'status' => TRUE,
-          ),
-        ),
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '9',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-service_location-field_service_location_district'.
-  $fields['node-service_location-field_service_location_district'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_service_location_district',
-      'foreign keys' => array(
-        'taxonomy_term_data' => array(
-          'columns' => array(
-            'target_id' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'entityreference',
-      'settings' => array(
-        'handler' => 'base',
-        'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
-          ),
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'service_location_district' => 'service_location_district',
-          ),
-        ),
-        'target_type' => 'taxonomy_term',
-      ),
-      'translatable' => '0',
-      'type' => 'entityreference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'service_location',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'inline',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => FALSE,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => '22',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_service_location_district',
-      'label' => 'District',
-      'required' => 0,
-      'settings' => array(
-        'behaviors' => array(
-          'taxonomy-index' => array(
-            'status' => TRUE,
-          ),
-        ),
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '6',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-service_location-field_service_location_governor'.
-  $fields['node-service_location-field_service_location_governor'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_service_location_governor',
-      'foreign keys' => array(
-        'taxonomy_term_data' => array(
-          'columns' => array(
-            'target_id' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'entityreference',
-      'settings' => array(
-        'handler' => 'base',
-        'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
-          ),
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'service_location_governorate' => 'service_location_governorate',
-          ),
-        ),
-        'target_type' => 'taxonomy_term',
-      ),
-      'translatable' => '0',
-      'type' => 'entityreference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'service_location',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'inline',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => FALSE,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => '21',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_service_location_governor',
-      'label' => 'Governorate',
-      'required' => 0,
-      'settings' => array(
-        'behaviors' => array(
-          'taxonomy-index' => array(
-            'status' => TRUE,
-          ),
-        ),
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '5',
+        'weight' => '20',
       ),
     ),
   );
@@ -1658,39 +1207,31 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_service_location_hour_clos',
       'foreign keys' => array(
-        'taxonomy_term_data' => array(
+        'tid' => array(
           'columns' => array(
-            'target_id' => 'tid',
+            'tid' => 'tid',
           ),
           'table' => 'taxonomy_term_data',
         ),
       ),
       'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
+        'tid' => array(
+          0 => 'tid',
         ),
       ),
       'locked' => '0',
-      'module' => 'entityreference',
+      'module' => 'taxonomy',
       'settings' => array(
-        'handler' => 'base',
-        'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
-          ),
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'service_location_hour_close' => 'service_location_hour_close',
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'service_location_hour_close',
+            'parent' => '0',
           ),
         ),
-        'target_type' => 'taxonomy_term',
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
-      'type' => 'entityreference',
+      'type' => 'taxonomy_term_reference',
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
@@ -1700,12 +1241,10 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => FALSE,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => '4',
+          'module' => 'i18n_taxonomy',
+          'settings' => array(),
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1719,11 +1258,6 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'label' => 'Office Closes At',
       'required' => 0,
       'settings' => array(
-        'behaviors' => array(
-          'taxonomy-index' => array(
-            'status' => TRUE,
-          ),
-        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -1731,7 +1265,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '12',
+        'weight' => '15',
       ),
     ),
   );
@@ -1745,39 +1279,31 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_service_location_hour_open',
       'foreign keys' => array(
-        'taxonomy_term_data' => array(
+        'tid' => array(
           'columns' => array(
-            'target_id' => 'tid',
+            'tid' => 'tid',
           ),
           'table' => 'taxonomy_term_data',
         ),
       ),
       'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
+        'tid' => array(
+          0 => 'tid',
         ),
       ),
       'locked' => '0',
-      'module' => 'entityreference',
+      'module' => 'taxonomy',
       'settings' => array(
-        'handler' => 'base',
-        'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
-          ),
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'service_location_hour_open' => 'service_location_hour_open',
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'service_location_hour_open',
+            'parent' => '0',
           ),
         ),
-        'target_type' => 'taxonomy_term',
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
-      'type' => 'entityreference',
+      'type' => 'taxonomy_term_reference',
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
@@ -1787,12 +1313,10 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => FALSE,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => '3',
+          'module' => 'i18n_taxonomy',
+          'settings' => array(),
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1806,11 +1330,6 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'label' => 'Office Opens At',
       'required' => 0,
       'settings' => array(
-        'behaviors' => array(
-          'taxonomy-index' => array(
-            'status' => TRUE,
-          ),
-        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -1818,94 +1337,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '10',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-service_location-field_service_location_region'.
-  $fields['node-service_location-field_service_location_region'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_service_location_region',
-      'foreign keys' => array(
-        'taxonomy_term_data' => array(
-          'columns' => array(
-            'target_id' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'entityreference',
-      'settings' => array(
-        'handler' => 'base',
-        'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
-          ),
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'service_location_region' => 'service_location_region',
-          ),
-        ),
-        'target_type' => 'taxonomy_term',
-      ),
-      'translatable' => '0',
-      'type' => 'entityreference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'service_location',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'inline',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => FALSE,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => '20',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_service_location_region',
-      'label' => 'Region',
-      'required' => 0,
-      'settings' => array(
-        'behaviors' => array(
-          'taxonomy-index' => array(
-            'status' => TRUE,
-          ),
-        ),
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '4',
+        'weight' => '14',
       ),
     ),
   );
@@ -1950,7 +1382,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '30',
+          'weight' => '29',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2001,59 +1433,48 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_service_nationality',
       'foreign keys' => array(
-        'taxonomy_term_data' => array(
+        'tid' => array(
           'columns' => array(
-            'target_id' => 'tid',
+            'tid' => 'tid',
           ),
           'table' => 'taxonomy_term_data',
         ),
       ),
       'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
+        'tid' => array(
+          0 => 'tid',
         ),
       ),
       'locked' => '0',
-      'module' => 'entityreference',
+      'module' => 'taxonomy',
       'settings' => array(
-        'handler' => 'base',
-        'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
-          ),
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'service_available_nationality' => 'service_available_nationality',
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'service_available_nationality',
+            'parent' => '0',
           ),
         ),
-        'target_type' => 'taxonomy_term',
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
-      'type' => 'entityreference',
+      'type' => 'taxonomy_term_reference',
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
       'default_value' => array(
         0 => array(
-          'target_id' => '128',
+          'tid' => '128',
         ),
       ),
-      'default_value_function' => '',
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => FALSE,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => '8',
+          'module' => 'i18n_taxonomy',
+          'settings' => array(),
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '38',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2065,16 +1486,8 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_service_nationality',
       'label' => 'Nationality',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
-        'behaviors' => array(
-          'prepopulate' => array(
-            'status' => 0,
-          ),
-          'taxonomy-index' => array(
-            'status' => TRUE,
-          ),
-        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -2082,7 +1495,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '7',
+        'weight' => '26',
       ),
     ),
   );
@@ -2091,64 +1504,49 @@ function amani_service_advisor_source_provider_field_default_fields() {
   $fields['node-service_location-field_service_referral_method'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_service_referral_method',
       'foreign keys' => array(
-        'taxonomy_term_data' => array(
+        'tid' => array(
           'columns' => array(
-            'target_id' => 'tid',
+            'tid' => 'tid',
           ),
           'table' => 'taxonomy_term_data',
         ),
       ),
       'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
+        'tid' => array(
+          0 => 'tid',
         ),
       ),
       'locked' => '0',
-      'module' => 'entityreference',
+      'module' => 'taxonomy',
       'settings' => array(
-        'handler' => 'base',
-        'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
-          ),
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'service_referral_method' => 'service_referral_method',
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'service_referral_method',
+            'parent' => '0',
           ),
         ),
-        'target_type' => 'taxonomy_term',
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
-      'type' => 'entityreference',
+      'type' => 'taxonomy_term_reference',
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => array(
-        0 => array(
-          'target_id' => '86',
-        ),
-      ),
-      'default_value_function' => '',
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => FALSE,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => '14',
+          'module' => 'i18n_taxonomy',
+          'settings' => array(),
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '39',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2160,16 +1558,8 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_service_referral_method',
       'label' => 'Referral Method',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
-        'behaviors' => array(
-          'prepopulate' => array(
-            'status' => 0,
-          ),
-          'taxonomy-index' => array(
-            'status' => TRUE,
-          ),
-        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -2177,7 +1567,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '9',
+        'weight' => '28',
       ),
     ),
   );
@@ -2191,55 +1581,44 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_service_referral_next_step',
       'foreign keys' => array(
-        'taxonomy_term_data' => array(
+        'tid' => array(
           'columns' => array(
-            'target_id' => 'tid',
+            'tid' => 'tid',
           ),
           'table' => 'taxonomy_term_data',
         ),
       ),
       'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
+        'tid' => array(
+          0 => 'tid',
         ),
       ),
       'locked' => '0',
-      'module' => 'entityreference',
+      'module' => 'taxonomy',
       'settings' => array(
-        'handler' => 'base',
-        'handler_settings' => array(
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 0,
-            ),
-          ),
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'service_referral_next_step' => 'service_referral_next_step',
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'service_referral_next_step',
+            'parent' => '0',
           ),
         ),
-        'target_type' => 'taxonomy_term',
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
-      'type' => 'entityreference',
+      'type' => 'taxonomy_term_reference',
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
       'default_value' => NULL,
-      'default_value_function' => '',
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => FALSE,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => '15',
+          'module' => 'i18n_taxonomy',
+          'settings' => array(),
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '40',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2250,17 +1629,9 @@ function amani_service_advisor_source_provider_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_service_referral_next_step',
-      'label' => 'Referral Next Step',
+      'label' => 'Immediate Next Step after Referral',
       'required' => 0,
       'settings' => array(
-        'behaviors' => array(
-          'prepopulate' => array(
-            'status' => 0,
-          ),
-          'taxonomy-index' => array(
-            'status' => TRUE,
-          ),
-        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -2268,7 +1639,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '11',
+        'weight' => '32',
       ),
     ),
   );
@@ -2316,10 +1687,10 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'taxonomy',
+          'module' => 'i18n_taxonomy',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_plain',
-          'weight' => '13',
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '11',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2340,7 +1711,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '6',
+        'weight' => '25',
       ),
     ),
   );
@@ -2394,7 +1765,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
             'show_remaining_days' => FALSE,
           ),
           'type' => 'date_default',
-          'weight' => '6',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2542,7 +1913,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'og',
         'settings' => array(),
         'type' => 'og_complex',
-        'weight' => '11',
+        'weight' => '1',
       ),
     ),
   );
@@ -3146,19 +2517,18 @@ function amani_service_advisor_source_provider_field_default_fields() {
   t('Accessibility');
   t('Activity Details');
   t('Availability');
-  t('Availability Day');
+  t('Availability Days');
   t('Choose the Service, which is nested under the Sector');
   t('Comments');
   t('Coverage');
   t('Determine if this is an OG group.');
-  t('District');
   t('End Date');
   t('Feedback Delay');
   t('Feedback Mechanism');
   t('Full Partner Name');
-  t('Governorate');
   t('Group');
   t('Group membership');
+  t('Immediate Next Step after Referral');
   t('Intake Criteria');
   t('Location');
   t('Logo');
@@ -3173,14 +2543,10 @@ function amani_service_advisor_source_provider_field_default_fields() {
   t('Referral Contact Name');
   t('Referral Contact Phone');
   t('Referral Method');
-  t('Referral Next Step');
-  t('Referral Required ');
-  t('Region');
   t('Registration Type Requirement');
   t('Request message');
   t('Response Delay after Referral');
   t('Sector/Service');
-  t('Service Indicators');
   t('Start Date');
   t('This is the text a user may send to the group administrators.');
 

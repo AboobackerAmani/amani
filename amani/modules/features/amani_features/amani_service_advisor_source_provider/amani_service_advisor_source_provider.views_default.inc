@@ -544,14 +544,11 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_availability']['settings'] = array(
     'link' => 0,
   );
-  /* Field: Content: Availability Day */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_service_location_days_1']['id'] = 'field_service_location_days_1';
   $handler->display->display_options['fields']['field_service_location_days_1']['table'] = 'field_data_field_service_location_days';
   $handler->display->display_options['fields']['field_service_location_days_1']['field'] = 'field_service_location_days';
   $handler->display->display_options['fields']['field_service_location_days_1']['label'] = 'details:Availability Day';
-  $handler->display->display_options['fields']['field_service_location_days_1']['settings'] = array(
-    'link' => 0,
-  );
   /* Field: Content: Referral Method */
   $handler->display->display_options['fields']['field_service_referral_method']['id'] = 'field_service_referral_method';
   $handler->display->display_options['fields']['field_service_referral_method']['table'] = 'field_data_field_service_referral_method';
@@ -561,7 +558,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_referral_method']['settings'] = array(
     'link' => 0,
   );
-  /* Field: Content: Referral Next Step */
+  /* Field: Content: Immediate Next Step after Referral */
   $handler->display->display_options['fields']['field_service_referral_next_step']['id'] = 'field_service_referral_next_step';
   $handler->display->display_options['fields']['field_service_referral_next_step']['table'] = 'field_data_field_service_referral_next_step';
   $handler->display->display_options['fields']['field_service_referral_next_step']['field'] = 'field_service_referral_next_step';
