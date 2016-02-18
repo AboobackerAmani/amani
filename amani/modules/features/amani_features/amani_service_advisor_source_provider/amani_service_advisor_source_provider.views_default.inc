@@ -280,7 +280,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['style_options']['unescaped_slashes'] = 0;
   $handler->display->display_options['style_options']['unescaped_unicode'] = 0;
   $handler->display->display_options['style_options']['char_encoding'] = array();
-  /* Relationship: Content: Category (field_service_category) */
+  /* Relationship: Content: Sector/Service (field_service_category) */
   $handler->display->display_options['relationships']['field_service_category_tid']['id'] = 'field_service_category_tid';
   $handler->display->display_options['relationships']['field_service_category_tid']['table'] = 'field_data_field_service_category';
   $handler->display->display_options['relationships']['field_service_category_tid']['field'] = 'field_service_category_tid';
@@ -318,7 +318,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['relationship'] = 'parent';
   $handler->display->display_options['fields']['name']['label'] = 'category';
-  /* Field: Content: Category */
+  /* Field: Content: Sector/Service */
   $handler->display->display_options['fields']['field_service_category']['id'] = 'field_service_category';
   $handler->display->display_options['fields']['field_service_category']['table'] = 'field_data_field_service_category';
   $handler->display->display_options['fields']['field_service_category']['field'] = 'field_service_category';
@@ -356,7 +356,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['name_1']['field'] = 'name';
   $handler->display->display_options['fields']['name_1']['relationship'] = 'field_service_category_tid';
   $handler->display->display_options['fields']['name_1']['label'] = 'servicesProvided';
-  /* Field: Content: Service Location */
+  /* Field: Content: Location */
   $handler->display->display_options['fields']['field_service_location']['id'] = 'field_service_location';
   $handler->display->display_options['fields']['field_service_location']['table'] = 'field_data_field_service_location';
   $handler->display->display_options['fields']['field_service_location']['field'] = 'field_service_location';
@@ -396,7 +396,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_nationality']['settings'] = array(
     'link' => 0,
   );
-  /* Field: Content: Service Intake Criteria */
+  /* Field: Content: Intake Criteria */
   $handler->display->display_options['fields']['field_service_intake_criteria']['id'] = 'field_service_intake_criteria';
   $handler->display->display_options['fields']['field_service_intake_criteria']['table'] = 'field_data_field_service_intake_criteria';
   $handler->display->display_options['fields']['field_service_intake_criteria']['field'] = 'field_service_intake_criteria';
@@ -419,7 +419,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_coverage']['settings'] = array(
     'link' => 0,
   );
-  /* Field: Content: Service Availability */
+  /* Field: Content: Availability */
   $handler->display->display_options['fields']['field_service_availability']['id'] = 'field_service_availability';
   $handler->display->display_options['fields']['field_service_availability']['table'] = 'field_data_field_service_availability';
   $handler->display->display_options['fields']['field_service_availability']['field'] = 'field_service_availability';
@@ -470,7 +470,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_feedback_delay']['settings'] = array(
     'link' => 0,
   );
-  /* Field: Content: Service Registration type */
+  /* Field: Content: Registration Type Requirement */
   $handler->display->display_options['fields']['field_service_registration_type']['id'] = 'field_service_registration_type';
   $handler->display->display_options['fields']['field_service_registration_type']['table'] = 'field_data_field_service_registration_type';
   $handler->display->display_options['fields']['field_service_registration_type']['field'] = 'field_service_registration_type';
@@ -540,7 +540,7 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('details:Referral Next Steps'),
     t('details:Feedback Mechanism'),
     t('details:Feedback Delay'),
-    t('Service Registration type'),
+    t('Registration Type Requirement'),
     t('Published'),
     t('Page'),
   );
