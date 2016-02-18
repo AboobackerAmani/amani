@@ -98,7 +98,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_category']['id'] = 'field_service_category';
   $handler->display->display_options['fields']['field_service_category']['table'] = 'field_data_field_service_category';
   $handler->display->display_options['fields']['field_service_category']['field'] = 'field_service_category';
-  $handler->display->display_options['fields']['field_service_category']['label'] = 'Sector';
+  $handler->display->display_options['fields']['field_service_category']['label'] = 'Service';
   $handler->display->display_options['fields']['field_service_category']['type'] = 'i18n_taxonomy_term_reference_plain';
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
@@ -348,6 +348,7 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('term from field_service_category'),
     t('Sector'),
     t('Org'),
+    t('Service'),
     t('Title'),
     t('Arabic Title'),
     t('Translation Status'),
@@ -358,7 +359,6 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('Edit English'),
     t('Edit Arabic'),
     t('All'),
-    t('Service'),
     t('Service list'),
     t('Services'),
   );
