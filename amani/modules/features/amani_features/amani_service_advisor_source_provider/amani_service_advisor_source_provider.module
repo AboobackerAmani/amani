@@ -108,3 +108,14 @@ function amani_service_advisor_source_provider_node_insert($node) {
     }
   }
 }
+
+function amani_service_advisor_source_provider_views_pre_render(&$view) {
+  if ($view->name=='service_location_list') {
+    global $language;
+    if ($language->language == 'en'){
+      return;
+    }
+    header('location: /?lang=en');
+    exit;
+  }
+}
