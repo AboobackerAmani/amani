@@ -1,3 +1,17 @@
+.html.node-type-service-location,
+.page-user-{
+	//hides
+	.tabs-primary {
+		display:none;
+	}
+	h1.page__title.title{
+    text-transform: none ;
+    font-size: 23px ;
+    text-align: left ;
+    margin: 0;
+	}
+}
+
 .node-service-location.view-mode-full {
 	.group-left{
 		width:35% !important;
@@ -17,24 +31,13 @@
 		}
 	}
 }
-//English 
-.en{
 
-}
-//arabic RTL
-.ar{
-	.node-service-location.view-mode-full {
-		.group-right{
-			border-right:1px solid #ccc;
-		}
-		.field-label{
-			margin-left:5px;
-		}
-	}
-}
 
 
 //blocks
+.service_partner_for_node{
+	
+}
 .view-service-partner-login{
 	.view-content{
 		position:relative;
@@ -49,7 +52,7 @@
 		}
 		.views-field-nothing-5 {
 	    position: absolute;
-	    right: 20%;
+	    right: 0%;
 	    top: 0px;
 	    margin: 10px;
 	    background: #eee;
@@ -61,32 +64,36 @@
 				}
 			}
 		}
-		.views-field-nothing-3 {
-    	position: absolute;
-    	bottom: -69px;
-			background: #eee;
-			margin: 10px;
+		.views-field-nothing-2 a{
+			color:white;
+			background: #414042;
 			padding: 7px;
-    	left: 110px;
 			width:auto !important;
-
+			&:hover{
+				background:#5a595c;
+			};
 		}
 		.views-field-field-logo{
-	    position: absolute;
-	    right: 0px;
-			width:auto !important;
+			float:left;
+			margin: 0px 15px 0px 0px;
 		}
-		.views-field {
-			width:70%;
-		}
+//		.views-field {
+//			width:70%;
+//		}
 	}
 
 }
-.view-service-location-list{
-	.views-table{
-		width:100%;
+#block-views-cb19055a72c56b23d58f3f5971226695{
+	clear:both;
+	margin-top:90px;
+	.view-service-location-list{
+
+		.views-table{
+			width:100%;
+		}
 	}
 }
+
 .ar{
 	.view-service-partner-login{
 		.view-content{
@@ -97,19 +104,12 @@
 				}
 			}
 			.views-field-nothing-5 {
-		    left: 20%;
+		    left: 0%;
 		    right: auto;
 			}
 			.views-field-nothing-3 {
 	    	right: 110px;
 				left:auto;
-			}
-			.views-field-field-logo{
-		    left: 0px;
-				right:auto;
-			}
-			.views-field {
-				width:80%;
 			}
 		}
 
@@ -117,6 +117,22 @@
 	.view-service-location-list{
 		.views-table.cols-5{
 			width:100%;
+		}
+	}
+}
+
+//English vs.Arabic
+.en{
+
+}
+//arabic RTL
+.ar{
+	.node-service-location.view-mode-full {
+		.group-right{
+			border-right:1px solid #ccc;
+		}
+		.field-label{
+			margin-left:5px;
 		}
 	}
 }
