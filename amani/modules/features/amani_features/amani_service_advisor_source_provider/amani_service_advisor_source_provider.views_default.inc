@@ -133,8 +133,8 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['translate']['exclude'] = TRUE;
   $handler->display->display_options['fields']['translate']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['translate']['type'] = 'custom';
-  $handler->display->display_options['fields']['translate']['type_custom_true'] = 'Need Translation';
-  $handler->display->display_options['fields']['translate']['type_custom_false'] = 'Translation Complete ';
+  $handler->display->display_options['fields']['translate']['type_custom_true'] = 'Needs Work';
+  $handler->display->display_options['fields']['translate']['type_custom_false'] = 'Complete ';
   $handler->display->display_options['fields']['translate']['not'] = 0;
   /* Field: Edit translation */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
@@ -190,6 +190,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'service_location' => 'service_location',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
@@ -197,40 +198,18 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['filters']['language']['value'] = array(
     '***DEFAULT_LANGUAGE***' => '***DEFAULT_LANGUAGE***',
   );
-  /* Filter criterion: Content: Sector/Service (field_service_category) */
-  $handler->display->display_options['filters']['field_service_category_tid']['id'] = 'field_service_category_tid';
-  $handler->display->display_options['filters']['field_service_category_tid']['table'] = 'field_data_field_service_category';
-  $handler->display->display_options['filters']['field_service_category_tid']['field'] = 'field_service_category_tid';
-  $handler->display->display_options['filters']['field_service_category_tid']['value'] = array(
-    99 => '99',
-    102 => '102',
-    101 => '101',
-    103 => '103',
-    106 => '106',
-    105 => '105',
-    108 => '108',
-    109 => '109',
-    111 => '111',
-    113 => '113',
-    115 => '115',
-    117 => '117',
-    116 => '116',
-    118 => '118',
-    114 => '114',
-    120 => '120',
-    122 => '122',
-    121 => '121',
-    124 => '124',
-    125 => '125',
-    126 => '126',
-    127 => '127',
-  );
-  $handler->display->display_options['filters']['field_service_category_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_service_category_tid']['expose']['operator_id'] = 'field_service_category_tid_op';
-  $handler->display->display_options['filters']['field_service_category_tid']['expose']['label'] = 'Filter by Service Locations';
-  $handler->display->display_options['filters']['field_service_category_tid']['expose']['operator'] = 'field_service_category_tid_op';
-  $handler->display->display_options['filters']['field_service_category_tid']['expose']['identifier'] = 'field_service_category_tid';
-  $handler->display->display_options['filters']['field_service_category_tid']['expose']['remember_roles'] = array(
+  $handler->display->display_options['filters']['language']['group'] = 1;
+  /* Filter criterion: Content: Has taxonomy terms (with depth) */
+  $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['group'] = 1;
+  $handler->display->display_options['filters']['term_node_tid_depth']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator_id'] = 'term_node_tid_depth_op';
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['label'] = 'Filter by Sector/Service';
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator'] = 'term_node_tid_depth_op';
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['identifier'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
@@ -238,10 +217,10 @@ function amani_service_advisor_source_provider_views_default_views() {
     6 => 0,
     4 => 0,
   );
-  $handler->display->display_options['filters']['field_service_category_tid']['expose']['reduce'] = TRUE;
-  $handler->display->display_options['filters']['field_service_category_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_service_category_tid']['vocabulary'] = 'service_categories';
-  $handler->display->display_options['filters']['field_service_category_tid']['hierarchy'] = 1;
+  $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
+  $handler->display->display_options['filters']['term_node_tid_depth']['vocabulary'] = 'service_categories';
+  $handler->display->display_options['filters']['term_node_tid_depth']['hierarchy'] = 1;
+  $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '1';
 
   /* Display: Service list */
   $handler = $view->new_display('block', 'Service list', 'service_location_list');
@@ -369,15 +348,15 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('Service Location'),
     t('Service Location (Ar)'),
     t('Translation Status'),
-    t('Need Translation'),
-    t('Translation Complete '),
+    t('Needs Work'),
+    t('Complete '),
     t('Translation'),
     t('[translate] <a href="/node/[nid]/translate"> edit</a>'),
     t('Edit English'),
     t('Edit Arabic'),
     t('Clone'),
     t('All'),
-    t('Filter by Service Locations'),
+    t('Filter by Sector/Service'),
     t('Service list'),
     t('Services'),
   );
