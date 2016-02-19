@@ -451,6 +451,20 @@ function amani_service_advisor_source_provider_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'masquerade_admin_roles';
+  $strongarm->value = array(
+    3 => '3',
+    4 => '4',
+    1 => 0,
+    2 => 0,
+    5 => 0,
+    6 => 0,
+  );
+  $export['masquerade_admin_roles'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_service_location';
   $strongarm->value = array(
     0 => 'main-menu',
