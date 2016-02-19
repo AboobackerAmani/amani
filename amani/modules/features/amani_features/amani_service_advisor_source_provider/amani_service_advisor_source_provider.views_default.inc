@@ -149,12 +149,17 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['label'] = 'Edit English';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
-  /* Field: Content: Edit link */
-  $handler->display->display_options['fields']['edit_node_1']['id'] = 'edit_node_1';
-  $handler->display->display_options['fields']['edit_node_1']['table'] = 'views_entity_node';
-  $handler->display->display_options['fields']['edit_node_1']['field'] = 'edit_node';
-  $handler->display->display_options['fields']['edit_node_1']['relationship'] = 'translation';
-  $handler->display->display_options['fields']['edit_node_1']['label'] = 'Edit Arabic';
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid_1']['id'] = 'nid_1';
+  $handler->display->display_options['fields']['nid_1']['table'] = 'node';
+  $handler->display->display_options['fields']['nid_1']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid_1']['relationship'] = 'translation';
+  $handler->display->display_options['fields']['nid_1']['label'] = 'Edit Arabic';
+  $handler->display->display_options['fields']['nid_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['nid_1']['alter']['text'] = 'edit';
+  $handler->display->display_options['fields']['nid_1']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['nid_1']['alter']['path'] = '/ar/node/[nid_1]/edit?destination=/';
+  $handler->display->display_options['fields']['nid_1']['alter']['absolute'] = TRUE;
   /* Field: Content: Clone link */
   $handler->display->display_options['fields']['clone_node']['id'] = 'clone_node';
   $handler->display->display_options['fields']['clone_node']['table'] = 'node';
@@ -354,6 +359,7 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('[translate] <a href="/node/[nid]/translate"> edit</a>'),
     t('Edit English'),
     t('Edit Arabic'),
+    t('edit'),
     t('Clone'),
     t('All'),
     t('Filter by Sector/Service'),
