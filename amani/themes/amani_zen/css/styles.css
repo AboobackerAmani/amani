@@ -6755,125 +6755,200 @@ h1.title {
   }
 }
 
-/* line 4, ../sass/theme/_service_advisor.scss */
-.html.node-type-service-location .tabs-primary,
+/* line 1, ../sass/theme/_service_advisor.scss */
+.header-logo {
+  display: none;
+}
+
+/* line 9, ../sass/theme/_service_advisor.scss */
 .page-user- .tabs-primary {
   display: none;
 }
-/* line 7, ../sass/theme/_service_advisor.scss */
-.html.node-type-service-location h1.page__title.title,
+/* line 12, ../sass/theme/_service_advisor.scss */
 .page-user- h1.page__title.title {
+  background: #eed;
+  padding: 7px;
   text-transform: none;
   font-size: 23px;
   text-align: left;
   margin: 0;
+  color: black;
+  font-family: inherit !important;
 }
 
-/* line 16, ../sass/theme/_service_advisor.scss */
+/* line 24, ../sass/theme/_service_advisor.scss */
+.html.node-type-service-location .form-type-select .description {
+  display: none;
+}
+/* line 28, ../sass/theme/_service_advisor.scss */
+.html.node-type-service-location .action-links {
+  list-style: none;
+}
+/* line 30, ../sass/theme/_service_advisor.scss */
+.html.node-type-service-location .action-links a {
+  color: white;
+  background: #414042;
+  padding: 7px;
+  width: 93px;
+  display: block;
+}
+/* line 36, ../sass/theme/_service_advisor.scss */
+.html.node-type-service-location .action-links a:hover {
+  background: #5a595c;
+}
+
+/* line 44, ../sass/theme/_service_advisor.scss */
 .node-service-location.view-mode-full .group-left {
   width: 35% !important;
 }
-/* line 19, ../sass/theme/_service_advisor.scss */
+/* line 47, ../sass/theme/_service_advisor.scss */
 .node-service-location.view-mode-full .group-right {
   width: 55% !important;
   padding: 5%;
   border-left: 1px solid #ccc;
 }
-/* line 24, ../sass/theme/_service_advisor.scss */
+/* line 52, ../sass/theme/_service_advisor.scss */
 .node-service-location.view-mode-full .field {
   margin-bottom: 15px;
 }
-/* line 26, ../sass/theme/_service_advisor.scss */
+/* line 54, ../sass/theme/_service_advisor.scss */
 .node-service-location.view-mode-full .field .field-label {
   margin-right: 5px;
 }
-/* line 29, ../sass/theme/_service_advisor.scss */
-.node-service-location.view-mode-full .field .geolocation-googlemaps-dynamic {
-  width: 100% !important;
+
+/* line 61, ../sass/theme/_service_advisor.scss */
+td.views-field {
+  line-height: 35px;
+  font-size: 15px;
 }
 
-/* line 42, ../sass/theme/_service_advisor.scss */
+/* line 72, ../sass/theme/_service_advisor.scss */
+.view-service-location-list .views-exposed-widgets .description {
+  display: none;
+}
+/* line 76, ../sass/theme/_service_advisor.scss */
+.view-service-location-list #edit-submit-service-location-list {
+  margin-top: 15px;
+}
+
+/* line 81, ../sass/theme/_service_advisor.scss */
 .view-service-partner-login .view-content {
   position: relative;
 }
-/* line 44, ../sass/theme/_service_advisor.scss */
+/* line 83, ../sass/theme/_service_advisor.scss */
 .view-service-partner-login .view-content .views-field-field-service-partner-url {
   margin-bottom: 10px;
 }
-/* line 48, ../sass/theme/_service_advisor.scss */
+/* line 87, ../sass/theme/_service_advisor.scss */
 .view-service-partner-login .view-content .views-field-field-service-partner-full-name h3 {
   line-height: 0px;
   margin-bottom: 10px;
 }
-/* line 53, ../sass/theme/_service_advisor.scss */
+/* line 92, ../sass/theme/_service_advisor.scss */
+.view-service-partner-login .view-content .views-field-body {
+  margin-bottom: 64px;
+}
+/* line 95, ../sass/theme/_service_advisor.scss */
 .view-service-partner-login .view-content .views-field-nothing-5 {
   position: absolute;
   right: 0%;
   top: 0px;
-  margin: 10px;
+  margin: 9px 0;
   background: #eee;
   padding: 7px;
   width: auto !important;
 }
-/* line 62, ../sass/theme/_service_advisor.scss */
+/* line 104, ../sass/theme/_service_advisor.scss */
 .view-service-partner-login .view-content .views-field-nothing-5 .link-wrapper a {
   padding: 0 7px;
 }
-/* line 67, ../sass/theme/_service_advisor.scss */
+/* line 109, ../sass/theme/_service_advisor.scss */
+.view-service-partner-login .view-content .views-field-nothing-2 {
+  position: absolute;
+  left: 225px;
+  bottom: -97px;
+}
+/* line 113, ../sass/theme/_service_advisor.scss */
 .view-service-partner-login .view-content .views-field-nothing-2 a {
   color: white;
   background: #414042;
   padding: 7px;
   width: auto !important;
 }
-/* line 72, ../sass/theme/_service_advisor.scss */
+/* line 118, ../sass/theme/_service_advisor.scss */
 .view-service-partner-login .view-content .views-field-nothing-2 a:hover {
   background: #5a595c;
 }
-/* line 76, ../sass/theme/_service_advisor.scss */
+/* line 123, ../sass/theme/_service_advisor.scss */
 .view-service-partner-login .view-content .views-field-field-logo {
   float: left;
-  margin: 0px 15px 0px 0px;
+  margin: 9px 15px 0px 0px;
 }
 
-/* line 86, ../sass/theme/_service_advisor.scss */
+/* line 132, ../sass/theme/_service_advisor.scss */
 #block-views-cb19055a72c56b23d58f3f5971226695 {
   clear: both;
-  margin-top: 90px;
+  margin-top: 67px;
 }
-/* line 91, ../sass/theme/_service_advisor.scss */
+/* line 137, ../sass/theme/_service_advisor.scss */
 #block-views-cb19055a72c56b23d58f3f5971226695 .view-service-location-list .views-table {
   width: 100%;
 }
 
-/* line 99, ../sass/theme/_service_advisor.scss */
+/* line 144, ../sass/theme/_service_advisor.scss */
+.ar ul.action-links {
+  padding: 0 0 0 20px;
+}
+/* line 147, ../sass/theme/_service_advisor.scss */
+.ar h1.page__title.title {
+  text-align: right;
+}
+/* line 151, ../sass/theme/_service_advisor.scss */
+.ar table td.views-align-left {
+  text-align: right;
+}
+/* line 156, ../sass/theme/_service_advisor.scss */
 .ar .view-service-partner-login .view-content {
   position: relative;
 }
-/* line 102, ../sass/theme/_service_advisor.scss */
+/* line 158, ../sass/theme/_service_advisor.scss */
+.ar .view-service-partner-login .view-content .views-field-field-logo {
+  float: right;
+  margin: 9px 0px 0px 15px;
+}
+/* line 163, ../sass/theme/_service_advisor.scss */
 .ar .view-service-partner-login .view-content .views-field-field-service-partner-full-name h3 {
   line-height: 0px;
 }
-/* line 106, ../sass/theme/_service_advisor.scss */
+/* line 167, ../sass/theme/_service_advisor.scss */
+.ar .view-service-partner-login .view-content .views-field-nothing-2 {
+  right: 153px;
+  left: auto;
+}
+/* line 171, ../sass/theme/_service_advisor.scss */
 .ar .view-service-partner-login .view-content .views-field-nothing-5 {
   left: 0%;
   right: auto;
 }
-/* line 110, ../sass/theme/_service_advisor.scss */
+/* line 175, ../sass/theme/_service_advisor.scss */
 .ar .view-service-partner-login .view-content .views-field-nothing-3 {
   right: 110px;
   left: auto;
 }
-/* line 118, ../sass/theme/_service_advisor.scss */
+/* line 183, ../sass/theme/_service_advisor.scss */
+.ar .view-service-location-list .views-exposed-form .views-exposed-widget {
+  padding: .5em 0 0 1em !important;
+}
+/* line 186, ../sass/theme/_service_advisor.scss */
 .ar .view-service-location-list .views-table.cols-5 {
   width: 100%;
 }
 
-/* line 131, ../sass/theme/_service_advisor.scss */
+/* line 199, ../sass/theme/_service_advisor.scss */
 .ar .node-service-location.view-mode-full .group-right {
   border-right: 1px solid #ccc;
 }
-/* line 134, ../sass/theme/_service_advisor.scss */
+/* line 202, ../sass/theme/_service_advisor.scss */
 .ar .node-service-location.view-mode-full .field-label {
   margin-left: 5px;
 }

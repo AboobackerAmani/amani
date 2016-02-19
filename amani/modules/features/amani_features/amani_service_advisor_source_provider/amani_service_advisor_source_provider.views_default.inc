@@ -250,14 +250,14 @@ function amani_service_advisor_source_provider_views_default_views() {
     'title_2' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
-      'align' => 'views-align-center',
+      'align' => 'views-align-left',
       'separator' => '',
       'empty_column' => 0,
     ),
     'name' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
-      'align' => 'views-align-center',
+      'align' => 'views-align-left',
       'separator' => '',
       'empty_column' => 0,
     ),

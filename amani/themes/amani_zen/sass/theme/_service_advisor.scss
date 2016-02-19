@@ -1,14 +1,42 @@
-.html.node-type-service-location,
+.header-logo {
+	display:none;
+}
+
+
+
 .page-user-{
 	//hides
 	.tabs-primary {
 		display:none;
 	}
 	h1.page__title.title{
+    background: #eed;
+    padding: 7px;
     text-transform: none ;
     font-size: 23px ;
     text-align: left ;
     margin: 0;
+    color: black;
+		font-family:inherit !important;
+	}
+}
+.html.node-type-service-location{
+	.form-type-select .description{
+		display: none;
+	}
+	.action-links 
+	{
+    list-style: none;
+		a{
+	    color: white;
+	    background: #414042;
+	    padding: 7px;
+			width:93px;
+			display:block;
+			&:hover{
+				background:#5a595c;
+			};
+		}
 	}
 }
 
@@ -26,17 +54,28 @@
 		.field-label{
 			margin-right:5px;
 		}
-		.geolocation-googlemaps-dynamic{
-			width:100% !important;
-		}
 	}
 }
 
-
+//tables
+td.views-field {
+	line-height: 35px;
+	font-size: 15px;
+}
 
 //blocks
 .service_partner_for_node{
 	
+}
+.view-service-location-list{
+	.views-exposed-widgets {
+		.description{
+			display:none;
+		}
+	}
+	#edit-submit-service-location-list{
+		    margin-top:15px;
+	}
 }
 .view-service-partner-login{
 	.view-content{
@@ -50,11 +89,14 @@
 				margin-bottom:10px;
 			}
 		}
+		.views-field-body{
+			    margin-bottom: 64px;
+		}
 		.views-field-nothing-5 {
 	    position: absolute;
 	    right: 0%;
 	    top: 0px;
-	    margin: 10px;
+      margin: 9px 0;
 	    background: #eee;
 	    padding: 7px;
 	    width: auto !important;
@@ -64,28 +106,32 @@
 				}
 			}
 		}
-		.views-field-nothing-2 a{
-			color:white;
-			background: #414042;
-			padding: 7px;
-			width:auto !important;
-			&:hover{
-				background:#5a595c;
-			};
+		.views-field-nothing-2 {
+	    position: absolute;
+  		left: 225px;
+	    bottom: -97px;
+			a{
+				color:white;
+				background: #414042;
+				padding: 7px;
+				width:auto !important;
+				&:hover{
+					background:#5a595c;
+				}
+			}	
 		}
 		.views-field-field-logo{
 			float:left;
-			margin: 0px 15px 0px 0px;
+			margin: 9px 15px 0px 0px;
+			
 		}
-//		.views-field {
-//			width:70%;
-//		}
+
 	}
 
 }
 #block-views-cb19055a72c56b23d58f3f5971226695{
 	clear:both;
-	margin-top:90px;
+	margin-top:67px;
 	.view-service-location-list{
 
 		.views-table{
@@ -95,13 +141,32 @@
 }
 
 .ar{
+	ul.action-links{
+		padding: 0 0 0 20px;
+	}
+	h1.page__title.title{
+    text-align: right;
+	}
+	table {
+		td.views-align-left{
+			text-align: right;
+		}
+	}
 	.view-service-partner-login{
 		.view-content{
 			position:relative;
+			.views-field-field-logo{
+				float: right;
+		    margin: 9px 0px 0px 15px;
+			}
 			.views-field-field-service-partner-full-name{
 				h3{
 			    line-height: 0px;
 				}
+			}
+			.views-field-nothing-2 {
+				right: 153px;
+		    left: auto;
 			}
 			.views-field-nothing-5 {
 		    left: 0%;
@@ -115,6 +180,9 @@
 
 	}
 	.view-service-location-list{
+		.views-exposed-form .views-exposed-widget{
+			    padding: .5em 0 0 1em !important;
+		}
 		.views-table.cols-5{
 			width:100%;
 		}
