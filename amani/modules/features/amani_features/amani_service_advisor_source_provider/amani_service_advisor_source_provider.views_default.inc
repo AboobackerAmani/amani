@@ -133,7 +133,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['translate']['exclude'] = TRUE;
   $handler->display->display_options['fields']['translate']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['translate']['type'] = 'custom';
-  $handler->display->display_options['fields']['translate']['type_custom_true'] = 'Needs Work';
+  $handler->display->display_options['fields']['translate']['type_custom_true'] = 'Needs work';
   $handler->display->display_options['fields']['translate']['type_custom_false'] = 'Complete ';
   $handler->display->display_options['fields']['translate']['not'] = 0;
   /* Field: Edit translation */
@@ -149,12 +149,16 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['label'] = 'Edit English';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
-  /* Field: Content: Edit link */
-  $handler->display->display_options['fields']['edit_node_1']['id'] = 'edit_node_1';
-  $handler->display->display_options['fields']['edit_node_1']['table'] = 'views_entity_node';
-  $handler->display->display_options['fields']['edit_node_1']['field'] = 'edit_node';
-  $handler->display->display_options['fields']['edit_node_1']['relationship'] = 'translation';
-  $handler->display->display_options['fields']['edit_node_1']['label'] = 'Edit Arabic';
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid_1']['id'] = 'nid_1';
+  $handler->display->display_options['fields']['nid_1']['table'] = 'node';
+  $handler->display->display_options['fields']['nid_1']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid_1']['relationship'] = 'translation';
+  $handler->display->display_options['fields']['nid_1']['label'] = 'Edit Arabic';
+  $handler->display->display_options['fields']['nid_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['nid_1']['alter']['text'] = 'Edit';
+  $handler->display->display_options['fields']['nid_1']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['nid_1']['alter']['path'] = '/ar/node/[nid_1]/edit?destination=/';
   /* Field: Content: Clone link */
   $handler->display->display_options['fields']['clone_node']['id'] = 'clone_node';
   $handler->display->display_options['fields']['clone_node']['table'] = 'node';
@@ -348,12 +352,13 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('Service Location'),
     t('Service Location (Ar)'),
     t('Translation Status'),
-    t('Needs Work'),
+    t('Needs work'),
     t('Complete '),
     t('Translation'),
     t('[translate] <a href="/node/[nid]/translate"> edit</a>'),
     t('Edit English'),
     t('Edit Arabic'),
+    t('Edit'),
     t('Clone'),
     t('All'),
     t('Filter by Sector/Service'),

@@ -1152,7 +1152,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => NULL,
+      'default_value' => array(),
       'deleted' => '0',
       'description' => '',
       'display' => array(
