@@ -78,6 +78,9 @@ function amani_service_advisor_source_provider_partner_navigation(){
     'attributes' => array(),
   );
 
+  if (isset($active_group->field_logo['und'][0]['uri'])){
+    $variables['items'][] = l('<img src="' . file_create_url($active_group->field_logo['und'][0]['uri']) . '" alt="' . $active_group->title . '">', '/', array('html' => TRUE, 'query' => array('lang' => 'en')));
+  }
   $variables['items'][] = l(t('Organizational Dashboard '), '/', array('query' => array('lang' => 'en')));
 
   if ($is_og_admin){
