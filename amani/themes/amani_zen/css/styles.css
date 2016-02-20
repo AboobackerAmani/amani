@@ -28,7 +28,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 /* HTML element (SMACSS base) rules */
 /**
  * @file
@@ -50,7 +49,7 @@
  * HTML5 display definitions
  */
 /* Correct `block` display not defined in IE 8/9. */
-/* line 33, ../sass/_normalize.scss */
+/* line 23, ../sass/_normalize.scss */
 article,
 aside,
 details,
@@ -66,7 +65,7 @@ summary {
 }
 
 /* Correct `inline-block` display not defined in IE 8/9. */
-/* line 40, ../sass/_normalize.scss */
+/* line 38, ../sass/_normalize.scss */
 audio,
 canvas,
 video {
@@ -160,14 +159,14 @@ body {
  * The order of link states are based on Eric Meyer's article:
  * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
  */
-/* line 140, ../sass/_normalize.scss */
+/* line 139, ../sass/_normalize.scss */
 a:link,
 a:visited {
   color: #59c2ed;
   text-decoration: none;
 }
 
-/* line 145, ../sass/_normalize.scss */
+/* line 144, ../sass/_normalize.scss */
 a:hover,
 a:focus {
   color: #1696ca;
@@ -180,7 +179,7 @@ a:focus {
 }
 
 /* Improve readability when focused and also mouse hovered in all browsers. */
-/* line 158, ../sass/_normalize.scss */
+/* line 157, ../sass/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -196,7 +195,7 @@ a:hover {
  * For more information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
  */
 /* Set 1 unit of vertical rhythm on the top and bottom margin. */
-/* line 174, ../sass/_normalize.scss */
+/* line 173, ../sass/_normalize.scss */
 p,
 pre {
   margin: 0 0 1.25em 0;
@@ -269,7 +268,7 @@ abbr[title] {
 }
 
 /* Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
-/* line 227, ../sass/_normalize.scss */
+/* line 226, ../sass/_normalize.scss */
 b,
 strong {
   font-weight: bold;
@@ -284,8 +283,8 @@ dfn {
 /* Address differences between Firefox and other browsers. */
 /* line 237, ../sass/_normalize.scss */
 hr {
-  -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
   border: 1px solid #666;
@@ -301,7 +300,7 @@ mark {
 }
 
 /* Correct font family set oddly in Safari 5 and Chrome. */
-/* line 257, ../sass/_normalize.scss */
+/* line 252, ../sass/_normalize.scss */
 code,
 kbd,
 pre,
@@ -332,7 +331,7 @@ small {
 }
 
 /* Prevent `sub` and `sup` affecting `line-height` in all browsers. */
-/* line 289, ../sass/_normalize.scss */
+/* line 288, ../sass/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -354,7 +353,7 @@ sub {
 /**
  * Lists
  */
-/* line 308, ../sass/_normalize.scss */
+/* line 305, ../sass/_normalize.scss */
 dl,
 menu,
 ol,
@@ -363,7 +362,7 @@ ul {
   margin: 0 0 1.25em 0;
 }
 
-/* line 315, ../sass/_normalize.scss */
+/* line 314, ../sass/_normalize.scss */
 ol ol,
 ol ul,
 ul ol,
@@ -379,7 +378,7 @@ dd {
 }
 
 /* Address paddings set differently in IE 6/7. */
-/* line 327, ../sass/_normalize.scss */
+/* line 325, ../sass/_normalize.scss */
 menu,
 ol,
 ul {
@@ -426,17 +425,17 @@ fieldset {
   margin: 0 2px;
   /* Apply borders and padding that keep the vertical rhythm. */
   border-color: #c0c0c0;
-  border-top-style: solid;
   border-top-width: 0.0625em;
+  border-top-style: solid;
   padding-top: 0.375em;
-  border-bottom-style: solid;
   border-bottom-width: 0.0625em;
+  border-bottom-style: solid;
   padding-bottom: 0.75em;
-  border-left-style: solid;
   border-left-width: 0.0625em;
+  border-left-style: solid;
   padding-left: 0.75em;
-  border-right-style: solid;
   border-right-width: 0.0625em;
+  border-right-style: solid;
   padding-right: 0.75em;
 }
 
@@ -460,7 +459,7 @@ legend {
  * 4. Improve appearance and consistency with IE 6/7.
  * 5. Keep form elements constrained in their containers.
  */
-/* line 420, ../sass/_normalize.scss */
+/* line 417, ../sass/_normalize.scss */
 button,
 input,
 select,
@@ -473,8 +472,8 @@ textarea {
   /* 3 */
   max-width: 100%;
   /* 5 */
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 5 */
 }
@@ -483,7 +482,7 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 437, ../sass/_normalize.scss */
+/* line 436, ../sass/_normalize.scss */
 button,
 input {
   line-height: normal;
@@ -495,7 +494,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 448, ../sass/_normalize.scss */
+/* line 447, ../sass/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -510,7 +509,7 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-/* line 464, ../sass/_normalize.scss */
+/* line 461, ../sass/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -524,7 +523,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 476, ../sass/_normalize.scss */
+/* line 475, ../sass/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -536,11 +535,11 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-/* line 487, ../sass/_normalize.scss */
+/* line 486, ../sass/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -556,8 +555,8 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 2 */
 }
@@ -566,14 +565,14 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 511, ../sass/_normalize.scss */
+/* line 510, ../sass/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
 /* Remove inner padding and border in Firefox 4+. */
-/* line 517, ../sass/_normalize.scss */
+/* line 516, ../sass/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -619,8 +618,8 @@ table {
  */
 /* line 554, ../sass/_normalize.scss */
 div {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -637,7 +636,7 @@ div {
 /**
  * Anchor footer to the bottom
  */
-/* line 31, ../sass/layouts/_responsive.scss */
+/* line 30, ../sass/layouts/_responsive.scss */
 html,
 body {
   height: 100%;
@@ -664,7 +663,7 @@ body {
  * For screen sizes larger than 1200px, prevent excessively long lines of text
  * by setting a max-width.
  */
-/* line 58, ../sass/layouts/_responsive.scss */
+/* line 55, ../sass/layouts/_responsive.scss */
 #page,
 .region-header,
 .region-bottom,
@@ -674,7 +673,7 @@ footer {
   max-width: 1040px;
 }
 @media all and (min-width: 1280px) {
-  /* line 58, ../sass/layouts/_responsive.scss */
+  /* line 55, ../sass/layouts/_responsive.scss */
   #page,
   .region-header,
   .region-bottom,
@@ -685,7 +684,7 @@ footer {
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
-/* line 74, ../sass/layouts/_responsive.scss */
+/* line 69, ../sass/layouts/_responsive.scss */
 #content,
 #navigation,
 .region-header,
@@ -695,7 +694,7 @@ footer {
   box-sizing: border-box;
 }
 @media all and (max-width: 1024px) {
-  /* line 74, ../sass/layouts/_responsive.scss */
+  /* line 69, ../sass/layouts/_responsive.scss */
   #content,
   #navigation,
   .region-header,
@@ -712,7 +711,7 @@ footer {
   }
 }
 @media all and (min-width: 561px) and (max-width: 768px) {
-  /* line 74, ../sass/layouts/_responsive.scss */
+  /* line 69, ../sass/layouts/_responsive.scss */
   #content,
   #navigation,
   .region-header,
@@ -730,7 +729,7 @@ footer {
   }
 }
 /* Containers for grid items and flow items. */
-/* line 46, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+/* line 45, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 #header:before, #header:after,
 #main:before,
 #main:after,
@@ -1292,7 +1291,7 @@ footer {
     display: block;
   }
 }
-/* line 93, ../sass/components/_blog.scss */
+/* line 92, ../sass/components/_blog.scss */
 .view-news-and-events-blog .views-field-field-tags .views-label,
 .view-news-and-events-blog .views-field-field-tags .field-content {
   font-family: "Open Sans Condensed", sans-serif;
@@ -1336,7 +1335,7 @@ footer {
     padding-top: 0;
   }
 }
-/* line 29, ../sass/components/_contact_page.scss */
+/* line 28, ../sass/components/_contact_page.scss */
 .page-contact #content,
 .page-contact .sidebars {
   float: left;
@@ -1346,7 +1345,7 @@ footer {
   margin: 30px 0;
 }
 @media all and (max-width: 768px) {
-  /* line 29, ../sass/components/_contact_page.scss */
+  /* line 28, ../sass/components/_contact_page.scss */
   .page-contact #content,
   .page-contact .sidebars {
     width: 100%;
@@ -1391,7 +1390,7 @@ footer {
     height: 200px;
   }
 }
-/* line 72, ../sass/components/_contact_page.scss */
+/* line 68, ../sass/components/_contact_page.scss */
 .page-contact .contact-form input[type="text"]:focus,
 .page-contact .contact-form input[type="email"]:focus,
 .page-contact .contact-form input[type="password"]:focus,
@@ -1506,7 +1505,7 @@ footer {
   font-weight: 300;
   padding: 25px 0 17px 0;
 }
-/* line 46, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+/* line 45, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 .footer-wrapper:before, .footer-wrapper:after {
   content: "";
   display: table;
@@ -1520,7 +1519,7 @@ footer {
   color: #fdfeff;
   text-transform: uppercase;
 }
-/* line 71, ../sass/_mixins.scss */
+/* line 69, ../sass/_mixins.scss */
 .footer-wrapper a:focus, .footer-wrapper a:hover, .footer-wrapper a:active {
   color: #1696ca;
 }
@@ -1528,7 +1527,7 @@ footer {
 .footer-wrapper .menu a {
   color: #fdfeff;
 }
-/* line 71, ../sass/_mixins.scss */
+/* line 69, ../sass/_mixins.scss */
 .footer-wrapper .menu a:focus, .footer-wrapper .menu a:hover, .footer-wrapper .menu a:active {
   color: #1696ca;
 }
@@ -1606,7 +1605,7 @@ footer .menu a:before {
 }
 /* line 117, ../sass/components/_footer.scss */
 footer .menu a.active {
-  color: white;
+  color: #fff;
 }
 
 /* line 120, ../sass/components/_footer.scss */
@@ -1687,7 +1686,7 @@ footer .field-label {
   display: block;
   float: none;
 }
-/* line 197, ../sass/components/_footer.scss */
+/* line 196, ../sass/components/_footer.scss */
 #footer div[id*="block-menu-menu-social-media"] .social-media-facebook:before,
 #footer div[id*="block-menu-menu-social-media"] .social-media-twitter:before {
   content: "\e802";
@@ -1782,7 +1781,7 @@ footer .field-label {
 }
 
 @media (max-width: 480px) {
-  /* line 285, ../sass/components/_footer.scss */
+  /* line 284, ../sass/components/_footer.scss */
   #block-bean-img1,
   #block-bean-project-by-pg {
     margin-right: 20%;
@@ -1791,7 +1790,7 @@ footer .field-label {
     text-align: center;
   }
 
-  /* line 292, ../sass/components/_footer.scss */
+  /* line 291, ../sass/components/_footer.scss */
   #block-bean-img2,
   #block-bean-powered-by-amani {
     margin-left: 20%;
@@ -1890,7 +1889,7 @@ footer .field-label {
   position: initial;
 }
 
-/* line 88, ../sass/components/_front-page-blocks.scss */
+/* line 86, ../sass/components/_front-page-blocks.scss */
 #block-views-front-page-tweets-block,
 #block-fb-likebox-0.block-fb-likebox,
 #block-views-calendar-of-events-block-3 {
@@ -1902,7 +1901,7 @@ footer .field-label {
   text-align: left;
 }
 @media all and (min-width: 991px) and (max-width: 1090px) {
-  /* line 88, ../sass/components/_front-page-blocks.scss */
+  /* line 86, ../sass/components/_front-page-blocks.scss */
   #block-views-front-page-tweets-block,
   #block-fb-likebox-0.block-fb-likebox,
   #block-views-calendar-of-events-block-3 {
@@ -1911,7 +1910,7 @@ footer .field-label {
   }
 }
 @media all and (max-width: 990px) {
-  /* line 88, ../sass/components/_front-page-blocks.scss */
+  /* line 86, ../sass/components/_front-page-blocks.scss */
   #block-views-front-page-tweets-block,
   #block-fb-likebox-0.block-fb-likebox,
   #block-views-calendar-of-events-block-3 {
@@ -2122,7 +2121,7 @@ footer .field-label {
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar tr, #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar td {
   vertical-align: bottom;
 }
-/* line 309, ../sass/components/_front-page-blocks.scss */
+/* line 308, ../sass/components/_front-page-blocks.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .month-view .full tr.single-day .no-entry,
 #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar .month-view .full tr.single-day .no-entry .inner {
   height: 20px !important;
@@ -2196,7 +2195,7 @@ footer .field-label {
   font-family: "Open Sans", sans-serif;
 }
 
-/* line 391, ../sass/components/_front-page-blocks.scss */
+/* line 390, ../sass/components/_front-page-blocks.scss */
 .view-calendar-of-events .single-day,
 .view-calendar-of-events .multi-day {
   display: none;
@@ -2415,13 +2414,13 @@ footer .field-label {
   padding: 0;
   margin: 0 3px;
 }
-/* line 555, ../sass/components/_front-page-blocks.scss */
+/* line 552, ../sass/components/_front-page-blocks.scss */
 .pager li.pager-first, .pager li.pager-previous, .pager li.pager-next, .pager li.pager-last {
   background-color: transparent;
   padding: 0 1em;
 }
 @media (max-width: 480px) {
-  /* line 555, ../sass/components/_front-page-blocks.scss */
+  /* line 552, ../sass/components/_front-page-blocks.scss */
   .pager li.pager-first, .pager li.pager-previous, .pager li.pager-next, .pager li.pager-last {
     padding: 0;
   }
@@ -2442,17 +2441,17 @@ footer .field-label {
 }
 /* line 575, ../sass/components/_front-page-blocks.scss */
 .pager li.pager-current {
-  color: white;
+  color: #fff;
   font-weight: normal;
 }
 
 @media (max-width: 640px) {
-  /* line 585, ../sass/components/_front-page-blocks.scss */
+  /* line 584, ../sass/components/_front-page-blocks.scss */
   .pager li.pager-item a,
   .pager li.pager-current {
     padding: 0 0.5em;
   }
-  /* line 592, ../sass/components/_front-page-blocks.scss */
+  /* line 589, ../sass/components/_front-page-blocks.scss */
   .pager li.pager-first a,
   .pager li.pager-previous a,
   .pager li.pager-next a,
@@ -2534,7 +2533,7 @@ footer .field-label {
   font-family: "Open Sans Condensed",sans-serif;
   background: #ce9bc0;
   border: 1px solid #ce9bc0;
-  color: white;
+  color: #fff;
   float: left;
   font-size: 17px;
   height: 30px;
@@ -2617,12 +2616,12 @@ footer .field-label {
   position: initial;
   margin-top: -25px;
 }
-/* line 54, ../sass/components/_gallery_page.scss */
+/* line 53, ../sass/components/_gallery_page.scss */
 .node-media-gallery.node-teaser .meta-wrapper.hover .slider,
 .node-media-gallery.node-teaser .meta-wrapper.hover .slider.meta-inner {
   background: none;
 }
-/* line 59, ../sass/components/_gallery_page.scss */
+/* line 58, ../sass/components/_gallery_page.scss */
 .node-media-gallery.node-teaser .meta-wrapper.hover .media-title,
 .node-media-gallery.node-teaser .meta-wrapper.hover .media-description {
   font-family: "Open Sans Condensed", sans-serif;
@@ -2747,7 +2746,7 @@ footer .field-label {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 18px;
   padding: 14px;
-  color: white;
+  color: #fff;
   text-align: center;
 }
 /* line 86, ../sass/components/_header.scss */
@@ -2776,7 +2775,7 @@ footer .field-label {
   background-color: #f1f1f1;
   color: #513e79;
 }
-/* line 116, ../sass/components/_header.scss */
+/* line 114, ../sass/components/_header.scss */
 #block-menu-menu-amani-main-menu ul.menu ul li a.active, #block-menu-menu-amani-main-menu ul.menu ul li a:hover, #block-menu-menu-amani-main-menu ul.menu ul li a:focus {
   color: #dba6c6;
   text-decoration: none;
@@ -2825,7 +2824,7 @@ footer .field-label {
     text-transform: uppercase;
     text-align: left;
   }
-  /* line 174, ../sass/components/_header.scss */
+  /* line 172, ../sass/components/_header.scss */
   #block-menu-menu-amani-main-menu ul.menu li a.active, #block-menu-menu-amani-main-menu ul.menu li a:hover, #block-menu-menu-amani-main-menu ul.menu li a:focus {
     border-top: 5px solid #d19fc0;
     color: #d19fc0;
@@ -2853,7 +2852,7 @@ footer .field-label {
     min-width: 190px;
     outline: none;
   }
-  /* line 202, ../sass/components/_header.scss */
+  /* line 200, ../sass/components/_header.scss */
   #block-menu-menu-amani-main-menu ul.menu li > ul > li a.active, #block-menu-menu-amani-main-menu ul.menu li > ul > li a:hover, #block-menu-menu-amani-main-menu ul.menu li > ul > li a:focus {
     border-top: 5px solid #dba6c6;
     color: #ce9bc0;
@@ -2908,7 +2907,7 @@ footer .field-label {
   color: white;
   padding-right: 25px;
 }
-/* line 270, ../sass/components/_header.scss */
+/* line 269, ../sass/components/_header.scss */
 .block-search input[type="text"]::-webkit-input-placeholder,
 .block-search input[type="text"] #placeholder {
   color: white;
@@ -2935,7 +2934,7 @@ footer .field-label {
 .page-incident-reports #main {
   padding-top: 0;
 }
-/* line 12, ../sass/components/_map_page.scss */
+/* line 9, ../sass/components/_map_page.scss */
 .page-incident-reports .incident-report-filter-reset,
 .page-incident-reports .element-invisible,
 .page-incident-reports .breadcrumb,
@@ -3179,7 +3178,7 @@ footer .field-label {
     margin-left: 250px;
   }
 }
-/* line 222, ../sass/components/_map_page.scss */
+/* line 219, ../sass/components/_map_page.scss */
 .node-incident-report .field-name-field-incident-date,
 .node-incident-report .field-name-field-incident-severity,
 .node-incident-report .field-name-field-incident-report-type,
@@ -3188,7 +3187,7 @@ footer .field-label {
   margin-bottom: 10px;
 }
 @media (min-width: 768px) {
-  /* line 222, ../sass/components/_map_page.scss */
+  /* line 219, ../sass/components/_map_page.scss */
   .node-incident-report .field-name-field-incident-date,
   .node-incident-report .field-name-field-incident-severity,
   .node-incident-report .field-name-field-incident-report-type,
@@ -3196,7 +3195,7 @@ footer .field-label {
     margin-left: 250px;
   }
 }
-/* line 230, ../sass/components/_map_page.scss */
+/* line 229, ../sass/components/_map_page.scss */
 .node-incident-report .field-name-field-incident-date .field-label,
 .node-incident-report .field-name-field-incident-date .field-items,
 .node-incident-report .field-name-field-incident-severity .field-label,
@@ -3294,7 +3293,7 @@ footer .field-label {
   font-family: "Open Sans Condensed",sans-serif;
   background: #ce9bc0;
   border: 1px solid #ce9bc0;
-  color: white;
+  color: #fff;
   float: left;
   font-size: 17px;
   height: 30px;
@@ -3317,7 +3316,7 @@ footer .field-label {
 #block-bean-amani-add-map-record a.button:before {
   content: "+";
   font-size: 20px;
-  color: white;
+  color: #fff;
   margin-right: 10px;
 }
 
@@ -3447,7 +3446,7 @@ footer .field-label {
 #block-menu-menu-social-media li a:hover {
   border-top: 0;
 }
-/* line 78, ../sass/components/_menus.scss */
+/* line 77, ../sass/components/_menus.scss */
 #block-menu-menu-social-media li.social-media-facebook:before, #block-menu-menu-social-media li.social-media-twitter:before {
   content: "\e802";
   font-family: amani-icons;
@@ -3486,7 +3485,7 @@ footer .field-label {
  * Navigation bar.
  */
 /* Main menu and secondary menu links and menu block links. */
-/* line 27, ../sass/components/_misc-rtl.scss */
+/* line 26, ../sass/components/_misc-rtl.scss */
 #navigation .links,
 #navigation .menu {
   text-align: right;
@@ -3580,7 +3579,7 @@ span.field-label {
   text-align: right;
 }
 
-/* line 132, ../sass/components/_misc-rtl.scss */
+/* line 131, ../sass/components/_misc-rtl.scss */
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   /* Un-do some of the padding on the ul list. */
@@ -3627,7 +3626,7 @@ html.js .collapsed .fieldset-legend {
 /**
  * Wireframes.
  */
-/* line 22, ../sass/components/_misc.scss */
+/* line 15, ../sass/components/_misc.scss */
 .with-wireframes #header,
 .with-wireframes #main,
 .with-wireframes #content,
@@ -3643,7 +3642,7 @@ html.js .collapsed .fieldset-legend {
  * Accessibility features.
  */
 /* element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
-/* line 40, ../sass/components/_misc.scss */
+/* line 39, ../sass/components/_misc.scss */
 .element-invisible,
 .element-focusable,
 #navigation .block-menu .block__title,
@@ -3672,7 +3671,7 @@ html.js .collapsed .fieldset-legend {
 #skip-link {
   margin: 0;
 }
-/* line 66, ../sass/components/_misc.scss */
+/* line 65, ../sass/components/_misc.scss */
 #skip-link a,
 #skip-link a:visited {
   display: block;
@@ -3712,12 +3711,12 @@ html.js .collapsed .fieldset-legend {
 }
 
 /* The link around the name of the website. */
-/* line 107, ../sass/components/_misc.scss */
+/* line 106, ../sass/components/_misc.scss */
 .header__site-link:link, .header__site-link:visited {
   color: #000;
   text-decoration: none;
 }
-/* line 113, ../sass/components/_misc.scss */
+/* line 112, ../sass/components/_misc.scss */
 .header__site-link:hover, .header__site-link:focus {
   text-decoration: underline;
 }
@@ -3757,7 +3756,7 @@ html.js .collapsed .fieldset-legend {
 #navigation .block {
   margin-bottom: 0;
 }
-/* line 155, ../sass/components/_misc.scss */
+/* line 154, ../sass/components/_misc.scss */
 #navigation .links,
 #navigation .menu {
   margin: 0;
@@ -3800,7 +3799,7 @@ html.js .collapsed .fieldset-legend {
 /**
  * Titles.
  */
-/* line 195, ../sass/components/_misc.scss */
+/* line 190, ../sass/components/_misc.scss */
 .page__title,
 .node__title,
 .block__title,
@@ -3855,21 +3854,21 @@ html.js .collapsed .fieldset-legend {
 }
 
 /* System status report. */
-/* line 250, ../sass/components/_misc.scss */
+/* line 249, ../sass/components/_misc.scss */
 .ok,
 .messages--status {
   background-color: #f8fff0;
   color: #234600;
 }
 
-/* line 255, ../sass/components/_misc.scss */
+/* line 254, ../sass/components/_misc.scss */
 .warning,
 .messages--warning {
   background-color: #fffce5;
   color: #840;
 }
 
-/* line 260, ../sass/components/_misc.scss */
+/* line 259, ../sass/components/_misc.scss */
 .error,
 .messages--error {
   background-color: #fef5f1;
@@ -3883,11 +3882,13 @@ html.js .collapsed .fieldset-legend {
 /* line 270, ../sass/components/_misc.scss */
 .tabs-primary, .tabs-secondary {
   overflow: hidden;
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(100%, #e6e7e8), color-stop(100%, transparent));
-  background-image: -webkit-linear-gradient(bottom, #e6e7e8 1px, transparent 1px);
-  background-image: -moz-linear-gradient(bottom, #e6e7e8 1px, transparent 1px);
-  background-image: -o-linear-gradient(bottom, #e6e7e8 1px, transparent 1px);
-  background-image: linear-gradient(bottom, #e6e7e8 1px, transparent 1px);
+  *zoom: 1;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZTZlN2U4Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(100%, #e6e7e8), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -moz-linear-gradient(bottom, #e6e7e8 1px, rgba(0, 0, 0, 0) 1px);
+  background-image: -webkit-linear-gradient(bottom, #e6e7e8 1px, rgba(0, 0, 0, 0) 1px);
+  background-image: linear-gradient(to top, #e6e7e8 1px, rgba(0, 0, 0, 0) 1px);
   /* IE 9 and earlier don't understand gradients. */
   list-style: none;
   border-bottom: 1px solid #e6e7e8 \0/ie;
@@ -3923,7 +3924,7 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active, a.tabs-secondary__
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
-  text-shadow: 1px 1px 0 white;
+  text-shadow: 1px 1px 0 #fff;
   border: 1px solid #e6e7e8;
   border-bottom-color: transparent;
   /* IE 9 and earlier don't understand gradients. */
@@ -3931,8 +3932,8 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active, a.tabs-secondary__
 }
 
 /* line 306, ../sass/components/_misc.scss */
-.is-active.tabs-primary__tab {
-  border-bottom-color: white;
+.tabs-primary__tab.is-active {
+  border-bottom-color: #fff;
 }
 
 /* line 312, ../sass/components/_misc.scss */
@@ -3943,9 +3944,9 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active {
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
-  -webkit-transition: background-color 0.3s;
   -moz-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
   color: #333;
   background-color: #dedede;
@@ -3963,11 +3964,13 @@ a.tabs-primary__tab-link:hover, a.tabs-primary__tab-link:focus {
 /* line 326, ../sass/components/_misc.scss */
 a.tabs-primary__tab-link:active, a.tabs-primary__tab-link.is-active {
   background-color: transparent;
+  *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE9E9E9', endColorstr='#00E9E9E9');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U5ZTllOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U5ZTllOSIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e9e9e9), color-stop(100%, rgba(233, 233, 233, 0)));
-  background-image: -webkit-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
   background-image: -moz-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
-  background-image: -o-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
+  background-image: -webkit-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
   background-image: linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
   border-color: #fff;
 }
@@ -3980,7 +3983,7 @@ a.tabs-primary__tab-link:active, a.tabs-primary__tab-link.is-active {
   margin-top: -1.25em;
 }
 
-/* line 357, ../sass/components/_misc.scss */
+/* line 356, ../sass/components/_misc.scss */
 .tabs-secondary__tab,
 .tabs-secondary__tab.is-active {
   margin: 0.625em 3px;
@@ -3988,16 +3991,14 @@ a.tabs-primary__tab-link:active, a.tabs-primary__tab-link.is-active {
 
 /* line 363, ../sass/components/_misc.scss */
 a.tabs-secondary__tab-link, a.tabs-secondary__tab-link.is-active {
-  -webkit-border-radius: 0.75em;
   -moz-border-radius: 0.75em;
-  -ms-border-radius: 0.75em;
-  -o-border-radius: 0.75em;
+  -webkit-border-radius: 0.75em;
   border-radius: 0.75em;
-  -webkit-transition: background-color 0.3s;
   -moz-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
-  text-shadow: 1px 1px 0 white;
+  text-shadow: 1px 1px 0 #fff;
   background-color: #f2f2f2;
   color: #666;
   padding: 0 .5em;
@@ -4012,7 +4013,7 @@ a.tabs-secondary__tab-link:hover, a.tabs-secondary__tab-link:focus {
 
 /* line 377, ../sass/components/_misc.scss */
 a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
-  text-shadow: 1px 1px 0 #333333;
+  text-shadow: 1px 1px 0 #333;
   background-color: #666;
   border-color: #000;
   color: #fff;
@@ -4091,7 +4092,7 @@ span.field-label {
   background-image: none;
 }
 
-/* line 462, ../sass/components/_misc.scss */
+/* line 457, ../sass/components/_misc.scss */
 .pager-item,
 .pager-first,
 .pager-previous,
@@ -4148,7 +4149,7 @@ span.field-label {
  * Marker.
  */
 /* The "new" or "updated" marker. */
-/* line 517, ../sass/components/_misc.scss */
+/* line 516, ../sass/components/_misc.scss */
 .new,
 .update {
   color: #c00;
@@ -4225,16 +4226,16 @@ span.field-label {
   /* Highlight the form elements that caused a form submission error. */
   /* The descriptive help text (separate from the label). */
 }
-/* line 593, ../sass/components/_misc.scss */
+/* line 592, ../sass/components/_misc.scss */
 .form-checkboxes .form-item, .form-radios .form-item {
   /* Drupal core uses "0.4em 0". */
   margin: 0;
 }
-/* line 600, ../sass/components/_misc.scss */
+/* line 599, ../sass/components/_misc.scss */
 tr.odd .form-item, tr.even .form-item {
   margin: 0;
 }
-/* line 607, ../sass/components/_misc.scss */
+/* line 605, ../sass/components/_misc.scss */
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
@@ -4267,13 +4268,12 @@ label.option {
 /* Buttons used by contrib modules like Media. */
 /* line 636, ../sass/components/_misc.scss */
 a.button {
-  -webkit-appearance: button;
   -moz-appearance: button;
-  appearance: button;
+  -webkit-appearance: button;
 }
 
 /* Password confirmation. */
-/* line 642, ../sass/components/_misc.scss */
+/* line 641, ../sass/components/_misc.scss */
 .password-parent,
 .confirm-parent {
   margin: 0;
@@ -4300,13 +4300,13 @@ a.button {
 }
 
 /* The "Log in using OpenID" and "Cancel OpenID login" links. */
-/* line 666, ../sass/components/_misc.scss */
+/* line 665, ../sass/components/_misc.scss */
 .openid-link,
 .user-link {
   margin-top: 1.25em;
 }
 
-/* line 670, ../sass/components/_misc.scss */
+/* line 669, ../sass/components/_misc.scss */
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   /* Un-do some of the padding on the ul list. */
@@ -4339,7 +4339,7 @@ form table ul {
   margin: 0;
 }
 
-/* line 695, ../sass/components/_misc.scss */
+/* line 694, ../sass/components/_misc.scss */
 tr.even,
 tr.odd {
   background-color: #eee;
@@ -4359,7 +4359,7 @@ td.active {
 }
 
 /* Center checkboxes inside table cell. */
-/* line 721, ../sass/components/_misc.scss */
+/* line 720, ../sass/components/_misc.scss */
 td.checkbox,
 th.checkbox {
   text-align: center;
@@ -4455,10 +4455,8 @@ tr.selected td {
   background: #ccc;
   border-color: #666;
   margin: 0 0.2em;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 /* line 809, ../sass/components/_misc.scss */
@@ -4515,7 +4513,7 @@ tr.selected td {
   margin-right: 1.75%;
 }
 @media (max-width: 768px) {
-  /* line 33, ../sass/components/_news-events_page.scss */
+  /* line 32, ../sass/components/_news-events_page.scss */
   .page-news-and-events #content .views-row.views-row-even,
   .page-news-and-events #content .views-row.views-row-odd {
     margin-left: 0;
@@ -4566,7 +4564,7 @@ tr.selected td {
     overflow-y: hidden;
   }
 }
-/* line 74, ../sass/components/_news-events_page.scss */
+/* line 73, ../sass/components/_news-events_page.scss */
 .page-news-and-events .view-news-and-events .views-row .views-field-field-image:before, .page-news-and-events .view-news-and-events .views-row .views-field-field-image:after {
   display: none;
 }
@@ -4680,7 +4678,7 @@ tr.selected td {
   font-size: 22px;
   font-weight: normal;
   display: inline-block;
-  color: white;
+  color: #fff;
   margin-left: 5px;
   position: relative;
   top: 2px;
@@ -4740,20 +4738,20 @@ tr.selected td {
   font-size: 16px;
   font-weight: normal;
   display: inline-block;
-  color: white;
+  color: #fff;
   margin-left: 5px;
   position: relative;
   top: 2px;
 }
 
-/* line 248, ../sass/components/_news-events_page.scss */
+/* line 247, ../sass/components/_news-events_page.scss */
 .section-news .article-title-wrapper,
 .section-news #content {
   width: 100%;
   margin: 0;
 }
 @media (min-width: 768px) {
-  /* line 248, ../sass/components/_news-events_page.scss */
+  /* line 247, ../sass/components/_news-events_page.scss */
   .section-news .article-title-wrapper,
   .section-news #content {
     float: left;
@@ -5003,11 +5001,11 @@ a.permalink {
     width: 30%;
     margin: 20px 15px;
   }
-  /* line 22, ../sass/components/_partners_page.scss */
+  /* line 21, ../sass/components/_partners_page.scss */
   .page-partners .view-partners .view-content .views-row.views-row-first, .page-partners .view-partners .view-content .views-row:nth-child(3n+4) {
     margin-left: 0;
   }
-  /* line 26, ../sass/components/_partners_page.scss */
+  /* line 25, ../sass/components/_partners_page.scss */
   .page-partners .view-partners .view-content .views-row.views-row-last, .page-partners .view-partners .view-content .views-row:nth-child(3n+3) {
     margin-right: 0;
   }
@@ -5161,13 +5159,13 @@ a.permalink {
     width: 48%;
     margin: 0 2% 20px;
   }
-  /* line 53, ../sass/components/_program_page.scss */
+  /* line 52, ../sass/components/_program_page.scss */
   .page-programs #content .view-content .views-row.views-row-first, .page-programs #content .view-content .views-row:nth-child(2n+1),
   .node-type-project #content .view-content .views-row.views-row-first,
   .node-type-project #content .view-content .views-row:nth-child(2n+1) {
     margin-left: 0;
   }
-  /* line 57, ../sass/components/_program_page.scss */
+  /* line 56, ../sass/components/_program_page.scss */
   .page-programs #content .view-content .views-row.views-row-last, .page-programs #content .view-content .views-row:nth-child(2n+2),
   .node-type-project #content .view-content .views-row.views-row-last,
   .node-type-project #content .view-content .views-row:nth-child(2n+2) {
@@ -5334,7 +5332,7 @@ a.permalink {
   text-decoration: underline;
 }
 
-/* line 183, ../sass/components/_program_page.scss */
+/* line 182, ../sass/components/_program_page.scss */
 .node-activity.node-by-viewer a.forward-page,
 .node-activity.node-by-viewer .field-name-field-activity-map-record a {
   color: #ce9bc0;
@@ -6117,7 +6115,7 @@ a.permalink {
   font-family: "Open Sans Condensed",sans-serif;
   background: #ce9bc0;
   border: 1px solid #ce9bc0;
-  color: white;
+  color: #fff;
   float: left;
   font-size: 17px;
   height: 30px;
@@ -6232,8 +6230,8 @@ a.permalink {
   -moz-border-radius-topright: 3px;
   -webkit-border-top-right-radius: 3px;
   border-top-right-radius: 3px;
-  -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.24);
   -moz-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.24);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.24);
 }
 @media (min-width: 768px) {
@@ -6262,7 +6260,7 @@ a.permalink {
     padding-right: 1em;
   }
 }
-/* line 34, ../sass/components/_team_page.scss */
+/* line 33, ../sass/components/_team_page.scss */
 .view-team .view-filters .views-widget-filter-keys,
 .view-team .view-filters .views-widget-filter-field_team_member_type_tid {
   display: block;
@@ -6270,7 +6268,7 @@ a.permalink {
   width: 100%;
 }
 @media (min-width: 768px) {
-  /* line 34, ../sass/components/_team_page.scss */
+  /* line 33, ../sass/components/_team_page.scss */
   .view-team .view-filters .views-widget-filter-keys,
   .view-team .view-filters .views-widget-filter-field_team_member_type_tid {
     display: inline-block;
@@ -6278,20 +6276,18 @@ a.permalink {
     clear: none;
   }
 }
-/* line 45, ../sass/components/_team_page.scss */
+/* line 44, ../sass/components/_team_page.scss */
 .view-team .view-filters .form-type-textfield input,
 .view-team .view-filters .form-type-select select {
   width: 100%;
   background-color: #fff;
   border: 1px solid #ccc;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 @media (min-width: 768px) {
-  /* line 45, ../sass/components/_team_page.scss */
+  /* line 44, ../sass/components/_team_page.scss */
   .view-team .view-filters .form-type-textfield input,
   .view-team .view-filters .form-type-select select {
     width: 330px;
@@ -6299,7 +6295,7 @@ a.permalink {
   }
 }
 @media (max-width: 1044px) and (min-width: 767px) {
-  /* line 45, ../sass/components/_team_page.scss */
+  /* line 44, ../sass/components/_team_page.scss */
   .view-team .view-filters .form-type-textfield input,
   .view-team .view-filters .form-type-select select {
     width: 180px;
@@ -6399,7 +6395,7 @@ a.permalink {
   font-family: "Open Sans Condensed",sans-serif;
   background: #ce9bc0;
   border: 1px solid #ce9bc0;
-  color: white;
+  color: #fff;
   float: left;
   font-size: 17px;
   height: 30px;
@@ -6418,7 +6414,7 @@ a.permalink {
     margin: 20px 0 0;
   }
 }
-/* line 136, ../sass/components/_team_page.scss */
+/* line 135, ../sass/components/_team_page.scss */
 .view-team .views-exposed-form .views-submit-button,
 .view-team .views-exposed-form .views-reset-button {
   float: right;
@@ -6429,7 +6425,7 @@ a.permalink {
   font-family: "Open Sans Condensed",sans-serif;
   background: #ce9bc0;
   border: 1px solid #ce9bc0;
-  color: white;
+  color: #fff;
   float: left;
   font-size: 17px;
   height: 30px;
@@ -6525,7 +6521,7 @@ a.permalink {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 24px;
 }
-/* line 223, ../sass/components/_team_page.scss */
+/* line 222, ../sass/components/_team_page.scss */
 .node-team .field-name-field-team-member-type a,
 .node-team .field-name-field-team-title {
   font-family: "Open Sans Condensed", sans-serif;
@@ -6617,7 +6613,7 @@ a.permalink {
  */
 @media print {
   /* Underline all links. */
-  /* line 16, ../sass/_print.scss */
+  /* line 15, ../sass/_print.scss */
   a:link,
   a:visited {
     text-decoration: underline !important;
@@ -6641,7 +6637,7 @@ a.permalink {
     font-weight: normal;
     font-size: 16px;
   }
-  /* line 35, ../sass/_print.scss */
+  /* line 34, ../sass/_print.scss */
   #content a[href^="javascript:"]:after,
   #content a[href^="#"]:after {
     content: "";
@@ -6661,7 +6657,7 @@ a.permalink {
   }
 
   /* Turn off any background colors or images. */
-  /* line 57, ../sass/_print.scss */
+  /* line 54, ../sass/_print.scss */
   body,
   #page,
   #main,
@@ -6672,7 +6668,7 @@ a.permalink {
   }
 
   /* Hide sidebars and nav elements. */
-  /* line 77, ../sass/_print.scss */
+  /* line 64, ../sass/_print.scss */
   #skip-link,
   #toolbar,
   #navigation,
@@ -6692,7 +6688,7 @@ a.permalink {
   }
 }
 /* SMACSS theme rules */
-/* line 2, ../sass/theme/_forms.scss */
+/* line 1, ../sass/theme/_forms.scss */
 .form-textarea,
 .form-text {
   background: #e6e7e8;
@@ -6707,14 +6703,14 @@ a.permalink {
   background-color: #414042;
   border: 0 none;
   border-radius: 0;
-  color: white;
+  color: #fff;
   display: inline-block;
   font-weight: 300;
   padding: 5px 10px;
 }
-/* line 62, ../sass/_mixins.scss */
+/* line 61, ../sass/_mixins.scss */
 .form-submit:hover, .form-submit:focus {
-  background-color: #5a595c;
+  background-color: #5b595c;
 }
 
 /* line 12, ../sass/theme/_layout.scss */
@@ -6780,7 +6776,7 @@ h1.title {
 .html.node-type-service-location .form-type-select .description {
   display: none;
 }
-/* line 28, ../sass/theme/_service_advisor.scss */
+/* line 27, ../sass/theme/_service_advisor.scss */
 .html.node-type-service-location .action-links {
   list-style: none;
 }
@@ -6850,6 +6846,7 @@ td.views-field {
 }
 /* line 95, ../sass/theme/_service_advisor.scss */
 .view-service-partner-login .view-content .views-field-nothing-5 {
+  display: none;
   position: absolute;
   right: 0%;
   top: 0px;
@@ -6858,98 +6855,130 @@ td.views-field {
   padding: 7px;
   width: auto !important;
 }
-/* line 104, ../sass/theme/_service_advisor.scss */
+/* line 105, ../sass/theme/_service_advisor.scss */
 .view-service-partner-login .view-content .views-field-nothing-5 .link-wrapper a {
   padding: 0 7px;
 }
-/* line 109, ../sass/theme/_service_advisor.scss */
+/* line 110, ../sass/theme/_service_advisor.scss */
 .view-service-partner-login .view-content .views-field-nothing-2 {
   position: absolute;
   left: 225px;
   bottom: -97px;
 }
-/* line 113, ../sass/theme/_service_advisor.scss */
+/* line 114, ../sass/theme/_service_advisor.scss */
 .view-service-partner-login .view-content .views-field-nothing-2 a {
   color: white;
   background: #414042;
   padding: 7px;
   width: auto !important;
 }
-/* line 118, ../sass/theme/_service_advisor.scss */
+/* line 119, ../sass/theme/_service_advisor.scss */
 .view-service-partner-login .view-content .views-field-nothing-2 a:hover {
   background: #5a595c;
 }
-/* line 123, ../sass/theme/_service_advisor.scss */
+/* line 124, ../sass/theme/_service_advisor.scss */
 .view-service-partner-login .view-content .views-field-field-logo {
   float: left;
   margin: 9px 15px 0px 0px;
 }
 
-/* line 132, ../sass/theme/_service_advisor.scss */
+/* line 134, ../sass/theme/_service_advisor.scss */
+#block-amani-service-advisor-source-provider-partner-navigation {
+  left: 0%;
+  right: auto;
+}
+/* line 135, ../sass/theme/_service_advisor.scss */
+#block-amani-service-advisor-source-provider-partner-navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+/* line 141, ../sass/theme/_service_advisor.scss */
+#block-amani-service-advisor-source-provider-partner-navigation ul li {
+  float: left;
+  list-style: none;
+}
+/* line 145, ../sass/theme/_service_advisor.scss */
+#block-amani-service-advisor-source-provider-partner-navigation ul li a {
+  color: white;
+  background: #414042;
+  padding: 10px 12px;
+  width: auto;
+  display: block;
+}
+/* line 151, ../sass/theme/_service_advisor.scss */
+#block-amani-service-advisor-source-provider-partner-navigation ul li a:hover {
+  background: #5a595c;
+}
+
+/* line 161, ../sass/theme/_service_advisor.scss */
 #block-views-cb19055a72c56b23d58f3f5971226695 {
   clear: both;
   margin-top: 67px;
 }
-/* line 137, ../sass/theme/_service_advisor.scss */
+/* line 166, ../sass/theme/_service_advisor.scss */
 #block-views-cb19055a72c56b23d58f3f5971226695 .view-service-location-list .views-table {
   width: 100%;
 }
 
-/* line 144, ../sass/theme/_service_advisor.scss */
+/* line 173, ../sass/theme/_service_advisor.scss */
 .ar ul.action-links {
   padding: 0 0 0 20px;
 }
-/* line 147, ../sass/theme/_service_advisor.scss */
+/* line 176, ../sass/theme/_service_advisor.scss */
 .ar h1.page__title.title {
   text-align: right;
 }
-/* line 152, ../sass/theme/_service_advisor.scss */
+/* line 180, ../sass/theme/_service_advisor.scss */
 .ar table th.views-align-left,
 .ar table td.views-align-left {
   text-align: right;
 }
-/* line 157, ../sass/theme/_service_advisor.scss */
+/* line 186, ../sass/theme/_service_advisor.scss */
 .ar .view-service-partner-login .view-content {
   position: relative;
 }
-/* line 159, ../sass/theme/_service_advisor.scss */
+/* line 188, ../sass/theme/_service_advisor.scss */
 .ar .view-service-partner-login .view-content .views-field-field-logo {
   float: right;
   margin: 9px 0px 0px 15px;
 }
-/* line 164, ../sass/theme/_service_advisor.scss */
+/* line 193, ../sass/theme/_service_advisor.scss */
 .ar .view-service-partner-login .view-content .views-field-field-service-partner-full-name h3 {
   line-height: 0px;
 }
-/* line 168, ../sass/theme/_service_advisor.scss */
+/* line 197, ../sass/theme/_service_advisor.scss */
 .ar .view-service-partner-login .view-content .views-field-nothing-2 {
   right: 153px;
   left: auto;
 }
-/* line 172, ../sass/theme/_service_advisor.scss */
+/* line 201, ../sass/theme/_service_advisor.scss */
 .ar .view-service-partner-login .view-content .views-field-nothing-5 {
+  display: none;
   left: 0%;
   right: auto;
 }
-/* line 176, ../sass/theme/_service_advisor.scss */
+/* line 206, ../sass/theme/_service_advisor.scss */
 .ar .view-service-partner-login .view-content .views-field-nothing-3 {
   right: 110px;
   left: auto;
 }
-/* line 184, ../sass/theme/_service_advisor.scss */
+/* line 214, ../sass/theme/_service_advisor.scss */
 .ar .view-service-location-list .views-exposed-form .views-exposed-widget {
   padding: .5em 0 0 1em !important;
 }
-/* line 187, ../sass/theme/_service_advisor.scss */
+/* line 217, ../sass/theme/_service_advisor.scss */
 .ar .view-service-location-list .views-table.cols-5 {
   width: 100%;
 }
 
-/* line 200, ../sass/theme/_service_advisor.scss */
+/* line 230, ../sass/theme/_service_advisor.scss */
 .ar .node-service-location.view-mode-full .group-right {
   border-right: 1px solid #ccc;
 }
-/* line 203, ../sass/theme/_service_advisor.scss */
+/* line 233, ../sass/theme/_service_advisor.scss */
 .ar .node-service-location.view-mode-full .field-label {
   margin-left: 5px;
 }
@@ -6973,7 +7002,7 @@ td.views-field {
   display: table;
   margin: 0 auto;
 }
-/* line 28, ../sass/theme/_slideshow.scss */
+/* line 25, ../sass/theme/_slideshow.scss */
 .slideshow .description,
 .slideshow .button a,
 .slideshow .views-slideshow-controls-bottom,
@@ -7027,7 +7056,7 @@ td.views-field {
 }
 /* line 65, ../sass/theme/_slideshow.scss */
 .slideshow .button a {
-  border: 1px solid white;
+  border: 1px solid #fff;
   padding: 5px 5px;
   top: 75%;
   -webkit-transform: translateY(-75%);
@@ -7053,7 +7082,7 @@ td.views-field {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
 }
-/* line 88, ../sass/theme/_slideshow.scss */
+/* line 86, ../sass/theme/_slideshow.scss */
 .slideshow .title a,
 .slideshow .description,
 .slideshow .button a {
@@ -7108,3 +7137,5 @@ td.views-field {
   }
 }
 /* @import "theme-B"; */
+
+/*# sourceMappingURL=styles.css.map */

@@ -93,6 +93,7 @@ td.views-field {
 			    margin-bottom: 64px;
 		}
 		.views-field-nothing-5 {
+      display: none;
 	    position: absolute;
 	    right: 0%;
 	    top: 0px;
@@ -129,6 +130,34 @@ td.views-field {
 	}
 
 }
+
+#block-amani-service-advisor-source-provider-partner-navigation{
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    li {
+      float: left;
+
+      list-style: none;
+      a {
+        color: white;
+        background: #414042;
+        padding: 10px 12px;
+        width: auto;
+        display: block;
+        &:hover{
+          background: #5a595c;
+        }
+      }
+    }
+  }
+  left: 0%;
+  right: auto;
+}
+
 #block-views-cb19055a72c56b23d58f3f5971226695{
 	clear:both;
 	margin-top:67px;
@@ -170,6 +199,7 @@ td.views-field {
 		    left: auto;
 			}
 			.views-field-nothing-5 {
+        display: none;
 		    left: 0%;
 		    right: auto;
 			}

@@ -14,7 +14,9 @@ function amani_service_advisor_source_provider_block_info() {
   $blocks['services_links'] = array(
     'info' => t('Services Links'),
   );
-
+  $blocks['partner_navigation'] = array(
+    'info' => t('Partner Navigation'),
+  );
   return $blocks;
 }
 
@@ -28,15 +30,16 @@ function amani_service_advisor_source_provider_block_view($delta='') {
     case 'services_links' :
       $block['content'] = amani_service_advisor_source_provider_services_links();
       break;
+    case 'partner_navigation' :
+      $block['content'] = amani_service_advisor_source_provider_partner_navigation();
+      break;
   }
 
   return $block;
 }
 
 function amani_service_advisor_source_provider_services_links(){
-
   $node = menu_get_object();
-
   $variables = array(
     'items' => array(),
     // Leave the title element empty to omit the title.
@@ -46,8 +49,48 @@ function amani_service_advisor_source_provider_services_links(){
   );
   $variables['items'][] = l(t('Add a new location'), '/node/add/service-location', array('query' => array('og_group_ref' => $node->nid)));
   return theme('item_list', $variables);
-
 }
+
+function amani_service_advisor_source_provider_partner_navigation(){
+
+  global $user;
+  $node = menu_get_object();
+  $og_context = og_context();
+  if ($og_context){
+    $active_group = node_load($og_context['gid']);
+  }
+
+  if (! $og_context){
+    global $user;
+    $og_groups = og_get_groups_by_user($account, 'node');
+    if (count($og_groups)){
+      $active_group = node_load(array_pop($og_groups));
+    }
+  }
+
+  $is_og_admin = og_user_access('node', $active_group->nid, 'administer group', $user);
+
+  $variables = array(
+    'items' => array(),
+    // Leave the title element empty to omit the title.
+    'title' => '',
+    'type' => 'ul',
+    'attributes' => array(),
+  );
+
+  $variables['items'][] = l(t('Organizational Dashboard '), '/', array('query' => array('lang' => 'en')));
+
+  if ($is_og_admin){
+    $variables['items'][] = l(t('Edit Organization'), '/node/' . $active_group->nid . '/edit', array('query' => array('destination' => '/?lang=en')));
+    $variables['items'][] = l(t('Manage Team'), '/node/' . $active_group->nid . '/group', array('query' => array('destination' => '/?lang=en')));
+  } else {
+  }
+
+  $variables['items'][] = l(t('Logout'), '/user/logout');
+  return theme('item_list', $variables);
+}
+
+
 
 /**
  * Alter the access to the ability to clone a given node.
