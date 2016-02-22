@@ -54,6 +54,11 @@ function amani_service_advisor_source_provider_services_links(){
 function amani_service_advisor_source_provider_partner_navigation(){
 
   global $user;
+
+  if (! $user->uid){
+    return;
+  }
+
   $node = menu_get_object();
   $og_context = og_context();
   if ($og_context){
