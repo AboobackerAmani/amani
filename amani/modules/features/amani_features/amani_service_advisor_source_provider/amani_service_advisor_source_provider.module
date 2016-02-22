@@ -70,6 +70,8 @@ function amani_service_advisor_source_provider_partner_navigation(){
     $og_groups = og_get_groups_by_user($account, 'node');
     if (count($og_groups)){
       $active_group = node_load(array_pop($og_groups));
+    } else {
+      return;
     }
   }
 
