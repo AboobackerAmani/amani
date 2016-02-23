@@ -15,6 +15,7 @@ function amani_service_advisor_source_provider_user_default_permissions() {
     'name' => 'administer group',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'og',
   );
@@ -22,42 +23,54 @@ function amani_service_advisor_source_provider_user_default_permissions() {
   // Exported permission: create service_location content.
   $permissions['create service_location content'] = array(
     'name' => 'create service_location content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: create service_partner content.
   $permissions['create service_partner content'] = array(
     'name' => 'create service_partner content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete any service_location content.
   $permissions['delete any service_location content'] = array(
     'name' => 'delete any service_location content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete any service_partner content.
   $permissions['delete any service_partner content'] = array(
     'name' => 'delete any service_partner content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete own service_location content.
   $permissions['delete own service_location content'] = array(
     'name' => 'delete own service_location content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete own service_partner content.
   $permissions['delete own service_partner content'] = array(
     'name' => 'delete own service_partner content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 
@@ -169,28 +182,36 @@ function amani_service_advisor_source_provider_user_default_permissions() {
   // Exported permission: edit any service_location content.
   $permissions['edit any service_location content'] = array(
     'name' => 'edit any service_location content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit any service_partner content.
   $permissions['edit any service_partner content'] = array(
     'name' => 'edit any service_partner content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit own service_location content.
   $permissions['edit own service_location content'] = array(
     'name' => 'edit own service_location content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit own service_partner content.
   $permissions['edit own service_partner content'] = array(
     'name' => 'edit own service_partner content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'amani administrator',
+    ),
     'module' => 'node',
   );
 

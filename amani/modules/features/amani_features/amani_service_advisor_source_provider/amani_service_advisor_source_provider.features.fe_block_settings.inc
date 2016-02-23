@@ -22,10 +22,10 @@ function amani_service_advisor_source_provider_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'amani_zen' => array(
-        'region' => 'content',
+        'region' => 'subheader',
         'status' => '1',
         'theme' => 'amani_zen',
-        'weight' => '-50',
+        'weight' => '-19',
       ),
       'bartik' => array(
         'region' => '',

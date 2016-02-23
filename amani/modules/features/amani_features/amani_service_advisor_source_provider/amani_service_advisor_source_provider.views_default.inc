@@ -414,6 +414,53 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['relationships']['og_membership_related_node_group']['id'] = 'og_membership_related_node_group';
   $handler->display->display_options['relationships']['og_membership_related_node_group']['table'] = 'og_membership';
   $handler->display->display_options['relationships']['og_membership_related_node_group']['field'] = 'og_membership_related_node_group';
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['label'] = 'nested location';
+  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
+    'service_nested_location' => 'service_nested_location',
+    'forums' => 0,
+    'activity_status' => 0,
+    'article_type' => 0,
+    'categories' => 0,
+    'event_type' => 0,
+    'gallery_collections' => 0,
+    'report_type' => 0,
+    'incident_severity' => 0,
+    'map_filter_3' => 0,
+    'map_filter_4' => 0,
+    'partner_type' => 0,
+    'service_location_subdistrict' => 0,
+    'service_location_village' => 0,
+    'project_location' => 0,
+    'project_status' => 0,
+    'theme' => 0,
+    'resource_type' => 0,
+    'service_accessibility' => 0,
+    'service_activities' => 0,
+    'service_availability' => 0,
+    'service_available_nationality' => 0,
+    'service_categories' => 0,
+    'service_coverage' => 0,
+    'service_feedback_delay' => 0,
+    'service_feedback_mechanism' => 0,
+    'service_intake_criteria' => 0,
+    'service_location_availability_days' => 0,
+    'service_location_district' => 0,
+    'service_location_governorate' => 0,
+    'service_location_hour_close' => 0,
+    'service_location_hour_open' => 0,
+    'service_location_region' => 0,
+    'service_referral_method' => 0,
+    'service_referral_next_step' => 0,
+    'service_registration_type' => 0,
+    'service_response_delay' => 0,
+    'tags' => 0,
+    'team_member_type' => 0,
+    'contributor_type' => 0,
+  );
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -578,14 +625,15 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_registration_type']['field'] = 'field_service_registration_type';
   $handler->display->display_options['fields']['field_service_registration_type']['relationship'] = 'field_service_location_service_target_id';
   $handler->display->display_options['fields']['field_service_registration_type']['delta_offset'] = '0';
-  /* Field: Content: Location */
-  $handler->display->display_options['fields']['field_service_location_1']['id'] = 'field_service_location_1';
-  $handler->display->display_options['fields']['field_service_location_1']['table'] = 'field_data_field_service_location';
-  $handler->display->display_options['fields']['field_service_location_1']['field'] = 'field_service_location';
-  $handler->display->display_options['fields']['field_service_location_1']['label'] = 'location:geometry';
-  $handler->display->display_options['fields']['field_service_location_1']['click_sort_column'] = 'geom';
-  $handler->display->display_options['fields']['field_service_location_1']['type'] = 'geofield_geojson';
-  $handler->display->display_options['fields']['field_service_location_1']['settings'] = array(
+  /* Field: Taxonomy term: Location Point */
+  $handler->display->display_options['fields']['field_location_point']['id'] = 'field_location_point';
+  $handler->display->display_options['fields']['field_location_point']['table'] = 'field_data_field_location_point';
+  $handler->display->display_options['fields']['field_location_point']['field'] = 'field_location_point';
+  $handler->display->display_options['fields']['field_location_point']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['fields']['field_location_point']['label'] = 'location:geometry';
+  $handler->display->display_options['fields']['field_location_point']['click_sort_column'] = 'geom';
+  $handler->display->display_options['fields']['field_location_point']['type'] = 'geofield_geojson';
+  $handler->display->display_options['fields']['field_location_point']['settings'] = array(
     'data' => 'full',
   );
   /* Filter criterion: Content: Published */
@@ -630,6 +678,7 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('term from field_service_category'),
     t('Parent category'),
     t('Group node from OG membership'),
+    t('nested location'),
     t('id'),
     t('region'),
     t('organization'),
