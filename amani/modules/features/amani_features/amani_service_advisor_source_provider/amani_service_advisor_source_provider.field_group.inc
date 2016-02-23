@@ -27,7 +27,8 @@ function amani_service_advisor_source_provider_field_group_info() {
       1 => 'field_service_start_date',
       2 => 'field_service_comments',
       3 => 'field_service_more_info_link',
-      4 => 'path',
+      4 => 'field_location_address',
+      5 => 'path',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -119,6 +120,11 @@ function amani_service_advisor_source_provider_field_group_info() {
     'weight' => '5',
     'children' => array(
       0 => 'field_service_location',
+      1 => 'field_location_region',
+      2 => 'field_location_governorate',
+      3 => 'field_location_district',
+      4 => 'field_location_subdistrict',
+      5 => 'field_location_village',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

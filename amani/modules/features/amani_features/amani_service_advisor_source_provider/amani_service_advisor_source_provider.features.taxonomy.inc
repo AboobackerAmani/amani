@@ -384,6 +384,56 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'service_location_subdistrict' => array(
+      'name' => 'Service Location Subdistrict',
+      'machine_name' => 'service_location_subdistrict',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'language' => 'und',
+      'i18n_mode' => '1',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'service_location_village' => array(
+      'name' => 'Service Location Village',
+      'machine_name' => 'service_location_village',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'language' => 'und',
+      'i18n_mode' => '1',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'service_referral_method' => array(
       'name' => 'Service Referral Method',
       'machine_name' => 'service_referral_method',
