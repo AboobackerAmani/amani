@@ -60,7 +60,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_plain',
-          'weight' => '37',
+          'weight' => '12',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -124,7 +124,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '49',
+          'weight' => '20',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -199,7 +199,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_plain',
-          'weight' => '41',
+          'weight' => '16',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -423,7 +423,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_plain',
-          'weight' => '17',
+          'weight' => '11',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -626,7 +626,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '35',
+          'weight' => '34',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -694,7 +694,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '32',
+          'weight' => '31',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -762,7 +762,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '34',
+          'weight' => '33',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -996,7 +996,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_plain',
-          'weight' => '43',
+          'weight' => '18',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1068,7 +1068,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_plain',
-          'weight' => '42',
+          'weight' => '17',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1140,7 +1140,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_plain',
-          'weight' => '10',
+          'weight' => '9',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1225,18 +1225,9 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'geolocation_googlemaps',
-          'settings' => array(
-            'map_height' => '300px',
-            'map_imageformat' => 'png8',
-            'map_maptype' => 'terrain',
-            'map_scrollwheel' => 0,
-            'map_width' => '300px',
-            'map_zoomlevel' => '12',
-            'marker_icon' => '',
-          ),
-          'type' => 'geolocation_googlemaps_dynamic',
-          'weight' => '18',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '28',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1247,7 +1238,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_service_location',
-      'label' => 'Location',
+      'label' => 'Location (old)',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -1452,10 +1443,10 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'i18n_taxonomy',
+          'module' => 'hs_taxonomy',
           'settings' => array(),
-          'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => 50,
+          'type' => 'hs_taxonomy_term_reference_hierarchical_text',
+          'weight' => '19',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1613,7 +1604,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_plain',
-          'weight' => '38',
+          'weight' => '13',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1685,7 +1676,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_plain',
-          'weight' => '39',
+          'weight' => '14',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1757,7 +1748,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_plain',
-          'weight' => '40',
+          'weight' => '15',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1829,7 +1820,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_plain',
-          'weight' => '11',
+          'weight' => '10',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2756,6 +2747,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
   t('Immediate Next Step after Referral');
   t('Intake Criteria');
   t('Location');
+  t('Location (old)');
   t('Location Point');
   t('Logo');
   t('More Info Link');
