@@ -271,7 +271,7 @@ function amani_service_advisor_source_provider_strongarm() {
           'weight' => '17',
         ),
         'redirect' => array(
-          'weight' => '30',
+          'weight' => '8',
         ),
       ),
       'display' => array(

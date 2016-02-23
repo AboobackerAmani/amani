@@ -21,7 +21,7 @@ function amani_service_advisor_source_provider_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Additional Information',
-    'weight' => '6',
+    'weight' => '5',
     'children' => array(
       0 => 'field_service_end_date',
       1 => 'field_service_start_date',
@@ -85,7 +85,7 @@ function amani_service_advisor_source_provider_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Next Steps & Feedback',
-    'weight' => '4',
+    'weight' => '3',
     'children' => array(
       0 => 'field_response_delay_after_refer',
       1 => 'field_service_feedback_delay',
@@ -117,15 +117,14 @@ function amani_service_advisor_source_provider_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Location Details',
-    'weight' => '5',
+    'weight' => '4',
     'children' => array(
-      0 => 'field_service_location',
-      1 => 'field_location_district',
-      2 => 'field_location_governorate',
-      3 => 'field_location_region',
-      4 => 'field_location_subdistrict',
-      5 => 'field_location_village',
-      6 => 'field_service_location_location',
+      0 => 'field_location_district',
+      1 => 'field_location_governorate',
+      2 => 'field_location_region',
+      3 => 'field_location_subdistrict',
+      4 => 'field_location_village',
+      5 => 'field_service_location_location',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -184,7 +183,7 @@ function amani_service_advisor_source_provider_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Registration and Referrals',
-    'weight' => '3',
+    'weight' => '2',
     'children' => array(
       0 => 'field_service_intake_criteria',
       1 => 'field_service_registration_type',
