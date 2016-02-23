@@ -80,13 +80,6 @@ function amani_service_advisor_source_provider_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'clone_reset_partner';
-  $strongarm->value = 0;
-  $export['clone_reset_partner'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'clone_reset_project';
   $strongarm->value = 0;
   $export['clone_reset_project'] = $strongarm;
@@ -276,6 +269,9 @@ function amani_service_advisor_source_provider_strongarm() {
         ),
         'path' => array(
           'weight' => '17',
+        ),
+        'redirect' => array(
+          'weight' => '30',
         ),
       ),
       'display' => array(

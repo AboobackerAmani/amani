@@ -91,3 +91,33 @@ function amani_service_advisor_source_provider_load_categories() {
   }
 }
 
+
+/*
+ * Import the default categories and subcategories
+ */
+function amani_service_advisor_source_provider_load_lat_long() {
+  $terms_path = drupal_get_path('module', 'amani_service_advisor_source_provider') . '/data/latlong.csv';
+  $source_terms = amani_service_advisor_source_provider_load_terms_file($terms_path);
+  if ($source_terms) {
+    print "Importing lat/long for nested locations\n";
+    $vocab = taxonomy_vocabulary_machine_name_load('service_nested_location');
+    $current_terms = amani_service_advisor_source_provider_get_terms($vocab);
+
+    foreach ($source_terms as $term_name => $term_values) {
+      if ($current_terms[$term_name]){
+        $term = $current_terms[$term_name];
+        $term->field_location_point['und'][0] = array(
+          'lat' => trim($term_values[2]),
+          'lon' => trim($term_values[1]),
+          'wkt' => 'POINT (' . trim($term_values[2]) . ',' . trim($term_values[2]) . ')',
+          'geo_type' => 'point'
+        );
+        taxonomy_term_save($term);
+      }
+    }
+
+  }
+}
+
+
+

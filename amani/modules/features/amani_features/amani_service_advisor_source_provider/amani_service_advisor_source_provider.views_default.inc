@@ -476,16 +476,6 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['name_1']['field'] = 'name';
   $handler->display->display_options['fields']['name_1']['relationship'] = 'field_service_category_tid';
   $handler->display->display_options['fields']['name_1']['label'] = 'servicesProvided';
-  /* Field: Content: Location */
-  $handler->display->display_options['fields']['field_service_location']['id'] = 'field_service_location';
-  $handler->display->display_options['fields']['field_service_location']['table'] = 'field_data_field_service_location';
-  $handler->display->display_options['fields']['field_service_location']['field'] = 'field_service_location';
-  $handler->display->display_options['fields']['field_service_location']['label'] = 'location:geometry';
-  $handler->display->display_options['fields']['field_service_location']['click_sort_column'] = 'geom';
-  $handler->display->display_options['fields']['field_service_location']['type'] = 'geofield_geojson';
-  $handler->display->display_options['fields']['field_service_location']['settings'] = array(
-    'data' => 'full',
-  );
   /* Field: Content: Office Opens At */
   $handler->display->display_options['fields']['field_service_location_hour_open']['id'] = 'field_service_location_hour_open';
   $handler->display->display_options['fields']['field_service_location_hour_open']['table'] = 'field_data_field_service_location_hour_open';
@@ -547,11 +537,6 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_availability']['settings'] = array(
     'link' => 0,
   );
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_service_location_days_1']['id'] = 'field_service_location_days_1';
-  $handler->display->display_options['fields']['field_service_location_days_1']['table'] = 'field_data_field_service_location_days';
-  $handler->display->display_options['fields']['field_service_location_days_1']['field'] = 'field_service_location_days';
-  $handler->display->display_options['fields']['field_service_location_days_1']['label'] = 'details:Availability Day';
   /* Field: Content: Referral Method */
   $handler->display->display_options['fields']['field_service_referral_method']['id'] = 'field_service_referral_method';
   $handler->display->display_options['fields']['field_service_referral_method']['table'] = 'field_data_field_service_referral_method';
@@ -593,6 +578,16 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_service_registration_type']['field'] = 'field_service_registration_type';
   $handler->display->display_options['fields']['field_service_registration_type']['relationship'] = 'field_service_location_service_target_id';
   $handler->display->display_options['fields']['field_service_registration_type']['delta_offset'] = '0';
+  /* Field: Content: Location */
+  $handler->display->display_options['fields']['field_service_location_1']['id'] = 'field_service_location_1';
+  $handler->display->display_options['fields']['field_service_location_1']['table'] = 'field_data_field_service_location';
+  $handler->display->display_options['fields']['field_service_location_1']['field'] = 'field_service_location';
+  $handler->display->display_options['fields']['field_service_location_1']['label'] = 'location:geometry';
+  $handler->display->display_options['fields']['field_service_location_1']['click_sort_column'] = 'geom';
+  $handler->display->display_options['fields']['field_service_location_1']['type'] = 'geofield_geojson';
+  $handler->display->display_options['fields']['field_service_location_1']['settings'] = array(
+    'data' => 'full',
+  );
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -643,7 +638,6 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('startDate'),
     t('endDate'),
     t('servicesProvided'),
-    t('location:geometry'),
     t('hours:openAt'),
     t('hours:closedAt'),
     t('serviceName'),
@@ -652,12 +646,12 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('details:Accessibility'),
     t('details:Coverage'),
     t('details:Availability'),
-    t('details:Availability Day'),
     t('details:Referral Method'),
     t('details:Referral Next Steps'),
     t('details:Feedback Mechanism'),
     t('details:Feedback Delay'),
     t('Registration Type Requirement'),
+    t('location:geometry'),
     t('Published'),
     t('Page'),
   );
