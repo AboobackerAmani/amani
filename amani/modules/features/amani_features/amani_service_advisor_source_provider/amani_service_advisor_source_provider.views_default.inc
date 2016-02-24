@@ -37,6 +37,13 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  /* No results behavior: Global: Unfiltered text */
+  $handler->display->display_options['empty']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['empty']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['empty']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['empty']['area_text_custom']['label'] = 'No Service location';
+  $handler->display->display_options['empty']['area_text_custom']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area_text_custom']['content'] = 'There are no Service Location records for your organization.';
   /* Relationship: Node Membership */
   $handler->display->display_options['relationships']['og_membership_rel']['id'] = 'og_membership_rel';
   $handler->display->display_options['relationships']['og_membership_rel']['table'] = 'node';
@@ -340,6 +347,8 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
+    t('No Service location'),
+    t('There are no Service Location records for your organization.'),
     t('Node Membership'),
     t('Service Partner'),
     t('User Membership'),
@@ -640,9 +649,8 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['exposed'] = TRUE;
   $handler->display->display_options['filters']['status']['expose']['operator_id'] = '';
   $handler->display->display_options['filters']['status']['expose']['label'] = 'Published';
   $handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
@@ -662,6 +670,18 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
+  /* Filter criterion: Taxonomy term: Location Point (field_location_point:lat) */
+  $handler->display->display_options['filters']['field_location_point_lat']['id'] = 'field_location_point_lat';
+  $handler->display->display_options['filters']['field_location_point_lat']['table'] = 'field_data_field_location_point';
+  $handler->display->display_options['filters']['field_location_point_lat']['field'] = 'field_location_point_lat';
+  $handler->display->display_options['filters']['field_location_point_lat']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['filters']['field_location_point_lat']['operator'] = 'not empty';
+  /* Filter criterion: Taxonomy term: Location Point (field_location_point:lon) */
+  $handler->display->display_options['filters']['field_location_point_lon']['id'] = 'field_location_point_lon';
+  $handler->display->display_options['filters']['field_location_point_lon']['table'] = 'field_data_field_location_point';
+  $handler->display->display_options['filters']['field_location_point_lon']['field'] = 'field_location_point_lon';
+  $handler->display->display_options['filters']['field_location_point_lon']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['filters']['field_location_point_lon']['operator'] = 'not empty';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -921,7 +941,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_logo']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_logo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_logo']['settings'] = array(
-    'image_style' => 'large',
+    'image_style' => 'medium',
     'image_link' => '',
   );
   /* Field: clear-all */
@@ -1049,6 +1069,123 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler = $view->new_display('block', 'Service partner login', 'service_partner_login');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'service-partner-login';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_type'] = 'h1';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: User: Uid */
+  $handler->display->display_options['fields']['uid']['id'] = 'uid';
+  $handler->display->display_options['fields']['uid']['table'] = 'users';
+  $handler->display->display_options['fields']['uid']['field'] = 'uid';
+  $handler->display->display_options['fields']['uid']['relationship'] = 'og_membership_related_user';
+  $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
+  /* Field: Content: Logo */
+  $handler->display->display_options['fields']['field_logo']['id'] = 'field_logo';
+  $handler->display->display_options['fields']['field_logo']['table'] = 'field_data_field_logo';
+  $handler->display->display_options['fields']['field_logo']['field'] = 'field_logo';
+  $handler->display->display_options['fields']['field_logo']['label'] = '';
+  $handler->display->display_options['fields']['field_logo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_logo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_logo']['settings'] = array(
+    'image_style' => 'square_thumbnail',
+    'image_link' => '',
+  );
+  /* Field: clear-all */
+  $handler->display->display_options['fields']['nothing_3']['id'] = 'nothing_3';
+  $handler->display->display_options['fields']['nothing_3']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_3']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_3']['ui_name'] = 'clear-all';
+  $handler->display->display_options['fields']['nothing_3']['label'] = '';
+  $handler->display->display_options['fields']['nothing_3']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_type'] = 'h1';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Full Partner Name */
+  $handler->display->display_options['fields']['field_service_partner_full_name']['id'] = 'field_service_partner_full_name';
+  $handler->display->display_options['fields']['field_service_partner_full_name']['table'] = 'field_data_field_service_partner_full_name';
+  $handler->display->display_options['fields']['field_service_partner_full_name']['field'] = 'field_service_partner_full_name';
+  $handler->display->display_options['fields']['field_service_partner_full_name']['label'] = '';
+  $handler->display->display_options['fields']['field_service_partner_full_name']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['field_service_partner_full_name']['element_label_colon'] = FALSE;
+  /* Field: Content: Partner URL */
+  $handler->display->display_options['fields']['field_service_partner_url']['id'] = 'field_service_partner_url';
+  $handler->display->display_options['fields']['field_service_partner_url']['table'] = 'field_data_field_service_partner_url';
+  $handler->display->display_options['fields']['field_service_partner_url']['field'] = 'field_service_partner_url';
+  $handler->display->display_options['fields']['field_service_partner_url']['label'] = '';
+  $handler->display->display_options['fields']['field_service_partner_url']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_service_partner_url']['click_sort_column'] = 'url';
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  /* Field: Edit Organization  */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Edit Organization ';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Edit Organization';
+  $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['path'] = '/node/[nid]/edit?destination=/user/[uid]';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: Logout */
+  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_1']['ui_name'] = 'Logout';
+  $handler->display->display_options['fields']['nothing_1']['label'] = '';
+  $handler->display->display_options['fields']['nothing_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = 'Logout';
+  $handler->display->display_options['fields']['nothing_1']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['nothing_1']['alter']['path'] = '/user/logout';
+  $handler->display->display_options['fields']['nothing_1']['element_label_class'] = 'logout-btn';
+  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing_1']['element_default_classes'] = FALSE;
+  /* Field: Organization User Details  */
+  $handler->display->display_options['fields']['nothing_4']['id'] = 'nothing_4';
+  $handler->display->display_options['fields']['nothing_4']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_4']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_4']['ui_name'] = 'Organization User Details ';
+  $handler->display->display_options['fields']['nothing_4']['label'] = '';
+  $handler->display->display_options['fields']['nothing_4']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nothing_4']['alter']['text'] = 'Organization User Details ';
+  $handler->display->display_options['fields']['nothing_4']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['nothing_4']['alter']['path'] = '/node/[nid]/group';
+  $handler->display->display_options['fields']['nothing_4']['element_label_colon'] = FALSE;
+  /* Field: link wrapper */
+  $handler->display->display_options['fields']['nothing_5']['id'] = 'nothing_5';
+  $handler->display->display_options['fields']['nothing_5']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_5']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_5']['ui_name'] = 'link wrapper';
+  $handler->display->display_options['fields']['nothing_5']['label'] = '';
+  $handler->display->display_options['fields']['nothing_5']['alter']['text'] = '[nothing] [nothing_4] [nothing_1] ';
+  $handler->display->display_options['fields']['nothing_5']['element_type'] = 'div';
+  $handler->display->display_options['fields']['nothing_5']['element_class'] = 'link-wrapper';
+  $handler->display->display_options['fields']['nothing_5']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing_2']['id'] = 'nothing_2';
+  $handler->display->display_options['fields']['nothing_2']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_2']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_2']['label'] = '';
+  $handler->display->display_options['fields']['nothing_2']['alter']['text'] = 'Add new Service Location';
+  $handler->display->display_options['fields']['nothing_2']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['nothing_2']['alter']['path'] = '/node/add/service-location?og_group_ref=[nid]';
+  $handler->display->display_options['fields']['nothing_2']['element_label_colon'] = FALSE;
 
   /* Display: Service partner For Node */
   $handler = $view->new_display('block', 'Service partner For Node', 'service_partner_for_node');

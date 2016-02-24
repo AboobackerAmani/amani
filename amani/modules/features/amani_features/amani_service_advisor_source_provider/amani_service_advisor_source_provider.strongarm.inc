@@ -270,6 +270,9 @@ function amani_service_advisor_source_provider_strongarm() {
         'path' => array(
           'weight' => '17',
         ),
+        'redirect' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(
         'language' => array(

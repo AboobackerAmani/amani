@@ -21,6 +21,7 @@ function amani_service_advisor_source_provider_og_features_default_permissions()
   $permissions['node:service_partner:administer group'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
+      'member' => 'member',
     ),
   );
 
@@ -105,6 +106,7 @@ function amani_service_advisor_source_provider_og_features_default_permissions()
   $permissions['node:service_partner:update group'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
+      'member' => 'member',
     ),
   );
 
