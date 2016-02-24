@@ -1093,7 +1093,7 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_logo']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_logo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_logo']['settings'] = array(
-    'image_style' => 'square_thumbnail',
+    'image_style' => 'medium',
     'image_link' => '',
   );
   /* Field: clear-all */
