@@ -32,9 +32,9 @@ function amani_service_advisor_source_provider_load_vocabulary($vocabulary) {
 /*
  * Helper function to get all taxonomy tree by vocabulary name, indexed by term name
  */
-function amani_service_advisor_source_provider_get_terms($vocab) {
+function amani_service_advisor_source_provider_get_terms($vocab, $full_term = FALSE) {
   $terms = array();
-  if ($db_terms = taxonomy_get_tree($vocab->vid)) {
+  if ($db_terms = taxonomy_get_tree($vocab->vid, 0, NULL, $full_term)) {
     foreach ($db_terms as $term) {
       $terms[$term->name] = $term;
     }
@@ -119,5 +119,55 @@ function amani_service_advisor_source_provider_load_lat_long() {
   }
 }
 
+/*
+ * Import the default categories and subcategories
+ */
+function amani_service_advisor_source_provider_load_lat_long_from_xml() {
+
+  $terms_path = drupal_get_path('module', 'amani_service_advisor_source_provider') . '/data/jordan-locations.db.xml';
+  $xmlstring = file_get_contents($terms_path);
+  $xml = simplexml_load_string($xmlstring);
+  $json = json_encode($xml);
+  $json_array = json_decode($json,TRUE);
+  $locations = array();
+  array_map(function($value) use (&$locations) {
+        $locations[$value['@attributes']['Name']] = array(
+          'lat' => $value['@attributes']['Y'],
+          'lon' => $value['@attributes']['X'],
+          'wkt' => 'POINT (' . $value['@attributes']['X'] . ',' . $value['@attributes']['Y'] . ')',
+          'geo_type' => 'point'
+        );}, $json_array['dataset']['location']);
+
+   print "Importing lat/long for locations without geodata.\n";
+   $vocab = taxonomy_vocabulary_machine_name_load('service_nested_location');
+   $current_terms = amani_service_advisor_source_provider_get_terms($vocab, TRUE);
+
+   $already  = 0;
+   $match    = 0;
+   $no_match = 0;
+
+   foreach ($current_terms as $term) {
+    print $term->tid . ": ";
+
+    if (! isset($term->field_location_point['und'][0]['lat'])){
+      if ($locations[$term->name]){
+        print "I have geodata for " . $term->name . "\n";
+        $term->field_location_point['und'][0] = $locations[$term->name];
+        taxonomy_term_save($term);
+        $match++;
+        print "\n +++ UPDATE TO " . $term->tid . " +++\n";
+      } else {
+        print "No match on " . $term->name . "\n";
+        $no_match++;
+      }
+    } else {
+      $already++;
+      print "I already have geodata for " . $term->name . "\n";
+    }
+  }
+
+  print "\n\nRESULT: " . $match . ' matching, ' . $no_match . ' not matching, ' . $already . ' unchanged.' . "\n\n";
+
+}
 
 
