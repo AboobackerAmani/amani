@@ -47,11 +47,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => array(
-        0 => array(
-          'tid' => '37',
-        ),
-      ),
+      'default_value' => array(),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -80,7 +76,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(),
-        'type' => 'options_select',
+        'type' => 'options_buttons',
         'weight' => '13',
       ),
     ),
@@ -445,7 +441,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
   $fields['node-service_location-field_service_availability'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_service_availability',
@@ -478,7 +474,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => array(),
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -859,7 +855,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
   $fields['node-service_location-field_service_coverage'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_service_coverage',
@@ -892,7 +888,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => NULL,
+      'default_value' => array(),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -921,7 +917,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(),
-        'type' => 'options_select',
+        'type' => 'options_buttons',
         'weight' => '16',
       ),
     ),
