@@ -96,6 +96,7 @@ function amani_service_advisor_source_provider_partner_navigation(){
   } else {
   }
 
+  $variables['items'][] = l(t('Edit Account'), '/user/' . $user->uid . '/edit', array('query' => array('destination' => '/?lang=en')));
   $variables['items'][] = l(t('Logout'), '/user/logout');
   return theme('item_list', $variables);
 }
