@@ -486,7 +486,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => NULL,
+      'default_value' => array(),
       'deleted' => '0',
       'description' => 'Choose the Service, which is nested under the Sector',
       'display' => array(
@@ -513,9 +513,9 @@ function amani_service_advisor_source_provider_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'options',
+        'module' => 'hs_taxonomy',
         'settings' => array(),
-        'type' => 'options_select',
+        'type' => 'taxonomy_hs',
         'weight' => '2',
       ),
     ),
@@ -924,11 +924,11 @@ function amani_service_advisor_source_provider_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_service_end_date',
       'label' => 'End Date',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
-        'default_value' => 'blank',
+        'default_value' => 'strtotime',
         'default_value2' => 'same',
-        'default_value_code' => '',
+        'default_value_code' => '+1 year',
         'default_value_code2' => '',
         'user_register_form' => FALSE,
       ),
@@ -1634,7 +1634,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
   $fields['node-service_location-field_service_referral_method'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '-1',
+      'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_service_referral_method',
@@ -1696,7 +1696,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(),
-        'type' => 'options_buttons',
+        'type' => 'options_select',
         'weight' => '28',
       ),
     ),
@@ -1778,7 +1778,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
   $fields['node-service_location-field_service_registration_type'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '-1',
+      'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_service_registration_type',
@@ -1840,7 +1840,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(),
-        'type' => 'options_buttons',
+        'type' => 'options_select',
         'weight' => '25',
       ),
     ),
