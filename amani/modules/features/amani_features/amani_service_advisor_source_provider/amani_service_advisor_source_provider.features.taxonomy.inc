@@ -134,6 +134,31 @@ function amani_service_advisor_source_provider_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'service_complaints_mechanism' => array(
+      'name' => 'Service Complaints Mechanism',
+      'machine_name' => 'service_complaints_mechanism',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'language' => 'und',
+      'i18n_mode' => '1',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'service_coverage' => array(
       'name' => 'Service Coverage',
       'machine_name' => 'service_coverage',

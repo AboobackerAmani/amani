@@ -645,6 +645,12 @@ function amani_service_advisor_source_provider_views_default_views() {
   $handler->display->display_options['fields']['field_location_point']['settings'] = array(
     'data' => 'full',
   );
+  /* Field: Content: Complaints Mechanism */
+  $handler->display->display_options['fields']['field_complaints_mechanism']['id'] = 'field_complaints_mechanism';
+  $handler->display->display_options['fields']['field_complaints_mechanism']['table'] = 'field_data_field_complaints_mechanism';
+  $handler->display->display_options['fields']['field_complaints_mechanism']['field'] = 'field_complaints_mechanism';
+  $handler->display->display_options['fields']['field_complaints_mechanism']['label'] = 'details:Complaints Mechanism';
+  $handler->display->display_options['fields']['field_complaints_mechanism']['delta_offset'] = '0';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -721,6 +727,7 @@ function amani_service_advisor_source_provider_views_default_views() {
     t('details:Feedback Delay'),
     t('Registration Type Requirement'),
     t('location:geometry'),
+    t('details:Complaints Mechanism'),
     t('Published'),
     t('Page'),
   );
