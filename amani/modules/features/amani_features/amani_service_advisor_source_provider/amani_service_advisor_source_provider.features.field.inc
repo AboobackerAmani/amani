@@ -14,7 +14,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
   $fields['node-service_location-field__service_location_days'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field__service_location_days',
@@ -82,6 +82,78 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'settings' => array(),
         'type' => 'options_select',
         'weight' => '13',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-service_location-field_complaints_mechanism'.
+  $fields['node-service_location-field_complaints_mechanism'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_complaints_mechanism',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'service_complaints_mechanism',
+            'parent' => '0',
+          ),
+        ),
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'service_location',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'inline',
+          'module' => 'i18n_taxonomy',
+          'settings' => array(),
+          'type' => 'i18n_taxonomy_term_reference_plain',
+          'weight' => '35',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_complaints_mechanism',
+      'label' => 'Complaints Mechanism',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '43',
       ),
     ),
   );
@@ -229,7 +301,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
   $fields['node-service_location-field_service_accessibility'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_service_accessibility',
@@ -262,11 +334,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => array(
-        0 => array(
-          'tid' => '7',
-        ),
-      ),
+      'default_value' => array(),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -295,7 +363,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(),
-        'type' => 'options_select',
+        'type' => 'options_buttons',
         'weight' => '17',
       ),
     ),
@@ -410,11 +478,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => array(
-        0 => array(
-          'tid' => '152',
-        ),
-      ),
+      'default_value' => array(),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -443,7 +507,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(),
-        'type' => 'options_select',
+        'type' => 'options_buttons',
         'weight' => '12',
       ),
     ),
@@ -937,7 +1001,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'date',
         'settings' => array(
           'increment' => '15',
-          'input_format' => 'm/d/Y - H:i:s',
+          'input_format' => 'd/m/Y - H:i:s',
           'input_format_custom' => '',
           'label_position' => 'above',
           'no_fieldset' => 0,
@@ -1026,7 +1090,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
   $fields['node-service_location-field_service_feedback_mechanism'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_service_feedback_mechanism',
@@ -1059,7 +1123,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => NULL,
+      'default_value' => array(),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -1088,7 +1152,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(),
-        'type' => 'options_select',
+        'type' => 'options_buttons',
         'weight' => '34',
       ),
     ),
@@ -1558,7 +1622,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
   $fields['node-service_location-field_service_nationality'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_service_nationality',
@@ -1591,11 +1655,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => array(
-        0 => array(
-          'tid' => '128',
-        ),
-      ),
+      'default_value' => array(),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -1624,7 +1684,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(),
-        'type' => 'options_select',
+        'type' => 'options_buttons',
         'weight' => '26',
       ),
     ),
@@ -1634,7 +1694,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
   $fields['node-service_location-field_service_referral_method'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_service_referral_method',
@@ -1667,7 +1727,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => NULL,
+      'default_value' => array(),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -1696,7 +1756,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(),
-        'type' => 'options_select',
+        'type' => 'options_buttons',
         'weight' => '28',
       ),
     ),
@@ -1706,7 +1766,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
   $fields['node-service_location-field_service_referral_next_step'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_service_referral_next_step',
@@ -1739,7 +1799,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => NULL,
+      'default_value' => array(),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -1768,7 +1828,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(),
-        'type' => 'options_select',
+        'type' => 'options_buttons',
         'weight' => '32',
       ),
     ),
@@ -1778,7 +1838,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
   $fields['node-service_location-field_service_registration_type'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_service_registration_type',
@@ -1811,7 +1871,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'service_location',
-      'default_value' => NULL,
+      'default_value' => array(),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -1840,7 +1900,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(),
-        'type' => 'options_select',
+        'type' => 'options_buttons',
         'weight' => '25',
       ),
     ),
@@ -1920,11 +1980,10 @@ function amani_service_advisor_source_provider_field_default_fields() {
         'module' => 'date',
         'settings' => array(
           'increment' => '15',
-          'input_format' => 'm/d/Y - H:i:s',
+          'input_format' => 'd/m/Y - H:i:s',
           'input_format_custom' => '',
           'label_position' => 'above',
           'no_fieldset' => 0,
-          'repeat_collapsed' => 0,
           'text_parts' => array(),
           'year_range' => '-3:+3',
         ),
@@ -2736,6 +2795,7 @@ function amani_service_advisor_source_provider_field_default_fields() {
   t('Availability Days');
   t('Choose the Service, which is nested under the Sector');
   t('Comments');
+  t('Complaints Mechanism');
   t('Coverage');
   t('Determine if this is an OG group.');
   t('End Date');
