@@ -79,6 +79,7 @@ function amani_sms_parse_message($inputJSON) {
  */
 function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
   $map_record = entity_create('node', array('type' => 'incident_report'));
+  entity_save('node', $map_record);
   $mr_wrapper = entity_metadata_wrapper('node', $map_record);
   $errors = array();
   $title = '';
@@ -100,7 +101,6 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
       $mr_wrapper->status->set(0);
     }
   }
-
   // If we weren't able to parse a date from the message, use 'now'.
   if (!$title) {
     $title = date('dmY');
