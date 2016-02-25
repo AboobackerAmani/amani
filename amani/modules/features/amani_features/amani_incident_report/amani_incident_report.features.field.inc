@@ -169,7 +169,7 @@ function amani_incident_report_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'email_textfield',
-        'weight' => '4',
+        'weight' => '12',
       ),
     ),
   );
@@ -1251,7 +1251,7 @@ Prof.',
         'module' => 'name',
         'settings' => array(),
         'type' => 'name_widget',
-        'weight' => '3',
+        'weight' => '11',
       ),
     ),
   );
@@ -1326,7 +1326,108 @@ Prof.',
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '5',
+        'weight' => '13',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-incident_report-field_submitter_identifier'.
+  $fields['node-incident_report-field_submitter_identifier'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_submitter_identifier',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'incident_report',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Optionally provide a value for how this submitter identifies themselves. Could be a combination of name initials, organization initials etc ...',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '15',
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_submitter_identifier',
+      'label' => 'Submitter Identifier',
+      'required' => 0,
+      'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'php_code' => 'php_code',
+            'plain_text' => 'plain_text',
+            'wysiwyg_advanced' => 'wysiwyg_advanced',
+            'wysiwyg_public' => 'wysiwyg_public',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'php_code' => array(
+                'weight' => '11',
+              ),
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+              'wysiwyg_advanced' => array(
+                'weight' => '-10',
+              ),
+              'wysiwyg_public' => array(
+                'weight' => '-9',
+              ),
+            ),
+          ),
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '10',
       ),
     ),
   );
@@ -1345,7 +1446,9 @@ Prof.',
   t('Map filter #1');
   t('Map filter #2');
   t('Media (images/videos/documents)');
+  t('Optionally provide a value for how this submitter identifies themselves. Could be a combination of name initials, organization initials etc ...');
   t('Phone number');
+  t('Submitter Identifier');
   t('Submitter Name');
   t('Use the address fields here or use the map tools below to pick out a point directly on the map.');
   t('asdfasd asd fasdf asdfasd fad f');

@@ -47,7 +47,7 @@ function amani_incident_report_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'incident_report';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_content';
   $field_group->data = array(
     'label' => 'Location',
     'weight' => '3',
@@ -80,16 +80,16 @@ function amani_incident_report_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'incident_report';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_content';
   $field_group->data = array(
     'label' => 'Map Report',
     'weight' => '1',
     'children' => array(
       0 => 'field_description',
-      1 => 'field_incident_date',
-      2 => 'field_incident_report_type',
-      3 => 'field_incident_severity',
-      4 => 'field_image',
+      1 => 'field_image',
+      2 => 'field_incident_date',
+      3 => 'field_incident_report_type',
+      4 => 'field_incident_severity',
       5 => 'field_map_filter_3',
       6 => 'field_map_filter_4',
       7 => 'title',
@@ -119,7 +119,7 @@ function amani_incident_report_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'incident_report';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_content';
   $field_group->data = array(
     'label' => 'Supporting Documents & Links',
     'weight' => '2',
@@ -152,7 +152,7 @@ function amani_incident_report_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'incident_report';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_content';
   $field_group->data = array(
     'label' => 'Submitter (Optional)',
     'weight' => '4',
@@ -160,6 +160,7 @@ function amani_incident_report_field_group_info() {
       0 => 'field_email',
       1 => 'field_name',
       2 => 'field_phone',
+      3 => 'field_submitter_identifier',
     ),
     'format_type' => 'div',
     'format_settings' => array(

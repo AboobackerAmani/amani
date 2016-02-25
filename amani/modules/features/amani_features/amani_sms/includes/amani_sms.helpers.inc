@@ -105,9 +105,11 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
   if (!$title) {
     $title = date('dmY');
   }
-  // If we have a reporter, append to the title.
+  // If we have a reporter, append to the title & populate the Submitter Identifier field.
   if (!is_null($parsed_message['message']['amani_sms_reporter'])) {
     $title .= '-' . $parsed_message['message']['amani_sms_reporter'];
+    // Submitter Identifier
+    $mr_wrapper->field_submitter_identifier->set($parsed_message['message']['amani_sms_reporter']);
   }
   // Set the title.
   $mr_wrapper->title->set($title);
