@@ -1,5 +1,6 @@
 <?php
 include_once 'amani_sms.features.inc';
+include_once 'includes/amani_sms.helpers.inc';
 /**
  * Implements hook_menu().
  */
@@ -31,4 +32,56 @@ function amani_sms_can_access_settings() {
   global $user;
   // If your user 1 or you have the administrator role.
   return ($user->uid == 1 || (is_array($user->roles) && in_array('administrator', $user->roles)));
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function amani_sms_form_alter(&$form, &$form_state, $form_id) {
+  switch ($form_id) {
+    case 'sms_submission_node_form':
+      // Disable the errors field.
+      $form['field_sms_sub_errors'][LANGUAGE_NONE][0]['value']['#attributes']['disabled'] = TRUE;
+      // This is the edit form.
+      if (isset($form['#node']->nid)) {
+        // If for whatever reason (flakey internet etc..) a submissions map record
+        // isn't created. Add a button to manually attempt to create it.
+        if (empty($form['field_sms_sub_map_record'][LANGUAGE_NONE]['#default_value'])) {
+          $form['gen_map_record'][] = array(
+            '#type' => 'button',
+            '#value' => t('Generate Map Record from Sms Message'),
+            '#executes_submit_callback' => TRUE,
+            '#weight' => -10,
+          );
+          $form['#submit'][] = 'amani_sms_sub_node_submit';
+        }
+      }
+      break;
+  }
+}
+
+/**
+ * Custom submit handler for sms submission nodes.
+ */
+function amani_sms_sub_node_submit($form, &$form_state) {
+  $node = isset($form['#node']) ? $form['#node'] : NULL;
+
+  if ($form_state['clicked_button']['#value'] == 'Generate Map Record from Sms Message' && $node) {
+    // Retrieve message value.
+    $msg = isset($form_state['values']['field_sms_sub_message'][LANGUAGE_NONE][0]['value']) ?
+      $form_state['values']['field_sms_sub_message'][LANGUAGE_NONE][0]['value'] : NULL;
+    // Message retrieved, attempt to create map record.
+    if ($msg) {
+      if($parsed_message = amani_sms_parse_message($msg)) {
+        $sub_wrapper = entity_metadata_wrapper('node', $node);
+        amani_sms_add_map_record($parsed_message, $sub_wrapper);
+        drupal_set_message(t('A new map record has been generated. Please review the Status and Errors field of this submission.'));
+      }
+    } else {
+      drupal_set_message(t('A value could not be retrieved from the Sms Message field.'));
+    }
+
+    unset($_GET['destination']);
+    $form_state['redirect'] = '/node/' . $node->nid . '/edit';
+  }
 }

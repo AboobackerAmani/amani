@@ -171,7 +171,7 @@ function amani_sms_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_sms_sub_map_record',
       'label' => 'Map Record',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
@@ -327,7 +327,7 @@ function amani_sms_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_sms_sub_status',
       'label' => 'Status',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),

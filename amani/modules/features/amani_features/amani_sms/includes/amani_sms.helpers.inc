@@ -21,16 +21,7 @@ function amani_sms_process_sms($inputJSON) {
     // Create sms submission.
     $submission = entity_create('node', array('type' => 'sms_submission'));
     $sub_wrapper = entity_metadata_wrapper('node', $submission);
-    $title = '';
-    if (isset($parsed_message['message']['amani_sms_date']) && !is_null($parsed_message['message']['amani_sms_date'])) {
-      $title .= $parsed_message['message']['amani_sms_date'];
-    }
-    if (isset($parsed_message['message']['amani_sms_reporter']) && !is_null($parsed_message['message']['amani_sms_reporter'])) {
-      $title .= ' ' . $parsed_message['message']['amani_sms_reporter'];
-    }
-    if (empty($title)) {
-      $title = 'Sms Submission';
-    }
+    $title = amani_sms_get_title($parsed_message, 'SMS Submission');
     $sub_wrapper->title->set($title);
     $sub_wrapper->field_sms_sub_message->set($inputJSON);
     $sub_wrapper->save();
@@ -79,47 +70,46 @@ function amani_sms_parse_message($inputJSON) {
  */
 function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
   $map_record = entity_create('node', array('type' => 'incident_report'));
-  entity_save('node', $map_record);
   $mr_wrapper = entity_metadata_wrapper('node', $map_record);
   $errors = array();
-  $title = '';
+  $title = amani_sms_get_title($parsed_message, 'Map Record');
+  // Set the title.
+  $mr_wrapper->title->set($title);
   // Incident Date
   if (!is_null($parsed_message['message']['amani_sms_date'])) {
     $message_date = $parsed_message['message']['amani_sms_date'];
     $day = substr($message_date, 0, 2);
     $month = substr($message_date, 2, 2);
     $yr = substr($message_date, 4, 4);
-    if (checkdate($month, $day, $yr)) {
-      $date = strtotime("{$month}/{$day}/{$yr}");
+    $date = strtotime("{$month}/{$day}/{$yr}");
+    if (checkdate($month, $day, $yr) && $date) {
       $mr_wrapper->field_incident_date->set($date);
-      $title = $day . $month . $yr;
-    }
-    else {
-      // Add an error.
-      $errors[] = 'There was a problem with the Date, ensure the format is DDMMYYYY or DDMMYY';
+    } else {
+      // Add an error. (Custom).
+      $errors[] = 'A date existed but there was a problem converting value: ' . $message_date . ' to a date';
       // Unpublished map record.
       $mr_wrapper->status->set(0);
     }
+  } else {
+    // Add an error.
+    $val = $parsed_message['message']['amani_sms_date'];
+    $errors[] = amani_sms_create_error('Date', $val);
+    // Unpublished map record.
+    $mr_wrapper->status->set(0);
   }
-  // If we weren't able to parse a date from the message, use 'now'.
-  if (!$title) {
-    $title = date('dmY');
-  }
-  // If we have a reporter, append to the title & populate the Submitter Identifier field.
+  // Submitter Identifier field.
   if (!is_null($parsed_message['message']['amani_sms_reporter'])) {
-    $title .= '-' . $parsed_message['message']['amani_sms_reporter'];
     // Submitter Identifier
     $mr_wrapper->field_submitter_identifier->set($parsed_message['message']['amani_sms_reporter']);
   }
-  // Set the title.
-  $mr_wrapper->title->set($title);
   // Location
   if (!is_null($parsed_message['message']['amani_sms_location'])) {
     if ($term = amani_sms_token_to_term('amani_sms_location', $parsed_message['message']['amani_sms_location'])) {
       $mr_wrapper->field_incident_geolocation->set($term->field_sms_location[LANGUAGE_NONE][0]);
     } else {
       // Add an error.
-      $errors[] = 'There was a problem with the Location - ensure the value exist in your sms configuration';
+      $val = $parsed_message['message']['amani_sms_location'];
+      $errors[] = amani_sms_create_error('Location', $val);
       // Unpublished map record.
       $mr_wrapper->status->set(0);
     }
@@ -130,7 +120,8 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
       $mr_wrapper->field_incident_report_type->set($term->tid);
     } else {
       // Add an error.
-      $errors[] = 'There was a problem with Filter 1 - ensure the value exist in your sms configuration';
+      $val = $parsed_message['message']['amani_sms_filter_1'];
+      $errors[] = amani_sms_create_error('Filter 1', $val);
       // Unpublished map record.
       $mr_wrapper->status->set(0);
     }
@@ -141,7 +132,8 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
       $mr_wrapper->field_incident_severity->set($term->tid);
     } else {
       // Add an error.
-      $errors[] = 'There was a problem with Filter 2 - ensure the value exist in your sms configuration';
+      $val = $parsed_message['message']['amani_sms_filter_2'];
+      $errors[] = amani_sms_create_error('Filter 2', $val);
       // Unpublished map record.
       $mr_wrapper->status->set(0);
     }
@@ -152,7 +144,8 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
       $mr_wrapper->field_map_filter_3->set($term->tid);
     } else {
       // Add an error.
-      $errors[] = 'There was a problem with Filter 3 - ensure the value exist in your sms configuration';
+      $val = $parsed_message['message']['amani_sms_filter_3'];
+      $errors[] = amani_sms_create_error('Filter 3', $val);
       // Unpublished map record.
       $mr_wrapper->status->set(0);
     }
@@ -163,7 +156,8 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
       $mr_wrapper->field_map_filter_4->set($term->tid);
     } else {
       // Add an error.
-      $errors[] = 'There was a problem with Filter 4 - ensure the value exist in your sms configuration';
+      $val = $parsed_message['message']['amani_sms_filter_4'];
+      $errors[] = amani_sms_create_error('Filter 4', $val);
       // Unpublished map record.
       $mr_wrapper->status->set(0);
     }
@@ -176,6 +170,7 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
     );
   }
 
+
   // If the map record has been set to unpublished - set the needs review flag.
   if ($mr_wrapper->status->value() == 0) {
     // Set needs review field on submission.
@@ -186,6 +181,7 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
     $sub_wrapper->field_sms_sub_status->set(1);
     $sub_wrapper->field_sms_sub_errors->set('No errors recorded');
   }
+
 
   $mr_wrapper->save();
   $sub_wrapper->field_sms_sub_map_record->set($mr_wrapper->getIdentifier());
@@ -221,4 +217,26 @@ function amani_sms_token_to_term($token, $val) {
   }
 
   return FALSE;
+}
+
+/**
+ * Standardize how we create titles for records & submissions.
+ */
+function amani_sms_get_title($parsed_message, $type) {
+  $title = '';
+  if (isset($parsed_message['message']['amani_sms_date']) && !is_null($parsed_message['message']['amani_sms_date'])) {
+    $title .= $parsed_message['message']['amani_sms_date'];
+  }
+  if (isset($parsed_message['message']['amani_sms_reporter']) && !is_null($parsed_message['message']['amani_sms_reporter'])) {
+    $title .= ' ' . $parsed_message['message']['amani_sms_reporter'];
+  }
+
+  return $title ? $title : $type;
+}
+
+/**
+ * Standardize how we create errors.
+ */
+function amani_sms_create_error($field, $val) {
+  return t('There was a problem mapping ' . $field . ' recieved value: "' . $val . '" - ensure the value exists in your sms configuration');
 }
