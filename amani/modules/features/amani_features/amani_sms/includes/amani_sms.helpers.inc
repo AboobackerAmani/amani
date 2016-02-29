@@ -82,7 +82,7 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
     $month = substr($message_date, 2, 2);
     $yr = substr($message_date, 4, 4);
     $date = strtotime("{$month}/{$day}/{$yr}");
-    if (checkdate($month, $day, $yr) && $date) {
+    if ($date && checkdate($month, $day, $yr)) {
       $mr_wrapper->field_incident_date->set($date);
     } else {
       // Add an error. (Custom).
