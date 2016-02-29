@@ -86,7 +86,7 @@ function amani_sms_add_map_record($parsed_message, $sub_wrapper) {
       $mr_wrapper->field_incident_date->set($date);
     } else {
       // Add an error. (Custom).
-      $errors[] = 'A date existed but there was a problem converting value: ' . $message_date . ' to a date';
+      $errors[] = 'A date existed but there was a problem converting value: "' . $message_date . '" to a date';
       // Unpublished map record.
       $mr_wrapper->status->set(0);
     }
