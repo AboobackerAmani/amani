@@ -161,18 +161,6 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['fields']['field_link']['label'] = '';
   $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
-  /* Field: Content: Media */
-  $handler->display->display_options['fields']['field_media']['id'] = 'field_media';
-  $handler->display->display_options['fields']['field_media']['table'] = 'field_data_field_media';
-  $handler->display->display_options['fields']['field_media']['field'] = 'field_media';
-  $handler->display->display_options['fields']['field_media']['label'] = '';
-  $handler->display->display_options['fields']['field_media']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_media']['alter']['text'] = 'Download';
-  $handler->display->display_options['fields']['field_media']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_media']['alter']['path'] = '[field_media] ';
-  $handler->display->display_options['fields']['field_media']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_media']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_media']['delta_offset'] = '0';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -302,6 +290,68 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['header']['area']['label'] = 'All Resources title';
   $handler->display->display_options['header']['area']['content'] = '<div class="resources-title"><h2 class="block-title">All Resources</h2></div>';
   $handler->display->display_options['header']['area']['format'] = 'wysiwyg_advanced';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Lead Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'large',
+    'image_link' => 'content',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<h3>[title]</h3>
+[body]';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Date */
+  $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
+  $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
+  $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
+  $handler->display->display_options['fields']['field_date']['label'] = '';
+  $handler->display->display_options['fields']['field_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_date']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
+  /* Field: Content: Resource Type */
+  $handler->display->display_options['fields']['field_resource_type']['id'] = 'field_resource_type';
+  $handler->display->display_options['fields']['field_resource_type']['table'] = 'field_data_field_resource_type';
+  $handler->display->display_options['fields']['field_resource_type']['field'] = 'field_resource_type';
+  $handler->display->display_options['fields']['field_resource_type']['label'] = '';
+  $handler->display->display_options['fields']['field_resource_type']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_resource_type']['hide_empty'] = TRUE;
+  /* Field: Content: Resource Theme(s) */
+  $handler->display->display_options['fields']['field_theme_s_']['id'] = 'field_theme_s_';
+  $handler->display->display_options['fields']['field_theme_s_']['table'] = 'field_data_field_theme_s_';
+  $handler->display->display_options['fields']['field_theme_s_']['field'] = 'field_theme_s_';
+  $handler->display->display_options['fields']['field_theme_s_']['label'] = '';
+  $handler->display->display_options['fields']['field_theme_s_']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_theme_s_']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_theme_s_']['delta_offset'] = '0';
+  /* Field: Content: Location */
+  $handler->display->display_options['fields']['field_location_name']['id'] = 'field_location_name';
+  $handler->display->display_options['fields']['field_location_name']['table'] = 'field_data_field_location_name';
+  $handler->display->display_options['fields']['field_location_name']['field'] = 'field_location_name';
+  $handler->display->display_options['fields']['field_location_name']['label'] = '';
+  $handler->display->display_options['fields']['field_location_name']['element_label_colon'] = FALSE;
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
+  $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['label'] = '';
+  $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -500,7 +550,6 @@ function amani_resource_views_default_views() {
     t('I\'m sorry but there are no document resources for the selected criteria.'),
     t('<h3>[title]</h3>
 [body]'),
-    t('Download'),
     t('Resource Type'),
     t('Resource Theme'),
     t('Location'),
