@@ -733,3 +733,49 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       break;
   }
 }
+
+function amani_administrator_configure_comments_form() {
+  $form = array();
+  
+  $comment_en_dis = variable_get('comment_en_dis');
+  
+  $form['comment_en_dis'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Comment Enable'),
+    '#default_value' => $comment_en_dis,
+  );
+  
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Save Configuration',
+  );
+  
+  return $form;
+}
+
+function amani_administrator_configure_comments_form_submit($form, &$form_state) {
+  variable_set('comment_en_dis', $form_state['input']['comment_en_dis']);
+  $content_types = node_type_get_types();
+  foreach ($content_types as $key => $val) {
+    if ($form_state['input']['comment_en_dis'] == 1) {
+      $result = 2;
+    }
+    else {
+      $result = 0;
+    }
+    db_update('node')
+      ->fields(array(
+        'comment' => $result,
+      ))
+      ->condition('type', $key)
+      ->execute();
+      
+    $sql = "UPDATE node_revision nrev
+            INNER JOIN node nd ON nrev.nid = nd.nid AND nd.type = :type1
+            SET nrev.comment = :type2";
+    
+    $args = array(':type1' => $key, ':type2' => $result);
+    db_query($sql, $args);
+  }
+  cache_clear_all();
+}
