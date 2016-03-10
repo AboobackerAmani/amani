@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function amani_incident_report_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -32,12 +32,12 @@ function amani_incident_report_field_group_info() {
     'format_settings' => array(
       'label' => 'Content Group',
       'instance_settings' => array(
-        'classes' => '',
+        'classes' => ' group-content field-group-accordion',
         'effect' => 'bounceslide',
       ),
     ),
   );
-  $export['group_content|node|incident_report|form'] = $field_group;
+  $field_groups['group_content|node|incident_report|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -64,13 +64,13 @@ function amani_incident_report_field_group_info() {
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
-        'classes' => '',
+        'classes' => ' group-incident-location field-group-div',
         'required_fields' => 1,
-        'id' => '',
+        'id' => 'node_incident_report_form_group_incident_location',
       ),
     ),
   );
-  $export['group_incident_location|node|incident_report|form'] = $field_group;
+  $field_groups['group_incident_location|node|incident_report|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -103,13 +103,13 @@ function amani_incident_report_field_group_info() {
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
-        'classes' => '',
+        'classes' => ' group-incident-main field-group-div',
         'required_fields' => 1,
-        'id' => '',
+        'id' => 'node_incident_report_form_group_incident_main',
       ),
     ),
   );
-  $export['group_incident_main|node|incident_report|form'] = $field_group;
+  $field_groups['group_incident_main|node|incident_report|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -132,17 +132,18 @@ function amani_incident_report_field_group_info() {
       'label' => 'Supporting Documents & Links',
       'instance_settings' => array(
         'required_fields' => 1,
-        'classes' => '',
+        'classes' => ' group-incident-media field-group-div',
         'description' => '',
         'show_label' => '1',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
+        'id' => 'node_incident_report_form_group_incident_media',
       ),
       'formatter' => 'open',
     ),
   );
-  $export['group_incident_media|node|incident_report|form'] = $field_group;
+  $field_groups['group_incident_media|node|incident_report|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -166,17 +167,26 @@ function amani_incident_report_field_group_info() {
       'label' => 'Submitter (Optional)',
       'instance_settings' => array(
         'required_fields' => 1,
-        'classes' => '',
+        'classes' => ' group-incident-submitter field-group-div',
         'description' => '',
         'show_label' => '1',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
+        'id' => 'node_incident_report_form_group_incident_submitter',
       ),
       'formatter' => 'open',
     ),
   );
-  $export['group_incident_submitter|node|incident_report|form'] = $field_group;
+  $field_groups['group_incident_submitter|node|incident_report|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Content Group');
+  t('Location');
+  t('Map Report');
+  t('Submitter (Optional)');
+  t('Supporting Documents & Links');
+
+  return $field_groups;
 }

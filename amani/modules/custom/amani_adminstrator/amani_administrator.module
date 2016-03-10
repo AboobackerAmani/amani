@@ -24,6 +24,15 @@ function amani_administrator_menu() {
     'type' => MENU_CALLBACK,
     'file' => 'amani_administrator.admin.inc',
   );
+  
+  $items['admin/configure-amani/comments'] = array(
+    'title' => 'Comment Enable/Disable',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('amani_administrator_configure_comments_form'),
+    'access arguments' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'amani_administrator.admin.inc',
+  );
 
   return $items;
 }
