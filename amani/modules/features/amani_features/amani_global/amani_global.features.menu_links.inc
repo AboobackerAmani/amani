@@ -9,7 +9,6 @@
  */
 function amani_global_menu_default_menu_links() {
   $menu_links = array();
-
   // Exported menu link: menu-amani-admin-menu:admin/configure-amani
   $menu_links['menu-amani-admin-menu:admin/configure-amani'] = array(
     'menu_name' => 'menu-amani-admin-menu',
@@ -100,6 +99,118 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-46',
   );
+  // Exported menu link: menu-amani-main-menu:about
+  $menu_links['menu-amani-main-menu:about'] = array(
+    'menu_name' => 'menu-amani-main-menu',
+    'link_path' => 'about',
+    'router_path' => 'about',
+    'link_title' => 'About',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '1',
+    'expanded' => '1',
+    'weight' => '-50',
+  );
+  // Exported menu link: menu-amani-main-menu:contact
+  $menu_links['menu-amani-main-menu:contact'] = array(
+    'menu_name' => 'menu-amani-main-menu',
+    'link_path' => 'contact',
+    'router_path' => 'contact',
+    'link_title' => 'Contact',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '1',
+    'weight' => '-43',
+  );
+  // Exported menu link: menu-amani-main-menu:get-involved
+  $menu_links['menu-amani-main-menu:get-involved'] = array(
+    'menu_name' => 'menu-amani-main-menu',
+    'link_path' => 'get-involved',
+    'router_path' => 'get-involved',
+    'link_title' => 'Get Involved',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '1',
+    'weight' => '-47',
+  );
+  // Exported menu link: menu-amani-main-menu:news-and-events
+  $menu_links['menu-amani-main-menu:news-and-events'] = array(
+    'menu_name' => 'menu-amani-main-menu',
+    'link_path' => 'news-and-events',
+    'router_path' => 'news-and-events',
+    'link_title' => 'News & Events',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '1',
+    'expanded' => '1',
+    'weight' => '-44',
+  );
+  // Exported menu link: menu-amani-main-menu:programs
+  $menu_links['menu-amani-main-menu:programs'] = array(
+    'menu_name' => 'menu-amani-main-menu',
+    'link_path' => 'programs',
+    'router_path' => 'programs',
+    'link_title' => 'Programs',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '1',
+    'weight' => '-49',
+  );
+  // Exported menu link: menu-amani-main-menu:resources
+  $menu_links['menu-amani-main-menu:resources'] = array(
+    'menu_name' => 'menu-amani-main-menu',
+    'link_path' => 'resources',
+    'router_path' => 'resources',
+    'link_title' => 'Resources',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '1',
+    'expanded' => '1',
+    'weight' => '-45',
+  );
   // Exported menu link: menu-configure-footer-links:<front>
   $menu_links['menu-configure-footer-links:<front>'] = array(
     'menu_name' => 'menu-configure-footer-links',
@@ -136,8 +247,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '1',
     'expanded' => '1',
-    'weight' => '-49',
-  );
+
   // Exported menu link: menu-configure-footer-links:blog
   $menu_links['menu-configure-footer-links:blog'] = array(
     'menu_name' => 'menu-configure-footer-links',
@@ -370,7 +480,8 @@ function amani_global_menu_default_menu_links() {
   t('Programs');
   t('Resources');
   t('Team');
-
+  t('Programs');
+  t('Resources');
 
   return $menu_links;
 }
