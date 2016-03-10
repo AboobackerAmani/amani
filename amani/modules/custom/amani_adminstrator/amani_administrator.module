@@ -24,15 +24,6 @@ function amani_administrator_menu() {
     'type' => MENU_CALLBACK,
     'file' => 'amani_administrator.admin.inc',
   );
-  
-  $items['admin/configure-amani/comments'] = array(
-    'title' => 'Comment Enable/Disable',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('amani_administrator_configure_comments_form'),
-    'access arguments' => TRUE,
-    'type' => MENU_NORMAL_ITEM,
-    'file' => 'amani_administrator.admin.inc',
-  );
 
   return $items;
 }
@@ -214,4 +205,30 @@ function amani_administrator_form_alter(&$form, &$form_state, $form_id) {
   }
 
   return $form;
+}
+
+function amani_administrator_configure_comments($comment_en_dis) {
+  $content_types = node_type_get_types();
+  foreach ($content_types as $key => $val) {
+    if ($comment_en_dis == 1) {
+      $result = 2;
+    }
+    else {
+      $result = 0;
+    }
+    db_update('node')
+      ->fields(array(
+        'comment' => $result,
+      ))
+      ->condition('type', $key)
+      ->execute();
+      
+    $sql = "UPDATE node_revision nrev
+            INNER JOIN node nd ON nrev.nid = nd.nid AND nd.type = :type1
+            SET nrev.comment = :type2";
+    
+    $args = array(':type1' => $key, ':type2' => $result);
+    db_query($sql, $args);
+  }
+  cache_clear_all();
 }

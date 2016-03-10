@@ -109,11 +109,11 @@ function amani_global_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'menu-menu-amani-main-menu' => array(
+        'menu-menu-configure-footer-links' => array(
           'module' => 'menu',
-          'delta' => 'menu-amani-main-menu',
+          'delta' => 'menu-configure-footer-links',
           'region' => 'footer',
-          'weight' => '-9',
+          'weight' => '-10',
         ),
         'menu-menu-social-media' => array(
           'module' => 'menu',

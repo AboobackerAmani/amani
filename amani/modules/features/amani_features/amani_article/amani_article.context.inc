@@ -35,12 +35,6 @@ function amani_article_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
-        'views-comments-block' => array(
-          'module' => 'views',
-          'delta' => 'comments-block',
-          'region' => 'sidebar_second',
-          'weight' => '-9',
-        ),
       ),
     ),
     'breadcrumb' => array(

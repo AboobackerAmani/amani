@@ -22,7 +22,15 @@ function amani_global_menu_default_menu_custom() {
   $menus['menu-amani-main-menu'] = array(
     'menu_name' => 'menu-amani-main-menu',
     'title' => 'Configure Main Menu Links',
-    'description' => 'The main menu for Amani - displayed in the header and the footer',
+    'description' => 'The main menu for Amani - displayed in the header.',
+    'language' => 'und',
+    'i18n_mode' => '5',
+  );
+  // Exported menu: menu-configure-footer-links.
+  $menus['menu-configure-footer-links'] = array(
+    'menu_name' => 'menu-configure-footer-links',
+    'title' => 'Configure Footer Links',
+    'description' => 'These are the links that are displayed in the footer. Needed a separate one from the main menu, as there were some differences from the header and footer links needed.',
     'language' => 'und',
     'i18n_mode' => '5',
   );
@@ -46,9 +54,11 @@ function amani_global_menu_default_menu_custom() {
   // Included for use with string extractors like potx.
   t('Amani admin menu');
   t('Configure Donate Button');
+  t('Configure Footer Links');
   t('Configure Main Menu Links');
   t('Donation fly-out. sitewide.');
-  t('The main menu for Amani - displayed in the header and the footer');
+  t('The main menu for Amani - displayed in the header.');
+  t('These are the links that are displayed in the footer. Needed a separate one from the main menu, as there were some differences from the header and footer links needed.');
   t('meta');
 
 

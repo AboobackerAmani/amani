@@ -220,6 +220,7 @@ function amani_resource_field_default_fields() {
             'multiple_from' => '',
             'multiple_number' => '',
             'multiple_to' => '',
+            'show_remaining_days' => FALSE,
             'show_repeat_rule' => 'show',
           ),
           'type' => 'date_default',
