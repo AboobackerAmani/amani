@@ -107,6 +107,13 @@ function amani_incident_report_views_default_views() {
   /* Display: Latest incidents */
   $handler = $view->new_display('block', 'Latest incidents', 'latest');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Read more';
 
   /* Display: All incidents */
   $handler = $view->new_display('page', 'All incidents', 'page_1');
@@ -131,6 +138,7 @@ function amani_incident_report_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Description'),
+    t('Read more'),
     t('All incidents'),
     t('<none>'),
   );

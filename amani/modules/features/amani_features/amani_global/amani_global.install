@@ -10,4 +10,12 @@ function amani_global_update_7004() {
 function amani_global_update_7005() {
 	features_revert('amani_global');
 }
+
+/**
+ * Revert the menu links so that they are set as "Show as Expanded".
+ */
+function amani_global_update_7006() {
+	features_revert('amani_global');
+}
+
 ?>

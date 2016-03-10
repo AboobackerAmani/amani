@@ -49,9 +49,9 @@
 
   <div id="main">
 		<?php print render($title_prefix); ?>
-    <?php if ($title && $node->type != 'team'): ?>
+    <?php if ($title && isset($node) && $node->type != 'team'): ?>
       <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
-    <?php else: ?>
+    <?php elseif ($title && isset($node) && $node->type == 'team'): ?>
       <h1 class="page__title title" id="page-title"><?php print t('Team'); ?></h1>
     <?php endif; ?>
     <?php print render($title_suffix); ?>
