@@ -86,6 +86,10 @@
 
 </div>
 
+<div class="content_bottom">
+  <?php print render($page['content_bottom']); ?>
+</div>
+
 <div class="footer-top"></div>
 
 <div class="footer-wrapper">
