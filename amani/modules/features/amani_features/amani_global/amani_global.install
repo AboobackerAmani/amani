@@ -7,4 +7,11 @@ function amani_global_update_7004() {
   features_revert('amani_global');
 }
 
+/**
+ * Revert feature to add new context.
+ */
+function amani_global_update_7006() {
+  features_revert('amani_global');
+}
+
 ?>
