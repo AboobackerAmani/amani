@@ -594,6 +594,29 @@ function amani_administrator_configure_amani_form() {
       the feed displayed at the bottom of the front page. Click on the button above and go to the "FILTER CRITERIA" part. Then click on "Content:type", select the content types that you want to see on the front pahe, then save and save the view.</p></div>',
   );
 
+  $form['comments'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Manage Site-Wide Comments'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['comments'][] = array(
+    '#type' => 'button',
+    '#value' => t('Enable Comments'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action will enable comments on all content types site wide.</p></div>'
+  );
+
+  $form['comments'][] = array(
+    '#type' => 'button',
+    '#value' => t('Disable Comments'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action will disable comments on all content types site wide.</p></div>'
+  );
+
   return $form;
 }
 
@@ -731,51 +754,11 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
     case 'Configure content types to display':
       drupal_goto('admin/structure/views/view/news_and_events/edit/block_1');
       break;
+    case 'Enable Comments':
+      amani_administrator_configure_comments(1);
+      break;
+    case 'Disable Comments':
+      amani_administrator_configure_comments(0);
+      break;
   }
-}
-
-function amani_administrator_configure_comments_form() {
-  $form = array();
-  
-  $comment_en_dis = variable_get('comment_en_dis');
-  
-  $form['comment_en_dis'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Comment Enable'),
-    '#default_value' => $comment_en_dis,
-  );
-  
-  $form['submit'] = array(
-    '#type' => 'submit',
-    '#value' => 'Save Configuration',
-  );
-  
-  return $form;
-}
-
-function amani_administrator_configure_comments_form_submit($form, &$form_state) {
-  variable_set('comment_en_dis', $form_state['input']['comment_en_dis']);
-  $content_types = node_type_get_types();
-  foreach ($content_types as $key => $val) {
-    if ($form_state['input']['comment_en_dis'] == 1) {
-      $result = 2;
-    }
-    else {
-      $result = 0;
-    }
-    db_update('node')
-      ->fields(array(
-        'comment' => $result,
-      ))
-      ->condition('type', $key)
-      ->execute();
-      
-    $sql = "UPDATE node_revision nrev
-            INNER JOIN node nd ON nrev.nid = nd.nid AND nd.type = :type1
-            SET nrev.comment = :type2";
-    
-    $args = array(':type1' => $key, ':type2' => $result);
-    db_query($sql, $args);
-  }
-  cache_clear_all();
 }
