@@ -109,29 +109,29 @@ function amani_global_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'menu-menu-amani-main-menu' => array(
+        'menu-menu-configure-footer-links' => array(
           'module' => 'menu',
-          'delta' => 'menu-amani-main-menu',
+          'delta' => 'menu-configure-footer-links',
           'region' => 'footer',
-          'weight' => '-44',
+          'weight' => '-10',
         ),
         'menu-menu-social-media' => array(
           'module' => 'menu',
           'delta' => 'menu-social-media',
           'region' => 'footer',
-          'weight' => '-43',
+          'weight' => '-8',
         ),
         'bean-project-by-pg' => array(
           'module' => 'bean',
           'delta' => 'project-by-pg',
           'region' => 'footer',
-          'weight' => '-42',
+          'weight' => '-7',
         ),
         'bean-powered-by-amani' => array(
           'module' => 'bean',
           'delta' => 'powered-by-amani',
           'region' => 'footer',
-          'weight' => '-41',
+          'weight' => '-6',
         ),
       ),
     ),
