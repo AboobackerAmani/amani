@@ -9,6 +9,7 @@
  */
 function amani_global_menu_default_menu_links() {
   $menu_links = array();
+
   // Exported menu link: menu-amani-admin-menu:admin/configure-amani
   $menu_links['menu-amani-admin-menu:admin/configure-amani'] = array(
     'menu_name' => 'menu-amani-admin-menu',
@@ -247,8 +248,8 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '1',
     'expanded' => '1',
+    'weight' => '-49',
   );
-
   // Exported menu link: menu-configure-footer-links:blog
   $menu_links['menu-configure-footer-links:blog'] = array(
     'menu_name' => 'menu-configure-footer-links',
@@ -481,8 +482,7 @@ function amani_global_menu_default_menu_links() {
   t('Programs');
   t('Resources');
   t('Team');
-  t('Programs');
-  t('Resources');
+
 
   return $menu_links;
 }

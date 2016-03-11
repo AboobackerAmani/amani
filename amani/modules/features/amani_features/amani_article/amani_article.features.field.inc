@@ -225,7 +225,7 @@ function amani_article_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '5',
+          'weight' => 5,
         ),
         'teaser' => array(
           'label' => 'above',

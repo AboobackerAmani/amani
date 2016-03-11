@@ -332,6 +332,7 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['fields']['field_resource_type']['table'] = 'field_data_field_resource_type';
   $handler->display->display_options['fields']['field_resource_type']['field'] = 'field_resource_type';
   $handler->display->display_options['fields']['field_resource_type']['label'] = '';
+  $handler->display->display_options['fields']['field_resource_type']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_resource_type']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_resource_type']['hide_empty'] = TRUE;
   /* Field: Content: Resource Theme(s) */
@@ -339,6 +340,7 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['fields']['field_theme_s_']['table'] = 'field_data_field_theme_s_';
   $handler->display->display_options['fields']['field_theme_s_']['field'] = 'field_theme_s_';
   $handler->display->display_options['fields']['field_theme_s_']['label'] = '';
+  $handler->display->display_options['fields']['field_theme_s_']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_theme_s_']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_theme_s_']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_theme_s_']['delta_offset'] = '0';
@@ -347,6 +349,7 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['fields']['field_location_name']['table'] = 'field_data_field_location_name';
   $handler->display->display_options['fields']['field_location_name']['field'] = 'field_location_name';
   $handler->display->display_options['fields']['field_location_name']['label'] = '';
+  $handler->display->display_options['fields']['field_location_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_location_name']['element_label_colon'] = FALSE;
   /* Field: Content: Link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
