@@ -247,6 +247,7 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '1',
     'expanded' => '1',
+  );
 
   // Exported menu link: menu-configure-footer-links:blog
   $menu_links['menu-configure-footer-links:blog'] = array(
