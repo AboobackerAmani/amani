@@ -223,3 +223,15 @@ function amani_zen_menu_link(array $variables) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+function amani_zen_preprocess_views_view(&$vars) {
+  if ($vars['view']->name == 'calendar') {
+    $rows = $vars['rows'];
+    preg_match_all("/has-events\">\s{1,}<div class=\"year mini-day-on\"> <a href=\"[a-zA-Z0-9.:\/-]{1,}\">/", $rows, $output_array);
+    foreach ($output_array[0] as $key => $val) {
+      $temp = str_replace('year/', '', $val);
+      $rows = str_replace($val, $temp, $rows);
+    }
+  }
+  $vars['rows'] = $rows;
+}
