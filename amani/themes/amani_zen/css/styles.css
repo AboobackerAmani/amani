@@ -1301,7 +1301,6 @@ footer {
 .view-news-and-events-blog .views-field-field-tags .field-content a {
   color: #513e79;
 }
-
 /* line 2, ../sass/components/_calendar.scss */
 #block-views-calendar-of-events-block-3 {
   font-family: "Open Sans", sans-serif;
@@ -1317,6 +1316,7 @@ footer {
     box-sizing: content-box;
   }
 }
+
 /* line 15, ../sass/components/_calendar.scss */
 #block-views-calendar-of-events-block-3 .view-calendar-of-events {
   background: rgba(0, 0, 0, 0.4);
@@ -1451,23 +1451,27 @@ footer {
   display: none;
 }
 
-/* line 156, ../sass/components/_calendar.scss */
-.view-calendar-of-events .single-day,
-.view-calendar-of-events .multi-day {
-  display: none;
-}
-
 @media all and (min-width: 990px) {
-  /* line 164, ../sass/components/_calendar.scss */
+  /* line 157, ../sass/components/_calendar.scss */
   .front #block-views-calendar-of-events-block-3 .view-calendar-of-events {
     height: 388px;
     max-height: 390px;
   }
-  /* line 169, ../sass/components/_calendar.scss */
+  /* line 162, ../sass/components/_calendar.scss */
   .front #block-views-calendar-of-events-block-3 .view-calendar-of-events .calendar-calendar {
     height: 278px;
     overflow-y: auto;
   }
+}
+
+/* line 169, ../sass/components/_calendar.scss */
+.view-calendar-of-events .pager {
+  list-style-type: none;
+}
+
+/* line 173, ../sass/components/_calendar.scss */
+.view-calendar-of-events .pager .date-prev {
+  right: 94%;
 }
 
 /* line 4, ../sass/components/_contact_page.scss */
