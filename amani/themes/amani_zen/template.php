@@ -223,3 +223,53 @@ function amani_zen_menu_link(array $variables) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+/**
+ * Implements hook_preprocess_views_view.
+ * Fixes issue of title missing from week/day/year calendars.
+ */
+function amani_zen_preprocess_views_view(&$vars) {
+  if ($vars['view']->name == 'calendar_of_events') {
+    $header = $vars['header'];
+    preg_match('/calendar-of-events\/[a-z]{0,5}[\/]{0,1}[W0-9-]{1,10}/', $header, $output);
+    preg_match('/\/[a-z]{1,5}/', $output[0], $type_out);
+    preg_match('/\/[W0-9-]{1,10}/', $output[0], $date_out);
+    $type = str_replace('/', '', $type_out[0]);
+    $date = str_replace('/', '', $date_out[0]);
+
+    $header = str_replace('&laquo;', '&laquo;PREV&nbsp;', $header);
+    $header = str_replace('&raquo;', '&nbsp;NEXT&raquo;', $header);
+
+    switch($type) {
+      case 'day':
+        $date = date('Y-m-d', strtotime($date . ' +1 day'));
+        $date = date('l, F d - Y', strtotime($date));
+        $header_string = preg_replace("/<h3><span class='month'><\/span> - <\/h3>/", "<h3><span class='month'>" . $date . "</span></h3>", $header);
+        $vars['header'] = $header_string;
+        break;
+      case 'week':
+        if (strpos($date, 'W')) {
+          $date = str_replace('-', '', $date);
+        } else {
+          $date = date('Y-m-d', strtotime($date . ' +7 days'));
+        }
+        $first_day = date('F d',strtotime($date));
+        $last_day = date('F d', strtotime($first_day . ' +6 days'));
+        $date = $first_day . ' to ' . $last_day . ' - ' . date('Y', strtotime($date));
+        $header_string = preg_replace("/<h3><span class='month'><\/span> - <\/h3>/", "<h3><span class='month'>" . $date . "</span></h3>", $header);
+        $vars['header'] = $header_string;
+        break;
+      case 'year':
+        $date = $date + 1;
+        $header_string = preg_replace("/<h3><span class='month'><\/span> - <\/h3>/", "<h3><span class='month'>" . $date . "</span></h3>", $header);
+        $vars['header'] = $header_string;
+        break;
+      default:
+      case '':
+        $date = date('F - Y', strtotime($date . ' +1 month'));
+        $header_string = preg_replace("/<h3><span class='month'><\/span> - <\/h3>/", "<h3><span class='month'>" . $date . "</span></h3>", $header);
+        $vars['header'] = $header_string;
+        break;
+    }
+  }
+}

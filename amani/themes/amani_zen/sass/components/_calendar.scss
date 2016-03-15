@@ -152,13 +152,6 @@
   }
 }
 
-.view-calendar-of-events {
-  .single-day,
-  .multi-day {
-    display: none;
-  }
-}
-
 // Calendar block in front page - Desktop
 
 .front #block-views-calendar-of-events-block-3 .view-calendar-of-events { 
@@ -169,6 +162,16 @@
     .calendar-calendar {
       height: 278px;
       overflow-y: auto;
+    }
+  }
+}
+
+.view-calendar-of-events {
+  .pager {
+    list-style-type: none;
+
+    .date-prev {
+      right: 94%;
     }
   }
 }
