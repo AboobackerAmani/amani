@@ -278,6 +278,8 @@ function amani_zen_preprocess_views_view(&$vars) {
 * Gets the media link to add to a download button. 
 */
 function amani_zen_preprocess_node(&$vars) {
-  $field_media_download = $vars['content']['field_media']['#items'][0];
-  $vars['field_media_download'] = file_create_url($field_media_download['uri']);
+  if ($vars['type'] == 'resource') {
+    $field_media_download = $vars['content']['field_media']['#items'][0];
+    $vars['field_media_download'] = file_create_url($field_media_download['uri']);
+  }
 }
