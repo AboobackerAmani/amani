@@ -33,7 +33,7 @@ function amani_article_context_default_contexts() {
           'module' => 'views',
           'delta' => 'programs_campaigns-block',
           'region' => 'sidebar_second',
-          'weight' => '-10',
+          'weight' => '-8',
         ),
       ),
     ),
