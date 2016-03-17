@@ -101,6 +101,25 @@ function amani_zen_preprocess_html(&$variables, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 function amani_zen_preprocess_page(&$variables, $hook) {
+  $sidebar = $variables['page']['sidebar_second'];
+  if (array_key_exists('views_programs_campaigns-block', $sidebar)) {
+    $final = $sidebar['views_programs_campaigns-block']['#markup'];
+    preg_match_all("/views-field-title\">.{1,}<\/a>/", $sidebar['views_programs_campaigns-block']['#markup'], $output_array);
+    $output = $output_array[0];
+    $max_len = 38;
+    foreach ($output as $string) {
+      preg_match("/<a href.{1,}<\/a>/", $string, $arr);
+      $temp = $arr[0];
+      preg_match("/>.{1,}</", $temp, $arr);
+      $title = str_replace('<', '', $arr[0]);
+      $title = str_replace('>', '', $title);
+      if (strlen($title) > $max_len) {
+        $new_title = substr($title, 0, $max_len-3) . '...';
+        $final = str_replace($title, $new_title, $final);
+      }
+    }
+    $variables['page']['sidebar_second']['views_programs_campaigns-block']['#markup'] = $final;
+  }
   $variables['page']['footer']['site_name'] = $variables['site_name'];
   if (!empty($variables['node']) && !empty($variables['node']->type)) {
     $variables['theme_hook_suggestions'][] = 'page__node__' . $variables['node']->type;
