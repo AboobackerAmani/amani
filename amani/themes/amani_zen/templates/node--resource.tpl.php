@@ -36,6 +36,9 @@
       <p>
         <?php print render($content['field_location_name']); ?>
       </p>
+      <p>
+        <?php print render($content['field_link']); ?>
+      </p>
     </div>
     <?php print render($content['body']); ?>
     <?php print render($content['field_amani_tags']); ?>
@@ -44,7 +47,9 @@
         <?php print render($content['field_media']); ?>
       </div>
       <div>
-        <?php print render($content['field_link']); ?>
+        <div class="download-button">
+          <a href="<?php print $field_media_download; ?>">DOWNLOAD</a>
+        </div>
       </div>
     </div>
   </div>

@@ -1099,7 +1099,7 @@ footer {
 }
 /* line 117, ../sass/components/_about_page.scss */
 .section-team .mobile-team-filter:before {
-  content: "⍓";
+  content: "";
   font-size: 28px;
   color: #ce9bc0;
   display: block;
@@ -1117,7 +1117,7 @@ footer {
 }
 /* line 134, ../sass/components/_about_page.scss */
 .section-team .expanded.mobile-team-filter:before {
-  content: "⍌";
+  content: "";
 }
 
 /**
@@ -5940,7 +5940,7 @@ a.permalink {
   color: #131313;
 }
 /* line 342, ../sass/components/_resources_page.scss */
-.node-type-resource #content .inner-content .content-body .file-download .field-name-field-link {
+.node-type-resource #content .inner-content .content-body .file-download .download-button {
   float: right;
   background: #ce9bc0;
   text-transform: uppercase;
@@ -5948,7 +5948,7 @@ a.permalink {
   font-size: 24px;
 }
 /* line 349, ../sass/components/_resources_page.scss */
-.node-type-resource #content .inner-content .content-body .file-download .field-name-field-link a {
+.node-type-resource #content .inner-content .content-body .file-download .download-button a {
   color: white;
 }
 

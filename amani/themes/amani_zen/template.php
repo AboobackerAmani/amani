@@ -223,3 +223,11 @@ function amani_zen_menu_link(array $variables) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+/**
+* Gets the media link to add to a download button. 
+*/
+function amani_zen_preprocess_node(&$vars) {
+  $field_media_download = $vars['content']['field_media']['#items'][0];
+  $vars['field_media_download'] = file_create_url($field_media_download['uri']);
+}
