@@ -5127,10 +5127,11 @@ a.permalink {
 }
 /* line 75, ../sass/components/_partners_page.scss */
 .node-type-partner .field-name-body {
-  margin-top: 30px;
-  padding-top: 30px;
-  border-top: 2px solid #ce9bc0;
+  margin-top: 10px;
+  padding-top: 10px;
+  /*border-top: 2px solid #ce9bc0;*/
 }
+
 /* line 81, ../sass/components/_partners_page.scss */
 .node-type-partner .field-name-field-programs .field-label {
   font-family: "Open Sans Condensed", sans-serif;
@@ -5150,6 +5151,26 @@ a.permalink {
 /* line 94, ../sass/components/_partners_page.scss */
 .node-type-partner .field-name-field-programs .field-items a:hover {
   text-decoration: underline;
+}
+
+/* line 99, ../sass/components/_partners_page.scss */
+.thick-pink {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid #CE9BC1;
+  margin: 1em 0;
+  padding: 0; 
+}
+
+/* line 108, ../sass/components/_partners_page.scss */
+.node-type-partner .partner-title {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #ce9bc0;
+  text-transform: uppercase;
+  color: #CE9BC1;
+  font-size: 300%;
 }
 
 /*

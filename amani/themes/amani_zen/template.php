@@ -124,6 +124,10 @@ function amani_zen_preprocess_page(&$variables, $hook) {
   if (!empty($variables['node']) && !empty($variables['node']->type)) {
     $variables['theme_hook_suggestions'][] = 'page__node__' . $variables['node']->type;
   }
+
+  if(isset($variables['node']) && $variables['node']->type == "partner") {
+    drupal_set_title("Partners");    
+  }
 }
 // */
 
@@ -300,5 +304,9 @@ function amani_zen_preprocess_node(&$vars) {
   if ($vars['type'] == 'resource') {
     $field_media_download = $vars['content']['field_media']['#items'][0];
     $vars['field_media_download'] = file_create_url($field_media_download['uri']);
+  }
+  if ($vars['type'] == 'partner') {
+    $vars['content']['title'] = $vars['title'];
+    $vars['title'] = 'Partners';
   }
 }

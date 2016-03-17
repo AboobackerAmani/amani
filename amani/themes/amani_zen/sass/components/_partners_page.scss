@@ -96,5 +96,23 @@
   }
 }
 
+.thick-pink {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid #CE9BC1;
+  margin: 1em 0;
+  padding: 0; 
+}
 
+.node-type-partner {
+  .partner-title {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid #ce9bc0;
+    text-transform: uppercase;
+    color: #CE9BC1;
+    font-size: 100%;
+  }
+}
 
