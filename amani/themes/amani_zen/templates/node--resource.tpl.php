@@ -47,9 +47,11 @@
         <?php print render($content['field_media']); ?>
       </div>
       <div>
+        <?php if(strpos($content['field_media']['#items'][0]['filemime'], 'video') === false) : ?>
         <div class="download-button">
           <a href="<?php print $field_media_download; ?>">DOWNLOAD</a>
         </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>
