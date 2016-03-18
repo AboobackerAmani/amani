@@ -244,7 +244,53 @@ function amani_zen_menu_link(array $variables) {
   }
 
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
+/**
+ * Sets the login/logout menu items based on user status.
+ */
+function amani_zen_menu_link_alter(&$link) {
+  global $user;
+  if ($link['link_title'] == 'Login') {
+    if ($user->uid) {
+      $link['hidden'] = 1;
+    } else {
+      $link['hidden'] = 0;
+    }
+  }
+
+  if ($link['link_title'] == 'Logout') {
+    if ($user->uid) {
+      $link['hidden'] = 0;
+    } else {
+      $link['hidden'] = 1;
+    }
+  }
+}
+
+/**
+ * Sets the login/logout menu items based on user status.
+ * Have to check the translated menu links too.
+ */
+function amani_zen_translated_menu_link_alter(&$link) {
+  global $user;
+  if ($link['link_title'] == 'Login') {
+    if ($user->uid) {
+      $link['hidden'] = 1;
+    } else {
+      $link['hidden'] = 0;
+    }
+  }
+
+  if ($link['link_title'] == 'Logout') {
+    if ($user->uid) {
+      $link['hidden'] = 0;
+    } else {
+      $link['hidden'] = 1;
+    }
+  }
 }
 
 /**
