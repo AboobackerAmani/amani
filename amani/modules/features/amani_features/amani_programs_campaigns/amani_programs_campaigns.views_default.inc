@@ -236,11 +236,6 @@ function amani_programs_campaigns_views_default_views() {
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
     'und' => 'und',
   );
-  /* Filter criterion: Content: Lead Image (field_image:alt) */
-  $handler->display->display_options['filters']['field_image_alt']['id'] = 'field_image_alt';
-  $handler->display->display_options['filters']['field_image_alt']['table'] = 'field_data_field_image';
-  $handler->display->display_options['filters']['field_image_alt']['field'] = 'field_image_alt';
-  $handler->display->display_options['filters']['field_image_alt']['operator'] = 'not empty';
   $handler->display->display_options['block_description'] = 'Other Articles';
 
   /* Display: Other projects */
