@@ -770,19 +770,11 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       break;
     case 'Enable \'Partners Carousel\'':
       // Partners carousel block.
-      $block = array(
-        'module' => 'views',
-        'delta' => 'partners_carousel-block',
-      );
-      amani_administrator_set_block($block, 1, 0, 'content_bottom');
+      amani_administrator_configure_partners_carousel(TRUE);
       break;
     case 'Disable \'Partners Carousel\'':
       // Partners carousel block.
-      $block = array(
-        'module' => 'views',
-        'delta' => 'partners_carousel-block',
-      );
-      amani_administrator_set_block($block, 0, 0, -1);
+      amani_administrator_configure_partners_carousel(FALSE);
       break;
     case 'Enable \'Upcoming Events\'':
       variable_set('amani_admin_events_show', 1);
