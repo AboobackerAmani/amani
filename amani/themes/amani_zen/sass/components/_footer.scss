@@ -194,10 +194,38 @@ footer .field-label {
     }
     
     .social-media-facebook:before,
+    .social-media-google+:before,
+    .social-media-instagram:before,
+    .social-media-linkedin:before,
+    .social-media-pinterest:before,
+    .social-media-rss:before,
+    .social-media-vimeo:before,
+    .social-media-youtube:before,
     .social-media-twitter:before {
       content: "\e802";
       font-family: amani-icons;
       margin-right: 10px;
+    }
+    .social-media-google+:before {
+      content: "\e801";
+    }
+    .social-media-instagram:before {
+      content: "\e803";
+    }
+    .social-media-linkedin:before {
+      content: "\e808";
+    }
+    .social-media-pinterest:before {
+      content: "";
+    }
+    .social-media-rss:before {
+      content: "\e805";
+    }
+    .social-media-vimeo:before {
+      content: "\e806";
+    }
+    .social-media-youtube:before {
+      content: "";
     }
     .social-media-twitter:before {
       content: "\e804";
