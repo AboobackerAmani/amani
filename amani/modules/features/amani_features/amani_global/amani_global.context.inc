@@ -214,6 +214,24 @@ function amani_global_context_default_contexts() {
           'region' => 'content',
           'weight' => '-3',
         ),
+        'views-news_and_events-block_2' => array(
+          'module' => 'views',
+          'delta' => 'news_and_events-block_2',
+          'region' => 'content',
+          'weight' => '-2',
+        ),
+        'views-news_and_events-block_3' => array(
+          'module' => 'views',
+          'delta' => 'news_and_events-block_3',
+          'region' => 'content',
+          'weight' => '-1',
+        ),
+        'views-news_and_events-block_4' => array(
+          'module' => 'views',
+          'delta' => 'news_and_events-block_4',
+          'region' => 'content',
+          'weight' => '0',
+        ),
       ),
     ),
   );

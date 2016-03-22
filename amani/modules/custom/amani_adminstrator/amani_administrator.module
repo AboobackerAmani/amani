@@ -232,3 +232,19 @@ function amani_administrator_configure_comments($comment_en_dis) {
   }
   cache_clear_all();
 }
+
+function amani_administrator_configure_front_page_feed_types($feed, $enable) {
+  $view_name = 'news_and_events';
+  $view_display_name = 'block_' . $feed;
+  $view = views_get_view($view_name);
+  $view->display[$view_display_name]->display_options['enabled'] = $enable;
+  views_save_view($view);
+}
+
+function amani_administrator_configure_partners_carousel($enable) {
+  $view_name = 'partners_carousel';
+  $view_display_name = 'block';
+  $view = views_get_view($view_name);
+  $view->display[$view_display_name]->display_options['enabled'] = $enable;
+  views_save_view($view);
+}
