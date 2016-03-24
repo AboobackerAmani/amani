@@ -50,6 +50,7 @@ class TaxonomyDisplayAssociatedDisplayHandlerViews extends TaxonomyDisplayAssoci
 
       // Generate the view's output.
       $output = $view->preview($options['display'], array($term->tid));
+      drupal_set_title($view->get_title());
       if ($output) {
         $build['view'] = array(
           '#markup' => $output,
