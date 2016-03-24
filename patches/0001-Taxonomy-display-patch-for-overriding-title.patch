@@ -1,0 +1,24 @@
+From c32d7342f36dd1a8e13bb543ef8a505131f6ae5d Mon Sep 17 00:00:00 2001
+From: Erica <ericascott@ericascott.ca>
+Date: Thu, 24 Mar 2016 14:04:48 -0700
+Subject: [PATCH] Taxonomy display patch for overriding title
+
+---
+ amani/modules/contrib/taxonomy_display/handlers/associated/views.inc | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/amani/modules/contrib/taxonomy_display/handlers/associated/views.inc b/amani/modules/contrib/taxonomy_display/handlers/associated/views.inc
+index c40b6ef..51317dc 100644
+--- a/amani/modules/contrib/taxonomy_display/handlers/associated/views.inc
++++ b/amani/modules/contrib/taxonomy_display/handlers/associated/views.inc
+@@ -50,6 +50,7 @@ class TaxonomyDisplayAssociatedDisplayHandlerViews extends TaxonomyDisplayAssoci
+ 
+       // Generate the view's output.
+       $output = $view->preview($options['display'], array($term->tid));
++      drupal_set_title($view->get_title());
+       if ($output) {
+         $build['view'] = array(
+           '#markup' => $output,
+-- 
+2.6.4 (Apple Git-63)
+

@@ -543,6 +543,44 @@ function amani_resource_views_default_views() {
   $handler->display->display_options['filters']['field_featured_or_not_value']['value'] = array(
     1 => '1',
   );
+
+  /* Display: Taxonomy - Resource Theme */
+  $handler = $view->new_display('page', 'Taxonomy - Resource Theme', 'resource_taxonomy_theme');
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
+    'theme' => 'theme',
+  );
+  $handler->display->display_options['arguments']['tid']['validate_options']['transform'] = TRUE;
+  $handler->display->display_options['path'] = 'resource-theme/%';
+
+  /* Display: Taxonomy - Resource Type */
+  $handler = $view->new_display('page', 'Taxonomy - Resource Type', 'resource_taxonomy_type');
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
+    'resource_type' => 'resource_type',
+  );
+  $handler->display->display_options['arguments']['tid']['validate_options']['transform'] = TRUE;
+  $handler->display->display_options['path'] = 'resource-type/%';
   $translatables['resources'] = array(
     t('Master'),
     t('Resources'),
@@ -566,6 +604,9 @@ function amani_resource_views_default_views() {
     t('Keyword'),
     t('Featured'),
     t('Featured Resources'),
+    t('Taxonomy - Resource Theme'),
+    t('All'),
+    t('Taxonomy - Resource Type'),
   );
   $export['resources'] = $view;
 
