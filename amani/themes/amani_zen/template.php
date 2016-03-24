@@ -355,4 +355,7 @@ function amani_zen_preprocess_node(&$vars) {
     $vars['content']['title'] = $vars['title'];
     $vars['title'] = 'Partners';
   }
+  if ($vars['type'] == 'team') {
+    $vars['back_to_team'] = '<a href="/team">Back to team</a>';
+  }
 }
