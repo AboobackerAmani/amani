@@ -21,12 +21,14 @@ function amani_global_menu() {
 
   $version = amani_global_get_version();
 
+  global $theme_key;
+
   $items['admin/configure-amani/site-info'] = array(
     'title' => 'Manage Logo & Tagline',
     'description' => 'Manage site name, e-mail address, slogan, logo and favicon.',
     'page callback' => 'drupal_get_form',
     'type' => MENU_NORMAL_ITEM,
-    'page arguments' => array('amani_site_information_settings'),
+    'page arguments' => array('amani_site_information_settings', $theme_key),
     'access arguments' => array('administer site settings'),
     'weight' => 20,
   );
@@ -319,7 +321,7 @@ function amani_global_leaflet_framework_maps() {
  * @see system_site_information_settings()
  * @see system_theme_settings_submit()
  */
-function amani_site_information_settings($form, &$form_state, $key = 'peace') {
+function amani_site_information_settings($form, &$form_state, $key) {
 
   $form['site_information'] = array(
     '#type' => 'fieldset',
