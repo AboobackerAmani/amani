@@ -114,6 +114,11 @@
       </div>
   </div>
 
+  <hr class="bottom-hr">
+  <div class="back-to-team">
+      <?php print $back_to_team; ?>
+  </div>
+
   <?php print render($content['links']); ?>
 
   <?php print render($content['comments']); ?>
