@@ -268,6 +268,14 @@ function amani_zen_menu_link_alter(&$link) {
       $link['hidden'] = 1;
     }
   }
+
+  if ($link['link_title'] == 'Admin') {
+    if ($user->uid) {
+      $link['hidden'] = 0;
+    } else {
+      $link['hidden'] = 1;
+    }
+  }
 }
 
 /**
@@ -285,6 +293,14 @@ function amani_zen_translated_menu_link_alter(&$link) {
   }
 
   if ($link['link_title'] == 'Logout') {
+    if ($user->uid) {
+      $link['hidden'] = 0;
+    } else {
+      $link['hidden'] = 1;
+    }
+  }
+
+  if ($link['link_title'] == 'Admin') {
     if ($user->uid) {
       $link['hidden'] = 0;
     } else {
