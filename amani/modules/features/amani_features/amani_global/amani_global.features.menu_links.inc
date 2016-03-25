@@ -360,6 +360,25 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '1',
     'weight' => '-49',
   );
+  // Exported menu link: menu-configure-footer-links:admin/configure-amani
+  $menu_links['menu-configure-footer-links:admin/configure-amani'] = array(
+    'menu_name' => 'menu-configure-footer-links',
+    'link_path' => 'admin/configure-amani',
+    'router_path' => 'admin/configure-amani',
+    'link_title' => 'Admin',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+    ),
+    'module' => 'menu',
+    'hidden' => '1',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-41',
+  );
   // Exported menu link: menu-configure-footer-links:blog
   $menu_links['menu-configure-footer-links:blog'] = array(
     'menu_name' => 'menu-configure-footer-links',
@@ -589,11 +608,12 @@ function amani_global_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '0',
+    'weight' => '-42',
   );
   // Translatables
   // Included for use with string extractors like potx.
   t('About');
+  t('Admin');
   t('Blog');
   t('Configure Amani');
   t('Configure Main Menu Links');
