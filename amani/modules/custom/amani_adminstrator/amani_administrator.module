@@ -251,3 +251,13 @@ function amani_administrator_configure_partners_carousel($enable) {
   $view->display[$view_display_name]->display_options['enabled'] = $enable;
   views_save_view($view);
 }
+
+function amani_administrator_configure_front_page_feed_order($weights) {
+  $context = context_load('front_page');
+  $blocks = $context->reactions['block']['blocks'];
+  foreach ($weights as $key => $weight) {
+    $blocks['views-news_and_events-block_' . $key]['weight'] = $weight;
+  }
+  $context->reactions['block']['blocks'] = $blocks;
+  context_save($context);
+}

@@ -627,9 +627,13 @@ function amani_administrator_configure_amani_form() {
   );
 
   $news_and_events = views_get_view('news_and_events');
+  $enabled = 0;
   foreach ($news_and_events->display as $key => $display) {
     if (strpos($key, 'block_') !== false) {
       $title[] = $display->display_options['title'];
+      if (!isset($display->display_options['enabled']) || $display->display_options['enabled'] == TRUE) {
+        $enabled++;
+      }
     }
   }
 
@@ -762,6 +766,42 @@ function amani_administrator_configure_amani_form() {
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
     '#suffix' => '<p>This action will disable the the feed that shows blog entries on the front page. The title will not be affected.</p></div>'
+  );
+
+  $form['front_page_feed_types']['order_feeds'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Feeds Order'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['front_page_feed_types']['order_feeds'][] = array(
+    '#markup' => 'Add a weight to each item to re-order the feeds. The higher the weight, the lower down it will appear. Please do not enter anything lower than -3.'
+  );
+
+  $context = context_load('front_page');
+  $blocks = $context->reactions['block']['blocks'];
+  foreach ($blocks as $key => $block) {
+    if (strpos($key, 'views-news_and_events-block_') !== false) {
+      $weights[] = $block['weight'];
+    } 
+  }
+
+  $i = 0;
+  foreach ($title as $val) {
+    $j = $i + 1;
+    $form['front_page_feed_types']['order_feeds']['weight_' . $j] = array(
+      '#type' => 'textfield',
+      '#title' => $val . ' Weight',
+      '#default_value' => $weights[$i],
+    );
+    $i++;
+  }
+
+  $form['front_page_feed_types']['order_feeds'][] = array(
+    '#type' => 'button',
+    '#value' => t('Save Feed Order'),
+    '#executes_submit_callback' => TRUE,
   );
 
   return $form;
@@ -930,6 +970,25 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
     case 'Disable Blog Feed':
       $title = $form_state['values']['title'];
       amani_administrator_configure_front_page_feed_types(4, false);
+      break;
+    case 'Save Feed Order':
+      $error = '';
+      foreach ($form_state['values'] as $key => $data) {
+        if ($data < -3) {
+          $error = 'Feed Weights: Please do not enter values lower than -3.';
+        } else {
+          if (strpos($key, 'weight_') !== false) {
+            $temp = explode('_', $key);
+            $weights[$temp[1]] = $data;
+          }
+        }
+      }
+      if ($error == '') {
+        amani_administrator_configure_front_page_feed_order($weights);
+      }
+      else {
+        drupal_set_message($error, 'error');
+      }
       break;
   }
 }
