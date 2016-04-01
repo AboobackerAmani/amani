@@ -617,6 +617,13 @@ function amani_administrator_configure_amani_form() {
     '#suffix' => '<p>This action will disable comments on all content types site wide.</p></div>',
   );
 
+  $news_and_events = views_get_view('news_and_events');
+  foreach ($news_and_events->display as $key => $display) {
+    if (strpos($key, 'block_') !== false) {
+      $title[] = $display->display_options['title'];
+    }
+  }
+
   $form['front_page_feed_types'] = array(
     '#type' => 'fieldset',
     '#title' => t('Manage Front Page Feed Types'),
@@ -626,94 +633,126 @@ function amani_administrator_configure_amani_form() {
 
   $form['front_page_feed_types']['latest_news'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Latest News'),
+    '#title' => t('Articles'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
 
-  $form['front_page_feed_types']['latest_news'][] = array(
-    '#type' => 'button',
-    '#value' => t('Enable Latest News Feed'),
-    '#executes_submit_callback' => TRUE,
+  $form['front_page_feed_types']['latest_news']['articles_title'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Title',
+    '#description' => 'Add the title you want for this feed.',
+    '#default_value' => $title[0],
     '#prefix' => $prefix,
-    '#suffix' => '<p>This action will enable the Latest News feed on the front page.</p></div>'
   );
 
   $form['front_page_feed_types']['latest_news'][] = array(
     '#type' => 'button',
-    '#value' => t('Disable Latest News Feed'),
+    '#value' => t('Enable Articles Feed'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
-    '#suffix' => '<p>This action will disable the Latest News feed on the front page.</p></div>'
+    '#suffix' => '<p>This action will enable the feed that shows articles on the front page and change the title to whatever you\'ve entered above.</p></div>'
+  );
+
+  $form['front_page_feed_types']['latest_news'][] = array(
+    '#type' => 'button',
+    '#value' => t('Disable Articles Feed'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action will disable the feed that shows articles on the front page. The title will not be affected.</p></div>'
   );
 
   $form['front_page_feed_types']['latest_events'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Latest Events'),
+    '#title' => t('Events'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
 
-  $form['front_page_feed_types']['latest_events'][] = array(
-    '#type' => 'button',
-    '#value' => t('Enable Latest Events Feed'),
-    '#executes_submit_callback' => TRUE,
+  $form['front_page_feed_types']['latest_events']['events_title'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Title',
+    '#description' => 'Add the title you want for this feed.',
+    '#default_value' => $title[1],
     '#prefix' => $prefix,
-    '#suffix' => '<p>This action will enable the Latest Events feed on the front page.</p></div>'
   );
 
   $form['front_page_feed_types']['latest_events'][] = array(
     '#type' => 'button',
-    '#value' => t('Disable Latest Events Feed'),
+    '#value' => t('Enable Events Feed'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
-    '#suffix' => '<p>This action will disable the Latest Events feed on the front page.</p></div>'
+    '#suffix' => '<p>This action will enable the feed that shows events on the front page and change the title to whatever you\'ve entered above.</p></div>'
+  );
+
+  $form['front_page_feed_types']['latest_events'][] = array(
+    '#type' => 'button',
+    '#value' => t('Disable Events Feed'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action will disable the the feed that shows events on the front page. The title will not be affected.</p></div>'
   );
 
   $form['front_page_feed_types']['latest_resources'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Latest Resources'),
+    '#title' => t('Resources'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
 
-  $form['front_page_feed_types']['latest_resources'][] = array(
-    '#type' => 'button',
-    '#value' => t('Enable Latest Resources Feed'),
-    '#executes_submit_callback' => TRUE,
+  $form['front_page_feed_types']['latest_resources']['resources_title'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Title',
+    '#description' => 'Add the title you want for this feed.',
+    '#default_value' => $title[2],
     '#prefix' => $prefix,
-    '#suffix' => '<p>This action will enable the Latest Resources feed on the front page.</p></div>'
   );
 
   $form['front_page_feed_types']['latest_resources'][] = array(
     '#type' => 'button',
-    '#value' => t('Disable Latest Resources Feed'),
+    '#value' => t('Enable Resources Feed'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
-    '#suffix' => '<p>This action will disable the Latest Resources feed on the front page.</p></div>'
+    '#suffix' => '<p>This action will enable the the feed that shows resources on the front page and change the title to whatever you\'ve entered above.</p></div>'
+  );
+
+  $form['front_page_feed_types']['latest_resources'][] = array(
+    '#type' => 'button',
+    '#value' => t('Disable Resources Feed'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action will disable the the feed that shows resources on the front page. The title will not be affected.</p></div>'
   );
 
   $form['front_page_feed_types']['latest_blogs'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Latest Blog Entries'),
+    '#title' => t('Blog'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
 
-  $form['front_page_feed_types']['latest_blogs'][] = array(
-    '#type' => 'button',
-    '#value' => t('Enable Latest Blog Entries Feed'),
-    '#executes_submit_callback' => TRUE,
+  $form['front_page_feed_types']['latest_blogs']['blog_title'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Title',
+    '#description' => 'Add the title you want for this feed.',
     '#prefix' => $prefix,
-    '#suffix' => '<p>This action will enable the Latest Blog Entries feed on the front page.</p></div>'
+    '#default_value' => $title[3],
   );
 
   $form['front_page_feed_types']['latest_blogs'][] = array(
     '#type' => 'button',
-    '#value' => t('Disable Latest Blog Entries Feed'),
+    '#value' => t('Enable Blog Feed'),
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
-    '#suffix' => '<p>This action will disable the Latest Blog Entries feed on the front page.</p></div>'
+    '#suffix' => '<p>This action will enable the the feed that shows blog entries on the front page and change the title to whatever you\'ve entered above.</p></div>'
+  );
+
+  $form['front_page_feed_types']['latest_blogs'][] = array(
+    '#type' => 'button',
+    '#value' => t('Disable Blog Feed'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action will disable the the feed that shows blog entries on the front page. The title will not be affected.</p></div>'
   );
 
   return $form;
@@ -851,28 +890,33 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
     case 'Disable Comments':
       amani_administrator_configure_comments(0);
       break;
-    case 'Enable Latest News Feed':
-      amani_administrator_configure_front_page_feed_types(1, true);
+    case 'Enable Articles Feed':
+      $title = $form_state['values']['articles_title'];
+      amani_administrator_configure_front_page_feed_types(1, true, $title);
       break;
-    case 'Disable Latest News Feed':
+    case 'Disable Articles Feed':
       amani_administrator_configure_front_page_feed_types(1, false);
       break;
-    case 'Enable Latest Events Feed':
-      amani_administrator_configure_front_page_feed_types(2, true);
+    case 'Enable Events Feed':
+      $title = $form_state['values']['events_title'];
+      amani_administrator_configure_front_page_feed_types(2, true, $title);
       break;
-    case 'Disable Latest Events Feed':
+    case 'Disable Events Feed':
       amani_administrator_configure_front_page_feed_types(2, false);
       break;
-    case 'Enable Latest Resources Feed':
-      amani_administrator_configure_front_page_feed_types(3, true);
+    case 'Enable Resources Feed':
+      $title = $form_state['values']['resources_title'];
+      amani_administrator_configure_front_page_feed_types(3, true, $title);
       break;
-    case 'Disable Latest Resources Feed':
+    case 'Disable Resources Feed':
       amani_administrator_configure_front_page_feed_types(3, false);
       break;
-    case 'Enable Latest Blog Entries Feed':
-      amani_administrator_configure_front_page_feed_types(4, true);
+    case 'Enable Blog Feed':
+      $title = $form_state['values']['blog_title'];
+      amani_administrator_configure_front_page_feed_types(4, true, $title);
       break;
-    case 'Disable Latest Blog Entries Feed':
+    case 'Disable Blog Feed':
+      $title = $form_state['values']['title'];
       amani_administrator_configure_front_page_feed_types(4, false);
       break;
   }
