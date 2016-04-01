@@ -852,7 +852,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       variable_set('amani_admin_get_involved_show', 1);
       break;
     case 'Manage Logo & Tagline':
-      drupal_goto('admin/configure-amani/site-info');
+      drupal_goto('admin/config/system/site-information');
       break;
     case 'Configure Map':
       drupal_goto('admin/config/incident-reports');
