@@ -1860,12 +1860,47 @@ footer .field-label {
 }
 /* line 196, ../sass/components/_footer.scss */
 #footer div[id*="block-menu-menu-social-media"] .social-media-facebook:before,
+#footer div[id*="block-menu-menu-social-media"] .social-media-google\+:before,
+#footer div[id*="block-menu-menu-social-media"] .social-media-instagram:before,
+#footer div[id*="block-menu-menu-social-media"] .social-media-linkedin:before,
+#footer div[id*="block-menu-menu-social-media"] .social-media-pinterest:before,
+#footer div[id*="block-menu-menu-social-media"] .social-media-rss:before,
+#footer div[id*="block-menu-menu-social-media"] .social-media-vimeo:before,
+#footer div[id*="block-menu-menu-social-media"] .social-media-youtube:before,
 #footer div[id*="block-menu-menu-social-media"] .social-media-twitter:before {
   content: "\e802";
   font-family: amani-icons;
   margin-right: 10px;
 }
-/* line 202, ../sass/components/_footer.scss */
+/* line 209, ../sass/components/_footer.scss */
+#footer div[id*="block-menu-menu-social-media"] .social-media-google\+:before {
+  content: "\e801";
+}
+/* line 212, ../sass/components/_footer.scss */
+#footer div[id*="block-menu-menu-social-media"] .social-media-instagram:before {
+  content: "\e803";
+}
+/* line 215, ../sass/components/_footer.scss */
+#footer div[id*="block-menu-menu-social-media"] .social-media-linkedin:before {
+  content: "\e808";
+}
+/* line 218, ../sass/components/_footer.scss */
+#footer div[id*="block-menu-menu-social-media"] .social-media-pinterest:before {
+  content: "";
+}
+/* line 221, ../sass/components/_footer.scss */
+#footer div[id*="block-menu-menu-social-media"] .social-media-rss:before {
+  content: "\e805";
+}
+/* line 224, ../sass/components/_footer.scss */
+#footer div[id*="block-menu-menu-social-media"] .social-media-vimeo:before {
+  content: "\e806";
+}
+/* line 227, ../sass/components/_footer.scss */
+#footer div[id*="block-menu-menu-social-media"] .social-media-youtube:before {
+  content: "";
+}
+/* line 230, ../sass/components/_footer.scss */
 #footer div[id*="block-menu-menu-social-media"] .social-media-twitter:before {
   content: "\e804";
 }
@@ -3510,17 +3545,53 @@ footer .field-label {
   border-top: 0;
 }
 /* line 77, ../sass/components/_menus.scss */
-#block-menu-menu-social-media li.social-media-facebook:before, #block-menu-menu-social-media li.social-media-twitter:before {
+#block-menu-menu-social-media li.social-media-facebook:before,
+#block-menu-menu-social-media li.social-media-google\+:before,
+#block-menu-menu-social-media li.social-media-instagram:before,
+#block-menu-menu-social-media li.social-media-linkedin:before,
+#block-menu-menu-social-media li.social-media-pinterest:before,
+#block-menu-menu-social-media li.social-media-rss:before,
+#block-menu-menu-social-media li.social-media-vimeo:before,
+#block-menu-menu-social-media li.social-media-youtube:before,     
+#block-menu-menu-social-media li.social-media-twitter:before {
   content: "\e802";
   font-family: amani-icons;
   font-size: 28px;
   color: white;
   display: block;
-  height: 30px;
-  width: 30px;
   margin-top: 5px;
+  position: relative;
+  left: 75px;
 }
-/* line 89, ../sass/components/_menus.scss */
+/* line 98, ../sass/components/_menus.scss */
+#block-menu-menu-social-media li.social-media-google\+:before {
+  content: "\e801";
+}
+/* line 102, ../sass/components/_menus.scss */
+#block-menu-menu-social-media li.social-media-instagram:before {
+  content: "\e803";
+}
+/* line 106, ../sass/components/_menus.scss */
+#block-menu-menu-social-media li.social-media-linkedin:before {
+  content: "\e808";
+}
+/* line 110, ../sass/components/_menus.scss */
+#block-menu-menu-social-media li.social-media-pinterest:before {
+  content: "";
+}
+/* line 114, ../sass/components/_menus.scss */
+#block-menu-menu-social-media li.social-media-rss:before {
+  content: "\e805";
+}
+/* line 118, ../sass/components/_menus.scss */
+#block-menu-menu-social-media li.social-media-vimeo:before {
+  content: "\e806";
+}
+/* line 122, ../sass/components/_menus.scss */
+#block-menu-menu-social-media li.social-media-youtube:before {
+  content: "";
+}
+/* line 126, ../sass/components/_menus.scss */
 #block-menu-menu-social-media li.social-media-twitter:before {
   content: "\e804";
 }
