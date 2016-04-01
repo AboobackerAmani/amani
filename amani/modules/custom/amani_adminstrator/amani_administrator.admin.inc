@@ -365,6 +365,15 @@ function amani_administrator_configure_amani_form() {
       dropdown list. This dropdown option will appear as soon as you add a second ‘Category’ option.</p></div>'
   );
 
+  $form['contact-info'][] = array(
+    '#type' => 'button',
+    '#value' => t('Manage Contact Page'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' =>
+    '<p>This option allows you to configure your contact page</p></div>'
+  );
+
   $form['map'] = array(
     '#type' => 'fieldset',
     '#title' => t('Manage Map Settings'),
@@ -868,6 +877,9 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       break;
     case 'Configure Contact Form':
       drupal_goto('admin/structure/contact');
+      break;
+    case 'Manage Contact Page':
+      drupal_goto('admin/configure-amani/site-info');
       break;
     case 'Configure CSS':
       drupal_goto('admin/config/development/css-injector');

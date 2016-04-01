@@ -323,30 +323,6 @@ function amani_global_leaflet_framework_maps() {
  */
 function amani_site_information_settings($form, &$form_state, $key) {
 
-  $form['site_information'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Site details'),
-  );
-  $form['site_information']['site_name'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Site name'),
-    '#default_value' => variable_get('site_name', 'Drupal'),
-    '#required' => TRUE
-  );
-  $form['site_information']['site_slogan'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Tagline'),
-    '#default_value' => variable_get('site_slogan', ''),
-    '#description' => t("This text will be displayed beside the logo."),
-  );
-  $form['site_information']['site_mail'] = array(
-    '#type' => 'textfield',
-    '#title' => t('E-mail address'),
-    '#default_value' => variable_get('site_mail', ini_get('sendmail_from')),
-    '#description' => t("The <em>From</em> address in automated e-mails sent during registration and new password requests, and other notifications. (Use an address ending in your site's domain to help prevent this e-mail being flagged as spam.)"),
-    '#required' => TRUE,
-  );
-
   $form['site_information']['site_address'] = array(
     '#type' => 'textarea',
     '#title' => t('Address'),
@@ -391,13 +367,6 @@ function amani_site_information_settings($form, &$form_state, $key) {
     '#required' => FALSE,
   );
 
-  $form['site_information']['site_hours'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Hours of operation'),
-    '#default_value' => variable_get('site_hours', NULL),
-    '#description' => t("Your organization's hours of operation (ie. mon thru fri 9am-5pm), this will appear on the contact form of your site."),
-    '#required' => FALSE,
-  );
   $form['var'] = array('#type' => 'hidden', '#value' => 'theme_' . $key . '_settings');
 
   $form['logo'] = array(

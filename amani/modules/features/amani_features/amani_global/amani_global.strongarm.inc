@@ -173,6 +173,21 @@ function amani_global_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'colorbox_pages';
+  $strongarm->value = 'imagebrowser*
+img_assist*
+imce*
+node/add/*
+node/*/edit
+print/*
+printpdf/*
+system/ajax
+system/ajax/*';
+  $export['colorbox_pages'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_webform';
   $strongarm->value = 0;
   $export['comment_anonymous_webform'] = $strongarm;
