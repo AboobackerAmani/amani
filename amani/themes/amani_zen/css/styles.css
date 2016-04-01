@@ -3560,8 +3560,6 @@ footer .field-label {
   color: white;
   display: block;
   margin-top: 5px;
-  position: relative;
-  left: 75px;
 }
 /* line 98, ../sass/components/_menus.scss */
 #block-menu-menu-social-media li.social-media-google\+:before {
@@ -3594,6 +3592,17 @@ footer .field-label {
 /* line 126, ../sass/components/_menus.scss */
 #block-menu-menu-social-media li.social-media-twitter:before {
   content: "\e804";
+}
+
+/* line 130, ../sass/components/_menus.scss */
+.header__region {
+  width: 100%;
+}
+
+/* line 134, ../sass/components/_menus.scss */
+#block-menu-menu-social-media {
+  left: 950px;
+  width: 100%;
 }
 
 /**
