@@ -326,10 +326,6 @@
       }
 
       img {
-        border: $almost-white solid 5px;
-        box-shadow: 1px 1px 1px $grey-clear;
-        box-sizing: border-box;
-
         @media all and (max-width: $breakpoint) {
           width: 160px;
           height: 120px;
@@ -338,33 +334,6 @@
           width: 100%;
           height: auto;
           margin-left: -5x;
-        }
-      }
-
-      &:before {
-        content: "";
-        background: url(../images/photo-shadow-left.png) no-repeat 0 0;
-        position: absolute;
-        width: 62px;
-        height: 6px;
-        display: block;
-        bottom: -6px;
-        left: 0;
-        @media all and (max-width: 480px) {
-          display: none;
-        }
-      }
-      &:after {
-        content: "";
-        background: url(../images/photo-shadow-right.png) no-repeat 0 0;
-        position: absolute;
-        width: 62px;
-        height: 6px;
-        display: block;
-        bottom: -6px;
-        right: 0;
-        @media all and (max-width: 480px) {
-          display: none;
         }
       }
     }
