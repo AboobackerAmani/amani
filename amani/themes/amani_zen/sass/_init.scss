@@ -198,6 +198,24 @@ $font-body:           $source-sans-pro;
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+   font-family: 'ss-social-regular';
+   src: url('../fonts/ss-social/ss-social-regular.eot');
+   src: url('../fonts/ss-social/ss-social-regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ss-social/ss-social-regular.woff') format('woff'),
+        url('../fonts/ss-social/ss-social-regular.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+   font-family: 'ss-social-circle';
+   src: url('../fonts/ss-social/ss-social-circle.eot');
+   src: url('../fonts/ss-social/ss-social-circle.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ss-social/ss-social-circle.woff') format('woff'),
+        url('../fonts/ss-social/ss-social-circle.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 // @font-face {
 //   font-family: 'Avenir';
