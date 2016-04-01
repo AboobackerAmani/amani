@@ -107,6 +107,8 @@
         <?php print $content['title']; ?>
       </div> <?php
       print render($content['body']);
+      print render($content['field_partner_map_record']);
+      print render($content['field_link']);
       print render($content['field_programs']);
     ?>
   </div>

@@ -94,6 +94,23 @@
       &:hover {text-decoration: underline;}
     }
   }
+  .field-name-field-partner-map-record,
+  .field-name-field-link {
+    .field-label {
+      font-family: $open-sans-condensed;
+      text-transform: uppercase;
+      color: $purple-alt;
+      letter-spacing: 1px;
+      padding-top: 10px;
+      margin-bottom: 15px;
+    }
+    .field-items a {
+      color: $purple-primary;
+      margin-bottom: 10px;
+      display: block;
+      &:hover {text-decoration: underline;}
+    }
+  }
 }
 
 .thick-pink {

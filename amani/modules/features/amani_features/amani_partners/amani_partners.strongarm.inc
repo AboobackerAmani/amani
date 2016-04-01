@@ -115,7 +115,7 @@ function amani_partners_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '0',
+            'weight' => '5',
             'visible' => FALSE,
           ),
         ),
