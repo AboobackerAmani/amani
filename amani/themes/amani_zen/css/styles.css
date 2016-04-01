@@ -5232,6 +5232,29 @@ a.permalink {
 }
 
 /* line 99, ../sass/components/_partners_page.scss */
+.node-type-partner .field-name-field-partner-map-record .field-label,
+.node-type-partner .field-name-field-link .field-label {
+  font-family: "Open Sans Condensed", sans-serif;
+  text-transform: uppercase;
+  color: #513e79;
+  letter-spacing: 1px;
+  padding-top: 10px;
+  margin-bottom: 15px;
+}
+/* line 107, ../sass/components/_partners_page.scss */
+.node-type-partner .field-name-field-partner-map-record .field-items a,
+.node-type-partner .field-name-field-link .field-items a {
+  color: #ce9bc0;
+  margin-bottom: 10px;
+  display: block;
+}
+/* line 111, ../sass/components/_partners_page.scss */
+.node-type-partner .field-name-field-partner-map-record .field-items a:hover,
+.node-type-partner .field-name-field-link .field-items a:hover {
+  text-decoration: underline;
+}
+
+/* line 99, ../sass/components/_partners_page.scss */
 .thick-pink {
   display: block;
   height: 1px;
