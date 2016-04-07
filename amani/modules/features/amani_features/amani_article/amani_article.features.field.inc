@@ -361,11 +361,12 @@ function amani_article_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'file_entity',
+          'module' => 'image',
           'settings' => array(
-            'file_view_mode' => 'default',
+            'image_link' => '',
+            'image_style' => 'node-lead-image',
           ),
-          'type' => 'file_rendered',
+          'type' => 'image',
           'weight' => '1',
         ),
         'teaser' => array(
@@ -395,12 +396,12 @@ function amani_article_field_default_fields() {
         'module' => 'imagefield_crop',
         'settings' => array(
           'collapsible' => '2',
-          'croparea' => '500x500',
+          'croparea' => '676x500',
           'enforce_minimum' => 1,
           'enforce_ratio' => 1,
-          'preview_image_style' => 'thumbnail',
+          'preview_image_style' => 'node-lead-image',
           'progress_indicator' => 'throbber',
-          'resolution' => '200x150',
+          'resolution' => '676x500',
         ),
         'type' => 'imagefield_crop_widget',
         'weight' => '2',
