@@ -928,7 +928,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       drupal_goto('admin/configure-amani/release-notes');
       break;
     case 'Change Image':
-      drupal_goto('node/add/image-behind-twitter-fb-cal-bloc');
+      drupal_goto('admin/structure/block/manage/amani_global/behind_front_blocks_image/configure');
       break;
     case 'Edit Third-Party Logins':
       drupal_goto('admin/config/people/hybridauth');

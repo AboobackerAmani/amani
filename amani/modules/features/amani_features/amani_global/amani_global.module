@@ -74,7 +74,10 @@ function amani_global_block_info() {
     ),
     'site_contact_info' => array(
       'info' => t('Amani: site contact info')
-    )
+    ),
+    'behind_front_blocks_image' => array(
+      'info' => t('Amani: Image behind front page blocks')
+    ),
   );
 }
 
@@ -101,9 +104,56 @@ function amani_global_block_view($delta = '') {
       $block['title'] = t('Where are we?');
       $block['content'] = amani_global_site_contact_info();
       break;
+    case 'behind_front_blocks_image':
+      $content = '';
+      $block['title'] = '';
+      $image = file_load(variable_get('amani_global_behind_front_blocks_image_fid', NULL));
+      if ($image != FALSE) {
+        $content = theme('image_style', array('style_name' => 'front_page_slideshow', 'path' => $image->uri));
+      }
+      $block['content'] = $content;
+      break;
   }
 
   return $block;
+}
+
+/**
+ * Implements hook_block_configure().
+ */
+function amani_global_block_configure($delta = '') {
+  $form = array();
+  if ($delta == 'behind_front_blocks_image') {
+    $form['amani_global_behind_front_blocks_image_fid'] = array(
+      '#type' => 'managed_file',
+      '#title' => t('Image'),
+      '#size' => 60,
+      '#description' => t('This image will appear behind the front page blocks.'),
+      '#default_value' => variable_get('amani_global_behind_front_blocks_image_fid', NULL),
+      '#upload_location' => 'public://front_page_behind_blocks_images/',
+      '#upload_validators' => array(
+        'file_validate_extensions' => array('png jpg jpeg'),
+        'file_validate_image_resolution' => array(0, '1440x450'),
+      ),
+    );
+  }
+
+  return $form;
+}
+
+/**
+ * Implements hook_block_save().
+ */
+function amani_global_block_save($delta = '', $edit = array()) {
+  if ($delta == 'behind_front_blocks_image') {
+    $file = file_load($edit['amani_global_behind_front_blocks_image_fid']);
+    if ($file != FALSE) {
+      $file->status = FILE_STATUS_PERMANENT;
+      file_save($file);
+      file_usage_add($file, 'amani_global', 'behind_front_blocks_image', $file->fid);
+      variable_set('amani_global_behind_front_blocks_image_fid', $edit['amani_global_behind_front_blocks_image_fid']);
+    }
+  }
 }
 
 /**

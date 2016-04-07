@@ -86,7 +86,7 @@ function amani_article_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '6',
+        'weight' => '7',
       ),
       'widget_type' => 'text_textarea_with_summary',
     ),
@@ -118,7 +118,7 @@ function amani_article_field_default_fields() {
       'settings' => array(
         'allowed_values' => array(
           0 => array(
-            'vocabulary' => 'author',
+            'vocabulary' => 'article_author',
             'parent' => '0',
           ),
         ),
@@ -149,7 +149,7 @@ function amani_article_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_article_author',
-      'label' => 'Author',
+      'label' => 'Article Author',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -159,7 +159,7 @@ function amani_article_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '7',
+        'weight' => '4',
       ),
     ),
   );
@@ -498,7 +498,7 @@ function amani_article_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '4',
+        'weight' => '5',
       ),
     ),
   );
@@ -578,15 +578,15 @@ function amani_article_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '5',
+        'weight' => '6',
       ),
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Article Author');
   t('Article Type');
-  t('Author');
   t('Body');
   t('Date');
   t('Enter a comma-separated list of words to describe your content.');

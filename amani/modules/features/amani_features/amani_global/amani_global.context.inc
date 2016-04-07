@@ -160,12 +160,6 @@ function amani_global_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-front_page_slideshow-block' => array(
-          'module' => 'views',
-          'delta' => 'front_page_slideshow-block',
-          'region' => 'subheader',
-          'weight' => '-10',
-        ),
         'views-front_page_blocks-block' => array(
           'module' => 'views',
           'delta' => 'front_page_blocks-block',
@@ -202,9 +196,9 @@ function amani_global_context_default_contexts() {
           'region' => 'content',
           'weight' => '-5',
         ),
-        'views-72a1db79709d2921e03b4173ca67a118' => array(
-          'module' => 'views',
-          'delta' => '72a1db79709d2921e03b4173ca67a118',
+        'amani_global-behind_front_blocks_image' => array(
+          'module' => 'amani_global',
+          'delta' => 'behind_front_blocks_image',
           'region' => 'content',
           'weight' => '-4',
         ),

@@ -125,7 +125,7 @@ function amani_blog_field_default_fields() {
       'settings' => array(
         'allowed_values' => array(
           0 => array(
-            'vocabulary' => 'author',
+            'vocabulary' => 'blog_author',
             'parent' => '0',
           ),
         ),
@@ -145,7 +145,7 @@ function amani_blog_field_default_fields() {
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => 5,
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -156,7 +156,7 @@ function amani_blog_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_blog_author',
-      'label' => 'Author',
+      'label' => 'Blog Author',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -166,7 +166,7 @@ function amani_blog_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '5',
+        'weight' => '10',
       ),
     ),
   );
@@ -513,7 +513,7 @@ function amani_blog_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Author');
+  t('Blog Author');
   t('Body');
   t('Categories');
   t('Enter a comma-separated list of words to describe your content.');
