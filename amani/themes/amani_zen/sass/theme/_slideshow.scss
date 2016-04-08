@@ -3,6 +3,7 @@
 // Css style for frontpage slideshow
 //
 
+
 .views-slideshow-cycle-main-frame-row, .views-slideshow-cycle-main-frame {
   width: 100% !important;
 }
@@ -126,4 +127,15 @@
   .views-slideshow-cycle-main-frame-row img {
     max-width: none;
   }
+}
+
+#block-views-front-page-slideshow-block {
+  margin: -20px -200px 0;
+}
+
+#block-amani-global-behind-front-blocks-image {
+  position: absolute;
+  top: 935px;
+  z-index: -1;
+  margin: 0 -200px;
 }
