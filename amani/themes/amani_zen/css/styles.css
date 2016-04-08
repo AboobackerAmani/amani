@@ -7256,6 +7256,13 @@ h1.title {
   top: 935px;
   z-index: -1;
   margin: 0 -200px;
+  display: block;
+}
+@media (max-width: 960px) {
+  /* line 136, ../sass/theme/_slideshow.scss */
+  #block-amani-global-behind-front-blocks-image {
+    display: none;
+  }
 }
 
 /* @import "theme-B"; */

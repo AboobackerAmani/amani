@@ -138,4 +138,10 @@
   top: 935px;
   z-index: -1;
   margin: 0 -200px;
+  display: block;
+  
+  @media (max-width: $desktop) {
+    display: none;
+  }
 }
+
