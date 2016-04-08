@@ -160,6 +160,12 @@ function amani_global_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-front_page_slideshow-block' => array(
+          'module' => 'views',
+          'delta' => 'front_page_slideshow-block',
+          'region' => 'content',
+          'weight' => '-51',
+        ),
         'views-front_page_blocks-block' => array(
           'module' => 'views',
           'delta' => 'front_page_blocks-block',
