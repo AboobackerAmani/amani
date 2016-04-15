@@ -286,3 +286,94 @@
     }
   }
 }
+
+//Add record button
+#block-bean-amani-add-map-record {
+  position: relative;
+  
+  a.button {
+    @include btn;
+    background-color: $purple-alt;
+    height: 17px;
+    padding: 0.55em 1.5em 0.8em 1.5em;
+    position: absolute;
+    left: 20px;
+    top: -220px;
+    
+    &:hover {
+      background-color: $purple-primary;
+    }
+  }
+  
+  a.button:before {
+    content: "+";
+    font-size: 20px;
+    color: $white;
+    margin-right: 10px;
+  }
+}
+.custom-mobile-filter {
+	color: $purple-alt;
+  border-radius: 4px;
+  padding: 4px 9px;
+  height: 21px;
+  font-size: 18px;
+  background: white;
+  position: absolute !important;
+  right: 80px;
+  width: 76px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.filter-header{
+	position:relative;
+	background:white;
+	border-bottom:1px solid #ccc;
+	&:before{
+		content: "+";
+    font-weight: 700;
+    font-size: 28px;
+    color: #ce9bc0;
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin-top: 5px;
+    position: absolute;
+    right: 11px;
+    top: 11px;
+	}
+	h2{
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: #ce9bc0;
+    text-align: left;
+    margin: 0px;
+    padding: 10px;
+		font-weight:100;
+	}
+	
+}
+.expanded.filter-header{
+	&:before{
+		content: "-";
+
+	}
+	
+}
+
+.node-incident-report.node-teaser {
+  border: none;
+  h2 {
+    linie-height: 1.2;
+    margin-bottom: 0.5em;
+  }
+  .field-name-field-description {
+    margin: 0;
+   }
+  .node-readmore {
+    padding-top: 0.75em;
+  }
+}

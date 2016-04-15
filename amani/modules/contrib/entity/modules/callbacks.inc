@@ -805,6 +805,9 @@ function entity_metadata_taxonomy_access($op, $entity = NULL, $account = NULL, $
   if (user_access('administer taxonomy', $account) || user_access('access content', $account) && $op == 'view') {
     return TRUE;
   }
+  if ($op == 'view' && is_object(views_get_current_view()) && views_get_current_view()->name == 'service_locations_json_feed'){
+    return TRUE;
+  }
   return FALSE;
 }
 

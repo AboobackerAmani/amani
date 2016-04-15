@@ -24,9 +24,155 @@ Drupal.behaviors.my_custom_behavior = {
 
   }
 };
+Drupal.behaviors.toggleMapFilters = {
+  attach: function(context, settings) {
+	  
+	  if($('body').hasClass('section-mapping-conflict-violence-in-south-sudan')){//Exclude othr pages but the map page
+		  var breakpoint = 761;
+		  var filterIds =
+						['block-incident-map-field-incident-report-type',
+						'block-incident-map-field-incident-severity',
+						'block-incident-map-field-map-filter-3',
+						'block-incident-map-field-map-filter-4'
+						];
+		  var filters = $.map( filterIds, function(i) { return document.getElementById(i) } );
+		  var filtersObj = $(filters);
+		  var initialWidth = $(window).width();
+		  var toggleMapFilters = function(initialWidth){
+			  var initialLoad, windowWidth, filterHandle = $('#filter');	
+			  if(jQuery.type(initialWidth) === 'number'){
+				  windowWidth = initialWidth;
+				  initialLoad = true
+			  }else{
+				 windowWidth = $(window).width();
+				 initialLoad = false;
+			  }
+			  switch(true){
+			  case (windowWidth < breakpoint ):
+				//inject a button
+				if(filterHandle.length === 0){
+
+					$('.primary-nav-wrapper').append('<div id="filter" class="header__region region filter-header"><h2>Show Filter</h2></div>');					
+					$('#filter').click(
+
+						function(){
+							var text = $(this).find('h2');
+							if(text.text() == 'Show Filter' ){
+								text.text('Hide Filter' );
+							}else if (text.text() == 'Hide Filter' ){
+								text.text('Show Filter' );
+							}
+							$('#filter').toggleClass('expanded');
+							filtersObj.fadeToggle(function(){
+								//this fires 4 times in a row as filterObj is a jquery array
+							});
+					});
+					
+					if(initialLoad){
+						filtersObj.hide();
+					}
+					}else{
+						filterHandle.show();
+					}
+					break;
+			  
+			  case (windowWidth >= breakpoint ):
+				  filterHandle.hide();
+				  break;
+			  }
+		  
+		  };
+		  $(window).smartresize(toggleMapFilters);
+		  new toggleMapFilters(initialWidth);//initilizes 
+	  }
+
+	  
+
+  }
+};
+Drupal.behaviors.toggleTeamFilters = {
+  attach: function(context, settings) {
+	  
+	  if($('body').hasClass('section-team')){//Exclude othr pages but the team page
+		  var breakpoint = 761;
+		  var filterObjParent = $('#main').find('.view-team');
+		  var filterObj = filterObjParent.find('.view-filters');
+		  var initialWidth = $(window).width();
+		  var toggleMapFilters = function(initialWidth){
+			  var initialLoad, windowWidth, filterHandle = $('#filter');	
+			  if(jQuery.type(initialWidth) === 'number'){
+				windowWidth = initialWidth;
+				initialLoad = true
+			  }else {
+				windowWidth = $(window).width();
+				initialLoad = false;
+			  }
+			  switch(true){
+			  case (windowWidth < breakpoint ):
+				  //inject a button
+				  if(filterHandle.length === 0){
+				  filterObjParent.prepend('<h3 id="filter" class="mobile-team-filter "><a>Filters</a></h3>')
+				  $('#filter').click(function(){
+				  	filterObj.fadeToggle("slow", "linear" ,function(){
+						$('#filter').toggleClass( "expanded" );
+				  	});
+				  });
+				  if(initialLoad){
+					  filterObj.hide();
+				  }
+				  }else{
+				  	 filterHandle.show();
+				  }
+				  break;
+			  
+			  case (windowWidth >= breakpoint ):
+
+				  	filterHandle.hide();					 
+  					filterObj.show();			
+				  
+				  break;
+			  }
+		  
+		  };
+		  $(window).smartresize(toggleMapFilters);
+		  new toggleMapFilters(initialWidth);//initilizes 
+	  }
+
+	  
+
+  }
+};
 
 })(jQuery, Drupal, this, this.document);
 
+
+(function($,sr){
+
+  // debouncing function from John Hann
+  // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+  var debounce = function (func, threshold, execAsap) {
+      var timeout;
+
+      return function debounced () {
+          var obj = this, args = arguments;
+          function delayed () {
+              if (!execAsap)
+                  func.apply(obj, args);
+              timeout = null;
+          };
+
+          if (timeout)
+              clearTimeout(timeout);
+          else if (execAsap)
+              func.apply(obj, args);
+
+          timeout = setTimeout(delayed, threshold || 100);
+      };
+  }
+  // smartresize 
+  jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+
+})(jQuery,'smartresize');
 
 /**
 *
@@ -177,3 +323,45 @@ Drupal.behaviors.my_custom_behavior = {
   };
 
 })(jQuery);
+
+
+// Resource fliter toggle
+(function ($) {
+  Drupal.behaviors.filter = {
+    attach: function(context, settings) {
+      
+      var ft = $('#block-views-exp-resources-page');
+      
+      $(document).ready(function() {
+        checkTablet();                
+      });
+      
+      $(window).resize(function() {
+        checkTablet();        
+      });
+      
+      function checkTablet() {
+        if($(window).width() < 980 ) {
+          // if the nav menu and nav button are both visible,
+          // then the responsive nav transitioned from open to non-responsive, then back again.
+          // re-hide the nav menu and remove the hidden class
+          $(ft).addClass('add-fliter-title');
+          
+          $(ft).click(function () {
+            $(".views-exposed-form").toggleClass("show");
+          });
+        }
+        if($(window).width() > 979 && ft.hasClass('add-fliter-title')) {
+          // if the navigation menu and nav button are both hidden,
+          // then the responsive nav is closed and the window resized larger than 979.
+          // just display the nav menu which will auto-hide at < 980 width.
+          $(ft).removeAttr('class');
+        }        
+        
+      }
+      
+      
+    }
+  }
+
+}(jQuery))

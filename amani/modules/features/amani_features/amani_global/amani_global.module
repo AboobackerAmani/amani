@@ -21,12 +21,14 @@ function amani_global_menu() {
 
   $version = amani_global_get_version();
 
+  global $theme_key;
+
   $items['admin/configure-amani/site-info'] = array(
     'title' => 'Manage Logo & Tagline',
     'description' => 'Manage site name, e-mail address, slogan, logo and favicon.',
     'page callback' => 'drupal_get_form',
     'type' => MENU_NORMAL_ITEM,
-    'page arguments' => array('amani_site_information_settings'),
+    'page arguments' => array('amani_site_information_settings', $theme_key),
     'access arguments' => array('administer site settings'),
     'weight' => 20,
   );
@@ -72,7 +74,10 @@ function amani_global_block_info() {
     ),
     'site_contact_info' => array(
       'info' => t('Amani: site contact info')
-    )
+    ),
+    'behind_front_blocks_image' => array(
+      'info' => t('Amani: Image behind front page blocks')
+    ),
   );
 }
 
@@ -99,9 +104,56 @@ function amani_global_block_view($delta = '') {
       $block['title'] = t('Where are we?');
       $block['content'] = amani_global_site_contact_info();
       break;
+    case 'behind_front_blocks_image':
+      $content = '';
+      $block['title'] = '';
+      $image = file_load(variable_get('amani_global_behind_front_blocks_image_fid', NULL));
+      if ($image != FALSE) {
+        $content = theme('image_style', array('style_name' => 'front_page_slideshow', 'path' => $image->uri));
+      }
+      $block['content'] = $content;
+      break;
   }
 
   return $block;
+}
+
+/**
+ * Implements hook_block_configure().
+ */
+function amani_global_block_configure($delta = '') {
+  $form = array();
+  if ($delta == 'behind_front_blocks_image') {
+    $form['amani_global_behind_front_blocks_image_fid'] = array(
+      '#type' => 'managed_file',
+      '#title' => t('Image'),
+      '#size' => 60,
+      '#description' => t('This image will appear behind the front page blocks.'),
+      '#default_value' => variable_get('amani_global_behind_front_blocks_image_fid', NULL),
+      '#upload_location' => 'public://front_page_behind_blocks_images/',
+      '#upload_validators' => array(
+        'file_validate_extensions' => array('png jpg jpeg'),
+        'file_validate_image_resolution' => array(0, '1440x450'),
+      ),
+    );
+  }
+
+  return $form;
+}
+
+/**
+ * Implements hook_block_save().
+ */
+function amani_global_block_save($delta = '', $edit = array()) {
+  if ($delta == 'behind_front_blocks_image') {
+    $file = file_load($edit['amani_global_behind_front_blocks_image_fid']);
+    if ($file != FALSE) {
+      $file->status = FILE_STATUS_PERMANENT;
+      file_save($file);
+      file_usage_add($file, 'amani_global', 'behind_front_blocks_image', $file->fid);
+      variable_set('amani_global_behind_front_blocks_image_fid', $edit['amani_global_behind_front_blocks_image_fid']);
+    }
+  }
 }
 
 /**
@@ -319,31 +371,7 @@ function amani_global_leaflet_framework_maps() {
  * @see system_site_information_settings()
  * @see system_theme_settings_submit()
  */
-function amani_site_information_settings($form, &$form_state, $key = 'peace') {
-
-  $form['site_information'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Site details'),
-  );
-  $form['site_information']['site_name'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Site name'),
-    '#default_value' => variable_get('site_name', 'Drupal'),
-    '#required' => TRUE
-  );
-  $form['site_information']['site_slogan'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Tagline'),
-    '#default_value' => variable_get('site_slogan', ''),
-    '#description' => t("This text will be displayed beside the logo."),
-  );
-  $form['site_information']['site_mail'] = array(
-    '#type' => 'textfield',
-    '#title' => t('E-mail address'),
-    '#default_value' => variable_get('site_mail', ini_get('sendmail_from')),
-    '#description' => t("The <em>From</em> address in automated e-mails sent during registration and new password requests, and other notifications. (Use an address ending in your site's domain to help prevent this e-mail being flagged as spam.)"),
-    '#required' => TRUE,
-  );
+function amani_site_information_settings($form, &$form_state, $key) {
 
   $form['site_information']['site_address'] = array(
     '#type' => 'textarea',
@@ -389,13 +417,6 @@ function amani_site_information_settings($form, &$form_state, $key = 'peace') {
     '#required' => FALSE,
   );
 
-  $form['site_information']['site_hours'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Hours of operation'),
-    '#default_value' => variable_get('site_hours', NULL),
-    '#description' => t("Your organization's hours of operation (ie. mon thru fri 9am-5pm), this will appear on the contact form of your site."),
-    '#required' => FALSE,
-  );
   $form['var'] = array('#type' => 'hidden', '#value' => 'theme_' . $key . '_settings');
 
   $form['logo'] = array(

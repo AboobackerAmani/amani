@@ -36,9 +36,9 @@
   <div class="primary-nav-wrapper">
     <?php print render($page['header']); ?>
   </div>
-  
+
 	<a href="#" id="mobile-toggle" title="Menu">Menu</a>
-	
+
   <div class="slideshow">
     <?php print render($page['subheader']); ?>
   </div>
@@ -49,7 +49,9 @@
 
   <div id="main">
 		<?php print render($title_prefix); ?>
-    <?php if ($title): ?>
+    <?php if ($title && isset($node) && $node->type == 'team'): ?>
+      <h1 class="page__title title" id="page-title"><?php print t('Team'); ?></h1>
+    <?php elseif ($title): ?>
       <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
     <?php endif; ?>
     <?php print render($title_suffix); ?>
@@ -82,6 +84,10 @@
 
   </div>
 
+</div>
+
+<div class="content_bottom">
+  <?php print render($page['content_bottom']); ?>
 </div>
 
 <div class="footer-top"></div>

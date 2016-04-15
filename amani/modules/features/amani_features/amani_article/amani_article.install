@@ -1,0 +1,7 @@
+<?php
+/**
+ * Reverts the feature to update context.
+ */
+function amani_article_update_7000() {
+	features_revert('amani_article');
+}

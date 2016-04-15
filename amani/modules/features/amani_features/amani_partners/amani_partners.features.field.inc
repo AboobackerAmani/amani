@@ -218,8 +218,8 @@ function amani_partners_field_default_fields() {
           'label' => 'above',
           'module' => 'link',
           'settings' => array(),
-          'type' => 'link_default',
-          'weight' => '5',
+          'type' => 'link_url',
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -302,7 +302,7 @@ function amani_partners_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '15',
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -409,7 +409,7 @@ function amani_partners_field_default_fields() {
             'link' => 1,
           ),
           'type' => 'entityreference_label',
-          'weight' => '2',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -491,7 +491,7 @@ function amani_partners_field_default_fields() {
             'link' => 1,
           ),
           'type' => 'entityreference_label',
-          'weight' => '3',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',

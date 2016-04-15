@@ -51,6 +51,10 @@
         width: 330px;
         height: 28px;
       }
+      
+      @media (max-width: 1044px) and (min-width: 767px){
+        width: 180px;
+      }
     }
     .ajax-progress {
       position: absolute;
@@ -120,7 +124,7 @@
   //button style
   .views-exposed-form {
     .form-submit {
-      @include secon-btn;
+      @include second-btn;
       margin: 20px 20px 0 0;
       width: 120px; 
       @include breakpoint($breakpoint) {
@@ -128,8 +132,15 @@
       }
     }
     
+    .views-submit-button,
+    .views-reset-button {
+      float: right;
+      margin-left: 15px;
+    }
+    
     .views-submit-button .form-submit {
       @include btn;
+      margin-right: 0;
     }
     
     .views-reset-button .form-submit {
@@ -153,7 +164,7 @@
       margin: 10px 0;
       margin-left: 1%;
       @include breakpoint($breakpoint) {
-        margin-top: 2.5em;
+        margin-top: 1em;
       }
       
       a:link, a:visited {
@@ -265,4 +276,36 @@
   a.feed-icon {
     display: none;
   }
+}
+
+.team-content-container2 { 
+  clear: left;
+  float: left;
+  width: 100%;
+}
+
+.team-content-container1 { 
+  float: left;
+  width: 100%;
+  position: relative;
+  right: 50%;
+}
+
+.team-content-image {
+  float: left;
+  width: 20%;
+  position: relative;
+  left: 52%;
+}
+
+.team-content-content {
+  float: left;
+  width: 80%;
+  position: relative;
+  left: 52%;
+}
+
+.back-to-team {
+  border-style: solid;
+  border-top: thick double #ce9bc0;
 }

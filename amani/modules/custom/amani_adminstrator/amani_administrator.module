@@ -206,3 +206,58 @@ function amani_administrator_form_alter(&$form, &$form_state, $form_id) {
 
   return $form;
 }
+
+function amani_administrator_configure_comments($comment_en_dis) {
+  $content_types = node_type_get_types();
+  foreach ($content_types as $key => $val) {
+    if ($comment_en_dis == 1) {
+      $result = 2;
+    }
+    else {
+      $result = 0;
+    }
+    db_update('node')
+      ->fields(array(
+        'comment' => $result,
+      ))
+      ->condition('type', $key)
+      ->execute();
+      
+    $sql = "UPDATE node_revision nrev
+            INNER JOIN node nd ON nrev.nid = nd.nid AND nd.type = :type1
+            SET nrev.comment = :type2";
+    
+    $args = array(':type1' => $key, ':type2' => $result);
+    db_query($sql, $args);
+  }
+  cache_clear_all();
+}
+
+function amani_administrator_configure_front_page_feed_types($feed, $enable, $title = null) {
+  $view_name = 'news_and_events';
+  $view_display_name = 'block_' . $feed;
+  $view = views_get_view($view_name);
+  $view->display[$view_display_name]->display_options['enabled'] = $enable;
+  if ($title != null) {
+    $view->display[$view_display_name]->display_options['title'] = $title;
+  }
+  views_save_view($view);
+}
+
+function amani_administrator_configure_partners_carousel($enable) {
+  $view_name = 'partners_carousel';
+  $view_display_name = 'block';
+  $view = views_get_view($view_name);
+  $view->display[$view_display_name]->display_options['enabled'] = $enable;
+  views_save_view($view);
+}
+
+function amani_administrator_configure_front_page_feed_order($weights) {
+  $context = context_load('front_page');
+  $blocks = $context->reactions['block']['blocks'];
+  foreach ($weights as $key => $weight) {
+    $blocks['views-news_and_events-block_' . $key]['weight'] = $weight;
+  }
+  $context->reactions['block']['blocks'] = $blocks;
+  context_save($context);
+}

@@ -191,9 +191,37 @@ function amani_resource_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_resource_en_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_resource_en_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_resource_pattern';
   $strongarm->value = 'resource/[node:title]';
   $export['pathauto_node_resource_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_resource_und_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_resource_und_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_resource_type_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_resource_type_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_theme_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_theme_pattern'] = $strongarm;
 
   return $export;
 }

@@ -103,3 +103,36 @@
     }
   }
 }
+.section-team{
+	.mobile-team-filter {
+		position:relative;
+		padding:5px;
+		
+		a:hover, a:focus {
+		    color: #ce9bc0;
+		}
+        color: #ce9bc0;
+				box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.24);
+				cursor:pointer;
+				&:before{
+					content: "⍓";
+					font-size: 28px;
+					color: #ce9bc0;
+					display: block;
+					height: 30px;
+					width: 30px;
+					margin-top: 5px;
+			    position: absolute;
+					right: -9px;
+			    top: -3px;
+				}
+				
+	}
+	.expanded.mobile-team-filter {
+		border-bottom:none;
+		box-shadow:none;
+		&:before{
+			content: "⍌";
+		}
+	}
+}

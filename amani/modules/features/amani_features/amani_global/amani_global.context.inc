@@ -64,7 +64,6 @@ function amani_global_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'get-involved/*' => 'get-involved/*',
         '<front>' => '<front>',
       ),
     ),
@@ -110,29 +109,29 @@ function amani_global_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'menu-menu-amani-main-menu' => array(
+        'menu-menu-configure-footer-links' => array(
           'module' => 'menu',
-          'delta' => 'menu-amani-main-menu',
+          'delta' => 'menu-configure-footer-links',
           'region' => 'footer',
-          'weight' => '-44',
+          'weight' => '-10',
         ),
         'menu-menu-social-media' => array(
           'module' => 'menu',
           'delta' => 'menu-social-media',
           'region' => 'footer',
-          'weight' => '-43',
+          'weight' => '-8',
         ),
         'bean-project-by-pg' => array(
           'module' => 'bean',
           'delta' => 'project-by-pg',
           'region' => 'footer',
-          'weight' => '-42',
+          'weight' => '-7',
         ),
         'bean-powered-by-amani' => array(
           'module' => 'bean',
           'delta' => 'powered-by-amani',
           'region' => 'footer',
-          'weight' => '-41',
+          'weight' => '-6',
         ),
       ),
     ),
@@ -164,8 +163,8 @@ function amani_global_context_default_contexts() {
         'views-front_page_slideshow-block' => array(
           'module' => 'views',
           'delta' => 'front_page_slideshow-block',
-          'region' => 'subheader',
-          'weight' => '-10',
+          'region' => 'content',
+          'weight' => '-51',
         ),
         'views-front_page_blocks-block' => array(
           'module' => 'views',
@@ -203,9 +202,9 @@ function amani_global_context_default_contexts() {
           'region' => 'content',
           'weight' => '-5',
         ),
-        'views-72a1db79709d2921e03b4173ca67a118' => array(
-          'module' => 'views',
-          'delta' => '72a1db79709d2921e03b4173ca67a118',
+        'amani_global-behind_front_blocks_image' => array(
+          'module' => 'amani_global',
+          'delta' => 'behind_front_blocks_image',
           'region' => 'content',
           'weight' => '-4',
         ),
@@ -214,6 +213,24 @@ function amani_global_context_default_contexts() {
           'delta' => 'news_and_events-block_1',
           'region' => 'content',
           'weight' => '-3',
+        ),
+        'views-news_and_events-block_2' => array(
+          'module' => 'views',
+          'delta' => 'news_and_events-block_2',
+          'region' => 'content',
+          'weight' => '-2',
+        ),
+        'views-news_and_events-block_3' => array(
+          'module' => 'views',
+          'delta' => 'news_and_events-block_3',
+          'region' => 'content',
+          'weight' => '-1',
+        ),
+        'views-news_and_events-block_4' => array(
+          'module' => 'views',
+          'delta' => 'news_and_events-block_4',
+          'region' => 'content',
+          'weight' => '0',
         ),
       ),
     ),
@@ -276,6 +293,44 @@ function amani_global_context_default_contexts() {
   t('global');
   t('sitewide header blocks');
   $export['header'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'partners_carousel';
+  $context->description = '';
+  $context->tag = 'global';
+  $context->conditions = array(
+    'sitewide' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+    'user' => array(
+      'values' => array(
+        'administrator' => 'administrator',
+        'anonymous user' => 'anonymous user',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-partners_carousel-block' => array(
+          'module' => 'views',
+          'delta' => 'partners_carousel-block',
+          'region' => 'content_bottom',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('global');
+  $export['partners_carousel'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */

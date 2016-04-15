@@ -7,4 +7,31 @@ function amani_global_update_7004() {
   features_revert('amani_global');
 }
 
-?>
+/**
+ * Revert feature to add new context.
+ */
+function amani_global_update_7005() {
+  features_revert('amani_global');
+}
+
+/**
+ * Reverts main menu and adds new footer menu.
+ */
+function amani_global_update_7006() {
+  features_revert('amani_global');
+ }
+
+/**
+ * Revert the menu links so that they are set as "Show as Expanded".
+ */
+function amani_global_update_7007() {
+	features_revert('amani_global');
+}
+
+
+/**
+ * Eable amani opportunity content module.
+ */
+function amani_global_update_7008() {
+  module_enable(array("amani_opportunity_content"));
+}

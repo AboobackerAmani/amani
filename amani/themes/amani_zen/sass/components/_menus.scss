@@ -75,19 +75,65 @@
     }
     
     &.social-media-facebook:before,
+    &.social-media-google\+:before,
+    &.social-media-instagram:before,
+    &.social-media-linkedin:before,
+    &.social-media-pinterest:before,
+    &.social-media-rss:before,
+    &.social-media-vimeo:before,
+    &.social-media-youtube:before,
     &.social-media-twitter:before {
       content: "\e802";
       font-family: amani-icons;
       font-size: 28px;
       color: white;
       display: block;
-      height: 30px;
-      width: 30px;
       margin-top: 5px;
+      position: relative;
+      left: 75px;
+    }
+
+    &.social-media-google\+:before {
+      content: "\e801";
+    }
+
+    &.social-media-instagram:before {
+      content: "\e803";
+    }
+
+    &.social-media-linkedin:before {
+      content: "\e808";
+    }
+
+    &.social-media-pinterest:before {
+      font-family: ss-social-regular;
+      content: "\f650";
+    }
+
+    &.social-media-rss:before {
+      content: "\e805";
+    }
+
+    &.social-media-vimeo:before {
+      content: "\e806";
+    }
+
+    &.social-media-youtube:before {
+      font-family: ss-social-regular;
+      content: "\f650";
     }
     
     &.social-media-twitter:before {
       content: "\e804";
     }
   }
+}
+
+.header__region {
+  width: 100%;
+}
+
+#block-menu-menu-social-media {
+  left: 950px;
+  width: 100%;
 }

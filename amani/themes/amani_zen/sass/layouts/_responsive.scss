@@ -82,6 +82,12 @@ footer {
   }
 }
 
+@media all and (max-width: $breakpoint) {
+  .front #content {
+    padding: 0;
+  }
+}
+
 /* Containers for grid items and flow items. */
 #header,
 #main,

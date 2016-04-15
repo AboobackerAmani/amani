@@ -365,6 +365,15 @@ function amani_administrator_configure_amani_form() {
       dropdown list. This dropdown option will appear as soon as you add a second ‘Category’ option.</p></div>'
   );
 
+  $form['contact-info'][] = array(
+    '#type' => 'button',
+    '#value' => t('Manage Contact Page'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' =>
+    '<p>This option allows you to configure your contact page</p></div>'
+  );
+
   $form['map'] = array(
     '#type' => 'fieldset',
     '#title' => t('Manage Map Settings'),
@@ -594,6 +603,207 @@ function amani_administrator_configure_amani_form() {
       the feed displayed at the bottom of the front page. Click on the button above and go to the "FILTER CRITERIA" part. Then click on "Content:type", select the content types that you want to see on the front pahe, then save and save the view.</p></div>',
   );
 
+  $form['comments'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Manage Site-Wide Comments'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['comments'][] = array(
+    '#type' => 'button',
+    '#value' => t('Enable Comments'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action will enable comments on all content types site wide.</p></div>',
+  );
+
+  $form['comments'][] = array(
+    '#type' => 'button',
+    '#value' => t('Disable Comments'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action will disable comments on all content types site wide.</p></div>',
+  );
+
+  $news_and_events = views_get_view('news_and_events');
+  $enabled = 0;
+  foreach ($news_and_events->display as $key => $display) {
+    if (strpos($key, 'block_') !== false) {
+      $title[] = $display->display_options['title'];
+      if (!isset($display->display_options['enabled']) || $display->display_options['enabled'] == TRUE) {
+        $enabled++;
+      }
+    }
+  }
+
+  $form['front_page_feed_types'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Manage Front Page Feed Types'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['front_page_feed_types']['latest_news'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Articles'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['front_page_feed_types']['latest_news']['articles_title'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Title',
+    '#description' => 'Add the title you want for this feed.',
+    '#default_value' => $title[0],
+    '#prefix' => $prefix,
+  );
+
+  $form['front_page_feed_types']['latest_news'][] = array(
+    '#type' => 'button',
+    '#value' => t('Enable Articles Feed'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action will enable the feed that shows articles on the front page and change the title to whatever you\'ve entered above.</p></div>'
+  );
+
+  $form['front_page_feed_types']['latest_news'][] = array(
+    '#type' => 'button',
+    '#value' => t('Disable Articles Feed'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action will disable the feed that shows articles on the front page. The title will not be affected.</p></div>'
+  );
+
+  $form['front_page_feed_types']['latest_events'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Events'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['front_page_feed_types']['latest_events']['events_title'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Title',
+    '#description' => 'Add the title you want for this feed.',
+    '#default_value' => $title[1],
+    '#prefix' => $prefix,
+  );
+
+  $form['front_page_feed_types']['latest_events'][] = array(
+    '#type' => 'button',
+    '#value' => t('Enable Events Feed'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action will enable the feed that shows events on the front page and change the title to whatever you\'ve entered above.</p></div>'
+  );
+
+  $form['front_page_feed_types']['latest_events'][] = array(
+    '#type' => 'button',
+    '#value' => t('Disable Events Feed'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action will disable the the feed that shows events on the front page. The title will not be affected.</p></div>'
+  );
+
+  $form['front_page_feed_types']['latest_resources'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Resources'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['front_page_feed_types']['latest_resources']['resources_title'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Title',
+    '#description' => 'Add the title you want for this feed.',
+    '#default_value' => $title[2],
+    '#prefix' => $prefix,
+  );
+
+  $form['front_page_feed_types']['latest_resources'][] = array(
+    '#type' => 'button',
+    '#value' => t('Enable Resources Feed'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action will enable the the feed that shows resources on the front page and change the title to whatever you\'ve entered above.</p></div>'
+  );
+
+  $form['front_page_feed_types']['latest_resources'][] = array(
+    '#type' => 'button',
+    '#value' => t('Disable Resources Feed'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action will disable the the feed that shows resources on the front page. The title will not be affected.</p></div>'
+  );
+
+  $form['front_page_feed_types']['latest_blogs'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Blog'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['front_page_feed_types']['latest_blogs']['blog_title'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Title',
+    '#description' => 'Add the title you want for this feed.',
+    '#prefix' => $prefix,
+    '#default_value' => $title[3],
+  );
+
+  $form['front_page_feed_types']['latest_blogs'][] = array(
+    '#type' => 'button',
+    '#value' => t('Enable Blog Feed'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action will enable the the feed that shows blog entries on the front page and change the title to whatever you\'ve entered above.</p></div>'
+  );
+
+  $form['front_page_feed_types']['latest_blogs'][] = array(
+    '#type' => 'button',
+    '#value' => t('Disable Blog Feed'),
+    '#executes_submit_callback' => TRUE,
+    '#prefix' => $prefix,
+    '#suffix' => '<p>This action will disable the the feed that shows blog entries on the front page. The title will not be affected.</p></div>'
+  );
+
+  $form['front_page_feed_types']['order_feeds'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Feeds Order'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['front_page_feed_types']['order_feeds'][] = array(
+    '#markup' => 'Add a weight to each item to re-order the feeds. The higher the weight, the lower down it will appear. Please do not enter anything lower than -3.'
+  );
+
+  $context = context_load('front_page');
+  $blocks = $context->reactions['block']['blocks'];
+  foreach ($blocks as $key => $block) {
+    if (strpos($key, 'views-news_and_events-block_') !== false) {
+      $weights[] = $block['weight'];
+    } 
+  }
+
+  $i = 0;
+  foreach ($title as $val) {
+    $j = $i + 1;
+    $form['front_page_feed_types']['order_feeds']['weight_' . $j] = array(
+      '#type' => 'textfield',
+      '#title' => $val . ' Weight',
+      '#default_value' => $weights[$i],
+    );
+    $i++;
+  }
+
+  $form['front_page_feed_types']['order_feeds'][] = array(
+    '#type' => 'button',
+    '#value' => t('Save Feed Order'),
+    '#executes_submit_callback' => TRUE,
+  );
+
   return $form;
 }
 
@@ -648,19 +858,11 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       break;
     case 'Enable \'Partners Carousel\'':
       // Partners carousel block.
-      $block = array(
-        'module' => 'views',
-        'delta' => 'partners_carousel-block',
-      );
-      amani_administrator_set_block($block, 1, 0, 'content_bottom');
+      amani_administrator_configure_partners_carousel(TRUE);
       break;
     case 'Disable \'Partners Carousel\'':
       // Partners carousel block.
-      $block = array(
-        'module' => 'views',
-        'delta' => 'partners_carousel-block',
-      );
-      amani_administrator_set_block($block, 0, 0, -1);
+      amani_administrator_configure_partners_carousel(FALSE);
       break;
     case 'Enable \'Upcoming Events\'':
       variable_set('amani_admin_events_show', 1);
@@ -690,7 +892,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       variable_set('amani_admin_get_involved_show', 1);
       break;
     case 'Manage Logo & Tagline':
-      drupal_goto('admin/configure-amani/site-info');
+      drupal_goto('admin/config/system/site-information');
       break;
     case 'Configure Map':
       drupal_goto('admin/config/incident-reports');
@@ -716,6 +918,9 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
     case 'Configure Contact Form':
       drupal_goto('admin/structure/contact');
       break;
+    case 'Manage Contact Page':
+      drupal_goto('admin/configure-amani/site-info');
+      break;
     case 'Configure CSS':
       drupal_goto('admin/config/development/css-injector');
       break;
@@ -723,13 +928,67 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       drupal_goto('admin/configure-amani/release-notes');
       break;
     case 'Change Image':
-      drupal_goto('node/add/image-behind-twitter-fb-cal-bloc');
+      drupal_goto('admin/structure/block/manage/amani_global/behind_front_blocks_image/configure');
       break;
     case 'Edit Third-Party Logins':
       drupal_goto('admin/config/people/hybridauth');
       break;
     case 'Configure content types to display':
       drupal_goto('admin/structure/views/view/news_and_events/edit/block_1');
+      break;
+    case 'Enable Comments':
+      amani_administrator_configure_comments(1);
+      break;
+    case 'Disable Comments':
+      amani_administrator_configure_comments(0);
+      break;
+    case 'Enable Articles Feed':
+      $title = $form_state['values']['articles_title'];
+      amani_administrator_configure_front_page_feed_types(1, true, $title);
+      break;
+    case 'Disable Articles Feed':
+      amani_administrator_configure_front_page_feed_types(1, false);
+      break;
+    case 'Enable Events Feed':
+      $title = $form_state['values']['events_title'];
+      amani_administrator_configure_front_page_feed_types(2, true, $title);
+      break;
+    case 'Disable Events Feed':
+      amani_administrator_configure_front_page_feed_types(2, false);
+      break;
+    case 'Enable Resources Feed':
+      $title = $form_state['values']['resources_title'];
+      amani_administrator_configure_front_page_feed_types(3, true, $title);
+      break;
+    case 'Disable Resources Feed':
+      amani_administrator_configure_front_page_feed_types(3, false);
+      break;
+    case 'Enable Blog Feed':
+      $title = $form_state['values']['blog_title'];
+      amani_administrator_configure_front_page_feed_types(4, true, $title);
+      break;
+    case 'Disable Blog Feed':
+      $title = $form_state['values']['title'];
+      amani_administrator_configure_front_page_feed_types(4, false);
+      break;
+    case 'Save Feed Order':
+      $error = '';
+      foreach ($form_state['values'] as $key => $data) {
+        if ($data < -3) {
+          $error = 'Feed Weights: Please do not enter values lower than -3.';
+        } else {
+          if (strpos($key, 'weight_') !== false) {
+            $temp = explode('_', $key);
+            $weights[$temp[1]] = $data;
+          }
+        }
+      }
+      if ($error == '') {
+        amani_administrator_configure_front_page_feed_order($weights);
+      }
+      else {
+        drupal_set_message($error, 'error');
+      }
       break;
   }
 }

@@ -3,36 +3,58 @@
 */
 
 // resources page view
-.resources-page-view {
+.page-resources {
   font-family: $open-sans-condensed;
+   
+  h2.block-title {
+    font-family: $open-sans-condensed;
+    color: $purple-primary;
+    text-transform: uppercase;
+    margin: 10px 0;
+  }
 
-  .view-filters {
+  //right side bar
+  #block-views-exp-resources-page {
     float: right;
-    background-color: #f7f6f5;
-    padding: 12px;
-    box-shadow: 0px 3px 3px -2px #777;
     width: 100%;
-    margin: 0;
+    margin: 10px 0 0;
     clear: both;
     @include breakpoint(768px) {
-      @include zen-grid-item(3, 1);
-      margin: 0;
+     // @include zen-grid-item(3, 1);
       float: right;
     }
 
     form .views-exposed-form  {
+      background-color: #f7f6f5;
+      box-shadow: 0px 3px 3px -2px #777;
+      
+      @include breakpoint(980px) {
+        &:before {
+          content:  "Filters";
+          text-transform: uppercase;
+          color: $purple-primary;
+          font-weight: 600;
+          border-bottom: 1px solid #ccc;
+          display: block;
+          margin: 0 15px;
+          padding: 15px 0 5px;
+        }
+      }
+      
       & div {
         float: none;
         padding: 0;
       }
 
       .views-exposed-widgets {
+        padding: 12px;
+        
         & > div {
           margin-bottom: 10px;
         }
 
         .form-submit {
-          width: 48%;
+          width: 49%;
           float: left;
           margin: 0;
           border: 1px solid #ce9bc0;
@@ -46,11 +68,14 @@
           &#edit-submit-resources {
             background: #ce9bc0;
             color: white;
-            margin-right: 5px;
+            margin-left: 1%;
+            float: right;
           }
 
           &#edit-reset {
             background: transparent;
+            margin-right: 1%;
+            float: right;
           }
         }
 
@@ -89,25 +114,27 @@
     }
   }
 
-  .view-content {
+  //main content
+  .view-resources .view-content {
     position: relative;
     width: 100%;
     margin: 0;
     clear: both;
     @include breakpoint($breakpoint) {
-      @include zen-grid-item(9, 1);
+     // @include zen-grid-item(9, 1);
       clear: none;
       margin-top: -12px;
     }
-
+    
     .views-row {
       width: 48%;
       display: inline-block;
       float: left;
       vertical-align: top;
       border: 1px solid #cccccc;
-      padding: 10px;
+      padding: 10px 10px 5px;
       margin: 12px 1% 20px 1%;
+      height: 305px;
       
       @include breakpoint(768px) {
         width: 31%;
@@ -153,16 +180,6 @@
 
         a {
           color: #ce9bc0;
-
-          &::before {
-            content: "";
-            background: url("../images/icons/download.png") no-repeat;
-            width: 16px;
-            height: 16px;
-            background-size: 100%;
-            display: inline-block;
-            margin: -2px 5px;
-          }
         }
       }
 
@@ -177,6 +194,26 @@
           box-shadow: 1.7px 2px 4px -3px #333;
           width: 100%;
           height: 145px;
+        }
+      }
+      
+      .views-field-field-media {
+        display: inline-block; 
+        float: right;
+        text-transform: uppercase;
+        margin-top: 5px;
+        margin-bottom: 0;
+        
+        a {
+          color: $purple-primary;
+        }
+        
+        a:before {
+          content: "\e904";
+          font-family: "amani-icons";
+          color: $purple-primary;
+          margin-right: 10px;
+          display: inline-block;
         }
       }
     }
@@ -303,7 +340,7 @@
           }
         }
 
-        .field-name-field-link {
+        .download-button {
           float: right;
           background: #ce9bc0;
           text-transform: uppercase;
@@ -318,3 +355,59 @@
     }
   }
 }
+ 
+//mobile version
+.page-resources.sidebar-second {
+   @media (max-width: 980px) {
+    #main {
+      position: relative;
+    }
+    
+    #content {
+      width: 100%;
+      margin: 0;
+      float: none;
+    }
+    
+    .region-sidebar-second {
+      width: 100%;
+      margin: 0;
+      position: absolute;
+      top: 120px;
+      right: 0;
+    }
+  }
+}
+
+.add-fliter-title {
+  display: block;
+  
+  &:before {
+    content: "Filters";
+    color: $purple-primary;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    border: 1px solid $grey-medium;
+    position: relative; 
+    top: -40px;
+    right: 0;
+    float: right;
+    display: block;
+    cursor: pointer;
+  } 
+  
+  .views-exposed-form {
+    position: relative;
+    top: -30px;
+    width: 100%;
+    clear: both;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease;
+  }
+
+  .views-exposed-form.show {
+    max-height: 500px;
+  }
+}
+

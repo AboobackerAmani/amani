@@ -36,7 +36,9 @@
     hide($content['links']);
     print render($content);
   ?>
-
+  <?php if ($node->type == 'team'): ?>
+    <div class="back-to-team"><a href="/team"><?php print t('Back to team'); ?></a></div>
+  <?php endif; ?>
   <?php print render($content['links']); ?>
 
   <?php print render($content['comments']); ?>
