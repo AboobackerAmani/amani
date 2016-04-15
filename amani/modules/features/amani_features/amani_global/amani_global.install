@@ -28,4 +28,10 @@ function amani_global_update_7007() {
 	features_revert('amani_global');
 }
 
-?>
+
+/**
+ * Eable amani opportunity content module.
+ */
+function amani_global_update_7008() {
+  module_enable(array("amani_opportunity_content"));
+}
