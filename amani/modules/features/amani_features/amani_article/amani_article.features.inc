@@ -26,6 +26,39 @@ function amani_article_views_api() {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function amani_article_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: node-lead-image.
+  $styles['node-lead-image'] = array(
+    'name' => 'node-lead-image',
+    'label' => 'node-lead-image',
+    'effects' => array(
+      3 => array(
+        'label' => 'Crop',
+        'help' => 'Cropping will remove portions of an image to make it the specified dimensions.',
+        'effect callback' => 'image_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_crop_form',
+        'summary theme' => 'image_crop_summary',
+        'module' => 'image',
+        'name' => 'image_crop',
+        'data' => array(
+          'width' => '676',
+          'height' => '500',
+          'anchor' => 'center-center',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function amani_article_node_info() {
