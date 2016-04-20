@@ -2632,40 +2632,54 @@ footer .field-label {
 }
 
 /* line 502, ../sass/components/_front-page-blocks.scss */
-.front .content_bottom {
+.content_bottom {
   margin-bottom: 20px;
 }
-/* line 506, ../sass/components/_front-page-blocks.scss */
-.front .jcarousel-skin-default .jcarousel-container-horizontal {
-  width: 440px;
+/* line 505, ../sass/components/_front-page-blocks.scss */
+.content_bottom .jcarousel-skin-default .jcarousel-container-horizontal {
+  width: 448px;
   box-sizing: content-box;
 }
 @media (max-width: 768px) {
-  /* line 506, ../sass/components/_front-page-blocks.scss */
-  .front .jcarousel-skin-default .jcarousel-container-horizontal {
-    width: 250px;
+  /* line 505, ../sass/components/_front-page-blocks.scss */
+  .content_bottom .jcarousel-skin-default .jcarousel-container-horizontal {
+    width: 232px;
   }
 }
 /* line 513, ../sass/components/_front-page-blocks.scss */
-.front >
->
->
->
-.jcarousel-skin-default .jcarousel-item {
-  position: relative;
+.content_bottom .jcarousel-skin-default .jcarousel-clip-horizontal {
+  width: 448px;
+}
+@media (max-width: 768px) {
+  /* line 513, ../sass/components/_front-page-blocks.scss */
+  .content_bottom .jcarousel-skin-default .jcarousel-clip-horizontal {
+    width: 232px;
+  }
 }
 /* line 520, ../sass/components/_front-page-blocks.scss */
-.front >
->
->
->
-.jcarousel-skin-default .jcarousel-item .views-field-field-image {
+.content_bottom .jcarousel-skin-default .jcarousel-item-horizontal {
+  margin: 0 8px 0 0;
+}
+/* line 524, ../sass/components/_front-page-blocks.scss */
+.content_bottom .jcarousel-skin-default .jcarousel-item {
+  position: relative;
+}
+/* line 527, ../sass/components/_front-page-blocks.scss */
+.content_bottom .jcarousel-skin-default .jcarousel-item .views-field-field-image {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 0;
   right: 0;
   margin: 0 auto;
+}
+/* line 536, ../sass/components/_front-page-blocks.scss */
+.content_bottom .jcarousel-skin-default .jcarousel-next-horizontal {
+  right: 3px;
+}
+/* line 539, ../sass/components/_front-page-blocks.scss */
+.content_bottom .jcarousel-skin-default .jcarousel-prev-horizontal {
+  left: 5px;
 }
 
 /* line 3, ../sass/components/_gallery_page.scss */
@@ -3492,17 +3506,18 @@ footer .field-label {
 /* line 367, ../sass/components/_map_page.scss */
 .node-incident-report.node-teaser {
   border: none;
+  padding-top: 0;
 }
-/* line 369, ../sass/components/_map_page.scss */
+/* line 370, ../sass/components/_map_page.scss */
 .node-incident-report.node-teaser h2 {
-  linie-height: 1.2;
+  line-height: 1.2;
   margin-bottom: 0.5em;
 }
-/* line 373, ../sass/components/_map_page.scss */
+/* line 374, ../sass/components/_map_page.scss */
 .node-incident-report.node-teaser .field-name-field-description {
-  margin: 0;
+  margin: 0 0 15px;
 }
-/* line 376, ../sass/components/_map_page.scss */
+/* line 377, ../sass/components/_map_page.scss */
 .node-incident-report.node-teaser .node-readmore {
   padding-top: 0.75em;
 }
