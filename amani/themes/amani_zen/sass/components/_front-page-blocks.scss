@@ -498,22 +498,29 @@
 }
 
 // carosel
-.front {
-  .content_bottom {
-    margin-bottom: 20px;
-  }
+
+.content_bottom {
+  margin-bottom: 20px;
   
   .jcarousel-skin-default .jcarousel-container-horizontal {
-    width: 440px;
+    width: 448px;
     box-sizing: content-box;
     @media (max-width: 768px) {
-      width: 250px;
+      width: 232px;
     }
   }
-  >   // 
->     // .jcarousel-skin-default .jcarousel-next-horizontal {
->     //   left: 485px;
->     // }
+  
+  .jcarousel-skin-default .jcarousel-clip-horizontal {
+    width: 448px;
+    @media (max-width: 768px) {
+      width: 232px;
+    }
+  }
+
+  .jcarousel-skin-default .jcarousel-item-horizontal {
+    margin: 0 8px 0 0;
+  }
+  
   .jcarousel-skin-default .jcarousel-item {
     position: relative;
     
@@ -526,9 +533,13 @@
       margin: 0 auto;
     }
   }
+  .jcarousel-skin-default .jcarousel-next-horizontal {
+    right: 3px;
+  }
+  .jcarousel-skin-default .jcarousel-prev-horizontal {
+    left: 5px;
+  }
 }
-
-
 
 
 
