@@ -7195,7 +7195,7 @@ h1.title {
   transform: translateY(-20%);
   font-size: 20px;
   font-size: 1.25rem;
-  line-height: 20px;
+  line-height: 1.2;
   text-transform: uppercase;
   margin: 0 5%;
 }
@@ -7204,11 +7204,16 @@ h1.title {
   .slideshow .title a {
     font-size: 40px;
     font-size: 2.5rem;
-    line-height: 50px;
     margin: 0 15%;
   }
 }
-/* line 54, ../sass/theme/_slideshow.scss */
+@media (min-width: 768px) and (max-width: 960px) {
+  /* line 39, ../sass/theme/_slideshow.scss */
+  .slideshow .title a {
+    margin: 0 25%;
+  }
+}
+/* line 56, ../sass/theme/_slideshow.scss */
 .slideshow .description {
   display: none;
   top: 45%;
@@ -7221,12 +7226,12 @@ h1.title {
   line-height: 29px;
 }
 @media (min-width: 960px) {
-  /* line 54, ../sass/theme/_slideshow.scss */
+  /* line 56, ../sass/theme/_slideshow.scss */
   .slideshow .description {
     display: block;
   }
 }
-/* line 67, ../sass/theme/_slideshow.scss */
+/* line 69, ../sass/theme/_slideshow.scss */
 .slideshow .button a {
   border: 1px solid #fff;
   padding: 5px 5px;
@@ -7241,7 +7246,7 @@ h1.title {
   background-color: rgba(71, 79, 94, 0.9);
 }
 @media (min-width: 960px) {
-  /* line 67, ../sass/theme/_slideshow.scss */
+  /* line 69, ../sass/theme/_slideshow.scss */
   .slideshow .button a {
     font-size: 18px;
     font-size: 1.125rem;
@@ -7249,30 +7254,30 @@ h1.title {
     background-color: rgba(71, 79, 94, 0.85);
   }
 }
-/* line 83, ../sass/theme/_slideshow.scss */
+/* line 85, ../sass/theme/_slideshow.scss */
 .slideshow .button a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
 }
-/* line 88, ../sass/theme/_slideshow.scss */
+/* line 90, ../sass/theme/_slideshow.scss */
 .slideshow .title a,
 .slideshow .description,
 .slideshow .button a {
   text-shadow: -1px 0px 6px rgba(0, 0, 0, 0.59);
 }
-/* line 94, ../sass/theme/_slideshow.scss */
+/* line 96, ../sass/theme/_slideshow.scss */
 .slideshow .views-slideshow-controls-bottom {
   display: none;
   bottom: 5px;
   z-index: 100;
 }
 @media (min-width: 960px) {
-  /* line 94, ../sass/theme/_slideshow.scss */
+  /* line 96, ../sass/theme/_slideshow.scss */
   .slideshow .views-slideshow-controls-bottom {
     display: block;
   }
 }
-/* line 101, ../sass/theme/_slideshow.scss */
+/* line 103, ../sass/theme/_slideshow.scss */
 .slideshow .views-slideshow-controls-bottom span {
   display: inline-block;
   background-image: url("../images/arrows-slideshow.png");
@@ -7282,35 +7287,35 @@ h1.title {
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 107, ../sass/theme/_slideshow.scss */
+/* line 109, ../sass/theme/_slideshow.scss */
 .slideshow .views-slideshow-controls-bottom span:nth-child(2) {
   display: none;
 }
-/* line 110, ../sass/theme/_slideshow.scss */
+/* line 112, ../sass/theme/_slideshow.scss */
 .slideshow .views-slideshow-controls-bottom span:nth-child(3) {
   background-position: -41px 0;
   margin: 0 0 0 40px;
 }
 
 @media (max-width: 960px) {
-  /* line 120, ../sass/theme/_slideshow.scss */
+  /* line 122, ../sass/theme/_slideshow.scss */
   .slideshow {
     max-height: 300px;
     overflow: hidden;
   }
-  /* line 124, ../sass/theme/_slideshow.scss */
+  /* line 126, ../sass/theme/_slideshow.scss */
   .slideshow .button a {
     top: 50%;
   }
 
-  /* line 128, ../sass/theme/_slideshow.scss */
+  /* line 130, ../sass/theme/_slideshow.scss */
   .views-slideshow-cycle-main-frame-row img {
     max-width: none;
     width: 100%;
   }
 }
 @media all and (max-width: 768px) {
-  /* line 135, ../sass/theme/_slideshow.scss */
+  /* line 137, ../sass/theme/_slideshow.scss */
   .views-slideshow-cycle-main-frame-row img {
     width: auto;
     height: 315px;
@@ -7321,18 +7326,18 @@ h1.title {
     left: 50%;
   }
 }
-/* line 146, ../sass/theme/_slideshow.scss */
+/* line 148, ../sass/theme/_slideshow.scss */
 #block-views-front-page-slideshow-block {
   margin: -20px -200px 0;
 }
 @media all and (max-width: 768px) {
-  /* line 146, ../sass/theme/_slideshow.scss */
+  /* line 148, ../sass/theme/_slideshow.scss */
   #block-views-front-page-slideshow-block {
     margin: -20px 0 0;
   }
 }
 
-/* line 153, ../sass/theme/_slideshow.scss */
+/* line 155, ../sass/theme/_slideshow.scss */
 #block-amani-global-behind-front-blocks-image {
   position: absolute;
   top: 935px;
@@ -7341,7 +7346,7 @@ h1.title {
   display: block;
 }
 @media (max-width: 960px) {
-  /* line 153, ../sass/theme/_slideshow.scss */
+  /* line 155, ../sass/theme/_slideshow.scss */
   #block-amani-global-behind-front-blocks-image {
     display: none;
   }
