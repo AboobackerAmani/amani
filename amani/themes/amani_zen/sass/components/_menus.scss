@@ -90,7 +90,10 @@
       display: block;
       margin-top: 5px;
       position: relative;
-      left: 75px;
+      left: 0;
+      @media all and (min-width: $breakpoint) {
+        left: 75px;
+      }
     }
 
     &.social-media-google\+:before {
@@ -106,8 +109,7 @@
     }
 
     &.social-media-pinterest:before {
-      font-family: ss-social-regular;
-      content: "\f650";
+      content: "\e90c";
     }
 
     &.social-media-rss:before {
@@ -119,8 +121,7 @@
     }
 
     &.social-media-youtube:before {
-      font-family: ss-social-regular;
-      content: "\f650";
+      content: "\e909";
     }
     
     &.social-media-twitter:before {
@@ -133,7 +134,3 @@
   width: 100%;
 }
 
-#block-menu-menu-social-media {
-  left: 950px;
-  width: 100%;
-}
