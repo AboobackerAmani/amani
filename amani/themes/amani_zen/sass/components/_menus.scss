@@ -33,7 +33,7 @@
 #block-menu-menu-social-media {
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 8px;
   //screen bigger than 768px
   @media all and (min-width: $breakpoint) {
     //right: 0;
@@ -109,7 +109,10 @@
     }
 
     &.social-media-pinterest:before {
-      content: "\e90c";
+      content: "\f0d3";
+      font-size: 32px;
+      position: relative;
+      bottom: -2px;
     }
 
     &.social-media-rss:before {
@@ -121,7 +124,10 @@
     }
 
     &.social-media-youtube:before {
-      content: "\e909";
+      content: "\f166";
+      font-size: 32px;
+      position: relative;
+      bottom: -2px;
     }
     
     &.social-media-twitter:before {

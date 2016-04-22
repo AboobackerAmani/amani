@@ -194,7 +194,7 @@ footer .field-label {
     }
     
     .social-media-facebook:before,
-    .social-media-google+:before,
+    .social-media-google\+:before,
     .social-media-instagram:before,
     .social-media-linkedin:before,
     .social-media-pinterest:before,
@@ -206,7 +206,7 @@ footer .field-label {
       font-family: amani-icons;
       margin-right: 10px;
     }
-    .social-media-google+:before {
+    .social-media-google\+:before {
       content: "\e801";
     }
     .social-media-instagram:before {
@@ -216,7 +216,8 @@ footer .field-label {
       content: "\e808";
     }
     .social-media-pinterest:before {
-      content: "\e90c";
+      content: "\f0d3";
+      font-size: 18px;
     }
     .social-media-rss:before {
       content: "\e805";
@@ -225,7 +226,8 @@ footer .field-label {
       content: "\e806";
     }
     .social-media-youtube:before {
-      content: "\e909";
+      content: "\f166";
+      font-size: 18px;
     }
     .social-media-twitter:before {
       content: "\e804";
