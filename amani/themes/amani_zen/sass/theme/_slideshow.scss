@@ -44,10 +44,11 @@
     @include font-size(20px);
     line-height: 20px;
     text-transform: uppercase;
+    margin: 0 25%;
     @include breakpoint($desktop) {
       @include font-size(40px);
       line-height: 50px;
-      margin: 0 100px;
+      margin: 0 15%;
     }
   }
   .description {
@@ -126,6 +127,7 @@
   }
   .views-slideshow-cycle-main-frame-row img {
     max-width: none;
+    width: 100%;
   }
 }
 
