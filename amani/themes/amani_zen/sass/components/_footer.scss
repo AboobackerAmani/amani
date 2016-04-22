@@ -194,7 +194,7 @@ footer .field-label {
     }
     
     .social-media-facebook:before,
-    .social-media-google+:before,
+    .social-media-google\+:before,
     .social-media-instagram:before,
     .social-media-linkedin:before,
     .social-media-pinterest:before,
@@ -207,7 +207,7 @@ footer .field-label {
       margin-right: 10px;
     }
     .social-media-google\+:before {
-      content: "\f0d4";
+      content: "\e801";
     }
     .social-media-instagram:before {
       content: "\e803";
@@ -217,6 +217,7 @@ footer .field-label {
     }
     .social-media-pinterest:before {
       content: "\f0d3";
+      font-size: 18px;
     }
     .social-media-rss:before {
       content: "\e805";
@@ -226,6 +227,7 @@ footer .field-label {
     }
     .social-media-youtube:before {
       content: "\f166";
+      font-size: 18px;
     }
     .social-media-twitter:before {
       content: "\e804";
