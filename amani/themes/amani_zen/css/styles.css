@@ -5953,19 +5953,20 @@ a.permalink {
 .page-resources .view-resources .view-content .views-row .views-field, .page-resources .view-resources .view-content .views-row .views-field span, .page-resources .view-resources .view-content .views-row .views-field a {
   color: #acacac;
   font-size: 14px;
+  overflow: hidden;
 }
-/* line 161, ../sass/components/_resources_page.scss */
+/* line 162, ../sass/components/_resources_page.scss */
 .page-resources .view-resources .view-content .views-row .views-field-title {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 5px;
 }
-/* line 166, ../sass/components/_resources_page.scss */
+/* line 167, ../sass/components/_resources_page.scss */
 .page-resources .view-resources .view-content .views-row .views-field-title a {
   color: #ce9bc0;
   font-size: 16px;
 }
-/* line 172, ../sass/components/_resources_page.scss */
+/* line 173, ../sass/components/_resources_page.scss */
 .page-resources .view-resources .view-content .views-row .views-field-field-link {
   margin: 0;
   border-top: 1px solid #ccc;
@@ -5975,17 +5976,17 @@ a.permalink {
   text-align: right;
   text-transform: uppercase;
 }
-/* line 181, ../sass/components/_resources_page.scss */
+/* line 182, ../sass/components/_resources_page.scss */
 .page-resources .view-resources .view-content .views-row .views-field-field-link a {
   color: #ce9bc0;
 }
-/* line 186, ../sass/components/_resources_page.scss */
+/* line 187, ../sass/components/_resources_page.scss */
 .page-resources .view-resources .view-content .views-row .views-field-field-image {
   margin-bottom: 10px;
   height: 150px;
   overflow-y: hidden;
 }
-/* line 191, ../sass/components/_resources_page.scss */
+/* line 192, ../sass/components/_resources_page.scss */
 .page-resources .view-resources .view-content .views-row .views-field-field-image img {
   border: 2.5px solid #fff;
   margin: 0px -3px;
@@ -5993,7 +5994,7 @@ a.permalink {
   width: 100%;
   height: 145px;
 }
-/* line 200, ../sass/components/_resources_page.scss */
+/* line 201, ../sass/components/_resources_page.scss */
 .page-resources .view-resources .view-content .views-row .views-field-field-media {
   display: inline-block;
   float: right;
@@ -6001,11 +6002,11 @@ a.permalink {
   margin-top: 5px;
   margin-bottom: 0;
 }
-/* line 207, ../sass/components/_resources_page.scss */
+/* line 208, ../sass/components/_resources_page.scss */
 .page-resources .view-resources .view-content .views-row .views-field-field-media a {
   color: #ce9bc0;
 }
-/* line 211, ../sass/components/_resources_page.scss */
+/* line 212, ../sass/components/_resources_page.scss */
 .page-resources .view-resources .view-content .views-row .views-field-field-media a:before {
   content: "\e904";
   font-family: "amani-icons";
@@ -6014,59 +6015,59 @@ a.permalink {
   display: inline-block;
 }
 
-/* line 224, ../sass/components/_resources_page.scss */
+/* line 225, ../sass/components/_resources_page.scss */
 .node-type-resource #content {
   font-family: "Open Sans Condensed", sans-serif;
   width: 840px;
   margin: auto;
 }
-/* line 229, ../sass/components/_resources_page.scss */
+/* line 230, ../sass/components/_resources_page.scss */
 .node-type-resource #content .breadcrumb, .node-type-resource #content #page-title {
   display: none;
 }
-/* line 233, ../sass/components/_resources_page.scss */
+/* line 234, ../sass/components/_resources_page.scss */
 .node-type-resource #content .field-name-field-image {
   margin-bottom: -10px;
 }
-/* line 237, ../sass/components/_resources_page.scss */
+/* line 238, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content {
   font-weight: 100;
   background: #fcfbfb;
   padding: 35px;
   box-shadow: 0px 3px 3px -2px #777;
 }
-/* line 243, ../sass/components/_resources_page.scss */
+/* line 244, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons {
   float: right;
 }
-/* line 246, ../sass/components/_resources_page.scss */
+/* line 247, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons h3 {
   display: inline-block;
   margin-right: 5px;
   font-family: "Open Sans", sans-serif;
 }
-/* line 252, ../sass/components/_resources_page.scss */
+/* line 253, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons .social-menu {
   width: 100px;
   display: inline-block;
   vertical-align: bottom;
 }
-/* line 257, ../sass/components/_resources_page.scss */
+/* line 258, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons .social-menu div {
   width: 30px;
   height: 36px;
   display: inline-block;
   margin: 0px 2px;
 }
-/* line 264, ../sass/components/_resources_page.scss */
+/* line 265, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons .social-menu .social-media-facebook {
   background: url(../images/icons/black-facebook.png) no-repeat 0 0;
 }
-/* line 267, ../sass/components/_resources_page.scss */
+/* line 268, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .share-icons .social-menu .social-media-twitter {
   background: url(../images/icons/black-twitter.png) no-repeat 0 0;
 }
-/* line 273, ../sass/components/_resources_page.scss */
+/* line 274, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content h1#node-title {
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -6075,44 +6076,44 @@ a.permalink {
   margin-top: 10px;
   clear: both;
 }
-/* line 282, ../sass/components/_resources_page.scss */
+/* line 283, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body {
   font-size: 16px;
 }
-/* line 285, ../sass/components/_resources_page.scss */
+/* line 286, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .meta-info {
   color: #acacac;
   border-left: 2px solid;
   padding-left: 10px;
   margin-bottom: 30px;
 }
-/* line 291, ../sass/components/_resources_page.scss */
+/* line 292, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .meta-info p {
   margin-bottom: 10px;
 }
-/* line 296, ../sass/components/_resources_page.scss */
+/* line 297, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .field-name-body {
   font-family: "Open Sans", sans-serif;
   line-height: 30px;
 }
-/* line 302, ../sass/components/_resources_page.scss */
+/* line 303, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-label {
   font-family: "Open Sans", sans-serif;
   margin-bottom: 5px;
 }
-/* line 307, ../sass/components/_resources_page.scss */
+/* line 308, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-items > div {
   display: inline-block;
   background: #d9d9d9;
   padding: 5px 10px;
   margin-right: 5px;
 }
-/* line 313, ../sass/components/_resources_page.scss */
+/* line 314, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-items > div a {
   color: #7f7f7f;
   text-transform: uppercase;
 }
-/* line 320, ../sass/components/_resources_page.scss */
+/* line 321, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download {
   font-family: "Open Sans", sans-serif;
   background: #ebebeb;
@@ -6121,22 +6122,22 @@ a.permalink {
   margin-top: 30px;
   overflow: hidden;
 }
-/* line 328, ../sass/components/_resources_page.scss */
+/* line 329, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download > div {
   display: inline-block;
   vertical-align: middle;
   width: 49%;
 }
-/* line 334, ../sass/components/_resources_page.scss */
+/* line 335, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download .field-name-field-media {
   float: left;
   font-size: 16px;
 }
-/* line 338, ../sass/components/_resources_page.scss */
+/* line 339, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download .field-name-field-media a {
   color: #131313;
 }
-/* line 343, ../sass/components/_resources_page.scss */
+/* line 344, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download .download-button {
   float: right;
   background: #ce9bc0;
@@ -6144,23 +6145,23 @@ a.permalink {
   padding: 20px 45px;
   font-size: 24px;
 }
-/* line 350, ../sass/components/_resources_page.scss */
+/* line 351, ../sass/components/_resources_page.scss */
 .node-type-resource #content .inner-content .content-body .file-download .download-button a {
   color: white;
 }
 
 @media (max-width: 980px) {
-  /* line 362, ../sass/components/_resources_page.scss */
+  /* line 363, ../sass/components/_resources_page.scss */
   .page-resources.sidebar-second #main {
     position: relative;
   }
-  /* line 366, ../sass/components/_resources_page.scss */
+  /* line 367, ../sass/components/_resources_page.scss */
   .page-resources.sidebar-second #content {
     width: 100%;
     margin: 0;
     float: none;
   }
-  /* line 372, ../sass/components/_resources_page.scss */
+  /* line 373, ../sass/components/_resources_page.scss */
   .page-resources.sidebar-second .region-sidebar-second {
     width: 100%;
     margin: 0;
@@ -6170,11 +6171,11 @@ a.permalink {
   }
 }
 
-/* line 382, ../sass/components/_resources_page.scss */
+/* line 383, ../sass/components/_resources_page.scss */
 .add-fliter-title {
   display: block;
 }
-/* line 385, ../sass/components/_resources_page.scss */
+/* line 386, ../sass/components/_resources_page.scss */
 .add-fliter-title:before {
   content: "Filters";
   color: #ce9bc0;
@@ -6188,7 +6189,7 @@ a.permalink {
   display: block;
   cursor: pointer;
 }
-/* line 399, ../sass/components/_resources_page.scss */
+/* line 400, ../sass/components/_resources_page.scss */
 .add-fliter-title .views-exposed-form {
   position: relative;
   top: -30px;
@@ -6198,7 +6199,7 @@ a.permalink {
   overflow: hidden;
   transition: max-height 0.7s ease;
 }
-/* line 409, ../sass/components/_resources_page.scss */
+/* line 410, ../sass/components/_resources_page.scss */
 .add-fliter-title .views-exposed-form.show {
   max-height: 500px;
 }
