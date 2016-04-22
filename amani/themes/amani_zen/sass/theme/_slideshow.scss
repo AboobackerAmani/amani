@@ -42,13 +42,15 @@
     -ms-transform: translateY(-20%);
     transform: translateY(-20%);
     @include font-size(20px);
-    line-height: 20px;
+    line-height: 1.2;
     text-transform: uppercase;
-    margin: 0 25%;
+    margin: 0 5%;
     @include breakpoint($desktop) {
       @include font-size(40px);
-      line-height: 50px;
       margin: 0 15%;
+    }
+    @media (min-width: $breakpoint) and (max-width: $desktop) {
+      margin: 0 25%;
     }
   }
   .description {
@@ -131,8 +133,23 @@
   }
 }
 
+@media all and (max-width: $breakpoint) {
+  .views-slideshow-cycle-main-frame-row img {
+    width: auto;
+    height: 315px;
+    position: relative;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    left: 50%;
+  }
+}
+
 #block-views-front-page-slideshow-block {
   margin: -20px -200px 0;
+  @media all and (max-width: $breakpoint) {
+    margin: -20px 0 0;
+  }
 }
 
 #block-amani-global-behind-front-blocks-image {
