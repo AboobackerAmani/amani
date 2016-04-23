@@ -1933,12 +1933,9 @@ footer .field-label {
   /* line 243, ../sass/components/_footer.scss */
   #footer div[id*="block-menu-menu-social-media"] ul.menu li {
     display: inline-block;
-    text-align: right;
+    text-align: left;
+    width: 85px;
     margin: 0;
-  }
-  /* line 247, ../sass/components/_footer.scss */
-  #footer div[id*="block-menu-menu-social-media"] ul.menu li.social-media-twitter {
-    margin: 0 0 0 30px;
   }
 }
 /* line 254, ../sass/components/_footer.scss */
@@ -1984,14 +1981,6 @@ footer .field-label {
     text-align: center;
     margin-bottom: 20px;
   }
-  /* line 295, ../sass/components/_footer.scss */
-  #footer div[id*="block-menu-menu-social-media"] ul.menu li.social-media-twitter {
-    margin: 0 0 0 25px;
-  }
-  /* line 298, ../sass/components/_footer.scss */
-  #footer div[id*="block-menu-menu-social-media"] ul.menu li.social-media-facebook {
-    margin-left: -7px;
-  }
   /* line 302, ../sass/components/_footer.scss */
   #footer .block-bean {
     margin-left: 15px;
@@ -2026,6 +2015,14 @@ footer .field-label {
   height: 20%;
 }
 
+@media (min-width: 768px) {
+  /* line 335, ../sass/components/_footer.scss */
+  #footer div[id*="block-menu-menu-social-media"] ul.menu {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+}
 /**
  * @file
  * Style for front page blocks.
