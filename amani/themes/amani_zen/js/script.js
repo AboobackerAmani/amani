@@ -24,6 +24,18 @@ Drupal.behaviors.my_custom_behavior = {
 
   }
 };
+
+Drupal.behaviors.our_compact_view_behavior = {
+  attach: function(context, settings) {
+
+    // Place your code here.
+    $('.section-resource-theme .view-content').masonry({
+      itemSelector: '.views-row'
+    });
+
+  }
+};
+
 Drupal.behaviors.toggleMapFilters = {
   attach: function(context, settings) {
 	  
@@ -288,37 +300,23 @@ Drupal.behaviors.toggleTeamFilters = {
       })
     }
   };
-
-  //Mobile nav
-  Drupal.behaviors.mobileNav = {
+  
+  //Social media icons list on nav
+  Drupal.behaviors.mediaNav = {
     attach: function(context, settings) {
 
-      var nb = $('#mobile-toggle');
-      var n = $('#block-menu-menu-amani-main-menu');
-
-      $(window).resize(function(){
-
-        if($(this).width() < 768 && n.hasClass('keep-nav-closed')) {
-          // if the nav menu and nav button are both visible,
-          // then the responsive nav transitioned from open to non-responsive, then back again.
-          // re-hide the nav menu and remove the hidden class
-          $('#block-menu-menu-amani-main-menu').hide().removeAttr('class');
-        }
-        if(nb.is(':hidden') && n.is(':hidden') && $(window).width() > 767) {
-          // if the navigation menu and nav button are both hidden,
-          // then the responsive nav is closed and the window resized larger than 767.
-          // just display the nav menu which will auto-hide at <768 width.
-          $('#block-menu-menu-amani-main-menu').show().addClass('keep-nav-closed');
-        }
+      var sm = $('#block-menu-menu-social-media');
+      var count = $('#block-menu-menu-social-media ul.menu>li').length;
+      
+      if (count>4) {
+        sm.append('<div id="arrowicon"></div>');
+      }
+    
+    //arrow toggle for social icons
+      $("#arrowicon").click(function() {
+        sm > $('ul.menu').toggleClass('expand');
+        $('#arrowicon').toggleClass('arrow-up');
       });
-
-      //slide toggle for mobile menu
-      $("#block-menu-menu-amani-main-menu").once('mobileNav', function() {
-        $("#mobile-toggle").click(function() {
-          $(this).toggleClass('expand');
-          $("#block-menu-menu-amani-main-menu").slideToggle('slow');
-        });
-      })
     }
   };
 
