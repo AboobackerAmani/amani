@@ -12,7 +12,7 @@
   z-index: 999;
   
   
-  @media all and (min-width: $breakpoint) and (max-width: $max-width) {
+  @media all and (min-width: 769px) and (max-width: $max-width) {
     padding: 0 15px;
   }
   .block-title { display: none; }
@@ -134,7 +134,7 @@
 
 
 //screen bigger than 768px
-@media all and (min-width: $breakpoint) {
+@media all and (min-width: 769px) {
   .region-header { 
     //padding: 0 10px;
   }
@@ -227,8 +227,7 @@
   border: 2px solid white;
   position: absolute !important;
   top: 9px;
-  right: 92px;
-  right: 238px;
+  right: 184px;
   width: 32px;
   height: 32px;
   -webkit-transition: width 0.4s ease-in-out;
@@ -244,6 +243,13 @@
   
     left: 15px;
     //left: 0;
+  }
+  
+  @media (max-width:$breakpoint) {
+    right: 142px;
+  }
+  @media (min-width: $breakpoint) and (max-width: 980px) {
+    right: 70px;
   }
 
   &:hover {
