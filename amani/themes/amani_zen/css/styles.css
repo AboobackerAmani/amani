@@ -2672,7 +2672,7 @@ footer .field-label {
 }
 /* line 536, ../sass/components/_front-page-blocks.scss */
 .content_bottom .jcarousel-skin-default .jcarousel-next-horizontal {
-  right: 3px;
+  right: 4px;
 }
 /* line 539, ../sass/components/_front-page-blocks.scss */
 .content_bottom .jcarousel-skin-default .jcarousel-prev-horizontal {
@@ -3421,12 +3421,16 @@ footer .field-label {
   margin-bottom: 20px;
   padding-bottom: 5px;
 }
+/* line 288, ../sass/components/_map_page.scss */
+.node-incident-report .field-name-field-incident-geolocation img {
+  max-width: initial;
+}
 
-/* line 291, ../sass/components/_map_page.scss */
+/* line 295, ../sass/components/_map_page.scss */
 #block-bean-amani-add-map-record {
   position: relative;
 }
-/* line 294, ../sass/components/_map_page.scss */
+/* line 298, ../sass/components/_map_page.scss */
 #block-bean-amani-add-map-record a.button {
   font-family: "Open Sans Condensed",sans-serif;
   background: #ce9bc0;
@@ -3446,11 +3450,11 @@ footer .field-label {
   left: 20px;
   top: -220px;
 }
-/* line 303, ../sass/components/_map_page.scss */
+/* line 307, ../sass/components/_map_page.scss */
 #block-bean-amani-add-map-record a.button:hover {
   background-color: #ce9bc0;
 }
-/* line 308, ../sass/components/_map_page.scss */
+/* line 312, ../sass/components/_map_page.scss */
 #block-bean-amani-add-map-record a.button:before {
   content: "+";
   font-size: 20px;
@@ -3458,7 +3462,7 @@ footer .field-label {
   margin-right: 10px;
 }
 
-/* line 315, ../sass/components/_map_page.scss */
+/* line 319, ../sass/components/_map_page.scss */
 .custom-mobile-filter {
   color: #513e79;
   border-radius: 4px;
@@ -3473,13 +3477,13 @@ footer .field-label {
   cursor: pointer;
 }
 
-/* line 328, ../sass/components/_map_page.scss */
+/* line 332, ../sass/components/_map_page.scss */
 .filter-header {
   position: relative;
   background: white;
   border-bottom: 1px solid #ccc;
 }
-/* line 332, ../sass/components/_map_page.scss */
+/* line 336, ../sass/components/_map_page.scss */
 .filter-header:before {
   content: "+";
   font-weight: 700;
@@ -3493,7 +3497,7 @@ footer .field-label {
   right: 11px;
   top: 11px;
 }
-/* line 345, ../sass/components/_map_page.scss */
+/* line 349, ../sass/components/_map_page.scss */
 .filter-header h2 {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 28px;
@@ -3507,26 +3511,26 @@ footer .field-label {
   font-weight: 100;
 }
 
-/* line 360, ../sass/components/_map_page.scss */
+/* line 364, ../sass/components/_map_page.scss */
 .expanded.filter-header:before {
   content: "-";
 }
 
-/* line 367, ../sass/components/_map_page.scss */
+/* line 371, ../sass/components/_map_page.scss */
 .node-incident-report.node-teaser {
   border: none;
   padding-top: 0;
 }
-/* line 370, ../sass/components/_map_page.scss */
+/* line 374, ../sass/components/_map_page.scss */
 .node-incident-report.node-teaser h2 {
   line-height: 1.2;
   margin-bottom: 0.5em;
 }
-/* line 374, ../sass/components/_map_page.scss */
+/* line 378, ../sass/components/_map_page.scss */
 .node-incident-report.node-teaser .field-name-field-description {
   margin: 0 0 15px;
 }
-/* line 377, ../sass/components/_map_page.scss */
+/* line 381, ../sass/components/_map_page.scss */
 .node-incident-report.node-teaser .node-readmore {
   padding-top: 0.75em;
 }
