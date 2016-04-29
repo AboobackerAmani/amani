@@ -423,7 +423,6 @@ function amani_global_user_default_permissions() {
     'name' => 'administer blocks',
     'roles' => array(
       0 => 'administrator',
-      1 => 'amani administrator',
     ),
     'module' => 'block',
   );
@@ -1025,11 +1024,22 @@ function amani_global_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: configure all blocks.
+  $permissions['configure all blocks'] = array(
+    'name' => 'configure all blocks',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'amani administrator',
+    ),
+    'module' => 'block_access',
+  );
+
   // Exported permission: context ajax block access.
   $permissions['context ajax block access'] = array(
     'name' => 'context ajax block access',
     'roles' => array(
       0 => 'administrator',
+      1 => 'amani administrator',
     ),
     'module' => 'context_ui',
   );
