@@ -121,15 +121,15 @@ function amani_global_context_default_contexts() {
           'region' => 'footer',
           'weight' => '-8',
         ),
-        'bean-project-by-pg' => array(
+        'bean-img1' => array(
           'module' => 'bean',
-          'delta' => 'project-by-pg',
+          'delta' => 'img1',
           'region' => 'footer',
           'weight' => '-7',
         ),
-        'bean-powered-by-amani' => array(
+        'bean-img2' => array(
           'module' => 'bean',
-          'delta' => 'powered-by-amani',
+          'delta' => 'img2',
           'region' => 'footer',
           'weight' => '-6',
         ),
