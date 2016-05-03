@@ -186,13 +186,13 @@
 
 //Team node page
 .node-team {
-  border-top: 3px solid $purple-primary;
-  padding-top: 20px;
+  border-top: 2px solid $purple-primary;
+  padding-top: 25px;
   
   .field-name-field-team-image {
     display: block;
     margin-right: 0;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     float: none;
     
     img {width: 100%;}
@@ -208,10 +208,10 @@
   
   .field-group-format  {
     margin-left: 0;
-    
-    @include breakpoint($breakpoint) {
-      margin-left: 250px;
-    }
+       //  
+       // @include breakpoint($breakpoint) {
+       //   margin-left: 250px;
+       // }
   }
   
   .field-name-field-name {
@@ -224,12 +224,17 @@
     font-family: $open-sans-condensed;
     font-style: italic;
     color: $silver-chalice-2;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     display: inline-block;
     margin-top: 5px;
   }
   .field-name-field-team-member-type {
     display: inline-block;
+  }
+  .field-name-field-team-member-type a {
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 20px;
   }
   .field-name-field-team-title {
     font-style: normal;
@@ -278,34 +283,63 @@
   }
 }
 
-.team-content-container2 { 
+.team-content-container { 
   clear: left;
   float: left;
   width: 100%;
 }
 
-.team-content-container1 { 
-  float: left;
-  width: 100%;
-  position: relative;
-  right: 50%;
-}
-
 .team-content-image {
   float: left;
-  width: 20%;
-  position: relative;
-  left: 52%;
+  width: 100%; 
+  @include breakpoint($breakpoint) {
+    width: 25%;
+  }
+  @media (min-width: $breakpoint) and (max-width: 860px) {
+    width: 32%
+  }
+  @media (min-width: 861px) and (max-width: 1023px) {
+    width: 28%
+  }
 }
 
 .team-content-content {
   float: left;
-  width: 80%;
-  position: relative;
-  left: 52%;
+  width: 100%;
+  @include breakpoint($breakpoint) {
+    width: 75%;
+  }
+  @media (min-width: $breakpoint) and (max-width: 860px) {
+    width: 68%
+  }
+  @media (min-width: 861px) and (max-width: 1023px) {
+   width: 72%
+  }
 }
 
 .back-to-team {
-  border-style: solid;
-  border-top: thick double #ce9bc0;
+  border-top: solid 3px $purple-primary;
+  padding-top: 25px;
+  clear: both;
+  
+  a {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 18px;
+    color: $purple-primary;
+    outline: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+    
+    &:before {
+      font-family: 'amani-icons';
+      content: "\f104";
+      font-size: 22px;
+      color: $purple-primary;
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+  }
 }
