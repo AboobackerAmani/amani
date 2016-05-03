@@ -102,19 +102,16 @@
       hide($content['comments']);
       hide($content['links']);
       ?>
-      <div class="team-content-container2">
-        <div class="team-content-container1">
-          <div class="team-content-image">
-            <?php print render($content['field_team_image']); ?>
-          </div>
-          <div class="team-content-content">
-            <?php print render($content); ?>
-          </div>
-        </div>
-      </div>
+     <div class="team-content-container">
+       <div class="team-content-image">
+         <?php print render($content['field_team_image']); ?>
+       </div>
+       <div class="team-content-content">
+         <?php print render($content); ?>
+       </div>
+     </div>
   </div>
 
-  <hr class="bottom-hr">
   <div class="back-to-team">
       <?php print $back_to_team; ?>
   </div>
