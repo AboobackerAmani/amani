@@ -80,6 +80,9 @@ function amani_administrator_create_menu_links($menu_machine_name) {
     case 'menu-donate':
       $default_links = amani_administrator_get_donate_menu_links();
       break;
+    case 'menu-configure-footer-links':
+      $default_links = amani_administrator_get_footer_links();
+      break;
     default: return;
   }
   $current_menu_links = array();
@@ -110,19 +113,29 @@ function amani_administrator_create_menu_links($menu_machine_name) {
 function amani_administrator_get_media_links() {
   if (module_exists('amani_social_media')) {
     return array(
-      'Twitter' => 'http://twitter.com',
-      'Facebook' => 'http://facebook.com',
-      'LinkedIn' => 'http://linkedin.com',
-      'Pinterest' => 'http://pinterest.com',
-      'Rss' => 'http://google.com',
-      'Vimeo' => 'http://vimeo.com',
-      'YouTube' => 'http://youtube.com',
-      'Google+' => 'https://plus.google.com',
+      'Twitter' => array('path' => 'http://twitter.com', 'weight' => '0'),
+      'Facebook' => array('path' => 'http://facebook.com', 'weight' => '1'),
+      'LinkedIn' => array('path' => 'http://linkedin.com', 'weight' => '2'),
+      'Pinterest' => array('path' => 'http://pinterest.com', 'weight' => '3'),
+      'Rss' => array('path' => 'http://google.com', 'weight' => '4'),
+      'Vimeo' => array('path' => 'http://vimeo.com', 'weight' => '5'),
+      'YouTube' => array('path' => 'http://youtube.com', 'weight' => '6'),
+      'Google+' => array('path' => 'https://plus.google.com', 'weight' => '7'),
     );
   }
 
   return array();
 }
+
+function amani_administrator_get_footer_links() {
+  return array(
+    'home' => array('path' => '<front>', 'weight' => '0'),
+    'admin' => array('path' => 'amani/content-admin', 'weight' => '1'),
+    'login' => array('path' => 'user/login', 'weight' => '2'),
+    'logout' => array('path' => 'user/logout', 'weight' => '3'),
+  );
+}
+
 
 function amani_administrator_get_main_menu_links() {
   $links = array();
@@ -167,7 +180,7 @@ function amani_administrator_get_main_menu_links() {
 
 function amani_administrator_get_donate_menu_links() {
   return array(
-    'Donate' => '<front>'
+    'Donate' => array('path' => '<front>', 'weight' => '0'),
   );
 }
 

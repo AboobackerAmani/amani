@@ -841,7 +841,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       drupal_set_message('Menu link paths can now be configured ' . l('here', 'admin/structure/menu/manage/menu-amani-main-menu'));
       break;
     case 'Reset Default Meta Menu Links':
-      amani_administrator_create_menu_links('menu-meta');
+      amani_administrator_create_menu_links('menu-configure-footer-links');
       drupal_set_message('Menu link paths can now be configured ' . l('here', 'admin/structure/menu/manage/menu-meta'));
       break;
     case 'Configure Social Media Icons':
