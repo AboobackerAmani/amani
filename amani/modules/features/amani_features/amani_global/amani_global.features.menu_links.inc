@@ -101,10 +101,10 @@ function amani_global_menu_default_menu_links() {
     'weight' => '-46',
   );
   // Exported menu link: menu-configure-footer-links:admin/configure-amani
-  $menu_links['menu-configure-footer-links:admin/configure-amani'] = array(
+  $menu_links['menu-configure-footer-links:amani/content-admin'] = array(
     'menu_name' => 'menu-configure-footer-links',
-    'link_path' => 'admin/configure-amani',
-    'router_path' => 'admin/configure-amani',
+    'link_path' => 'amani/content-admin',
+    'router_path' => 'amani/content-admin',
     'link_title' => 'Admin',
     'options' => array(
       'attributes' => array(
