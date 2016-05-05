@@ -80,9 +80,6 @@ function amani_administrator_create_menu_links($menu_machine_name) {
     case 'menu-donate':
       $default_links = amani_administrator_get_donate_menu_links();
       break;
-    case 'menu-configure-footer-links':
-      $default_links = amani_administrator_get_footer_links();
-      break;
     default: return;
   }
   $current_menu_links = array();
@@ -126,16 +123,6 @@ function amani_administrator_get_media_links() {
 
   return array();
 }
-
-function amani_administrator_get_footer_links() {
-  return array(
-    'home' => array('path' => '<front>', 'weight' => '0'),
-    'admin' => array('path' => 'amani/content-admin', 'weight' => '1'),
-    'login' => array('path' => 'user/login', 'weight' => '2'),
-    'logout' => array('path' => 'user/logout', 'weight' => '3'),
-  );
-}
-
 
 function amani_administrator_get_main_menu_links() {
   $links = array();

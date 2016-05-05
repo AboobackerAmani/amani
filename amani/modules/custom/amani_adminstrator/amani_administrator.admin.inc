@@ -126,39 +126,6 @@ function amani_administrator_configure_amani_form() {
     </div>',
   );
 
-  $form['meta_menu'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Manage Secondary Menu'),
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-
-  $form['meta_menu'][] = array(
-    '#type' => 'button',
-    '#value' => t('Reset Default Secondary Menu Links'),
-    '#attributes' => array('onclick' => 'if(!confirm("Are you sure?")){return false;}'),
-    '#executes_submit_callback' => TRUE,
-    '#prefix' => $prefix,
-    '#suffix' => '<p>This action builds the default meta menu (home, admin, login/logout) located below the top right search.
-      It will not enable or remove any existing links.</p></div>',
-  );
-
-  $form['meta_menu'][] = array(
-    '#type' => 'button',
-    '#value' => t('Configure Secondary Menu Links'),
-    '#executes_submit_callback' => TRUE,
-    '#prefix' => $prefix,
-    '#suffix' =>
-    '<p>This action allows users to:
-      <ul style="margin-left:20px">
-        <li>Enable, disable or delete any menu links</li>
-        <li>Set menu links </li>
-        <li>Establish menu ordering and manage sub-menus</li>
-      </ul>
-     </p>
-    </div>',
-  );
-
   $form['donate_menu'] = array(
     '#type' => 'fieldset',
     '#title' => t('Manage Floating Button'),
@@ -840,18 +807,11 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       amani_administrator_create_menu_links('menu-amani-main-menu');
       drupal_set_message('Menu link paths can now be configured ' . l('here', 'admin/structure/menu/manage/menu-amani-main-menu'));
       break;
-    case 'Reset Default Meta Menu Links':
-      amani_administrator_create_menu_links('menu-configure-footer-links');
-      drupal_set_message('Menu link paths can now be configured ' . l('here', 'admin/structure/menu/manage/menu-meta'));
-      break;
     case 'Configure Social Media Icons':
       drupal_goto('admin/structure/menu/manage/menu-social-media');
       break;
     case 'Configure Main Menu Links':
       drupal_goto('admin/structure/menu/manage/menu-amani-main-menu');
-      break;
-    case 'Configure Meta Menu Links':
-      drupal_goto('admin/structure/menu/manage/menu-meta');
       break;
     case 'Configure Floating Button':
       drupal_goto('admin/structure/menu/manage/menu-donate');
