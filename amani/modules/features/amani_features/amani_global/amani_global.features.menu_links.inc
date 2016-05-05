@@ -100,44 +100,6 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-46',
   );
-  // Exported menu link: menu-configure-footer-links:<front>
-  $menu_links['menu-configure-footer-links:<front>'] = array(
-    'menu_name' => 'menu-configure-footer-links',
-    'link_path' => '<front>',
-    'router_path' => '',
-    'link_title' => 'Home',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '1',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-50',
-  );
-  // Exported menu link: menu-configure-footer-links:about
-  $menu_links['menu-configure-footer-links:about'] = array(
-    'menu_name' => 'menu-configure-footer-links',
-    'link_path' => 'about',
-    'router_path' => 'about',
-    'link_title' => 'About',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '1',
-    'expanded' => '1',
-    'weight' => '-49',
-  );
   // Exported menu link: menu-configure-footer-links:admin/configure-amani
   $menu_links['menu-configure-footer-links:admin/configure-amani'] = array(
     'menu_name' => 'menu-configure-footer-links',
@@ -156,199 +118,6 @@ function amani_global_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-41',
-  );
-  // Exported menu link: menu-configure-footer-links:blog
-  $menu_links['menu-configure-footer-links:blog'] = array(
-    'menu_name' => 'menu-configure-footer-links',
-    'link_path' => 'blog',
-    'router_path' => 'blog',
-    'link_title' => 'Blog',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '0',
-    'parent_path' => 'news-and-events',
-  );
-  // Exported menu link: menu-configure-footer-links:contact
-  $menu_links['menu-configure-footer-links:contact'] = array(
-    'menu_name' => 'menu-configure-footer-links',
-    'link_path' => 'contact',
-    'router_path' => 'contact',
-    'link_title' => 'Contact',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-44',
-  );
-  // Exported menu link: menu-configure-footer-links:gallery
-  $menu_links['menu-configure-footer-links:gallery'] = array(
-    'menu_name' => 'menu-configure-footer-links',
-    'link_path' => 'gallery',
-    'router_path' => 'gallery',
-    'link_title' => 'Image Gallery',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-49',
-    'parent_path' => 'about',
-  );
-  // Exported menu link: menu-configure-footer-links:get-involved
-  $menu_links['menu-configure-footer-links:get-involved'] = array(
-    'menu_name' => 'menu-configure-footer-links',
-    'link_path' => 'get-involved',
-    'router_path' => 'get-involved',
-    'link_title' => 'Get Involved',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '1',
-    'weight' => '-47',
-  );
-  // Exported menu link: menu-configure-footer-links:incident-reports
-  $menu_links['menu-configure-footer-links:incident-reports'] = array(
-    'menu_name' => 'menu-configure-footer-links',
-    'link_path' => 'incident-reports',
-    'router_path' => 'incident-reports',
-    'link_title' => 'Map',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '0',
-    'parent_path' => 'resources',
-  );
-  // Exported menu link: menu-configure-footer-links:news-and-events
-  $menu_links['menu-configure-footer-links:news-and-events'] = array(
-    'menu_name' => 'menu-configure-footer-links',
-    'link_path' => 'news-and-events',
-    'router_path' => 'news-and-events',
-    'link_title' => 'News & Events',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '1',
-    'expanded' => '1',
-    'weight' => '-45',
-  );
-  // Exported menu link: menu-configure-footer-links:partners
-  $menu_links['menu-configure-footer-links:partners'] = array(
-    'menu_name' => 'menu-configure-footer-links',
-    'link_path' => 'partners',
-    'router_path' => 'partners',
-    'link_title' => 'Partners',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-48',
-    'parent_path' => 'about',
-  );
-  // Exported menu link: menu-configure-footer-links:programs
-  $menu_links['menu-configure-footer-links:programs'] = array(
-    'menu_name' => 'menu-configure-footer-links',
-    'link_path' => 'programs',
-    'router_path' => 'programs',
-    'link_title' => 'Programs',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '1',
-    'weight' => '-48',
-  );
-  // Exported menu link: menu-configure-footer-links:resources
-  $menu_links['menu-configure-footer-links:resources'] = array(
-    'menu_name' => 'menu-configure-footer-links',
-    'link_path' => 'resources',
-    'router_path' => 'resources',
-    'link_title' => 'Resources',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '1',
-    'expanded' => '1',
-    'weight' => '-46',
-  );
-  // Exported menu link: menu-configure-footer-links:team
-  $menu_links['menu-configure-footer-links:team'] = array(
-    'menu_name' => 'menu-configure-footer-links',
-    'link_path' => 'team',
-    'router_path' => 'team',
-    'link_title' => 'Team',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-50',
-    'parent_path' => 'about',
   );
   // Exported menu link: menu-configure-footer-links:user
   $menu_links['menu-configure-footer-links:user'] = array(
@@ -390,26 +159,14 @@ function amani_global_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('About');
   t('Admin');
-  t('Blog');
   t('Configure Amani');
   t('Configure Main Menu Links');
-  t('Contact');
-  t('Get Involved');
-  t('Home');
-  t('Image Gallery');
   t('Login');
   t('Logout');
   t('Manage drop down lists');
   t('Manage users');
-  t('Map');
   t('My account');
-  t('News & Events');
-  t('Partners');
-  t('Programs');
-  t('Resources');
-  t('Team');
 
 
   return $menu_links;
