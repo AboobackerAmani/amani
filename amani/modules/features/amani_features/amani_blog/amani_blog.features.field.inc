@@ -52,7 +52,7 @@ function amani_blog_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '1',
+          'weight' => '3',
         ),
         'ical' => array(
           'label' => 'above',
@@ -145,7 +145,7 @@ function amani_blog_field_default_fields() {
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => '5',
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -217,7 +217,7 @@ function amani_blog_field_default_fields() {
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => '3',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'inline',
@@ -288,7 +288,7 @@ function amani_blog_field_default_fields() {
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => '0',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -317,12 +317,12 @@ function amani_blog_field_default_fields() {
         'module' => 'imagefield_crop',
         'settings' => array(
           'collapsible' => '2',
-          'croparea' => '200x200',
+          'croparea' => '676x500',
           'enforce_minimum' => 1,
           'enforce_ratio' => 1,
-          'preview_image_style' => 'thumbnail',
+          'preview_image_style' => 'node-lead-image',
           'progress_indicator' => 'throbber',
-          'resolution' => '300x225',
+          'resolution' => '676x500',
         ),
         'type' => 'imagefield_crop_widget',
         'weight' => '2',
@@ -477,7 +477,7 @@ function amani_blog_field_default_fields() {
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => '2',
+          'weight' => '5',
         ),
         'ical' => array(
           'label' => 'above',

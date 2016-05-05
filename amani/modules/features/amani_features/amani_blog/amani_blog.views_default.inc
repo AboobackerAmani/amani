@@ -108,6 +108,12 @@ function amani_blog_views_default_views() {
   $handler->display->display_options['fields']['created']['field'] = 'created';
   $handler->display->display_options['fields']['created']['date_format'] = 'long';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Field: Content: Blog Author */
+  $handler->display->display_options['fields']['field_blog_author']['id'] = 'field_blog_author';
+  $handler->display->display_options['fields']['field_blog_author']['table'] = 'field_data_field_blog_author';
+  $handler->display->display_options['fields']['field_blog_author']['field'] = 'field_blog_author';
+  $handler->display->display_options['fields']['field_blog_author']['label'] = '';
+  $handler->display->display_options['fields']['field_blog_author']['element_label_colon'] = FALSE;
   /* Field: Content: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';

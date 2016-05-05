@@ -88,7 +88,8 @@
       margin-bottom: 20px;
       
        a {
-        @include adjust-font-size-to( $h2-font-size );
+        //@include adjust-font-size-to( $h2-font-size );
+        font-size: 1.3em;
         line-height: 1.2;
       }
     }
