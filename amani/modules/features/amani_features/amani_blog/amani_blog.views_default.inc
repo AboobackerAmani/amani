@@ -102,12 +102,21 @@ function amani_blog_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Post date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['date_format'] = 'long';
-  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Field: Content: Date */
+  $handler->display->display_options['fields']['field_blog_date']['id'] = 'field_blog_date';
+  $handler->display->display_options['fields']['field_blog_date']['table'] = 'field_data_field_blog_date';
+  $handler->display->display_options['fields']['field_blog_date']['field'] = 'field_blog_date';
+  $handler->display->display_options['fields']['field_blog_date']['label'] = '';
+  $handler->display->display_options['fields']['field_blog_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_blog_date']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+    'show_repeat_rule' => 'show',
+  );
   /* Field: Content: Blog Author */
   $handler->display->display_options['fields']['field_blog_author']['id'] = 'field_blog_author';
   $handler->display->display_options['fields']['field_blog_author']['table'] = 'field_data_field_blog_author';
@@ -284,7 +293,6 @@ function amani_blog_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
-    t('Post date'),
     t('Read More'),
     t('Tags'),
     t('Block'),

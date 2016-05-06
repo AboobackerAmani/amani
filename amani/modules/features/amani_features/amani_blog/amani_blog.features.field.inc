@@ -52,7 +52,7 @@ function amani_blog_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '3',
+          'weight' => '6',
         ),
         'ical' => array(
           'label' => 'above',
@@ -93,7 +93,7 @@ function amani_blog_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '4',
+        'weight' => '5',
       ),
       'widget_type' => 'text_textarea_with_summary',
     ),
@@ -141,11 +141,11 @@ function amani_blog_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => '0',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -167,6 +167,94 @@ function amani_blog_field_default_fields() {
         'settings' => array(),
         'type' => 'options_select',
         'weight' => '10',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-blog-field_blog_date'.
+  $fields['node-blog-field_blog_date'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_blog_date',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'date',
+      'settings' => array(
+        'cache_count' => '4',
+        'cache_enabled' => 0,
+        'granularity' => array(
+          'day' => 'day',
+          'hour' => 0,
+          'minute' => 0,
+          'month' => 'month',
+          'second' => 0,
+          'year' => 'year',
+        ),
+        'repeat' => '0',
+        'timezone_db' => '',
+        'todate' => '',
+        'tz_handling' => 'none',
+      ),
+      'translatable' => '0',
+      'type' => 'datetime',
+    ),
+    'field_instance' => array(
+      'bundle' => 'blog',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'date',
+          'settings' => array(
+            'format_type' => 'long',
+            'fromto' => 'both',
+            'multiple_from' => '',
+            'multiple_number' => '',
+            'multiple_to' => '',
+            'show_remaining_days' => FALSE,
+            'show_repeat_rule' => 'show',
+          ),
+          'type' => 'date_default',
+          'weight' => '0',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_blog_date',
+      'label' => 'Date',
+      'required' => 0,
+      'settings' => array(
+        'default_value' => 'now',
+        'default_value2' => 'same',
+        'default_value_code' => '',
+        'default_value_code2' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'date',
+        'settings' => array(
+          'increment' => '15',
+          'input_format' => 'm/d/Y - H:i:s',
+          'input_format_custom' => '',
+          'label_position' => 'above',
+          'no_fieldset' => 0,
+          'repeat_collapsed' => 0,
+          'text_parts' => array(),
+          'year_range' => '-3:+3',
+        ),
+        'type' => 'date_popup',
+        'weight' => '1',
       ),
     ),
   );
@@ -213,11 +301,11 @@ function amani_blog_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'inline',
+          'label' => 'hidden',
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => '1',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'inline',
@@ -288,7 +376,7 @@ function amani_blog_field_default_fields() {
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => '2',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -325,7 +413,7 @@ function amani_blog_field_default_fields() {
           'resolution' => '676x500',
         ),
         'type' => 'imagefield_crop_widget',
-        'weight' => '2',
+        'weight' => '3',
       ),
     ),
   );
@@ -374,7 +462,7 @@ function amani_blog_field_default_fields() {
             'file_view_mode' => 'default',
           ),
           'type' => 'file_rendered',
-          'weight' => '4',
+          'weight' => '7',
         ),
         'ical' => array(
           'label' => 'above',
@@ -426,7 +514,7 @@ function amani_blog_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
@@ -473,11 +561,11 @@ function amani_blog_field_default_fields() {
       'description' => 'Enter a comma-separated list of words to describe your content.',
       'display' => array(
         'default' => array(
-          'label' => 'inline',
+          'label' => 'hidden',
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => '5',
+          'weight' => '4',
         ),
         'ical' => array(
           'label' => 'above',
@@ -516,6 +604,7 @@ function amani_blog_field_default_fields() {
   t('Blog Author');
   t('Body');
   t('Categories');
+  t('Date');
   t('Enter a comma-separated list of words to describe your content.');
   t('Lead Image');
   t('Media');
