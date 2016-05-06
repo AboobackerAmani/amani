@@ -2,8 +2,8 @@
   Events and News Landing page, node page
 */
 
-
-.page-news-and-events {
+.page-news-and-events,
+.node-type-event {
   #content {
     width: 100%;
     margin: 0;
@@ -100,7 +100,7 @@
   }
   
   
-  //Event Calendar block on tight sidebar
+  //Event Calendar block on right sidebar
   #block-views-calendar-of-events-block-3 {
     background: none;
     padding: 0;
@@ -134,7 +134,8 @@
 
 
 //Event List block on right sidebar
-.page-news-and-events .block-views {
+.page-news-and-events .block-views,
+.node-type-event #block-views-calendar-of-events-list {
   background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
   padding: 16px;
   margin: 0 0 30px 0;
@@ -163,10 +164,10 @@
 }
 
 .view-calendar-of-events {
-  .view-footer .all-events {
+  .view-footer .all-events,
+  .more-link {
     text-align: center;
     border: 1px solid white;
-    padding: 5px 10px;
     a {
       font-family: "Open Sans Condensed",sans-serif;
       @include adjust-font-size-to( $h3-font-size );
@@ -220,30 +221,48 @@
       &.views-field-title {
         margin-bottom: 10px;
         a {
+          font-family: $open-sans-condensed;
           color: $purple-primary;
+          font-size: 18px;
+          &:after {
+            content: "\f101";
+            font-family: amani-icons;
+            font-size: 16px;
+            font-weight: normal;
+            display: inline-block;
+            color: $white;
+            margin-left: 5px;
+            position: relative;
+            top: 2px;
+          }
         }
       }
     }
     td.views-field-title .title {
       color: $purple-primary;
+      font-size: 18px;
       text-transform: none;
       display: inline-block;
-      &:after {
-        content: "\f101";
-        font-family: amani-icons;
-        font-size: 16px;
-        font-weight: normal;
-        display: inline-block;
-        color: $white;
-        margin-left: 5px;
-        position: relative;
-        top: 2px;
-      }
     }   
   } 
+  
+  .date-display-range {
+    display: none;
+    
+    &:first-child {
+      display: block;
+    }
+    &:last-child {
+      display: block;
+    }
+  }
+  
+  .calendar-calendar .multi-day {
+    display: none;
+  }
 }
 
-//Node page
+//News Node Page
 .section-news {
   .article-title-wrapper,
   #content {
@@ -453,4 +472,133 @@ a.permalink {
 
 .page-news-and-events .region-content-bottom .block-views {
   background: white;
+}
+
+//Event Node Page
+
+.node-type-event {
+  .node-by-viewer {
+    .field {
+      background-color: #f1f1f1;
+      padding: 0 25px 20px 55px;
+      margin-right: 0;
+      @include breakpoint($breakpoint) {
+        margin-right: 10px;
+      }
+      
+      &.field-name-field-event-date {
+        padding-top: 30px;
+        
+        .date-repeat-rule {
+          margin-bottom: 10px;
+        }
+        .date-display-start {
+          margin-bottom: 5px;
+        }
+      }
+      &.field-name-field-event-type {
+        a {
+          color: $purple-alt;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      &.field-name-field-image {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 20px;
+      }
+      &.field-name-field-additional-information {
+        padding-bottom: 30px;
+        border-bottom: solid 2px $grey-clear;
+      }
+      &.field-name-body {
+        background-color: transparent;
+        padding: 0;
+        margin-top: 30px;
+        
+        .field-label {display: none;}
+      }
+      &.field-name-field-media {
+        background-color: transparent;
+        padding: 0;
+        margin-top: 30px;
+        margin-right: 0;
+        
+        .field-items {
+          margin: 0 auto;
+          @include breakpoint($breakpoint) {
+            margin: 0;
+          }
+        }
+        
+        .field-item {
+          padding: 10px;
+          margin: 0 10px 15px 0;
+          border: 1px solid #ccc;
+          display: block;
+          width: 220px;
+          box-sizing: content-box;
+          
+          img {vertical-align: bottom;}
+          
+          @include breakpoint($breakpoint) {
+            display: inline-block;
+            width: 195px;
+          }
+        }
+      }
+      
+      .field-label {
+        font-family: $open-sans-condensed;
+        color: $purple-primary;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 5px;
+      }
+    }
+    
+   .field-name-field-event-date .field-label:before,
+   .field-name-field-event-type .field-label:before,
+   .field-name-field-contact .field-label:before,
+   .field-name-field-host-name .field-label:before,
+   .field-name-field-event-address .field-label:before,
+   .field-name-field-event-map-record .field-label:before,
+   .field-name-field-additional-information .field-label:before {
+     font-family: amani-icons;
+     content: "\f017";
+     font-size: 20px;
+     color: $purple-primary;
+     display: inline-block;
+     width: 20px;
+     height: 20px;
+     margin-left: -26px;
+     margin-right: 6px;
+     vertical-align: bottom;
+     font-weight: normal;
+   }
+   .field-name-field-event-type .field-label:before {
+     content: "\e893";
+     font-size: 22px;
+    }
+    .field-name-field-contact .field-label:before {
+      content: "\f095";
+    }
+   .field-name-field-host-name .field-label:before {
+     content: "\f007";
+   }
+   .field-name-field-event-address .field-label:before {
+     content: "\f041";
+     font-size: 22px;
+    }
+    .field-name-field-event-map-record .field-label:before {
+      content: "\e80b";
+    }
+    .field-name-field-additional-information .field-label:before {
+      content: "\f05a";
+    }
+  }
 }
