@@ -247,6 +247,11 @@
     }   
   } 
   
+  .date-display-single {
+    display: block;
+    clear: both;
+    width: 100%;
+  }
   .date-display-range {
     display: none;
     
@@ -324,6 +329,47 @@
   .field-name-field-article-date .date-display-single{
     text-transform: uppercase;
     font-style: italic;
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .field-name-field-article-author a {
+    font-style: italic;
+    float: left;
+    margin-right: 10px;
+    color: $grey-dark;
+    
+    &:before {
+      content: "by";
+      font-family: "Open Sans Condensed", sans-serif;
+      font-style: italic;
+      letter-spacing: 1px;
+      color: #333;
+      margin-right: 5px;
+    }
+  }
+  
+  .group-tags-type{
+    float: right;
+    text-align: right;
+    a {color: #513e79;}
+  }
+  
+  .field-name-field-article-type {
+    width: 100%;
+    text-align: right;
+    float: right;
+    display: block;
+    margin-bottom: 10px;
+    
+    .field-label,
+    .field-item {
+      font-family: "Open Sans Condensed", sans-serif;
+      display: inline-block;
+      color: #513e79;
+      margin-left: 10px;
+      a {color: #513e79;}
+    }
   }
 
   .field-name-field-image {
@@ -478,7 +524,7 @@ a.permalink {
 //Event Node Page
 
 .node-type-event {
-  .node-by-viewer {
+  .node-event {
     .field {
       background-color: #f1f1f1;
       padding: 0 25px 20px 55px;
@@ -546,7 +592,7 @@ a.permalink {
         margin-right: 0;
         
         .field-items {
-          margin: 0 auto;
+          margin: 0 auto 20px;
           @include breakpoint($breakpoint) {
             margin: 0;
           }
@@ -554,7 +600,7 @@ a.permalink {
         
         .field-item {
           padding: 10px;
-          margin: 0 10px 15px 0;
+          margin: 0 auto 15px auto;
           border: 1px solid #ccc;
           display: block;
           width: 220px;
@@ -564,6 +610,7 @@ a.permalink {
           
           @include breakpoint($breakpoint) {
             display: inline-block;
+            margin: 0 10px 15px 0;
             width: 195px;
           }
         }
