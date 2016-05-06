@@ -52,7 +52,7 @@ function amani_article_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '2',
+          'weight' => '4',
         ),
         'ical' => array(
           'label' => 'above',
@@ -134,11 +134,11 @@ function amani_article_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => '6',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -293,11 +293,11 @@ function amani_article_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '5',
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -367,7 +367,7 @@ function amani_article_field_default_fields() {
             'image_style' => 'node-lead-image',
           ),
           'type' => 'image',
-          'weight' => '1',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -453,7 +453,7 @@ function amani_article_field_default_fields() {
             'file_view_mode' => 'default',
           ),
           'type' => 'file_rendered',
-          'weight' => '4',
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -546,11 +546,11 @@ function amani_article_field_default_fields() {
       'description' => 'Enter a comma-separated list of words to describe your content.',
       'display' => array(
         'default' => array(
-          'label' => 'inline',
+          'label' => 'hidden',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '3',
+          'weight' => '5',
         ),
         'ical' => array(
           'label' => 'above',

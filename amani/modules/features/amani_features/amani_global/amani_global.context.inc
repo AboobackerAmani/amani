@@ -102,6 +102,7 @@ function amani_global_context_default_contexts() {
     'user' => array(
       'values' => array(
         'administrator' => 'administrator',
+        'amani administrator' => 'amani administrator',
         'anonymous user' => 'anonymous user',
       ),
     ),
@@ -109,11 +110,17 @@ function amani_global_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'menu-menu-amani-main-menu' => array(
+          'module' => 'menu',
+          'delta' => 'menu-amani-main-menu',
+          'region' => 'footer',
+          'weight' => '-10',
+        ),
         'menu-menu-configure-footer-links' => array(
           'module' => 'menu',
           'delta' => 'menu-configure-footer-links',
           'region' => 'footer',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'menu-menu-social-media' => array(
           'module' => 'menu',

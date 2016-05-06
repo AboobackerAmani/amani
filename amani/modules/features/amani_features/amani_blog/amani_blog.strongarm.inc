@@ -105,7 +105,7 @@ function amani_blog_strongarm() {
           'weight' => '6',
         ),
         'language' => array(
-          'weight' => '1',
+          'weight' => '2',
         ),
       ),
       'display' => array(
@@ -115,7 +115,7 @@ function amani_blog_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '0',
+            'weight' => '8',
             'visible' => FALSE,
           ),
         ),

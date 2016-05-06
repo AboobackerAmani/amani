@@ -99,3 +99,87 @@
     }
   }
 }
+
+//Blog node page
+.node-type-blog {
+  #content,
+  .article-title-wrapper {
+    width: 100%;
+    margin: 0;
+    clear: both;
+    @include breakpoint(768px) {
+      @include zen-grid-item(8, 1);
+      padding-right: 15px;
+    }
+  }
+  
+  .article-title {
+    font-family: $open-sans-condensed;
+     @include adjust-font-size-to( $h2-font-size );
+     color: $purple-primary;
+     font-weight: 600;
+     text-transform: uppercase;
+  }
+  
+  .field-name-field-blog-date .field-item {
+    font-family: "Open Sans Condensed", sans-serif;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: #ababab;
+    float: left;
+    margin-right: 20px;
+  }
+  .field-name-field-blog-author {
+    float: left;
+  }
+  
+  .field-name-field-blog-author,
+  .field-name-field-category {
+    .field-label {
+      display: none;
+    }
+    
+    .field-items a {
+      font-family: "Open Sans Condensed", sans-serif;
+      text-transform: uppercase;
+      font-style: italic;
+      letter-spacing: 1px;
+      color: #ababab;
+    }
+  }
+  
+  .field-name-field-blog-author .field-items a:before {
+    content: "by";
+    font-family: "Open Sans Condensed", sans-serif;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: #333;
+    margin-right: 5px;
+  }
+    
+  .field-name-field-category {
+    float: right;
+  }
+
+  .field-name-field-tags {
+    width: 100%;
+    text-align: right;
+    float: right;
+    display: block;
+    
+    .field-label,
+    .field-item {
+      font-family: "Open Sans Condensed", sans-serif;
+      display: inline-block;
+      color: #513e79;
+      margin-left: 10px;
+      a {color: #513e79;}
+    }
+  }
+  
+  .field-name-field-image {
+    padding-top: 10px;
+    clear: both;
+  }
+}

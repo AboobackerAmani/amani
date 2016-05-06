@@ -80,9 +80,6 @@ function amani_administrator_create_menu_links($menu_machine_name) {
     case 'menu-donate':
       $default_links = amani_administrator_get_donate_menu_links();
       break;
-    case 'menu-meta':
-      $default_links = amani_administrator_get_meta_links();
-      break;
     default: return;
   }
   $current_menu_links = array();
@@ -95,9 +92,14 @@ function amani_administrator_create_menu_links($menu_machine_name) {
   foreach (menu_load_links($menu_machine_name) as $link) {
     $current_menu_links[] = $link['link_title'];
   }
-  foreach ($default_links as $title => $path) {
-    if (!in_array($title, $current_menu_links)) {
-      $link = array('link_path' => $path,'link_title' => $title,'menu_name' => $menu_machine_name);
+  foreach ($default_links as $link_title => $link) {
+    if (!in_array($link_title, $current_menu_links)) {
+      $link = array(
+        'link_path' => $link['path'],
+        'weight' => $link['weight'],
+        'link_title' => $link_title,
+        'menu_name' => $menu_machine_name,
+      );
       menu_link_save($link);
     }
   }
@@ -105,26 +107,17 @@ function amani_administrator_create_menu_links($menu_machine_name) {
   menu_cache_clear_all();
 }
 
-function amani_administrator_get_meta_links() {
-  return array(
-    'home' => '<front>',
-    'admin' => 'amani/content-admin',
-    'login' => 'user/login',
-    'logout' => 'user/logout',
-  );
-}
-
 function amani_administrator_get_media_links() {
   if (module_exists('amani_social_media')) {
     return array(
-      'Twitter' => 'http://twitter.com',
-      'Facebook' => 'http://facebook.com',
-      'LinkedIn' => 'http://linkedin.com',
-      'Pinterest' => 'http://pinterest.com',
-      'Rss' => 'http://google.com',
-      'Vimeo' => 'http://vimeo.com',
-      'YouTube' => 'http://youtube.com',
-      'Google+' => 'https://plus.google.com',
+      'Twitter' => array('path' => 'http://twitter.com', 'weight' => '0'),
+      'Facebook' => array('path' => 'http://facebook.com', 'weight' => '1'),
+      'LinkedIn' => array('path' => 'http://linkedin.com', 'weight' => '2'),
+      'Pinterest' => array('path' => 'http://pinterest.com', 'weight' => '3'),
+      'Rss' => array('path' => 'http://google.com', 'weight' => '4'),
+      'Vimeo' => array('path' => 'http://vimeo.com', 'weight' => '5'),
+      'YouTube' => array('path' => 'http://youtube.com', 'weight' => '6'),
+      'Google+' => array('path' => 'https://plus.google.com', 'weight' => '7'),
     );
   }
 
@@ -135,46 +128,46 @@ function amani_administrator_get_main_menu_links() {
   $links = array();
   // Checking if the module exists is not entirely necessary
   // drupal will not create a link to path that doesn't exist.
-  $links['Home'] = '<front>';
+  $links['Home'] = array('path' => '<front>', 'weight' => '-50');
   if (module_exists('amani_about')) {
-    $links['About'] = 'about';
+    $links['About'] = array('path' => 'about', 'weight' => '-49');
   }
   if (module_exists('amani_team')) {
-    $links['Team'] = 'team';
+    $links['Team'] = array('path' => 'team', 'weight' => '-48');
   }
   if (module_exists('amani_media_gallery')) {
-    $links['Image Gallery'] = 'gallery';
+    $links['Image Gallery'] = array('path' => 'gallery', 'weight' => '-47');
   }
   if (module_exists('amani_partners')) {
-    $links['Partners'] = 'partners';
+    $links['Partners'] = array('path' => 'partners', 'weight' => '-46');
   }
   if (module_exists('amani_programs_campaigns')) {
-    $links['Programs'] = 'programs';
+    $links['Programs'] = array('path' => 'programs', 'weight' => '-45');
   }
   if (module_exists('amani_get_involved')) {
-    $links['Get Involved'] = 'get-involved';
+    $links['Get Involved'] = array('path' => 'get-involved', 'weight' => '-44');
   }
   if (module_exists('amani_resource')) {
-    $links['Resources'] = 'resources';
+    $links['Resources'] = array('path' => 'resources', 'weight' => '-43');
   }
   if (module_exists('amani_incident_report')) {
-    $links['Map'] = 'incident-reports';
+    $links['Map'] = array('path' => 'incident-reports', 'weight' => '-42');
   }
   if (module_exists('amani_block_and_views')) {
-    $links['News & Events'] = 'news-and-events';
+    $links['News & Events'] = array('path' => 'news-and-events', 'weight' => '-41');
   }
   if (module_exists('amani_blog')) {
-    $links['Blog'] = 'blog';
+    $links['Blog'] = array('path' => 'blog', 'weight' => '-40');
   }
   if (module_exists('contact')) {
-    $links['Contact'] = 'contact';
+    $links['Contact'] = array('path' => 'contact', 'weight' => '-39');
   }
   return $links;
 }
 
 function amani_administrator_get_donate_menu_links() {
   return array(
-    'Donate' => '<front>'
+    'Donate' => array('path' => '<front>', 'weight' => '0'),
   );
 }
 
@@ -222,11 +215,9 @@ function amani_administrator_configure_comments($comment_en_dis) {
       ))
       ->condition('type', $key)
       ->execute();
-      
     $sql = "UPDATE node_revision nrev
             INNER JOIN node nd ON nrev.nid = nd.nid AND nd.type = :type1
             SET nrev.comment = :type2";
-    
     $args = array(':type1' => $key, ':type2' => $result);
     db_query($sql, $args);
   }
