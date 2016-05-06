@@ -100,7 +100,7 @@ function amani_global_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-46',
   );
-  // Exported menu link: menu-configure-footer-links:admin/configure-amani
+  // Exported menu link: menu-configure-footer-links:amani/content-admin
   $menu_links['menu-configure-footer-links:amani/content-admin'] = array(
     'menu_name' => 'menu-configure-footer-links',
     'link_path' => 'amani/content-admin',
