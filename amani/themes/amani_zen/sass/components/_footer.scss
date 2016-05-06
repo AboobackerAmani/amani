@@ -273,16 +273,16 @@ footer .field-label {
   
   @media all and (max-width: 480px) {
     div[id*="block-menu-menu-amani-main-menu"] {
-      text-align: center;
-      width: 100%;
+      //text-align: center;
+      //width: 100%;
       
       ul.menu {
-        width: 235px;
-        margin: 0 auto !important;
+        width: 230px;
+        //margin: 0 auto !important;
       }
       ul.menu li {
-        margin-right: 10px;
-        margin-left: 25px;
+        //margin-right: 10px;
+        //margin-left: 25px;
         text-align: left;
       }
     }
@@ -337,4 +337,12 @@ footer .field-label {
     -webkit-columns: 2;
     -moz-columns: 2;
   }
+}
+
+//Login and Admin menu
+#block-menu-menu-configure-footer-links {
+   ul.menu li {
+     display: block;
+     float: none;
+   }
 }

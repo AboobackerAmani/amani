@@ -121,6 +121,15 @@
      text-transform: uppercase;
   }
   
+  .field-name-field-blog-date .field-item {
+    font-family: "Open Sans Condensed", sans-serif;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: #ababab;
+    float: left;
+    margin-right: 20px;
+  }
   .field-name-field-blog-author {
     float: left;
   }
@@ -164,6 +173,7 @@
       font-family: "Open Sans Condensed", sans-serif;
       display: inline-block;
       color: #513e79;
+      margin-left: 10px;
       a {color: #513e79;}
     }
   }

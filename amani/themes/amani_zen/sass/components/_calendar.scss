@@ -101,6 +101,9 @@
           
           a {
             color: $purple-primary;
+            text-decoration: underline;
+            
+            &:hover {text-decoration: none;}
           }
         }
       }
