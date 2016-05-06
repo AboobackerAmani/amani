@@ -234,7 +234,7 @@ footer .field-label {
     }
     
     @media all and (max-width: 640px) {
-      width: 50%;
+      width: 40%;
       float: right;
       text-align: right;
       
@@ -244,9 +244,7 @@ footer .field-label {
         display: inline-block;
         text-align: left;
         width: 85px;
-        margin: 0;
-        &.social-media-twitter {
-        }
+        margin: 0 0 10px 10px;
       }
     }
   }
@@ -310,20 +308,35 @@ footer .field-label {
 }
 
 //footer logos for mobile
-@media (max-width: 480px) {
+
+@media (max-width: 640px) {
+  #footer .block-bean {
+    margin: 0;
+  }
+  footer {
+    padding-bottom: 70px;
+    @media (max-width: 480px) {
+      padding-bottom: 50px;
+    }
+  }
   #block-bean-img1,
   #block-bean-project-by-pg {
-    margin-right: 20%;
-    margin-left: 15px;
-    width: 25%;
-    text-align: center;
+    padding-left: 15px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
   }
   #block-bean-img2,
   #block-bean-powered-by-amani {
-    margin-left: 20%;
-    margin-right: 15px;
-    width: 25%;
-    text-align: center;
+    padding-right: 15px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: right;
+    margin: 0;
   }
 }
 
@@ -331,7 +344,7 @@ footer .field-label {
  // height: 20%;
 }
 
-@media (min-width: $breakpoint) {
+@media (min-width: 480px) {
   #footer div[id*="block-menu-menu-social-media"] ul.menu {
     columns: 2;
     -webkit-columns: 2;
@@ -344,5 +357,6 @@ footer .field-label {
    ul.menu li {
      display: block;
      float: none;
+     margin-right: 0;
    }
 }
