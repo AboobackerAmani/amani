@@ -21,7 +21,7 @@ function amani_article_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tags & Type',
-    'weight' => '2',
+    'weight' => '6',
     'children' => array(
       0 => 'field_tags',
       1 => 'field_article_type',

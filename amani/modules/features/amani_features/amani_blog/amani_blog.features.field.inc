@@ -52,7 +52,7 @@ function amani_blog_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '6',
+          'weight' => '3',
         ),
         'ical' => array(
           'label' => 'above',
@@ -301,11 +301,11 @@ function amani_blog_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
+          'label' => 'above',
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => '3',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'inline',
@@ -376,7 +376,7 @@ function amani_blog_field_default_fields() {
             'image_style' => 'node-lead-image',
           ),
           'type' => 'image',
-          'weight' => '5',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -561,11 +561,11 @@ function amani_blog_field_default_fields() {
       'description' => 'Enter a comma-separated list of words to describe your content.',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
+          'label' => 'above',
           'module' => 'i18n_taxonomy',
           'settings' => array(),
           'type' => 'i18n_taxonomy_term_reference_link',
-          'weight' => '4',
+          'weight' => '6',
         ),
         'ical' => array(
           'label' => 'above',

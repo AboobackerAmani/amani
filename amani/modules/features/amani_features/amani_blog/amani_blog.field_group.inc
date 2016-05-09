@@ -21,7 +21,7 @@ function amani_blog_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tags & Categories',
-    'weight' => '2',
+    'weight' => '4',
     'children' => array(
       0 => 'field_tags',
       1 => 'field_category',

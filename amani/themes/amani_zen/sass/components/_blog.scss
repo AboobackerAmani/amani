@@ -52,7 +52,13 @@
     }
   }
   
-  .views-field-created {
+  .views-field-field-blog-date {
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .views-field-field-blog-date,
+  .views-field-field-blog-author {
     margin-bottom: 1.2em;
     
     .views-label {
@@ -67,6 +73,20 @@
     }
   }
   
+  .views-field-field-blog-author .field-content a {
+    color: $purple-alt; 
+      
+    &:before { 
+      content: "by";
+      font-family: "Open Sans Condensed", sans-serif;
+      font-style: italic;
+      text-transform: none;
+      letter-spacing: 1px;
+      color: #333;
+      margin-right: 5px;
+    }
+  }
+
   .views-field-field-image {
     width: 200px;
     height: auto;
@@ -77,6 +97,7 @@
   .views-field-title-1 {
     a {
       @include readmore;
+      outline: none;
     }
   }
   
@@ -128,7 +149,7 @@
     letter-spacing: 1px;
     color: #ababab;
     float: left;
-    margin-right: 20px;
+    margin-right: 10px;
   }
   .field-name-field-blog-author {
     float: left;
@@ -145,41 +166,89 @@
       text-transform: uppercase;
       font-style: italic;
       letter-spacing: 1px;
-      color: #ababab;
+      color: $purple-alt;
     }
   }
   
   .field-name-field-blog-author .field-items a:before {
     content: "by";
     font-family: "Open Sans Condensed", sans-serif;
+    text-transform: none;
     font-style: italic;
     letter-spacing: 1px;
     color: #333;
     margin-right: 5px;
   }
-    
-  .field-name-field-category {
-    float: right;
-  }
-
-  .field-name-field-tags {
-    width: 100%;
-    text-align: right;
-    float: right;
-    display: block;
-    
-    .field-label,
-    .field-item {
-      font-family: "Open Sans Condensed", sans-serif;
-      display: inline-block;
-      color: #513e79;
-      margin-left: 10px;
-      a {color: #513e79;}
-    }
-  }
   
   .field-name-field-image {
     padding-top: 10px;
     clear: both;
+  }
+  
+  .field-name-body {
+    padding-top: 20px;
+  }
+  
+  .field-name-field-category{
+    margin-bottom: 15px;
+  }
+
+  .field-name-field-tags,
+  .field-name-field-category {
+    .field-label,
+    .field-item {
+      font-family: "Open Sans Condensed", sans-serif;
+      display: inline-block;
+      
+      a {color: $purple-alt;}
+    }
+    .field-label {
+      color: $purple-primary;
+      text-transform: uppercase;
+      float: left;
+    }
+    .field-item {
+      margin-left: 10px;
+      &:after {
+        content: ",";
+        display: inline-block;
+      }
+    }
+    .field-item:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+  
+  .field-name-field-media {
+    background-color: transparent;
+    padding: 0;
+    margin-top: 30px;
+    margin-right: 0;
+    
+    .field-items {
+      margin: 0 auto 20px;
+      @include breakpoint($breakpoint) {
+        margin: 0;
+      }
+    }
+    
+    .field-item {
+      padding: 10px;
+      margin: 0 auto 15px auto;
+      border: 1px solid #ccc;
+      display: block;
+      width: 220px;
+      box-sizing: content-box;
+      
+      img {vertical-align: bottom;}
+      
+      @include breakpoint($breakpoint) {
+        display: inline-block;
+        margin: 0 10px 15px 0;
+        width: 195px;
+      }
+    }
   }
 }
