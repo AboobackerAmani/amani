@@ -18,8 +18,8 @@ define('AMANI_MINIMUM_PHP_MEMORY_LIMIT', '128M');
  */
 function amani_install() {
   $t = get_t();
-  theme_enable(array('peace'));
-  variable_set('theme_default', 'peace');
+  theme_enable(array('amani_zen'));
+  variable_set('theme_default', 'amani_zen');
   $admin_theme = 'seven';
 
   // Create a default role for site administrators, with all available permissions assigned.
