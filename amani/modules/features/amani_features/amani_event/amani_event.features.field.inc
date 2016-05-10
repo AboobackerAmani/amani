@@ -574,7 +574,7 @@ function amani_event_field_default_fields() {
               ),
             ),
           ),
-          'openlayers_map' => 'geofield_widget_map',
+          'openlayers_map' => 'amani_geofield_widget_map',
           'use_geocoder' => 1,
         ),
         'type' => 'geofield_openlayers',
