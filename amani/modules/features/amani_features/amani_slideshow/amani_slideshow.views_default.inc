@@ -74,6 +74,14 @@ function amani_slideshow_views_default_views() {
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartype'] = 0;
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartypenobg'] = 0;
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
+  $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['label'] = '';
+  $handler->display->display_options['fields']['field_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   /* Field: Content: Lead Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
