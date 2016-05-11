@@ -380,17 +380,7 @@ function amani_global_contact_settings($form, &$form_state) {
     '#description' => t("Your organization's mailing address, this will appear on the contact form of your site."),
     '#required' => FALSE,
   );
-  $options = array(
-    'attributes' => array(
-      'class' => array('colorbox-load'),
-    ),
-    'query' => array(
-      'width' => '800',
-      'height' => '500',
-      'iframe' => 'true',
-    ),
-  );
-  $link = l(t('Convert your address'), 'http://www.latlong.net/convert-address-to-lat-long.html', $options);
+  $link = l(t('Convert your address'), 'http://www.latlong.net/convert-address-to-lat-long.html', array('attributes' => array('target' => '_blank')));
   // Lat
   $form['site_information']['site_address_lat'] = array(
     '#type' => 'textfield',
