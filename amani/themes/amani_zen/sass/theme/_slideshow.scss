@@ -26,7 +26,7 @@
   .description,
   .button a,
   .views-slideshow-controls-bottom,
-  .title a {
+  .title {
     position: absolute;
     text-align: center;
     width: auto;
@@ -36,7 +36,7 @@
     text-align: center;
     color: rgb(255, 255, 255);
   }
-  .title a {
+  .title {
     top: 20%;
     -webkit-transform: translateY(-20%);
     -ms-transform: translateY(-20%);
@@ -60,7 +60,8 @@
     -ms-transform: translateY(-45%);
     transform: translateY(-45%);
     @include font-size(20px);
-    max-width: 410px;
+    //max-width: 410px;
+    max-width: 740px;
     line-height: 29px;
     @include breakpoint($desktop) {
       display: block;
@@ -91,6 +92,12 @@
   .description,
   .button a {
     text-shadow: -1px 0px 6px rgba(0, 0, 0, 0.59);
+    color: $white;
+    &:focus,
+    &:hover,
+    &:visited {
+      color: $white;
+    }
   }
 
   .views-slideshow-controls-bottom {
