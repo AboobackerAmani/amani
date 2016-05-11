@@ -248,12 +248,9 @@
   } 
   
   .date-display-single {
-    display: block;
+    display: none;
     clear: both;
     width: 100%;
-  }
-  .date-display-range {
-    display: none;
     
     &:first-child {
       display: block;
@@ -261,6 +258,20 @@
     &:last-child {
       display: block;
     }
+  }
+  .date-display-range {
+    display: none;
+    
+    &:first-child {
+      display: inline-block;
+    }
+    &:last-child {
+      display: inline-block;
+    }
+  }
+  
+  .date-repeat-rule + .date-display-range {
+    display: inline-block;
   }
   
   .calendar-calendar .multi-day {
@@ -396,6 +407,9 @@
   
   .field-name-body {
     padding-top: 20px;
+    a {
+      color: $purple-primary;
+    }
   }
   
   ul.links {
@@ -594,6 +608,10 @@ a.permalink {
         .date-display-start {
           margin-bottom: 5px;
         }
+        
+        .date-display-range {
+          display: inline-block;
+        }
       }
       &.field-name-field-event-type {
         a {
@@ -617,6 +635,9 @@ a.permalink {
         background-color: transparent;
         padding: 0;
         margin-top: 30px;
+        a {
+          color: $purple-primary;
+        }
         
         .field-label {display: none;}
       }
