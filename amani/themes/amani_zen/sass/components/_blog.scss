@@ -164,10 +164,13 @@
     .field-items a {
       font-family: "Open Sans Condensed", sans-serif;
       text-transform: uppercase;
-      font-style: italic;
       letter-spacing: 1px;
       color: $purple-alt;
     }
+  }
+  
+  .field-name-field-blog-author .field-items a {
+     font-style: italic;
   }
   
   .field-name-field-blog-author .field-items a:before {
@@ -187,6 +190,9 @@
   
   .field-name-body {
     padding-top: 20px;
+    a {
+      color: $purple-primary;
+    }
   }
   
   .field-name-field-category{

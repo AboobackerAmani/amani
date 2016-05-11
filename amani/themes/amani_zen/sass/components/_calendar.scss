@@ -179,3 +179,72 @@
   }
 }
  
+ 
+//Calendar of events Page
+
+.page-calendar-of-events-day {
+  .view-calendar-of-events {
+    padding-top: 35px;
+  }
+  .date-heading h3 {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1;
+    color: $purple-alt;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1em 0;
+    padding: 20px 0;
+  }
+  
+  .view .date-nav-wrapper .date-prev,
+  .view .date-nav-wrapper .date-next {
+    background: transparent;
+    
+    a {
+      font-family: "Open Sans Condensed", sans-serif;
+      font-size: 20px;
+      font-weight: 200;
+      color: $purple-primary;
+    }
+    
+    .ajax-progress-throbber {
+      display: none;
+    }
+  }
+  
+  .calendar-agenda-hour.first {
+    font-size: 18px;
+  }
+  
+  .calendar-calendar .day-view .full div.single-day div.dayview {
+    background-color: $almost-white;
+    border: 1px solid $purple-primary;
+    padding-top: 15px;
+  }
+  
+  .views-field-title a {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: $purple-primary;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  
+  .date-repeat-rule {
+    color: $purple-alt;
+    font-size: 18px;
+    padding: 5px 0;
+  }
+  
+  .calendar-calendar div.calendar {
+    font-size: 14px;
+  }
+  
+  .calendar-calendar .day-view #single-day-container{
+    border-right: 1px solid #ccc;
+  }
+}
