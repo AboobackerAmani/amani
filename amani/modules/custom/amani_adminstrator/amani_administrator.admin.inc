@@ -303,11 +303,9 @@ function amani_administrator_configure_amani_form() {
     '#suffix' =>
     '<p>Users can manage Global settings, including:
       <ul style="margin-left:20px">
-        <li>Setting your ‘Site Name’ as it appears on the opt of your web browser</li>
-        <li>Setting or editing your site’s ‘Tagline’ to the right of the logo in your site header</li>
-        <li>Upload your organization’s logo and favicon</li>
-        <li>Setting your office location map</li>
-        <li>Setting your site email address</li>
+        <li>Setting your \'Site Name\' as it appears on the opt of your web browser</li>
+        <li>Setting or editing your site\'s \'Tagline\'</li>
+        <li>Upload your organization\'s logo and favicon</li>
       </ul>
      </p>
     </div>',
@@ -338,7 +336,14 @@ function amani_administrator_configure_amani_form() {
     '#executes_submit_callback' => TRUE,
     '#prefix' => $prefix,
     '#suffix' =>
-    '<p>This option allows you to configure your contact page</p></div>'
+    '<p>Users can manage contact settings, including:
+      <ul style="margin-left:20px">
+        <li>Setting your site\'s address</li>
+        <li>Setting your site\'s email & phone number</li>
+        <li>Setting your site\'s location (lat/long)</li>
+      </ul>
+     </p>
+    </div>',
   );
 
   $form['map'] = array(
@@ -852,7 +857,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       variable_set('amani_admin_get_involved_show', 1);
       break;
     case 'Manage Logo & Tagline':
-      drupal_goto('admin/config/system/site-information');
+      drupal_goto('admin/configure-amani/site-info');
       break;
     case 'Configure Map':
       drupal_goto('admin/config/incident-reports');
@@ -879,7 +884,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       drupal_goto('admin/structure/contact');
       break;
     case 'Manage Contact Page':
-      drupal_goto('admin/configure-amani/site-info');
+      drupal_goto('admin/configure-amani/contact');
       break;
     case 'Configure CSS':
       drupal_goto('admin/config/development/css-injector');

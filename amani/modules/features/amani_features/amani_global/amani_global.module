@@ -21,14 +21,22 @@ function amani_global_menu() {
 
   $version = amani_global_get_version();
 
-  global $theme_key;
+  $items['admin/configure-amani/contact'] = array(
+    'title' => 'Manage Contact Settings',
+    'description' => 'Manage site contact settings',
+    'page callback' => 'drupal_get_form',
+    'type' => MENU_NORMAL_ITEM,
+    'page arguments' => array('amani_global_contact_settings'),
+    'access arguments' => array('administer site settings'),
+    'weight' => 20,
+  );
 
   $items['admin/configure-amani/site-info'] = array(
     'title' => 'Manage Logo & Tagline',
-    'description' => 'Manage site name, e-mail address, slogan, logo and favicon.',
+    'description' => 'Manage site logo and tagline',
     'page callback' => 'drupal_get_form',
     'type' => MENU_NORMAL_ITEM,
-    'page arguments' => array('amani_site_information_settings', $theme_key),
+    'page arguments' => array('amani_global_site_settings'),
     'access arguments' => array('administer site settings'),
     'weight' => 20,
   );
@@ -211,27 +219,28 @@ function amani_global_site_contact_info() {
   if ($content) {
     $output .= '<div id="contact_form_site_info">';
     foreach ($content as $item => $value) {
-		$class = '';
-		if ($item === 'T') {
-			$class = 'telephone';
-		}
-		if ($item === 'E') {
-			$class = "email";
-		}
-		if (!empty($class)) {
-			$output .= '<p class="' . $class . '">';
-		}
-		else {
-			$output .= '<p>';
-		}
-      
+      $class = '';
+      if ($item === 'T') {
+        $class = 'telephone';
+      }
+      if ($item === 'E') {
+        $class = "email";
+      }
+      if (!empty($class)) {
+        $output .= '<p class="' . $class . '">';
+      }
+      else {
+        $output .= '<p>';
+      }
+
       // Dont show our address label
       if ($item != 'Address' && $item != 'T' && $item != 'E') {  $output .= t($item . ': '); }
-      $output .= nl2br(t($value)) . '</p>';
+        $output .= nl2br(t($value)) . '</p>';
     }
     $output .= render($map);
     $output .='</div>';
   }
+
   return $output;
 }
 
@@ -360,19 +369,10 @@ function amani_global_leaflet_framework_maps() {
 }
 
 /**
- * Form builder; selected elements from the general site information form
- * and the theme configuration form (logo and favicon upload).
- *
- * @param $key
- *   A theme name.
- * @return
- *   The form structure.
- * @ingroup forms
- * @see system_site_information_settings()
- * @see system_theme_settings_submit()
+ * Form builder for 'Manage Contact Page' found via the configure amani interface.
  */
-function amani_site_information_settings($form, &$form_state, $key) {
-
+function amani_global_contact_settings($form, &$form_state) {
+  // Address
   $form['site_information']['site_address'] = array(
     '#type' => 'textarea',
     '#title' => t('Address'),
@@ -380,7 +380,6 @@ function amani_site_information_settings($form, &$form_state, $key) {
     '#description' => t("Your organization's mailing address, this will appear on the contact form of your site."),
     '#required' => FALSE,
   );
-
   $options = array(
     'attributes' => array(
       'class' => array('colorbox-load'),
@@ -392,7 +391,7 @@ function amani_site_information_settings($form, &$form_state, $key) {
     ),
   );
   $link = l(t('Convert your address'), 'http://www.latlong.net/convert-address-to-lat-long.html', $options);
-
+  // Lat
   $form['site_information']['site_address_lat'] = array(
     '#type' => 'textfield',
     '#title' => t('Lat'),
@@ -400,7 +399,7 @@ function amani_site_information_settings($form, &$form_state, $key) {
     '#description' => t('Your organizations address latitude. !link', array('!link' => $link)),
     '#required' => FALSE,
   );
-
+  // Long
   $form['site_information']['site_address_long'] = array(
     '#type' => 'textfield',
     '#title' => t('Long'),
@@ -408,7 +407,7 @@ function amani_site_information_settings($form, &$form_state, $key) {
     '#description' => t('Your organizations address longtitude. !link', array('!link' => $link)),
     '#required' => FALSE,
   );
-
+  // Phone
   $form['site_information']['site_phone'] = array(
     '#type' => 'textfield',
     '#title' => t('Phone'),
@@ -416,197 +415,60 @@ function amani_site_information_settings($form, &$form_state, $key) {
     '#description' => t("Your organization's phone number, this will appear on the contact form of your site."),
     '#required' => FALSE,
   );
-
-  $form['var'] = array('#type' => 'hidden', '#value' => 'theme_' . $key . '_settings');
-
-  $form['logo'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Logo image settings'),
-    '#attributes' => array('class' => array('theme-settings-bottom')),
-  );
-
-  $form['logo']['default_logo'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Use the default logo'),
-    '#default_value' => theme_get_setting('default_logo', $key),
-    '#tree' => FALSE,
-    '#description' => t('Check here if you want the theme to use the logo supplied with it.')
-  );
-
-  $form['logo']['settings'] = array(
-    '#type' => 'container',
-    '#states' => array(
-      // Hide the logo settings when using the default logo.
-      'invisible' => array(
-        'input[name="default_logo"]' => array('checked' => TRUE),
-      ),
-    ),
-  );
-
-  $form['logo']['settings']['logo_path'] = array(
+  // Email
+  $form['site_information']['site_mail'] = array(
     '#type' => 'textfield',
-    '#title' => t('Path to custom logo'),
-    '#default_value' => theme_get_setting('logo_path', $key),
-    '#access' => FALSE,
+    '#title' => t('Email'),
+    '#default_value' => variable_get('site_mail', NULL),
+    '#required' => FALSE,
   );
-  $form['logo']['settings']['logo_upload'] = array(
-    '#type' => 'file',
-    '#title' => t('Upload new logo image'),
-    '#maxlength' => 40,
-    '#description' => t("Use this field to upload your own logo.")
-  );
+  $form['#submit'][] = 'amani_global_redirect_for_amani_admins';
 
-  $form['favicon'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Shortcut icon settings'),
-    '#description' => t("Your shortcut icon, or 'favicon', is displayed in the address bar and bookmarks of most browsers."),
-  );
-  $form['favicon']['default_favicon'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Use the default shortcut icon.'),
-    '#default_value' => theme_get_setting('default_favicon', $key),
-    '#description' => t('Check here if you want the theme to use the default shortcut icon.')
-  );
-  $form['favicon']['settings'] = array(
-    '#type' => 'container',
-    '#states' => array(
-      // Hide the favicon settings when using the default favicon.
-      'invisible' => array(
-        'input[name="default_favicon"]' => array('checked' => TRUE),
-      ),
-    ),
-  );
-  $form['favicon']['settings']['favicon_path'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Path to custom icon'),
-    '#default_value' => theme_get_setting('favicon_path', $key),
-    '#access' => FALSE,
-  );
-  $form['favicon']['settings']['favicon_upload'] = array(
-    '#type' => 'file',
-    '#title' => t('Upload new icon image'),
-    '#description' => t("Use this field to upload your own shortcut icon.")
-  );
+  return system_settings_form($form);
+}
 
-  // Inject human-friendly values for logo and favicon.
-  foreach (array('logo' => 'logo.png', 'favicon' => 'favicon.ico') as $type => $default) {
-    if (isset($form[$type]['settings'][$type . '_path'])) {
-      $element = &$form[$type]['settings'][$type . '_path'];
-
-      // If path is a public:// URI, display the path relative to the files
-      // directory; stream wrappers are not end-user friendly.
-      $original_path = $element['#default_value'];
-      $friendly_path = NULL;
-      if (file_uri_scheme($original_path) == 'public') {
-        $friendly_path = file_uri_target($original_path);
-        $element['#default_value'] = $friendly_path;
-      }
-    }
+/**
+ * Form builder for 'Manage Logo & Tagline' found via the configure amani interface.
+ */
+function amani_global_site_settings($form, &$form_state) {
+  $form = array();
+  // We're going to use most of the form from the system core module 'system_theme_settings'.
+  if (module_load_include('inc', 'system', 'system.admin') !== FALSE) {
+    // We force theses settings for amani_zen, note the third arg.
+    $form = system_theme_settings($form, $form_state, 'amani_zen');
+    // Hide fields we don't need.
+    $form['breadcrumb']['#access'] = FALSE;
+    $form['themedev']['#access'] = FALSE;
+    $form['support']['#access'] = FALSE;
+    $form['theme_settings']['#access'] = FALSE;
+    // Add our fields.
+    // Site name
+    $form['site_information']['site_name'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Site Name'),
+      '#default_value' => variable_get('site_name', NULL),
+      '#required' => FALSE,
+    );
+    // Slogan
+    $form['site_information']['site_slogan'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Site Tagline'),
+      '#default_value' => variable_get('site_slogan', NULL),
+      '#required' => FALSE,
+    );
+    $form['#submit'][] = 'amani_global_site_settings_submit';
+    $form['#submit'][] = 'amani_global_redirect_for_amani_admins';
   }
 
-
-  $form = system_settings_form($form);
-  // We don't want to call system_settings_form_submit(), so change #submit.
-  array_pop($form['#submit']);
-  $form['#submit'][] = 'amani_theme_settings_submit';
-  $form['#validate'][] = 'amani_theme_settings_validate';
   return $form;
 }
 
 /**
- * Validator for the amani_theme_settings() form.
+ * Custom submission handler for our custom site settings form.
  */
-function amani_theme_settings_validate($form, &$form_state) {
-  // Handle file uploads.
-  $validators = array('file_validate_is_image' => array());
-
-  // Check for a new uploaded logo.
-  $file = file_save_upload('logo_upload', $validators);
-  if (isset($file)) {
-    // File upload was attempted.
-    if ($file) {
-      // Put the temporary file in form_values so we can save it on submit.
-      $form_state['values']['logo_upload'] = $file;
-    }
-    else {
-      // File upload failed.
-      form_set_error('logo_upload', t('The logo could not be uploaded.'));
-    }
-  }
-
-  $validators = array('file_validate_extensions' => array('ico png gif jpg jpeg apng svg'));
-
-  // Check for a new uploaded favicon.
-  $file = file_save_upload('favicon_upload', $validators);
-  if (isset($file)) {
-    // File upload was attempted.
-    if ($file) {
-      // Put the temporary file in form_values so we can save it on submit.
-      $form_state['values']['favicon_upload'] = $file;
-    }
-    else {
-      // File upload failed.
-      form_set_error('favicon_upload', t('The favicon could not be uploaded.'));
-    }
-  }
-
-}
-
-/**
- * Process amani_theme_settings form submissions.
- */
-function amani_theme_settings_submit($form, &$form_state) {
-  // Exclude unnecessary elements before saving.
-  form_state_values_clean($form_state);
-
-  $values = $form_state['values'];
-
-  // Save the site info then remove from array to save theme info.
-  foreach (element_children($form['site_information']) as $name) {
-    variable_set($name, $values[$name]);
-    unset($values[$name]);
-  }
-
-  // Extract the name of the theme from the submitted form values, then remove
-  // it from the array so that it is not saved as part of the variable.
-  $key = $values['var'];
-  unset($values['var']);
-
-  // If the user uploaded a new logo or favicon, save it to a permanent location
-  // and use it in place of the default theme-provided file.
-  if ($file = $values['logo_upload']) {
-    unset($values['logo_upload']);
-    $filename = file_unmanaged_copy($file->uri);
-    $values['default_logo'] = 0;
-    $values['logo_path'] = $filename;
-    $values['toggle_logo'] = 1;
-  }
-  if ($file = $values['favicon_upload']) {
-    unset($values['favicon_upload']);
-    $filename = file_unmanaged_copy($file->uri);
-    $values['default_favicon'] = 0;
-    $values['favicon_path'] = $filename;
-    $values['toggle_favicon'] = 1;
-  }
-
-  module_load_include('inc', 'system', 'system.admin');
-  // If the user entered a path relative to the system files directory for
-  // a logo or favicon, store a public:// URI so the theme system can handle it.
-  if (!empty($values['logo_path'])) {
-    $values['logo_path'] = _system_theme_settings_validate_path($values['logo_path']);
-  }
-  if (!empty($values['favicon_path'])) {
-    $values['favicon_path'] = _system_theme_settings_validate_path($values['favicon_path']);
-  }
-
-  if (empty($values['default_favicon']) && !empty($values['favicon_path'])) {
-    $values['favicon_mimetype'] = file_get_mimetype($values['favicon_path']);
-  }
-
-  variable_set($key, $values);
-  drupal_set_message(t('The configuration options have been saved.'));
-
-  cache_clear_all();
+function amani_global_site_settings_submit($form, &$form_state) {
+  variable_set('site_name', $form_state['values']['site_name']);
+  variable_set('site_slogan', $form_state['values']['site_slogan']);
 }
 
 /**
@@ -620,21 +482,21 @@ function amani_global_preprocess_page(&$vars) {
     $breadcrumb = drupal_set_breadcrumb();
 
     switch ($term->vocabulary_machine_name) {
-      case 'event_type':
-        $breadcrumb[] = l(t('News & Events'), 'news-and-events');
-        break;
-      case 'project_location':
-      case 'project_status':
-        $breadcrumb[] = l(t('Programs'), 'programs');
-        break;
-      case 'resource_type':
-      case 'theme':
-        $breadcrumb[] = l(t('Resources'), 'resources');
-        break;
-      case 'team_member_type':
-        $breadcrumb[] = l(t('About'), 'about');
-        $breadcrumb[] = l(t('Team'), 'team');
-        break;
+    case 'event_type':
+      $breadcrumb[] = l(t('News & Events'), 'news-and-events');
+      break;
+    case 'project_location':
+    case 'project_status':
+      $breadcrumb[] = l(t('Programs'), 'programs');
+      break;
+    case 'resource_type':
+    case 'theme':
+      $breadcrumb[] = l(t('Resources'), 'resources');
+      break;
+    case 'team_member_type':
+      $breadcrumb[] = l(t('About'), 'about');
+      $breadcrumb[] = l(t('Team'), 'team');
+      break;
     }
 
     drupal_set_breadcrumb($breadcrumb);
@@ -646,24 +508,24 @@ function amani_global_preprocess_page(&$vars) {
   if (!$is_admin) {
     $path = current_path();
     switch ($path) {
-      case 'admin/structure/contact':
-        drupal_set_title('Configure Contact Form');
-        break;
-      case 'admin/config/system/googleanalytics':
-        drupal_set_title('Configure Google Analytics');
-        break;
-      case 'admin/config/services/twitter/settings':
-        drupal_set_title('Configure Twitter Feed');
-        break;
-      case 'redhen':
-        drupal_set_title('Configure RedHen');
-        break;
-      case 'admin/config/development/css-injector':
-        drupal_set_title('Configure CSS');
-        break;
-      case 'admin/structure/block/manage/fb_likebox/0/configure':
-        drupal_set_title('Configure Facebook Feed');
-        break;
+    case 'admin/structure/contact':
+      drupal_set_title('Configure Contact Form');
+      break;
+    case 'admin/config/system/googleanalytics':
+      drupal_set_title('Configure Google Analytics');
+      break;
+    case 'admin/config/services/twitter/settings':
+      drupal_set_title('Configure Twitter Feed');
+      break;
+    case 'redhen':
+      drupal_set_title('Configure RedHen');
+      break;
+    case 'admin/config/development/css-injector':
+      drupal_set_title('Configure CSS');
+      break;
+    case 'admin/structure/block/manage/fb_likebox/0/configure':
+      drupal_set_title('Configure Facebook Feed');
+      break;
     }
   }
 }
