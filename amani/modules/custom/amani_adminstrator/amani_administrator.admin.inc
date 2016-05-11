@@ -559,22 +559,6 @@ function amani_administrator_configure_amani_form() {
                   Click <a href="https://developer.yahoo.com/oauth/guide/oauth-auth-flow.html">here</a> for instructions on creating a Yahoo application.</p>',
   );
 
-  $form['front_page_feed'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Manage front page feed'),
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-
-  $form['front_page_feed'][] = array(
-    '#type' => 'button',
-    '#value' => t('Configure content types to display'),
-    '#executes_submit_callback' => TRUE,
-    '#prefix' => $prefix,
-    '#suffix' => '<p>You can configure the content type to be displayed on
-      the feed displayed at the bottom of the front page. Click on the button above and go to the "FILTER CRITERIA" part. Then click on "Content:type", select the content types that you want to see on the front pahe, then save and save the view.</p></div>',
-  );
-
   $form['comments'] = array(
     '#type' => 'fieldset',
     '#title' => t('Manage Site-Wide Comments'),
@@ -897,9 +881,6 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       break;
     case 'Edit Third-Party Logins':
       drupal_goto('admin/config/people/hybridauth');
-      break;
-    case 'Configure content types to display':
-      drupal_goto('admin/structure/views/view/news_and_events/edit/block_1');
       break;
     case 'Enable Comments':
       amani_administrator_configure_comments(1);
