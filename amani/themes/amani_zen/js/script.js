@@ -36,11 +36,11 @@ Drupal.behaviors.our_compact_view_behavior = {
   }
 };
 
+
 Drupal.behaviors.toggleMapFilters = {
   attach: function(context, settings) {
-	  
 	  if($('body').hasClass('section-mapping-conflict-violence-in-south-sudan')){//Exclude othr pages but the map page
-		  var breakpoint = 761;
+		  var breakpoint = 770;
 		  var filterIds =
 						['block-incident-map-field-incident-report-type',
 						'block-incident-map-field-incident-severity',
@@ -51,19 +51,11 @@ Drupal.behaviors.toggleMapFilters = {
 		  var filtersObj = $(filters);
 		  var initialWidth = $(window).width();
 		  var toggleMapFilters = function(initialWidth){
-			  var initialLoad, windowWidth, filterHandle = $('#filter');	
-			  if(jQuery.type(initialWidth) === 'number'){
-				  windowWidth = initialWidth;
-				  initialLoad = true
-			  }else{
-				 windowWidth = $(window).width();
-				 initialLoad = false;
-			  }
-			  switch(true){
-			  case (windowWidth < breakpoint ):
+			  var filterHandle = $('#filter');	
 				//inject a button
 				if(filterHandle.length === 0){
-
+					//initially hidden
+					filtersObj.hide();
 					$('.primary-nav-wrapper').append('<div id="filter" class="header__region region filter-header"><h2>Show Filter</h2></div>');					
 					$('#filter').click(
 
@@ -79,20 +71,7 @@ Drupal.behaviors.toggleMapFilters = {
 								//this fires 4 times in a row as filterObj is a jquery array
 							});
 					});
-					
-					if(initialLoad){
-						filtersObj.hide();
-					}
-					}else{
-						filterHandle.show();
-					}
-					break;
-			  
-			  case (windowWidth >= breakpoint ):
-				  filterHandle.hide();
-				  break;
-			  }
-		  
+				}			  
 		  };
 		  $(window).smartresize(toggleMapFilters);
 		  new toggleMapFilters(initialWidth);//initilizes 
@@ -102,6 +81,7 @@ Drupal.behaviors.toggleMapFilters = {
 
   }
 };
+
 Drupal.behaviors.toggleTeamFilters = {
   attach: function(context, settings) {
 	  
