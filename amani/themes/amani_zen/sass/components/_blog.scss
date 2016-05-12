@@ -130,7 +130,14 @@
     clear: both;
     @include breakpoint(768px) {
       @include zen-grid-item(8, 1);
-      padding-right: 15px;
+      padding: 0 15px;
+    }
+    
+    @media all and (min-width: 561px) and (max-width: $breakpoint) {
+      padding: 0 30px;
+    }
+    @media all and (max-width: 560px) {
+      padding: 0 15px;
     }
   }
   
