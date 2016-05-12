@@ -1,37 +1,32 @@
 <?php
 
 /**
- * Reverted the context home page "front page".
- */
-function amani_global_update_7004() {
-  features_revert('amani_global');
-}
-
-/**
- * Revert feature to add new context.
- */
-function amani_global_update_7005() {
-  features_revert('amani_global');
-}
-
-/**
- * Reverts main menu and adds new footer menu.
- */
-function amani_global_update_7006() {
-  features_revert('amani_global');
- }
-
-/**
- * Revert the menu links so that they are set as "Show as Expanded".
- */
-function amani_global_update_7007() {
-	features_revert('amani_global');
-}
-
-
-/**
- * Eable amani opportunity content module.
+ * Enable taxonomy view.
  */
 function amani_global_update_7008() {
+  // Taxonomy view.
+  $viewnames = array(
+    'taxonomy_term',
+  );
+
+  $views_status = variable_get('views_defaults', array());
+
+  foreach ($viewnames as $key => $viewname) {
+    $views_status[$viewname] = false;
+  }
+
+  // reset the variable with the new list
+  variable_set('views_defaults', $views_status);
+
+  // empty cache now
+  if (function_exists('views_invalidate_cache')) {
+    views_invalidate_cache();
+  }
+}
+
+/**
+ * Enable amani opportunity content module.
+ */
+function amani_global_update_7009() {
   module_enable(array("amani_opportunity_content"));
 }

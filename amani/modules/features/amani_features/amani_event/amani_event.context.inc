@@ -53,19 +53,24 @@ function amani_event_context_default_contexts() {
         'node_form' => '0',
       ),
     ),
+    'path' => array(
+      'values' => array(
+        'calendar-of-events/day/*' => 'calendar-of-events/day/*',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-calendar_of_events-list' => array(
+        'views-4c4da4e1992914fbba4055fe6936fb91' => array(
           'module' => 'views',
-          'delta' => 'calendar_of_events-list',
+          'delta' => '4c4da4e1992914fbba4055fe6936fb91',
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
-        'views-calendar_of_events-calendar' => array(
+        'views-calendar_of_events-block_3' => array(
           'module' => 'views',
-          'delta' => 'calendar_of_events-calendar',
+          'delta' => 'calendar_of_events-block_3',
           'region' => 'sidebar_second',
           'weight' => '-9',
         ),
