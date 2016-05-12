@@ -313,12 +313,6 @@ function amani_global_context_default_contexts() {
         1 => 1,
       ),
     ),
-    'user' => array(
-      'values' => array(
-        'administrator' => 'administrator',
-        'anonymous user' => 'anonymous user',
-      ),
-    ),
   );
   $context->reactions = array(
     'block' => array(
