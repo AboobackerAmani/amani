@@ -1,0 +1,412 @@
+/*
+  Our compact page and node page
+*/
+
+// resources page view
+.page-taxonomy {
+  font-family: $open-sans-condensed;
+   
+  h2.block-title {
+    font-family: $open-sans-condensed;
+    color: $purple-primary;
+    text-transform: uppercase;
+    margin: 10px 0;
+  }
+
+  //right side bar
+  #block-views-exp-resources-page {
+    float: right;
+    width: 100%;
+    margin: 10px 0 0;
+    clear: both;
+    @include breakpoint(768px) {
+     // @include zen-grid-item(3, 1);
+      float: right;
+    }
+
+    form .views-exposed-form  {
+      background-color: #f7f6f5;
+      box-shadow: 0px 3px 3px -2px #777;
+      
+      @include breakpoint(980px) {
+        &:before {
+          content:  "Filters";
+          text-transform: uppercase;
+          color: $purple-primary;
+          font-weight: 600;
+          border-bottom: 1px solid #ccc;
+          display: block;
+          margin: 0 15px;
+          padding: 15px 0 5px;
+        }
+      }
+      
+      & div {
+        float: none;
+        padding: 0;
+      }
+
+      .views-exposed-widgets {
+        padding: 12px;
+        
+        & > div {
+          margin-bottom: 10px;
+        }
+
+        .form-submit {
+          width: 49%;
+          float: left;
+          margin: 0;
+          border: 1px solid #ce9bc0;
+          padding: 10px;
+          text-transform: uppercase;
+          font-size: 17px;
+          line-height: 1;
+          height: 37px;
+          letter-spacing: 1px;
+
+          &#edit-submit-resources {
+            background: #ce9bc0;
+            color: white;
+            margin-left: 1%;
+            float: right;
+          }
+
+          &#edit-reset {
+            background: transparent;
+            margin-right: 1%;
+            float: right;
+          }
+        }
+
+        label[for="edit-date-min"], label[for="edit-date-max"] { display: none; }
+        input[type="text"] {
+          border: 1px solid #cccccc;
+          height: 35px;
+          border-radius: 4px;
+        }
+        select, input { background: white; }
+        label, input { color: #ce9bc0; }
+        select {
+          border: 1px solid #aaa;
+          outline: none;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          height: 35px;
+          font-size: 14px;
+          color: #ce9bc0;
+        }
+        select, input, .form-type-date-popup { width: 100%; }
+        label {
+          text-transform: uppercase;
+          font-size: 12px;
+          margin-bottom: 3px;
+          letter-spacing: 1.3px;
+        }
+
+        #edit-date-wrapper {
+          .views-widget > div {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  //main content
+  .view-taxonomy-term .view-content {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    clear: both;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    @include breakpoint($breakpoint) {
+     // @include zen-grid-item(9, 1);
+      clear: none;
+      margin-top: -12px;
+    }
+    
+    .views-row {
+      width: 48%;
+      display: inline-block;
+      float: left;
+      vertical-align: top;
+      border: 1px solid #cccccc;
+      padding: 10px 10px 25px;
+      margin: 12px 1% 20px 1%;
+      position: relative;
+      
+      @include breakpoint(768px) {
+        width: 31%;
+        margin-left: 0;
+        margin-right: 12px;
+        &:nth-child(3n+0) {
+          margin-right: 0;
+        }
+      }
+      
+      @include breakpoint(1200px) {
+        margin-right: 15px;
+      }
+      
+      .share-icons {
+        display: none;
+      }
+
+      .inner-content h1 {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        color: $purple-primary;
+        font-size: 16px;
+      }
+
+      .views-field-field-link {
+        margin: 0;
+        border-top: 1px solid #ccc;
+        padding: 8px 10px;
+        margin-top: 10px;
+        margin-bottom: -14px;
+        text-align: right;
+        text-transform: uppercase;
+
+        a {
+          color: #ce9bc0;
+        }
+      }
+
+      .field-name-field-image {
+        margin-bottom: 10px;
+        height: 150px;
+        overflow: hidden;
+
+        img {
+          border: 2.5px solid #fff;
+          margin: 0px -3px;
+          box-shadow: 1.7px 2px 4px -3px #333;
+          width: 100%;
+          height: auto;
+        }
+      }
+      
+      .download-button {
+        display: inline-block; 
+        float: right;
+        text-transform: uppercase;
+        margin-top: 5px;
+        margin-bottom: 0;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        
+        a {
+          color: $purple-primary;
+        }
+        
+        a:before {
+          content: "\e904";
+          font-family: "amani-icons";
+          color: $purple-primary;
+          margin-right: 10px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+// node type resource page
+.node-type-resource #content {
+  font-family: $open-sans-condensed;
+  width: 840px;
+  margin: auto;
+
+  .breadcrumb, #page-title {
+    display: none;
+  }
+
+  .field-name-field-image {
+    margin-bottom: -10px;
+  }
+
+  .inner-content {
+    font-weight: 100;
+    background: #fcfbfb;
+    padding: 35px;
+    box-shadow: 0px 3px 3px -2px #777;
+
+    .share-icons {
+      float: right;
+
+      h3 {
+        display: inline-block;
+        margin-right: 5px;
+        font-family: $open-sans;
+      }
+
+      .social-menu {
+        width: 100px;
+        display: inline-block;
+        vertical-align: bottom;
+
+        div {
+          width: 30px;
+          height: 36px;
+          display: inline-block;
+          margin: 0px 2px;
+        }
+
+        .social-media-facebook {
+          background: url(../images/icons/black-facebook.png) no-repeat 0 0;
+        }
+        .social-media-twitter {
+          background: url(../images/icons/black-twitter.png) no-repeat 0 0;
+        }
+      }
+    }
+
+    h1#node-title {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #ce9bc0;
+      font-size: 30px;
+      margin-top: 10px;
+      clear: both;
+    }
+
+    .content-body {
+      font-size: 16px;
+
+      .meta-info {
+        color: #acacac;
+        border-left: 2px solid;
+        padding-left: 10px;
+        margin-bottom: 30px;
+
+        p {
+          margin-bottom: 10px;
+        }
+      }
+
+      .field-name-body {
+        font-family: $open-sans;
+        line-height: 30px;
+      }
+
+      .field-name-field-amani-tags {
+        .field-label {
+          font-family: $open-sans;
+          margin-bottom: 5px;
+        }
+
+        .field-items > div {
+          display: inline-block;
+          background: #d9d9d9;
+          padding: 5px 10px;
+          margin-right: 5px;
+
+          a {
+            color: #7f7f7f;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .file-download {
+        font-family: $open-sans;
+        background: #ebebeb;
+        padding: 40px;
+        margin: 0 auto;
+        margin-top: 30px;
+        overflow:hidden;
+
+        & > div {
+          display:inline-block;
+          vertical-align:middle;
+          width:49%;
+        }
+
+        .field-name-field-media {
+          float: left;
+          font-size: 16px;
+
+          a {
+            color: #131313;
+          }
+        }
+
+        .download-button {
+          float: right;
+          background: #ce9bc0;
+          text-transform: uppercase;
+          padding: 20px 45px;
+          font-size: 24px;
+
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+ 
+//mobile version
+.page-resources.sidebar-second {
+   @media (max-width: 980px) {
+    #main {
+      position: relative;
+    }
+    
+    #content {
+      width: 100%;
+      margin: 0;
+      float: none;
+    }
+    
+    .region-sidebar-second {
+      width: 100%;
+      margin: 0;
+      position: absolute;
+      top: 120px;
+      right: 0;
+    }
+  }
+}
+
+.add-fliter-title {
+  display: block;
+  
+  &:before {
+    content: "Filters";
+    color: $purple-primary;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    border: 1px solid $grey-medium;
+    position: relative; 
+    top: -40px;
+    right: 0;
+    float: right;
+    display: block;
+    cursor: pointer;
+  } 
+  
+  .views-exposed-form {
+    position: relative;
+    top: -30px;
+    width: 100%;
+    clear: both;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease;
+  }
+
+  .views-exposed-form.show {
+    max-height: 500px;
+  }
+}
+
