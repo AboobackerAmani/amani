@@ -354,7 +354,7 @@ function amani_event_field_default_fields() {
   $fields['node-event-field_event_date'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '-1',
+      'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_event_date',
@@ -375,7 +375,7 @@ function amani_event_field_default_fields() {
           'second' => 0,
           'year' => 'year',
         ),
-        'repeat' => 1,
+        'repeat' => '0',
         'timezone_db' => 'UTC',
         'todate' => 'optional',
         'tz_handling' => 'site',
@@ -445,7 +445,7 @@ function amani_event_field_default_fields() {
           'input_format_custom' => '',
           'label_position' => 'above',
           'no_fieldset' => 0,
-          'repeat_collapsed' => 1,
+          'repeat_collapsed' => 0,
           'text_parts' => array(),
           'year_range' => '-3:+3',
         ),
