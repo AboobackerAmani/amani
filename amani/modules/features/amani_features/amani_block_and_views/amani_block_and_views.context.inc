@@ -26,12 +26,6 @@ function amani_block_and_views_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-calendar_of_events-list' => array(
-          'module' => 'views',
-          'delta' => 'calendar_of_events-list',
-          'region' => 'sidebar_second',
-          'weight' => '-47',
-        ),
         'views-4c4da4e1992914fbba4055fe6936fb91' => array(
           'module' => 'views',
           'delta' => '4c4da4e1992914fbba4055fe6936fb91',
