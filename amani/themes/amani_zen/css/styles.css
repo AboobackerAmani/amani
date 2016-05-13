@@ -2939,35 +2939,39 @@ footer .field-label {
   margin-bottom: 20px;
 }
 /* line 515, ../sass/components/_front-page-blocks.scss */
+.content_bottom .view-partners-carousel {
+  height: 140px;
+}
+/* line 519, ../sass/components/_front-page-blocks.scss */
 .content_bottom .jcarousel-skin-default .jcarousel-container-horizontal {
   width: 448px;
   box-sizing: content-box;
 }
 @media (max-width: 768px) {
-  /* line 515, ../sass/components/_front-page-blocks.scss */
+  /* line 519, ../sass/components/_front-page-blocks.scss */
   .content_bottom .jcarousel-skin-default .jcarousel-container-horizontal {
     width: 232px;
   }
 }
-/* line 523, ../sass/components/_front-page-blocks.scss */
+/* line 527, ../sass/components/_front-page-blocks.scss */
 .content_bottom .jcarousel-skin-default .jcarousel-clip-horizontal {
   width: 448px;
 }
 @media (max-width: 768px) {
-  /* line 523, ../sass/components/_front-page-blocks.scss */
+  /* line 527, ../sass/components/_front-page-blocks.scss */
   .content_bottom .jcarousel-skin-default .jcarousel-clip-horizontal {
     width: 232px;
   }
 }
-/* line 530, ../sass/components/_front-page-blocks.scss */
+/* line 534, ../sass/components/_front-page-blocks.scss */
 .content_bottom .jcarousel-skin-default .jcarousel-item-horizontal {
   margin: 0 8px 0 0;
 }
-/* line 534, ../sass/components/_front-page-blocks.scss */
+/* line 538, ../sass/components/_front-page-blocks.scss */
 .content_bottom .jcarousel-skin-default .jcarousel-item {
   position: relative;
 }
-/* line 537, ../sass/components/_front-page-blocks.scss */
+/* line 541, ../sass/components/_front-page-blocks.scss */
 .content_bottom .jcarousel-skin-default .jcarousel-item .views-field-field-image {
   position: absolute;
   top: 50%;
@@ -2976,17 +2980,17 @@ footer .field-label {
   right: 0;
   margin: 0 auto;
 }
-/* line 546, ../sass/components/_front-page-blocks.scss */
+/* line 550, ../sass/components/_front-page-blocks.scss */
 .content_bottom .jcarousel-skin-default .jcarousel-next-horizontal {
   right: 4px;
 }
-/* line 549, ../sass/components/_front-page-blocks.scss */
+/* line 553, ../sass/components/_front-page-blocks.scss */
 .content_bottom .jcarousel-skin-default .jcarousel-prev-horizontal {
   left: 5px;
 }
 
 @media all and (max-width: 768px) {
-  /* line 556, ../sass/components/_front-page-blocks.scss */
+  /* line 560, ../sass/components/_front-page-blocks.scss */
   #block-views-front-page-blocks-block {
     margin-bottom: 0;
   }
@@ -5899,436 +5903,6 @@ a.permalink {
 }
 
 /*
-  Our compact page and node page
-*/
-/* line 6, ../sass/components/_our_compact_page.scss */
-.section-resource-theme {
-  font-family: "Open Sans Condensed", sans-serif;
-}
-/* line 9, ../sass/components/_our_compact_page.scss */
-.section-resource-theme h2.block-title {
-  font-family: "Open Sans Condensed", sans-serif;
-  color: #ce9bc0;
-  text-transform: uppercase;
-  margin: 10px 0;
-}
-/* line 17, ../sass/components/_our_compact_page.scss */
-.section-resource-theme #block-views-exp-resources-page {
-  float: right;
-  width: 100%;
-  margin: 10px 0 0;
-  clear: both;
-}
-@media (min-width: 768px) {
-  /* line 17, ../sass/components/_our_compact_page.scss */
-  .section-resource-theme #block-views-exp-resources-page {
-    float: right;
-  }
-}
-/* line 27, ../sass/components/_our_compact_page.scss */
-.section-resource-theme #block-views-exp-resources-page form .views-exposed-form {
-  background-color: #f7f6f5;
-  box-shadow: 0px 3px 3px -2px #777;
-}
-@media (min-width: 980px) {
-  /* line 32, ../sass/components/_our_compact_page.scss */
-  .section-resource-theme #block-views-exp-resources-page form .views-exposed-form:before {
-    content: "Filters";
-    text-transform: uppercase;
-    color: #ce9bc0;
-    font-weight: 600;
-    border-bottom: 1px solid #ccc;
-    display: block;
-    margin: 0 15px;
-    padding: 15px 0 5px;
-  }
-}
-/* line 44, ../sass/components/_our_compact_page.scss */
-.section-resource-theme #block-views-exp-resources-page form .views-exposed-form div {
-  float: none;
-  padding: 0;
-}
-/* line 49, ../sass/components/_our_compact_page.scss */
-.section-resource-theme #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets {
-  padding: 12px;
-}
-/* line 52, ../sass/components/_our_compact_page.scss */
-.section-resource-theme #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets > div {
-  margin-bottom: 10px;
-}
-/* line 56, ../sass/components/_our_compact_page.scss */
-.section-resource-theme #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets .form-submit {
-  width: 49%;
-  float: left;
-  margin: 0;
-  border: 1px solid #ce9bc0;
-  padding: 10px;
-  text-transform: uppercase;
-  font-size: 17px;
-  line-height: 1;
-  height: 37px;
-  letter-spacing: 1px;
-}
-/* line 68, ../sass/components/_our_compact_page.scss */
-.section-resource-theme #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets .form-submit#edit-submit-resources {
-  background: #ce9bc0;
-  color: white;
-  margin-left: 1%;
-  float: right;
-}
-/* line 75, ../sass/components/_our_compact_page.scss */
-.section-resource-theme #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets .form-submit#edit-reset {
-  background: transparent;
-  margin-right: 1%;
-  float: right;
-}
-/* line 82, ../sass/components/_our_compact_page.scss */
-.section-resource-theme #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets label[for="edit-date-min"], .section-resource-theme #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets label[for="edit-date-max"] {
-  display: none;
-}
-/* line 83, ../sass/components/_our_compact_page.scss */
-.section-resource-theme #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets input[type="text"] {
-  border: 1px solid #cccccc;
-  height: 35px;
-  border-radius: 4px;
-}
-/* line 88, ../sass/components/_our_compact_page.scss */
-.section-resource-theme #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets select, .section-resource-theme #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets input {
-  background: white;
-}
-/* line 89, ../sass/components/_our_compact_page.scss */
-.section-resource-theme #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets label, .section-resource-theme #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets input {
-  color: #ce9bc0;
-}
-/* line 90, ../sass/components/_our_compact_page.scss */
-.section-resource-theme #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets select {
-  border: 1px solid #aaa;
-  outline: none;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  height: 35px;
-  font-size: 14px;
-  color: #ce9bc0;
-}
-/* line 100, ../sass/components/_our_compact_page.scss */
-.section-resource-theme #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets select, .section-resource-theme #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets input, .section-resource-theme #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets .form-type-date-popup {
-  width: 100%;
-}
-/* line 101, ../sass/components/_our_compact_page.scss */
-.section-resource-theme #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets label {
-  text-transform: uppercase;
-  font-size: 12px;
-  margin-bottom: 3px;
-  letter-spacing: 1.3px;
-}
-/* line 109, ../sass/components/_our_compact_page.scss */
-.section-resource-theme #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets #edit-date-wrapper .views-widget > div {
-  margin-bottom: 10px;
-}
-/* line 118, ../sass/components/_our_compact_page.scss */
-.section-resource-theme .section-resource-theme .view-content {
-  position: relative;
-  width: 100%;
-  margin: 0;
-  clear: both;
-}
-@media (min-width: 768px) {
-  /* line 118, ../sass/components/_our_compact_page.scss */
-  .section-resource-theme .section-resource-theme .view-content {
-    clear: none;
-    margin-top: -12px;
-  }
-}
-/* line 129, ../sass/components/_our_compact_page.scss */
-.section-resource-theme .section-resource-theme .view-content .views-row {
-  width: 48%;
-  display: inline-block;
-  float: left;
-  vertical-align: top;
-  border: 1px solid #cccccc;
-  padding: 10px 10px 5px;
-  margin: 12px 1% 20px 1%;
-  height: 305px;
-}
-@media (min-width: 768px) {
-  /* line 129, ../sass/components/_our_compact_page.scss */
-  .section-resource-theme .section-resource-theme .view-content .views-row {
-    width: 31%;
-    margin-left: 0;
-    margin-right: 12px;
-  }
-  /* line 143, ../sass/components/_our_compact_page.scss */
-  .section-resource-theme .section-resource-theme .view-content .views-row:nth-child(3n+0) {
-    margin-right: 0;
-  }
-}
-@media (min-width: 1200px) {
-  /* line 129, ../sass/components/_our_compact_page.scss */
-  .section-resource-theme .section-resource-theme .view-content .views-row {
-    margin-right: 15px;
-  }
-}
-/* line 152, ../sass/components/_our_compact_page.scss */
-.section-resource-theme .section-resource-theme .view-content .views-row .views-field {
-  margin-bottom: 5px;
-}
-/* line 155, ../sass/components/_our_compact_page.scss */
-.section-resource-theme .section-resource-theme .view-content .views-row .views-field, .section-resource-theme .section-resource-theme .view-content .views-row .views-field span, .section-resource-theme .section-resource-theme .view-content .views-row .views-field a {
-  color: #acacac;
-  font-size: 14px;
-  overflow: hidden;
-}
-/* line 162, ../sass/components/_our_compact_page.scss */
-.section-resource-theme .section-resource-theme .view-content .views-row .views-field-title {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 5px;
-}
-/* line 167, ../sass/components/_our_compact_page.scss */
-.section-resource-theme .section-resource-theme .view-content .views-row .views-field-title a {
-  color: #ce9bc0;
-  font-size: 16px;
-}
-/* line 173, ../sass/components/_our_compact_page.scss */
-.section-resource-theme .section-resource-theme .view-content .views-row .views-field-field-link {
-  margin: 0;
-  border-top: 1px solid #ccc;
-  padding: 8px 10px;
-  margin-top: 10px;
-  margin-bottom: -14px;
-  text-align: right;
-  text-transform: uppercase;
-}
-/* line 182, ../sass/components/_our_compact_page.scss */
-.section-resource-theme .section-resource-theme .view-content .views-row .views-field-field-link a {
-  color: #ce9bc0;
-}
-/* line 187, ../sass/components/_our_compact_page.scss */
-.section-resource-theme .section-resource-theme .view-content .views-row .views-field-field-image {
-  margin-bottom: 10px;
-  height: 150px;
-  overflow-y: hidden;
-}
-/* line 192, ../sass/components/_our_compact_page.scss */
-.section-resource-theme .section-resource-theme .view-content .views-row .views-field-field-image img {
-  border: 2.5px solid #fff;
-  margin: 0px -3px;
-  box-shadow: 1.7px 2px 4px -3px #333;
-  width: 100%;
-  height: 145px;
-}
-/* line 201, ../sass/components/_our_compact_page.scss */
-.section-resource-theme .section-resource-theme .view-content .views-row .views-field-field-media {
-  display: inline-block;
-  float: right;
-  text-transform: uppercase;
-  margin-top: 5px;
-  margin-bottom: 0;
-}
-/* line 208, ../sass/components/_our_compact_page.scss */
-.section-resource-theme .section-resource-theme .view-content .views-row .views-field-field-media a {
-  color: #ce9bc0;
-}
-/* line 212, ../sass/components/_our_compact_page.scss */
-.section-resource-theme .section-resource-theme .view-content .views-row .views-field-field-media a:before {
-  content: "\e904";
-  font-family: "amani-icons";
-  color: #ce9bc0;
-  margin-right: 10px;
-  display: inline-block;
-}
-
-/* line 225, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content {
-  font-family: "Open Sans Condensed", sans-serif;
-  width: 840px;
-  margin: auto;
-}
-/* line 230, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .breadcrumb, .node-type-resource #content #page-title {
-  display: none;
-}
-/* line 234, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .field-name-field-image {
-  margin-bottom: -10px;
-}
-/* line 238, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content {
-  font-weight: 100;
-  background: #fcfbfb;
-  padding: 35px;
-  box-shadow: 0px 3px 3px -2px #777;
-}
-/* line 244, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .share-icons {
-  float: right;
-}
-/* line 247, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .share-icons h3 {
-  display: inline-block;
-  margin-right: 5px;
-  font-family: "Open Sans", sans-serif;
-}
-/* line 253, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .share-icons .social-menu {
-  width: 100px;
-  display: inline-block;
-  vertical-align: bottom;
-}
-/* line 258, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .share-icons .social-menu div {
-  width: 30px;
-  height: 36px;
-  display: inline-block;
-  margin: 0px 2px;
-}
-/* line 265, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .share-icons .social-menu .social-media-facebook {
-  background: url(../images/icons/black-facebook.png) no-repeat 0 0;
-}
-/* line 268, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .share-icons .social-menu .social-media-twitter {
-  background: url(../images/icons/black-twitter.png) no-repeat 0 0;
-}
-/* line 274, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content h1#node-title {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #ce9bc0;
-  font-size: 30px;
-  margin-top: 10px;
-  clear: both;
-}
-/* line 283, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .content-body {
-  font-size: 16px;
-}
-/* line 286, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .content-body .meta-info {
-  color: #acacac;
-  border-left: 2px solid;
-  padding-left: 10px;
-  margin-bottom: 30px;
-}
-/* line 292, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .content-body .meta-info p {
-  margin-bottom: 10px;
-}
-/* line 297, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .content-body .field-name-body {
-  font-family: "Open Sans", sans-serif;
-  line-height: 30px;
-}
-/* line 303, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-label {
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: 5px;
-}
-/* line 308, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-items > div {
-  display: inline-block;
-  background: #d9d9d9;
-  padding: 5px 10px;
-  margin-right: 5px;
-}
-/* line 314, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-items > div a {
-  color: #7f7f7f;
-  text-transform: uppercase;
-}
-/* line 321, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .content-body .file-download {
-  font-family: "Open Sans", sans-serif;
-  background: #ebebeb;
-  padding: 40px;
-  margin: 0 auto;
-  margin-top: 30px;
-  overflow: hidden;
-}
-/* line 329, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .content-body .file-download > div {
-  display: inline-block;
-  vertical-align: middle;
-  width: 49%;
-}
-/* line 335, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .content-body .file-download .field-name-field-media {
-  float: left;
-  font-size: 16px;
-}
-/* line 339, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .content-body .file-download .field-name-field-media a {
-  color: #131313;
-}
-/* line 344, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .content-body .file-download .download-button {
-  float: right;
-  background: #ce9bc0;
-  text-transform: uppercase;
-  padding: 20px 45px;
-  font-size: 24px;
-}
-/* line 351, ../sass/components/_our_compact_page.scss */
-.node-type-resource #content .inner-content .content-body .file-download .download-button a {
-  color: white;
-}
-
-@media (max-width: 980px) {
-  /* line 363, ../sass/components/_our_compact_page.scss */
-  .page-resources.sidebar-second #main {
-    position: relative;
-  }
-  /* line 367, ../sass/components/_our_compact_page.scss */
-  .page-resources.sidebar-second #content {
-    width: 100%;
-    margin: 0;
-    float: none;
-  }
-  /* line 373, ../sass/components/_our_compact_page.scss */
-  .page-resources.sidebar-second .region-sidebar-second {
-    width: 100%;
-    margin: 0;
-    position: absolute;
-    top: 120px;
-    right: 0;
-  }
-}
-
-/* line 383, ../sass/components/_our_compact_page.scss */
-.add-fliter-title {
-  display: block;
-}
-/* line 386, ../sass/components/_our_compact_page.scss */
-.add-fliter-title:before {
-  content: "Filters";
-  color: #ce9bc0;
-  padding: 5px 20px;
-  text-transform: uppercase;
-  border: 1px solid #474f5e;
-  position: relative;
-  top: -40px;
-  right: 0;
-  float: right;
-  display: block;
-  cursor: pointer;
-}
-/* line 400, ../sass/components/_our_compact_page.scss */
-.add-fliter-title .views-exposed-form {
-  position: relative;
-  top: -30px;
-  width: 100%;
-  clear: both;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.7s ease;
-}
-/* line 410, ../sass/components/_our_compact_page.scss */
-.add-fliter-title .views-exposed-form.show {
-  max-height: 500px;
-}
-
-/*
   Partners page
 */
 /* line 6, ../sass/components/_partners_page.scss */
@@ -7606,6 +7180,434 @@ a.permalink {
 /* line 180, ../sass/components/_take-action_page.scss */
 .node-activity a:hover {
   text-decoration: underline;
+}
+
+/*
+  Our compact page and node page
+*/
+/* line 6, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+/* line 9, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy h2.block-title {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #ce9bc0;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+/* line 17, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy #block-views-exp-resources-page {
+  float: right;
+  width: 100%;
+  margin: 10px 0 0;
+  clear: both;
+}
+@media (min-width: 768px) {
+  /* line 17, ../sass/components/_taxonomy_page.scss */
+  .page-taxonomy #block-views-exp-resources-page {
+    float: right;
+  }
+}
+/* line 27, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy #block-views-exp-resources-page form .views-exposed-form {
+  background-color: #f7f6f5;
+  box-shadow: 0px 3px 3px -2px #777;
+}
+@media (min-width: 980px) {
+  /* line 32, ../sass/components/_taxonomy_page.scss */
+  .page-taxonomy #block-views-exp-resources-page form .views-exposed-form:before {
+    content: "Filters";
+    text-transform: uppercase;
+    color: #ce9bc0;
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+    display: block;
+    margin: 0 15px;
+    padding: 15px 0 5px;
+  }
+}
+/* line 44, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy #block-views-exp-resources-page form .views-exposed-form div {
+  float: none;
+  padding: 0;
+}
+/* line 49, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets {
+  padding: 12px;
+}
+/* line 52, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets > div {
+  margin-bottom: 10px;
+}
+/* line 56, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets .form-submit {
+  width: 49%;
+  float: left;
+  margin: 0;
+  border: 1px solid #ce9bc0;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 17px;
+  line-height: 1;
+  height: 37px;
+  letter-spacing: 1px;
+}
+/* line 68, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets .form-submit#edit-submit-resources {
+  background: #ce9bc0;
+  color: white;
+  margin-left: 1%;
+  float: right;
+}
+/* line 75, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets .form-submit#edit-reset {
+  background: transparent;
+  margin-right: 1%;
+  float: right;
+}
+/* line 82, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets label[for="edit-date-min"], .page-taxonomy #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets label[for="edit-date-max"] {
+  display: none;
+}
+/* line 83, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets input[type="text"] {
+  border: 1px solid #cccccc;
+  height: 35px;
+  border-radius: 4px;
+}
+/* line 88, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets select, .page-taxonomy #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets input {
+  background: white;
+}
+/* line 89, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets label, .page-taxonomy #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets input {
+  color: #ce9bc0;
+}
+/* line 90, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets select {
+  border: 1px solid #aaa;
+  outline: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: 35px;
+  font-size: 14px;
+  color: #ce9bc0;
+}
+/* line 100, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets select, .page-taxonomy #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets input, .page-taxonomy #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets .form-type-date-popup {
+  width: 100%;
+}
+/* line 101, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets label {
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 3px;
+  letter-spacing: 1.3px;
+}
+/* line 109, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy #block-views-exp-resources-page form .views-exposed-form .views-exposed-widgets #edit-date-wrapper .views-widget > div {
+  margin-bottom: 10px;
+}
+/* line 118, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy .view-taxonomy-term .view-content {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  clear: both;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  /* line 118, ../sass/components/_taxonomy_page.scss */
+  .page-taxonomy .view-taxonomy-term .view-content {
+    clear: none;
+    margin-top: -12px;
+  }
+}
+/* line 133, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy .view-taxonomy-term .view-content .views-row {
+  width: 48%;
+  display: inline-block;
+  float: left;
+  vertical-align: top;
+  border: 1px solid #cccccc;
+  padding: 10px 10px 25px;
+  margin: 12px 1% 20px 1%;
+  position: relative;
+}
+@media (min-width: 768px) {
+  /* line 133, ../sass/components/_taxonomy_page.scss */
+  .page-taxonomy .view-taxonomy-term .view-content .views-row {
+    width: 31%;
+    margin-left: 0;
+    margin-right: 12px;
+  }
+  /* line 147, ../sass/components/_taxonomy_page.scss */
+  .page-taxonomy .view-taxonomy-term .view-content .views-row:nth-child(3n+0) {
+    margin-right: 0;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 133, ../sass/components/_taxonomy_page.scss */
+  .page-taxonomy .view-taxonomy-term .view-content .views-row {
+    margin-right: 15px;
+  }
+}
+/* line 156, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy .view-taxonomy-term .view-content .views-row .share-icons {
+  display: none;
+}
+/* line 160, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy .view-taxonomy-term .view-content .views-row .inner-content h1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  color: #ce9bc0;
+  font-size: 16px;
+}
+/* line 168, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy .view-taxonomy-term .view-content .views-row .views-field-field-link {
+  margin: 0;
+  border-top: 1px solid #ccc;
+  padding: 8px 10px;
+  margin-top: 10px;
+  margin-bottom: -14px;
+  text-align: right;
+  text-transform: uppercase;
+}
+/* line 177, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy .view-taxonomy-term .view-content .views-row .views-field-field-link a {
+  color: #ce9bc0;
+}
+/* line 182, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy .view-taxonomy-term .view-content .views-row .field-name-field-image {
+  margin-bottom: 10px;
+  height: 150px;
+  overflow: hidden;
+}
+/* line 187, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy .view-taxonomy-term .view-content .views-row .field-name-field-image img {
+  border: 2.5px solid #fff;
+  margin: 0px -3px;
+  box-shadow: 1.7px 2px 4px -3px #333;
+  width: 100%;
+  height: auto;
+}
+/* line 196, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy .view-taxonomy-term .view-content .views-row .download-button {
+  display: inline-block;
+  float: right;
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-bottom: 0;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+/* line 206, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy .view-taxonomy-term .view-content .views-row .download-button a {
+  color: #ce9bc0;
+}
+/* line 210, ../sass/components/_taxonomy_page.scss */
+.page-taxonomy .view-taxonomy-term .view-content .views-row .download-button a:before {
+  content: "\e904";
+  font-family: "amani-icons";
+  color: #ce9bc0;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+/* line 223, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content {
+  font-family: "Open Sans Condensed", sans-serif;
+  width: 840px;
+  margin: auto;
+}
+/* line 228, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .breadcrumb, .node-type-resource #content #page-title {
+  display: none;
+}
+/* line 232, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .field-name-field-image {
+  margin-bottom: -10px;
+}
+/* line 236, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content {
+  font-weight: 100;
+  background: #fcfbfb;
+  padding: 35px;
+  box-shadow: 0px 3px 3px -2px #777;
+}
+/* line 242, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .share-icons {
+  float: right;
+}
+/* line 245, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .share-icons h3 {
+  display: inline-block;
+  margin-right: 5px;
+  font-family: "Open Sans", sans-serif;
+}
+/* line 251, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .share-icons .social-menu {
+  width: 100px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+/* line 256, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .share-icons .social-menu div {
+  width: 30px;
+  height: 36px;
+  display: inline-block;
+  margin: 0px 2px;
+}
+/* line 263, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .share-icons .social-menu .social-media-facebook {
+  background: url(../images/icons/black-facebook.png) no-repeat 0 0;
+}
+/* line 266, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .share-icons .social-menu .social-media-twitter {
+  background: url(../images/icons/black-twitter.png) no-repeat 0 0;
+}
+/* line 272, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content h1#node-title {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #ce9bc0;
+  font-size: 30px;
+  margin-top: 10px;
+  clear: both;
+}
+/* line 281, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .content-body {
+  font-size: 16px;
+}
+/* line 284, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .content-body .meta-info {
+  color: #acacac;
+  border-left: 2px solid;
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
+/* line 290, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .content-body .meta-info p {
+  margin-bottom: 10px;
+}
+/* line 295, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .content-body .field-name-body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 30px;
+}
+/* line 301, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-label {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 5px;
+}
+/* line 306, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-items > div {
+  display: inline-block;
+  background: #d9d9d9;
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+/* line 312, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .content-body .field-name-field-amani-tags .field-items > div a {
+  color: #7f7f7f;
+  text-transform: uppercase;
+}
+/* line 319, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .content-body .file-download {
+  font-family: "Open Sans", sans-serif;
+  background: #ebebeb;
+  padding: 40px;
+  margin: 0 auto;
+  margin-top: 30px;
+  overflow: hidden;
+}
+/* line 327, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .content-body .file-download > div {
+  display: inline-block;
+  vertical-align: middle;
+  width: 49%;
+}
+/* line 333, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .content-body .file-download .field-name-field-media {
+  float: left;
+  font-size: 16px;
+}
+/* line 337, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .content-body .file-download .field-name-field-media a {
+  color: #131313;
+}
+/* line 342, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .content-body .file-download .download-button {
+  float: right;
+  background: #ce9bc0;
+  text-transform: uppercase;
+  padding: 20px 45px;
+  font-size: 24px;
+}
+/* line 349, ../sass/components/_taxonomy_page.scss */
+.node-type-resource #content .inner-content .content-body .file-download .download-button a {
+  color: white;
+}
+
+@media (max-width: 980px) {
+  /* line 361, ../sass/components/_taxonomy_page.scss */
+  .page-resources.sidebar-second #main {
+    position: relative;
+  }
+  /* line 365, ../sass/components/_taxonomy_page.scss */
+  .page-resources.sidebar-second #content {
+    width: 100%;
+    margin: 0;
+    float: none;
+  }
+  /* line 371, ../sass/components/_taxonomy_page.scss */
+  .page-resources.sidebar-second .region-sidebar-second {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 120px;
+    right: 0;
+  }
+}
+
+/* line 381, ../sass/components/_taxonomy_page.scss */
+.add-fliter-title {
+  display: block;
+}
+/* line 384, ../sass/components/_taxonomy_page.scss */
+.add-fliter-title:before {
+  content: "Filters";
+  color: #ce9bc0;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  border: 1px solid #474f5e;
+  position: relative;
+  top: -40px;
+  right: 0;
+  float: right;
+  display: block;
+  cursor: pointer;
+}
+/* line 398, ../sass/components/_taxonomy_page.scss */
+.add-fliter-title .views-exposed-form {
+  position: relative;
+  top: -30px;
+  width: 100%;
+  clear: both;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s ease;
+}
+/* line 408, ../sass/components/_taxonomy_page.scss */
+.add-fliter-title .views-exposed-form.show {
+  max-height: 500px;
 }
 
 /*

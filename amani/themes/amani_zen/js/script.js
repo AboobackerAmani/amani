@@ -25,18 +25,6 @@ Drupal.behaviors.my_custom_behavior = {
   }
 };
 
-Drupal.behaviors.our_compact_view_behavior = {
-  attach: function(context, settings) {
-
-    // Place your code here.
-    $('.section-resource-theme .view-content').masonry({
-      itemSelector: '.views-row'
-    });
-
-  }
-};
-
-
 Drupal.behaviors.toggleMapFilters = {
   attach: function(context, settings) {
 	  if($('body').hasClass('section-mapping-conflict-violence-in-south-sudan')){//Exclude othr pages but the map page
