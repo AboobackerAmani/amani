@@ -213,24 +213,21 @@ function amani_zen_form_alter(&$form, &$form_state, $form_id) {
 
 }
 
-/**
- * Use mini pager for all date views.
- */
 function amani_zen_preprocess_date_views_pager(&$vars) {
-  $datetime = DateTime::createFromFormat('F Y', $vars['nav_title']);
-  if ($datetime) {
-    $month = $datetime ? $datetime->format('F') : NULL;
-    $year = $datetime ? $datetime->format('Y') : NULL;
-    $vars['nav_title'] = "<span class='month'>$month</span> - $year";
-  }
   $vars['mini'] = TRUE;
 }
 
-/**
- * We use the mini calendar which doesn't by default include the year, do so here.
- */
 function amani_zen_date_nav_title($params) {
   // Block 3 is our calendar block.
+  if ($params['view']->current_display == 'page_3' && $params['granularity'] == 'day') {
+    if ($date_info = $params['view']->date_info) {
+      // Year, month , day
+      $format = 'Y-n-j';
+      $date = DateTime::createFromFormat($format, "{$date_info->year}-{$date_info->month}-{$date_info->day}");
+      $title = $date->format('l, F j, Y');
+      return $title;
+    }
+  }
   if ($params['view']->current_display == 'block_3' && $params['granularity'] == 'month') {
     if ($date_info = $params['view']->date_info) {
       $month_num = $date_info->month;
