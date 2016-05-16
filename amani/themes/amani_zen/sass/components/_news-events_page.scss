@@ -136,7 +136,8 @@
 
 //Event List block on right sidebar
 .page-news-and-events .block-views,
-.node-type-event #block-views-calendar-of-events-list {
+.node-type-event #block-views-calendar-of-events-list,
+.node-type-event .block-views {
   background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
   padding: 16px;
   margin: 0 0 30px 0;
@@ -336,8 +337,9 @@
     letter-spacing: 1px;
   }
 }
+
 .node-article {
-  .field-name-field-article-date .date-display-single{
+  .field-name-field-article-date .date-display-single {
     font-family: "Open Sans Condensed", sans-serif;
     text-transform: uppercase;
     font-style: italic;
@@ -347,22 +349,28 @@
     margin-bottom: 10px;
   }
   
+  .field-name-field-article-author .field-items {
+    display: inline-block;
+  }
+  
   .field-name-field-article-author a {
+    font-family: "Open Sans Condensed", sans-serif;
     font-style: italic;
     text-transform: uppercase;
     color: $purple-alt;
     float: left;
     margin-right: 10px;
-    
-    &:before {
-      content: "by";
-      font-family: "Open Sans Condensed", sans-serif;
-      font-style: italic;
-      text-transform: none;
-      letter-spacing: 1px;
-      color: #333;
-      margin-right: 5px;
-    }
+  }
+  
+  .field-name-field-article-author:before {
+    content: "by";
+    font-family: "Open Sans Condensed", sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    vertical-align: top;
+    letter-spacing: 1px;
+    color: $silver-chalice-2;
+    margin-right: 5px;
   }
   
   .field-name-field-article-type {
@@ -460,6 +468,11 @@
         width: 195px;
       }
     }
+  }
+  
+  .sharethis-buttons {
+    padding: 10px 0;
+    line-height: 30px;
   }
   
 }
@@ -743,6 +756,11 @@ a.permalink {
     }
     .field-name-field-additional-information .field-label:before {
       content: "\f05a";
+    }
+    
+    .sharethis-buttons {
+      padding: 10px 0;
+      line-height: 30px;
     }
   }
 }
