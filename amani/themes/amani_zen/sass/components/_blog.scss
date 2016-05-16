@@ -70,21 +70,23 @@
       font-style: italic;
       letter-spacing: 1px;
       color: $silver-chalice-2;
+      display: inline-block;
     }
   }
   
   .views-field-field-blog-author .field-content a {
     color: $purple-alt; 
-      
-    &:before { 
-      content: "by";
-      font-family: "Open Sans Condensed", sans-serif;
-      font-style: italic;
-      text-transform: none;
-      letter-spacing: 1px;
-      color: #333;
-      margin-right: 5px;
-    }
+    display: inline-block;
+  }
+  
+  .views-field-field-blog-author:before { 
+    content: "by";
+    font-family: $open-sans-condensed;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 1px;
+    margin-right: 5px;
+    color: $silver-chalice-2;
   }
 
   .views-field-field-image {
@@ -176,18 +178,21 @@
     }
   }
   
-  .field-name-field-blog-author .field-items a {
-     font-style: italic;
+  .field-name-field-blog-author .field-items {
+    display: inline-block;
+    a {
+      font-style: italic;
+    } 
   }
   
-  .field-name-field-blog-author .field-items a:before {
+  .field-name-field-blog-author:before { 
     content: "by";
-    font-family: "Open Sans Condensed", sans-serif;
-    text-transform: none;
+    font-family: $open-sans-condensed;
+    text-transform: uppercase;
     font-style: italic;
     letter-spacing: 1px;
-    color: #333;
     margin-right: 5px;
+    color: $silver-chalice-2;
   }
   
   .field-name-field-image {
@@ -222,6 +227,7 @@
     }
     .field-item {
       margin-left: 10px;
+      text-transform: normal;
       &:after {
         content: ",";
         display: inline-block;

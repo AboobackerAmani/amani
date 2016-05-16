@@ -13,7 +13,7 @@
   }
 
   .view-calendar-of-events {
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.7);
     height: auto;
 
     @media all and (max-width: 990px) {
@@ -65,6 +65,18 @@
 
       tr, td {
         vertical-align: bottom;
+      }
+      
+      td {
+        padding-top: 20px;
+        background: rgba(0,0,0,0.7);
+        font-weight: 300;
+        
+        &.has-events {
+          a {
+            color: $purple-primary;
+          }
+        }
       }
 
       .month-view .full tr.single-day .no-entry,
@@ -123,6 +135,7 @@
           font-family: $open-sans-condensed;
           text-transform: uppercase;;
           font-weight: 400;
+          color: $white;
 
           .month {
             color: #ce9bc0;
@@ -158,6 +171,8 @@
 // Calendar block in front page - Desktop
 
 .front #block-views-calendar-of-events-block-3 .view-calendar-of-events { 
+  background: rgba(0,0,0,0.4);
+   
   @media all and (min-width: 990px) {
     height: 388px;
     max-height: 390px;
@@ -183,9 +198,72 @@
 //Calendar of events Page
 
 .page-calendar-of-events-day {
+  #content {
+     width: 100%;
+     margin: 0;
+     @include breakpoint(768px) {
+       @include zen-grid-item(8, 1);
+       padding-right: 5px;
+     }
+     .views-row {
+       width: 100%;
+       flex-grow: 0;
+       -webkit-flex-grow: 0;
+       padding-bottom: 20px;
+       margin: 0 0 20px 0;
+       @include breakpoint($breakpoint) {
+         width: 47.5%;
+       }
+       &.views-row-even {
+         margin-left: 1.75%;
+       }
+       &.views-row-odd {
+         margin-right: 1.75%;
+       }
+     }
+
+     @media (max-width: $breakpoint) {
+       .views-row.views-row-even,
+       .views-row.views-row-odd {
+         margin-left: 0;
+         margin-right: 0;
+       }
+     }
+   }
+   .sidebars {
+     width: 100%;
+     margin: 0;
+     padding: 0;
+
+     @include breakpoint($breakpoint) {
+       @include zen-grid-item(4, 1);
+       margin: 0;
+       float: right;
+     }
+
+     @include breakpoint($desktop) {
+       padding-left: 15px;
+       padding-top: 40px;
+       box-sizing: border-box;
+     }
+     
+     .view-calendar-of-events {
+       padding-top: 0;
+     }
+   }
+   .region-sidebar-second {
+     margin: 0;
+     width: 100%;
+   }
+   
   .view-calendar-of-events {
     padding-top: 35px;
+    
+    .views-row {
+      margin-bottom: 20px;
+    }
   }
+  
   .date-heading h3 {
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 28px;
@@ -231,6 +309,7 @@
     font-weight: 600;
     color: $purple-primary;
     text-transform: uppercase;
+    display: block;
     margin-bottom: 5px;
   }
   
@@ -247,4 +326,39 @@
   .calendar-calendar .day-view #single-day-container{
     border-right: 1px solid #ccc;
   }
+  
+  //Event Calendar block on right sidebar
+  
+  #block-views-calendar-of-events-block-3 {
+    background: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    width: 100%;
+    
+    .view-calendar-of-events {
+      background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+      width: 100%;
+
+      .calendar-calendar th {
+        background: rgba(206,155,192, 0.4) none repeat scroll 0 0;
+      }
+      
+      .view-header {letter-spacing: 1.5px;}
+      
+      .view-header:before { 
+        background: none;
+        content: "\e900";
+        font-family: amani-icons;
+        margin-right: 0;
+      }
+            
+      .calendar-calendar .month-view .full td .inner div.day {
+        width: 26.5px;
+      }
+    }
+  }
+}
+
+.page-calendar-of-events-day #block-views-partners-carousel-block.block-views {
+  background: transparent;
 }
