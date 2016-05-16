@@ -111,11 +111,17 @@ function amani_blog_strongarm() {
       'display' => array(
         'language' => array(
           'teaser' => array(
-            'weight' => '0',
+            'weight' => '4',
             'visible' => FALSE,
           ),
           'default' => array(
             'weight' => '8',
+            'visible' => FALSE,
+          ),
+        ),
+        'sharethis' => array(
+          'teaser' => array(
+            'weight' => '3',
             'visible' => FALSE,
           ),
         ),
