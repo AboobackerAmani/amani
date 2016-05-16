@@ -111,11 +111,17 @@ function amani_activity_strongarm() {
       'display' => array(
         'language' => array(
           'teaser' => array(
-            'weight' => '0',
+            'weight' => '5',
             'visible' => FALSE,
           ),
           'default' => array(
             'weight' => '0',
+            'visible' => FALSE,
+          ),
+        ),
+        'sharethis' => array(
+          'teaser' => array(
+            'weight' => '2',
             'visible' => FALSE,
           ),
         ),

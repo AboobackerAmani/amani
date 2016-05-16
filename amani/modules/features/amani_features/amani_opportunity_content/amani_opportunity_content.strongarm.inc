@@ -119,8 +119,14 @@ function amani_opportunity_content_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '0',
-            'visible' => TRUE,
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+        ),
+        'sharethis' => array(
+          'teaser' => array(
+            'weight' => '3',
+            'visible' => FALSE,
           ),
         ),
       ),

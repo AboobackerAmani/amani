@@ -116,7 +116,13 @@ function amani_testimonial_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '0',
+            'weight' => '3',
+            'visible' => FALSE,
+          ),
+        ),
+        'sharethis' => array(
+          'teaser' => array(
+            'weight' => '1',
             'visible' => FALSE,
           ),
         ),

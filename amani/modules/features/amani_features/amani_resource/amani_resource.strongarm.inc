@@ -116,7 +116,13 @@ function amani_resource_strongarm() {
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '0',
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+        ),
+        'sharethis' => array(
+          'teaser' => array(
+            'weight' => '2',
             'visible' => FALSE,
           ),
         ),
