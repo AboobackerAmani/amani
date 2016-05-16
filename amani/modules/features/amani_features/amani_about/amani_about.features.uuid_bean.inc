@@ -22,7 +22,7 @@ function amani_about_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => '1374819466',
     'log' => '',
-    'uid' => '0',
+    'uid' => '1',
     'default_revision' => '1',
     'revisions' => array(),
     'vuuid' => 'a10be71c-d8f3-48fa-821e-bbc8af91d057',
@@ -30,7 +30,7 @@ function amani_about_uuid_features_default_beans() {
     'field_bean_body' => array(
       'und' => array(
         0 => array(
-          'value' => '<a href="#"><?php echo t("Donate"); ?></a>',
+          'value' => '<?php print theme(\'links\', array(\'links\' => menu_navigation_links(\'menu-donate\')));?>',
           'format' => 'php_code',
         ),
       ),
