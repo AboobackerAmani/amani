@@ -224,34 +224,48 @@
 // node type resource page
 .node-type-resource #content {
   font-family: $open-sans-condensed;
-  width: 840px;
+  width: 100%;
   margin: auto;
+  
+  @include breakpoint($breakpoint) {
+    width: 840px;
+  }
 
   .breadcrumb, #page-title {
     display: none;
   }
 
   .field-name-field-image {
+    text-align: center;
+    padding: 0;
     margin-bottom: -10px;
+    background-color: #fcfbfb;
+    
+    img {
+      width: 100%;
+    }
   }
 
   .inner-content {
     font-weight: 100;
     background: #fcfbfb;
-    padding: 35px;
     box-shadow: 0px 3px 3px -2px #777;
+    padding: 20px;
+    @include breakpoint($breakpoint) {
+      padding: 35px;
+    }
 
     .share-icons {
       float: right;
 
       h3 {
         display: inline-block;
-        margin-right: 5px;
+        margint: 0 5px 0 0;
         font-family: $open-sans;
+        line-height: 1;
       }
 
       .social-menu {
-        width: 100px;
         display: inline-block;
         vertical-align: bottom;
 
@@ -261,12 +275,73 @@
           display: inline-block;
           margin: 0px 2px;
         }
+        
+        a {
+          display: inline-block;
+          list-style: none outside none;
+          margin-left: 4px;
+          margin-bottom: 12px;
+          position: relative;
+          
+          .social-media-facebook:before,
+          .social-media-google\+:before,
+          .social-media-instagram:before,
+          .social-media-linkedin:before,
+          .social-media-pinterest:before,
+          .social-media-rss:before,
+          .social-media-vimeo:before,
+          .social-media-youtube:before,
+          .social-media-twitter:before {
+            content: "\e802";
+            font-family: amani-icons;
+            font-size: 24px;
+            color: $grey-darker;
+            display: block;
+            margin-top: 5px;
+            position: relative;
+            left: 0;
+            @media all and (min-width: $breakpoint) {
+              left: 0;
+            }
+          }
 
-        .social-media-facebook {
-          background: url(../images/icons/black-facebook.png) no-repeat 0 0;
-        }
-        .social-media-twitter {
-          background: url(../images/icons/black-twitter.png) no-repeat 0 0;
+          .social-media-google\+:before {
+            content: "\e801";
+          }
+
+          .social-media-instagram:before {
+            content: "\e803";
+          }
+
+          .social-media-linkedin:before {
+            content: "\e808";
+          }
+
+          .social-media-pinterest:before {
+            content: "\f0d3";
+            font-size: 28px;
+            position: relative;
+            bottom: -2px;
+          }
+
+          .social-media-rss:before {
+            content: "\e805";
+          }
+
+          .social-media-vimeo:before {
+            content: "\e806";
+          }
+
+          .social-media-youtube:before {
+            content: "\f166";
+            font-size: 28px;
+            position: relative;
+            bottom: -2px;
+          }
+
+          .social-media-twitter:before {
+            content: "\e804";
+          }
         }
       }
     }
@@ -291,6 +366,10 @@
 
         p {
           margin-bottom: 10px;
+        }
+        
+        a {
+          color: $purple-primary; 
         }
       }
 
