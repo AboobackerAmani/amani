@@ -150,6 +150,23 @@
   span.form-required {
     color: #DBA6C6;
   }
+  
+  //Move Category box on the top
+  .contact-form {
+    position: relative;
+    .form-select {
+      background: url(../images/dropdown-arrow.png) no-repeat 0 right;
+      border: 1px solid #ccc;
+      padding: 5px;
+      position: relative;
+      // webkit-appearance: none;
+      //      -moz-appearance: none;
+      //      appearance: none;
+    }
+    select::-ms-expand {
+        display: none;
+    }
+  }
 }
 
 .sidebar-second.page-contact #content {

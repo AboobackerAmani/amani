@@ -2079,9 +2079,24 @@ footer {
 .page-contact span.form-required {
   color: #DBA6C6;
 }
+/* line 155, ../sass/components/_contact_page.scss */
+.page-contact .contact-form {
+  position: relative;
+}
+/* line 157, ../sass/components/_contact_page.scss */
+.page-contact .contact-form .form-select {
+  background: url(../images/dropdown-arrow.png) no-repeat 0 right;
+  border: 1px solid #ccc;
+  padding: 5px;
+  position: relative;
+}
+/* line 166, ../sass/components/_contact_page.scss */
+.page-contact .contact-form select::-ms-expand {
+  display: none;
+}
 
 @media all and (max-width: 768px) {
-  /* line 155, ../sass/components/_contact_page.scss */
+  /* line 172, ../sass/components/_contact_page.scss */
   .sidebar-second.page-contact #content {
     width: 100%;
     margin: 0 auto;
