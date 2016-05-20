@@ -119,7 +119,7 @@ function amani_activity_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '2',
+        'weight' => '4',
       ),
     ),
   );
@@ -207,7 +207,7 @@ function amani_activity_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '11',
+        'weight' => '2',
       ),
     ),
   );
@@ -279,7 +279,7 @@ function amani_activity_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '5',
+        'weight' => '7',
       ),
     ),
   );
@@ -361,7 +361,7 @@ function amani_activity_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '3',
+        'weight' => '5',
       ),
     ),
   );
@@ -433,7 +433,7 @@ function amani_activity_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '7',
+        'weight' => '9',
       ),
     ),
   );
@@ -518,7 +518,7 @@ function amani_activity_field_default_fields() {
           'resolution' => '200x150',
         ),
         'type' => 'imagefield_crop_widget',
-        'weight' => '1',
+        'weight' => '3',
       ),
     ),
   );
@@ -602,7 +602,7 @@ function amani_activity_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '8',
+        'weight' => '10',
       ),
     ),
   );
@@ -697,7 +697,7 @@ function amani_activity_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '6',
+        'weight' => '8',
       ),
     ),
   );
@@ -779,7 +779,7 @@ function amani_activity_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '4',
+        'weight' => '6',
       ),
     ),
   );
