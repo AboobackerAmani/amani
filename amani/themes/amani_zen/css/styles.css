@@ -3113,27 +3113,29 @@ footer .field-label {
   /* line 524, ../sass/components/_front-page-blocks.scss */
   .content_bottom .jcarousel-skin-default .jcarousel-container-horizontal {
     width: 232px;
+    overflow-y: hidden;
+    padding: 20px 40px 0;
   }
 }
-/* line 532, ../sass/components/_front-page-blocks.scss */
+/* line 534, ../sass/components/_front-page-blocks.scss */
 .content_bottom .jcarousel-skin-default .jcarousel-clip-horizontal {
   width: 448px;
 }
 @media (max-width: 768px) {
-  /* line 532, ../sass/components/_front-page-blocks.scss */
+  /* line 534, ../sass/components/_front-page-blocks.scss */
   .content_bottom .jcarousel-skin-default .jcarousel-clip-horizontal {
     width: 232px;
   }
 }
-/* line 539, ../sass/components/_front-page-blocks.scss */
+/* line 541, ../sass/components/_front-page-blocks.scss */
 .content_bottom .jcarousel-skin-default .jcarousel-item-horizontal {
   margin: 0 8px 0 0;
 }
-/* line 543, ../sass/components/_front-page-blocks.scss */
+/* line 545, ../sass/components/_front-page-blocks.scss */
 .content_bottom .jcarousel-skin-default .jcarousel-item {
   position: relative;
 }
-/* line 546, ../sass/components/_front-page-blocks.scss */
+/* line 548, ../sass/components/_front-page-blocks.scss */
 .content_bottom .jcarousel-skin-default .jcarousel-item .views-field-field-image {
   position: absolute;
   top: 50%;
@@ -3142,17 +3144,17 @@ footer .field-label {
   right: 0;
   margin: 0 auto;
 }
-/* line 555, ../sass/components/_front-page-blocks.scss */
+/* line 557, ../sass/components/_front-page-blocks.scss */
 .content_bottom .jcarousel-skin-default .jcarousel-next-horizontal {
   right: 4px;
 }
-/* line 558, ../sass/components/_front-page-blocks.scss */
+/* line 560, ../sass/components/_front-page-blocks.scss */
 .content_bottom .jcarousel-skin-default .jcarousel-prev-horizontal {
   left: 5px;
 }
 
 @media all and (max-width: 768px) {
-  /* line 565, ../sass/components/_front-page-blocks.scss */
+  /* line 567, ../sass/components/_front-page-blocks.scss */
   #block-views-front-page-blocks-block {
     margin-bottom: 0;
   }
