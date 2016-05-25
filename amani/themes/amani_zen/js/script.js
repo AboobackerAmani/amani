@@ -74,52 +74,16 @@ Drupal.behaviors.toggleTeamFilters = {
   attach: function(context, settings) {
 	  
 	  if($('body').hasClass('section-team')){//Exclude othr pages but the team page
-		  var breakpoint = 761;
 		  var filterObjParent = $('#main').find('.view-team');
-		  var filterObj = filterObjParent.find('.view-filters');
-		  var initialWidth = $(window).width();
-		  var toggleMapFilters = function(initialWidth){
-			  var initialLoad, windowWidth, filterHandle = $('#filter');	
-			  if(jQuery.type(initialWidth) === 'number'){
-				windowWidth = initialWidth;
-				initialLoad = true
-			  }else {
-				windowWidth = $(window).width();
-				initialLoad = false;
-			  }
-			  switch(true){
-			  case (windowWidth < breakpoint ):
-				  //inject a button
-				  if(filterHandle.length === 0){
-				  filterObjParent.prepend('<h3 id="filter" class="mobile-team-filter "><a>Filters</a></h3>')
-				  $('#filter').click(function(){
-				  	filterObj.fadeToggle("slow", "linear" ,function(){
-						$('#filter').toggleClass( "expanded" );
-				  	});
-				  });
-				  if(initialLoad){
-					  filterObj.hide();
-				  }
-				  }else{
-				  	 filterHandle.show();
-				  }
-				  break;
-			  
-			  case (windowWidth >= breakpoint ):
-
-				  	filterHandle.hide();					 
-  					filterObj.show();			
-				  
-				  break;
-			  }
-		  
-		  };
-		  $(window).smartresize(toggleMapFilters);
-		  new toggleMapFilters(initialWidth);//initilizes 
+      var filterObj = filterObjParent.find('.view-filters');
+      
+      filterObjParent.prepend('<h3 id="filter" class="mobile-team-filter "><a>Filters</a></h3>')
+      $('#filter').click(function(){
+        filterObj.fadeToggle("slow", "linear" ,function(){
+          $('#filter').toggleClass( "expanded" );
+        });
+      });
 	  }
-
-	  
-
   }
 };
 

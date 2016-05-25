@@ -2,6 +2,22 @@
   Team page
 */
 .view-team {
+  #filter {
+    // display: block !important;
+    box-shadow: none;
+    background-color: #f7f6f5;
+    padding: 5px;
+    margin-bottom: -10px;
+    border-bottom: 1px solid #D0D0D0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+
+    &::before {
+      content: '';
+    }
+  }
+
   .view-filters {
     background-color: #f7f6f5;
     padding: 5px 10px 10px;
@@ -21,7 +37,10 @@
     label {
       text-transform: uppercase;
       font-family: $open-sans-condensed;
-      font-size: 12px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      padding-bottom: 5px;
+      font-weight: 300;
       color: #ce9bc0;
     }
     .views-exposed-widget {
@@ -49,7 +68,7 @@
       @include border-radius(3px);
       @include breakpoint(768px) {
         width: 330px;
-        height: 28px;
+        height: 34px;
       }
       
       @media (max-width: 1044px) and (min-width: 767px){
@@ -128,7 +147,7 @@
       margin: 20px 20px 0 0;
       width: 120px; 
       @include breakpoint($breakpoint) {
-        margin: 20px 0 0;
+        margin: 26px 0 0;
       }
     }
     
@@ -341,5 +360,13 @@
       margin-right: 10px;
       vertical-align: top;
     }
+  }
+}
+
+
+.page-team {
+  .title {
+    color: rgb(71,71,71);
+    font-size: 36px;
   }
 }
