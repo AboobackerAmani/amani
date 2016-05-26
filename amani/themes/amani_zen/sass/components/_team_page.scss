@@ -60,6 +60,19 @@
         clear: none;
       }
     }
+
+    .views-widget-filter-field_team_member_type_tid {
+      padding-right: 150px;
+
+      @media (max-width: 910px) {
+        padding-right: 50px;
+      }
+
+      @media (max-width: 766px) {
+        padding-right: 0px;
+      }
+    }
+
     .form-type-textfield input,
     .form-type-select select {
       width: 100%;
@@ -67,12 +80,16 @@
       border: 1px solid #ccc;
       @include border-radius(3px);
       @include breakpoint(768px) {
-        width: 330px;
+        width: 250px;
         height: 34px;
       }
       
       @media (max-width: 1044px) and (min-width: 767px){
         width: 180px;
+      }
+
+      @media (max-width: 766px) {
+        height: 34px;
       }
     }
     .ajax-progress {
