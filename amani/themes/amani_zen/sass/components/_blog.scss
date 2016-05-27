@@ -42,14 +42,20 @@
   }
   .views-field-title {
     border-bottom: 2px solid $purple-primary;
+    font-size: 14px;
+    margin-bottom: 5px;
     
     a {
       font-family: $open-sans-condensed;
        @include adjust-font-size-to( $h2-font-size );
        color: $purple-primary;
-       font-weight: 600;
        text-transform: uppercase;
     }
+  }
+
+  .views-field-body {
+    font-family: $open-sans-condensed;
+    letter-spacing: 1px;
   }
   
   .views-field-field-blog-date {
@@ -60,6 +66,7 @@
   .views-field-field-blog-date,
   .views-field-field-blog-author {
     margin-bottom: 1.2em;
+    text-transform: uppercase;
     
     .views-label {
       display: none;
@@ -150,7 +157,7 @@
   }
   
   .field-name-field-blog-date .field-item {
-    font-family: "Open Sans Condensed", sans-serif;
+    font-family: $open-sans-condensed;
     text-transform: uppercase;
     font-style: italic;
     letter-spacing: 1px;
@@ -169,7 +176,7 @@
     }
     
     .field-items a {
-      font-family: "Open Sans Condensed", sans-serif;
+      font-family: $open-sans-condensed;
       text-transform: uppercase;
       letter-spacing: 1px;
       color: $purple-alt;
@@ -210,7 +217,7 @@
   .field-name-field-category {
     .field-label,
     .field-item {
-      font-family: "Open Sans Condensed", sans-serif;
+      font-family: $open-sans-condensed;
       display: inline-block;
       
       a {color: $purple-alt;}
