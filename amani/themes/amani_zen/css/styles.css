@@ -7626,9 +7626,9 @@ a.permalink {
 }
 /* line 16, ../sass/components/_team_page.scss */
 .view-team #filter::before {
-  content: '';
+  padding-right: 20px;
 }
-/* line 21, ../sass/components/_team_page.scss */
+/* line 22, ../sass/components/_team_page.scss */
 .view-team .view-filters {
   background-color: #f7f6f5;
   padding: 5px 10px 10px;
@@ -7647,7 +7647,7 @@ a.permalink {
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.24);
 }
 @media (min-width: 768px) {
-  /* line 21, ../sass/components/_team_page.scss */
+  /* line 22, ../sass/components/_team_page.scss */
   .view-team .view-filters {
     display: flex;
     display: -webkit-flex;
@@ -7655,7 +7655,7 @@ a.permalink {
     padding: 5px 30px 10px;
   }
 }
-/* line 37, ../sass/components/_team_page.scss */
+/* line 38, ../sass/components/_team_page.scss */
 .view-team .view-filters label {
   text-transform: uppercase;
   font-family: "Open Sans Condensed", sans-serif;
@@ -7665,17 +7665,17 @@ a.permalink {
   font-weight: 300;
   color: #ce9bc0;
 }
-/* line 46, ../sass/components/_team_page.scss */
+/* line 47, ../sass/components/_team_page.scss */
 .view-team .view-filters .views-exposed-widget {
   padding-right: 0;
 }
 @media (min-width: 768px) {
-  /* line 46, ../sass/components/_team_page.scss */
+  /* line 47, ../sass/components/_team_page.scss */
   .view-team .view-filters .views-exposed-widget {
     padding-right: 1em;
   }
 }
-/* line 52, ../sass/components/_team_page.scss */
+/* line 53, ../sass/components/_team_page.scss */
 .view-team .view-filters .views-widget-filter-keys,
 .view-team .view-filters .views-widget-filter-field_team_member_type_tid {
   display: block;
@@ -7683,7 +7683,7 @@ a.permalink {
   width: 100%;
 }
 @media (min-width: 768px) {
-  /* line 52, ../sass/components/_team_page.scss */
+  /* line 53, ../sass/components/_team_page.scss */
   .view-team .view-filters .views-widget-filter-keys,
   .view-team .view-filters .views-widget-filter-field_team_member_type_tid {
     display: inline-block;
@@ -7691,23 +7691,23 @@ a.permalink {
     clear: none;
   }
 }
-/* line 64, ../sass/components/_team_page.scss */
+/* line 65, ../sass/components/_team_page.scss */
 .view-team .view-filters .views-widget-filter-field_team_member_type_tid {
   padding-right: 150px;
 }
 @media (max-width: 910px) {
-  /* line 64, ../sass/components/_team_page.scss */
+  /* line 65, ../sass/components/_team_page.scss */
   .view-team .view-filters .views-widget-filter-field_team_member_type_tid {
     padding-right: 50px;
   }
 }
 @media (max-width: 766px) {
-  /* line 64, ../sass/components/_team_page.scss */
+  /* line 65, ../sass/components/_team_page.scss */
   .view-team .view-filters .views-widget-filter-field_team_member_type_tid {
     padding-right: 0px;
   }
 }
-/* line 76, ../sass/components/_team_page.scss */
+/* line 77, ../sass/components/_team_page.scss */
 .view-team .view-filters .form-type-textfield input,
 .view-team .view-filters .form-type-select select {
   width: 100%;
@@ -7718,7 +7718,7 @@ a.permalink {
   border-radius: 3px;
 }
 @media (min-width: 768px) {
-  /* line 76, ../sass/components/_team_page.scss */
+  /* line 77, ../sass/components/_team_page.scss */
   .view-team .view-filters .form-type-textfield input,
   .view-team .view-filters .form-type-select select {
     width: 250px;
@@ -7726,24 +7726,24 @@ a.permalink {
   }
 }
 @media (max-width: 1044px) and (min-width: 767px) {
-  /* line 76, ../sass/components/_team_page.scss */
+  /* line 77, ../sass/components/_team_page.scss */
   .view-team .view-filters .form-type-textfield input,
   .view-team .view-filters .form-type-select select {
     width: 180px;
   }
 }
 @media (max-width: 766px) {
-  /* line 76, ../sass/components/_team_page.scss */
+  /* line 77, ../sass/components/_team_page.scss */
   .view-team .view-filters .form-type-textfield input,
   .view-team .view-filters .form-type-select select {
     height: 34px;
   }
 }
-/* line 95, ../sass/components/_team_page.scss */
+/* line 96, ../sass/components/_team_page.scss */
 .view-team .view-filters .ajax-progress {
   position: absolute;
 }
-/* line 99, ../sass/components/_team_page.scss */
+/* line 100, ../sass/components/_team_page.scss */
 .view-team .view-content {
   margin: 0 -1%;
   display: flex;
@@ -7752,7 +7752,7 @@ a.permalink {
   -webkit-flex-flow: row wrap;
   margin-bottom: 20px;
 }
-/* line 108, ../sass/components/_team_page.scss */
+/* line 109, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row {
   width: 100%;
   flex-grow: 0;
@@ -7762,7 +7762,7 @@ a.permalink {
   margin-bottom: 20px;
 }
 @media (min-width: 768px) {
-  /* line 108, ../sass/components/_team_page.scss */
+  /* line 109, ../sass/components/_team_page.scss */
   .view-team .view-content .views-row {
     width: 31.3%;
     margin: 20px 1% 0 1%;
@@ -7770,42 +7770,42 @@ a.permalink {
     -webkit-justify-content: space-between;
   }
 }
-/* line 124, ../sass/components/_team_page.scss */
+/* line 125, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-field-team-member-type {
   display: none;
 }
-/* line 127, ../sass/components/_team_page.scss */
+/* line 128, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-field-team-image {
   max-height: 226px;
   overflow: hidden;
 }
-/* line 130, ../sass/components/_team_page.scss */
+/* line 131, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-field-team-image img {
   height: auto;
   width: 100%;
 }
-/* line 135, ../sass/components/_team_page.scss */
+/* line 136, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-title {
   margin-top: 15px;
 }
-/* line 137, ../sass/components/_team_page.scss */
+/* line 138, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-title a {
   color: #ce9bc0;
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 24px;
   line-height: 1em;
 }
-/* line 144, ../sass/components/_team_page.scss */
+/* line 145, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-field-team-title {
   color: #ce9bc0;
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 18px;
 }
-/* line 149, ../sass/components/_team_page.scss */
+/* line 150, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-field-team-bio {
   margin-top: 20px;
 }
-/* line 153, ../sass/components/_team_page.scss */
+/* line 154, ../sass/components/_team_page.scss */
 .view-team .view-content .views-row .views-field-view-node a {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 14px;
@@ -7828,7 +7828,7 @@ a.permalink {
   position: relative;
   top: 2px;
 }
-/* line 162, ../sass/components/_team_page.scss */
+/* line 163, ../sass/components/_team_page.scss */
 .view-team .views-exposed-form .form-submit {
   font-family: "Open Sans Condensed",sans-serif;
   background: #ce9bc0;
@@ -7847,18 +7847,18 @@ a.permalink {
   width: 120px;
 }
 @media (min-width: 768px) {
-  /* line 162, ../sass/components/_team_page.scss */
+  /* line 163, ../sass/components/_team_page.scss */
   .view-team .views-exposed-form .form-submit {
     margin: 26px 0 0;
   }
 }
-/* line 171, ../sass/components/_team_page.scss */
+/* line 172, ../sass/components/_team_page.scss */
 .view-team .views-exposed-form .views-submit-button,
 .view-team .views-exposed-form .views-reset-button {
   float: right;
   margin-left: 15px;
 }
-/* line 177, ../sass/components/_team_page.scss */
+/* line 178, ../sass/components/_team_page.scss */
 .view-team .views-exposed-form .views-submit-button .form-submit {
   font-family: "Open Sans Condensed",sans-serif;
   background: #ce9bc0;
@@ -7873,15 +7873,15 @@ a.permalink {
   text-transform: uppercase;
   margin-right: 0;
 }
-/* line 182, ../sass/components/_team_page.scss */
+/* line 183, ../sass/components/_team_page.scss */
 .view-team .views-exposed-form .views-reset-button .form-submit {
   margin-right: 0;
 }
-/* line 186, ../sass/components/_team_page.scss */
+/* line 187, ../sass/components/_team_page.scss */
 .view-team .view-filters .views-exposed-widget.views-reset-button {
   padding-right: 0;
 }
-/* line 191, ../sass/components/_team_page.scss */
+/* line 192, ../sass/components/_team_page.scss */
 .view-team .view-content h3 {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 30px;
@@ -7895,20 +7895,20 @@ a.permalink {
   margin-left: 1%;
 }
 @media (min-width: 768px) {
-  /* line 191, ../sass/components/_team_page.scss */
+  /* line 192, ../sass/components/_team_page.scss */
   .view-team .view-content h3 {
     margin-top: 1em;
   }
 }
-/* line 206, ../sass/components/_team_page.scss */
+/* line 207, ../sass/components/_team_page.scss */
 .view-team .view-content h3 a:link, .view-team .view-content h3 a:visited {
   color: #ce9bc0;
 }
-/* line 210, ../sass/components/_team_page.scss */
+/* line 211, ../sass/components/_team_page.scss */
 .view-team .view-content h3:last-child {
   display: none;
 }
-/* line 214, ../sass/components/_team_page.scss */
+/* line 215, ../sass/components/_team_page.scss */
 .view-team .view-content .views-field-field-team-member-type a {
   font-family: "Open Sans Condensed", sans-serif;
   font-style: italic;
@@ -7916,44 +7916,44 @@ a.permalink {
   color: #999;
 }
 
-/* line 224, ../sass/components/_team_page.scss */
+/* line 225, ../sass/components/_team_page.scss */
 .node-team {
   border-top: 2px solid #ce9bc0;
   padding-top: 25px;
 }
-/* line 228, ../sass/components/_team_page.scss */
+/* line 229, ../sass/components/_team_page.scss */
 .node-team .field-name-field-team-image {
   display: block;
   margin-right: 0;
   margin-bottom: 25px;
   float: none;
 }
-/* line 234, ../sass/components/_team_page.scss */
+/* line 235, ../sass/components/_team_page.scss */
 .node-team .field-name-field-team-image img {
   width: 100%;
 }
 @media (min-width: 768px) {
-  /* line 228, ../sass/components/_team_page.scss */
+  /* line 229, ../sass/components/_team_page.scss */
   .node-team .field-name-field-team-image {
     display: block;
     margin-right: 20px;
     float: left;
   }
-  /* line 241, ../sass/components/_team_page.scss */
+  /* line 242, ../sass/components/_team_page.scss */
   .node-team .field-name-field-team-image img {
     width: auto;
   }
 }
-/* line 245, ../sass/components/_team_page.scss */
+/* line 246, ../sass/components/_team_page.scss */
 .node-team .field-group-format {
   margin-left: 0;
 }
-/* line 253, ../sass/components/_team_page.scss */
+/* line 254, ../sass/components/_team_page.scss */
 .node-team .field-name-field-name {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 24px;
 }
-/* line 258, ../sass/components/_team_page.scss */
+/* line 259, ../sass/components/_team_page.scss */
 .node-team .field-name-field-team-member-type a,
 .node-team .field-name-field-team-title {
   font-family: "Open Sans Condensed", sans-serif;
@@ -7963,54 +7963,54 @@ a.permalink {
   display: inline-block;
   margin-top: 5px;
 }
-/* line 267, ../sass/components/_team_page.scss */
+/* line 268, ../sass/components/_team_page.scss */
 .node-team .field-name-field-team-member-type {
   display: inline-block;
 }
-/* line 270, ../sass/components/_team_page.scss */
+/* line 271, ../sass/components/_team_page.scss */
 .node-team .field-name-field-team-member-type a {
   line-height: 1;
   margin-top: 0;
   margin-bottom: 20px;
 }
-/* line 275, ../sass/components/_team_page.scss */
+/* line 276, ../sass/components/_team_page.scss */
 .node-team .field-name-field-team-title {
   font-style: normal;
   color: #414042;
 }
-/* line 280, ../sass/components/_team_page.scss */
+/* line 281, ../sass/components/_team_page.scss */
 .node-team .field-name-field-email {
   margin-top: 20px;
 }
-/* line 283, ../sass/components/_team_page.scss */
+/* line 284, ../sass/components/_team_page.scss */
 .node-team .field-name-field-email a {
   color: #ce9bc0;
 }
-/* line 286, ../sass/components/_team_page.scss */
+/* line 287, ../sass/components/_team_page.scss */
 .node-team .field-name-field-email a:hover {
   text-decoration: underline;
 }
-/* line 292, ../sass/components/_team_page.scss */
+/* line 293, ../sass/components/_team_page.scss */
 .node-team .field-name-field-phone {
   margin-bottom: 20px;
   font-family: "Open Sans Condensed", sans-serif;
   letter-spacing: 2px;
 }
 
-/* line 301, ../sass/components/_team_page.scss */
+/* line 302, ../sass/components/_team_page.scss */
 .page-taxonomy-term .field-name-field-name a {
   color: #414042;
 }
-/* line 304, ../sass/components/_team_page.scss */
+/* line 305, ../sass/components/_team_page.scss */
 .page-taxonomy-term .field-name-field-team-bio {
   margin-top: 20px;
 }
-/* line 307, ../sass/components/_team_page.scss */
+/* line 308, ../sass/components/_team_page.scss */
 .page-taxonomy-term .node-readmore {
   float: left;
   margin-left: 10px;
 }
-/* line 310, ../sass/components/_team_page.scss */
+/* line 311, ../sass/components/_team_page.scss */
 .page-taxonomy-term .node-readmore a {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 14px;
@@ -8034,84 +8034,84 @@ a.permalink {
   top: 2px;
 }
 
-/* line 317, ../sass/components/_team_page.scss */
+/* line 318, ../sass/components/_team_page.scss */
 .page-taxonomy-term a.feed-icon {
   display: none;
 }
 
-/* line 322, ../sass/components/_team_page.scss */
+/* line 323, ../sass/components/_team_page.scss */
 .team-content-container {
   clear: left;
   float: left;
   width: 100%;
 }
 
-/* line 328, ../sass/components/_team_page.scss */
+/* line 329, ../sass/components/_team_page.scss */
 .team-content-image {
   float: left;
   width: 100%;
 }
 @media (min-width: 768px) {
-  /* line 328, ../sass/components/_team_page.scss */
+  /* line 329, ../sass/components/_team_page.scss */
   .team-content-image {
     width: 25%;
   }
 }
 @media (min-width: 768px) and (max-width: 860px) {
-  /* line 328, ../sass/components/_team_page.scss */
+  /* line 329, ../sass/components/_team_page.scss */
   .team-content-image {
     width: 32%;
   }
 }
 @media (min-width: 861px) and (max-width: 1023px) {
-  /* line 328, ../sass/components/_team_page.scss */
+  /* line 329, ../sass/components/_team_page.scss */
   .team-content-image {
     width: 28%;
   }
 }
 
-/* line 342, ../sass/components/_team_page.scss */
+/* line 343, ../sass/components/_team_page.scss */
 .team-content-content {
   float: left;
   width: 100%;
 }
 @media (min-width: 768px) {
-  /* line 342, ../sass/components/_team_page.scss */
+  /* line 343, ../sass/components/_team_page.scss */
   .team-content-content {
     width: 75%;
   }
 }
 @media (min-width: 768px) and (max-width: 860px) {
-  /* line 342, ../sass/components/_team_page.scss */
+  /* line 343, ../sass/components/_team_page.scss */
   .team-content-content {
     width: 68%;
   }
 }
 @media (min-width: 861px) and (max-width: 1023px) {
-  /* line 342, ../sass/components/_team_page.scss */
+  /* line 343, ../sass/components/_team_page.scss */
   .team-content-content {
     width: 72%;
   }
 }
 
-/* line 356, ../sass/components/_team_page.scss */
+/* line 357, ../sass/components/_team_page.scss */
 .back-to-team {
   border-top: solid 3px #ce9bc0;
   padding-top: 25px;
   clear: both;
 }
-/* line 361, ../sass/components/_team_page.scss */
+/* line 362, ../sass/components/_team_page.scss */
 .back-to-team a {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 18px;
   color: #ce9bc0;
   outline: none;
 }
-/* line 367, ../sass/components/_team_page.scss */
+/* line 368, ../sass/components/_team_page.scss */
 .back-to-team a:hover {
   text-decoration: underline;
 }
-/* line 371, ../sass/components/_team_page.scss */
+/* line 372, ../sass/components/_team_page.scss */
 .back-to-team a:before {
   font-family: 'amani-icons';
   content: "\f104";
@@ -8122,7 +8122,7 @@ a.permalink {
   vertical-align: top;
 }
 
-/* line 385, ../sass/components/_team_page.scss */
+/* line 386, ../sass/components/_team_page.scss */
 .page-team .title {
   color: #474747;
   font-size: 36px;
