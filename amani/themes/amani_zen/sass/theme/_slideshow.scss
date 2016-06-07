@@ -158,16 +158,3 @@
     margin: -20px 0 0;
   }
 }
-
-#block-amani-global-behind-front-blocks-image {
-  position: absolute;
-  top: 990px;
-  z-index: -1;
-  margin: 0 -200px;
-  display: block;
-  
-  @media (max-width: $desktop) {
-    display: none;
-  }
-}
-
