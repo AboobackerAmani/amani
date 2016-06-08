@@ -7,43 +7,8 @@
  * @see https://drupal.org/node/1728148
  */
 ?>
-<header class="header" id="header" role="banner">
 
-  <div class="header-wrapper">
-
-  <div class="header-logo clearfix">
-    <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo">
-      <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" />
-    </a>
-  </div>
-
-  <?php if ($site_name || $site_slogan): ?>
-    <div class="header__name-and-slogan" id="name-and-slogan">
-      <?php if ($site_name): ?>
-        <h1 class="header__site-name" id="site-name">
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header__site-link" rel="home"><span><?php print $site_name; ?></span></a>
-        </h1>
-      <?php endif; ?>
-
-      <?php if ($site_slogan): ?>
-        <div class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></div>
-      <?php endif; ?>
-    </div>
-  <?php endif; ?>
-
-  </div>
-
-  <div class="primary-nav-wrapper">
-    <?php print render($page['header']); ?>
-  </div>
-
-	<a href="#" id="mobile-toggle" title="Menu">Menu</a>
-
-  <div class="slideshow">
-    <?php print render($page['subheader']); ?>
-  </div>
-
-</header>
+<?php include_once('siteheader.tpl.inc'); ?>
 
 <div id="page">
 
@@ -91,13 +56,4 @@
   <?php print render($page['content_bottom']); ?>
 </div>
 
-<div class="footer-top"></div>
-
-<div class="footer-wrapper">
-  <?php print render($page['footer']); ?>
-</div>
-
-<div class="footer-legal">
-  <div>&copy; <?php echo date("Y"); ?> <?php print $site_name; ?></div>
-</div>
-
+<?php include_once('sitefooter.tpl.inc'); ?>
