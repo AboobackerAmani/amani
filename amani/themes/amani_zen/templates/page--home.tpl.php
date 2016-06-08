@@ -74,11 +74,6 @@
       		$filteredElements = array();
       		foreach ($page['content'] as $key => $render_item) {
 
-      			/// MARK: -- blocks that we don't want to render
-      			if (in_array($key, array('amani_global_behind_front_blocks_image'))) {
-      				// continue;
-      			}
-
       			/// MARK: -- any block that needs to have the background image, `ADD()` it's block name in the array below
       			if (in_array($key, array('views_front_page_tweets-block', 'fb_likebox_0', 'views_calendar_of_events-block_3'))) {
       				$filteredElements['front-page-bg-image-blocks'][] = $render_item;
@@ -91,9 +86,7 @@
       <?php
 	      foreach($filteredElements as $key => $item) {
 	      	if ($key === 'front-page-bg-image-blocks') {
-	      		// 'front-page-bg-image-blocks' == 0 R
-	      		// 'front-page-bg-image-blocks' === 0 X
-	      		print ('<div class="front-page-bg-image" style="background:url('.file_create_url(file_load(theme_get_setting('front_page_blocks_background_image'))->uri).')">'.render($item).'</div>');
+	      		print ('<div class="front-page-bg-image" style="background-image:url('.file_create_url(file_load(theme_get_setting('front_page_blocks_background_image'))->uri).')">'.render($item).'</div>');
 	      	} else {
 	      		print render($item);
 	      	}
