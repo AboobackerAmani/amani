@@ -34,3 +34,11 @@ function amani_team_preprocess_node(&$vars) {
     }
   }
 }
+
+
+function amani_team_form_alter(&$form, $form_state, $form_id) {
+  if ($form_id == 'views_exposed_form') {
+    // dpm($form);
+    $form['field_team_member_type_tid']['#description'] = '';
+  }
+}
