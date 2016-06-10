@@ -288,6 +288,27 @@ function amani_administrator_configure_amani_form() {
     '#suffix' => '<p>Change image behind homepage twitter, faceboook & calender blocks.</p>',
   );
 
+  $form['blocks']['search_bar_block'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Manage Search bar position'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+
+  $form['blocks']['search_bar_block'][] = array(
+    '#type' => 'select',
+    '#title' => t('Search bar position'),
+    '#options' => array('Header', 'Footer'),
+    '#default_value' => variable_get('site_searchbar_position'),
+    '#description' => t('Choose one of the positions where you would like the Search box to be placed.'),
+  );
+
+  $form['blocks']['search_bar_block'][] = array(
+    '#type' => 'button',
+    '#value' => t('Save Search Bar Position'),
+    '#executes_submit_callback' => TRUE
+  );
+
   $form['site-info'] = array(
     '#type' => 'fieldset',
     '#title' => t('Manage Logo & Tagline'),
@@ -935,6 +956,10 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       else {
         drupal_set_message($error, 'error');
       }
+      break;
+    case 'Save Search Bar Position':
+      drupal_set_message('Search bar position changed.');
+      variable_set('site_searchbar_position', $form_state['complete form']['blocks']['search_bar_block'][0]['#value']);
       break;
   }
 }
