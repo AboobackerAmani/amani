@@ -520,7 +520,7 @@ function amani_event_views_default_views() {
   $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
-  $handler->display->display_options['footer']['area_text_custom']['content'] = '<div class="all-events"><a href="/news-and-events">View all events </a></div>';
+  $handler->display->display_options['footer']['area_text_custom']['content'] = '<div class="all-events"><a href="/all-events">View all events </a></div>';
   $handler->display->display_options['footer']['area_text_custom']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
@@ -620,7 +620,7 @@ function amani_event_views_default_views() {
     t('upcoming events - list'),
     t('block list'),
     t('Upcoming events'),
-    t('<div class="all-events"><a href="/news-and-events">View all events </a></div>'),
+    t('<div class="all-events"><a href="/all-events">View all events </a></div>'),
     t('<div class="title">[title] </div>'),
   );
   $export['calendar_of_events'] = $view;
