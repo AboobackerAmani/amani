@@ -877,7 +877,7 @@ function amani_administrator_configure_amani_form_submit($form, &$form_state) {
       drupal_goto('admin/configure-amani/release-notes');
       break;
     case 'Change Image':
-      drupal_goto('admin/structure/block/manage/amani_global/behind_front_blocks_image/configure');
+      drupal_goto('admin/appearance/settings/amani_zen');
       break;
     case 'Edit Third-Party Logins':
       drupal_goto('admin/config/people/hybridauth');

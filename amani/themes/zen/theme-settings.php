@@ -108,6 +108,17 @@ function zen_form_system_theme_settings_alter(&$form, $form_state, $form_id = NU
     '#description'   => t('IE 6-8 require a JavaScript polyfill solution to add basic support of HTML5 and CSS3 media queries. If you prefer to use another polyfill solution, such as <a href="!link">Modernizr</a>, you can disable these options. Respond.js only works if <a href="@url">Aggregate CSS</a> is enabled. Mobile devices require a few meta tags for responsive designs.', array('!link' => 'http://www.modernizr.com/', '@url' => url('admin/config/development/performance'))),
   );
 
+  $form['support']['front_page_blocks_background_image'] = array(
+    '#type'     => 'managed_file',
+    '#title'    => t('Background Image for front page blocks.'),
+    '#required' => TRUE,
+    '#upload_location' => file_default_scheme() . '://',
+    '#default_value' => theme_get_setting('front_page_blocks_background_image'), 
+    '#upload_validators' => array(
+      'file_validate_extensions' => array('gif png jpg jpeg'),
+    ),
+  );
+
   $form['themedev'] = array(
     '#type'          => 'fieldset',
     '#title'         => t('Theme development settings'),
